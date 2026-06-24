@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 10 science - Chapter 1: Chemical Reactions and Equations - Saraswatacademy.in</title>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --saffron: #FF6B00;
+  --saffron-light: #FF9240;
+  --saffron-pale: #FFF3E8;
+  --saffron-deep: #CC4E00;
+  --green: #138808;
+  --green-light: #1DA30F;
+  --green-pale: #EAF6E8;
+  --navy: #0A2540;
+  --navy2: #1A3A5C;
+  --navy3: #0D1F35;
+  --white: #FFFFFF;
+  --off-white: #FAFBFD;
+  --grey: #F4F5F8;
+  --grey2: #E5E7EF;
+  --text: #1A1A2E;
+  --text2: #4A4A6A;
+  --text3: #8A8AAA;
+  --radius: 16px;
+  --shadow: 0 2px 16px rgba(10,37,64,0.08);
+  --shadow-md: 0 6px 24px rgba(10,37,64,0.12);
+  --shadow-lg: 0 12px 40px rgba(10,37,64,0.16);
+}
+
+html { scroll-behavior: smooth; }
+body { font-family:'Inter', serif; background: var(--off-white); color: var(--text); }
+
+
+/* TOPBAR */
+.topbar{background:#020b25;color:#d1d5db;padding:8px 20px;font-size:14px}
+.topbar-left{display:flex;gap:25px;flex-wrap:wrap;align-items:center}
+header{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:999}
+.header-inner{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none}
+.logo-emblem{width:60px;height:60px}
+.logo-name{
+font-family:'Inter', serif;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:1px;
+    color:#1f2a44;
+}
+
+.logo-tagline{
+    font-size:10px;font-weight: 500; color: var(--gold);
+    letter-spacing:.14em;
+    color:#c9933a;
+    letter-spacing: .14em; text-transform: uppercase;
+
+}
+.main-nav{display:flex;align-items:center;gap:25px}
+.nav-link{text-decoration:none;color:#444;font-size:18px;font-weight:500}
+.btn-enroll{background:#ff6b00;color:#fff;text-decoration:none;padding:10px 20px;border-radius:8px;font-weight:600}
+
+/* NAV */
+.main-nav { display: flex; align-items: center; gap: 2px; flex: 1; }
+.nav-item { position: relative; }
+.nav-link {
+  display: flex; align-items: center; gap: 4px;
+  padding: 8px 15px; border-radius: 7px;
+  font-size: 15px; font-weight: 600; color: var(--text2);
+  text-decoration: none; cursor: pointer;
+  transition: background .15s, color .15s;
+  white-space: nowrap;
+}
+.nav-link:hover { background: var(--cream); color: var(--indigo); }
+.nav-link.active { color: var(--indigo); font-weight: 600; }
+.nav-arrow { font-size: 10px; opacity: .5; }
+
+
+/* ─── HERO ─── */
+.hero {
+  background: linear-gradient(140deg, var(--navy3) 0%, var(--navy) 45%, #0E3060 100%);
+  padding: 80px 24px 100px; text-align: center; position: relativs; overflow: hidden;
+}
+
+/* decorative circles */
+.hero::before {
+  content: '';
+  position: absolute; top: -80px; right: -80px;
+  width: 380px; height: 380px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,107,0,.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute; bottom: -60px; left: -60px;
+  width: 300px; height: 300px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(19,136,8,.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+/* tricolour stripe */
+
+/* ─── IMPACT NUMBERS ─── */
+/* ─── SECTION WRAPPER ─── */
+
+/* ─── MISSION SECTION ─── */
+
+/* ─── STORY TIMELINE ─── */
+
+/* ─── CTA BANNER ─── */
+/* ─── CONTACT STRIP ─── */
+
+/* ─── FOOTER ─── */
+footer { background: var(--navy); color: #f6f7f7; padding: 40px 24px 24px; }
+.footer-inner { max-width: 1140px; margin: 0 auto; }
+.footer-top {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 60px;
+}
+.footer-brand-name { font-family:Arial,Helvetica,sans-serif; font-weight: 800; font-size: 20px; color: #fff; }
+.footer-brand-name .p { color: var(--saffron-light); }
+.footer-brand p { font-size: 13px; color:   #eaedf2; line-height: 1.7; margin-top: 10px; }
+.footer-brand-flags { display: flex; gap: 6px; margin-top: 12px; }
+.flag-badge {
+  font-size: 11px; padding: 3px 10px; border-radius: 20px;
+  border: 1px solid rgba(255,255,255,.12); color: #6A8AA8;
+}
+}
+.footer-col h4 {
+  font-family:Arial,Helvetica,sans-serif; font-weight: 700; font-size: 13.5px;
+  color: #f7f7f7; margin-bottom: 12px; letter-spacing: .5px; text-transform: uppercase;
+}.footer-col a {
+  display: block; font-size: 13px; color: #f2f4f6; text-decoration: none;
+  margin-bottom: 7px; transition: color .15s;
+}
+.footer-col a:hover { color: var(--saffron-light); }
+.footer-bottom {
+  border-top: 1px solid rgba(253, 246, 246, 0.07); padding-top: 18px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 10px; font-size: 12.5px;
+}
+.footer-bottom strong { color: var(--saffron-light); }
+
+/* ─── SCROLL ANIMATIONS ─── */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .mission-layout { grid-template-columns: 1fr; }
+  .mission-visual { display: none; }
+  .offer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .timeline::before { left: 24px; }
+  .tl-item { grid-template-columns: 48px 1fr; gap: 12px; }
+  .tl-content.left { grid-column: 2; text-align: left; }
+  .tl-content.right { grid-column: 2; }
+  .tl-empty { display: none; }
+  .tl-year { grid-column: 1; }
+  .tl-dot { width: 36px; height: 36px; font-size: 10px; }
+  .contact-inner { grid-template-columns: 1fr; }
+  .impact-inner { grid-template-columns: 1fr 1fr; }
+  .impact-item:nth-child(2) { border-right: none; }
+}
+@media (max-width: 600px) {
+  .offer-grid { grid-template-columns: 1fr; }
+  .cta-banner { padding: 32px 24px; }
+  .header-nav { display: none; }
+  .impact-inner { grid-template-columns: 1fr 1fr; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 400px) {
+  .team-grid { grid-template-columns: 1fr; }
+  .impact-inner { grid-template-columns: 1fr 1fr; }
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7fa;
+}
+
+.page-title{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.page-title h1{
+    color:#0d3b66;
+    margin-bottom:10px;
+}
+
+.page-title p{
+    color:#666;
+}
+
+.chapter-box{
+    max-width:900px;
+    margin:auto;
+}
+
+.solution-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    text-decoration:none;
+
+    background:white;
+
+    padding:18px 25px;
+
+    margin-bottom:15px;
+
+    border-radius:15px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+}
+
+.solution-row:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+
+.badge{
+    background:#d9f3f7;
+    color:#006d77;
+
+    padding:10px 18px;
+
+    border-radius:25px;
+
+    font-weight:bold;
+}
+
+.open-link{
+    color:white;
+    background:#0d6efd;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+}
+
+.solution-row:hover .open-link{
+    background:#084298;
+}
+
+.chapter-heading{
+    background:#0d3b66;
+    color:white;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+    text-align:center;
+}
+
+/* =========================
+   MOBILE FIXES
+========================= */
+
+@media (max-width:768px){
+
+  body{
+    padding:0;
+  }
+
+  .topbar{
+    display:none;
+  }
+
+  .header-inner{
+    padding:12px 15px;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+
+  .logo{
+    width:100%;
+    justify-content:center;
+  }
+
+  .logo-emblem{
+    width:45px;
+    height:45px;
+  }
+
+  .logo-name{
+    font-size:20px;
+  }
+
+  .logo-tagline{
+    font-size:10px;
+    letter-spacing:1px;
+  }
+
+  .main-nav{
+    width:100%;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+  }
+
+  .nav-link{
+    font-size:15px;
+  }
+
+  .btn-enroll{
+    width:100%;
+    text-align:center;
+  }
+
+  .page-title{
+    margin:25px 15px;
+  }
+
+  .page-title h1{
+    font-size:28px;
+  }
+
+  .chapter-box{
+    width:100%;
+    padding:0 12px;
+  }
+
+  .solution-row{
+    padding:15px;
+  }
+
+  .badge{
+    font-size:14px;
+    padding:8px 12px;
+  }
+
+  .open-link{
+    font-size:13px;
+    padding:8px 12px;
+  }
+
+  .footer-top{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    text-align:center;
+  }
+
+}
+
+@media (max-width:480px){
+
+  .header-inner{
+    padding:10px;
+  }
+
+  .logo-name{
+    font-size:17px;
+  }
+
+  .logo-tagline{
+    display:none;
+  }
+
+  .main-nav{
+    gap:10px;
+  }
+
+  .nav-link{
+    font-size:14px;
+  }
+
+  .solution-row{
+    flex-direction:column;
+    gap:12px;
+    text-align:center;
+  }
+
+  .badge{
+    width:100%;
+  }
+
+  .open-link{
+    width:100%;
+    display:block;
+    text-align:center;
+  }
+
+  .page-title h1{
+    font-size:24px;
+  }
+
+}
+:root {
+  --ink: #17202a;
+  --muted: #617084;
+  --paper: #fffdf8;
+  --surface: #ffffff;
+  --line: #dce5e1;
+  --teal: #0f8b8d;
+  --teal-dark: #096365;
+  --coral: #ff6f61;
+  --gold: #f6c85f;
+  --green: #55a630;
+  --blue: #4472ca;
+  --shadow: 0 18px 45px rgba(23, 32, 42, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--coral);
+  font-size: 1.50rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3.1rem, 7vw, 6.5rem);
+  line-height: 0.92;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin: 18px 0 8px;
+  font-size: 1.16rem;
+  letter-spacing: 0;
+}
+.solution-page {
+  background: #f7fbfa;
+}
+
+
+/* this is the layout of solution page*/
+
+.solution-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  gap: 20px;
+  padding: 10px clamp(18px, 4vw, 56px) 64px;
+}
+
+.solution-article,
+.related-box {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+}
+
+.solution-article {
+  padding: clamp(22px, 4vw, 44px);
+}
+
+.solution-article h1 {
+  max-width: 900px;
+  font-size: clamp(2.15rem, 4vw, 3.4rem);
+  line-height: 1.25;
+}
+
+.breadcrumb {
+  display: inline-flex;
+  margin-bottom: 18px;
+  color: var(--teal-dark);
+  font-weight: 800;
+}
+
+.solution-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 28px;
+}
+
+.solution-meta span {
+  padding: 7px 10px;
+  color: var(--muted);
+  background: #f2f5f4;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.answer-block {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.answer-block h2 {
+  font-size: 1.55rem;
+}
+
+.answer-block li {
+  margin: 8px 0;
+}
+
+.note-box {
+  margin-top: 22px;
+  padding: 16px;
+  background: #fff7df;
+  border: 1px solid #f2d88d;
+  border-radius: 8px;
+}
+
+.related-box {
+  position: sticky;
+  top: 90px;
+  align-self: start;
+  padding: 10px;
+}
+
+.related-box h2 {
+  font-size: 1.3rem;
+}
+
+.related-box a {
+  display: block;
+  padding: 12px 0;
+  color: var(--teal-dark);
+  border-top: 1px solid var(--line);
+  font-weight: 800;
+}
+
+@media (max-width: 640px) {
+
+  /* Wider page */
+  .site-header{
+    padding:10px 12px;
+  }
+
+  .hero{
+    padding:24px 12px 18px;
+    gap:20px;
+  }
+
+  .section{
+    padding:40px 12px;
+  }
+
+  .upload-panel{
+    margin:30px 12px;
+    padding:18px;
+  }
+
+  .solution-layout{
+    padding:18px 12px 40px;
+  }
+
+  .site-footer{
+    padding:18px 12px;
+  }
+
+  /* Navigation */
+  /* Hero text */
+
+/* CONTENT */
+.solution-layout{max-width:1400px;margin:30px auto;padding:20px}
+.solution-article{background:#fff;padding:30px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.solution-article h1{margin:10px 0}
+.solution-article h2{margin:20px 0 10px}
+.solution-article p,.solution-article li{line-height:1.7}
+table{border-collapse:collapse;width:100%;margin:15px 0}
+th,td{border:1px solid #ccc;padding:8px}
+
+
+
+</style>
+</head>
+<body>
+
+ <div id="header"></div>
+   
+
+    <div class="topbar">
+  <div class="topbar-left">
+    <span>📞 +91 7073468838</span>
+    <span>📧 radhakrishna1594@gmail.com</span>
+    
+  </div>
+</div>
+
+<header>
+<div class="header-inner">
+<a href="/index.html" class="logo">
+<div class="logo-emblem">
+<svg viewBox="0 0 48 48">
+<circle cx="24" cy="24" r="23" fill="#0C0F1E" stroke="#C9933A" stroke-width="1.5"/>
+<text x="24" y="30" text-anchor="middle" font-size="20" fill="#E8B254" font-weight="bold">स</text>
+</svg>
+</div>
+<div>
+<div class="logo-name">SARASWAT ACADEMY</div>
+<div class="logo-tagline">विद्या परमं बलम् — KNOWLEDGE IS SUPREME</div>
+</div>
+</a>
+
+<nav class="main-nav">
+<a href="/index.html" class="nav-link">Home</a>
+       <a href="/Formula_sheets/subjects_list.html" class="nav-link">Formula Sheets</a>
+      <a href="/Educational_Articles/Articles.html" class="nav-link">Educational Articles</a>
+      <a href="/Students_Corner/link_pages/main_page.html" class="nav-link">Student Corner</a>
+
+<a href="//Saraswat_Academy/ask.html" class="btn-enroll">🙋 Ask a Doubt</a>
+</div>
+
+ <!-- Hamburger Button -->
+<div class="menu-btn" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <a href="#">Home</a>
+    <a href="#">Study Material</a>
+    <a href="#">Career Guidance</a>
+    <a href="#">AI Tools</a>
+    <a href="#">Contact</a>
+</div>
+
+<script>
+function toggleMenu(){
+    document.getElementById("sidebar").classList.toggle("active");
+}
+</script>
+
+
+
+  <body class="solution-page">
+    <main class="solution-layout">
+      <article class="solution-article">
+        <a class="breadcrumb" href="/index.html">Back to all solutions</a>
+        <p class="eyebrow">Science Class- 10 </p>
+        <h1>Class 10 - Chapter 1: Chemical Reactions and Equations</h1> 
+      
+        <div class="solution-meta"><span>NCERT</span><span>Chapter 1</span><span>Solution</span></div>
+        <section class="answer-block">
+    </div>
+
+
+        <div class="note-box">
+
+<h3>1. Which of the statements about the reaction below are incorrect?</h3>
+
+<p>
+2PbO(s) + C(s) → 2Pb(s) + CO<sub>2</sub>(g)
+</p>
+
+<p><b>Answer: (i) (a) and (b)</b></p>
+
+<p>
+Lead is not getting reduced; lead oxide (PbO) is getting reduced to lead.<br>
+Carbon is oxidised to carbon dioxide.<br>
+Therefore statements (a) and (b) are incorrect.
+</p>
+
+<hr>
+
+<h3>2. Fe<sub>2</sub>O<sub>3</sub> + 2Al → Al<sub>2</sub>O<sub>3</sub> + 2Fe</h3>
+
+<p><b>Answer: (d) Displacement reaction</b></p>
+
+<p>
+Aluminium displaces iron from iron oxide to form aluminium oxide and iron.
+</p>
+
+<hr>
+
+<h3>3. What happens when dilute hydrochloric acid is added to iron filings?</h3>
+
+<p><b>Answer: (a)</b> Hydrogen gas and iron chloride are produced.</p>
+
+<p>
+Fe + 2HCl → FeCl<sub>2</sub> + H<sub>2</sub>
+</p>
+
+<hr>
+
+<h3>4. What is a balanced chemical equation? Why should chemical equations be balanced?</h3>
+
+<p>
+A balanced chemical equation is an equation in which the number of atoms of each element is equal on both sides.
+</p>
+
+<p>
+Chemical equations must be balanced to satisfy the Law of Conservation of Mass, which states that mass can neither be created nor destroyed.
+</p>
+
+<hr>
+
+<h3>5. Translate the following statements into chemical equations and balance them.</h3>
+
+<h4>(a) Hydrogen gas combines with nitrogen to form ammonia.</h4>
+
+<p>
+N<sub>2</sub> + 3H<sub>2</sub> → 2NH<sub>3</sub>
+</p>
+
+<h4>(b) Hydrogen sulphide gas burns in air to give water and sulphur dioxide.</h4>
+
+<p>
+2H<sub>2</sub>S + 3O<sub>2</sub> → 2H<sub>2</sub>O + 2SO<sub>2</sub>
+</p>
+
+<h4>(c) Barium chloride reacts with aluminium sulphate.</h4>
+
+<p>
+3BaCl<sub>2</sub> + Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>
+→ 2AlCl<sub>3</sub> + 3BaSO<sub>4</sub>
+</p>
+
+<h4>(d) Potassium reacts with water.</h4>
+
+<p>
+2K + 2H<sub>2</sub>O → 2KOH + H<sub>2</sub>
+</p>
+
+<hr>
+
+<h3>6: Balance the Following Chemical Equations</h3>
+
+<!-- Q6(a) -->
+
+<h3>6(a) HNO<sub>3</sub> + Ca(OH)<sub>2</sub> → Ca(NO<sub>3</sub>)<sub>2</sub> + H<sub>2</sub>O</h3>
+
+<p><b>Step 1:</b> Write the unbalanced equation.</p>
+
+<p>
+HNO<sub>3</sub> + Ca(OH)<sub>2</sub>
+→ Ca(NO<sub>3</sub>)<sub>2</sub> + H<sub>2</sub>O
+</p>
+
+<p><b>Step 2:</b> Count atoms.</p>
+
+<table border="1" cellpadding="6">
+<tr>
+<th>Element</th>
+<th>Reactants</th>
+<th>Products</th>
+</tr>
+<tr>
+<td>Ca</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>H</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>O</td>
+<td>5</td>
+<td>7</td>
+</tr>
+</table>
+
+<p><b>Step 3:</b> Balance nitrate ions.</p>
+
+<p>
+2HNO<sub>3</sub> + Ca(OH)<sub>2</sub>
+→ Ca(NO<sub>3</sub>)<sub>2</sub> + H<sub>2</sub>O
+</p>
+
+<p><b>Step 4:</b> Balance hydrogen by placing 2 before water.</p>
+
+<p>
+2HNO<sub>3</sub> + Ca(OH)<sub>2</sub>
+→ Ca(NO<sub>3</sub>)<sub>2</sub> + 2H<sub>2</sub>O
+</p>
+
+<p><b>Step 5:</b> Verify atoms.</p>
+
+<table border="1" cellpadding="6">
+<tr>
+<th>Element</th>
+<th>Reactants</th>
+<th>Products</th>
+</tr>
+<tr>
+<td>Ca</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>H</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>O</td>
+<td>8</td>
+<td>8</td>
+</tr>
+</table>
+
+<p><b>Balanced Equation:</b></p>
+
+<p>
+2HNO<sub>3</sub> + Ca(OH)<sub>2</sub>
+→ Ca(NO<sub>3</sub>)<sub>2</sub> + 2H<sub>2</sub>O
+</p>
+
+<hr>
+
+<!-- Q6(b) -->
+
+<h3>6(b) NaOH + H<sub>2</sub>SO<sub>4</sub> → Na<sub>2</sub>SO<sub>4</sub> + H<sub>2</sub>O</h3>
+
+<p><b>Step 1:</b> Write the equation.</p>
+
+<p>
+NaOH + H<sub>2</sub>SO<sub>4</sub>
+→ Na<sub>2</sub>SO<sub>4</sub> + H<sub>2</sub>O
+</p>
+
+<p><b>Step 2:</b> Sodium atoms are not balanced.</p>
+
+<p>
+2NaOH + H<sub>2</sub>SO<sub>4</sub>
+→ Na<sub>2</sub>SO<sub>4</sub> + H<sub>2</sub>O
+</p>
+
+<p><b>Step 3:</b> Hydrogen atoms become 4 on the left side.</p>
+
+<p>
+2NaOH + H<sub>2</sub>SO<sub>4</sub>
+→ Na<sub>2</sub>SO<sub>4</sub> + 2H<sub>2</sub>O
+</p>
+
+<p><b>Step 4:</b> Verify atoms.</p>
+
+<table border="1" cellpadding="6">
+<tr>
+<th>Element</th>
+<th>Reactants</th>
+<th>Products</th>
+</tr>
+<tr>
+<td>Na</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>S</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>H</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>O</td>
+<td>6</td>
+<td>6</td>
+</tr>
+</table>
+
+<p><b>Balanced Equation:</b></p>
+
+<p>
+2NaOH + H<sub>2</sub>SO<sub>4</sub>
+→ Na<sub>2</sub>SO<sub>4</sub> + 2H<sub>2</sub>O
+</p>
+
+<hr>
+
+<!-- Q6(c) -->
+
+<h3>6(c) NaCl + AgNO<sub>3</sub> → AgCl + NaNO<sub>3</sub></h3>
+
+<p><b>Step 1:</b> Write the equation.</p>
+
+<p>
+NaCl + AgNO<sub>3</sub>
+→ AgCl + NaNO<sub>3</sub>
+</p>
+
+<p><b>Step 2:</b> Count atoms.</p>
+
+<table border="1" cellpadding="6">
+<tr>
+<th>Element</th>
+<th>Reactants</th>
+<th>Products</th>
+</tr>
+<tr>
+<td>Na</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Cl</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Ag</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>N</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>O</td>
+<td>3</td>
+<td>3</td>
+</tr>
+</table>
+
+<p>
+All atoms are already balanced.
+</p>
+
+<p><b>Balanced Equation:</b></p>
+
+<p>
+NaCl + AgNO<sub>3</sub>
+→ AgCl + NaNO<sub>3</sub>
+</p>
+
+<hr>
+
+<!-- Q6(d) -->
+
+<h3>6(d) BaCl<sub>2</sub> + H<sub>2</sub>SO<sub>4</sub> → BaSO<sub>4</sub> + HCl</h3>
+
+<p><b>Step 1:</b> Write the equation.</p>
+
+<p>
+BaCl<sub>2</sub> + H<sub>2</sub>SO<sub>4</sub>
+→ BaSO<sub>4</sub> + HCl
+</p>
+
+<p><b>Step 2:</b> Chlorine atoms are 2 on the left but only 1 on the right.</p>
+
+<p>
+BaCl<sub>2</sub> + H<sub>2</sub>SO<sub>4</sub>
+→ BaSO<sub>4</sub> + 2HCl
+</p>
+
+<p><b>Step 3:</b> Verify atoms.</p>
+
+<table border="1" cellpadding="6">
+<tr>
+<th>Element</th>
+<th>Reactants</th>
+<th>Products</th>
+</tr>
+<tr>
+<td>Ba</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Cl</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>H</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>S</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>O</td>
+<td>4</td>
+<td>4</td>
+</tr>
+</table>
+
+<p><b>Balanced Equation:</b></p>
+
+<p>
+BaCl<sub>2</sub> + H<sub>2</sub>SO<sub>4</sub>
+→ BaSO<sub>4</sub> + 2HCl
+</p>
+
+<h3>7. Write the balanced chemical equations.</h3>
+
+<h4>(a)</h4>
+
+<p>
+Ca(OH)<sub>2</sub> + CO<sub>2</sub>
+→ CaCO<sub>3</sub> + H<sub>2</sub>O
+</p>
+
+<h4>(b)</h4>
+
+<p>
+Zn + 2AgNO<sub>3</sub>
+→ Zn(NO<sub>3</sub>)<sub>2</sub> + 2Ag
+</p>
+
+<h4>(c)</h4>
+
+<p>
+2Al + 3CuCl<sub>2</sub>
+→ 2AlCl<sub>3</sub> + 3Cu
+</p>
+
+<h4>(d)</h4>
+
+<p>
+BaCl<sub>2</sub> + K<sub>2</sub>SO<sub>4</sub>
+→ BaSO<sub>4</sub> + 2KCl
+</p>
+
+<hr>
+
+<h3>8. Write the balanced chemical equation and identify the type of reaction.</h3>
+
+<h4>(a)</h4>
+
+<p>
+2KI + BaI<sub>2</sub> → 2KI + BaBr<sub>2</sub>
+</p>
+
+<p><b>Type:</b> Double displacement reaction</p>
+
+<h4>(b)</h4>
+
+<p>
+ZnCO<sub>3</sub> → ZnO + CO<sub>2</sub>
+</p>
+
+<p><b>Type:</b> Decomposition reaction</p>
+
+<h4>(c)</h4>
+
+<p>
+H<sub>2</sub> + Cl<sub>2</sub> → 2HCl
+</p>
+
+<p><b>Type:</b> Combination reaction</p>
+
+<h4>(d)</h4>
+
+<p>
+Mg + 2HCl → MgCl<sub>2</sub> + H<sub>2</sub>
+</p>
+
+<p><b>Type:</b> Displacement reaction</p>
+
+<hr>
+
+<h3>9. What do you mean by exothermic and endothermic reactions? Give examples.</h3>
+
+<p>
+<b>Exothermic Reaction:</b> A reaction that releases heat energy.
+</p>
+
+<p>
+CH<sub>4</sub> + 2O<sub>2</sub> → CO<sub>2</sub> + 2H<sub>2</sub>O + Heat
+</p>
+
+<p>
+<b>Endothermic Reaction:</b> A reaction that absorbs heat energy.
+</p>
+
+<p>
+CaCO<sub>3</sub> + Heat → CaO + CO<sub>2</sub>
+</p>
+
+<hr>
+
+<h3>10. Why is respiration considered an exothermic reaction? Explain.</h3>
+
+<p>
+Respiration releases energy in the form of heat when glucose reacts with oxygen.
+</p>
+
+<p>
+C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub>
+→ 6CO<sub>2</sub> + 6H<sub>2</sub>O + Energy
+</p>
+
+<p>
+Therefore respiration is an exothermic reaction.
+</p>
+
+<hr>
+
+<h3>11. Why are decomposition reactions called the opposite of combination reactions?</h3>
+
+<p>
+In a combination reaction, two or more substances combine to form a single product.
+</p>
+
+<p>
+A + B → AB
+</p>
+
+<p>
+In a decomposition reaction, one compound breaks into two or more simpler substances.
+</p>
+
+<p>
+AB → A + B
+</p>
+
+<p>
+Hence decomposition reactions are the opposite of combination reactions.
+</p>
+
+<hr>
+
+<h3>12. Write one equation each for decomposition reactions where energy is supplied in the form of heat, light or electricity.</h3>
+
+<h4>(a) Heat (Thermal decomposition)</h4>
+
+<p>
+CaCO<sub>3</sub> → CaO + CO<sub>2</sub>
+</p>
+
+<h4>(b) Light (Photochemical decomposition)</h4>
+
+<p>
+2AgCl → 2Ag + Cl<sub>2</sub>
+</p>
+
+<h4>(c) Electricity (Electrolytic decomposition)</h4>
+
+<p>
+2H<sub>2</sub>O → 2H<sub>2</sub> + O<sub>2</sub>
+</p>
+
+<hr>
+
+<h3>13. What is the difference between displacement and double displacement reactions?</h3>
+
+<p>
+<b>Displacement Reaction:</b><br>
+A more reactive element displaces a less reactive element from its compound.
+</p>
+
+<p>
+Zn + CuSO<sub>4</sub> → ZnSO<sub>4</sub> + Cu
+</p>
+
+<p>
+<b>Double Displacement Reaction:</b><br>
+Exchange of ions occurs between two compounds.
+</p>
+
+<p>
+BaCl<sub>2</sub> + Na<sub>2</sub>SO<sub>4</sub>
+→ BaSO<sub>4</sub> + 2NaCl
+</p>
+
+<hr>
+
+<h3>14. Write the reaction involved in the recovery of silver from silver nitrate solution using copper.</h3>
+
+<p>
+Cu + 2AgNO<sub>3</sub>
+→ Cu(NO<sub>3</sub>)<sub>2</sub> + 2Ag
+</p>
+
+<hr>
+
+<h3>15. What do you mean by a precipitation reaction? Explain with examples.</h3>
+
+<p>
+A precipitation reaction is a reaction in which an insoluble solid (precipitate) is formed.
+</p>
+
+<p>
+BaCl<sub>2</sub> + Na<sub>2</sub>SO<sub>4</sub>
+→ BaSO<sub>4</sub>↓ + 2NaCl
+</p>
+
+<p>
+The white insoluble BaSO<sub>4</sub> formed is called a precipitate.
+</p>
+
+<hr>
+
+<h3>16. Explain oxidation and reduction in terms of gain or loss of oxygen.</h3>
+
+<h4>(a) Oxidation</h4>
+
+<p>
+Addition of oxygen is called oxidation.
+</p>
+
+<p>
+2Mg + O<sub>2</sub> → 2MgO
+</p>
+
+<p>
+C + O<sub>2</sub> → CO<sub>2</sub>
+</p>
+
+<h4>(b) Reduction</h4>
+
+<p>
+Removal of oxygen is called reduction.
+</p>
+
+<p>
+CuO + H<sub>2</sub> → Cu + H<sub>2</sub>O
+</p>
+
+<p>
+PbO + C → Pb + CO
+</p>
+
+<hr>
+
+<h3>17. A shiny brown coloured element 'X' on heating in air becomes black in colour.</h3>
+
+<p>
+<b>Element X:</b> Copper (Cu)
+</p>
+
+<p>
+<b>Black compound formed:</b> Copper oxide (CuO)
+</p>
+
+<p>
+2Cu + O<sub>2</sub> → 2CuO
+</p>
+
+<hr>
+
+<h3>18. Why do we apply paint on iron articles?</h3>
+
+<p>
+Paint prevents iron from coming in contact with air and moisture. This prevents rusting and protects the iron article from corrosion.
+</p>
+
+<hr>
+
+<h3>19. Oil and fat containing food items are flushed with nitrogen. Why?</h3>
+
+<p>
+Nitrogen prevents oxidation of oils and fats. This helps prevent rancidity and increases the shelf life of food products.
+</p>
+
+<hr>
+
+<h3>20. Explain the following terms with one example each.</h3>
+
+<h4>(a) Corrosion</h4>
+
+<p>
+Corrosion is the gradual destruction of metals due to reaction with air, moisture or chemicals.
+</p>
+
+<p>
+Example: Rusting of iron.
+</p>
+
+<p>
+4Fe + 3O<sub>2</sub> + xH<sub>2</sub>O
+→ 2Fe<sub>2</sub>O<sub>3</sub>·xH<sub>2</sub>O
+</p>
+
+<h4>(b) Rancidity</h4>
+
+<p>
+Rancidity is the oxidation of fats and oils, causing unpleasant smell and taste.
+</p>
+
+<p>
+Example: Chips or fried food becoming stale when left exposed to air for a long time.
+</p> </div>
+      </article>
+<aside class="related-box">
+        <h2>Other solutions</h2>
+        <a href="/index.html">Home</a>
+        <a href="/link_page/maths_link_all_classes.html">Mathematics</a>
+        <a href="/link_page/science_link_all_classes.html">Science</a>
+        <a href="/link_page/sst_link_all_classes.html">Social Studies</a>
+        <a href="/link_page/english_link_all_classes.html">English</a>
+        <a href="/link_page/hindi_link_all_classes.html">Hindi</a>
+        <a href="">Computer Science/ IT/ IP</a>
+        
+      </aside>
+    </main>      <!-- ━━━ FOOTER ━━━ -->
+<div id="footer"></div>
+
+
+  </body>
+</html>

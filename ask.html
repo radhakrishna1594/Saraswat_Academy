@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ask a Question</title>
+<meta name="description" content="Submit your doubts and questions. Our team will answer every question for free.">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="../../header.css">
+<script src="../../loader.js"></script>
+<script src="../../config.js"></script>
+<style>
+
+body{
+font-family:Arial,sans-serif;
+background:#f5f5f5;
+margin:0;
+}
+
+.ask-box{
+
+max-width:800px;
+
+margin:40px auto;
+
+background:#fcfcfc;
+
+padding:30px;
+
+border-radius:10px;
+
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+
+}
+
+h1{
+
+text-align:center;
+
+margin-bottom:10px;
+
+}
+
+.description{
+
+text-align:center;
+
+color:#666;
+
+margin-bottom:30px;
+
+}
+
+.field{
+
+margin-bottom:20px;
+
+}
+
+label{
+
+display:block;
+
+font-weight:bold;
+
+margin-bottom:8px;
+
+}
+
+input,
+
+select,
+
+textarea{
+
+width:100%;
+
+padding:12px;
+
+font-size:16px;
+
+border:1px solid #610e0e;
+
+border-radius:6px;
+
+box-sizing:border-box;
+
+}
+
+textarea{
+
+min-height:100px;
+
+resize:vertical;
+
+}
+
+button{
+
+width:100%;
+
+padding:14px;
+
+background:#0a2540;
+
+color:rgb(255, 255, 255);
+
+border:none;
+
+border-radius:6px;
+
+font-size:17px;
+
+cursor:pointer;
+
+}
+
+button:hover{
+
+opacity:0.9;
+
+}
+
+.google-form-box{
+
+max-width:700px;
+
+margin:40px auto;
+
+padding:30px;
+
+text-align:center;
+
+background:#f2df92;
+
+border-radius:10px;
+
+box-shadow:0 2px 10px rgba(247, 245, 245, 0.1);
+
+}
+
+.ask-btn{
+
+display:inline-block;
+
+padding:14px 25px;
+
+background:#071f37;
+
+color:rgb(255, 255, 255);
+
+text-decoration:none;
+
+border-radius:6px;
+
+font-weight:bold;
+
+}
+
+.ask-btn:hover{
+
+opacity:0.9;
+
+}
+
+@media(max-width:768px){
+
+.ask-box{
+
+margin:20px;
+
+padding:20px;
+
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="ask-box">
+
+<h2>🙋 Ask Your Doubts</h2>
+
+<br>
+
+<form action="https://formsubmit.co/radhakrishna1594@gmail.com" method="POST">
+
+<input type="hidden" name="_subject" value="New Student Doubt">
+
+<input type="hidden" name="_captcha" value="false">
+
+<input type="hidden" name="_template" value="table">
+
+<input type="hidden" name="_next" value="https://radhakrishna1594.github.io/Saraswat_Academy/">
+
+<div class="field">
+
+<label>Your Name *</label>
+
+<input type="text" name="Student Name" required>
+
+</div>
+
+<div class="field">
+
+<label>Email Id *</label>
+
+<input type="email" name="Student Email" required>
+
+</div>
+
+<div class="field">
+
+<label>WhatsApp Number (Optional)</label>
+
+<input type="tel" name="WhatsApp Number">
+
+</div>
+
+<div class="field">
+
+<label>Class *</label>
+
+<select name="Class" required>
+
+<option value="">Select Class</option>
+
+<option>Class 6</option>
+
+<option>Class 7</option>
+
+<option>Class 8</option>
+
+<option>Class 9</option>
+
+<option>Class 10</option>
+
+<option>Class 11</option>
+
+<option>Class 12</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label>Subject *</label>
+
+<select name="Subject" required>
+
+<option value="">Select Subject</option>
+
+<option>Mathematics</option>
+
+<option>Science</option>
+
+<option>English</option>
+
+<option>Social Science</option>
+
+<option>Hindi</option>
+
+<option>IT / AI</option>
+
+<option>Other</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label>Chapter Name</label>
+
+<input type="text" name="Chapter Name">
+
+</div>
+
+<div class="field">
+
+<label>Your Question *</label>
+
+<textarea name="Question" required></textarea>
+
+</div>
+
+
+<button type="submit">
+
+Submit Question
+
+</button>
+
+<div class="google-form-box">
+
+<h3>Need to Upload Images or PDFs?</h3>
+
+<p>
+Click the button below to submit your doubt along with images, PDFs or documents.
+</p>
+<br>
+<a
+href="https://forms.gle/EhFBTpRAaMsXdYm78"
+target="_blank"
+class="ask-btn">
+Submit Your Doubt
+
+</a>
+
+</div>
+
+</form>
+
+</div>
+
+<div id="footer"></div>
+ 
+</body>
+
+</html>

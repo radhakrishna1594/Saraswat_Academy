@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9th Class Hindi - दो बैलों की कथा | Saraswat Academy</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', 'Segoe UI', sans-serif;
+            background: #f4f7fa;
+            color: #333;
+        }
+
+        /* TOPBAR */
+        .topbar {
+            background: #020b25;
+            color: #d1d5db;
+            padding: 12px 20px;
+            font-size: 14px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* HEADER */
+        header {
+            background: #fff;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: auto;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .logo-emblem {
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+        }
+
+        .logo-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1f2a44;
+            line-height: 1;
+        }
+
+        .logo-tagline {
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: #c9933a;
+            margin-top: 4px;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-left: auto;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #444;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #ff6b00;
+        }
+
+        .btn-enroll {
+            background: #ff6b00;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-enroll:hover {
+            background: #e55a00;
+        }
+
+        /* MAIN CONTENT */
+        .solution-layout {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .solution-article {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            line-height: 1.8;
+        }
+
+        .breadcrumb {
+            display: inline-block;
+            color: #ff6b00;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+
+        .breadcrumb:hover {
+            text-decoration: underline;
+        }
+
+        .eyebrow {
+            color: #c9933a;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .solution-article h1 {
+            color: #1f2a44;
+            margin: 20px 0 30px;
+            font-size: 32px;
+        }
+
+        .solution-article h2 {
+            color: #1f2a44;
+            margin: 30px 0 15px;
+            font-size: 22px;
+            border-left: 4px solid #ff6b00;
+            padding-left: 15px;
+        }
+
+        .solution-article h3 {
+            color: #333;
+            margin: 20px 0 10px;
+            font-size: 18px;
+        }
+
+        .solution-meta {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0 30px;
+            flex-wrap: wrap;
+        }
+
+        .solution-meta span {
+            background: #f0f0f0;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .note-box {
+            margin: 30px 0;
+        }
+
+        .note-box p {
+            margin: 15px 0;
+            line-height: 1.8;
+        }
+
+        .note-box ul,
+        .note-box ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        .note-box li {
+            margin: 10px 0;
+            line-height: 1.7;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #e5e7eb;
+            margin: 25px 0;
+        }
+
+        strong {
+            color: #1f2a44;
+        }
+
+        /* RELATED BOX */
+        .related-box {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .related-box h2 {
+            margin-bottom: 15px;
+            color: #1f2a44;
+        }
+
+        .related-box a {
+            display: inline-block;
+            margin: 5px 10px 5px 0;
+            padding: 8px 15px;
+            background: #f0f0f0;
+            color: #ff6b00;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+
+        .related-box a:hover {
+            background: #ff6b00;
+            color: #fff;
+        }
+
+        footer {
+            background: #020b25;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+            }
+
+            .header-inner {
+                gap: 15px;
+            }
+
+            .logo-name {
+                font-size: 22px;
+            }
+
+            .logo-tagline {
+                font-size: 10px;
+            }
+
+            .solution-article {
+                padding: 20px;
+            }
+
+            .solution-article h1 {
+                font-size: 24px;
+            }
+
+            .topbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <span>📞 +91 7073468838</span>
+        <span>📧 radhakrishna1594@gmail.com</span>
+        
+    </div>
+
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <div class="logo-emblem">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="23" fill="#0C0F1E" stroke="#C9933A" stroke-width="1.5"/>
+                        <text x="24" y="30" text-anchor="middle" font-size="20" fill="#E8B254" font-weight="bold">स</text>
+                    </svg>
+                </div>
+                <div>
+                    <div class="logo-name">SARASWAT ACADEMY</div>
+                    <div class="logo-tagline">विद्या परमं बलम् — KNOWLEDGE IS SUPREME</div>
+                </div>
+            </a>
+
+            <nav class="main-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/resources" class="nav-link">Resources</a>
+                <a href="/about-us" class="nav-link">About Us</a>
+            </nav>
+
+            <a href="/ask" class="btn-enroll">🙋 Ask a Doubt</a>
+        </div>
+    </header>
+
+    <main class="solution-layout">
+        <article class="solution-article">
+            <a class="breadcrumb" href="/">← Back to all solutions</a>
+            <p class="eyebrow">HINDI CLASS 9</p>
+            <h1>Chapter 1: दो बैलों की कथा (Premchand)</h1>
+            <div class="solution-meta">
+                <span>CBSE Curriculum</span>
+                <span>Chapter 1</span>
+                <span>Complete Solution</span>
+            </div>
+
+            <div class="note-box">
+                <!-- Add your complete content here -->
+                <h2>मेरे उत्तर मेरे तर्क</h2>
+                <p>निम्नलिखित प्रश्नों के सटीक उत्तर और उनके उपयुक्त होने के तर्क नीचे दिए गए हैं:</p>
+                <!-- Content continues here -->
+            </div>
+        </article>
+    </main>
+
+    <aside class="related-box">
+        <h2>Other Solutions</h2>
+        <a href="/">Home</a>
+        <a href="/resources">Resources</a>
+    </aside>
+
+
+</body>
+</html>

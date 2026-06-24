@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn about Saraswatacademy.in — who we are, our mission to make free NCERT education available to every Indian student, and the team behind it.">
+<title>Student Corner | Saraswat Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../../header.css">
+<script src="../../loader.js"></script>
+<script src="../../config.js"></script>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f8fafc;
+    color:#1e293b;
+}
+
+.student-corner{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:15px;
+    font-size:2.5rem;
+    color:#0b2c53;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#64748b;
+    max-width:700px;
+    margin:0 auto 50px;
+    line-height:1.8;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    border:1px solid #e2e8f0;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+}
+
+.icon{
+    font-size:2.5rem;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#0b2c53;
+    margin-bottom:12px;
+    font-size:1.4rem;
+}
+
+.card p{
+    color:#475569;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.card a{
+    text-decoration:none;
+    color:#ff7a00;
+    font-weight:750;
+}
+
+.card a:hover{
+    text-decoration:underline;
+}
+
+@media(max-width:768px){
+
+    .section-title{
+        font-size:2rem;
+    }
+
+    .card{
+        padding:24px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+    <div id="header"></div>
+  
+
+<section class="student-corner">
+
+    <h1 class="section-title">Student Corner</h1>
+
+    <p class="section-subtitle">
+        Explore helpful guides, study strategies, productivity tips,
+        memory techniques, and modern AI tools to improve your learning journey.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🎓</div>
+            <h3>Career Guidance</h3>
+            <p>
+                Discover career options after Class 10 and 12,
+                competitive exams, higher education paths,
+                and future opportunities.
+            </p>
+            <a href="/Students_Corner/career_guide/career_guide_page.html">Click here to explore Career guidance</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">📚</div>
+            <h3>Study Tips</h3>
+            <p>
+                Learn effective study methods, note-making techniques,
+                revision strategies, and exam preparation tips.
+            </p>
+            <a href="#">Click here for study tips</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">⏰</div>
+            <h3>Time Management</h3>
+            <p>
+                Create productive study schedules, avoid procrastination,
+                and balance school, exams, and personal activities.
+            </p>
+            <a href="#">Click here for time management </a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🧠</div>
+            <h3>Memory Techniques</h3>
+            <p>
+                Improve retention using active recall, spaced repetition,
+                mnemonics, and scientifically proven learning methods.
+            </p>
+            <a href="#">Click here to boost your memory</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">💻</div>
+            <h3>AI Tools for Students</h3>
+            <p>
+                Learn how to use modern AI tools for research,
+                writing, coding, learning, and productivity.
+            </p>
+            <a href="#">Click here to explore AI tools</a>
+        </div>
+
+    </div>
+
+</section>
+ <div id="footer"></div>
+</body>
+</html>

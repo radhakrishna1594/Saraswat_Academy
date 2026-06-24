@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 9 Mathematics solution NCERT NCERT- Saraswatacademy.in</title>
+<link rel="stylesheet" href="../../header.css">
+<link rel="stylesheet" href="../../assets/styles.css">
+<script src="../../loader.js"></script>
+<script src="../../config.js"></script>
+<style>
+
+
+/* CONTENT */
+.solution-layout{max-width:1400px;margin:30px auto;padding:20px}
+.solution-article{background:#fff;padding:30px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.solution-article h1{margin:10px 0}
+.solution-article h2{margin:20px 0 10px}
+.solution-article p,.solution-article li{line-height:1.7}
+table{border-collapse:collapse;width:100%;margin:15px 0}
+th,td{border:1px solid #ccc;padding:8px}
+
+
+
+</style>
+</head>
+<body>
+
+ <div id="header"></div>
+   
+  <body class="solution-page">
+    
+    <main class="solution-layout">
+      <article class="solution-article">
+        <a class="breadcrumb" href="/index.html">Back to all solutions</a>
+        <p class="eyebrow">Mathematics solution NCERT</p>
+        <h1>Class 9 - Chapter 2: Introduction to Linear Polynomials</h1> 
+      
+        <div class="solution-meta"><span>NCERT</span><span>Chapter 2</span><span>Solution- Exercise Set 2.6</span></div>
+        <section class="answer-block">
+          <title>Graphs of Linear Equations</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    padding:20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    color:#0b2c54;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    margin:25px 0;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+h2{
+    color:#0b2c54;
+}
+
+canvas{
+    max-height:500px;
+}
+
+.note{
+    margin-top:15px;
+    background:#eef5ff;
+    padding:12px;
+    border-left:5px solid #0b2c54;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Graphs of Linear Equations</h1>
+
+<!-- Graph 1 -->
+<div class="card">
+<h2>(i) y = 4x, y = 2x, y = x</h2>
+<canvas id="graph1"></canvas>
+
+<div class="note">
+<b>Observation:</b>
+<ul>
+<li>All lines pass through the origin because b = 0.</li>
+<li>As the value of a increases, the line becomes steeper.</li>
+<li>y = 4x is steepest and y = x is least steep.</li>
+</ul>
+</div>
+</div>
+
+<!-- Graph 2 -->
+<div class="card">
+<h2>(ii) y = -6x, y = -3x, y = -x</h2>
+<canvas id="graph2"></canvas>
+
+<div class="note">
+<b>Observation:</b>
+<ul>
+<li>All lines pass through the origin.</li>
+<li>Negative slope causes the graph to fall from left to right.</li>
+<li>Larger negative values produce steeper downward lines.</li>
+</ul>
+</div>
+</div>
+
+<!-- Graph 3 -->
+<div class="card">
+<h2>(iii) y = 5x, y = -5x</h2>
+<canvas id="graph3"></canvas>
+
+<div class="note">
+<b>Observation:</b>
+<ul>
+<li>Both lines have the same steepness.</li>
+<li>One rises and the other falls.</li>
+<li>Both pass through the origin.</li>
+</ul>
+</div>
+</div>
+
+<!-- Graph 4 -->
+<div class="card">
+<h2>(iv) y = 3x - 1, y = 3x, y = 3x + 1</h2>
+<canvas id="graph4"></canvas>
+
+<div class="note">
+<b>Observation:</b>
+<ul>
+<li>All lines have the same slope (a = 3).</li>
+<li>The lines are parallel.</li>
+<li>Changing b shifts the graph vertically.</li>
+</ul>
+</div>
+</div>
+
+<!-- Graph 5 -->
+<div class="card">
+<h2>(v) y = -2x - 3, y = -2x, y = 2x + 3</h2>
+<canvas id="graph5"></canvas>
+
+<div class="note">
+<b>Observation:</b>
+<ul>
+<li>First two lines are parallel because they have the same slope.</li>
+<li>Changing b shifts the graph up or down.</li>
+<li>Positive slope rises while negative slope falls.</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<script>
+
+const x = [-5,-4,-3,-2,-1,0,1,2,3,4,5];
+
+function createGraph(canvasId, datasets){
+
+new Chart(document.getElementById(canvasId),{
+
+type:'line',
+
+data:{
+labels:x,
+datasets:datasets
+},
+
+options:{
+responsive:true,
+
+plugins:{
+legend:{
+position:'top'
+}
+},
+
+scales:{
+x:{
+title:{
+display:true,
+text:'x'
+}
+},
+y:{
+title:{
+display:true,
+text:'y'
+}
+}
+}
+}
+});
+
+}
+
+/* Graph 1 */
+createGraph('graph1',[
+{
+label:'y = 4x',
+data:x.map(v=>4*v),
+borderWidth:3
+},
+{
+label:'y = 2x',
+data:x.map(v=>2*v),
+borderWidth:3
+},
+{
+label:'y = x',
+data:x.map(v=>v),
+borderWidth:3
+}
+]);
+
+/* Graph 2 */
+createGraph('graph2',[
+{
+label:'y = -6x',
+data:x.map(v=>-6*v),
+borderWidth:3
+},
+{
+label:'y = -3x',
+data:x.map(v=>-3*v),
+borderWidth:3
+},
+{
+label:'y = -x',
+data:x.map(v=>-v),
+borderWidth:3
+}
+]);
+
+/* Graph 3 */
+createGraph('graph3',[
+{
+label:'y = 5x',
+data:x.map(v=>5*v),
+borderWidth:3
+},
+{
+label:'y = -5x',
+data:x.map(v=>-5*v),
+borderWidth:3
+}
+]);
+
+/* Graph 4 */
+createGraph('graph4',[
+{
+label:'y = 3x - 1',
+data:x.map(v=>3*v-1),
+borderWidth:3
+},
+{
+label:'y = 3x',
+data:x.map(v=>3*v),
+borderWidth:3
+},
+{
+label:'y = 3x + 1',
+data:x.map(v=>3*v+1),
+borderWidth:3
+}
+]);
+
+/* Graph 5 */
+createGraph('graph5',[
+{
+label:'y = -2x - 3',
+data:x.map(v=>-2*v-3),
+borderWidth:3
+},
+{
+label:'y = -2x',
+data:x.map(v=>-2*v),
+borderWidth:3
+},
+{
+label:'y = 2x + 3',
+data:x.map(v=>2*v+3),
+borderWidth:3
+}
+]);
+
+</script>
+
+
+
+      </article>
+      <aside class="related-box">
+        <h2>Other solutions</h2>
+        <a href="/Saraswat_Academy/index.html">Home</a>
+        <a href="maths_9_ch2\maths_class9_ch2_ex2.1.html">Exercise Set 2.1</a>
+        <a href="maths_9_ch2\maths_class9_ch2_ex2.2.html">Exercise Set 2.2</a>
+        <a href="maths_9_ch2\maths_class9_ch2_ex2.3.html">Exercise Set 2.3</a>
+        <a href="maths_9_ch2\maths_class9_ch2_ex2.4.html">Exercise Set 2.4</a>
+        <a href="maths_9_ch2\maths_class9_ch2_ex2.5.html">Exercise Set 2.5</a>
+        <a href="maths_9_ch2\maths_class9_ch2_ex2.6.html">Exercise Set 2.6</a>
+        <a href="maths_9_ch2\maths_class9_ch2_end.html">End of Chapter Exercises</a>
+      </aside>
+    </main>
+     <!-- ━━━ FOOTER ━━━ -->
+<div id="footer"></div>
+
+
+  </body>
+</html>
