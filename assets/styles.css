@@ -26,13 +26,6 @@ html {
   text-transform: uppercase;
 }
 
-h1,
-h2,
-h3,
-p {
-  overflow-wrap: break-word;
-  word-break: normal;
-}
 
 h1 {
   margin: 0;
