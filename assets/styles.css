@@ -30,7 +30,9 @@ h1,
 h2,
 h3,
 p {
-  overflow-wrap: anywhere;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: auto;
 }
 
 h1 {
@@ -60,8 +62,8 @@ h3 {
 
 .solution-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 150px;
-  gap: 20px;
+    grid-template-columns: 1fr 260px;
+    gap: 20px;
   padding: 10px clamp(18px, 4vw, 56px) 64px;
 }
 
@@ -146,34 +148,34 @@ h3 {
   font-weight: 800;
 }
 
-@media (max-width: 640px) {
 
-  /* Wider page */
-  .site-header{
-    padding:10px 12px;
-  }
+@media (max-width:768px){
 
-  .hero{
-    padding:24px 12px 18px;
-    gap:20px;
-  }
+.solution-layout{
+    grid-template-columns:1fr;
+    padding:15px;
+}
 
-  .section{
-    padding:40px 12px;
-  }
+.solution-article{
+    padding:20px;
+}
 
-  .upload-panel{
-    margin:30px 12px;
-    padding:18px;
-  }
+.related-box{
+    position:static;
+    width:100%;
+    margin-top:20px;
+}
 
-  .solution-layout{
-    padding:18px 12px 40px;
-  }
+.solution-article h1{
+    font-size:2rem;
+    line-height:1.3;
+}
 
-  .site-footer{
-    padding:18px 12px;
-  }
+.answer-block h2{
+    font-size:1.4rem;
+}
+
+}
 
   /* Navigation */
   /* Hero text */
