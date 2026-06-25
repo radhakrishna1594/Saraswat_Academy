@@ -26,6 +26,10 @@ html {
   text-transform: uppercase;
 }
 
+h1,h2,h3,p{
+    word-break:normal;
+    overflow-wrap:break-word;
+}
 
 h1 {
   margin: 0;
@@ -142,18 +146,26 @@ h3 {
 @media (max-width:768px){
 
 .solution-layout{
-    grid-template-columns:1fr;
+    display:block;
+    width:100%;
     padding:15px;
+}
+
+.solution-article{
+    width:100%;
+    margin-bottom:20px;
 }
 
 .related-box{
     position:static;
     width:100%;
-    margin-top:20px;
+}
+
+.solution-article h1{
+    font-size:2rem;
 }
 
 }
-
   /* Wider page */
   .site-header{
     padding:10px 12px;
