@@ -104,42 +104,7 @@ header {
 .nav-arrow { font-size: 10px; opacity: .5; }
 
 /* DROPDOWN */
-.dropdown {
-  position: absolute; top: calc(100% + 8px); left: 0;
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: 12px; box-shadow: var(--shadow-lg);
-  min-width: 220px; padding: 8px;
-  opacity: 0; visibility: hidden; transform: translateY(-8px);
-  transition: all .2s ease; z-index: 999;
-}
-.nav-item:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
-.dd-link {
-  display: flex; align-items: center; gap: 10px;
-  padding: 9px 12px; border-radius: 7px;
-  text-decoration: none; font-size: 13.5px; color: var(--text2);
-  transition: background .15s, color .15s;
-}
-.dd-link:hover { background: var(--cream); color: var(--indigo); }
-.dd-icon { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
-.dd-title { font-weight: 600; font-size: 13px; }
-.dd-sub { font-size: 11.5px; color: var(--text3); }
 
-.header-right { display: flex; align-items: center; gap: 10px; margin-left: auto; }
-.btn-search {
-  width: 36px; height: 36px; border-radius: 8px; background: var(--cream);
-  border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
-  cursor: pointer; color: var(--text3); font-size: 15px; transition: all .15s;
-}
-.btn-search:hover { background: var(--cream2); color: var(--indigo); }
-.btn-enroll {
-  padding: 9px 22px; border-radius: 8px;
-  background: linear-gradient(135deg, var(--indigo), var(--indigo2));
-  color: #fff; font-family: 'DM Sans', sans-serif; font-weight: 600;
-  font-size: 13.5px; text-decoration: none; letter-spacing: .02em;
-  transition: opacity .2s, transform .15s; white-space: nowrap;
-  box-shadow: 0 4px 14px rgba(30,42,94,.3);
-}
-.btn-enroll:hover { opacity: .9; transform: translateY(-1px); }
 
 /* ━━━━━━━━━━━━━━━━ HERO ━━━━━━━━━━━━━━━━ */
 .hero {
@@ -182,7 +147,7 @@ header {
 
 .hero-inner {
   max-width: 1280px; margin: 0 auto; padding: 80px 32px;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
   align-items: center; position: relative; z-index: 2; width: 100%;
 }
 
@@ -587,6 +552,60 @@ footer { background: var(--deep); color: #ffffff; }
   .stat-grid { grid-template-columns: 1fr 1fr; }
 }
 
+/* ━━━━━━━━━━━━━━━━ AI CAN MAKE MISTAKE BUT SARASWAT ACADEMY CANT ━━━━━━━━━━━━━━━━ */
+
+.trust-box{
+    width:700px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    padding:22px 28px;
+    border:4px solid #d39a34;
+    border-radius:20px;
+    background:rgba(255,255,255,.04);
+    backdrop-filter:blur(8px);
+    margin-bottom:30px;
+}
+
+.trust-left{
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+    flex:1;
+}
+
+.icon{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#ffbf43;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    flex-shrink:0;
+}
+
+.small-text{
+    margin:0;
+    color:#d5d5d5;
+    font-size:22px;
+}
+
+.trust-content h2{
+    margin:8px 0;
+    color:#fff;
+    font-size:34px;
+    font-weight:700;
+}
+
+.description{
+    margin:0;
+    color:#cfcfcf;
+    font-size:17px;
+    line-height:1.6;
+}
 
 </style>
 </head>
@@ -640,6 +659,8 @@ footer { background: var(--deep); color: #ffffff; }
 </header>
 
 <!-- ━━━ HERO ━━━ -->
+
+
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
@@ -675,8 +696,30 @@ footer { background: var(--deep); color: #ffffff; }
       </div>
     
     </div>
+   
+<div class="hero-visual">
+      <div class="hero-card">
+        <div class="stat-grid">
+        <div class="trust-box">
+          
+    <div class="trust-left">
+        <div class="icon">🛡️</div>
 
-    <div class="hero-visual">
+        <div class="trust-content">
+            <p class="small-text">AI can make mistakes.</p>
+
+            <h2>Saraswat Academy doesn't.</h2>
+
+            <p class="description">
+                Every solution is verified by subject experts for
+                100% accurate, exam-ready learning.
+            </p>
+        </div>
+    </div>    
+        </div>
+      </div>
+
+ <div class="hero-visual">
       <div class="hero-card">
         <div class="hero-card-title"> <h2>What Students Can Do Here</h2></div>
         <div class="stat-grid">
@@ -686,20 +729,13 @@ footer { background: var(--deep); color: #ffffff; }
           <div class="stat-item"><div class="stat-num">👩‍🏫Study Assistance<span class="plus"></span></div><div class="stat-label">Your doubts are solve by our expert team</div></div>
         </div>
       </div>
-      <div class="hero-card">
-        <div class="hero-card-title"><h2>Popular</h2></div>
-        <div class="course-preview">
-          <div class="cp-item"><div class="cp-dot" style="background:#818CF8"></div><div class="cp-name">CBSE/IB/ICSE/Cambridge/NIOS/ State Board Exams Preparation</div><div class="cp-tag"></div></div>
-          <div class="cp-item"><div class="cp-dot" style="background:#34D399"></div><div class="cp-name">Previous Year Question Papers</div><div class="cp-tag"></div></div>
-          <div class="cp-item"><div class="cp-dot" style="background:#FBBF24"></div><div class="cp-name">MCQ Practice</div><div class="cp-tag"></div></div>
-          <div class="cp-item"><div class="cp-dot" style="background:#F87171"></div><div class="cp-name">Case Studies</div><div class="cp-tag"></div></div>
-          <div class="cp-item"><div class="cp-dot" style="background:#F87171"></div><div class="cp-name">Sample Papers for practice</div><div class="cp-tag"></div></div>
-          <div class="cp-item"><div class="cp-dot" style="background:#F87171"></div><div class="cp-name">Solved PYQs</div><div class="cp-tag"></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+
+      
+  
 </section>
+
+
 
 <!-- ━━━ SUBJECTS ━━━ -->
 <div class="subjects-bg">
