@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Saraswat Academy – Excellence in Education</title>
 <meta name="description" content="Saraswat Academy — Premium study resources for CBSE, ICSE, IB, Engineering & Competitive Exams. Free solutions, notes, practice papers and expert guidance.">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Baloo 2:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet">
 <script src="loader.js"></script>
 <script src="config.js"></script>
 <style>
@@ -51,13 +51,12 @@ body {
   display: flex; justify-content: space-between; align-items: center;
   font-size: 14px; color: #d1d5db;
 }
-.topbar-left { display: flex; gap: 20px; }
+.topbar-left { display: flex; gap: 20px; flex-wrap: wrap; }
 .topbar-left span { display: flex; align-items: center; gap: 5px; }
 .topbar-right { display: flex; gap: 14px; align-items: center; }
 .topbar-right a { color: #9CA3AF; text-decoration: none; transition: color .2s; }
 .topbar-right a:hover { color: var(--gold2); }
 .tb-divider { color: #374151; }
-
 
 /* ━━━━━━━━━━━━━━━━ HEADER ━━━━━━━━━━━━━━━━ */
 header {
@@ -67,52 +66,78 @@ header {
   box-shadow: 0 2px 16px rgba(12,15,30,.07);
 }
 .header-inner {
-  max-width: 1280px; margin: 0 auto; padding: 0 32px;
-  display: flex; align-items: center; gap: 32px; height: 72px;
+  max-width: 1280px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; gap: 24px; height: 68px;
 }
-.logo { text-decoration: none; display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+.logo { text-decoration: none; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
 .logo-emblem {
-  width: 48px; height: 48px; position: relative;
-  display: flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; position: relative;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
-.logo-emblem svg { width: 48px; height: 48px; }
+.logo-emblem svg { width: 44px; height: 44px; }
 .logo-text-wrap { line-height: 1.1; }
 .logo-name {
-  font-family:'Inter', serif;; font-weight: 700; font-size: 20px;
+  font-family: 'Inter', sans-serif; font-weight: 700; font-size: 18px;
   color: var(--deep); letter-spacing: .04em;
   background: linear-gradient(135deg, var(--indigo) 0%, var(--deep) 60%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
 .logo-tagline {
   font-size: 10px; font-weight: 500; color: var(--gold);
-  letter-spacing: .14em; text-transform: uppercase;
+  letter-spacing: .1em; text-transform: uppercase;
+  font-family: 'Noto Serif Devanagari', serif;
 }
 
 /* NAV */
-.main-nav { display: flex; align-items: center; gap: 2px; flex: 1; }
-.nav-item { position: relative; }
+.main-nav { display: flex; align-items: center; gap: 2px; flex: 1; flex-wrap: wrap; }
 .nav-link {
   display: flex; align-items: center; gap: 4px;
-  padding: 8px 15px; border-radius: 7px;
-  font-size: 15px; font-weight: 600; color: var(--text2);
+  padding: 8px 13px; border-radius: 7px;
+  font-size: 14px; font-weight: 600; color: var(--text2);
   text-decoration: none; cursor: pointer;
   transition: background .15s, color .15s;
-  white-space: nowrap;
+  white-space: nowrap; min-height: 44px;
 }
 .nav-link:hover { background: var(--cream); color: var(--indigo); }
 .nav-link.active { color: var(--indigo); font-weight: 600; }
-.nav-arrow { font-size: 10px; opacity: .5; }
 
-/* DROPDOWN */
+/* HAMBURGER */
+.hamburger {
+  display: none; flex-direction: column; justify-content: center; gap: 5px;
+  width: 44px; height: 44px; background: none; border: none; cursor: pointer;
+  margin-left: auto; padding: 8px; border-radius: 8px;
+  transition: background .15s;
+}
+.hamburger:hover { background: var(--cream); }
+.hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--text2); border-radius: 2px;
+  transition: all .25s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* MOBILE NAV DRAWER */
+.mobile-nav {
+  display: none; position: fixed; top: 68px; left: 0; right: 0; bottom: 0;
+  background: var(--white); z-index: 299; overflow-y: auto;
+  padding: 16px 20px 32px; flex-direction: column; gap: 4px;
+  border-top: 1px solid var(--border);
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav .nav-link {
+  font-size: 16px; padding: 14px 16px; border-radius: 10px;
+  border: 1px solid transparent; min-height: 52px;
+}
+.mobile-nav .nav-link:hover { border-color: var(--border); background: var(--cream); }
 
 /* ━━━━━━━━━━━━━━━━ HERO ━━━━━━━━━━━━━━━━ */
 .hero {
-  position: relative; overflow: hidden; min-height: 92vh;
+  position: relative; overflow: hidden; min-height: 90vh;
   display: flex; align-items: center;
   background: var(--deep);
 }
-/* Layered background */
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
   background:
@@ -121,7 +146,6 @@ header {
     radial-gradient(ellipse 40% 40% at 90% 80%, rgba(139,26,26,.15) 0%, transparent 50%),
     linear-gradient(160deg, #090C18 0%, #111827 50%, #0C1A2E 100%);
 }
-/* Decorative grid */
 .hero-grid {
   position: absolute; inset: 0; z-index: 0; opacity: .04;
   background-image:
@@ -129,14 +153,12 @@ header {
     linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px);
   background-size: 60px 60px;
 }
-/* Glowing orb */
 .hero-orb {
   position: absolute; right: -100px; top: -100px; z-index: 0;
   width: 700px; height: 700px; border-radius: 50%;
   background: radial-gradient(circle, rgba(201,147,58,.08) 0%, transparent 65%);
   pointer-events: none;
 }
-/* Sanskrit/decorative text */
 .hero-deco {
   position: absolute; right: 5%; top: 50%; transform: translateY(-50%);
   z-index: 1; opacity: .04;
@@ -146,41 +168,41 @@ header {
 }
 
 .hero-inner {
-  max-width: 1280px; margin: 0 auto; padding: 80px 32px;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+  max-width: 1280px; margin: 0 auto; padding: 72px 32px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
   align-items: center; position: relative; z-index: 2; width: 100%;
 }
 
-.hero-content { }
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
   background: rgba(201,147,58,.12); border: 1px solid rgba(201,147,58,.3);
-  color: var(--gold2); border-radius: 20px; padding: 5px 16px;
-  font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
-  margin-bottom: 24px;
+  color: var(--gold2); border-radius: 20px; padding: 6px 16px;
+  font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  margin-bottom: 22px;
 }
-.hero-eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold2); animation: pulse 2s ease-in-out infinite; }
+.hero-eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold2); animation: pulse 2s ease-in-out infinite; flex-shrink: 0; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.7)} }
 
 .hero h1 {
   font-family: 'Cormorant Garamond', serif; font-weight: 600;
-  font-size: clamp(2.8rem, 5.5vw, 4.5rem); color: #fff; line-height: 1.12;
-  margin-bottom: 22px; letter-spacing: -.01em;
+  font-size: clamp(2.4rem, 5vw, 4.2rem); color: #fff; line-height: 1.12;
+  margin-bottom: 20px; letter-spacing: -.01em;
 }
 .hero h1 em { font-style: italic; color: var(--gold2); }
 .hero h1 span { display: block; }
 
 .hero-sub {
-  font-size: 16px; color: #9CA3AF; line-height: 1.75;
-  max-width: 500px; margin-bottom: 36px; font-weight: 300;
+  font-size: 15px; color: #9CA3AF; line-height: 1.75;
+  max-width: 500px; margin-bottom: 32px; font-weight: 300;
 }
 
 .hero-boards {
-  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 36px;
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px;
 }
 .board-chip {
-  padding: 6px 14px; border-radius: 20px; font-size: 12.5px; font-weight: 600;
-  letter-spacing: .04em; border: 1px solid;
+  padding: 7px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;
+  letter-spacing: .04em; border: 1px solid; min-height: 34px;
+  display: inline-flex; align-items: center;
 }
 .bc-cbse  { background: rgba(30,42,94,.5);  border-color: rgba(70,90,180,.5); color: #A5B4FC; }
 .bc-icse  { background: rgba(13,110,110,.3); border-color: rgba(20,160,158,.4); color: #5EEAD4; }
@@ -190,23 +212,23 @@ header {
 
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 .btn-hero-primary {
-  padding: 14px 30px; border-radius: 9px;
+  padding: 14px 28px; border-radius: 9px;
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold2) 100%);
   color: var(--deep); font-weight: 700; font-size: 15px;
   text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
-  box-shadow: 0 6px 24px rgba(201,147,58,.4); transition: all .2s;
+  box-shadow: 0 6px 24px rgba(201,147,58,.4); transition: all .2s; min-height: 48px;
 }
 .btn-hero-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(201,147,58,.5); }
 .btn-hero-secondary {
-  padding: 14px 28px; border-radius: 9px;
+  padding: 14px 24px; border-radius: 9px;
   background: rgba(255,255,255,.07); color: #fff;
   border: 1px solid rgba(255,255,255,.2);
   font-weight: 600; font-size: 15px; text-decoration: none;
-  display: inline-flex; align-items: center; gap: 8px; transition: all .2s;
+  display: inline-flex; align-items: center; gap: 8px; transition: all .2s; min-height: 48px;
 }
 .btn-hero-secondary:hover { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.35); }
 
-/* HERO STATS CARD */
+/* HERO VISUAL */
 .hero-visual { display: flex; flex-direction: column; gap: 16px; }
 .hero-card {
   background: rgba(255,255,255,.05); backdrop-filter: blur(20px);
@@ -219,26 +241,55 @@ header {
 .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .stat-item {
   background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07);
-  border-radius: 10px; padding: 16px 14px;
+  border-radius: 10px; padding: 14px 12px;
 }
 .stat-num {
   font-family: 'Cormorant Garamond', serif; font-weight: 700;
-  font-size: 2rem; color: #fff; line-height: 1; margin-bottom: 4px;
+  font-size: 1.5rem; color: #fff; line-height: 1.2; margin-bottom: 6px;
 }
 .stat-num .plus { color: var(--gold2); }
-.stat-label { font-size: 11.5px; color: #6B7280; font-weight: 500; letter-spacing: .02em; }
+.stat-label { font-size: 11px; color: #6B7280; font-weight: 500; letter-spacing: .02em; }
 
-.course-preview { display: flex; flex-direction: column; gap: 8px; }
-.cp-item {
-  display: flex; align-items: center; gap: 12px;
-  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07);
-  border-radius: 9px; padding: 12px 14px;
+/* TRUST BOX */
+.trust-box {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 22px;
+  border: 3px solid #d39a34;
+  border-radius: 16px;
+  background: rgba(255,255,255,.04);
+  backdrop-filter: blur(8px);
+  margin-bottom: 16px;
 }
-.cp-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-.cp-name { font-size: 13.5px; color: #D1D5DB; font-weight: 500; flex: 1; }
-.cp-tag {
-  font-size: 11px; padding: 2px 9px; border-radius: 8px; font-weight: 600;
-  background: rgba(201,147,58,.15); color: var(--gold2);
+.trust-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex: 1;
+}
+.icon {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: #ffbf43;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; flex-shrink: 0;
+}
+.small-text {
+  margin: 0; color: #d5d5d5;
+  font-size: clamp(13px, 2.5vw, 16px);
+}
+.trust-content h2 {
+  margin: 6px 0;
+  color: #fff;
+  font-size: clamp(16px, 3vw, 24px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.description {
+  margin: 0; color: #cfcfcf;
+  font-size: clamp(12px, 2vw, 14px);
+  line-height: 1.6;
 }
 
 /* ━━━━━━━━━━━━━━━━ BOARD STRIP ━━━━━━━━━━━━━━━━ */
@@ -248,42 +299,43 @@ header {
   border-bottom: 1px solid var(--border);
 }
 .board-strip-inner {
-  max-width: 1280px; margin: 0 auto; padding: 0 32px;
+  max-width: 1280px; margin: 0 auto; padding: 0 24px;
   display: flex; align-items: stretch; overflow-x: auto;
 }
 .board-strip-inner::-webkit-scrollbar { height: 0; }
 .board-tab {
   display: flex; align-items: center; gap: 10px;
-  padding: 18px 28px; border-right: 1px solid var(--border);
+  padding: 16px 24px; border-right: 1px solid var(--border);
   cursor: pointer; text-decoration: none; transition: background .15s;
-  white-space: nowrap; flex-shrink: 0;
+  white-space: nowrap; flex-shrink: 0; min-height: 48px;
 }
 .board-tab:last-child { border-right: none; }
 .board-tab:hover { background: var(--cream); }
 .board-tab.active { background: var(--cream); border-bottom: 3px solid var(--indigo); margin-bottom: -1px; }
-.bt-icon { font-size: 22px; }
+.bt-icon { font-size: 20px; }
 .bt-title { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 15px; color: var(--text); }
-.bt-sub { font-size: 11.5px; color: var(--text3); }
+.bt-sub { font-size: 11px; color: var(--text3); }
 
 /* ━━━━━━━━━━━━━━━━ SECTION WRAPPERS ━━━━━━━━━━━━━━━━ */
-.section { max-width: 1280px; margin: 0 auto; padding: 72px 32px; }
-.section-sm { max-width: 1280px; margin: 0 auto; padding: 48px 32px; }
+.section { max-width: 1280px; margin: 0 auto; padding: 64px 24px; }
+.section-sm { max-width: 1280px; margin: 0 auto; padding: 40px 24px; }
 .sec-eyebrow {
-  font-size: 11.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
   color: var(--gold); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
 }
-.sec-eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--gold); border-radius: 2px; }
+.sec-eyebrow::before { content: ''; width: 20px; height: 2px; background: var(--gold); border-radius: 2px; flex-shrink: 0; }
 .sec-title {
   font-family: 'Cormorant Garamond', serif; font-weight: 600;
-  font-size: clamp(2rem, 3.5vw, 2.8rem); color: var(--text); line-height: 1.2; margin-bottom: 14px;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--text); line-height: 1.2; margin-bottom: 14px;
 }
 .sec-title em { font-style: italic; color: var(--indigo); }
-.sec-sub { font-size: 15.5px; color: var(--text3); line-height: 1.7; max-width: 560px; }
-.sec-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 16px; }
+.sec-sub { font-size: 15px; color: var(--text3); line-height: 1.7; max-width: 560px; }
+.sec-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 36px; flex-wrap: wrap; gap: 14px; }
 .see-all {
-  font-size: 13.5px; font-weight: 600; color: var(--indigo);
+  font-size: 13px; font-weight: 600; color: var(--indigo);
   text-decoration: none; display: flex; align-items: center; gap: 5px;
-  transition: gap .2s;
+  transition: gap .2s; white-space: nowrap;
+  min-height: 44px; align-self: center;
 }
 .see-all:hover { gap: 9px; }
 
@@ -319,17 +371,17 @@ header {
   background: rgba(255,255,255,.15); color: #fff; padding: 3px 9px; border-radius: 10px;
   border: 1px solid rgba(255,255,255,.2);
 }
-.prog-body { padding: 18px 20px 20px; }
+.prog-body { padding: 16px 18px 18px; }
 .prog-title { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 18px; color: var(--text); margin-bottom: 5px; }
 .prog-desc { font-size: 13px; color: var(--text3); line-height: 1.6; margin-bottom: 14px; }
-.prog-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+.prog-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
 .prog-pill {
-  font-size: 11px; padding: 2px 9px; border-radius: 8px; font-weight: 600;
+  font-size: 11px; padding: 3px 9px; border-radius: 8px; font-weight: 600;
   background: var(--cream); border: 1px solid var(--border); color: var(--text2);
 }
 .prog-footer {
   display: flex; align-items: center; justify-content: space-between;
-  border-top: 1px solid var(--border); padding-top: 14px;
+  border-top: 1px solid var(--border); padding-top: 12px;
 }
 .prog-count { font-size: 12px; color: var(--text3); }
 .prog-count strong { color: var(--text); }
@@ -342,12 +394,11 @@ header {
 
 /* ━━━━━━━━━━━━━━━━ FEATURES ━━━━━━━━━━━━━━━━ */
 .features-bg { background: var(--white); }
-.feat-layout { display: grid; grid-template-columns: 5fr 7fr; gap: 72px; align-items: center; }
-.feat-left { }
-.feat-list { display: flex; flex-direction: column; gap: 14px; margin-top: 32px; }
+.feat-layout { display: grid; grid-template-columns: 5fr 7fr; gap: 56px; align-items: center; }
+.feat-list { display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
 .feat-item {
   display: flex; gap: 14px; align-items: flex-start;
-  padding: 16px 18px; border-radius: 11px; border: 1px solid var(--border);
+  padding: 14px 16px; border-radius: 11px; border: 1px solid var(--border);
   transition: border-color .2s, background .2s, transform .2s;
 }
 .feat-item:hover { border-color: var(--indigo); background: var(--cream); transform: translateX(4px); }
@@ -365,7 +416,7 @@ header {
 .feat-right { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .feat-stat-card {
   background: var(--cream); border: 1px solid var(--border);
-  border-radius: 14px; padding: 24px 20px; text-align: center;
+  border-radius: 14px; padding: 22px 18px; text-align: center;
   transition: transform .2s, box-shadow .2s;
 }
 .feat-stat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
@@ -380,25 +431,25 @@ header {
 }
 .feat-stat-card.accent .fsc-num { color: var(--gold2); }
 .feat-stat-card.accent .fsc-label { color: rgba(255,255,255,.6); }
-.fsc-icon { font-size: 28px; margin-bottom: 10px; }
+.fsc-icon { font-size: 26px; margin-bottom: 10px; }
 .fsc-num {
   font-family: 'Cormorant Garamond', serif; font-weight: 700;
-  font-size: 2.2rem; color: var(--indigo); line-height: 1; margin-bottom: 6px;
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem); color: var(--indigo); line-height: 1; margin-bottom: 6px;
 }
-.fsc-label { font-size: 12.5px; color: var(--text3); font-weight: 500; }
+.fsc-label { font-size: 12px; color: var(--text3); font-weight: 500; }
 
 /* ━━━━━━━━━━━━━━━━ SUBJECTS ━━━━━━━━━━━━━━━━ */
 .subjects-bg { background: linear-gradient(180deg, var(--cream) 0%, var(--cream2) 100%); }
-.subj-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.subj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; }
 .subj-card {
   background: var(--white); border: 1px solid var(--border); border-radius: 12px;
-  padding: 22px 18px; text-align: center; text-decoration: none; color: inherit;
+  padding: 20px 14px; text-align: center; text-decoration: none; color: inherit;
   transition: all .22s; display: block;
 }
 .subj-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--indigo); }
 .subj-icon {
-  width: 52px; height: 52px; border-radius: 13px; margin: 0 auto 12px;
-  display: flex; align-items: center; justify-content: center; font-size: 24px;
+  width: 48px; height: 48px; border-radius: 12px; margin: 0 auto 10px;
+  display: flex; align-items: center; justify-content: center; font-size: 22px;
 }
 .si-blue    { background: #EEF2FF; }
 .si-green   { background: #ECFDF5; }
@@ -408,22 +459,21 @@ header {
 .si-teal    { background: #F0FDFA; }
 .si-rose    { background: #FFF1F2; }
 .si-indigo  { background: #EEF2FF; }
-.subj-name { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 16px; color: var(--text); margin-bottom: 3px; }
-.subj-count { font-size: 12px; color: var(--text3); }
+.subj-name { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 15px; color: var(--text); margin-bottom: 2px; }
+.subj-count { font-size: 11.5px; color: var(--text3); }
 
-/* ━━━━━━━━━━━━━━━━ EXAM PREP BANNER ━━━━━━━━━━━━━━━━ */
 /* ━━━━━━━━━━━━━━━━ RESOURCES ━━━━━━━━━━━━━━━━ */
 .resources-bg { background: var(--white); }
-.res-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.res-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
 .res-card {
   background: var(--cream); border: 1px solid var(--border); border-radius: 12px;
-  padding: 22px 18px; text-align: center; text-decoration: none; color: inherit;
+  padding: 20px 16px; text-align: center; text-decoration: none; color: inherit;
   transition: all .2s;
 }
 .res-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); background: var(--white); border-color: var(--gold); }
 .rc-icon-wrap {
-  width: 54px; height: 54px; border-radius: 14px; margin: 0 auto 14px;
-  display: flex; align-items: center; justify-content: center; font-size: 26px;
+  width: 52px; height: 52px; border-radius: 13px; margin: 0 auto 12px;
+  display: flex; align-items: center; justify-content: center; font-size: 24px;
 }
 .rci-gold   { background: #FBF3E3; }
 .rci-blue   { background: #EEF2FF; }
@@ -433,17 +483,15 @@ header {
 .rci-teal   { background: #F0FDFA; }
 .rci-amber  { background: #FFFBEB; }
 .rci-grey   { background: #F9FAFB; }
-.rc-title { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 16px; color: var(--text); margin-bottom: 5px; }
-.rc-desc { font-size: 12.5px; color: var(--text3); line-height: 1.5; }
-
-/* ━━━━━━━━━━━━━━━━ TESTIMONIALS ━━━━━━━━━━━━━━━━ */
+.rc-title { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 15px; color: var(--text); margin-bottom: 5px; }
+.rc-desc { font-size: 12px; color: var(--text3); line-height: 1.5; }
 
 /* ━━━━━━━━━━━━━━━━ CTA ━━━━━━━━━━━━━━━━ */
-.cta-section { padding: 0 32px 80px; }
+.cta-section { padding: 0 24px 72px; }
 .cta-banner {
   max-width: 1280px; margin: 0 auto;
   background: linear-gradient(135deg, var(--indigo) 0%, #2D3F8A 50%, var(--indigo) 100%);
-  border-radius: 20px; padding: 60px 56px;
+  border-radius: 20px; padding: 56px 48px;
   display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;
   position: relative; overflow: hidden; box-shadow: var(--shadow-lg);
 }
@@ -457,62 +505,61 @@ header {
   width: 240px; height: 240px; border-radius: 50%;
   background: radial-gradient(circle, rgba(255,255,255,.05) 0%, transparent 70%);
 }
-.cta-text { position: relative; z-index: 1; }
+.cta-text { position: relative; z-index: 1; flex: 1; min-width: 200px; }
 .cta-text h2 {
   font-family: 'Cormorant Garamond', serif; font-weight: 600;
-  font-size: clamp(1.8rem, 3vw, 2.6rem); color: #fff; margin-bottom: 10px; line-height: 1.2;
+  font-size: clamp(1.6rem, 3vw, 2.6rem); color: #fff; margin-bottom: 10px; line-height: 1.2;
 }
 .cta-text h2 em { font-style: italic; color: var(--gold2); }
 .cta-text p { color: rgba(255,255,255,.65); font-size: 15px; line-height: 1.7; max-width: 440px; }
 .cta-actions { display: flex; gap: 12px; flex-wrap: wrap; position: relative; z-index: 1; }
 .btn-cta-main {
-  padding: 14px 30px; border-radius: 9px;
+  padding: 14px 28px; border-radius: 9px;
   background: linear-gradient(135deg, var(--gold), var(--gold2));
   color: var(--deep); font-weight: 700; font-size: 15px;
   text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
-  box-shadow: 0 6px 20px rgba(201,147,58,.4); transition: all .2s;
+  box-shadow: 0 6px 20px rgba(201,147,58,.4); transition: all .2s; min-height: 48px;
 }
 .btn-cta-main:hover { transform: translateY(-2px); }
 .btn-cta-ghost {
-  padding: 14px 28px; border-radius: 9px; background: rgba(255,255,255,.08);
+  padding: 14px 24px; border-radius: 9px; background: rgba(255,255,255,.08);
   color: #fff; border: 1px solid rgba(255,255,255,.25); font-weight: 600; font-size: 15px;
-  text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all .2s;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+  transition: all .2s; min-height: 48px;
 }
 .btn-cta-ghost:hover { background: rgba(255,255,255,.14); }
 
 /* ━━━━━━━━━━━━━━━━ FOOTER ━━━━━━━━━━━━━━━━ */
 footer { background: var(--deep); color: #ffffff; }
 .footer-top {
-  max-width: 1400px; margin: 0 auto; padding: 35px 32px 40px;
-  display: grid; grid-template-columns: 2.2fr 1fr 1fr 1fr 1fr; gap: 40px;
+  max-width: 1400px; margin: 0 auto; padding: 40px 24px;
+  display: grid; grid-template-columns: 2.2fr 1fr 1fr 1fr 1fr; gap: 36px;
 }
 .footer-brand-name {
-  font-family:'Inter', serif; font-size: 18px; font-weight: 700;
+  font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 700;
   color: #fff; letter-spacing: .06em; margin-bottom: 10px;
 }
 .footer-brand-tag { font-size: 11px; color: var(--gold); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 14px; font-weight: 600; }
-.footer-brand p { font-size: 13px; color: #ffffff; line-height: 1.7; max-width: 260px; }
-.footer-boards {
-  display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px;
-}
+.footer-brand p { font-size: 13px; color: #d1d5db; line-height: 1.7; max-width: 260px; }
+.footer-boards { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
 .fb-tag {
-  font-size: 10.5px; padding: 2px 9px; border-radius: 8px;
-  border: 1px solid rgba(255,255,255,.1); color: #ffffff;
+  font-size: 10.5px; padding: 3px 9px; border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.1); color: #d1d5db;
 }
 .footer-col h4 {
-  font-family: font-family:'Inter', serif; font-weight: 700; font-size: 15px;
+  font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px;
   color: #D1D5DB; margin-bottom: 14px; letter-spacing: .03em;
 }
 .footer-col a {
-  display: block; font-size: 13px; color: #ffffff; text-decoration: none;
-  margin-bottom: 8px; transition: color .15s;
+  display: block; font-size: 13px; color: #9CA3AF; text-decoration: none;
+  margin-bottom: 10px; transition: color .15s; min-height: 28px;
 }
 .footer-col a:hover { color: var(--gold2); }
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 20px 32px; max-width: 1280px; margin: 0 auto;
+  border-top: 1px solid rgba(255,255,255,.06);
+  padding: 20px 24px; max-width: 1280px; margin: 0 auto;
   display: flex; justify-content: space-between; align-items: center;
-  flex-wrap: wrap; gap: 12px; font-size: 12.5px;
+  flex-wrap: wrap; gap: 12px; font-size: 12.5px; color: #6B7280;
 }
 .footer-bottom strong { color: var(--gold2); }
 
@@ -524,89 +571,102 @@ footer { background: var(--deep); color: #ffffff; }
 .reveal-r { opacity: 0; transform: translateX(28px); transition: opacity .65s ease, transform .65s ease; }
 .reveal-r.visible { opacity: 1; transform: translateX(0); }
 
-/* ━━━━━━━━━━━━━━━━ RESPONSIVE ━━━━━━━━━━━━━━━━ */
+/* ━━━━━━━━━━━━━━━━ RESPONSIVE BREAKPOINTS ━━━━━━━━━━━━━━━━ */
+
+/* Tablet landscape: 1100px */
 @media(max-width:1100px) {
   .prog-grid { grid-template-columns: 1fr 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+/* Tablet portrait: 960px */
+@media(max-width:960px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+  .hero-visual { display: none; }
+  .feat-layout { grid-template-columns: 1fr; gap: 36px; }
+  .testi-grid { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr 1fr; }
 }
-@media(max-width:960px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-  .hero-visual { display: none; }
-  .feat-layout { grid-template-columns: 1fr; gap: 40px; }
-  .subj-grid { grid-template-columns: repeat(2, 1fr); }
-  .res-grid { grid-template-columns: repeat(2, 1fr); }
-  .testi-grid { grid-template-columns: 1fr; }
-}
+
+/* Mobile: 768px */
 @media(max-width:768px) {
   .topbar { display: none; }
   .main-nav { display: none; }
+  .hamburger { display: flex; }
+
+  .header-inner { padding: 0 16px; }
+  .logo-name { font-size: 15px; }
+  .logo-tagline { display: none; }
+
+  .hero { min-height: auto; }
+  .hero-inner { padding: 48px 16px 52px; grid-template-columns: 1fr; }
+  .hero-deco { display: none; }
+  .hero h1 { font-size: clamp(2rem, 8vw, 3rem); }
+  .hero-sub { font-size: 14px; margin-bottom: 24px; }
+  .hero-boards { gap: 6px; margin-bottom: 24px; }
+  .hero-actions { gap: 10px; }
+  .btn-hero-primary, .btn-hero-secondary { width: 100%; justify-content: center; }
+
+  .section { padding: 44px 16px; }
+  .section-sm { padding: 28px 16px; }
+  .sec-header { margin-bottom: 24px; }
+
   .prog-grid { grid-template-columns: 1fr; }
-  .cta-banner { padding: 36px 28px; }
+
+  .cta-section { padding: 0 12px 48px; }
+  .cta-banner { padding: 32px 22px; gap: 24px; border-radius: 14px; }
+  .cta-text h2 { font-size: clamp(1.4rem, 5.5vw, 2rem); }
+  .btn-cta-main, .btn-cta-ghost { width: 100%; justify-content: center; }
+  .cta-actions { width: 100%; }
+
+  .footer-top { grid-template-columns: 1fr; gap: 28px; padding: 32px 16px; }
+  .footer-bottom { padding: 16px; font-size: 12px; }
+
+  .feat-right { grid-template-columns: 1fr 1fr; }
+  .feat-stat-card.accent { grid-column: span 2; }
+}
+
+/* Small mobile: 480px */
+@media(max-width:480px) {
+  .hero-inner { padding: 36px 14px 44px; }
+  .board-chip { font-size: 11px; padding: 6px 12px; }
+
+  .subj-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .subj-card { padding: 16px 10px; }
+  .subj-icon { width: 42px; height: 42px; font-size: 20px; }
+  .subj-name { font-size: 13px; }
+
+  .res-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .res-card { padding: 16px 12px; }
+  .rc-icon-wrap { width: 44px; height: 44px; font-size: 22px; }
+  .rc-title { font-size: 13px; }
+  .rc-desc { font-size: 11px; }
+
+  .feat-right { grid-template-columns: 1fr; }
+  .feat-stat-card.accent { grid-column: span 1; }
+
+  .stat-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .stat-num { font-size: 1.1rem; }
+
+  .trust-box { padding: 14px 14px; gap: 12px; }
+  .icon { width: 40px; height: 40px; font-size: 20px; }
+
+  .cta-banner { padding: 24px 16px; }
+
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .footer-brand { grid-column: span 2; }
+}
+
+/* Very small: 360px */
+@media(max-width:360px) {
+  .logo-name { font-size: 13px; }
+  .logo-emblem { width: 36px; height: 36px; }
+  .logo-emblem svg { width: 36px; height: 36px; }
+  .subj-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .res-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
   .footer-top { grid-template-columns: 1fr; }
-  .section { padding: 48px 20px; }
-  .section-sm { padding: 32px 20px; }
+  .footer-brand { grid-column: span 1; }
 }
-@media(max-width:500px) {
-  .subj-grid { grid-template-columns: repeat(2, 1fr); }
-  .res-grid { grid-template-columns: 1fr 1fr; }
-  .stat-grid { grid-template-columns: 1fr 1fr; }
-}
-
-/* ━━━━━━━━━━━━━━━━ AI CAN MAKE MISTAKE BUT SARASWAT ACADEMY CANT ━━━━━━━━━━━━━━━━ */
-
-.trust-box{
-    width:700px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:30px;
-    padding:22px 28px;
-    border:4px solid #d39a34;
-    border-radius:20px;
-    background:rgba(255,255,255,.04);
-    backdrop-filter:blur(8px);
-    margin-bottom:30px;
-}
-
-.trust-left{
-    display:flex;
-    align-items:flex-start;
-    gap:18px;
-    flex:1;
-}
-
-.icon{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    background:#ffbf43;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:28px;
-    flex-shrink:0;
-}
-
-.small-text{
-    margin:0;
-    color:#d5d5d5;
-    font-size:22px;
-}
-
-.trust-content h2{
-    margin:8px 0;
-    color:#fff;
-    font-size:34px;
-    font-weight:700;
-}
-
-.description{
-    margin:0;
-    color:#cfcfcf;
-    font-size:17px;
-    line-height:1.6;
-}
-
 </style>
 </head>
 <body>
@@ -616,9 +676,7 @@ footer { background: var(--deep); color: #ffffff; }
   <div class="topbar-left">
     <span>📞 +91 7073468838</span>
     <span>📧 radhakrishna1594@gmail.com</span>
-    
   </div>
-
 </div>
 
 <!-- ━━━ HEADER ━━━ -->
@@ -626,8 +684,6 @@ footer { background: var(--deep); color: #ffffff; }
   <div class="header-inner">
     <a data-link=".././index.html" class="logo">
       <div class="logo-emblem">
-        
-        <!-- Saraswat veena/lotus emblem SVG -->
         <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="24" cy="24" r="23" fill="#0C0F1E" stroke="url(#gold-grad)" stroke-width="1.5"/>
           <text x="24" y="30" text-anchor="middle" font-family="serif" font-size="20" fill="url(#gold-grad)" font-weight="bold">स</text>
@@ -647,20 +703,33 @@ footer { background: var(--deep); color: #ffffff; }
 
     <nav class="main-nav">
       <a data-link=".././index.html" class="nav-link">Home</a>
-       <a data-link="/Formula_sheets/subjects_list.html" class="nav-link">Formula Sheets</a>
+      <a data-link="/Formula_sheets/subjects_list.html" class="nav-link">Formula Sheets</a>
       <a data-link="/Educational_Articles/Articles.html" class="nav-link">Educational Articles</a>
       <a data-link="/Students_Corner/link_pages/main_page.html" class="nav-link">Student Corner</a>
-       <a data-link="/about_us.html" class="nav-link">About Us</a>
+      <a data-link="/about_us.html" class="nav-link">About Us</a>
       <a data-link="/ask.html" class="nav-link">🙋 Ask a Doubt</a>
-
     </nav>
 
+    <!-- Hamburger button (mobile only) -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
+
+  <!-- Mobile nav drawer -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a data-link=".././index.html" class="nav-link">🏠 Home</a>
+    <a data-link="/Formula_sheets/subjects_list.html" class="nav-link">📐 Formula Sheets</a>
+    <a data-link="/Educational_Articles/Articles.html" class="nav-link">📰 Educational Articles</a>
+    <a data-link="/Students_Corner/link_pages/main_page.html" class="nav-link">🎓 Student Corner</a>
+    <a data-link="/about_us.html" class="nav-link">ℹ️ About Us</a>
+    <a data-link="/ask.html" class="nav-link">🙋 Ask a Doubt</a>
+  </nav>
 </header>
 
 <!-- ━━━ HERO ━━━ -->
-
-
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
@@ -672,21 +741,18 @@ footer { background: var(--deep); color: #ffffff; }
       <div class="hero-eyebrow">
         <span class="hero-eyebrow-dot"></span>
         <h2>📚 Trusted Learning Platform</h2>
-        
       </div>
       <h1>
         <span>Where Every</span>
         <em>Student</em>
         <span>Finds Their Path</span>
       </h1>
-
       <p class="hero-sub">
-         Welcome to <strong>Saraswat Academy</strong>, your reliable destination
-            for NCERT books Solution, CBSE Study Materials, Notes, Important Questions,
-            Sample Papers, and Exam Preparation Resources. Our mission is to make
-            learning simple, effective, and accessible for every student.
+        Welcome to <strong>Saraswat Academy</strong>, your reliable destination
+        for NCERT books Solution, CBSE Study Materials, Notes, Important Questions,
+        Sample Papers, and Exam Preparation Resources. Our mission is to make
+        learning simple, effective, and accessible for every student.
       </p>
-
       <div class="hero-boards">
         <span class="board-chip bc-cbse">CBSE</span>
         <span class="board-chip bc-icse">ICSE / ISC</span>
@@ -694,98 +760,96 @@ footer { background: var(--deep); color: #ffffff; }
         <span class="board-chip bc-eng">JEE · NEET</span>
         <span class="board-chip bc-comp">UPSC · SSC · Banking</span>
       </div>
-    
     </div>
-   
-<div class="hero-visual">
+
+    <div class="hero-visual">
       <div class="hero-card">
-        <div class="stat-grid">
         <div class="trust-box">
-          
-    <div class="trust-left">
-        <div class="icon">🛡️</div>
-
-        <div class="trust-content">
-            <p class="small-text">AI can make mistakes.</p>
-
-            <h2>Saraswat Academy doesn't.</h2>
-
-            <p class="description">
+          <div class="trust-left">
+            <div class="icon">🛡️</div>
+            <div class="trust-content">
+              <p class="small-text">AI can make mistakes.</p>
+              <h2>Saraswat Academy doesn't.</h2>
+              <p class="description">
                 Every solution is verified by subject experts for
                 100% accurate, exam-ready learning.
-            </p>
-        </div>
-    </div>    
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
- <div class="hero-visual">
       <div class="hero-card">
-        <div class="hero-card-title"> <h2>What Students Can Do Here</h2></div>
+        <div class="hero-card-title">What Students Can Do Here</div>
         <div class="stat-grid">
-          <div class="stat-item"><div class="stat-num">🚀 Start Learning<span class="plus"></span></div><div class="stat-label">Find any chapter solution in seconds.</div></div>
-          <div class="stat-item"><div class="stat-num">📝 Practice Questions<span class="plus"></span></div><div class="stat-label">Topic-wise and chapter-wise practice.</div></div>
-          <div class="stat-item"><div class="stat-num">🎯 Prepare for Exams<span class="plus"></span></div><div class="stat-label">Previous year papers and important questions.</div></div>
-          <div class="stat-item"><div class="stat-num">👩‍🏫Study Assistance<span class="plus"></span></div><div class="stat-label">Your doubts are solve by our expert team</div></div>
+          <div class="stat-item">
+            <div class="stat-num">🚀 Start Learning</div>
+            <div class="stat-label">Find any chapter solution in seconds.</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">📝 Practice</div>
+            <div class="stat-label">Topic-wise and chapter-wise practice.</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">🎯 Exam Prep</div>
+            <div class="stat-label">Previous year papers and important questions.</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">👩‍🏫 Assistance</div>
+            <div class="stat-label">Your doubts solved by our expert team.</div>
+          </div>
         </div>
       </div>
-
-
-      
-  
+    </div>
+  </div>
 </section>
-
-
 
 <!-- ━━━ SUBJECTS ━━━ -->
 <div class="subjects-bg">
-<div class="section">
-  <div class="sec-header">
-    <div>
-      <div class="sec-eyebrow reveal"><h1>Subjects</h1></div>
-      <h2 class="sec-title reveal" style="transition-delay:.07s">Every Subject, <em>Covered Deeply</em></h2>
+  <div class="section">
+    <div class="sec-header">
+      <div>
+        <div class="sec-eyebrow reveal">Subjects</div>
+        <h2 class="sec-title reveal" style="transition-delay:.07s">Every Subject, <em>Covered Deeply</em></h2>
+      </div>
+      <a href="#" class="see-all reveal">All subjects →</a>
     </div>
-    <a href="#" class="see-all reveal">All subjects →</a>
-  </div>
-  <div class="subj-grid">
-    <a href="./link_page/maths_link_all_classes.html" target="_blank" class="subj-card reveal"><div class="subj-icon si-blue">📐</div><div class="subj-name"><h2>Mathematics</h2></div><div class="subj-count"></div></a>
-    <a href="./link_page/science_link_all_classes.html" class="subj-card reveal" style="transition-delay:.05s"><div class="subj-icon si-green">🔬</div><div class="subj-name"><h2>Science</h2></div><div class="subj-count"></div></a>
-    <a href="./link_page/english_link_all_classes.html" class="subj-card reveal" style="transition-delay:.1s"><div class="subj-icon si-amber">📖</div><div class="subj-name"><h2>English</h2></div><div class="subj-count"></div></a>
-    <a href="./link_page/sst_link_all_classes.html" class="subj-card reveal" style="transition-delay:.15s"><div class="subj-icon si-red">🌏</div><div class="subj-name"><h2>Social Studies</h2></div><div class="subj-count"></div></a>
-    <a href="./link_page/hindi_link_all_classes.html" class="subj-card reveal" style="transition-delay:.15s"><div class="subj-icon si-red">🪔</div><div class="subj-name"><h2>Hindi</h2></div><div class="subj-count"></div></a>
-    <a href="#" class="subj-card reveal" style="transition-delay:.2s"><div class="subj-icon si-purple">⚛️</div><div class="subj-name"><h2>Physics</h2></div><div class="subj-count"></div></a>
-    <a href="#" class="subj-card reveal" style="transition-delay:.25s"><div class="subj-icon si-teal">🧪</div><div class="subj-name"><h2>Chemistry</h2></div><div class="subj-count"></div></a>
-    <a href="#" class="subj-card reveal" style="transition-delay:.3s"><div class="subj-icon si-rose">🧬</div><div class="subj-name"><h2>Biology</h2></div><div class="subj-count"></div></a>
-    <a href="#" class="subj-card reveal" style="transition-delay:.35s"><div class="subj-icon si-indigo">💻</div><div class="subj-name"><h2>Computer/AI</h2></div><div class="subj-count"></div></a>
+    <div class="subj-grid">
+      <a href="./link_page/maths_link_all_classes.html" target="_blank" class="subj-card reveal"><div class="subj-icon si-blue">📐</div><div class="subj-name">Mathematics</div></a>
+      <a href="./link_page/science_link_all_classes.html" class="subj-card reveal" style="transition-delay:.05s"><div class="subj-icon si-green">🔬</div><div class="subj-name">Science</div></a>
+      <a href="./link_page/english_link_all_classes.html" class="subj-card reveal" style="transition-delay:.1s"><div class="subj-icon si-amber">📖</div><div class="subj-name">English</div></a>
+      <a href="./link_page/sst_link_all_classes.html" class="subj-card reveal" style="transition-delay:.15s"><div class="subj-icon si-red">🌏</div><div class="subj-name">Social Studies</div></a>
+      <a href="./link_page/hindi_link_all_classes.html" class="subj-card reveal" style="transition-delay:.15s"><div class="subj-icon si-red">🪔</div><div class="subj-name">Hindi</div></a>
+      <a href="#" class="subj-card reveal" style="transition-delay:.2s"><div class="subj-icon si-purple">⚛️</div><div class="subj-name">Physics</div></a>
+      <a href="#" class="subj-card reveal" style="transition-delay:.25s"><div class="subj-icon si-teal">🧪</div><div class="subj-name">Chemistry</div></a>
+      <a href="#" class="subj-card reveal" style="transition-delay:.3s"><div class="subj-icon si-rose">🧬</div><div class="subj-name">Biology</div></a>
+      <a href="#" class="subj-card reveal" style="transition-delay:.35s"><div class="subj-icon si-indigo">💻</div><div class="subj-name">Computer/AI</div></a>
+    </div>
   </div>
 </div>
-</div>
-
-
 
 <!-- ━━━ RESOURCES ━━━ -->
 <div class="resources-bg">
-<div class="section">
-  <div class="sec-header">
-    <div>
-      <div class="sec-eyebrow reveal"><h1>Study Resources</h1></div>
-      <h2 class="sec-title reveal" style="transition-delay:.07s">Everything You Need <em>to Score</em></h2>
+  <div class="section">
+    <div class="sec-header">
+      <div>
+        <div class="sec-eyebrow reveal">Study Resources</div>
+        <h2 class="sec-title reveal" style="transition-delay:.07s">Everything You Need <em>to Score</em></h2>
+      </div>
+      <a href="#" class="see-all reveal">Browse all →</a>
     </div>
-    <a href="#" class="see-all reveal">Browse all →</a>
-  </div>
-  <div class="res-grid">
-    <a href="#" class="res-card reveal"><div class="rc-icon-wrap rci-gold">📋</div><div class="rc-title"><h2>Practice Sets</h2></div><div class="rc-desc"></div></a>
-    <a href="MCQ_Practice\classes.html" class="res-card reveal" style="transition-delay:.07s"><div class="rc-icon-wrap rci-blue">❓</div><div class="rc-title"><h2>MCQ Practice</h2></div><div class="rc-desc">Topic-wise multiple choice questions with answers</div></a>
-    <a href="#" class="res-card reveal" style="transition-delay:.14s"><div class="rc-icon-wrap rci-green">📅</div><div class="rc-title"><h2>Previous Year Papers</h2></div><div class="rc-desc">10-year PYQ bank with solved answers</div></a>
-    <a href="#" class="res-card reveal" style="transition-delay:.21s"><div class="rc-icon-wrap rci-red">📝</div><div class="rc-title"><h2>Worksheets</h2></div><div class="rc-desc">Printable practice sheets for every chapter</div></a>
-    <a href="#" class="res-card reveal" style="transition-delay:.07s"><div class="rc-icon-wrap rci-purple">⭐</div><div class="rc-title"><h2>Important Questions</h2></div><div class="rc-desc">High-weightage questions likely in exams</div></a>
-    <a href="../case_base_10_maths.html" class="res-card reveal" style="transition-delay:.14s"><div class="rc-icon-wrap rci-teal">📰</div><div class="rc-title"><h2>Case Studies</h2></div><div class="rc-desc">Application-based case study questions solved</div></a>
-    <a href="#" class="res-card reveal" style="transition-delay:.21s"><div class="rc-icon-wrap rci-amber">📒</div><div class="rc-title"><h2>Revision Notes</h2></div><div class="rc-desc">Quick summary notes for last-minute revision</div></a>
-    <a href="#" class="res-card reveal" style="transition-delay:.28s"><div class="rc-icon-wrap rci-grey">📊</div><div class="rc-title"><h2>Sample Papers</h2></div><div class="rc-desc">Board-style mock papers with marking scheme</div></a>
+    <div class="res-grid">
+      <a href="#" class="res-card reveal"><div class="rc-icon-wrap rci-gold">📋</div><div class="rc-title">Practice Sets</div><div class="rc-desc"></div></a>
+      <a href="MCQ_Practice\classes.html" class="res-card reveal" style="transition-delay:.07s"><div class="rc-icon-wrap rci-blue">❓</div><div class="rc-title">MCQ Practice</div><div class="rc-desc">Topic-wise multiple choice questions with answers</div></a>
+      <a href="#" class="res-card reveal" style="transition-delay:.14s"><div class="rc-icon-wrap rci-green">📅</div><div class="rc-title">Previous Year Papers</div><div class="rc-desc">10-year PYQ bank with solved answers</div></a>
+      <a href="#" class="res-card reveal" style="transition-delay:.21s"><div class="rc-icon-wrap rci-red">📝</div><div class="rc-title">Worksheets</div><div class="rc-desc">Printable practice sheets for every chapter</div></a>
+      <a href="#" class="res-card reveal" style="transition-delay:.07s"><div class="rc-icon-wrap rci-purple">⭐</div><div class="rc-title">Important Questions</div><div class="rc-desc">High-weightage questions likely in exams</div></a>
+      <a href="../case_base_10_maths.html" class="res-card reveal" style="transition-delay:.14s"><div class="rc-icon-wrap rci-teal">📰</div><div class="rc-title">Case Studies</div><div class="rc-desc">Application-based case study questions solved</div></a>
+      <a href="#" class="res-card reveal" style="transition-delay:.21s"><div class="rc-icon-wrap rci-amber">📒</div><div class="rc-title">Revision Notes</div><div class="rc-desc">Quick summary notes for last-minute revision</div></a>
+      <a href="#" class="res-card reveal" style="transition-delay:.28s"><div class="rc-icon-wrap rci-grey">📊</div><div class="rc-title">Sample Papers</div><div class="rc-desc">Board-style mock papers with marking scheme</div></a>
+    </div>
   </div>
 </div>
-</div>
-
 
 <!-- ━━━ CTA ━━━ -->
 <div class="cta-section">
@@ -803,60 +867,62 @@ footer { background: var(--deep); color: #ffffff; }
 
 <!-- ━━━ WHY SARASWAT ━━━ -->
 <div class="features-bg">
-<div class="section">
-  <div class="feat-layout">
-    <div class="feat-left reveal-l">
-      <div class="sec-eyebrow"><h2>WHY STUDENTS TRUST SARASWAT ACADEMY</h2></div>
-      <h2 class="sec-title">Everything <em>You Need To Learn In One Place</em></h2>
-      <p class="sec-sub">Helping students move from confusion to confidence with clear explanations, updated study materials, and exam-focused resources designed for real academic success.</p>
-      <div class="feat-list">
-        <div class="feat-item">
-          <div class="fi-icon fi-g">🎯</div>
-          <div><div class="fi-title">Exam-Oriented Preparation</div><div class="fi-desc">Important questions, worksheets, sample papers, and revision materials designed according to the latest syllabus.</div></div>
+  <div class="section">
+    <div class="feat-layout">
+      <div class="feat-left reveal-l">
+        <div class="sec-eyebrow">Why Students Trust Saraswat Academy</div>
+        <h2 class="sec-title">Everything <em>You Need To Learn In One Place</em></h2>
+        <p class="sec-sub">Helping students move from confusion to confidence with clear explanations, updated study materials, and exam-focused resources designed for real academic success.</p>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="fi-icon fi-g">🎯</div>
+            <div><div class="fi-title">Exam-Oriented Preparation</div><div class="fi-desc">Important questions, worksheets, sample papers, and revision materials designed according to the latest syllabus.</div></div>
+          </div>
+          <div class="feat-item">
+            <div class="fi-icon fi-o">🧠</div>
+            <div><div class="fi-title">Concept Clarity First</div><div class="fi-desc">Every topic is explained from basics to advanced level with examples that make learning easier and more enjoyable.</div></div>
+          </div>
+          <div class="feat-item">
+            <div class="fi-icon fi-r">⚡</div>
+            <div><div class="fi-title">Fast & Easy Navigation</div><div class="fi-desc">Find any chapter, question, note, or solution within seconds without wasting time searching multiple websites.</div></div>
+          </div>
         </div>
-        <div class="feat-item">
-          <div class="fi-icon fi-o">🧠</div>
-          <div><div class="fi-title">Concept Clarity First</div><div class="fi-desc">Every topic is explained from basics to advanced level with examples that make learning easier and more enjoyable.</div></div>
+      </div>
+      <div class="feat-right reveal-r">
+        <div class="feat-stat-card">
+          <div class="fsc-icon">📚</div>
+          <div class="fsc-num">15,000+</div>
+          <div class="fsc-label">Learning Resources</div>
         </div>
-        <div class="feat-item">
-          <div class="fi-icon fi-r">⚡</div>
-          <div><div class="fi-title">Fast & Easy Navigation</div><div class="fi-desc">Find any chapter, question, note, or solution within seconds without wasting time searching multiple websites.</div></div>
+        <div class="feat-stat-card dark">
+          <div class="fsc-icon">🎓</div>
+          <div class="fsc-num">All Classes</div>
+          <div class="fsc-label">Complete Academic Support</div>
         </div>
-      </div>
-    </div>
-    <div class="feat-right reveal-r">
-      <div class="feat-stat-card">
-        <div class="fsc-icon">📚</div>
-        <div class="fsc-num">15,000+</div>
-        <div class="fsc-label">Learning Resources</div>
-      </div>
-      <div class="feat-stat-card dark">
-        <div class="fsc-icon">🎓</div>
-        <div class="fsc-num">All Classes</div>
-        <div class="fsc-label">Complete Academic Support</div>
-      </div>
-      <div class="feat-stat-card">
-        <div class="fsc-icon">📝</div>
-        <div class="fsc-num">50,000+</div>
-        <div class="fsc-label">Solved Questions</div>
-      </div>
-      <div class="feat-stat-card dark">
-        <div class="fsc-icon">🌐</div>
-        <div class="fsc-num">Available 24×7</div>
-        <div class="fsc-label">Learn Anytime, Anywhere</div>
-      </div>
-      <div class="feat-stat-card accent">
-        <div class="fsc-icon">🚀</div>
-        <div class="fsc-num">100% Free Access</div>
-        <div class="fsc-label">Quality Education For Everyone</div>
+        <div class="feat-stat-card">
+          <div class="fsc-icon">📝</div>
+          <div class="fsc-num">50,000+</div>
+          <div class="fsc-label">Solved Questions</div>
+        </div>
+        <div class="feat-stat-card dark">
+          <div class="fsc-icon">🌐</div>
+          <div class="fsc-num">24×7</div>
+          <div class="fsc-label">Learn Anytime, Anywhere</div>
+        </div>
+        <div class="feat-stat-card accent">
+          <div class="fsc-icon">🚀</div>
+          <div class="fsc-num">100% Free Access</div>
+          <div class="fsc-label">Quality Education For Everyone</div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-</div>
+
 <!-- ━━━ FOOTER ━━━ -->
 <div id="footer"></div>
-<!-- SCROLL REVEAL -->
+
+<!-- SCROLL REVEAL + HAMBURGER -->
 <script>
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -864,7 +930,22 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal, .reveal-l, .reveal-r').forEach(el => observer.observe(el));
-</script>
 
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileNav.classList.toggle('open');
+  document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+});
+// Close mobile nav when a link is tapped
+mobileNav.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+</script>
 </body>
 </html>
