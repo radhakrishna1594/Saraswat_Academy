@@ -76,9 +76,8 @@ header {
   position: sticky;
   background: var(--white);
   border-bottom: 1px solid var(--grey2);
-  position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
   box-shadow: 0 2px 16px rgba(10,37,64,0.07);
 }
 .header-inner {
