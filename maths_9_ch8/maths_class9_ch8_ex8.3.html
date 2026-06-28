@@ -8,6 +8,13 @@
 <link rel="stylesheet" href=".././assets/styles.css">
 <script src=".././loader.js"></script>
 <script src=".././config.js"></script>
+
+<!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+
+
 <style>
 
 
@@ -661,4 +668,13 @@ Therefore the red area keeps decreasing and approaches 0 as the number of stages
     </main>
      <!-- ━━━ FOOTER ━━━ -->
 <div id="footer"></div>
+
+<script>
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$",  right: "$",  inline: true  }
+      ]
+    });
+  </script>
 
