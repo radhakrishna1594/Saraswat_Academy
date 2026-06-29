@@ -3,36 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Classes</title>
+<title>Classes by Subjects</title>
 <meta name="description" content="Learn about Saraswatacademy.in — who we are, our mission to make free NCERT education available to every Indian student, and the team behind it.">
-
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet"> 
-
-<link rel="stylesheet" href=".././header.css">
-<link rel="stylesheet" href=".././assets/styles.css">
-<script src=".././loader.js"></script>
-<script src=".././config.js"></script>
-</head>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet"> <link rel="stylesheet" href="../header.css">
+<script src="../config.js"></script>
+<script src="../loader.js"></script>
+</head> 
 <body>
 
 <!-- ── HEADER ── -->
 
 <div id="header"></div>
 
+
+
+
 <div class="page-title"> <br>
-    <br><h1>Classes</h1>
+    <h1>Subjects</h1>
+
 </div>
 
-<div class="chapter-box">
-
 
     </a>
 
     <a class="solution-row"
-       href="case_studies\subjects_list.html">
+       href=".././case_studies/case_base_10_maths.html">
 
         <span class="badge">
-            Class- 6th
+            Mathematics
         </span>
 
         <span class="open-link">
@@ -42,10 +40,10 @@
     </a>
 
     <a class="solution-row"
-       href="case_studies\subjects_list.html">
+       href="">
 
         <span class="badge">
-            Class- 7th
+            Science
         </span>
 
         <span class="open-link">
@@ -55,10 +53,10 @@
     </a>
 
     <a class="solution-row"
-       href="case_studies\subjects_list.html">
+       href="">
 
         <span class="badge">
-            Class- 8th
+            Social Studies
         </span>
 
         <span class="open-link">
@@ -68,10 +66,10 @@
     </a>
 
     <a class="solution-row"
-       href="case_studies\subjects_list.html">
+       href="">
 
         <span class="badge">
-            Class- 9th
+            English
         </span>
 
         <span class="open-link">
@@ -80,23 +78,10 @@
 
     </a>
     <a class="solution-row"
-       href=".././case_studies/subjects_list.html">
+       href="">
 
         <span class="badge">
-            Class- 10th
-        </span>
-
-        <span class="open-link">
-            Open →
-        </span>
-
-    </a>
-
-    <a class="solution-row"
-       href="case_studies\subjects_list.html">
-
-        <span class="badge">
-            Class- 11th
+            Hindi
         </span>
 
         <span class="open-link">
@@ -106,20 +91,34 @@
     </a>
 
     <a class="solution-row"
-       href="case_studies\subjects_list.html">
+       href="">
 
         <span class="badge">
-            Class - 12th
-        </span> 
+            IT/Computer Science/IP/AI
+        </span>
+
         <span class="open-link">
             Open →
         </span>
 
     </a>
+
+    
 </div>
-
 <!-- ━━━ FOOTER ━━━ -->
-<div id="footer"></div>
+ <div id="footer"></div><!-- ── SCROLL REVEAL ── -->
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
