@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Saraswat Academy – Excellence in Education</title>
-<meta name="description" content="Saraswat Academy — Premium study resources for CBSE, ICSE, IB, Engineering & Competitive Exams. Free solutions, notes, practice papers and expert guidance.">
+<meta name="description" content="Saraswat Academy — Premium study resources for CBSE, ICSE, IB, Engineering & Competitive Exams. Free solutions, notes, practice papers and expert guidance. NCERT solutions, Books Solutions">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet">
 <script src="loader.js"></script>
 <script src="config.js"></script>
@@ -12,7 +12,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
 :root {
-  --deep:       #0A2540;
+  --deep:       #09243e;
   --navy:       #111827;
   --indigo:     #1E2A5E;
   --indigo2:    #2D3F8A;
@@ -38,7 +38,7 @@
 
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   background: var(--cream);
   color: var(--text);
   overflow-x: hidden;
@@ -46,12 +46,12 @@ body {
 
 /* ━━━━━━━━━━━━━━━━ TOPBAR ━━━━━━━━━━━━━━━━ */
 .topbar {
-  background: #020b25;
+  background: #0d1220;
   padding: 8px 20px;
   display: flex; justify-content: space-between; align-items: center;
   font-size: 14px; color: #d1d5db;
 }
-.topbar-left { display: flex; gap: 20px; flex-wrap: wrap; }
+.topbar-left { display: flex; gap: 700px; flex-wrap: wrap; }
 .topbar-left span { display: flex; align-items: center; gap: 5px; }
 .topbar-right { display: flex; gap: 14px; align-items: center; }
 .topbar-right a { color: #9CA3AF; text-decoration: none; transition: color .2s; }
@@ -77,13 +77,13 @@ header {
 .logo-emblem svg { width: 44px; height: 44px; }
 .logo-text-wrap { line-height: 1.1; }
 .logo-name {
-  font-family: 'Inter', sans-serif; font-weight: 700; font-size: 18px;
+  font-family: 'Inter', sans-serif; font-weight: 700; font-size: 19px;
   color: var(--deep); letter-spacing: .04em;
   background: linear-gradient(135deg, var(--indigo) 0%, var(--deep) 60%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
 .logo-tagline {
-  font-size: 10px; font-weight: 500; color: var(--gold);
+  font-size: 10px; font-weight: 700; color: var(--gold);
   letter-spacing: .1em; text-transform: uppercase;
   font-family: 'Noto Serif Devanagari', serif;
 }
@@ -563,6 +563,25 @@ footer { background: var(--deep); color: #ffffff; }
 }
 .footer-bottom strong { color: var(--gold2); }
 
+/* ===== Marquee strip ===== */
+  .strip{
+    border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+    background:var(--paper-deep);
+    overflow:hidden;padding:10px 0;
+  }
+  .strip .track{
+    display:flex;gap:48px;white-space:nowrap;
+    font-family:'Inter',monospace;font-size:0.9rem;font-weight:400;color:var(--ink-soft);
+    animation:scroll 25s linear infinite;
+    width:max-content;
+  }
+  .strip .track span{display:flex;align-items:center;gap:10px;}
+  .strip .track span::before{content:"●";color:var(--saffron-deep);font-size:.5rem;}
+  @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  @media (prefers-reduced-motion: reduce){.strip .track{animation:none;}}
+
+
+
 /* ━━━━━━━━━━━━━━━━ SCROLL REVEAL ━━━━━━━━━━━━━━━━ */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -671,11 +690,12 @@ footer { background: var(--deep); color: #ffffff; }
 </head>
 <body>
 
+  
 <!-- ━━━ TOPBAR ━━━ -->
 <div class="topbar">
   <div class="topbar-left">
-    <span>📞 +91 7073468838</span>
-    <span>📧 grassrootedtech@gmail.com</span>
+    <span>Feel Free to contact us @ - 📞 +91 7073468838</span>
+    <span>Email us : 📧 grassrootedtech@gmail.com</span>
   </div>
 </div>
 
@@ -730,12 +750,29 @@ footer { background: var(--deep); color: #ffffff; }
   </nav>
 </header>
 
+ <!-- MARQUEE -->
+  <div class="strip">
+    <div class="track">
+      <span>NCERT Solutions</span>
+      <span>CBSE Board practice material</span>
+      <span>CBSE Sample Papers</span>
+      <span>Previous Year Question Banks</span>
+      <span>Revision Notes &amp; Formula Sheets</span>
+      <span>Latest Content</span>
+      <span>Career Guidance</span>
+      <span>PYQs</span>
+
+    </div>
+  </div>
+
 <!-- ━━━ HERO ━━━ -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-orb"></div>
   <div class="hero-deco">सा</div>
+
+
 
   <div class="hero-inner">
     <div class="hero-content">
@@ -857,11 +894,11 @@ footer { background: var(--deep); color: #ffffff; }
   <div class="cta-banner reveal">
     <div class="cta-text">
       <h2>Begin Your Journey to <em>Excellence</em> at Saraswat Academy</h2>
-      <p>Join 50,000+ students who trust Saraswat Academy for CBSE, ICSE, IB, Engineering and Competitive Exam preparation — completely free to start.</p>
+      <p>Join students who trust Saraswat Academy for CBSE, ICSE, IB, NCERT Solutions, Engineering and Competitive Exam preparation — completely free to start.</p>
     </div>
     <div class="cta-actions">
       <a href=".././index.html" class="btn-cta-main">🚀 Start Learning Free</a>
-      <a href="//Saraswat_Academy/ask.html" class="btn-cta-ghost">🙋 Ask a Doubt</a>
+      <a href="./ask.html" class="btn-cta-ghost">🙋 Ask a Doubt</a>
     </div>
   </div>
 </div>
