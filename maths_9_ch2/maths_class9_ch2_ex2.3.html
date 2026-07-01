@@ -30,6 +30,16 @@
 table{border-collapse:collapse;width:100%;margin:15px 0}
 th,td{border:1px solid #ccc;padding:8px}
 
+/* KATEX display */
+
+.katex-display {
+    text-align: left !important;
+    margin: 12px 0;
+}
+
+.katex-display > .katex {
+    text-align: left !important;
+}
 
 
 </style>
@@ -335,14 +345,7 @@ th,td{border:1px solid #ccc;padding:8px}
      <!-- ━━━ FOOTER ━━━ -->
 <div id="footer"></div>
 
-<script>
-    renderMathInElement(document.body, {
-      delimiters: [
-        { left: "$$", right: "$$", display: true },
-        { left: "$",  right: "$",  inline: true  }
-      ]
-    });
-  </script>
+
 
 
   </body>

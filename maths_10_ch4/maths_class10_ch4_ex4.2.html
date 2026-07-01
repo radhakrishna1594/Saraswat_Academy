@@ -8,6 +8,12 @@
 <link rel="stylesheet" href="../assets/styles.css">
 <script src="../loader.js"></script>
 <script src="../config.js"></script>
+
+<!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+
 <style>
 
 
@@ -24,6 +30,16 @@ table{border-collapse:collapse;width:100%;margin:15px 0}
 th,td{border:1px solid #ccc;padding:8px}
 
 
+/* KATEX display */
+
+.katex-display {
+    text-align: left !important;
+    margin: 12px 0;
+}
+
+.katex-display > .katex {
+    text-align: left !important;
+}
 
 </style>
 </head>
@@ -42,196 +58,536 @@ th,td{border:1px solid #ccc;padding:8px}
        
 <h1>EXERCISE 4.2</h1>
 <hr>
+<h3>1. Find the roots of the following quadratic equations by factorisation.</h3>
 
-    <h2>1. Find the roots of the following quadratic equations by factorisation:</h2>
+<hr>
 
-    <!-- 1(i) -->
-    <div>
-        <p><strong>(i) <em>x</em><sup>2</sup> &minus; 3<em>x</em> &minus; 10 = 0</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>The given quadratic equation is <em>x</em><sup>2</sup> &minus; 3<em>x</em> &minus; 10 = 0.</p>
-        <p>Splitting the middle term, we get:</p>
-        <p><em>x</em><sup>2</sup> &minus; 5<em>x</em> + 2<em>x</em> &minus; 10 = 0</p>
-        <p><em>x</em>(<em>x</em> &minus; 5) + 2(<em>x</em> &minus; 5) = 0</p>
-        <p>(<em>x</em> &minus; 5)(<em>x</em> + 2) = 0</p>
-        <p>Either <em>x</em> &minus; 5 = 0 or <em>x</em> + 2 = 0</p>
-        <p><em>x</em> = 5 or <em>x</em> = &minus;2</p>
-        <p>Hence, the roots of the quadratic equation are 5 and &minus;2.</p>
-    </div>
+<h3>(i) $x^2-3x-10=0$</h3>
 
-    <hr>
+<p><b>Solution:</b></p>
 
-    <!-- 1(ii) -->
-    <div>
-        <p><strong>(ii) 2<em>x</em><sup>2</sup> + <em>x</em> &minus; 6 = 0</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>The given quadratic equation is 2<em>x</em><sup>2</sup> + <em>x</em> &minus; 6 = 0.</p>
-        <p>Splitting the middle term, we get:</p>
-        <p>2<em>x</em><sup>2</sup> + 4<em>x</em> &minus; 3<em>x</em> &minus; 6 = 0</p>
-        <p>2<em>x</em>(<em>x</em> + 2) &minus; 3(<em>x</em> + 2) = 0</p>
-        <p>(2<em>x</em> &minus; 3)(<em>x</em> + 2) = 0</p>
-        <p>Either 2<em>x</em> &minus; 3 = 0 or <em>x</em> + 2 = 0</p>
-        <p>2<em>x</em> = 3 or <em>x</em> = &minus;2</p>
-        <p><em>x</em> = 3/2 or <em>x</em> = &minus;2</p>
-        <p>Hence, the roots of the quadratic equation are 3/2 and &minus;2.</p>
-    </div>
+Given,
 
-    <hr>
+$$
+x^2-3x-10=0
+$$
 
-    <!-- 1(iii) -->
-    <div>
-        <p><strong>(iii) &radic;2<em>x</em><sup>2</sup> + 7<em>x</em> + 5&radic;2 = 0</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>The given quadratic equation is &radic;2<em>x</em><sup>2</sup> + 7<em>x</em> + 5&radic;2 = 0.</p>
-        <p>Splitting the middle term, we get:</p>
-        <p>&radic;2<em>x</em><sup>2</sup> + 2<em>x</em> + 5<em>x</em> + 5&radic;2 = 0</p>
-        <p>&radic;2<em>x</em>(<em>x</em> + &radic;2) + 5(<em>x</em> + &radic;2) = 0</p>
-        <p>(&radic;2<em>x</em> + 5)(<em>x</em> + &radic;2) = 0</p>
-        <p>Either &radic;2<em>x</em> + 5 = 0 or <em>x</em> + &radic;2 = 0</p>
-        <p>&radic;2<em>x</em> = &minus;5 or <em>x</em> = &minus;&radic;2</p>
-        <p><em>x</em> = &minus;5/&radic;2 or <em>x</em> = &minus;&radic;2</p>
-        <p>Hence, the roots of the quadratic equation are &minus;5/&radic;2 and &minus;&radic;2.</p>
-    </div>
+Split the middle term.
 
-    <hr>
+$$
+x^2-5x+2x-10=0
+$$
 
-    <!-- 1(iv) -->
-    <div>
-        <p><strong>(iv) 2<em>x</em><sup>2</sup> &minus; <em>x</em> + 1/8 = 0</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>The given quadratic equation is 2<em>x</em><sup>2</sup> &minus; <em>x</em> + 1/8 = 0.</p>
-        <p>Multiplying the entire equation by 8 to clear the fraction:</p>
-        <p>16<em>x</em><sup>2</sup> &minus; 8<em>x</em> + 1 = 0</p>
-        <p>Splitting the middle term, we get:</p>
-        <p>16<em>x</em><sup>2</sup> &minus; 4<em>x</em> &minus; 4<em>x</em> + 1 = 0</p>
-        <p>4<em>x</em>(4<em>x</em> &minus; 1) &minus; 1(4<em>x</em> &minus; 1) = 0</p>
-        <p>(4<em>x</em> &minus; 1)(4<em>x</em> &minus; 1) = 0</p>
-        <p>Either 4<em>x</em> &minus; 1 = 0 or 4<em>x</em> &minus; 1 = 0</p>
-        <p>4<em>x</em> = 1</p>
-        <p><em>x</em> = 1/4</p>
-        <p>Hence, the roots of the quadratic equation are 1/4 and 1/4.</p>
-    </div>
+Factorise.
 
-    <hr>
+$$
+x(x-5)+2(x-5)=0
+$$
 
-    <!-- 1(v) -->
-    <div>
-        <p><strong>(v) 100<em>x</em><sup>2</sup> &minus; 20<em>x</em> + 1 = 0</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>The given quadratic equation is 100<em>x</em><sup>2</sup> &minus; 20<em>x</em> + 1 = 0.</p>
-        <p>Splitting the middle term, we get:</p>
-        <p>100<em>x</em><sup>2</sup> &minus; 10<em>x</em> &minus; 10<em>x</em> + 1 = 0</p>
-        <p>10<em>x</em>(10<em>x</em> &minus; 1) &minus; 1(10<em>x</em> &minus; 1) = 0</p>
-        <p>(10<em>x</em> &minus; 1)(10<em>x</em> &minus; 1) = 0</p>
-        <p>Either 10<em>x</em> &minus; 1 = 0 or 10<em>x</em> &minus; 1 = 0</p>
-        <p>10<em>x</em> = 1</p>
-        <p><em>x</em> = 1/10</p>
-        <p>Hence, the roots of the quadratic equation are 1/10 and 1/10.</p>
-    </div>
+$$
+(x-5)(x+2)=0
+$$
 
-    <hr>
+Therefore,
 
-    <!-- Question 3 -->
-    <div>
-        <p><strong>3. Find two numbers whose sum is 27 and product is 182.</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the first number be <em>x</em>.</p>
-        <p>Since the sum of the two numbers is 27, the second number will be 27 &minus; <em>x</em>.</p>
-        <p>According to the given condition, their product is 182:</p>
-        <p><em>x</em>(27 &minus; <em>x</em>) = 182</p>
-        <p>27<em>x</em> &minus; <em>x</em><sup>2</sup> = 182</p>
-        <p>Rearranging the terms into standard quadratic form:</p>
-        <p><em>x</em><sup>2</sup> &minus; 27<em>x</em> + 182 = 0</p>
-        <p>Splitting the middle term to factorise the equation:</p>
-        <p><em>x</em><sup>2</sup> &minus; 13<em>x</em> &minus; 14<em>x</em> + 182 = 0</p>
-        <p><em>x</em>(<em>x</em> &minus; 13) &minus; 14(<em>x</em> &minus; 13) = 0</p>
-        <p>(<em>x</em> &minus; 13)(<em>x</em> &minus; 14) = 0</p>
-        <p>Either <em>x</em> &minus; 13 = 0 or <em>x</em> &minus; 14 = 0</p>
-        <p><em>x</em> = 13 or <em>x</em> = 14</p>
-        <p>If the first number is 13, the second number is 27 &minus; 13 = 14. If the first number is 14, the second number is 27 &minus; 14 = 13.</p>
-        <p>Hence, the required two numbers are 13 and 14.</p>
-    </div>
+$$
+x-5=0
+\quad\text{or}\quad
+x+2=0
+$$
 
-    <hr>
+$$
+x=5
+\quad\text{or}\quad
+x=-2
+$$
 
-    <!-- Question 4 -->
-    <div>
-        <p><strong>4. Find two consecutive positive integers, sum of whose squares is 365.</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the first positive integer be <em>x</em>. The next consecutive positive integer will be <em>x</em> + 1.</p>
-        <p>According to the given condition, the sum of their squares is 365:</p>
-        <p><em>x</em><sup>2</sup> + (<em>x</em> + 1)<sup>2</sup> = 365</p>
-        <p><em>x</em><sup>2</sup> + <em>x</em><sup>2</sup> + 2<em>x</em> + 1 = 365</p>
-        <p>2<em>x</em><sup>2</sup> + 2<em>x</em> + 1 &minus; 365 = 0</p>
-        <p>2<em>x</em><sup>2</sup> + 2<em>x</em> &minus; 364 = 0</p>
-        <p>Dividing the entire equation by 2:</p>
-        <p><em>x</em><sup>2</sup> + <em>x</em> &minus; 182 = 0</p>
-        <p>Splitting the middle term to factorise:</p>
-        <p><em>x</em><sup>2</sup> + 14<em>x</em> &minus; 13<em>x</em> &minus; 182 = 0</p>
-        <p><em>x</em>(<em>x</em> + 14) &minus; 13(<em>x</em> + 14) = 0</p>
-        <p>(<em>x</em> &minus; 13)(<em>x</em> + 14) = 0</p>
-        <p>Either <em>x</em> &minus; 13 = 0 or <em>x</em> + 14 = 0</p>
-        <p><em>x</em> = 13 or <em>x</em> = &minus;14</p>
-        <p>Since the problem specifies positive integers, <em>x</em> cannot be &minus;14. Therefore, <em>x</em> = 13.</p>
-        <p>The second consecutive integer is 13 + 1 = 14.</p>
-        <p>Hence, the required consecutive positive integers are 13 and 14.</p>
-    </div>
+<p><b>Answer:</b></p>
 
-    <hr>
+$$
+\boxed{x=5,\,-2}
+$$
 
-    <!-- Question 5 -->
-    <div>
-        <p><strong>5. The altitude of a right triangle is 7 cm less than its base. If the hypotenuse is 13 cm, find the other two sides.</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the base of the right-angled triangle be <em>x</em> cm.</p>
-        <p>Since the altitude is 7 cm less than its base, the altitude will be (<em>x</em> &minus; 7) cm.</p>
-        <p>Using Pythagoras theorem (Base<sup>2</sup> + Altitude<sup>2</sup> = Hypotenuse<sup>2</sup>):</p>
-        <p><em>x</em><sup>2</sup> + (<em>x</em> &minus; 7)<sup>2</sup> = 13<sup>2</sup></p>
-        <p><em>x</em><sup>2</sup> + <em>x</em><sup>2</sup> &minus; 14<em>x</em> + 49 = 169</p>
-        <p>2<em>x</em><sup>2</sup> &minus; 14<em>x</em> + 49 &minus; 169 = 0</p>
-        <p>2<em>x</em><sup>2</sup> &minus; 14<em>x</em> &minus; 120 = 0</p>
-        <p>Dividing the entire equation by 2:</p>
-        <p><em>x</em><sup>2</sup> &minus; 7<em>x</em> &minus; 60 = 0</p>
-        <p>Splitting the middle term to factorise:</p>
-        <p><em>x</em><sup>2</sup> &minus; 12<em>x</em> + 5<em>x</em> &minus; 60 = 0</p>
-        <p><em>x</em>(<em>x</em> &minus; 12) + 5(<em>x</em> &minus; 12) = 0</p>
-        <p>(<em>x</em> &minus; 12)(<em>x</em> + 5) = 0</p>
-        <p>Either <em>x</em> &minus; 12 = 0 or <em>x</em> + 5 = 0</p>
-        <p><em>x</em> = 12 or <em>x</em> = &minus;5</p>
-        <p>Since a side length cannot be negative, we reject <em>x</em> = &minus;5. Therefore, the base is 12 cm.</p>
-        <p>The altitude is 12 &minus; 7 = 5 cm.</p>
-        <p>Hence, the other two sides of the triangle are 12 cm and 5 cm.</p>
-    </div>
+<hr>
 
-    <hr>
+<h3>(ii) $2x^2+x-6=0$</h3>
 
-    <!-- Question 6 -->
-    <div>
-        <p><strong>6. A cottage industry produces a certain number of pottery articles in a day. It was observed on a particular day that the cost of production of each article (in rupees) was 3 more than twice the number of articles produced on that day. If the total cost of production on that day was ₹ 90, find the number of articles produced and the cost of each article.</strong></p>
-        <p style="color:rgb(236, 30, 30);">
-<b>(Note- Important Question for board exam)</b>
-</p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the number of pottery articles produced on that day be <em>x</em>.</p>
-        <p>According to the given condition, the cost of production of each article is 3 more than twice the number of articles, which is (2<em>x</em> + 3) rupees.</p>
-        <p>The total cost of production is given by multiplying the number of articles by the cost of each article:</p>
-        <p><em>x</em>(2<em>x</em> + 3) = 90</p>
-        <p>2<em>x</em><sup>2</sup> + 3<em>x</em> = 90</p>
-        <p>2<em>x</em><sup>2</sup> + 3<em>x</em> &minus; 90 = 0</p>
-        <p>Splitting the middle term to factorise:</p>
-        <p>2<i>x</i><sup>2</sup> &minus; 12<i>x</i> + 15<i>x</i> &minus; 90 = 0</p>
-        <p>2<i>x</i>(<i>x</i> &minus; 6) + 15(<i>x</i> &minus; 6) = 0</p>
-        <p>(2<i>x</i> + 15)(<i>x</i> &minus; 6) = 0</p>
-        <p>Either 2<i>x</i> + 15 = 0 or <i>x</i> &minus; 6 = 0</p>
-        <p>2<i>x</i> = &minus;15 or <i>x</i> = 6</p>
-        <p><i>x</i> = &minus;15/2 or <i>x</i> = 6</p>
-        <p>Since the number of articles produced cannot be a negative value or a fraction, we reject <i>x</i> = &minus;15/2. Therefore, <i>x</i> = 6.</p>
-        <p>The number of articles produced is 6, and the cost of each article is 2(6) + 3 = 15 rupees.</p>
-        <p>Hence, the number of articles produced is 6 and the cost of each article is ₹ 15.</p>
+<p><b>Solution:</b></p>
 
-    </div>
+Given,
 
+$$
+2x^2+x-6=0
+$$
 
+Split the middle term.
+
+$$
+2x^2+4x-3x-6=0
+$$
+
+Factorise.
+
+$$
+2x(x+2)-3(x+2)=0
+$$
+
+$$
+(x+2)(2x-3)=0
+$$
+
+Therefore,
+
+$$
+x+2=0
+\quad\text{or}\quad
+2x-3=0
+$$
+
+$$
+x=-2
+\quad\text{or}\quad
+x=\frac32
+$$
+
+<p><b>Answer:</b></p>
+
+$$
+\boxed{x=-2,\;\frac32}
+$$
+
+<hr>
+
+<h3>(iii) $\sqrt2\,x^2+7x+5\sqrt2=0$</h3>
+
+<p><b>Solution:</b></p>
+
+Here,
+
+$$
+a=\sqrt2,\qquad
+b=7,\qquad
+c=5\sqrt2
+$$
+
+Since
+
+$$
+ac=\sqrt2\times5\sqrt2=10
+$$
+
+Two numbers whose product is $10$ and sum is $7$ are
+
+$$
+5,\;2
+$$
+
+Split the middle term.
+
+$$
+\sqrt2x^2+5x+2x+5\sqrt2=0
+$$
+
+Group the terms.
+
+$$
+(\sqrt2x^2+5x)+(2x+5\sqrt2)=0
+$$
+
+$$
+x(\sqrt2x+5)+\sqrt2(\sqrt2x+5)=0
+$$
+
+$$
+(\sqrt2x+5)(x+\sqrt2)=0
+$$
+
+Therefore,
+
+$$
+\sqrt2x+5=0
+$$
+
+or
+
+$$
+x+\sqrt2=0
+$$
+
+Hence,
+
+$$
+x=-\frac5{\sqrt2}
+=-\frac{5\sqrt2}{2}
+$$
+
+or
+
+$$
+x=-\sqrt2
+$$
+
+<p><b>Answer:</b></p>
+
+$$
+\boxed{x=-\frac{5\sqrt2}{2},\;-\sqrt2}
+$$
+
+<hr>
+
+<h3>(iv) $2x^2-x+\dfrac18=0$</h3>
+
+<p><b>Solution:</b></p>
+
+Multiply throughout by $8$.
+
+$$
+16x^2-8x+1=0
+$$
+
+Factorise.
+
+$$
+(4x-1)^2=0
+$$
+
+Therefore,
+
+$$
+4x-1=0
+$$
+
+$$
+x=\frac14
+$$
+
+Since both factors are equal,
+
+$$
+x=\frac14,\;\frac14
+$$
+
+<p><b>Answer:</b></p>
+
+$$
+\boxed{x=\frac14,\;\frac14}
+$$
+
+<hr>
+
+<h3>(v) $100x^2-20x+1=0$</h3>
+
+<p><b>Solution:</b></p>
+
+Factorise.
+
+$$
+(10x-1)^2=0
+$$
+
+Therefore,
+
+$$
+10x-1=0
+$$
+
+$$
+x=\frac1{10}
+$$
+
+Hence,
+
+$$
+x=\frac1{10},\;\frac1{10}
+$$
+
+<p><b>Answer:</b></p>
+
+$$
+\boxed{x=\frac1{10},\;\frac1{10}}
+$$
+
+<hr>
+
+<h3>2. Solve the problems given in Example 1.</h3>
+
+<p><b>Answer:</b> Solve according to the examples explained in the textbook using the factorisation method.</p>
+
+<hr>
+
+<h3>3. Find two numbers whose sum is $27$ and product is $182$.</h3>
+
+<hr>
+
+<p><b>Solution:</b></p>
+
+Let the numbers be
+
+$$
+x\quad\text{and}\quad y
+$$
+
+Then,
+
+$$
+x+y=27
+$$
+
+$$
+xy=182
+$$
+
+Substitute
+
+$$
+y=27-x
+$$
+
+into
+
+$$
+xy=182
+$$
+
+$$
+x(27-x)=182
+$$
+
+$$
+27x-x^2=182
+$$
+
+$$
+x^2-27x+182=0
+$$
+
+Factorise.
+
+$$
+(x-13)(x-14)=0
+$$
+
+Therefore,
+
+$$
+x=13
+\quad\text{or}\quad
+x=14
+$$
+
+Hence the two numbers are
+
+$$
+13,\;14
+$$
+
+<p><b>Answer:</b></p>
+
+$$
+\boxed{13,\;14}
+$$
+
+<hr>
+
+<h3>4. Find two consecutive positive integers, the sum of whose squares is $365$.</h3>
+
+<hr>
+
+<p><b>Solution:</b></p>
+
+Let the first integer be
+
+$$
+x
+$$
+
+The next integer is
+
+$$
+x+1
+$$
+
+According to the question,
+
+$$
+x^2+(x+1)^2=365
+$$
+
+Expand.
+
+$$
+x^2+x^2+2x+1=365
+$$
+
+$$
+2x^2+2x-364=0
+$$
+
+Divide by $2$.
+
+$$
+x^2+x-182=0
+$$
+
+Factorise.
+
+$$
+(x-13)(x+14)=0
+$$
+
+$$
+x=13
+\quad\text{or}\quad
+x=-14
+$$
+
+Since the integers are positive,
+
+$$
+x=13
+$$
+
+Therefore,
+
+$$
+x+1=14
+$$
+
+<p><b>Answer:</b></p>
+
+$$
+\boxed{13,\;14}
+$$
+
+<hr>
+
+<h3>5. The altitude of a right triangle is $7$ cm less than its base. If the hypotenuse is $13$ cm, find the other two sides.</h3>
+
+<hr>
+
+<p><b>Solution:</b></p>
+
+Let the base be
+
+$$
+x\text{ cm}
+$$
+
+Then the altitude is
+
+$$
+x-7\text{ cm}
+$$
+
+Using Pythagoras theorem,
+
+$$
+x^2+(x-7)^2=13^2
+$$
+
+$$
+x^2+x^2-14x+49=169
+$$
+
+$$
+2x^2-14x-120=0
+$$
+
+Divide by $2$.
+
+$$
+x^2-7x-60=0
+$$
+
+Factorise.
+
+$$
+(x-12)(x+5)=0
+$$
+
+$$
+x=12
+$$
+
+Therefore,
+
+$$
+x-7=5
+$$
+
+<p><b>Answer:</b></p>
+
+$$
+\boxed{\text{Base}=12\text{ cm},\qquad \text{Altitude}=5\text{ cm}}
+$$
+
+<hr>
+
+<h3>6. A cottage industry produces a certain number of pottery articles in a day. The cost of production of each article is ₹3 more than twice the number of articles produced. If the total production cost is ₹90, find the number of articles produced and the cost of each article.</h3>
+
+<hr>
+
+<p><b>Solution:</b></p>
+
+Let the number of articles produced be
+
+$$
+x
+$$
+
+Cost of one article
+
+$$
+2x+3
+$$
+
+Total production cost
+
+$$
+x(2x+3)=90
+$$
+
+$$
+2x^2+3x-90=0
+$$
+
+Factorise.
+
+$$
+2x^2+15x-12x-90=0
+$$
+
+$$
+x(2x+15)-6(2x+15)=0
+$$
+
+$$
+(2x+15)(x-6)=0
+$$
+
+Since the number of articles cannot be negative,
+
+$$
+x=6
+$$
+
+Cost of one article
+
+$$
+2(6)+3=15
+$$
+
+<p><b>Answer:</b></p>
+
+$$
+\boxed{\text{Number of articles}=6}
+$$
+
+$$
+\boxed{\text{Cost of each article}=₹15}
+$$
+
+<hr>
 
 
       </article>
@@ -250,5 +606,15 @@ th,td{border:1px solid #ccc;padding:8px}
     </main>
     <!-- ━━━ FOOTER ━━━ -->
  <div id="footer"></div>  
+
+ 
+ <script>
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$",  right: "$",  inline: true  }
+      ]
+    });
+  </script>
   </body>
 </html>

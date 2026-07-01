@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../assets/styles.css">
 <script src="../loader.js"></script>
 <script src="../config.js"></script>
+<!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+
 <style>
 
 
@@ -23,6 +28,16 @@
 table{border-collapse:collapse;width:100%;margin:15px 0}
 th,td{border:1px solid #ccc;padding:8px}
 
+/* KATEX display */
+
+.katex-display {
+    text-align: left !important;
+    margin: 12px 0;
+}
+
+.katex-display > .katex {
+    text-align: left !important;
+}
 
 
 </style>
@@ -42,623 +57,884 @@ th,td{border:1px solid #ccc;padding:8px}
        
 <h1>EXERCISE 3.2</h1>
 <hr>
-<h3>1. Solve the following pairs of linear equations by the substitution method</h3>
 
-    <!-- PROBLEM (i) -->
-    <h3>(i) Equations:</h3>
-    <p>
-        (1) <math><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>14</mn></math><br>
-        (2) <math><mi>x</mi><mo>−</mo><mi>y</mi><mo>=</mo><mn>4</mn></math>
-    </p>
-    
-    <p><strong></strong> From equation (2), we get:</p>
-    <p><math><mi>x</mi><mo>=</mo><mn>4</mn><mo>+</mo><mi>y</mi></math> --- (3)</p>
-    
-    <p><strong></strong> Substitute equation (3) into equation (1):</p>
-    <p><math><mo>(</mo><mn>4</mn><mo>+</mo><mi>y</mi><mo>)</mo><mo>+</mo><mi>y</mi><mo>=</mo><mn>14</mn></math></p>
-    <p><math><mn>4</mn><mo>+</mo><mn>2</mn><mi>y</mi><mo>=</mo><mn>14</mn><mo>⇒</mo><mn>2</mn><mi>y</mi><mo>=</mo><mn>10</mn><mo>⇒</mo><mi>y</mi><mo>=</mo><mn>5</mn></math></p>
-    
-    <p><strong></strong> Substitute y = 5 into equation (3):</p>
-    <p><math><mi>x</mi><mo>=</mo><mn>4</mn><mo>+</mo><mn>5</mn><mo>=</mo><mn>9</mn></math></p>
-    
-    <p><strong>Final Answer:</strong> x = 9, y = 5</p>
-
-    <hr>
-
-    <!-- PROBLEM (ii) -->
-    <h3>(ii) Equations:</h3>
-    <p>
-        (1) <math><mi>s</mi><mo>−</mo><mi>t</mi><mo>=</mo><mn>3</mn></math><br>
-        (2) <math><mfrac><mi>s</mi><mn>3</mn></mfrac><mo>+</mo><mfrac><mi>t</mi><mn>2</mn></mfrac><mo>=</mo><mn>6</mn></math>
-    </p>
-    
-    <p><strong>Step 1:</strong> From equation (1), express s in terms of t:</p>
-    <p><math><mi>s</mi><mo>=</mo><mn>3</mn><mo>+</mo><mi>t</mi></math> --- (3)</p>
-    
-    <p><strong>Step 2:</strong> Substitute equation (3) into equation (2):</p>
-    <p><math><mfrac><mrow><mn>3</mn><mo>+</mo><mi>t</mi></mrow><mn>3</mn></mfrac><mo>+</mo><mfrac><mi>t</mi><mn>2</mn></mfrac><mo>=</mo><mn>6</mn></math></p>
-    <p>Multiply the entire equation by 6 (LCM) to clear fractions:</p>
-    <p><math><mn>2</mn><mo>(</mo><mn>3</mn><mo>+</mo><mi>t</mi><mo>)</mo><mo>+</mo><mn>3</mn><mi>t</mi><mo>=</mo><mn>36</mn></math></p>
-    <p><math><mn>6</mn><mo>+</mo><mn>2</mn><mi>t</mi><mo>+</mo><mn>3</mn><mi>t</mi><mo>=</mo><mn>36</mn><mo>⇒</mo><mn>5</mn><mi>t</mi><mo>=</mo><mn>30</mn><mo>⇒</mo><mi>t</mi><mo>=</mo><mn>6</mn></</math></p>
-    
-    <p><strong>Step 3:</strong> Substitute t = 6 into equation (3):</p>
-    <p><math><mi>s</mi><mo>=</mo><mn>3</mn><mo>+</mo><mn>6</mn><mo>=</mo><mn>9</mn></math></p>
-    
-    <p><strong>Final Answer:</strong> s = 9, t = 6</p>
-
-    <hr>
-
-    <!-- PROBLEM (iii) -->
-    <h3>(iii) Equations:</h3>
-    <p>
-        (1) <math><mn>3</mn><mi>x</mi><mo>−</mo><mi>y</mi><mo>=</mo><mn>3</mn></math><br>
-        (2) <math><mn>9</mn><mi>x</mi><mo>−</mo><mn>3</mn><mi>y</mi><mo>=</mo><mn>9</mn></math>
-    </p>
-    
-    <p><strong>Step 1:</strong> From equation (1), express y in terms of x:</p>
-    <p><math><mi>y</mi><mo>=</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>3</mn></math> --- (3)</p>
-    
-    <p><strong>Step 2:</strong> Substitute equation (3) into equation (2):</p>
-    <p><math><mn>9</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo>(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo>)</mo><mo>=</mo><mn>9</mn></math></p>
-    <p><math><mn>9</mn><mi>x</mi><mo>−</mo><mn>9</mn><mi>x</mi><mo>+</mo><mn>9</mn><mo>=</mo><mn>9</mn><mo>⇒</mo><mn>9</mn><mo>=</mo><mn>9</mn></math></p>
-    
-    <p><strong>Hence</strong> Since this statement is always true, the system has infinitely many solutions.</p>
-    <p><strong>Final Answer:</strong> Infinitely many solutions, where y = 3x - 3</p>
-
-    <hr>
-
-    <!-- PROBLEM (iv) -->
-    <h3>(iv) Equations:</h3>
-    <p>
-        (1) <math><mn>0.2</mn><mi>x</mi><mo>+</mo><mn>0.3</mn><mi>y</mi><mo>=</mo><mn>1.3</mn></math><br>
-        (2) <math><mn>0.4</mn><mi>x</mi><mo>+</mo><mn>0.5</mn><mi>y</mi><mo>=</mo><mn>2.3</mn></math>
-    </p>
-    
-    <p>Multiply both equations by 10 to clear decimals:</p>
-    <p>
-        (1a) <math><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>=</mo><mn>13</mn></math><br>
-        (2a) <math><mn>4</mn><mi>x</mi><mo>+</mo><mn>5</mn><mi>y</mi><mo>=</mo><mn>23</mn></math>
-    </p>
-    
-    <p><strong>Step 1:</strong> From equation (1a), express x in terms of y:</p>
-    <p><math><mn>2</mn><mi>x</mi><mo>=</mo><mn>13</mn><mo>−</mo><mn>3</mn><mi>y</mi><mo>⇒</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mn>13</mn><mo>−</mo><mn>3</mn><mi>y</mi></mrow><mn>2</mn></mfrac></math> --- (3)</p>
-    
-    <p><strong>Step 2:</strong> Substitute equation (3) into equation (2a):</p>
-    <p><math><mn>4</mn><mo>(</mo><mfrac><mrow><mn>13</mn><mo>−</mo><mn>3</mn><mi>y</mi></mrow><mn>2</mn></mfrac><mo>)</mo><mo>+</mo><mn>5</mn><mi>y</mi><mo>=</mo><mn>23</mn></math></p>
-    <p><math><mn>2</mn><mo>(</mo><mn>13</mn><mo>−</mo><mn>3</mn><mi>y</mi><mo>)</mo><mo>+</mo><mn>5</mn><mi>y</mi>< =="23"></math></p>
-    <p><math><mn>26</mn><mo>−</mo><mn>6</mn><mi>y</mi><mo>+</mo><mn>5</mn><mi>y</mi><mo>=</mo><mn>23</mn><mo>⇒</mo><mn>26</mn><mo>−</mo><mi>y</mi><mo>=</mo><mn>23</mn><mo>⇒</mo><mi>y</mi><mo>=</mo><mn>3</mn></math></p>
-    
-    <p><strong>Step 3:</strong> Substitute y = 3 into equation (3):</p>
-    <p><math><mi>x</mi><mo>=</mo><mfrac><mrow><mn>13</mn><mo>−</mo><mn>3</mn><mo>(</mo><mn>3</mn><mo>)</mo></mrow><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mn>13</mn><mo>−</mo><mn>9</mn></mrow><mn>2</mn></mfrac><mo>=</mo><mn>2</mn></math></p>
-    
-    <p><strong>Final Answer:</strong> x = 2, y = 3</p>
-
-    <hr>
-
-    <!-- PROBLEM (v) -->
-    <h3>(v) Equations:</h3>
-    <p>
-        (1) <math><msqrt><mn>2</mn></msqrt><mi>x</mi><mo>+</mo><msqrt><mn>3</mn></msqrt><mi>y</mi><mo>=</mo><mn>0</mn></math><br>
-        (2) <math><msqrt><mn>3</mn></msqrt><mi>x</mi><mo>−</mo><msqrt><mn>8</mn></msqrt><mi>y</mi><mo>=</mo><mn>0</mn></math>
-    </p>
-    
-    <p><strong>Step 1:</strong> From equation (1), express x in terms of y:</p>
-    <p><math><msqrt><mn>2</mn></msqrt><mi>x</mi><mo>=</mo><mo>−</mo><msqrt><mn>3</mn></msqrt><mi>y</mi><mo>⇒</mo><mi>x</mi><mo>=</mo><mo>−</mo><mfrac><msqrt><mn>3</mn></msqrt><msqrt><mn>2</mn></msqrt></mfrac><mi>y</mi></math> --- (3)</p>
-    
-    <p><strong>Step 2:</strong> Substitute equation (3) into equation (2):</p>
-    <p><math><msqrt><mn>3</mn></msqrt><mo>(</mo><mo>−</mo><mfrac><msqrt><mn>3</mn></msqrt><msqrt><mn>2</mn></msqrt></mfrac><mi>y</mi><mo>)</mo><mo>−</mo><msqrt><mn>8</mn></msqrt><mi>y</mi><mo>=</mo><mn>0</mn></math></p>
-    <p><math><mo>−</mo><mfrac><mn>3</mn><msqrt><mn>2</mn></msqrt></mfrac><mi>y</mi><mo>−</mo><msqrt><mn>8</mn></msqrt><mi>y</mi><mo>=</mo><mn>0</mn></math></p>
-    <p>Factor out y:</p>
-    <p><math><mi>y</mi><mo>(</mo><mo>−</mo><mfrac><mn>3</mn><msqrt><mn>2</mn></msqrt></mfrac><mo>−</mo><msqrt><mn>8</mn></msqrt><mo>)</mo><mo>=</mo><mn>0</mn><mo>⇒</mo><mi>y</mi><mo>=</mo><mn>0</mn></math></p>
-    
-    <p><strong>Step 3:</strong> Substitute y = 0 into equation (3):</p>
-    <p><math><mi>x</mi><mo>=</mo><mo>−</mo><mfrac><msqrt><mn>3</mn></msqrt><msqrt><mn>2</mn></msqrt></mfrac><mo>(</mo><mn>0</mn><mo>)</mo><mo>=</mo><mn>0</mn></math></p>
-    
-    <p><strong>Final Answer:</strong> x = 0, y = 0</p>
-
-    <hr>
-
-    <!-- PROBLEM (vi) -->
-    <h3>(vi) Equations:</h3>
-    <p>
-        (1) <math><mfrac><mrow><mn>3</mn><mi>x</mi></mrow><mn>2</mn></mfrac><mo>−</mo><mfrac><mrow><mn>5</mn><mi>y</mi></mrow><mn>3</mn></mfrac><mo>=</mo><mo>−</mo><mn>2</mn></math><br>
-        (2) <math><mfrac><mi>x</mi><mn>3</mn></mfrac><mo>+</mo><mfrac><mi>y</mi><mn>2</mn></mfrac><mo>=</mo><mfrac><mn>13</mn><mn>6</mn></mfrac></math>
-    </p>
-    
-    <p>Multiply equation (1) by 6 and equation (2) by 6 to clear fractions:</p>
-    <p>
-        (1a) <math><mn>9</mn><mi>x</mi><mo>−</mo><mn>10</mn><mi>y</mi><mo>=</mo><mo>−</mo><mn>12</mn></math><br>
-        (2a) <math><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>=</mo><mn>13</mn></math>
-    </p>
-    
-    <p><strong>Step 1:</strong> From equation (2a), express x in terms of y:</p>
-    <p><math><mn>2</mn><mi>x</mi><mo>=</mo><mn>13</mn><mo>−</mo><mn>3</mn><mi>y</mi><mo>⇒</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mn>13</mn><mo>−</mo><mn>3</mn><mi>y</mi></mrow><mn>2</mn></mfrac></math> --- (3)</p>
-    
-    <p><strong>Step 2:</strong> Substitute equation (3) into equation (1a):</p>
-    <p><math><mn>9</mn><mo>(</mo><mfrac><mrow><mn>13</mn><mo>−</mo><mn>3</mn><mi>y</mi></mrow><mn>2</mn></mfrac><mo>)</mo><mo>−</mo><mn>10</mn><mi>y</mi><mo>=</mo><mo>−</mo><mn>12</mn></math></p>
-    <p>Multiply the entire equation by 2 to clear the fraction:</p>
-    <p><math><mn>9</mn><mo>(</mo><mn>13</mn><mo>−</mo><mn>3</mn><mi>y</mi><mo>)</mo><mo>−</mo><mn>20</mn><mi>y</mi><mo>=</mo><mo>−</mo><mn>24</mn></math></p>
-    <p><math><mn>117</mn><mo>−</mo><mn>27</mn><mi>y</mi><mo>−</mo><mn>20</mn><mi>y</mi><mo>=</mo><mo>−</mo><mn>24</mn></math></p>
-    <p><math><mn>117</mn><mo>−</mo><mn>47</mn><mi>y</mi><mo>=</mo><mo>−</mo><mn>24</mn><mo>⇒</mo><mo>−</mo><mn>47</mn><mi>y</mi><mo>=</mo><mo>−</mo><mn>141</mn><mo>⇒</mo><mi>y</mi><mo>=</mo><mn>3</mn></math></p>
-    
-    <p><strong>Step 3:</strong> Substitute y = 3 into equation (3):</p>
-    <p><math><mi>x</mi><mo>=</mo><mfrac><mrow><mn>13</mn><mo>−</mo><mn>3</mn><mo>(</mo><mn>3</mn><mo>)</mo></mrow><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mn>13</mn><mo>−</mo><mn>9</mn></mrow><mn>2</mn></mfrac><mo>=</mo><mn>2</mn></math></p>
-    
-    <p><strong>Final Answer:</strong> x = 2, y = 3</p>
-
-
-<p> <h3>
-    Question 2: Solve 2x + 3y = 11 and 2x – 4y = – 24 and hence find the value of ‘m’ for which
-y = mx + 3.
-</h3>
-</p>
-
-<p>
-2x + 3y = 11
-</p>
-
-<p>
-2x − 4y = −24
-</p>
-
-<p>
-Subtracting the second equation from the first:
-</p>
-
-<p>
-(2x + 3y) − (2x − 4y) = 11 − (−24)
-</p>
-
-<p>
-7y = 35
-</p>
-
-<p>
-y = 5
-</p>
-
-<p>
-Substituting y = 5 in 2x + 3y = 11:
-</p>
-
-<p>
-2x + 15 = 11
-</p>
-
-<p>
-2x = −4
-</p>
-
-<p>
-x = −2
-</p>
-
-<p>
-Given:
-</p>
-
-<p>
-y = mx + 3
-</p>
-
-<p>
-Substituting x = −2 and y = 5:
-</p>
-
-<p>
-5 = m(−2) + 3
-</p>
-
-<p>
-2 = −2m
-</p>
-
-<p>
-m = −1
-</p>
-
-<p>
-<strong>Answer:</strong> x = −2, y = 5 and m = −1.
-</p>
+<h3>1. Solve the following pair of linear equations by the substitution method.</h3>
 
 <hr>
 
-<h2>Question 3 - Form the pair of linear equations for the following problems and find their solution by
-substitution method.</h2>
+<h3>(i) $x+y=14$ and $x-y=4$</h3>
 
-<h3>(i) The difference between two numbers is 26 and one number is three times the other.
-Find them.</h3>
+<p><b>Solution:</b></p>
 
-<p>
-Let the numbers be x and y.
-</p>
+From
 
-<p>
-x − y = 26
-</p>
+$$
+x+y=14
+$$
 
-<p>
-x = 3y
-</p>
+$$
+y=14-x
+$$
 
-<p>
-Substituting x = 3y:
-</p>
+Substitute in
 
-<p>
-3y − y = 26
-</p>
+$$
+x-y=4
+$$
 
-<p>
-2y = 26
-</p>
+$$
+x-(14-x)=4
+$$
 
-<p>
-y = 13
-</p>
+$$
+2x-14=4
+$$
 
-<p>
-x = 39
-</p>
+$$
+2x=18
+$$
 
-<p>
-<strong>Answer:</strong> The numbers are 39 and 13.
-</p>
+$$
+x=9
+$$
 
-<hr>
+Substitute in
 
-<h3>(ii) The larger of two supplementary angles exceeds the smaller by 18 degrees. Find
-them.</h3>
+$$
+y=14-9=5
+$$
 
-<p>
-Let the larger angle be x° and the smaller angle be y°.
-</p>
+<p><b>Answer:</b></p>
 
-<p>
-x + y = 180°
-</p>
-
-<p>
-x − y = 18°
-</p>
-
-<p>
-From x − y = 18:
-</p>
-
-<p>
-x = y + 18
-</p>
-
-<p>
-Substituting:
-</p>
-
-<p>
-y + 18 + y = 180
-</p>
-
-<p>
-2y = 162
-</p>
-
-<p>
-y = 81°
-</p>
-
-<p>
-x = 99°
-</p>
-
-<p>
-<strong>Answer:</strong> The angles are 99° and 81°.
-</p>
+$$
+\boxed{x=9,\qquad y=5}
+$$
 
 <hr>
 
-<h3>(iii) The coach of a cricket team buys 7 bats and 6 balls for Rs 3800. Later, she buys 3
-bats and 5 balls for Rs 1750. Find the cost of each bat and each ball.</h3>
+<h3>(ii) $s-t=3$ and $\dfrac{s}{3}+\dfrac{t}{2}=6$</h3>
 
-<p>
-Let the cost of one bat be ₹x and the cost of one ball be ₹y.
-</p>
+<p><b>Solution:</b></p>
 
-<p>
-7x + 6y = 3800
-</p>
+From
 
-<p>
-3x + 5y = 1750
-</p>
+$$
+s-t=3
+$$
 
-<p>
-From:
-</p>
+$$
+s=t+3
+$$
 
-<p>
-3x + 5y = 1750
-</p>
+Substitute into
 
-<p>
-3x = 1750 − 5y
-</p>
+$$
+\frac{s}{3}+\frac{t}{2}=6
+$$
 
-<p>
-x = (1750 − 5y)/3
-</p>
+$$
+\frac{t+3}{3}+\frac{t}{2}=6
+$$
 
-<p>
-Substituting in 7x + 6y = 3800:
-</p>
+Multiply throughout by $6$.
 
-<p>
-7(1750 − 5y)/3 + 6y = 3800
-</p>
+$$
+2(t+3)+3t=36
+$$
 
-<p>
-12250 − 35y + 18y = 11400
-</p>
+$$
+2t+6+3t=36
+$$
 
-<p>
-12250 − 17y = 11400
-</p>
+$$
+5t=30
+$$
 
-<p>
-17y = 850
-</p>
+$$
+t=6
+$$
 
-<p>
-y = 50
-</p>
+Now,
 
-<p>
-Substituting in 3x + 5y = 1750:
-</p>
+$$
+s=t+3=9
+$$
 
-<p>
-3x + 250 = 1750
-</p>
+<p><b>Answer:</b></p>
 
-<p>
-3x = 1500
-</p>
-
-<p>
-x = 500
-</p>
-
-<p>
-<strong>Answer:</strong>
-</p>
-
-<ul>
-<li>Cost of one bat = ₹500</li>
-<li>Cost of one ball = ₹50</li>
-</ul>
+$$
+\boxed{s=9,\qquad t=6}
+$$
 
 <hr>
 
-<h3>(iv) The taxi charges in a city consist of a fixed charge together with the charge for the
-distance covered. For a distance of 10 km, the charge paid is ₹ 105 and for a
-journey of 15 km, the charge paid is ₹155. What are the fixed charges and the
-charge p</h3>
+<h3>(iii) $3x-y=3$ and $9x-3y=9$</h3>
 
-<p>
-Let the fixed charge be ₹x and the charge per kilometre be ₹y.
-</p>
+<p><b>Solution:</b></p>
 
-<p>
-x + 10y = 105
-</p>
+From
 
-<p>
-x + 15y = 155
-</p>
+$$
+3x-y=3
+$$
 
-<p>
-From the first equation:
-</p>
+$$
+y=3x-3
+$$
 
-<p>
-x = 105 − 10y
-</p>
+Substitute into
 
-<p>
-Substituting:
-</p>
+$$
+9x-3y=9
+$$
 
-<p>
-105 − 10y + 15y = 155
-</p>
+$$
+9x-3(3x-3)=9
+$$
 
-<p>
-5y = 50
-</p>
+$$
+9x-9x+9=9
+$$
 
-<p>
-y = 10
-</p>
+$$
+9=9
+$$
 
-<p>
-x = 105 − 100
-</p>
+This is an identity.
 
-<p>
-x = 5
-</p>
+<p><b>Answer:</b></p>
 
-<p>
-For 25 km:
-</p>
+$$
+\boxed{\text{Infinitely many solutions}}
+$$
 
-<p>
-Fare = 5 + (25 × 10)
-</p>
-
-<p>
-= 255
-</p>
-
-<p>
-<strong>Answer:</strong>
-</p>
-
-<ul>
-<li>Fixed charge = ₹5</li>
-<li>Charge per km = ₹10</li>
-<li>Fare for 25 km = ₹255</li>
-</ul>
+The equations represent <b>coincident lines</b>.
 
 <hr>
 
-<h3>(v) A fraction becomes 9/11 , if 2 is added to both the numerator and the denominator.
-If, 3 is added to both the numerator and the denominator it becomes 5/6
-. Find the
-fraction.</h3>
+<h3>(iv) $0.2x+0.3y=1.3$ and $0.4x+0.5y=2.3$</h3>
 
-<p>
-Let the fraction be x/y.
-</p>
+<p><b>Solution:</b></p>
 
-<p>
-Given:
-</p>
+From
 
-<p>
-(x + 2)/(y + 2) = 9/11
-</p>
+$$
+0.2x+0.3y=1.3
+$$
 
-<p>
-11(x + 2) = 9(y + 2)
-</p>
+$$
+0.2x=1.3-0.3y
+$$
 
-<p>
-11x − 9y = −4 &nbsp;&nbsp;&nbsp; (1)
-</p>
+$$
+x=\frac{1.3-0.3y}{0.2}
+$$
 
-<p>
-Also:
-</p>
+Substitute into
 
-<p>
-(x + 3)/(y + 3) = 5/6
-</p>
+$$
+0.4x+0.5y=2.3
+$$
 
-<p>
-6(x + 3) = 5(y + 3)
-</p>
+$$
+0.4\left(\frac{1.3-0.3y}{0.2}\right)+0.5y=2.3
+$$
 
-<p>
-6x − 5y = −3 &nbsp;&nbsp;&nbsp; (2)
-</p>
+$$
+2(1.3-0.3y)+0.5y=2.3
+$$
 
-<p>
-From (2):
-</p>
+$$
+2.6-0.6y+0.5y=2.3
+$$
 
-<p>
-x = (5y − 3)/6
-</p>
+$$
+2.6-0.1y=2.3
+$$
 
-<p>
-Substituting in (1):
-</p>
+$$
+-0.1y=-0.3
+$$
 
-<p>
-11(5y − 3)/6 − 9y = −4
-</p>
+$$
+y=3
+$$
 
-<p>
-55y − 33 − 54y = −24
-</p>
+Substitute in the first equation.
 
-<p>
-y = 9
-</p>
+$$
+0.2x+0.9=1.3
+$$
 
-<p>
-x = 7
-</p>
+$$
+0.2x=0.4
+$$
 
-<p>
-<strong>Answer:</strong> The fraction is <sup>7</sup>&frasl;<sub>9</sub>.
-</p>
+$$
+x=2
+$$
+
+<p><b>Answer:</b></p>
+
+$$
+\boxed{x=2,\qquad y=3}
+$$
 
 <hr>
 
-<h3>(vi) Five years hence, the age of Jacob will be three times that of his son. Five years
-ago, Jacob’s age was seven times that of his son. What are their present ages?</h3>
+<h3>(v) $\sqrt2\,x+\sqrt3\,y=0$ and $\sqrt3\,x-\sqrt8\,y=0$</h3>
 
-<p>
-Let Jacob's present age be x years and his son's present age be y years.
-</p>
+<p><b>Solution:</b></p>
 
-<p>
-Five years hence:
-</p>
+From
 
-<p>
-x + 5 = 3(y + 5)
-</p>
+$$
+\sqrt2\,x+\sqrt3\,y=0
+$$
 
-<p>
-x − 3y = 10 &nbsp;&nbsp;&nbsp; (1)
-</p>
+$$
+\sqrt2\,x=-\sqrt3\,y
+$$
 
-<p>
-Five years ago:
-</p>
+$$
+x=-\frac{\sqrt3}{\sqrt2}y
+$$
 
-<p>
-x − 5 = 7(y − 5)
-</p>
+Substitute into
 
-<p>
-x − 7y = −30 &nbsp;&nbsp;&nbsp; (2)
-</p>
+$$
+\sqrt3\,x-\sqrt8\,y=0
+$$
 
-<p>
-From (1):
-</p>
+$$
+\sqrt3\left(-\frac{\sqrt3}{\sqrt2}y\right)-\sqrt8\,y=0
+$$
 
-<p>
-x = 3y + 10
-</p>
+$$
+-\frac{3}{\sqrt2}y-2\sqrt2\,y=0
+$$
 
-<p>
-Substituting in (2):
-</p>
+Multiply by $\sqrt2$.
 
-<p>
-3y + 10 − 7y = −30
-</p>
+$$
+-3y-4y=0
+$$
 
-<p>
-−4y = −40
-</p>
+$$
+-7y=0
+$$
 
-<p>
-y = 10
-</p>
+$$
+y=0
+$$
 
-<p>
-x = 40
-</p>
+Therefore,
 
-<p>
-<strong>Answer:</strong>
-</p>
+$$
+x=0
+$$
 
-<ul>
-<li>Jacob's present age = 40 years</li>
-<li>Son's present age = 10 years</li>
-</ul>
+<p><b>Answer:</b></p>
 
-</div>
+$$
+\boxed{x=0,\qquad y=0}
+$$
 
+<hr>
 
+<h3>(vi) $\dfrac{3x}{2}-\dfrac{5y}{3}=-2$ and $\dfrac{x}{3}+\dfrac{y}{2}=\dfrac{13}{6}$</h3>
 
+<p><b>Solution:</b></p>
 
+From
+
+$$
+\frac{x}{3}+\frac{y}{2}=\frac{13}{6}
+$$
+
+Multiply throughout by $6$.
+
+$$
+2x+3y=13
+$$
+
+$$
+2x=13-3y
+$$
+
+$$
+x=\frac{13-3y}{2}
+$$
+
+Substitute into
+
+$$
+\frac{3x}{2}-\frac{5y}{3}=-2
+$$
+
+$$
+\frac{3}{2}\left(\frac{13-3y}{2}\right)-\frac{5y}{3}=-2
+$$
+
+Multiply throughout by $12$.
+
+$$
+9(13-3y)-20y=-24
+$$
+
+$$
+117-27y-20y=-24
+$$
+
+$$
+117-47y=-24
+$$
+
+$$
+47y=141
+$$
+
+$$
+y=3
+$$
+
+Substitute into
+
+$$
+2x+3y=13
+$$
+
+$$
+2x+9=13
+$$
+
+$$
+2x=4
+$$
+
+$$
+x=2
+$$
+
+<p><b>Answer:</b></p>
+
+$$
+\boxed{x=2,\qquad y=3}
+$$
+
+<hr>
+
+<h3>2. Solve $2x+3y=11$ and $2x-4y=-24$ and hence find the value of $m$ for which $y=mx+3$.</h3>
+
+<hr>
+
+<p><b>Solution:</b></p>
+
+Given,
+
+$$
+2x+3y=11
+$$
+
+$$
+2x-4y=-24
+$$
+
+Subtract the second equation from the first.
+
+$$
+(2x+3y)-(2x-4y)=11-(-24)
+$$
+
+$$
+7y=35
+$$
+
+$$
+y=5
+$$
+
+Substitute in
+
+$$
+2x+3y=11
+$$
+
+$$
+2x+3(5)=11
+$$
+
+$$
+2x+15=11
+$$
+
+$$
+2x=-4
+$$
+
+$$
+x=-2
+$$
+
+Now use
+
+$$
+y=mx+3
+$$
+
+Substitute
+
+$$
+x=-2,\qquad y=5
+$$
+
+$$
+5=m(-2)+3
+$$
+
+$$
+2=-2m
+$$
+
+$$
+m=-1
+$$
+
+<p><b>Answer:</b></p>
+
+$$
+\boxed{x=-2,\qquad y=5,\qquad m=-1}
+$$
+
+<hr>
+
+<h3>3. Form the pair of linear equations for the following problems and solve them by substitution method.</h3>
+
+<hr>
+
+<h3>(i) The difference between two numbers is $26$ and one number is three times the other. Find them.</h3>
+
+<p><b>Solution:</b></p>
+
+Let the two numbers be $x$ and $y$.
+
+Given,
+
+$$
+x-y=26
+$$
+
+$$
+x=3y
+$$
+
+Substitute
+
+$$
+3y-y=26
+$$
+
+$$
+2y=26
+$$
+
+$$
+y=13
+$$
+
+$$
+x=3(13)=39
+$$
+
+<p><b>Answer:</b></p>
+
+$$
+\boxed{\text{Numbers are }39\text{ and }13}
+$$
+
+<hr>
+
+<h3>(ii) The larger of two supplementary angles exceeds the smaller by $18^\circ$. Find them.</h3>
+
+<p><b>Solution:</b></p>
+
+Let the larger angle be $x^\circ$ and the smaller angle be $y^\circ$.
+
+Since they are supplementary,
+
+$$
+x+y=180
+$$
+
+Also,
+
+$$
+x-y=18
+$$
+
+From
+
+$$
+x=18+y
+$$
+
+Substitute into
+
+$$
+x+y=180
+$$
+
+$$
+18+y+y=180
+$$
+
+$$
+2y=162
+$$
+
+$$
+y=81
+$$
+
+$$
+x=99
+$$
+
+<p><b>Answer:</b></p>
+
+$$
+\boxed{99^\circ\text{ and }81^\circ}
+$$
+
+<hr>
+
+<h3>(iii) The coach of a cricket team buys $7$ bats and $6$ balls for ₹$3800$. Later, she buys $3$ bats and $5$ balls for ₹$1750$. Find the cost of each bat and each ball.</h3>
+
+<p><b>Solution:</b></p>
+
+Let the cost of one bat be ₹$x$ and one ball be ₹$y$.
+
+Then,
+
+$$
+7x+6y=3800
+$$
+
+$$
+3x+5y=1750
+$$
+
+From
+
+$$
+3x=1750-5y
+$$
+
+$$
+x=\frac{1750-5y}{3}
+$$
+
+Substitute into the first equation.
+
+$$
+7\left(\frac{1750-5y}{3}\right)+6y=3800
+$$
+
+Multiply by $3$.
+
+$$
+12250-35y+18y=11400
+$$
+
+$$
+12250-17y=11400
+$$
+
+$$
+17y=850
+$$
+
+$$
+y=50
+$$
+
+Now,
+
+$$
+3x+5(50)=1750
+$$
+
+$$
+3x=1500
+$$
+
+$$
+x=500
+$$
+
+<p><b>Answer:</b></p>
+
+$$
+\boxed{\text{Bat}=₹500,\qquad \text{Ball}=₹50}
+$$
+
+<hr>
+
+<h3>(iv) The taxi charges in a city consist of a fixed charge together with the charge for the distance covered. For a distance of $10$ km, the charge paid is ₹$105$ and for a journey of $15$ km, the charge paid is ₹$155$. What are the fixed charges and the charge per km? How much does a person have to pay for travelling a distance of $25$ km?</h3>
+
+<p><b>Solution:</b></p>
+
+Let the fixed charge be ₹$x$ and the charge per km be ₹$y$.
+
+Then,
+
+$$
+x+10y=105
+$$
+
+$$
+x+15y=155
+$$
+
+From
+
+$$
+x=105-10y
+$$
+
+Substitute into the second equation.
+
+$$
+105-10y+15y=155
+$$
+
+$$
+5y=50
+$$
+
+$$
+y=10
+$$
+
+Now,
+
+$$
+x=105-100=5
+$$
+
+Fare for $25$ km,
+
+$$
+=5+25(10)
+$$
+
+$$
+=255
+$$
+
+<p><b>Answer:</b></p>
+
+$$
+\boxed{\text{Fixed charge}=₹5}
+$$
+
+$$
+\boxed{\text{Charge per km}=₹10}
+$$
+
+$$
+\boxed{\text{Fare for }25\text{ km}=₹255}
+$$
+
+<hr>
+
+<h3>(v) A fraction becomes $\dfrac{9}{11}$ if $2$ is added to both the numerator and the denominator. If $3$ is added to both the numerator and the denominator it becomes $\dfrac{5}{6}$. Find the fraction.</h3>
+
+<p><b>Solution:</b></p>
+
+Let the numerator be $x$ and the denominator be $y$.
+
+Then,
+
+$$
+\frac{x+2}{y+2}=\frac{9}{11}
+$$
+
+Cross multiply.
+
+$$
+11(x+2)=9(y+2)
+$$
+
+$$
+11x-9y=-4
+$$
+
+Also,
+
+$$
+\frac{x+3}{y+3}=\frac56
+$$
+
+Cross multiply.
+
+$$
+6(x+3)=5(y+3)
+$$
+
+$$
+6x-5y=-3
+$$
+
+From
+
+$$
+6x=5y-3
+$$
+
+$$
+x=\frac{5y-3}{6}
+$$
+
+Substitute into
+
+$$
+11x-9y=-4
+$$
+
+$$
+11\left(\frac{5y-3}{6}\right)-9y=-4
+$$
+
+Multiply by $6$.
+
+$$
+55y-33-54y=-24
+$$
+
+$$
+y=9
+$$
+
+Now,
+
+$$
+6x-5(9)=-3
+$$
+
+$$
+6x=42
+$$
+
+$$
+x=7
+$$
+
+Therefore, the required fraction is
+
+$$
+\boxed{\frac79}
+$$
+
+<hr>
+
+<h3>(vi) Five years hence, the age of Jacob will be three times that of his son. Five years ago, Jacob's age was seven times that of his son. What are their present ages?</h3>
+
+<hr>
+
+<p><b>Solution:</b></p>
+
+<p>Let the present age of Jacob be $x$ years and the present age of his son be $y$ years.</p>
+
+<p>Five years hence,</p>
+
+$$
+x+5=3(y+5)
+$$
+
+$$
+x+5=3y+15
+$$
+
+$$
+x=3y+10
+$$
+
+<p>Five years ago,</p>
+
+$$
+x-5=7(y-5)
+$$
+
+$$
+x-5=7y-35
+$$
+
+$$
+x=7y-30
+$$
+
+<p>Substitute</p>
+
+$$
+x=3y+10
+$$
+
+<p>into</p>
+
+$$
+x=7y-30
+$$
+
+$$
+3y+10=7y-30
+$$
+
+$$
+40=4y
+$$
+
+$$
+y=10
+$$
+
+<p>Now,</p>
+
+$$
+x=3(10)+10
+$$
+
+$$
+x=40
+$$
+
+<p><b>Verification:</b></p>
+
+<p>Five years hence,</p>
+
+$$
+45=3\times15
+$$
+
+<p>Five years ago,</p>
+
+$$
+35=7\times5
+$$
+
+<p>Both conditions are satisfied.</p>
+
+<p><b>Answer:</b></p>
+
+$$
+\boxed{\text{Jacob's present age }=40\text{ years}}
+$$
+
+$$
+\boxed{\text{Son's present age }=10\text{ years}}
+$$
+
+<hr>
       </article>
       <aside class="related-box">
         <h2>Other solutions</h2>
@@ -675,5 +951,14 @@ x = 40
     </main>
     <!-- ━━━ FOOTER ━━━ -->
  <div id="footer"></div>  
+
+ <script>
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$",  right: "$",  inline: true  }
+      ]
+    });
+  </script>
   </body>
 </html>

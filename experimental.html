@@ -51,7 +51,7 @@ th,td{border:1px solid #ccc;padding:8px}
   <div class="question-box">
     <div class="label">Question:</div>
     <p>
-      If $A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$ and $B = \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}$, find $AB$.
+      If A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} and B = \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}, find AB.
     </p>
   </div>
 
@@ -60,32 +60,32 @@ th,td{border:1px solid #ccc;padding:8px}
   <div class="solution-step">
     <div class="step-num">Step 1 — Write the matrices</div>
     <p>
-      $$A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}, \quad B = \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}$$
+      A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}, \quad B = \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}
     </p>
   </div>
 
   <div class="solution-step">
     <div class="step-num">Step 2 — Apply matrix multiplication formula</div>
-    <p>For two $2 \times 2$ matrices, the product $AB$ is:</p>
+    <p>For two 2 \times 2 matrices, the product AB is:</p>
     <p>
-      $$AB = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix} \begin{pmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{pmatrix} = \begin{pmatrix} a_{11}b_{11}+a_{12}b_{21} & a_{11}b_{12}+a_{12}b_{22} \\ a_{21}b_{11}+a_{22}b_{21} & a_{21}b_{12}+a_{22}b_{22} \end{pmatrix}$$
+      AB = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix} \begin{pmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \end{pmatrix} = \begin{pmatrix} a_{11}b_{11}+a_{12}b_{21} & a_{11}b_{12}+a_{12}b_{22} \\ a_{21}b_{11}+a_{22}b_{21} & a_{21}b_{12}+a_{22}b_{22} \end{pmatrix}
     </p>
   </div>
 
   <div class="solution-step">
     <div class="step-num">Step 3 — Calculate each element</div>
     <p>
-      $$AB_{11} = (1)(5) + (2)(7) = 5 + 14 = 19$$
-      $$AB_{12} = (1)(6) + (2)(8) = 6 + 16 = 22$$
-      $$AB_{21} = (3)(5) + (4)(7) = 15 + 28 = 43$$
-      $$AB_{22} = (3)(6) + (4)(8) = 18 + 32 = 50$$
+      AB_{11} = (1)(5) + (2)(7) = 5 + 14 = 19
+      AB_{12} = (1)(6) + (2)(8) = 6 + 16 = 22
+      AB_{21} = (3)(5) + (4)(7) = 15 + 28 = 43
+      AB_{22} = (3)(6) + (4)(8) = 18 + 32 = 50
     </p>
   </div>
 
   <div class="solution-step">
     <div class="step-num">Step 4 — Final Answer</div>
     <p>
-      $$\boxed{AB = \begin{pmatrix} 19 & 22 \\ 43 & 50 \end{pmatrix}}$$
+      {AB = \begin{pmatrix} 19 & 22 \\ 43 & 50 \end{pmatrix}}
 
       
     </p>
@@ -98,31 +98,31 @@ th,td{border:1px solid #ccc;padding:8px}
   <h2>1. Fractions</h2>
   <table>
     <tr><th>What you want</th><th>KaTeX Code</th><th>Result</th></tr>
-    <tr><td>Simple fraction</td>    <td><code>\frac{a}{b}</code></td>               <td>$\frac{a}{b}$</td></tr>
-    <tr><td>Number fraction</td>    <td><code>\frac{3}{4}</code></td>               <td>$\frac{3}{4}$</td></tr>
-    <tr><td>Nested fraction</td>    <td><code>\frac{\frac{a}{b}}{c}</code></td>     <td>$\frac{\frac{a}{b}}{c}$</td></tr>
-    <tr><td>Display fraction (big)</td><td><code>$$\frac{x+1}{x-1}$$</code></td>   <td>$\dfrac{x+1}{x-1}$</td></tr>
-    <tr><td>dfrac (always big)</td> <td><code>\dfrac{a}{b}</code></td>             <td>$\dfrac{a}{b}$</td></tr>
+    <tr><td>Simple fraction</td>    <td><code>\frac{a}{b}</code></td>               <td>\frac{a}{b}</td></tr>
+    <tr><td>Number fraction</td>    <td><code>\frac{3}{4}</code></td>               <td>\frac{3}{4}</td></tr>
+    <tr><td>Nested fraction</td>    <td><code>\frac{\frac{a}{b}}{c}</code></td>     <td>\frac{\frac{a}{b}}{c}</td></tr>
+    <tr><td>Display fraction (big)</td><td><code>\frac{x+1}{x-1}</code></td>   <td>\dfrac{x+1}{x-1}</td></tr>
+    <tr><td>dfrac (always big)</td> <td><code>\dfrac{a}{b}</code></td>             <td>\dfrac{a}{b}</td></tr>
   </table>
  
   <!-- MULTIPLICATION -->
   <h2>2. Multiplication</h2>
   <table>
     <tr><th>What you want</th><th>KaTeX Code</th><th>Result</th></tr>
-    <tr><td>Cross sign ×</td>       <td><code>\times</code></td>       <td>$a \times b$</td></tr>
-    <tr><td>Dot sign ·</td>         <td><code>\cdot</code></td>        <td>$a \cdot b$</td></tr>
-    <tr><td>No sign (algebra)</td>  <td><code>ab</code></td>           <td>$ab$</td></tr>
-    <tr><td>Brackets style</td>     <td><code>(a)(b)</code></td>       <td>$(a)(b)$</td></tr>
+    <tr><td>Cross sign ×</td>       <td><code>\times</code></td>       <td>a \times b</td></tr>
+    <tr><td>Dot sign ·</td>         <td><code>\cdot</code></td>        <td>a \cdot b</td></tr>
+    <tr><td>No sign (algebra)</td>  <td><code>ab</code></td>           <td>ab</td></tr>
+    <tr><td>Brackets style</td>     <td><code>(a)(b)</code></td>       <td>(a)(b)</td></tr>
   </table>
  
   <!-- DIVISION -->
   <h2>3. Division</h2>
   <table>
     <tr><th>What you want</th><th>KaTeX Code</th><th>Result</th></tr>
-    <tr><td>Divide sign ÷</td>      <td><code>\div</code></td>                        <td>$a \div b$</td></tr>
-    <tr><td>Fraction (best way)</td><td><code>\frac{a}{b}</code></td>                 <td>$\frac{a}{b}$</td></tr>
-    <tr><td>Slash style</td>        <td><code>a/b</code></td>                         <td>$a/b$</td></tr>
-    <tr><td>Long division</td>      <td><code>a \div b = q \text{ remainder } r</code></td><td>$a \div b = q \text{ remainder } r$</td></tr>
+    <tr><td>Divide sign ÷</td>      <td><code>\div</code></td>                        <td>a \div b</td></tr>
+    <tr><td>Fraction (best way)</td><td><code>\frac{a}{b}</code></td>                 <td>\frac{a}{b}</td></tr>
+    <tr><td>Slash style</td>        <td><code>a/b</code></td>                         <td>a/b</td></tr>
+    <tr><td>Long division</td>      <td><code>a \div b = q \text{ remainder } r</code></td><td>a \div b = q \text{ remainder } r</td></tr>
   </table>
  
   <!-- COMBINING -->
@@ -130,167 +130,167 @@ th,td{border:1px solid #ccc;padding:8px}
  
   <div class="example-box">
     <p><strong>Simplify a fraction expression:</strong></p>
-    <p><code>$$\frac{2}{3} \times \frac{4}{5} = \frac{2 \times 4}{3 \times 5} = \frac{8}{15}$$</code></p>
-    $$\frac{2}{3} \times \frac{4}{5} = \frac{2 \times 4}{3 \times 5} = \frac{8}{15}$$
+    <p><code>\frac{2}{3} \times \frac{4}{5} = \frac{2 \times 4}{3 \times 5} = \frac{8}{15}</code></p>
+    \frac{2}{3} \times \frac{4}{5} = \frac{2 \times 4}{3 \times 5} = \frac{8}{15}
   </div>
  
   <div class="example-box">
     <p><strong>Dividing fractions:</strong></p>
-    <p><code>$$\frac{3}{4} \div \frac{5}{6} = \frac{3}{4} \times \frac{6}{5} = \frac{18}{20} = \frac{9}{10}$$</code></p>
-    $$\frac{3}{4} \div \frac{5}{6} = \frac{3}{4} \times \frac{6}{5} = \frac{18}{20} = \frac{9}{10}$$
+    <p><code>\frac{3}{4} \div \frac{5}{6} = \frac{3}{4} \times \frac{6}{5} = \frac{18}{20} = \frac{9}{10}</code></p>
+    \frac{3}{4} \div \frac{5}{6} = \frac{3}{4} \times \frac{6}{5} = \frac{18}{20} = \frac{9}{10}
   </div>
  
   <div class="example-box">
     <p><strong>Algebraic fraction (Class 12 style):</strong></p>
-    <p><code>$$\frac{x^2 - 1}{x + 1} = \frac{(x+1)(x-1)}{(x+1)} = x - 1$$</code></p>
-    $$\frac{x^2 - 1}{x + 1} = \frac{(x+1)(x-1)}{(x+1)} = x - 1$$
+    <p><code>\frac{x^2 - 1}{x + 1} = \frac{(x+1)(x-1)}{(x+1)} = x - 1</code></p>
+    \frac{x^2 - 1}{x + 1} = \frac{(x+1)(x-1)}{(x+1)} = x - 1
   </div>
  
   <div class="example-box">
     <p><strong>Mixed — multiply then simplify:</strong></p>
-    <p><code>$$\frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d} = \frac{ac}{bd}$$</code></p>
-    $$\frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d} = \frac{ac}{bd}$$
+    <p><code>\frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d} = \frac{ac}{bd}</code></p>
+    \frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d} = \frac{ac}{bd}
   </div>
  
   <!-- QUICK CHEATSHEET -->
   <h2>5. ⚡ Quick Cheat Sheet</h2>
   <table>
     <tr><th>Symbol</th><th>Code</th></tr>
-    <tr><td>$\frac{a}{b}$</td>  <td><code>\frac{a}{b}</code></td></tr>
-    <tr><td>$\times$</td>       <td><code>\times</code></td></tr>
-    <tr><td>$\div$</td>         <td><code>\div</code></td></tr>
-    <tr><td>$\cdot$</td>        <td><code>\cdot</code></td></tr>
-    <tr><td>$\dfrac{a}{b}$</td> <td><code>\dfrac{a}{b}</code> (always big)</td></tr>
-    <tr><td>$\pm$</td>          <td><code>\pm</code></td></tr>
-    <tr><td>$\mp$</td>          <td><code>\mp</code></td></tr>
+    <tr><td>\frac{a}{b}</td>  <td><code>\frac{a}{b}</code></td></tr>
+    <tr><td>\times</td>       <td><code>\times</code></td></tr>
+    <tr><td>\div</td>         <td><code>\div</code></td></tr>
+    <tr><td>\cdot</td>        <td><code>\cdot</code></td></tr>
+    <tr><td>\dfrac{a}{b}</td> <td><code>\dfrac{a}{b}</code> (always big)</td></tr>
+    <tr><td>\pm</td>          <td><code>\pm</code></td></tr>
+    <tr><td>\mp</td>          <td><code>\mp</code></td></tr>
   </table>
 
 
-$$\frac{2}{3} \times \frac{4}{5} = \frac{2 \times 4}{3 \times 5} = \frac{8}{15}$$
+\frac{2}{3} \times \frac{4}{5} = \frac{2 \times 4}{3 \times 5} = \frac{8}{15}
 
-$$
+
 \begin{aligned}
 \dfrac{2}{5}+\dfrac{3}{10}
 &=\dfrac{4}{10}+\dfrac{3}{10} \\
 &=\dfrac{4+3}{10} \\
 &=\dfrac{7}{10}
 \end{aligned}
-$$
+
 
 
 <h3>2. Find the sum:</h3>
 
 <hr>
 
-<h3>(i) $$\frac{2}{5}+\frac{3}{10}$$</h3>
+<h3>(i) \frac{2}{5}+\frac{3}{10}</h3>
 
 <p><strong>Solution:</strong></p>
 
 <p>LCM of 5 and 10 is 10.</p>
 
-$$
+
 \frac{2}{5}
 =
 \frac{2\times2}{5\times2}
 =
 \frac{4}{10}
-$$
+
 
 <p>Now,</p>
 
-$$
+
 \begin{aligned}
 \frac{2}{5}+\frac{3}{10}
 &=\frac{4}{10}+\frac{3}{10}\\
 &=\frac{4+3}{10}\\
 &=\frac{7}{10}
 \end{aligned}
-$$
+
 
 <p><strong>Answer:</strong></p>
 
-$$
-\boxed{\frac{7}{10}}
-$$
+
+{\frac{7}{10}}
+
 
 <hr>
 
-<h3>(ii) $$\frac{7}{12}+\frac{5}{8}$$</h3>
+<h3>(ii) \frac{7}{12}+\frac{5}{8}</h3>
 
 <p><strong>Solution:</strong></p>
 
 <p>LCM of 12 and 8 is 24.</p>
 
-$$
+
 \frac{7}{12}
 =
 \frac{7\times2}{12\times2}
 =
 \frac{14}{24}
-$$
 
-$$
+
+
 \frac{5}{8}
 =
 \frac{5\times3}{8\times3}
 =
 \frac{15}{24}
-$$
+
 
 <p>Now,</p>
 
-$$
+
 \begin{aligned}
 \frac{14}{24}+\frac{15}{24}
 &=\frac{14+15}{24}\\
 &=\frac{29}{24}\\
 &=1\frac{5}{24}
 \end{aligned}
-$$
+
 
 <p><strong>Answer:</strong></p>
 
-$$
-\boxed{\frac{29}{24}}
-$$
+
+{\frac{29}{24}}
+
 
 or
 
-$$
-\boxed{1\frac{5}{24}}
-$$
+
+{1\frac{5}{24}}
+
 
 <hr>
 
-<h3>(iii) $$-\frac{4}{7}+\frac{3}{14}$$</h3>
+<h3>(iii) -\frac{4}{7}+\frac{3}{14}</h3>
 
 <p><strong>Solution:</strong></p>
 
 <p>LCM of 7 and 14 is 14.</p>
 
-$$
+
 -\frac{4}{7}
 =
 -\frac{4\times2}{7\times2}
 =
 -\frac{8}{14}
-$$
+
 
 <p>Now,</p>
 
-$$
+
 \begin{aligned}
 -\frac{8}{14}+\frac{3}{14}
 &=\frac{-8+3}{14}\\
 &=-\frac{5}{14}
 \end{aligned}
-$$
+
 
 <p><strong>Answer:</strong></p>
 
-$$
-\boxed{-\frac{5}{14}}
-$$
+
+{-\frac{5}{14}}
+
 
 <hr>
  
@@ -313,8 +313,8 @@ $$
 <script>
     renderMathInElement(document.body, {
       delimiters: [
-        { left: "$$", right: "$$", display: true },
-        { left: "$",  right: "$",  inline: true  }
+        { left: "", right: "", display: true },
+        { left: "",  right: "",  inline: true  }
       ]
     });
   </script>
