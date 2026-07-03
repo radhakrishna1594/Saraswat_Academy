@@ -46,7 +46,7 @@
 /* ─── BASE ─── */
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   background: var(--off-white);
   color: var(--text);
   overflow-x: hidden;
@@ -118,7 +118,7 @@ header {
 .logo-emblem svg { width: 44px; height: 44px; }
 .logo-text-wrap { line-height: 1.15; }
 .logo-name {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -278,7 +278,7 @@ header {
   padding: 0 16px;
 }
 .page-title h1 {
-  font-family: 'Cormorant Garamond', 'DM Sans', serif;
+  font-family: 'Inter', serif;
   color: var(--navy);
   font-size: clamp(1.6rem, 4vw, 2.4rem);
   font-weight: 700;
@@ -309,7 +309,7 @@ header {
   text-align: center;
   font-size: clamp(1rem, 3vw, 1.25rem);
   font-weight: 700;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 /* ─── SOLUTION ROWS ─── */
@@ -340,7 +340,7 @@ header {
   border-radius: 25px;
   font-weight: 700;
   font-size: 14px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   flex-shrink: 0;
   white-space: nowrap;
 }
@@ -369,7 +369,7 @@ header {
   font-size: 15px;
   font-weight: 500;
   color: var(--text);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.4;
 }
 
