@@ -3,180 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Learn about Saraswatacademy.in — who we are, our mission to make free NCERT education available to every Indian student, and the team behind it.">
 <title>Student Corner | Saraswat Academy</title>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="../../header.css">
-<script src="../../loader.js"></script>
-<script src="../../config.js"></script>
+<link rel="stylesheet" href="/header.css">
+
+<script src="/loader.js"></script>
+
+<script src="/config.js"></script>
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+*{margin:0;padding:0;box-sizing:border-box}
+.sa-bookhub-hero{background:linear-gradient(135deg,#1d3769,#23416c);padding:60px 20px;text-align:center;color:#fff}
+.sa-bookhub-hero h1{font-size:42px;margin-bottom:10px}
+.sa-bookhub-hero p{font-size:18px;opacity:.95;max-width:700px;margin:auto}
+.sa-bookhub-search{max-width:700px;margin:30px auto 0}
+.sa-bookhub-search input{width:100%;padding:16px;border:none;border-radius:50px;font-size:16px;outline:none}
+.sa-bookhub-wrap{max-width:1400px;margin:40px auto;padding:0 20px}
+.sa-bookhub-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+.sa-bookhub-card{background:#fff;border-radius:16px;padding:28px;text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.08);transition:.3s}
+.sa-bookhub-card:hover{transform:translateY(-8px);box-shadow:0 18px 35px rgba(0,0,0,.15)}
+.sa-bookhub-icon{font-size:54px;margin-bottom:15px}
+.sa-bookhub-card h3{color:#163b82;margin-bottom:10px}
+.sa-bookhub-card p{line-height:1.7;font-size:15px;color:#555;min-height:75px}
+.sa-bookhub-btn{display:inline-block;margin-top:15px;padding:12px 22px;background:#1d6fe8;
+color:#fff;text-decoration:none;border-radius:8px;font-weight:bold}
+.sa-bookhub-btn:hover{background:#0b56c6}
+.sa-bookhub-footer{margin-top:50px;background:#163b82;color:#fff;text-align:center;padding:25px}
+@media(max-width:700px){
+.sa-bookhub-hero h1{font-size:32px}
+.sa-bookhub-hero p{font-size:16px}
 }
-
-body{
-    font-family:Arial, sans-serif;
-    background:#f8fafc;
-    color:#1e293b;
-}
-
-.student-corner{
-    max-width:1200px;
-    margin:auto;
-    padding:60px 20px;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:15px;
-    font-size:2.5rem;
-    color:#0b2c53;
-}
-
-.section-subtitle{
-    text-align:center;
-    color:#64748b;
-    max-width:700px;
-    margin:0 auto 50px;
-    line-height:1.8;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:#fff;
-    border-radius:18px;
-    padding:30px;
-    border:1px solid #e2e8f0;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 15px 35px rgba(0,0,0,0.08);
-}
-
-.icon{
-    font-size:2.5rem;
-    margin-bottom:15px;
-}
-
-.card h3{
-    color:#0b2c53;
-    margin-bottom:12px;
-    font-size:1.4rem;
-}
-
-.card p{
-    color:#475569;
-    line-height:1.8;
-    margin-bottom:20px;
-}
-
-.card a{
-    text-decoration:none;
-    color:#ff7a00;
-    font-weight:750;
-}
-
-.card a:hover{
-    text-decoration:underline;
-}
-
-@media(max-width:768px){
-
-    .section-title{
-        font-size:2rem;
-    }
-
-    .card{
-        padding:24px;
-    }
-
-}
-
 </style>
 </head>
-
 <body>
+<div id="header"></div>
 
-    <div id="header"></div>
-  
+<section class="sa-bookhub-hero">
+<h1>Teachers Corner</h1>
+<p>Explore helpful resources, teaching strategies, and professional development opportunities to enhance your instructional practice.</p>
+<div class="sa-bookhub-search">
+</div>
+</section>
 
-<section class="student-corner">
+<div class="sa-bookhub-wrap">
+<div class="sa-bookhub-grid">
 
-    <h1 class="section-title">Student Corner</h1>
-
-    <p class="section-subtitle">
-        Explore helpful guides, study strategies, productivity tips,
-        memory techniques, and modern AI tools to improve your learning journey.
-    </p>
-
-    <div class="cards">
-
-        <div class="card">
-            <div class="icon">🎓</div>
-            <h3>Career Guidance</h3>
-            <p>
-                Discover career options after Class 10 and 12,
-                competitive exams, higher education paths,
-                and future opportunities.
-            </p>
-            <a href="/Students_Corner/career_guide/career_guide_page.html">Click here to explore Career guidance</a>
-        </div>
-
-        <div class="card">
-            <div class="icon">📚</div>
-            <h3>Study Tips</h3>
-            <p>
-                Learn effective study methods, note-making techniques,
-                revision strategies, and exam preparation tips.
-            </p>
-            <a href="#">Click here for study tips</a>
-        </div>
-
-        <div class="card">
-            <div class="icon">⏰</div>
-            <h3>Time Management</h3>
-            <p>
-                Create productive study schedules, avoid procrastination,
-                and balance school, exams, and personal activities.
-            </p>
-            <a href="#">Click here for time management </a>
-        </div>
-
-        <div class="card">
-            <div class="icon">🧠</div>
-            <h3>Memory Techniques</h3>
-            <p>
-                Improve retention using active recall, spaced repetition,
-                mnemonics, and scientifically proven learning methods.
-            </p>
-            <a href="#">Click here to boost your memory</a>
-        </div>
-
-        <div class="card">
-            <div class="icon">💻</div>
-            <h3>AI Tools for Students</h3>
-            <p>
-                Learn how to use modern AI tools for research,
-                writing, coding, learning, and productivity.
-            </p>
-            <a href="#">Click here to explore AI tools</a>
-        </div>
-
+    <div class="sa-bookhub-card">
+      <div class="sa-bookhub-icon">🎓</div>
+      <h3>Career Guidance</h3>
+     
+      <a class="sa-bookhub-btn" href="/Students_Corner/career_guide/career_guide_page.html">Open</a>
     </div>
 
-</section>
- <div id="footer"></div>
+
+    <div class="sa-bookhub-card">
+      <div class="sa-bookhub-icon">🧑‍💻</div>
+      <h3>AI Tools for Students</h3>
+     
+      <a class="sa-bookhub-btn" href="/Students_Corner/career_guide/ai-tools-for-students.html">Open</a>
+    </div>
+
+ <div class="sa-bookhub-card">
+      <div class="sa-bookhub-icon">⏰</div>
+      <h3>Time Management</h3>
+     
+      <a class="sa-bookhub-btn" href="/Students_Corner/time_management/time_management_page.html">Open</a>
+    </div>
+
+
+
+     <div class="sa-bookhub-card">
+      <div class="sa-bookhub-icon">🏛️</div>
+      <h3>Admission Help After 12</h3>
+     
+      <a class="sa-bookhub-btn" href="/Students_Corner/time_management/time_management_page.html">Open</a>
+</div>
+
+<div class="sa-bookhub-card">
+      <div class="sa-bookhub-icon">📝</div>
+      <h3>Exam Preparation Tips</h3>
+     
+      <a class="sa-bookhub-btn" href="/Students_Corner/time_management/time_management_page.html">Open</a>
+</div>
+
+
+
+
+
+</div>
+</div>
+
+<div id="footer"></div>
+
 </body>
 </html>
