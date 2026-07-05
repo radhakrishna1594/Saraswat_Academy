@@ -8,6 +8,12 @@
 <link rel="stylesheet" href="../assets/styles.css">
 <script src="../loader.js"></script>
 <script src="../config.js"></script>
+
+<!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+
 <style>
 
 
@@ -23,7 +29,16 @@
 table{border-collapse:collapse;width:100%;margin:15px 0}
 th,td{border:1px solid #ccc;padding:8px}
 
+/* KATEX display */
 
+.katex-display {
+    text-align: left !important;
+    margin: 12px 0;
+}
+
+.katex-display > .katex {
+    text-align: left !important;
+}
 
 </style>
 </head>
@@ -54,463 +69,3272 @@ th,td{border:1px solid #ccc;padding:8px}
     </ul>
 
     <hr>
+<h3>Question 1 (i)</h3>
 
-    <h3>Question 1: Find the sum of the following APs</h3>
+<p><strong>Find the sum of the AP:</strong></p>
 
-    <h3>(i) 2, 7, 12, ..., to 10 terms</h3>
-    <p>
-        <strong>Given:</strong> First term (a) = 2, Common difference (d) = 7 - 2 = 5, Number of terms (n) = 10.<br>
-        Using formula: S<sub>n</sub> = <sup>n</sup>&frasl;<sub>2</sub> [2a + (n - 1)d]<br>
-        S<sub>10</sub> = <sup>10</sup>&frasl;<sub>2</sub> [2(2) + (10 - 1)5]<br>
-        S<sub>10</sub> = 5 [4 + 9(5)]<br>
-        S<sub>10</sub> = 5 [4 + 45]<br>
-        S<sub>10</sub> = 5 &times; 49 = <strong>245</strong>
-    </p>
-
-    <h3>(ii) -37, -33, -29, ..., to 12 terms</h3>
-    <p>
-        <strong>Given:</strong> a = -37, d = -33 - (-37) = 4, n = 12.<br>
-        S<sub>12</sub> = <sup>12</sup>&frasl;<sub>2</sub> [2(-37) + (12 - 1)4]<br>
-        S<sub>12</sub> = 6 [-74 + 11(4)]<br>
-        S<sub>12</sub> = 6 [-74 + 44]<br>
-        S<sub>12</sub> = 6 [-30] = <strong>-180</strong>
-    </p>
-
-    <h3>(iii) 0.6, 1.7, 2.8, ..., to 100 terms</h3>
-    <p>
-        <strong>Given:</strong> a = 0.6, d = 1.7 - 0.6 = 1.1, n = 100.<br>
-        S<sub>100</sub> = <sup>100</sup>&frasl;<sub>2</sub> [2(0.6) + (100 - 1)1.1]<br>
-        S<sub>100</sub> = 50 [1.2 + 99(1.1)]<br>
-        S<sub>100</sub> = 50 [1.2 + 108.9]<br>
-        S<sub>100</sub> = 50 &times; 110.1 = <strong>5505</strong>
-    </p>
-
-    <h3>(iv) <sup>1</sup>&frasl;<sub>15</sub>, <sup>1</sup>&frasl;<sub>12</sub>, <sup>1</sup>&frasl;<sub>10</sub>, ..., to 11 terms</h3>
-    <p>
-        <strong>Given:</strong> a = <sup>1</sup>&frasl;<sub>15</sub>, d = <sup>1</sup>&frasl;<sub>12</sub> - <sup>1</sup>&frasl;<sub>15</sub> = <sup>(5 - 4)</sup>&frasl;<sub>60</sub> = <sup>1</sup>&frasl;<sub>60</sub>, n = 11.<br>
-        S<sub>11</sub> = <sup>11</sup>&frasl;<sub>2</sub> [2(<sup>1</sup>&frasl;<sub>15</sub>) + (11 - 1)(<sup>1</sup>&frasl;<sub>60</sub>)]<br>
-        S<sub>11</sub> = <sup>11</sup>&frasl;<sub>2</sub> [<sup>2</sup>&frasl;<sub>15</sub> + <sup>10</sup>&frasl;<sub>60</sub>]<br>
-        S<sub>11</sub> = <sup>11</sup>&frasl;<sub>2</sub> [<sup>2</sup>&frasl;<sub>15</sub> + <sup>1</sup>&frasl;<sub>6</sub>] = <sup>11</sup>&frasl;<sub>2</sub> [<sup>(4 + 5)</sup>&frasl;<sub>30</sub>]<br>
-        S<sub>11</sub> = <sup>11</sup>&frasl;<sub>2</sub> [<sup>9</sup>&frasl;<sub>30</sub>] = <sup>11</sup>&frasl;<sub>2</sub> [<sup>3</sup>&frasl;<sub>10</sub>] = <strong><sup>33</sup>&frasl;<sub>20</sub></strong>
-    </p>
-
-    <hr>
-
-    <h3>Question 2: Find the sums given below</h3>
-
-    <h3>(i) 7 + 10<sup>1</sup>&frasl;<sub>2</sub> + 14 + ... + 84</h3>
-    <p>
-        <strong>Given:</strong> a = 7, d = 10.5 - 7 = 3.5 = <sup>7</sup>&frasl;<sub>2</sub>, Last term (a<sub>n</sub>) = 84.<br>
-        First, find n: a<sub>n</sub> = a + (n - 1)d<br>
-        84 = 7 + (n - 1)(<sup>7</sup>&frasl;<sub>2</sub>)<br>
-        77 = (n - 1)(<sup>7</sup>&frasl;<sub>2</sub>)<br>
-        11 = <sup>(n - 1)</sup>&frasl;<sub>2</sub> &rArr; n - 1 = 22 &rArr; n = 23.<br>
-        Now, find sum: S<sub>23</sub> = <sup>23</sup>&frasl;<sub>2</sub> (a + a<sub>n</sub>)<br>
-        S<sub>23</sub> = <sup>23</sup>&frasl;<sub>2</sub> (7 + 84) = <sup>23</sup>&frasl;<sub>2</sub> (91) = <sup>2093</sup>&frasl;<sub>2</sub> = <strong>1046<sup>1</sup>&frasl;<sub>2</sub></strong>
-    </p>
-
-    <h3>(ii) 34 + 32 + 30 + ... + 10</h3>
-    <p>
-        <strong>Given:</strong> a = 34, d = 32 - 34 = -2, a<sub>n</sub> = 10.<br>
-        Find n: 10 = 34 + (n - 1)(-2)<br>
-        -24 = (n - 1)(-2) &rArr; n - 1 = 12 &rArr; n = 13.<br>
-        Find sum: S<sub>13</sub> = <sup>13</sup>&frasl;<sub>2</sub> (34 + 10)<br>
-        S<sub>13</sub> = <sup>13</sup>&frasl;<sub>2</sub> (44) = 13 &times; 22 = <strong>286</strong>
-    </p>
-
-    <h3>(iii) -5 + (-8) + (-11) + ... + (-230)</h3>
-    <p>
-        <strong>Given:</strong> a = -5, d = -8 - (-5) = -3, a<sub>n</sub> = -230.<br>
-        Find n: -230 = -5 + (n - 1)(-3)<br>
-        -225 = (n - 1)(-3) &rArr; n - 1 = 75 &rArr; n = 76.<br>
-        Find sum: S<sub>76</sub> = <sup>76</sup>&frasl;<sub>2</sub> [-5 + (-230)]<br>
-        S<sub>76</sub> = 38 &times; (-235) = <strong>-8930</strong>
-    </p>
-
-    <hr>
-
-    <h3>Question 3: In an AP</h3>
-
-    <h3>(i) Given a = 5, d = 3, a<sub>n</sub> = 50, find n and S<sub>n</sub></h3>
-    <p>
-        50 = 5 + (n - 1)3 &rArr; 45 = (n - 1)3 &rArr; n - 1 = 15 &rArr; <strong>n = 16</strong><br>
-        S<sub>16</sub> = <sup>16</sup>&frasl;<sub>2</sub> (5 + 50) = 8 &times; 55 = <strong>440</strong>
-    </p>
-
-    <h3>(ii) Given a = 7, a<sub>13</sub> = 35, find d and S<sub>13</sub></h3>
-    <p>
-        a<sub>13</sub> = a + 12d &rArr; 35 = 7 + 12d &rArr; 28 = 12d &rArr; <strong>d = <sup>7</sup>&frasl;<sub>3</sub></strong><br>
-        S<sub>13</sub> = <sup>13</sup>&frasl;<sub>2</sub> (7 + 35) = <sup>13</sup>&frasl;<sub>2</sub> (42) = 13 &times; 21 = <strong>273</strong>
-    </p>
-
-    <h3>(iii) Given a<sub>12</sub> = 37, d = 3, find a and S<sub>12</sub></h3>
-    <p>
-        a<sub>12</sub> = a + 11d &rArr; 37 = a + 11(3) &rArr; 37 = a + 33 &rArr; <strong>a = 4</strong><br>
-        S<sub>12</sub> = <sup>12</sup>&frasl;<sub>2</sub> (4 + 37) = 6 &times; 41 = <strong>246</strong>
-    </p>
-
-    <h3>(iv) Given a<sub>3</sub> = 15, S<sub>10</sub> = 125, find d and a<sub>10</sub></h3>
-    <p>
-        From a<sub>3</sub>: a + 2d = 15 &mdash; (Eq 1)<br>
-        From S<sub>10</sub>: <sup>10</sup>&frasl;<sub>2</sub> [2a + 9d] = 125 &rArr; 5 [2a + 9d] = 125 &rArr; 2a + 9d = 25 &mdash; (Eq 2)<br>
-        Multiply Eq 1 by 2: 2a + 4d = 30<br>
-        Subtracting this from Eq 2: 5d = -5 &rArr; <strong>d = -1</strong><br>
-        Substitute d in Eq 1: a + 2(-1) = 15 &rArr; a = 17.<br>
-        a<sub>10</sub> = a + 9d = 17 + 9(-1) = <strong>8</strong>
-    </p>
-
-    <h3>(v) Given d = 5, S<sub>9</sub> = 75, find a and a<sub>9</sub></h3>
-    <p>
-        S<sub>9</sub> = <sup>9</sup>&frasl;<sub>2</sub> [2a + 8(5)] = 75<br>
-        <sup>9</sup>&frasl;<sub>2</sub> (2a + 40) = 75 &rArr; 9(a + 20) = 75 &rArr; 9a + 180 = 75 &rArr; 9a = -105 &rArr; <strong>a = -<sup>35</sup>&frasl;<sub>3</sub></strong><br>
-        a<sub>9</sub> = a + 8d = -<sup>35</sup>&frasl;<sub>3</sub> + 8(5) = -<sup>35</sup>&frasl;<sub>3</sub> + 40 = <sup>(-35 + 120)</sup>&frasl;<sub>3</sub> = <strong><sup>85</sup>&frasl;<sub>3</sub></strong>
-    </p>
-
-    <h3>(vi) Given a = 2, d = 8, S<sub>n</sub> = 90, find n and a<sub>n</sub></h3>
-    <p>
-        90 = <sup>n</sup>&frasl;<sub>2</sub> [2(2) + (n - 1)8] &rArr; 180 = n [4 + 8n - 8] &rArr; 180 = n (8n - 4)<br>
-        180 = 8n<sup>2</sup> - 4n &rArr; 2n<sup>2</sup> - n - 45 = 0<br>
-        Solving the quadratic: 2n<sup>2</sup> - 10n + 9n - 45 = 0 &rArr; 2n(n - 5) + 9(n - 5) = 0<br>
-        (2n + 9)(n - 5) = 0 &rArr; Since n cannot be negative/fractional, <strong>n = 5</strong><br>
-        a<sub>5</sub> = a + 4d = 2 + 4(8) = <strong>34</strong>
-    </p>
-
-    <h3>(vii) Given a = 8, a<sub>n</sub> = 62, S<sub>n</sub> = 210, find n and d</h3>
-    <p>
-        S<sub>n</sub> = <sup>n</sup>&frasl;<sub>2</sub> (a + a<sub>n</sub>) &rArr; 210 = <sup>n</sup>&frasl;<sub>2</sub> (8 + 62)<br>
-        210 = <sup>n</sup>&frasl;<sub>2</sub> &times; 70 &rArr; 210 = 35n &rArr; <strong>n = 6</strong><br>
-        a<sub>6</sub> = a + 5d &rArr; 62 = 8 + 5d &rArr; 54 = 5d &rArr; <strong>d = <sup>54</sup>&frasl;<sub>5</sub></strong>
-    </p>
-
-    <h3>(viii) Given a<sub>n</sub> = 4, d = 2, S<sub>n</sub> = -14, find n and a</h3>
-    <p>
-        a<sub>n</sub> = a + (n - 1)d &rArr; 4 = a + (n - 1)2 &rArr; a = 4 - 2n + 2 &rArr; a = 6 - 2n &mdash; (Eq 1)<br>
-        S<sub>n</sub> = <sup>n</sup>&frasl;<sub>2</sub> (a + a<sub>n</sub>) &rArr; -14 = <sup>n</sup>&frasl;<sub>2</sub> (6 - 2n + 4)<br>
-        -28 = n (10 - 2n) &rArr; -28 = 10n - 2n<sup>2</sup> &rArr; 2n<sup>2</sup> - 10n - 28 = 0<br>
-        n<sup>2</sup> - 5n - 14 = 0 &rArr; (n - 7)(n + 2) = 0 &rArr; <strong>n = 7</strong> (since n must be positive)<br>
-        Substitute n into Eq 1: a = 6 - 2(7) = <strong>-8</strong>
-    </p>
-
-    <h3>(ix) Given a = 3, n = 8, S = 192, find d</h3>
-    <p>
-        192 = <sup>8</sup>&frasl;<sub>2</sub> [2(3) + (8 - 1)d]<br>
-        192 = 4 [6 + 7d] &rArr; 48 = 6 + 7d &rArr; 42 = 7d &rArr; <strong>d = 6</strong>
-    </p>
-
-    <h3>(x) Given l = 28, S = 144, and there are total 9 terms. Find a</h3>
-    <p>
-        Note: l is the last term (a<sub>9</sub> = 28).<br>
-        S<sub>9</sub> = <sup>9</sup>&frasl;<sub>2</sub> (a + l)<br>
-        144 = <sup>9</sup>&frasl;<sub>2</sub> (a + 28)<br>
-        <sup>(144 &times; 2)</sup>&frasl;<sub>9</sub> = a + 28 &rArr; 16 &times; 2 = a + 28 &rArr; 32 = a + 28 &rArr; <strong>a = 4</strong>
-    </p>
-
-     <h3>Question 4: How many terms of the AP: 9, 17, 25, . . . must be taken to give a sum of 636?</h3>
-    <p>
-        <strong>Given:</strong> First term (a) = 9, Common difference (d) = 17 - 9 = 8, Sum (S<sub>n</sub>) = 636.<br>
-        Using formula: S<sub>n</sub> = <sup>n</sup>&frasl;<sub>2</sub> [2a + (n - 1)d]<br>
-        636 = <sup>n</sup>&frasl;<sub>2</sub> [2(9) + (n - 1)8]<br>
-        636 = <sup>n</sup>&frasl;<sub>2</sub> [18 + 8n - 8]<br>
-        636 = <sup>n</sup>&frasl;<sub>2</sub> [10 + 8n]<br>
-        636 = n(5 + 4n)<br>
-        636 = 5n + 4n<sup>2</sup> &rArr; 4n<sup>2</sup> + 5n - 636 = 0<br>
-        Solving the quadratic equation using the formula n = <sup>(-b &plusmn; &radic;(b<sup>2</sup> - 4ac))</sup>&frasl;<sub>2a</sub>:<br>
-        n = <sup>(-5 &plusmn; &radic;(5<sup>2</sup> - 4(4)(-636)))</sup>&frasl;<sub>2(4)</sub><br>
-        n = <sup>(-5 &plusmn; &radic;(25 + 10176))</sup>&frasl;<sub>8</sub><br>
-        n = <sup>(-5 &plusmn; &radic;10201)</sup>&frasl;<sub>8</sub> = <sup>(-5 &plusmn; 101)</sup>&frasl;<sub>8</sub><br>
-        Taking the positive value: n = <sup>96</sup>&frasl;<sub>8</sub> = <strong>12</strong><br>
-        Thus, <strong>12 terms</strong> must be taken.
-    </p>
-
-    <hr>
-
-    <h3>Question 5: The first term of an AP is 5, the last term is 45 and the sum is 400. Find the number of terms and the common difference.</h3>
-    <p>
-        <strong>Given:</strong> a = 5, Last term (l or a<sub>n</sub>) = 45, S<sub>n</sub> = 400.<br>
-        Using formula: S<sub>n</sub> = <sup>n</sup>&frasl;<sub>2</sub> (a + l)<br>
-        400 = <sup>n</sup>&frasl;<sub>2</sub> (5 + 45)<br>
-        400 = <sup>n</sup>&frasl;<sub>2</sub> (50) &rArr; 400 = 25n &rArr; <strong>n = 16</strong><br>
-        Now, using formula: a<sub>n</sub> = a + (n - 1)d<br>
-        45 = 5 + (16 - 1)d<br>
-        40 = 15d &rArr; d = <sup>40</sup>&frasl;<sub>15</sub> = <strong><sup>8</sup>&frasl;<sub>3</sub></strong>
-    </p>
-
-    <hr>
-
-    <h3>Question 6: The first and the last terms of an AP are 17 and 350 respectively. If the common difference is 9, how many terms are there and what is their sum?</h3>
-    <p>
-        <strong>Given:</strong> a = 17, l = 350, d = 9.<br>
-        Using formula: a<sub>n</sub> = a + (n - 1)d<br>
-        350 = 17 + (n - 1)9<br>
-        333 = (n - 1)9 &rArr; n - 1 = 37 &rArr; <strong>n = 38</strong><br>
-        Now, find the sum: S<sub>38</sub> = <sup>38</sup>&frasl;<sub>2</sub> (a + l)<br>
-        S<sub>38</sub> = 19 &times; (17 + 350) = 19 &times; 367 = <strong>6973</strong>
-    </p>
-
-    <hr>
-
-    <h3>Question 7: Find the sum of first 22 terms of an AP in which d = 7 and 22nd term is 149.</h3>
-    <p>
-        <strong>Given:</strong> n = 22, d = 7, a<sub>22</sub> = 149.<br>
-        Using formula: a<sub>22</sub> = a + 21d<br>
-        149 = a + 21(7)<br>
-        149 = a + 147 &rArr; <strong>a = 2</strong><br>
-        Now, find the sum: S<sub>22</sub> = <sup>22</sup>&frasl;<sub>2</sub> (a + a<sub>22</sub>)<br>
-        S<sub>22</sub> = 11 &times; (2 + 149) = 11 &times; 151 = <strong>1661</strong>
-    </p>
-
-    <hr>
-
-    <h3>Question 8: Find the sum of first 51 terms of an AP whose second and third terms are 14 and 18 respectively.</h3>
-    <p>
-        <strong>Given:</strong> a<sub>2</sub> = 14, a<sub>3</sub> = 18, n = 51.<br>
-        Common difference (d) = a<sub>3</sub> - a<sub>2</sub> = 18 - 14 = <strong>4</strong><br>
-        First term (a) = a<sub>2</sub> - d = 14 - 4 = <strong>10</strong><br>
-        Now, find the sum: S<sub>51</sub> = <sup>51</sup>&frasl;<sub>2</sub> [2a + (n - 1)d]<br>
-        S<sub>51</sub> = <sup>51</sup>&frasl;<sub>2</sub> [2(10) + (51 - 1)4]<br>
-        S<sub>51</sub> = <sup>51</sup>&frasl;<sub>2</sub> [20 + 50(4)] = <sup>51</sup>&frasl;<sub>2</sub> [220]<br>
-        S<sub>51</sub> = 51 &times; 110 = <strong>5610</strong>
-    </p>
-
-    <hr>
-
-    <h3>Question 9: If the sum of first 7 terms of an AP is 49 and that of 17 terms is 289, find the sum of first n terms.</h3>
-    <p>
-        <strong>Given:</strong> S<sub>7</sub> = 49, S<sub>17</sub> = 289.<br>
-        From S<sub>7</sub>: <sup>7</sup>&frasl;<sub>2</sub> [2a + 6d] = 49 &rArr; 7(a + 3d) = 49 &rArr; a + 3d = 7 &mdash; (Eq 1)<br>
-        From S<sub>17</sub>: <sup>17</sup>&frasl;<sub>2</sub> [2a + 16d] = 289 &rArr; 17(a + 8d) = 289 &rArr; a + 8d = 17 &mdash; (Eq 2)<br>
-        Subtracting Eq 1 from Eq 2: 5d = 10 &rArr; <strong>d = 2</strong><br>
-        Substitute d = 2 in Eq 1: a + 3(2) = 7 &rArr; a + 6 = 7 &rArr; <strong>a = 1</strong><br>
-        Now, find S<sub>n</sub>: S<sub>n</sub> = <sup>n</sup>&frasl;<sub>2</sub> [2(1) + (n - 1)2]<br>
-        S<sub>n</sub> = <sup>n</sup>&frasl;<sub>2</sub> [2 + 2n - 2] = <sup>n</sup>&frasl;<sub>2</sub> (2n) = <strong>n<sup>2</sup></strong>
-    </p>
-
-    <hr>
-
-    <h3>Question 10: Show that a<sub>1</sub>, a<sub>2</sub>, . . . , a<sub>n</sub>, . . . form an AP where a<sub>n</sub> is defined as below:</h3>
-
-    <h3>(i) a<sub>n</sub> = 3 + 4n. Also find the sum of the first 15 terms.</h3>
-    <p>
-        Let's find the first few terms:<br>
-        a<sub>1</sub> = 3 + 4(1) = 7<br>
-        a<sub>2</sub> = 3 + 4(2) = 11<br>
-        a<sub>3</sub> = 3 + 4(3) = 15<br>
-        Since the difference between consecutive terms (11 - 7 = 4, 15 - 11 = 4) is constant, it forms an AP with a = 7 and d = 4.<br>
-        Sum of first 15 terms: S<sub>15</sub> = <sup>15</sup>&frasl;<sub>2</sub> [2(7) + (15 - 1)4]<br>
-        S<sub>15</sub> = <sup>15</sup>&frasl;<sub>2</sub> [14 + 14(4)] = <sup>15</sup>&frasl;<sub>2</sub> [14 + 56] = <sup>15</sup>&frasl;<sub>2</sub> (70)<br>
-        S<sub>15</sub> = 15 &times; 35 = <strong>525</strong>
-    </p>
-
-    <h3>(ii) a<sub>n</sub> = 9 - 5n. Also find the sum of the first 15 terms.</h3>
-    <p>
-        Let's find the first few terms:<br>
-        a<sub>1</sub> = 9 - 5(1) = 4<br>
-        a<sub>2</sub> = 9 - 5(2) = -1<br>
-        a<sub>3</sub> = 9 - 5(3) = -6<br>
-        Since the difference between consecutive terms (-1 - 4 = -5, -6 - (-1) = -5) is constant, it forms an AP with a = 4 and d = -5.<br>
-        Sum of first 15 terms: S<sub>15</sub> = <sup>15</sup>&frasl;<sub>2</sub> [2(4) + (15 - 1)(-5)]<br>
-        S<sub>15</sub> = <sup>15</sup>&frasl;<sub>2</sub> [8 + 14(-5)] = <sup>15</sup>&frasl;<sub>2</sub> [8 - 70] = <sup>15</sup>&frasl;<sub>2</sub> (-62)<br>
-        S<sub>15</sub> = 15 &times; (-31) = <strong>-465</strong>
-    </p>
-
-    <hr>
-
-    <h3>Question 11: If the sum of the first n terms of an AP is 4n - n<sup>2</sup>, what is the first term (that is S<sub>1</sub>)? What is the sum of first two terms? What is the second term? Similarly, find the 3rd, the 10th and the n<sup>th</sup> terms.</h3>
-    <p>
-        Given: S<sub>n</sub> = 4n - n<sup>2</sup><br>
-        First term (a<sub>1</sub>) = S<sub>1</sub> = 4(1) - (1)<sup>2</sup> = 4 - 1 = <strong>3</strong><br>
-        Sum of first two terms (S<sub>2</sub>) = 4(2) - (2)<sup>2</sup> = 8 - 4 = <strong>4</strong><br>
-        Second term (a<sub>2</sub>) = S<sub>2</sub> - S<sub>1</sub> = 4 - 3 = <strong>1</strong><br>
-        Common difference (d) = a<sub>2</sub> - a<sub>1</sub> = 1 - 3 = <strong>-2</strong><br><br>
-        Third term (a<sub>3</sub>) = a + 2d = 3 + 2(-2) = 3 - 4 = <strong>-1</strong><br>
-        Tenth term (a<sub>10</sub>) = a + 9d = 3 + 9(-2) = 3 - 18 = <strong>-15</strong><br>
-        n<sup>th</sup> term (a<sub>n</sub>) = a + (n - 1)d = 3 + (n - 1)(-2) = 3 - 2n + 2 = <strong>5 - 2n</strong>
-    </p>
-
-    <hr>
-
-    <h3>Question 12: Find the sum of the first 40 positive integers divisible by 6.</h3>
-    <p>
-        The sequence is: 6, 12, 18, 24, . . . to 40 terms.<br>
-        <strong>Given:</strong> a = 6, d = 6, n = 40.<br>
-        S<sub>40</sub> = <sup>40</sup>&frasl;<sub>2</sub> [2(6) + (40 - 1)6]<br>
-        S<sub>40</sub> = 20 [12 + 39(6)] = 20 [12 + 234]<br>
-        S<sub>40</sub> = 20 &times; 246 = <strong>4920</strong>
-    </p>
-
-    <hr>
-
-    <h3>Question 13: Find the sum of the first 15 multiples of 8.</h3>
-    <p>
-        The sequence is: 8, 16, 24, 32, . . . to 15 terms.<br>
-        <strong>Given:</strong> a = 8, d = 8, n = 15.<br>
-        S<sub>15</sub> = <sup>15</sup>&frasl;<sub>2</sub> [2(8) + (15 - 1)8]<br>
-        S<sub>15</sub> = <sup>15</sup>&frasl;<sub>2</sub> [16 + 14(8)] = <sup>15</sup>&frasl;<sub>2</sub> [16 + 112]<br>
-        S<sub>15</sub> = <sup>15</sup>&frasl;<sub>2</sub> (128) = 15 &times; 64 = <strong>960</strong>
-    </p>
-
-    <hr>
-
-    <h3>Question 14: Find the sum of the odd numbers between 0 and 50.</h3>
-    <p>
-        The odd numbers between 0 and 50 are: 1, 3, 5, 7, . . . , 49.<br>
-        This is an AP where a = 1, d = 2, and last term (l) = 49.<br>
-        First find n: 49 = 1 + (n - 1)2 &rArr; 48 = (n - 1)2 &rArr; n - 1 = 24 &rArr; n = 25.<br>
-        Now find the sum: S<sub>25</sub> = <sup>25</sup>&frasl;<sub>2</sub> (a + l)<br>
-        S<sub>25</sub> = <sup>25</sup>&frasl;<sub>2</sub> (1 + 49) = <sup>25</sup>&frasl;<sub>2</sub> (50) = 25 &times; 25 = <strong>625</strong>
-    </p>
-    <hr>    
-
-    <h3>Question 15: A contract on construction job specifies a penalty for delay of completion beyond a certain date as follows: ₹ 200 for the first day, ₹ 250 for the second day, ₹ 300 for the third day, etc., the penalty for each succeeding day being ₹ 50 more than for the preceding day. How much money the contractor has to pay as penalty, if he has delayed the work by 30 days?</h3>
-    <p>
-        <strong>Given:</strong><br>
-        Penalty for the first day (a) = ₹ 200<br>
-        Penalty for the second day = ₹ 250<br>
-        Penalty for the third day = ₹ 300<br>
-        Since the penalty increases by a fixed amount daily, it forms an AP with a common difference (d) = ₹ 50.<br>
-        Number of days delayed (n) = 30.<br><br>
-        Using the sum formula: S<sub>n</sub> = <sup>n</sup>&frasl;<sub>2</sub> [2a + (n - 1)d]<br>
-        S<sub>30</sub> = <sup>30</sup>&frasl;<sub>2</sub> [2(200) + (30 - 1)50]<br>
-        S<sub>30</sub> = 15 [400 + 29 &times; 50]<br>
-        S<sub>30</sub> = 15 [400 + 1450]<br>
-        S<sub>30</sub> = 15 [1850]<br>
-        S<sub>30</sub> = <strong>₹ 27,750</strong><br><br>
-        Thus, the contractor has to pay <strong>₹ 27,750</strong> as a penalty.
-    </p>
-
-    <hr>
-
-    <h3>Question 16: A sum of ₹ 700 is to be used to give seven cash prizes to students of a school for their overall academic performance. If each prize is ₹ 20 less than its preceding prize, find the value of each of the prizes.</h3>
-    <p>
-        <strong>Given:</strong><br>
-        Total budget for prizes (S<sub>n</sub>) = ₹ 700<br>
-        Total number of prizes (n) = 7<br>
-        Since each prize is ₹ 20 less than the preceding one, the common difference (d) = -20.<br><br>
-        Using the sum formula: S<sub>n</sub> = <sup>n</sup>&frasl;<sub>2</sub> [2a + (n - 1)d]<br>
-        700 = <sup>7</sup>&frasl;<sub>2</sub> [2a + (7 - 1)(-20)]<br>
-        <sup>(700 &times; 2)</sup>&frasl;<sub>7</sub> = 2a + 6(-20)<br>
-        200 = 2a - 120<br>
-        320 = 2a &rArr; a = <strong>₹ 160</strong><br><br>
-        Now, calculating the value of each of the 7 prizes:<br>
-        1<sup>st</sup> prize = a = <strong>₹ 160</strong><br>
-        2<sup>nd</sup> prize = a - 20 = <strong>₹ 140</strong><br>
-        3<sup>rd</sup> prize = 140 - 20 = <strong>₹ 120</strong><br>
-        4<sup>th</sup> prize = 120 - 20 = <strong>₹ 100</strong><br>
-        5<sup>th</sup> prize = 100 - 20 = <strong>₹ 80</strong><br>
-        6<sup>th</sup> prize = 80 - 20 = <strong>₹ 60</strong><br>
-        7<sup>th</sup> prize = 60 - 20 = <strong>₹ 40</strong>
-    </p>
-
-    <hr>
-
-    <h3>Question 17: In a school, students thought of planting trees in and around the school to reduce air pollution. It was decided that the number of trees, that each section of each class will plant, will be the same as the class, in which they are studying, e.g., a section of Class I will plant 1 tree, a section of Class II will plant 2 trees and so on till Class XII. There are three sections of each class. How many trees will be planted by the students?</h3>
-    <p>
-        <strong>Given:</strong><br>
-        Number of classes = 12 (from Class I to Class XII)<br>
-        Number of sections per class = 3<br><br>
-        Let's first find the number of trees planted by a single section of all classes from I to XII:<br>
-        The sequence is: 1, 2, 3, 4, . . . , 12.<br>
-        This is an AP where first term (a) = 1, last term (l) = 12, and number of terms (n) = 12.<br><br>
-        Sum of trees for 1 section: S<sub>n</sub> = <sup>n</sup>&frasl;<sub>2</sub> (a + l)<br>
-        S<sub>12</sub> = <sup>12</sup>&frasl;<sub>2</sub> (1 + 12)<br>
-        S<sub>12</sub> = 6 &times; 13 = 78 trees<br><br>
-        Since there are 3 sections in each class, the total number of trees planted:<br>
-        Total trees = 3 &times; (Trees planted by 1 section)<br>
-        Total trees = 3 &times; 78 = <strong>234 trees</strong><br><br>
-        Thus, a total of <strong>234 trees</strong> will be planted by the students.
-    </p>
-<hr>
-     <h3>Question 18: A spiral is made up of successive semicircles, with centres alternately at A and B, starting with centre at A, of radii 0.5 cm, 1.0 cm, 1.5 cm, 2.0 cm, . . . What is the total length of such a spiral made up of thirteen consecutive semicircles? (Take &pi; = <sup>22</sup>&frasl;<sub>7</sub>)</h3>
-    <p>
-        <img src="AP_SPIRAL.png"><br><br>
-        <strong>Derivation and Logic:</strong><br>
-        The perimeter (length) of a semicircle with radius r is given by the formula: <strong>l = &pi;r</strong><br><br>
-        Let the lengths of the successive semicircles be l<sub>1</sub>, l<sub>2</sub>, l<sub>3</sub>, . . . , l<sub>13</sub>.<br>
-        l<sub>1</sub> = &pi; &times; 0.5 cm<br>
-        l<sub>2</sub> = &pi; &times; 1.0 cm<br>
-        l<sub>3</sub> = &pi; &times; 1.5 cm<br><br>
-        The total length of the spiral (L) is the sum of these thirteen lengths:<br>
-        L = l<sub>1</sub> + l<sub>2</sub> + l<sub>3</sub> + . . . + l<sub>13</sub><br>
-        L = &pi;(0.5) + &pi;(1.0) + &pi;(1.5) + . . . + &pi;(r<sub>13</sub>)<br>
-        L = &pi; [0.5 + 1.0 + 1.5 + . . . \text{ up to 13 terms}]<br><br>
-        The sequence inside the bracket forms an Arithmetic Progression (AP):<br>
-        First term (a) = 0.5<br>
-        Common difference (d) = 1.0 - 0.5 = 0.5<br>
-        Number of terms (n) = 13<br><br>
-        Using the sum formula for an AP: S<sub>n</sub> = <sup>n</sup>&frasl;<sub>2</sub> [2a + (n - 1)d]<br>
-        S<sub>13</sub> = <sup>13</sup>&frasl;<sub>2</sub> [2(0.5) + (13 - 1)0.5]<br>
-        S<sub>13</sub> = <sup>13</sup>&frasl;<sub>2</sub> [1.0 + 12(0.5)]<br>
-        S<sub>13</sub> = <sup>13</sup>&frasl;<sub>2</sub> [1.0 + 6.0]<br>
-        S<sub>13</sub> = <sup>13</sup>&frasl;<sub>2</sub> [7] = <sup>91</sup>&frasl;<sub>2</sub><br><br>
-        Now substitute S<sub>13</sub> back into the total length equation along with &pi; = <sup>22</sup>&frasl;<sub>7</sub>:<br>
-        L = &pi; &times; S<sub>13</sub><br>
-        L = <sup>22</sup>&frasl;<sub>7</sub> &times; <sup>91</sup>&frasl;<sub>2</sub><br>
-        L = (<sup>22</sup>&frasl;<sub>2</sub>) &times; (<sup>91</sup>&frasl;<sub>7</sub>)<br>
-        L = 11 &times; 13 = <strong>143 cm</strong><br><br>
-        Thus, the total length of the spiral made up of thirteen consecutive semicircles is <strong>143 cm</strong>.
-    </p>
+$$
+2,\;7,\;12,\;\ldots,\text{ to }10\text{ terms.}
+$$
 
 <hr>
-     <h3>Question 19: 200 logs are stacked in the following manner: 20 logs in the bottom row, 19 in the next row, 18 in the row next to it and so on. In how many rows are the 200 logs placed and how many logs are in the top row?</h3>
-    <p>
-        <img src="AP_WOODEN.png"><br><br>
-        <strong>Given:</strong><br>
-        Logs in the bottom row (1<sup>st</sup> row), a = 20<br>
-        Logs in the next row (2<sup>nd</sup> row) = 19<br>
-        Logs in the row next to it (3<sup>rd</sup> row) = 18<br><br>
-        The number of logs in consecutive rows forms an Arithmetic Progression (AP): 20, 19, 18, . . .<br>
-        First term (a) = 20<br>
-        Common difference (d) = 19 - 20 = -1<br>
-        Total number of logs (S<sub>n</sub>) = 200<br><br>
-        Using the sum formula for an AP: S<sub>n</sub> = <sup>n</sup>&frasl;<sub>2</sub> [2a + (n - 1)d]<br>
-        200 = <sup>n</sup>&frasl;<sub>2</sub> [2(20) + (n - 1)(-1)]<br>
-        400 = n [40 - n + 1]<br>
-        400 = n [41 - n]<br>
-        400 = 41n - n<sup>2</sup><br><br>
-        Rearranging this into a standard quadratic equation form:<br>
-        n<sup>2</sup> - 41n + 400 = 0<br><br>
-        Solving by splitting the middle term:<br>
-        n<sup>2</sup> - 16n - 25n + 400 = 0<br>
-        n(n - 16) - 25(n - 16) = 0<br>
-        (n - 16)(n - 25) = 0<br><br>
-        This gives two potential values for the number of rows:<br>
-        n = 16 or n = 25<br><br>
-        <strong>Verification of terms:</strong><br>
-        Let's determine which value is physically possible by finding the number of logs in the top row (a<sub>n</sub>):<br><br>
-        <u>Case 1: If n = 25</u><br>
-        a<sub>25</sub> = a + 24d = 20 + 24(-1) = 20 - 24 = -4<br>
-        Since the number of logs in a row cannot be negative, <strong>n = 25 is rejected</strong>.<br><br>
-        <u>Case 2: If n = 16</u><br>
-        a<sub>16</sub> = a + 15d = 20 + 15(-1) = 20 - 15 = 5<br>
-        Since this yields a positive count of logs, <strong>n = 16 is accepted</strong>.<br><br>
-        Therefore, the 200 logs are placed in <strong>16 rows</strong>, and there are <strong>5 logs</strong> in the top row.
-    </p>
-<hr>    
-    <h3>Question 20: In a potato race, a bucket is placed at the starting point, which is 5 m from the first potato, and the other potatoes are placed 3 m apart in a straight line. There are ten potatoes in the line (see Fig. 5.6). A competitor starts from the bucket, picks up the nearest potato, runs back with it, drops it in the bucket, runs back to pick up the next potato, runs to the bucket to drop it in, and she continues in the same way until all the potatoes are in the bucket. What is the total distance the competitor has to run?</h3>
-    <img src="AP_RACING.png"><br><br>
-    <p>
-        <strong>Given:</strong><br>
-        Distance of the first potato from the bucket = 5 m<br>
-        Distance between subsequent potatoes = 3 m<br>
-        Total number of potatoes (n) = 10<br><br>
-        <strong>Distance analysis:</strong><br>
-        To pick up and drop each potato, the competitor must run to the potato and return to the bucket. Therefore, the distance run for each potato is double the distance from the bucket.<br><br>
-        Distance run for the 1<sup>st</sup> potato = 2 &times; 5 m = 10 m<br>
-        Distance run for the 2<sup>nd</sup> potato = 2 &times; (5 + 3) m = 2 &times; 8 m = 16 m<br>
-        Distance run for the 3<sup>rd</sup> potato = 2 &times; (5 + 3 + 3) m = 2 &times; 11 m = 22 m<br><br>
-        The distances run for successive potatoes form an Arithmetic Progression (AP): 10, 16, 22, . . .<br>
-        First term (a) = 10<br>
-        Common difference (d) = 16 - 10 = 6<br>
-        Number of terms (n) = 10<br><br>
-        Using the sum formula for an AP: S<sub>n</sub> = <sup>n</sup>&frasl;<sub>2</sub> [2a + (n - 1)d]<br>
-        S<sub>10</sub> = <sup>10</sup>&frasl;<sub>2</sub> [2(10) + (10 - 1)6]<br>
-        S<sub>10</sub> = 5 [20 + 9 &times; 6]<br>
-        S<sub>10</sub> = 5 [20 + 54]<br>
-        S<sub>10</sub> = 5 &times; 74<br>
-        S<sub>10</sub> = <strong>370 m</strong><br><br>
-        Thus, the total distance the competitor has to run is <strong>370 meters</strong>.
-    </p>
 
+<p><strong>Solution:</strong></p>
+
+<p>The given AP is</p>
+
+$$
+2,\;7,\;12,\;\ldots
+$$
+
+<p>Here,</p>
+
+$$
+a=2,\qquad d=5,\qquad n=10
+$$
+
+<p>Use the formula for the sum of <strong>n</strong> terms of an AP:</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+\begin{aligned}
+S_{10}
+&=\frac{10}{2}\left[2(2)+(10-1)(5)\right]\\[4pt]
+&=5\left[4+45\right]\\[4pt]
+&=5\times49\\[4pt]
+&=245
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{245}
+$$
+
+<hr>
+
+<h3>Question 1 (ii)</h3>
+
+<p><strong>Find the sum of the AP:</strong></p>
+
+$$
+-37,\;-33,\;-29,\;\ldots,\text{ to }12\text{ terms.}
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given AP is</p>
+
+$$
+-37,\;-33,\;-29,\;\ldots
+$$
+
+<p>Here,</p>
+
+$$
+a=-37,\qquad d=4,\qquad n=12
+$$
+
+<p>Use the formula</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+\begin{aligned}
+S_{12}
+&=\frac{12}{2}\left[2(-37)+(12-1)(4)\right]\\[4pt]
+&=6\left[-74+44\right]\\[4pt]
+&=6(-30)\\[4pt]
+&=-180
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+<p>The 12th term is</p>
+
+$$
+a_{12}=a+(12-1)d
+$$
+
+$$
+=-37+11(4)
+$$
+
+$$
+=7
+$$
+
+<p>Using the alternative formula,</p>
+
+$$
+S_n=\frac{n}{2}(a+l)
+$$
+
+$$
+=\frac{12}{2}(-37+7)
+$$
+
+$$
+=6(-30)
+$$
+
+$$
+=-180
+$$
+
+<p>Hence, the answer is correct.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{-180}
+$$
+
+<hr>
+<h3>Question 1 (iii)</h3>
+
+<p><strong>Find the sum of the AP:</strong></p>
+
+$$
+0.6,\;1.7,\;2.8,\;\ldots,\text{ to }100\text{ terms.}
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given AP is</p>
+
+$$
+0.6,\;1.7,\;2.8,\;\ldots
+$$
+
+<p>Here,</p>
+
+$$
+a=0.6,\qquad d=1.1,\qquad n=100
+$$
+
+<p>Use the formula for the sum of the first <strong>n</strong> terms of an AP:</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+\begin{aligned}
+S_{100}
+&=\frac{100}{2}\left[2(0.6)+(100-1)(1.1)\right]\\[4pt]
+&=50\left[1.2+108.9\right]\\[4pt]
+&=50(110.1)\\[4pt]
+&=5505
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{5505}
+$$
+
+<hr>
+
+<h3>Question 1 (iv)</h3>
+
+<p><strong>Find the sum of the AP:</strong></p>
+
+$$
+\frac{1}{15},\;\frac{1}{12},\;\frac{1}{10},\;\ldots,\text{ to }11\text{ terms.}
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given AP is</p>
+
+$$
+\frac{1}{15},\;\frac{1}{12},\;\frac{1}{10},\;\ldots
+$$
+
+<p>Here,</p>
+
+$$
+a=\frac{1}{15}
+$$
+
+<p>The common difference is</p>
+
+$$
+d=\frac{1}{12}-\frac{1}{15}
+=\frac{5-4}{60}
+=\frac{1}{60}
+$$
+
+<p>Also,</p>
+
+$$
+n=11
+$$
+
+<p>Use the formula</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+\begin{aligned}
+S_{11}
+&=\frac{11}{2}\left[2\left(\frac{1}{15}\right)+10\left(\frac{1}{60}\right)\right]\\[4pt]
+&=\frac{11}{2}\left[\frac{2}{15}+\frac{1}{6}\right]\\[4pt]
+&=\frac{11}{2}\left[\frac{4+5}{30}\right]\\[4pt]
+&=\frac{11}{2}\times\frac{9}{30}\\[4pt]
+&=\frac{99}{60}\\[4pt]
+&=\frac{33}{20}
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{\frac{33}{20}}
+$$
+
+<hr>
+
+<h3>Question 2 (i)</h3>
+
+<p><strong>Find the sum:</strong></p>
+
+$$
+7+10\frac12+14+\cdots+84
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given series is an Arithmetic Progression.</p>
+
+<p>Here,</p>
+
+$$
+a=7,\qquad d=10\frac12-7=3\frac12=\frac72,\qquad l=84
+$$
+
+<hr>
+
+<p><strong>Step 1: Find the number of terms.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+l=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+84=7+(n-1)\times\frac72
+$$
+
+$$
+77=(n-1)\times\frac72
+$$
+
+$$
+154=7(n-1)
+$$
+
+$$
+22=n-1
+$$
+
+$$
+n=23
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the sum.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}(a+l)
+$$
+
+$$
+S_{23}=\frac{23}{2}(7+84)
+$$
+
+$$
+=\frac{23}{2}\times91
+$$
+
+$$
+=\frac{2093}{2}
+$$
+
+$$
+=1046.5
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{1046.5}
+$$
+
+<hr>
+
+<h3>Question 2 (ii)</h3>
+
+<p><strong>Find the sum:</strong></p>
+
+$$
+34+32+30+\cdots+10
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given series is an Arithmetic Progression.</p>
+
+<p>Here,</p>
+
+$$
+a=34,\qquad d=-2,\qquad l=10
+$$
+
+<hr>
+
+<p><strong>Step 1: Find the number of terms.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+l=a+(n-1)d
+$$
+
+$$
+10=34+(n-1)(-2)
+$$
+
+$$
+-24=-2(n-1)
+$$
+
+$$
+12=n-1
+$$
+
+$$
+n=13
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the sum.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}(a+l)
+$$
+
+$$
+S_{13}=\frac{13}{2}(34+10)
+$$
+
+$$
+=\frac{13}{2}\times44
+$$
+
+$$
+=13\times22
+$$
+
+$$
+=286
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{286}
+$$
+
+<hr>
+
+<h3>Question 2 (iii)</h3>
+
+<p><strong>Find the sum:</strong></p>
+
+$$
+-5+(-8)+(-11)+\cdots+(-230)
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given series is an Arithmetic Progression.</p>
+
+<p>Here,</p>
+
+$$
+a=-5,\qquad d=-3,\qquad l=-230
+$$
+
+<hr>
+
+<p><strong>Step 1: Find the number of terms.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+l=a+(n-1)d
+$$
+
+$$
+-230=-5+(n-1)(-3)
+$$
+
+$$
+-225=-3(n-1)
+$$
+
+$$
+75=n-1
+$$
+
+$$
+n=76
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the sum.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}(a+l)
+$$
+
+$$
+S_{76}=\frac{76}{2}\left(-5-230\right)
+$$
+
+$$
+=38(-235)
+$$
+
+$$
+=-8930
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{-8930}
+$$
+
+<hr>
+<h3>Question 3 (i)</h3>
+
+<p><strong>Given:</strong></p>
+
+$$
+a=5,\qquad d=3,\qquad a_n=50
+$$
+
+<p>Find <strong>n</strong> and <strong>S_n</strong>.</p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Using the formula for the <strong>n</strong>th term,</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+50=5+(n-1)\times3
+$$
+
+$$
+45=3(n-1)
+$$
+
+$$
+15=n-1
+$$
+
+$$
+n=16
+$$
+
+<hr>
+
+<p>Now, use the formula for the sum of the first <strong>n</strong> terms.</p>
+
+$$
+S_n=\frac{n}{2}(a+l)
+$$
+
+<p>Here,</p>
+
+$$
+n=16,\qquad a=5,\qquad l=50
+$$
+
+$$
+S_{16}=\frac{16}{2}(5+50)
+$$
+
+$$
+=8\times55
+$$
+
+$$
+=440
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{n=16,\qquad S_{16}=440}
+$$
+
+<hr>
+
+<h3>Question 3 (ii)</h3>
+
+<p><strong>Given:</strong></p>
+
+$$
+a=7,\qquad a_{13}=35
+$$
+
+<p>Find <strong>d</strong> and <strong>S_{13}</strong>.</p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Using the formula</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+35=7+(13-1)d
+$$
+
+$$
+35=7+12d
+$$
+
+$$
+28=12d
+$$
+
+$$
+d=\frac{7}{3}
+$$
+
+<hr>
+
+<p>Now find</p>
+
+$$
+S_{13}.
+$$
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}(a+l)
+$$
+
+<p>Here,</p>
+
+$$
+n=13,\qquad a=7,\qquad l=35
+$$
+
+$$
+S_{13}=\frac{13}{2}(7+35)
+$$
+
+$$
+=\frac{13}{2}\times42
+$$
+
+$$
+=13\times21
+$$
+
+$$
+=273
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{d=\frac73,\qquad S_{13}=273}
+$$
+
+<hr>
+
+<h3>Question 3 (iii)</h3>
+
+<p><strong>Given:</strong></p>
+
+$$
+a_{12}=37,\qquad d=3
+$$
+
+<p>Find <strong>a</strong> and <strong>S_{12}</strong>.</p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Using the formula</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+37=a+(12-1)\times3
+$$
+
+$$
+37=a+33
+$$
+
+$$
+a=4
+$$
+
+<hr>
+
+<p>Now find</p>
+
+$$
+S_{12}.
+$$
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}(a+l)
+$$
+
+<p>Here,</p>
+
+$$
+n=12,\qquad a=4,\qquad l=37
+$$
+
+$$
+S_{12}=\frac{12}{2}(4+37)
+$$
+
+$$
+=6\times41
+$$
+
+$$
+=246
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{a=4,\qquad S_{12}=246}
+$$
+
+<hr>
+
+<h3>Question 3 (iv)</h3>
+
+<p><strong>Given:</strong></p>
+
+$$
+a_3=15,\qquad S_{10}=125
+$$
+
+<p>Find <strong>d</strong> and <strong>a_{10}</strong>.</p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Using the formula for the 3rd term,</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<p>we get</p>
+
+$$
+a+2d=15
+\qquad\cdots(1)
+$$
+
+<hr>
+
+<p>Also,</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>For</p>
+
+$$
+n=10,
+$$
+
+$$
+125=\frac{10}{2}\left[2a+9d\right]
+$$
+
+$$
+125=5(2a+9d)
+$$
+
+$$
+2a+9d=25
+\qquad\cdots(2)
+$$
+
+<hr>
+
+<p>Multiply equation (1) by 2.</p>
+
+$$
+2a+4d=30
+\qquad\cdots(3)
+$$
+
+<p>Subtract equation (2) from equation (3).</p>
+
+$$
+(2a+4d)-(2a+9d)=30-25
+$$
+
+$$
+-5d=5
+$$
+
+$$
+d=-1
+$$
+
+<hr>
+
+<p>Substitute</p>
+
+$$
+d=-1
+$$
+
+<p>in equation (1).</p>
+
+$$
+a+2(-1)=15
+$$
+
+$$
+a-2=15
+$$
+
+$$
+a=17
+$$
+
+<hr>
+
+<p>Now find the 10th term.</p>
+
+$$
+a_{10}=a+9d
+$$
+
+$$
+=17+9(-1)
+$$
+
+$$
+=8
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{d=-1,\qquad a_{10}=8}
+$$
+
+<hr>
+
+<h3>Question 3 (v)</h3>
+
+<p><strong>Given:</strong></p>
+
+$$
+d=5,\qquad S_9=75
+$$
+
+<p>Find <strong>a</strong> and <strong>a_9</strong>.</p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+75=\frac{9}{2}\left[2a+8(5)\right]
+$$
+
+$$
+75=\frac92(2a+40)
+$$
+
+<p>Multiply both sides by 2.</p>
+
+$$
+150=9(2a+40)
+$$
+
+$$
+150=18a+360
+$$
+
+$$
+18a=-210
+$$
+
+$$
+a=-\frac{35}{3}
+$$
+
+<hr>
+
+<p>Now find the 9th term.</p>
+
+$$
+a_9=a+8d
+$$
+
+$$
+=-\frac{35}{3}+8(5)
+$$
+
+$$
+=-\frac{35}{3}+40
+$$
+
+$$
+=\frac{85}{3}
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{a=-\frac{35}{3},\qquad a_9=\frac{85}{3}}
+$$
+
+<hr>
+
+<h3>Question 3 (vi)</h3>
+
+<p><strong>Given:</strong></p>
+
+$$
+a=2,\qquad d=8,\qquad S_n=90
+$$
+
+<p>Find <strong>n</strong> and <strong>a_n</strong>.</p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+90=\frac{n}{2}\left[4+8(n-1)\right]
+$$
+
+$$
+180=n(8n-4)
+$$
+
+$$
+45=n(2n-1)
+$$
+
+$$
+2n^2-n-45=0
+$$
+
+<p>Factorising,</p>
+
+$$
+(2n+9)(n-5)=0
+$$
+
+$$
+n=5
+$$
+
+<p>(The value</p>
+
+$$
+n=-\frac92
+$$
+
+<p>is rejected since the number of terms cannot be negative.)</p>
+
+<hr>
+
+<p>Now find the 5th term.</p>
+
+$$
+a_5=a+4d
+$$
+
+$$
+=2+4(8)
+$$
+
+$$
+=34
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{n=5,\qquad a_n=34}
+$$
+
+<hr>
+<h3>Question 3 (vii)</h3>
+
+<p><strong>Given:</strong></p>
+
+$$
+a=8,\qquad a_n=62,\qquad S_n=210
+$$
+
+<p>Find <strong>n</strong> and <strong>d</strong>.</p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Using the formula for the sum of the first <strong>n</strong> terms,</p>
+
+$$
+S_n=\frac{n}{2}(a+l)
+$$
+
+<p>Here,</p>
+
+$$
+a=8,\qquad l=62,\qquad S_n=210
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+210=\frac{n}{2}(8+62)
+$$
+
+$$
+210=\frac{n}{2}(70)
+$$
+
+$$
+210=35n
+$$
+
+$$
+n=6
+$$
+
+<hr>
+
+<p>Now use the formula for the <strong>n</strong>th term.</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+$$
+62=8+(6-1)d
+$$
+
+$$
+62=8+5d
+$$
+
+$$
+54=5d
+$$
+
+$$
+d=\frac{54}{5}
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{n=6,\qquad d=\frac{54}{5}}
+$$
+
+<hr>
+
+<h3>Question 3 (viii)</h3>
+
+<p><strong>Given:</strong></p>
+
+$$
+a_n=4,\qquad d=2,\qquad S_n=-14
+$$
+
+<p>Find <strong>n</strong> and <strong>a</strong>.</p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}(a+l)
+$$
+
+<p>Here,</p>
+
+$$
+l=4,\qquad S_n=-14
+$$
+
+<p>Therefore,</p>
+
+$$
+-14=\frac{n}{2}(a+4)
+\qquad\cdots(1)
+$$
+
+<hr>
+
+<p>Also, using the formula for the <strong>n</strong>th term,</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+4=a+2(n-1)
+$$
+
+$$
+4=a+2n-2
+$$
+
+$$
+a=6-2n
+\qquad\cdots(2)
+$$
+
+<hr>
+
+<p>Substitute equation (2) into equation (1).</p>
+
+$$
+-14=\frac{n}{2}\left[(6-2n)+4\right]
+$$
+
+$$
+-14=\frac{n}{2}(10-2n)
+$$
+
+$$
+-14=n(5-n)
+$$
+
+$$
+n^2-5n-14=0
+$$
+
+<p>Factorising,</p>
+
+$$
+(n-7)(n+2)=0
+$$
+
+$$
+n=7
+$$
+
+<p>(Reject</p>
+
+$$
+n=-2
+$$
+
+<p>since the number of terms cannot be negative.)</p>
+
+<hr>
+
+<p>Now substitute</p>
+
+$$
+n=7
+$$
+
+<p>in equation (2).</p>
+
+$$
+a=6-2(7)
+$$
+
+$$
+a=-8
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+a_7=-8+6(2)=4
+$$
+
+$$
+S_7=\frac72(-8+4)
+=\frac72(-4)
+=-14
+$$
+
+<p>Hence, the values are correct.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{n=7,\qquad a=-8}
+$$
+
+<hr>
+
+<h3>Question 3 (ix)</h3>
+
+<p><strong>Given:</strong></p>
+
+$$
+a=3,\qquad n=8,\qquad S=192
+$$
+
+<p>Find <strong>d</strong>.</p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Using the formula for the sum of the first <strong>n</strong> terms of an AP,</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+192=\frac{8}{2}\left[2(3)+(8-1)d\right]
+$$
+
+$$
+192=4(6+7d)
+$$
+
+$$
+48=6+7d
+$$
+
+$$
+42=7d
+$$
+
+$$
+d=6
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+<p>Using</p>
+
+$$
+a=3,\qquad d=6,\qquad n=8,
+$$
+
+$$
+S_8=\frac{8}{2}\left[2(3)+7(6)\right]
+$$
+
+$$
+=4(6+42)
+$$
+
+$$
+=4\times48
+$$
+
+$$
+=192
+$$
+
+<p>Hence, the value obtained is correct.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{d=6}
+$$
+
+<hr>
+
+<h3>Question 3 (x)</h3>
+
+<p><strong>Given:</strong></p>
+
+$$
+l=28,\qquad S=144,\qquad n=9
+$$
+
+<p>Find the first term <strong>a</strong>.</p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Using the formula for the sum of the first <strong>n</strong> terms,</p>
+
+$$
+S_n=\frac{n}{2}(a+l)
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+144=\frac{9}{2}(a+28)
+$$
+
+<p>Multiply both sides by 2.</p>
+
+$$
+288=9(a+28)
+$$
+
+<p>Divide both sides by 9.</p>
+
+$$
+32=a+28
+$$
+
+$$
+a=4
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+S_9=\frac{9}{2}(4+28)
+$$
+
+$$
+=\frac{9}{2}\times32
+$$
+
+$$
+=9\times16
+$$
+
+$$
+=144
+$$
+
+<p>Hence, the obtained value is correct.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{a=4}
+$$
+
+<hr>
+<h3>Question 4</h3>
+
+<p><strong>How many terms of the AP</strong></p>
+
+$$
+9,\;17,\;25,\;\ldots
+$$
+
+<p><strong>must be taken to give a sum of 636?</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given AP is</p>
+
+$$
+9,\;17,\;25,\;\ldots
+$$
+
+<p>Here,</p>
+
+$$
+a=9,\qquad d=8,\qquad S_n=636
+$$
+
+<hr>
+
+<p>Using the formula for the sum of the first <strong>n</strong> terms,</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+636=\frac{n}{2}\left[2(9)+(n-1)\times8\right]
+$$
+
+$$
+636=\frac{n}{2}(18+8n-8)
+$$
+
+$$
+636=\frac{n}{2}(8n+10)
+$$
+
+$$
+1272=n(8n+10)
+$$
+
+$$
+4n^2+5n-636=0
+$$
+
+<p>Factorising,</p>
+
+$$
+(4n+53)(n-12)=0
+$$
+
+$$
+n=12
+$$
+
+<p>The value</p>
+
+$$
+n=-\frac{53}{4}
+$$
+
+<p>is rejected since the number of terms cannot be negative.</p>
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+S_{12}=\frac{12}{2}\left[18+11(8)\right]
+$$
+
+$$
+=6(18+88)
+$$
+
+$$
+=6\times106
+$$
+
+$$
+=636
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{12}
+$$
+
+<hr>
+
+<h3>Question 5</h3>
+
+<p><strong>The first term of an AP is 5, the last term is 45 and the sum is 400. Find the number of terms and the common difference.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Given,</p>
+
+$$
+a=5,\qquad l=45,\qquad S_n=400
+$$
+
+<hr>
+
+<p><strong>Step 1: Find the number of terms.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}(a+l)
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+400=\frac{n}{2}(5+45)
+$$
+
+$$
+400=\frac{n}{2}(50)
+$$
+
+$$
+400=25n
+$$
+
+$$
+n=16
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the common difference.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+l=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+45=5+(16-1)d
+$$
+
+$$
+45=5+15d
+$$
+
+$$
+40=15d
+$$
+
+$$
+d=\frac{40}{15}
+$$
+
+$$
+d=\frac{8}{3}
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+45=5+15\left(\frac83\right)
+$$
+
+$$
+45=5+40
+$$
+
+$$
+45=45
+$$
+
+<p>Hence, the values obtained are correct.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{n=16,\qquad d=\frac83}
+$$
+
+<hr>
+<h3>Question 6</h3>
+
+<p><strong>The first and the last terms of an AP are 17 and 350 respectively. If the common difference is 9, how many terms are there and what is their sum?</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Given,</p>
+
+$$
+a=17,\qquad l=350,\qquad d=9
+$$
+
+<hr>
+
+<p><strong>Step 1: Find the number of terms.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+l=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+350=17+(n-1)\times9
+$$
+
+$$
+333=9(n-1)
+$$
+
+$$
+37=n-1
+$$
+
+$$
+n=38
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the sum of all terms.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}(a+l)
+$$
+
+<p>Substitute the values.</p>
+
+$$
+S_{38}=\frac{38}{2}(17+350)
+$$
+
+$$
+=19\times367
+$$
+
+$$
+=6973
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+17+37\times9=350
+$$
+
+<p>Hence, the number of terms is correct.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{n=38,\qquad S_{38}=6973}
+$$
+
+<hr>
+
+<h3>Question 7</h3>
+
+<p><strong>Find the sum of the first 22 terms of an AP in which</strong></p>
+
+$$
+d=7
+$$
+
+<p><strong>and the 22nd term is</strong></p>
+
+$$
+149.
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Given,</p>
+
+$$
+d=7,\qquad a_{22}=149
+$$
+
+<hr>
+
+<p><strong>Step 1: Find the first term.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+149=a+(22-1)\times7
+$$
+
+$$
+149=a+147
+$$
+
+$$
+a=2
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the sum of the first 22 terms.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}(a+l)
+$$
+
+<p>Here,</p>
+
+$$
+n=22,\qquad a=2,\qquad l=149
+$$
+
+$$
+S_{22}=\frac{22}{2}(2+149)
+$$
+
+$$
+=11\times151
+$$
+
+$$
+=1661
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+2+21\times7=149
+$$
+
+<p>Hence, the obtained values are correct.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{S_{22}=1661}
+$$
+
+<hr>
+<h3>Question 8</h3>
+
+<p><strong>Find the sum of the first 51 terms of an AP whose second and third terms are 14 and 18 respectively.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Let the first term be</p>
+
+$$
+a
+$$
+
+<p>and the common difference be</p>
+
+$$
+d.
+$$
+
+<hr>
+
+<p><strong>Step 1: Form the equations.</strong></p>
+
+<p>The second term is 14.</p>
+
+$$
+a+d=14
+\qquad\cdots(1)
+$$
+
+<p>The third term is 18.</p>
+
+$$
+a+2d=18
+\qquad\cdots(2)
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the common difference.</strong></p>
+
+<p>Subtract equation (1) from equation (2).</p>
+
+$$
+(a+2d)-(a+d)=18-14
+$$
+
+$$
+d=4
+$$
+
+<hr>
+
+<p><strong>Step 3: Find the first term.</strong></p>
+
+<p>Substitute</p>
+
+$$
+d=4
+$$
+
+<p>in equation (1).</p>
+
+$$
+a+4=14
+$$
+
+$$
+a=10
+$$
+
+<hr>
+
+<p><strong>Step 4: Find the sum of the first 51 terms.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+\begin{aligned}
+S_{51}
+&=\frac{51}{2}\left[2(10)+(51-1)(4)\right]\\[4pt]
+&=\frac{51}{2}(20+200)\\[4pt]
+&=\frac{51}{2}\times220\\[4pt]
+&=51\times110\\[4pt]
+&=5610
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{S_{51}=5610}
+$$
+
+<hr>
+
+<h3>Question 9</h3>
+
+<p><strong>If the sum of the first 7 terms of an AP is 49 and that of the first 17 terms is 289, find the sum of the first <em>n</em> terms.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<hr>
+
+<p><strong>Step 1: Use the given sums.</strong></p>
+
+<p>For the first 7 terms,</p>
+
+$$
+49=\frac{7}{2}\left[2a+6d\right]
+$$
+
+$$
+14=2a+6d
+$$
+
+$$
+a+3d=7
+\qquad\cdots(1)
+$$
+
+<hr>
+
+<p>For the first 17 terms,</p>
+
+$$
+289=\frac{17}{2}\left[2a+16d\right]
+$$
+
+$$
+34=2a+16d
+$$
+
+$$
+a+8d=17
+\qquad\cdots(2)
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the values of <em>a</em> and <em>d</em>.</strong></p>
+
+<p>Subtract equation (1) from equation (2).</p>
+
+$$
+(a+8d)-(a+3d)=17-7
+$$
+
+$$
+5d=10
+$$
+
+$$
+d=2
+$$
+
+<p>Substitute</p>
+
+$$
+d=2
+$$
+
+<p>in equation (1).</p>
+
+$$
+a+3(2)=7
+$$
+
+$$
+a=1
+$$
+
+<hr>
+
+<p><strong>Step 3: Find the sum of the first <em>n</em> terms.</strong></p>
+
+<p>Using</p>
+
+$$
+a=1,\qquad d=2,
+$$
+
+<p>we get</p>
+
+$$
+\begin{aligned}
+S_n
+&=\frac{n}{2}\left[2(1)+(n-1)(2)\right]\\[4pt]
+&=\frac{n}{2}(2+2n-2)\\[4pt]
+&=\frac{n}{2}(2n)\\[4pt]
+&=n^2
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+S_7=7^2=49
+$$
+
+$$
+S_{17}=17^2=289
+$$
+
+<p>Hence, the required formula is correct.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{S_n=n^2}
+$$
+
+<hr>
+<h3>Question 10 (i)</h3>
+
+<p><strong>Show that</strong></p>
+
+$$
+a_n=3+4n
+$$
+
+<p><strong>forms an Arithmetic Progression. Also find the sum of the first 15 terms.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Given,</p>
+
+$$
+a_n=3+4n
+$$
+
+<p>Find the first few terms.</p>
+
+$$
+a_1=3+4(1)=7
+$$
+
+$$
+a_2=3+4(2)=11
+$$
+
+$$
+a_3=3+4(3)=15
+$$
+
+$$
+a_4=3+4(4)=19
+$$
+
+<p>Thus, the sequence is</p>
+
+$$
+7,\;11,\;15,\;19,\;\ldots
+$$
+
+<p>Find the common difference.</p>
+
+$$
+11-7=4
+$$
+
+$$
+15-11=4
+$$
+
+$$
+19-15=4
+$$
+
+<p>Since the common difference is constant, the given sequence is an <strong>Arithmetic Progression</strong>.</p>
+
+<hr>
+
+<p>Here,</p>
+
+$$
+a=7,\qquad d=4,\qquad n=15
+$$
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+\begin{aligned}
+S_{15}
+&=\frac{15}{2}\left[2(7)+(15-1)(4)\right]\\[4pt]
+&=\frac{15}{2}(14+56)\\[4pt]
+&=\frac{15}{2}\times70\\[4pt]
+&=15\times35\\[4pt]
+&=525
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>The given sequence is an <strong>Arithmetic Progression</strong> with</p>
+
+$$
+\boxed{d=4}
+$$
+
+<p>and</p>
+
+$$
+\boxed{S_{15}=525.}
+$$
+
+<hr>
+
+<h3>Question 10 (ii)</h3>
+
+<p><strong>Show that</strong></p>
+
+$$
+a_n=9-5n
+$$
+
+<p><strong>forms an Arithmetic Progression. Also find the sum of the first 15 terms.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Given,</p>
+
+$$
+a_n=9-5n
+$$
+
+<p>Find the first few terms.</p>
+
+$$
+a_1=9-5(1)=4
+$$
+
+$$
+a_2=9-5(2)=-1
+$$
+
+$$
+a_3=9-5(3)=-6
+$$
+
+$$
+a_4=9-5(4)=-11
+$$
+
+<p>Thus, the sequence is</p>
+
+$$
+4,\;-1,\;-6,\;-11,\;\ldots
+$$
+
+<p>Find the common difference.</p>
+
+$$
+-1-4=-5
+$$
+
+$$
+-6-(-1)=-5
+$$
+
+$$
+-11-(-6)=-5
+$$
+
+<p>Since the common difference is constant, the given sequence is an <strong>Arithmetic Progression</strong>.</p>
+
+<hr>
+
+<p>Here,</p>
+
+$$
+a=4,\qquad d=-5,\qquad n=15
+$$
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+\begin{aligned}
+S_{15}
+&=\frac{15}{2}\left[2(4)+(15-1)(-5)\right]\\[4pt]
+&=\frac{15}{2}(8-70)\\[4pt]
+&=\frac{15}{2}(-62)\\[4pt]
+&=15(-31)\\[4pt]
+&=-465
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>The given sequence is an <strong>Arithmetic Progression</strong> with</p>
+
+$$
+\boxed{d=-5}
+$$
+
+<p>and</p>
+
+$$
+\boxed{S_{15}=-465.}
+$$
+
+<hr>
+
+<h3>Question 11</h3>
+
+<p><strong>A sum of ₹700 is to be used to give seven cash prizes to students of a school for their overall academic performance. If each prize is ₹20 less than the preceding prize, find the value of each of the prizes.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Let the first prize be</p>
+
+$$
+a.
+$$
+
+<p>Since each prize is ₹20 less than the previous prize, the common difference is</p>
+
+$$
+d=-20.
+$$
+
+<p>The number of prizes is</p>
+
+$$
+n=7.
+$$
+
+<p>The total amount distributed is</p>
+
+$$
+S_7=700.
+$$
+
+<hr>
+
+<p>Using the formula for the sum of the first <strong>n</strong> terms of an AP,</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+700=\frac{7}{2}\left[2a+(7-1)(-20)\right]
+$$
+
+$$
+700=\frac{7}{2}(2a-120)
+$$
+
+<p>Multiply both sides by 2.</p>
+
+$$
+1400=7(2a-120)
+$$
+
+<p>Divide both sides by 7.</p>
+
+$$
+200=2a-120
+$$
+
+$$
+2a=320
+$$
+
+$$
+a=160
+$$
+
+<hr>
+
+<p>Now find the remaining prizes.</p>
+
+<p>Second prize:</p>
+
+$$
+160-20=140
+$$
+
+<p>Third prize:</p>
+
+$$
+140-20=120
+$$
+
+<p>Fourth prize:</p>
+
+$$
+120-20=100
+$$
+
+<p>Fifth prize:</p>
+
+$$
+100-20=80
+$$
+
+<p>Sixth prize:</p>
+
+$$
+80-20=60
+$$
+
+<p>Seventh prize:</p>
+
+$$
+60-20=40
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+160+140+120+100+80+60+40
+$$
+
+$$
+=700
+$$
+
+<p>Hence, the prizes are correct.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{₹160,\;₹140,\;₹120,\;₹100,\;₹80,\;₹60,\;₹40}
+$$
+
+<hr>
+<h3>Question 12</h3>
+
+<p><strong>Find the sum of the first 40 positive integers divisible by 6.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The positive integers divisible by 6 are</p>
+
+$$
+6,\;12,\;18,\;24,\;\ldots
+$$
+
+<p>This is an Arithmetic Progression with</p>
+
+$$
+a=6,\qquad d=6,\qquad n=40.
+$$
+
+<hr>
+
+<p>Using the formula for the sum of the first <strong>n</strong> terms of an AP,</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+\begin{aligned}
+S_{40}
+&=\frac{40}{2}\left[2(6)+(40-1)(6)\right]\\[4pt]
+&=20(12+234)\\[4pt]
+&=20(246)\\[4pt]
+&=4920
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+<p>The 40th term is</p>
+
+$$
+a_{40}=6+(40-1)\times6
+$$
+
+$$
+=6+234
+$$
+
+$$
+=240.
+$$
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}(a+l),
+$$
+
+$$
+S_{40}=\frac{40}{2}(6+240)
+$$
+
+$$
+=20\times246
+$$
+
+$$
+=4920.
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{4920}
+$$
+
+<hr>
+
+<h3>Question 13</h3>
+
+<p><strong>Find the sum of the first 15 multiples of 8.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The first 15 multiples of 8 are</p>
+
+$$
+8,\;16,\;24,\;32,\;\ldots
+$$
+
+<p>This is an Arithmetic Progression with</p>
+
+$$
+a=8,\qquad d=8,\qquad n=15.
+$$
+
+<hr>
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+\begin{aligned}
+S_{15}
+&=\frac{15}{2}\left[2(8)+(15-1)(8)\right]\\[4pt]
+&=\frac{15}{2}(16+112)\\[4pt]
+&=\frac{15}{2}(128)\\[4pt]
+&=15\times64\\[4pt]
+&=960
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+<p>The 15th term is</p>
+
+$$
+a_{15}=8+(15-1)\times8
+$$
+
+$$
+=8+112
+$$
+
+$$
+=120.
+$$
+
+<p>Using</p>
+
+$$
+S_n=\frac{n}{2}(a+l),
+$$
+
+$$
+S_{15}=\frac{15}{2}(8+120)
+$$
+
+$$
+=\frac{15}{2}\times128
+$$
+
+$$
+=960.
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{960}
+$$
+
+<hr>
+
+<h3>Question 14</h3>
+
+<p><strong>Find the sum of the odd numbers between 0 and 50.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The odd numbers between 0 and 50 are</p>
+
+$$
+1,\;3,\;5,\;7,\;\ldots,\;49.
+$$
+
+<p>This is an Arithmetic Progression with</p>
+
+$$
+a=1,\qquad d=2,\qquad l=49.
+$$
+
+<hr>
+
+<p><strong>Step 1: Find the number of terms.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+l=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+49=1+(n-1)\times2
+$$
+
+$$
+48=2(n-1)
+$$
+
+$$
+24=n-1
+$$
+
+$$
+n=25
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the sum.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}(a+l)
+$$
+
+$$
+S_{25}=\frac{25}{2}(1+49)
+$$
+
+$$
+=\frac{25}{2}\times50
+$$
+
+$$
+=25\times25
+$$
+
+$$
+=625
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{625}
+$$
+
+<hr>
+
+<h3>Question 15</h3>
+
+<p><strong>A contract on a construction job specifies a penalty for delay of completion beyond a certain date as follows:</strong></p>
+
+<p>₹200 for the first day, ₹250 for the second day, ₹300 for the third day, and so on. The penalty for each succeeding day is ₹50 more than for the preceding day.</p>
+
+<p><strong>How much money does the contractor have to pay as penalty, if the work is delayed by 30 days?</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The daily penalties form an Arithmetic Progression.</p>
+
+<p>Here,</p>
+
+$$
+a=200,\qquad d=50,\qquad n=30.
+$$
+
+<hr>
+
+<p>Using the formula for the sum of the first <strong>n</strong> terms,</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+\begin{aligned}
+S_{30}
+&=\frac{30}{2}\left[2(200)+(30-1)(50)\right]\\[4pt]
+&=15\left[400+1450\right]\\[4pt]
+&=15(1850)\\[4pt]
+&=27750
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+<p>The penalty on the 30th day is</p>
+
+$$
+a_{30}=200+29(50)
+$$
+
+$$
+=1650.
+$$
+
+<p>Using</p>
+
+$$
+S_n=\frac{n}{2}(a+l),
+$$
+
+$$
+S_{30}=\frac{30}{2}(200+1650)
+$$
+
+$$
+=15\times1850
+$$
+
+$$
+=27750.
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{\text{The contractor has to pay }₹27,\!750\text{ as penalty.}}
+$$
+
+<hr>
+
+<h3>Question 16</h3>
+
+<p><strong>A sum of ₹700 is to be used to give seven cash prizes to students of a school for their overall academic performance. If each prize is ₹20 less than its preceding prize, find the value of each of the prizes.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Let the first prize be</p>
+
+$$
+a.
+$$
+
+<p>Since each prize is ₹20 less than the previous prize,</p>
+
+$$
+d=-20.
+$$
+
+<p>The number of prizes is</p>
+
+$$
+n=7.
+$$
+
+<p>The total amount distributed is</p>
+
+$$
+S_7=700.
+$$
+
+<hr>
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+700=\frac{7}{2}\left[2a+(7-1)(-20)\right]
+$$
+
+$$
+700=\frac{7}{2}(2a-120)
+$$
+
+<p>Multiply both sides by 2.</p>
+
+$$
+1400=7(2a-120)
+$$
+
+<p>Divide both sides by 7.</p>
+
+$$
+200=2a-120
+$$
+
+$$
+2a=320
+$$
+
+$$
+a=160
+$$
+
+<hr>
+
+<p>Now find the remaining prizes.</p>
+
+<p>First prize:</p>
+
+$$
+₹160
+$$
+
+<p>Second prize:</p>
+
+$$
+160-20=₹140
+$$
+
+<p>Third prize:</p>
+
+$$
+140-20=₹120
+$$
+
+<p>Fourth prize:</p>
+
+$$
+120-20=₹100
+$$
+
+<p>Fifth prize:</p>
+
+$$
+100-20=₹80
+$$
+
+<p>Sixth prize:</p>
+
+$$
+80-20=₹60
+$$
+
+<p>Seventh prize:</p>
+
+$$
+60-20=₹40
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+160+140+120+100+80+60+40=700
+$$
+
+<p>Hence, the prizes are correct.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{₹160,\;₹140,\;₹120,\;₹100,\;₹80,\;₹60,\;₹40}
+$$
+
+<hr>
+
+<h3>Question 17</h3>
+
+<p><strong>In a school, students thought of planting trees in and around the school to reduce air pollution. It was decided that the number of trees that each section of each class will plant will be the same as the class in which they are studying. For example, a section of Class I will plant 1 tree, a section of Class II will plant 2 trees and so on up to Class XII. There are three sections of each class. How many trees will be planted by the students?</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The number of trees planted by one section of each class forms the sequence</p>
+
+$$
+1,\;2,\;3,\;\ldots,\;12.
+$$
+
+<p>This is an Arithmetic Progression with</p>
+
+$$
+a=1,\qquad d=1,\qquad n=12.
+$$
+
+<hr>
+
+<p><strong>Step 1: Find the total number of trees planted by one section of each class.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}(a+l)
+$$
+
+<p>Here,</p>
+
+$$
+l=12.
+$$
+
+$$
+S_{12}=\frac{12}{2}(1+12)
+$$
+
+$$
+=6\times13
+$$
+
+$$
+=78
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the total number of trees planted by all sections.</strong></p>
+
+<p>There are three sections in each class.</p>
+
+$$
+\text{Total trees}=3\times78
+$$
+
+$$
+=234
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{234}
+$$
+
+<p>Therefore, the students will plant <strong>234 trees</strong>.</p>
+
+<hr>
+<h3>Question 18</h3>
+
+<p><strong>A spiral is made up of successive semicircles, with centres alternately at A and B, starting with centre at A, of radii 0.5 cm, 1.0 cm, 1.5 cm, 2.0 cm, … as shown in Fig. 5.4. What is the total length of such a spiral made up of thirteen consecutive semicircles? (Take</strong></p>
+
+$$
+\pi=\frac{22}{7}
+$$
+
+<p><strong>)</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The length of a semicircle of radius <strong>r</strong> is</p>
+
+$$
+\pi r.
+$$
+
+<p>The radii of the thirteen semicircles are</p>
+
+$$
+0.5,\;1,\;1.5,\;2,\;\ldots
+$$
+
+<p>These radii form an Arithmetic Progression with</p>
+
+$$
+a=0.5,\qquad d=0.5,\qquad n=13.
+$$
+
+<hr>
+
+<p><strong>Step 1: Find the sum of the radii.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+\begin{aligned}
+S_{13}
+&=\frac{13}{2}\left[2(0.5)+(13-1)(0.5)\right]\\[4pt]
+&=\frac{13}{2}(1+6)\\[4pt]
+&=\frac{13}{2}\times7\\[4pt]
+&=\frac{91}{2}\\[4pt]
+&=45.5
+\end{aligned}
+$$
+
+<p>Hence, the sum of the radii is</p>
+
+$$
+45.5\text{ cm.}
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the total length of the spiral.</strong></p>
+
+<p>Total length</p>
+
+$$
+=\pi\times(\text{sum of the radii})
+$$
+
+$$
+=\frac{22}{7}\times45.5
+$$
+
+<p>Since</p>
+
+$$
+45.5=\frac{91}{2},
+$$
+
+$$
+=\frac{22}{7}\times\frac{91}{2}
+$$
+
+$$
+=\frac{22\times13}{2}
+$$
+
+$$
+=11\times13
+$$
+
+$$
+=143
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{143\text{ cm}}
+$$
+
+<p>Therefore, the total length of the spiral made up of thirteen consecutive semicircles is <strong>143 cm</strong>.</p>
+
+<hr>
+<h3>Question 19</h3>
+
+<p><strong>200 logs are stacked in the following manner: 20 logs in the bottom row, 19 in the next row, 18 in the row next to it and so on. In how many rows are the 200 logs placed and how many logs are in the top row?</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The number of logs in each row forms an Arithmetic Progression.</p>
+
+$$
+20,\;19,\;18,\;\ldots
+$$
+
+<p>Here,</p>
+
+$$
+a=20,\qquad d=-1,\qquad S_n=200.
+$$
+
+<hr>
+
+<p><strong>Step 1: Find the number of rows.</strong></p>
+
+<p>Using the formula for the sum of the first <strong>n</strong> terms,</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+200=\frac{n}{2}\left[2(20)+(n-1)(-1)\right]
+$$
+
+$$
+200=\frac{n}{2}(40-n+1)
+$$
+
+$$
+200=\frac{n}{2}(41-n)
+$$
+
+<p>Multiply both sides by 2.</p>
+
+$$
+400=n(41-n)
+$$
+
+$$
+n^2-41n+400=0
+$$
+
+<p>Factorising,</p>
+
+$$
+(n-16)(n-25)=0
+$$
+
+$$
+n=16
+\quad\text{or}\quad
+n=25
+$$
+
+<hr>
+
+<p>Since the number of logs in the last row cannot be zero or negative, check both values.</p>
+
+<p>For</p>
+
+$$
+n=25,
+$$
+
+<p>the last row contains</p>
+
+$$
+a_{25}=20+(25-1)(-1)
+$$
+
+$$
+=20-24
+$$
+
+$$
+=-4,
+$$
+
+<p>which is not possible.</p>
+
+<p>Therefore,</p>
+
+$$
+n=16.
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the number of logs in the top row.</strong></p>
+
+<p>Using the formula for the last term,</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+$$
+a_{16}=20+(16-1)(-1)
+$$
+
+$$
+=20-15
+$$
+
+$$
+=5.
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+<p>The rows are</p>
+
+$$
+20,\;19,\;18,\;\ldots,\;5.
+$$
+
+<p>Their sum is</p>
+
+$$
+S_{16}
+=\frac{16}{2}(20+5)
+$$
+
+$$
+=8\times25
+$$
+
+$$
+=200.
+$$
+
+<p>Hence, the obtained values are correct.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>Number of rows:</p>
+
+$$
+\boxed{16}
+$$
+
+<p>Number of logs in the top row:</p>
+
+$$
+\boxed{5}
+$$
+
+<hr>
+<h3>Question 20</h3>
+
+<p><strong>In a potato race, a bucket is placed at the starting point, which is 5 m from the first potato, and the other potatoes are placed 3 m apart in a straight line. There are ten potatoes in the line. A competitor starts from the bucket, picks up each potato one by one, returns to the bucket after picking each potato, and repeats this until all the potatoes are collected. What is the total distance the competitor has to run?</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The distances of the potatoes from the bucket are</p>
+
+$$
+5,\;8,\;11,\;14,\;17,\;20,\;23,\;26,\;29,\;32\text{ m.}
+$$
+
+<p>These distances form an Arithmetic Progression with</p>
+
+$$
+a=5,\qquad d=3,\qquad n=10.
+$$
+
+<hr>
+
+<p><strong>Step 1: Find the sum of the distances from the bucket to all potatoes.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+S_n=\frac{n}{2}\left[2a+(n-1)d\right]
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+\begin{aligned}
+S_{10}
+&=\frac{10}{2}\left[2(5)+(10-1)(3)\right]\\[4pt]
+&=5(10+27)\\[4pt]
+&=5\times37\\[4pt]
+&=185\text{ m}
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the total distance run.</strong></p>
+
+<p>For each potato, the competitor runs to the potato and returns to the bucket.</p>
+
+<p>Therefore, the total distance is</p>
+
+$$
+2\times185
+$$
+
+$$
+=370\text{ m}
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+<p>The total distance can also be written as</p>
+
+$$
+2(5+8+11+14+17+20+23+26+29+32)
+$$
+
+$$
+=2(185)
+$$
+
+$$
+=370\text{ m}
+$$
+
+<p>Hence, the answer is correct.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{370\text{ m}}
+$$
+
+<hr>
+    
 
     </div>
 
@@ -530,5 +3354,15 @@ th,td{border:1px solid #ccc;padding:8px}
     </main>
     <!-- ━━━ FOOTER ━━━ -->
  <div id="footer"></div>  
+
+ <script>
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$",  right: "$",  inline: true  }
+      ]
+    });
+  </script>
+
   </body>
 </html>

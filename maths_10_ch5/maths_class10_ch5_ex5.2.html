@@ -8,6 +8,13 @@
 <link rel="stylesheet" href="../assets/styles.css">
 <script src="../loader.js"></script>
 <script src="../config.js"></script>
+
+<!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+
+
 <style>
 
 
@@ -23,6 +30,16 @@
 table{border-collapse:collapse;width:100%;margin:15px 0}
 th,td{border:1px solid #ccc;padding:8px}
 
+/* KATEX display */
+
+.katex-display {
+    text-align: left !important;
+    margin: 12px 0;
+}
+
+.katex-display > .katex {
+    text-align: left !important;
+}
 
 
 </style>
@@ -42,639 +59,2742 @@ th,td{border:1px solid #ccc;padding:8px}
        
 <h1>EXERCISE 5.2</h1>
 <hr>
-  <h3>1. Fill in the blanks in the following table, given that <i>a</i> is the first term, <i>d</i> the common difference and <i>a</i><sub><i>n</i></sub> the <i>n</i>th term of the AP:</h3>
+  
+<h3>Question 1 (i)</h3>
 
-    <table border="1" cellpadding="8" cellspacing="0">
-        <thead>
-            <tr>
-                <th></th>
-                <th><i>a</i></th>
-                <th><i>d</i></th>
-                <th><i>n</i></th>
-                <th><i>a</i><sub><i>n</i></sub></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>(i)</strong></td>
-                <td>7</td>
-                <td>3</td>
-                <td>8</td>
-                <td><strong>28</strong></td>
-            </tr>
-            <tr>
-                <td><strong>(ii)</strong></td>
-                <td>&minus;18</td>
-                <td><strong>2</strong></td>
-                <td>10</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td><strong>(iii)</strong></td>
-                <td><strong>46</strong></td>
-                <td>&minus;3</td>
-                <td>18</td>
-                <td>&minus;5</td>
-            </tr>
-            <tr>
-                <td><strong>(iv)</strong></td>
-                <td>&minus;18.9</td>
-                <td>2.5</td>
-                <td><strong>10</strong></td>
-                <td>3.6</td>
-            </tr>
-            <tr>
-                <td><strong>(v)</strong></td>
-                <td>3.5</td>
-                <td>0</td>
-                <td>105</td>
-                <td><strong>3.5</strong></td>
-            </tr>
-        </tbody>
-    </table>
+<p><strong>Fill in the blanks in the following table, given that <em>a</em> is the first term, <em>d</em> the common difference and <em>a<sub>n</sub></em> the <em>n</em>th term of the AP.</strong></p>
 
-    <h3>Solutions:</h3>
+<p><strong>Given:</strong></p>
 
-    <p>The general formula for the <i>n</i>th term of an Arithmetic Progression is given by:</p>
-    <p><i>a</i><sub><i>n</i></sub> = <i>a</i> + (<i>n</i> &minus; 1)<i>d</i></p>
+$$
+a=7,\qquad d=3,\qquad n=8
+$$
 
-    <!-- (i) -->
-    <section>
-        <p><strong>(i) Given: <i>a</i> = 7, <i>d</i> = 3, <i>n</i> = 8</strong></p>
-        <p>We need to find <i>a</i><sub><i>n</i></sub>.</p>
-        <p>Substituting the values into the formula:</p>
-        <p><i>a</i><sub>8</i></sub> = 7 + (8 &minus; 1) &times; 3</p>
-        <p><i>a</i><sub>8</i></sub> = 7 + 7 &times; 3</p>
-        <p><i>a</i><sub>8</i></sub> = 7 + 21</p>
-        <p><i>a</i><sub>8</i></sub> = 28</p>
-        <p>Hence, the blank value for <i>a</i><sub><i>n</i></sub> is 28.</p>
-    </section>
+<hr>
 
-    <hr>
+<p><strong>Solution:</strong></p>
 
-    <!-- (ii) -->
-    <section>
-        <p><strong>(ii) Given: <i>a</i> = &minus;18, <i>n</i> = 10, <i>a</i><sub><i>n</i></sub> = 0</strong></p>
-        <p>We need to find <i>d</i>.</p>
-        <p>Substituting the values into the formula:</p>
-        <p>0 = &minus;18 + (10 &minus; 1) &times; <i>d</i></p>
-        <p>0 = &minus;18 + 9<i>d</i></p>
-        <p>18 = 9<i>d</i></p>
-        <p><i>d</i> = 18 / 9</p>
-        <p><i>d</i> = 2</p>
-        <p>Hence, the blank value for <i>d</i> is 2.</p>
-    </section>
+<p>Use the formula for the <strong>n</strong>th term of an AP:</p>
 
-    <hr>
+$$
+a_n=a+(n-1)d
+$$
 
-    <!-- (iii) -->
-    <section>
-        <p><strong>(iii) Given: <i>d</i> = &minus;3, <i>n</i> = 18, <i>a</i><sub><i>n</i></sub> = &minus;5</strong></p>
-        <p>We need to find <i>a</i>.</p>
-        <p>Substituting the values into the formula:</p>
-        <p>&minus;5 = <i>a</i> + (18 &minus; 1) &times; (&minus;3)</p>
-        <p>&minus;5 = <i>a</i> + 17 &times; (&minus;3)</p>
-        <p>&minus;5 = <i>a</i> &minus; 51</p>
-        <p><i>a</i> = &minus;5 + 51</p>
-        <p><i>a</i> = 46</p>
-        <p>Hence, the blank value for <i>a</i> is 46.</p>
-    </section>
+<p>Substitute the given values.</p>
 
-    <hr>
+$$
+\begin{aligned}
+a_8
+&=7+(8-1)\times3\\[4pt]
+&=7+7\times3\\[4pt]
+&=7+21\\[4pt]
+&=28
+\end{aligned}
+$$
 
-    <!-- (iv) -->
-    <section>
-        <p><strong>(iv) Given: <i>a</i> = &minus;18.9, <i>d</i> = 2.5, <i>a</i><sub><i>n</i></sub> = 3.6</strong></p>
-        <p>We need to find <i>n</i>.</p>
-        <p>Substituting the values into the formula:</p>
-        <p>3.6 = &minus;18.9 + (<i>n</i> &minus; 1) &times; 2.5</p>
-        <p>3.6 + 18.9 = (<i>n</i> &minus; 1) &times; 2.5</p>
-        <p>22.5 = (<i>n</i> &minus; 1) &times; 2.5</p>
-        <p><i>n</i> &minus; 1 = 22.5 / 2.5</p>
-        <p><i>n</i> &minus; 1 = 9</p>
-        <p><i>n</i> = 9 + 1</p>
-        <p><i>n</i> = 10</p>
-        <p>Hence, the blank value for <i>n</i> is 10.</p>
-    </section>
+<hr>
 
-    <hr>
+<p><strong>Answer:</strong></p>
 
-    <!-- (v) -->
-    <section>
-        <p><strong>(v) Given: <i>a</i> = 3.5, <i>d</i> = 0, <i>n</i> = 105</strong></p>
-        <p>We need to find <i>a</i><sub><i>n</i></sub>.</p>
-        <p>Substituting the values into the formula:</p>
-        <p><i>a</i><sub>105</i></sub> = 3.5 + (105 &minus; 1) &times; 0</p>
-        <p><i>a</i><sub>105</i></sub> = 3.5 + 104 &times; 0</p>
-        <p><i>a</i><sub>105</i></sub> = 3.5 + 0</p>
-        <p><i>a</i><sub>105</i></sub> = 3.5</p>
-        <p>Hence, the blank value for <i>a</i><sub><i>n</i></sub> is 3.5.</p>
+$$
+\boxed{a_8=28}
+$$
 
-            <h2>2. Choose the correct choice in the following and justify:</h2>
+<hr>
 
-    <section>
-        <p><strong>(i) 30th term of the AP: 10, 7, 4, ..., is</strong></p>
-        <p>
-            Correct Choice: 
-            <input type="text" size="5" value="(C) -77" readonly>
-        </p>
-        <p><strong>Justification:</strong></p>
-        <p>Given Arithmetic Progression is 10, 7, 4, ...</p>
-        <p>First term, <i>a</i> = 10</p>
-        <p>Common difference, <i>d</i> = 7 &minus; 10 = &minus;3</p>
-        <p>Number of terms, <i>n</i> = 30</p>
-        <p>Using the formula <i>a</i><sub><i>n</i></sub> = <i>a</i> + (<i>n</i> &minus; 1)<i>d</i>:</p>
-        <p><i>a</i><sub>30</sub> = 10 + (30 &minus; 1)(&minus;3)</p>
-        <p><i>a</i><sub>30</sub> = 10 + 29(&minus;3)</p>
-        <p><i>a</i><sub>30</sub> = 10 &minus; 87</p>
-        <p><i>a</i><sub>30</sub> = &minus;77</p>
-    </section>
+<h3>Question 1 (ii)</h3>
 
-    <hr>
+<p><strong>Given:</strong></p>
 
-    <section>
-        <p><strong>(ii) 11th term of the AP: &minus;3, &minus;1/2, 2, ..., is</strong></p>
-        <p>
-            Correct Choice: 
-            <input type="text" size="5" value="(B) 22" readonly>
-        </p>
-        <p><strong>Justification:</strong></p>
-        <p>Given Arithmetic Progression is &minus;3, &minus;1/2, 2, ...</p>
-        <p>First term, <i>a</i> = &minus;3</p>
-        <p>Common difference, <i>d</i> = &minus;1/2 &minus; (&minus;3) = &minus;1/2 + 3 = 5/2</p>
-        <p>Number of terms, <i>n</i> = 11</p>
-        <p>Using the formula <i>a</i><sub><i>n</i></sub> = <i>a</i> + (<i>n</i> &minus; 1)<i>d</i>:</p>
-        <p><i>a</i><sub>11</sub> = &minus;3 + (11 &minus; 1)(5/2)</p>
-        <p><i>a</i><sub>11</sub> = &minus;3 + 10(5/2)</p>
-        <p><i>a</i><sub>11</sub> = &minus;3 + 25</p>
-        <p><i>a</i><sub>11</sub> = 22</p>
-    </section>
+$$
+a=-18,\qquad n=10,\qquad a_{10}=0
+$$
 
-    <hr>
+<p>Find the common difference <strong>d</strong>.</p>
 
-    <h2>3. In the following APs, find the missing terms in the boxes:</h2>
+<hr>
 
-    <section>
-        <p><strong>(i) 2, <input type="text" size="3" value="14" readonly>, 26</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Here, the first term is <i>a</i> = 2 and the third term is <i>a</i><sub>3</sub> = 26.</p>
-        <p>We know that <i>a</i><sub>3</sub> = <i>a</i> + 2<i>d</i></p>
-        <p>26 = 2 + 2<i>d</i></p>
-        <p>24 = 2<i>d</i></p>
-        <p><i>d</i> = 12</p>
-        <p>The missing second term is <i>a</i> + <i>d</i> = 2 + 12 = 14.</p>
-    </section>
+<p><strong>Solution:</strong></p>
 
-    <hr>
+<p>Use the formula</p>
 
-    <section>
-        <p><strong>(ii) <input type="text" size="3" value="18" readonly>, 13, <input type="text" size="3" value="8" readonly>, 3</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Here, the second term is <i>a</i><sub>2</sub> = 13 and the fourth term is <i>a</i><sub>4</sub> = 3.</p>
-        <p><i>a</i> + <i>d</i> = 13 &nbsp;&nbsp;&nbsp;&nbsp;&mdash; (1)</p>
-        <p><i>a</i> + 3<i>d</i> = 3 &nbsp;&nbsp;&nbsp;&nbsp;&mdash; (2)</p>
-        <p>Subtracting equation (1) from equation (2):</p>
-        <p>(<i>a</i> + 3<i>d</i>) &minus; (<i>a</i> + <i>d</i>) = 3 &minus; 13</p>
-        <p>2<i>d</i> = &minus;10</p>
-        <p><i>d</i> = &minus;5</p>
-        <p>Substituting <i>d</i> = &minus;5 into equation (1):</p>
-        <p><i>a</i> + (&minus;5) = 13</p>
-        <p><i>a</i> = 18</p>
-        <p>The third term is <i>a</i><sub>3</sub> = <i>a</i> + 2<i>d</i> = 18 + 2(&minus;5) = 8.</p>
-    </section>
+$$
+a_n=a+(n-1)d
+$$
 
-    <hr>
+<p>Substitute the given values.</p>
 
-    <section>
-        <p><strong>(iii) 5, <input type="text" size="3" value="6.5" readonly>, <input type="text" size="3" value="8" readonly>, 9<sup>1</sup>/<sub>2</sub></strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Here, the first term is <i>a</i> = 5 and the fourth term is <i>a</i><sub>4</sub> = 9<sup>1</sup>/<sub>2</sub> = 19/2.</p>
-        <p>We know that <i>a</i><sub>4</sub> = <i>a</i> + 3<i>d</i></p>
-        <p>19/2 = 5 + 3<i>d</i></p>
-        <p>19/2 &minus; 5 = 3<i>d</i></p>
-        <p>9/2 = 3<i>d</i></p>
-        <p><i>d</i> = 3/2 = 1.5</p>
-        <p>The second term is <i>a</i> + <i>d</i> = 5 + 1.5 = 6.5 (or 6<sup>1</sup>/<sub>2</sub>).</p>
-        <p>The third term is <i>a</i> + 2<i>d</i> = 5 + 2(1.5) = 8.</p>
-    </section>
+$$
+0=-18+(10-1)d
+$$
 
-    <hr>
+$$
+0=-18+9d
+$$
 
-    <section>
-        <p><strong>(iv) &minus;4, <input type="text" size="3" value="-2" readonly>, <input type="text" size="3" value="0" readonly>, <input type="text" size="3" value="2" readonly>, <input type="text" size="3" value="4" readonly>, 6</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Here, the first term is <i>a</i> = &minus;4 and the sixth term is <i>a</i><sub>6</sub> = 6.</p>
-        <p>We know that <i>a</i><sub>6</sub> = <i>a</i> + 5<i>d</i></p>
-        <p>6 = &minus;4 + 5<i>d</i></p>
-        <p>10 = 5<i>d</i></p>
-        <p><i>d</i> = 2</p>
-        <p>The missing terms are calculated sequentially by adding <i>d</i> = 2:</p>
-        <p>Second term = &minus;4 + 2 = &minus;2</p>
-        <p>Third term = &minus;2 + 2 = 0</p>
-        <p>Fourth term = 0 + 2 = 2</p>
-        <p>Fifth term = 2 + 2 = 4</p>
-    </section>
+$$
+9d=18
+$$
 
-    <hr>
+$$
+d=2
+$$
 
-    <section>
-        <p><strong>(v) <input type="text" size="3" value="53" readonly>, 38, <input type="text" size="3" value="23" readonly>, <input type="text" size="3" value="8" readonly>, <input type="text" size="3" value="-7" readonly>, &minus;22</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Here, the second term is <i>a</i><sub>2</sub> = 38 and the sixth term is <i>a</i><sub>6</sub> = &minus;22.</p>
-        <p><i>a</i> + <i>d</i> = 38 &nbsp;&nbsp;&nbsp;&nbsp;&mdash; (1)</p>
-        <p><i>a</i> + 5<i>d</i> = &minus;22 &nbsp;&nbsp;&nbsp;&nbsp;&mdash; (2)</p>
-        <p>Subtracting equation (1) from equation (2):</p>
-        <p>(<i>a</i> + 5<i>d</i>) &minus; (<i>a</i> + <i>d</i>) = &minus;22 &minus; 38</p>
-        <p>4<i>d</i> = &minus;60</p>
-        <p><i>d</i> = &minus;15</p>
-        <p>Substituting <i>d</i> = &minus;15 into equation (1):</p>
-        <p><i>a</i> + (&minus;15) = 38</p>
-        <p><i>a</i> = 53</p>
-        <p>The remaining missing terms are:</p>
-        <p>Third term = 38 + (&minus;15) = 23</p>
-        <p>Fourth term = 23 + (&minus;15) = 8</p>
-        <p>Fifth term = 8 + (&minus;15) = &minus;7</p>
-    </section>
+<hr>
 
-    <hr>
+<p><strong>Answer:</strong></p>
 
-    <h2>4. Which term of the AP : 3, 8, 13, 18, . . . ,is 78?</h2>
+$$
+\boxed{d=2}
+$$
 
-    <section>
-        <p><strong>Solution:</strong></p>
-        <p>Given Arithmetic Progression is 3, 8, 13, 18, ...</p>
-        <p>First term, <i>a</i> = 3</p>
-        <p>Common difference, <i>d</i> = 8 &minus; 3 = 5</p>
-        <p>Let the <i>n</i>th term be 78, so <i>a</i><sub><i>n</i></sub> = 78.</p>
-        <p>Using the general term formula:</p>
-        <p><i>a</i><sub><i>n</i></sub> = <i>a</i> + (<i>n</i> &minus; 1)<i>d</i></p>
-        <p>78 = 3 + (<i>n</i> &minus; 1)5</p>
-        <p>78 &minus; 3 = (<i>n</i> &minus; 1)5</p>
-        <p>75 = (<i>n</i> &minus; 1)5</p>
-        <p><i>n</i> &minus; 1 = 75 / 5</p>
-        <p><i>n</i> &minus; 1 = 15</p>
-        <p><i>n</i> = 16</p>
-        <p>Hence, 78 is the <input type="text" size="4" value="16th" readonly> term of the given AP.</p>
-    </section>
+<hr>
 
-    <hr>
+<h3>Question 1 (iii)</h3>
 
-    <h2>5. Find the number of terms in each of the following APs :</h2>
+<p><strong>Given:</strong></p>
 
-    <section>
-        <p><strong>(i) 7, 13, 19, . . . , 205</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Given AP is 7, 13, 19, ..., 205</p>
-        <p>First term, <i>a</i> = 7</p>
-        <p>Common difference, <i>d</i> = 13 &minus; 7 = 6</p>
-        <p>Last term, <i>a</i><sub><i>n</i></sub> = 205</p>
-        <p>Using the formula:</p>
-        <p>205 = 7 + (<i>n</i> &minus; 1)6</p>
-        <p>205 &minus; 7 = (<i>n</i> &minus; 1)6</p>
-        <p>198 = (<i>n</i> &minus; 1)6</p>
-        <p><i>n</i> &minus; 1 = 198 / 6</p>
-        <p><i>n</i> &minus; 1 = 33</p>
-        <p><i>n</i> = 34</p>
-        <p>Hence, the number of terms in this AP is <input type="text" size="3" value="34" readonly>.</p>
-    </section>
+$$
+d=-3,\qquad n=18,\qquad a_{18}=-5
+$$
 
-    <hr>
+<p>Find the first term <strong>a</strong>.</p>
 
-    <section>
-        <p><strong>(ii) 18, 15<sup>1</sup>/<sub>2</sub>, 13, . . . , &minus;47</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Given AP is 18, 15<sup>1</sup>/<sub>2</sub>, 13, ..., &minus;47</p>
-        <p>First term, <i>a</i> = 18</p>
-        <p>Common difference, <i>d</i> = 15.5 &minus; 18 = &minus;2.5 = &minus;5/2</p>
-        <p>Last term, <i>a</i><sub><i>n</i></sub> = &minus;47</p>
-        <p>Using the formula:</p>
-        <p>&minus;47 = 18 + (<i>n</i> &minus; 1)(&minus;5/2)</p>
-        <p>&minus;47 &minus; 18 = (<i>n</i> &minus; 1)(&minus;5/2)</p>
-        <p>&minus;65 = (<i>n</i> &minus; 1)(&minus;5/2)</p>
-        <p>Multiplying both sides by &minus;2/5:</p>
-        <p>(&minus;65) &times; (&minus;2/5) = <i>n</i> &minus; 1</p>
-        <p>13 &times; 2 = <i>n</i> &minus; 1</p>
-        <p>26 = <i>n</i> &minus; 1</p>
-        <p><i>n</i> = 27</p>
-        <p>Hence, the number of terms in this AP is <input type="text" size="3" value="27" readonly>.</p>
-    
-        <p><strong>6. Check whether &minus;150 is a term of the AP : 11, 8, 5, 2 . . .</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>For the given AP 11, 8, 5, 2, ..., the first term is <i>a</i> = 11 and the common difference is <i>d</i> = 8 &minus; 11 = &minus;3.</p>
-        <p>Let &minus;150 be the <i>n</i>th term of this AP. Therefore, <i>a</i><sub><i>n</i></sub> = &minus;150.</p>
-        <p>We know that <i>a</i><sub><i>n</i></sub> = <i>a</i> + (<i>n</i> &minus; 1)<i>d</i></p>
-        <p>&minus;150 = 11 + (<i>n</i> &minus; 1)(&minus;3)</p>
-        <p>&minus;150 &minus; 11 = &minus;3(<i>n</i> &minus; 1)</p>
-        <p>&minus;161 = &minus;3(<i>n</i> &minus; 1)</p>
-        <p><i>n</i> &minus; 1 = 161 / 3</p>
-        <p><i>n</i> = 161 / 3 + 1</p>
-        <p><i>n</i> = 164 / 3</p>
-        <p>Since <i>n</i> must be a positive integer, and 164 / 3 is a fraction, our assumption is wrong. Hence, &minus;150 is not a term of the given AP.</p>
-    </section>
+<hr>
 
-    <hr>
+<p><strong>Solution:</strong></p>
 
-    <!-- Question 7 -->
-    <section>
-        <p><strong>7. Find the 31st term of an AP whose 11th term is 38 and the 16th term is 73.</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the first term of the AP be <i>a</i> and its common difference be <i>d</i>.</p>
-        <p>According to the given conditions:</p>
-        <p><i>a</i><sub>11</sub> = <i>a</i> + 10<i>d</i> = 38 &nbsp;&nbsp;&nbsp;&nbsp;&mdash; (1)</p>
-        <p><i>a</i><sub>16</sub> = <i>a</i> + 15<i>d</i> = 73 &nbsp;&nbsp;&nbsp;&nbsp;&mdash; (2)</p>
-        <p>Subtracting equation (1) from equation (2), we get:</p>
-        <p>(<i>a</i> + 15<i>d</i>) &minus; (<i>a</i> + 10<i>d</i>) = 73 &minus; 38</p>
-        <p>5<i>d</i> = 35</p>
-        <p><i>d</i> = 7</p>
-        <p>Substituting the value of <i>d</i> into equation (1):</p>
-        <p><i>a</i> + 10(7) = 38</p>
-        <p><i>a</i> + 70 = 38</p>
-        <p><i>a</i> = 38 &minus; 70</p>
-        <p><i>a</i> = &minus;32</p>
-        <p>Now, finding the 31st term:</p>
-        <p><i>a</i><sub>31</sub> = <i>a</i> + 30<i>d</i></p>
-        <p><i>a</i><sub>31</sub> = &minus;32 + 30(7)</p>
-        <p><i>a</i><sub>31</sub> = &minus;32 + 210</p>
-        <p><i>a</i><sub>31</sub> = 178</p>
-        <p>Hence, the 31st term of the AP is 178.</p>
-    </section>
+<p>Use the formula for the <strong>n</strong>th term of an AP:</p>
 
-    <hr>
+$$
+a_n=a+(n-1)d
+$$
 
-    <!-- Question 8 -->
-    <section>
-        <p><strong>8. An AP consists of 50 terms of which 3rd term is 12 and the last term is 106. Find the 29th term.</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the first term be <i>a</i> and the common difference be <i>d</i>.</p>
-        <p>Given that the number of terms is 50, the last term is the 50th term, so <i>a</i><sub>50</sub> = 106.</p>
-        <p>The 3rd term is given as 12, so <i>a</i><sub>3</sub> = 12.</p>
-        <p>Writing the linear representations:</p>
-        <p><i>a</i> + 2<i>d</i> = 12 &nbsp;&nbsp;&nbsp;&nbsp;&mdash; (1)</p>
-        <p><i>a</i> + 49<i>d</i> = 106 &nbsp;&nbsp;&nbsp;&nbsp;&mdash; (2)</p>
-        <p>Subtracting equation (1) from equation (2):</p>
-        <p>47<i>d</i> = 94</p>
-        <p><i>d</i> = 2</p>
-        <p>Substituting the value of <i>d</i> into equation (1):</p>
-        <p><i>a</i> + 2(2) = 12</p>
-        <p><i>a</i> + 4 = 12</p>
-        <p><i>a</i> = 8</p>
-        <p>Now, finding the 29th term:</p>
-        <p><i>a</i><sub>29</sub> = <i>a</i> + 28<i>d</i></p>
-        <p><i>a</i><sub>29</sub> = 8 + 28(2)</p>
-        <p><i>a</i><sub>29</sub> = 8 + 56</p>
-        <p><i>a</i><sub>29</sub> = 64</p>
-        <p>Hence, the 29th term of the AP is 64.</p>
-    </section>
+<p>Substitute the given values.</p>
 
-    <hr>
+$$
+-5=a+(18-1)(-3)
+$$
 
-    <!-- Question 9 -->
-    <section>
-        <p><strong>9. If the 3rd and the 9th terms of an AP are 4 and &minus;8 respectively, which term of this AP is zero?</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the first term be <i>a</i> and the common difference be <i>d</i>.</p>
-        <p>We are given <i>a</i><sub>3</sub> = 4 and <i>a</i><sub>9</sub> = &minus;8.</p>
-        <p><i>a</i> + 2<i>d</i> = 4 &nbsp;&nbsp;&nbsp;&nbsp;&mdash; (1)</p>
-        <p><i>a</i> + 8<i>d</i> = &minus;8 &nbsp;&nbsp;&nbsp;&nbsp;&mdash; (2)</p>
-        <p>Subtracting equation (1) from equation (2):</p>
-        <p>6<i>d</i> = &minus;12</p>
-        <p><i>d</i> = &minus;2</p>
-        <p>Substituting the value of <i>d</i> into equation (1):</p>
-        <p><i>a</i> + 2(&minus;2) = 4</p>
-        <p><i>a</i> &minus; 4 = 4</p>
-        <p><i>a</i> = 8</p>
-        <p>Let the <i>n</i>th term of this AP be zero, so <i>a</i><sub><i>n</i></sub> = 0.</p>
-        <p><i>a</i> + (<i>n</i> &minus; 1)<i>d</i> = 0</p>
-        <p>8 + (<i>n</i> &minus; 1)(&minus;2) = 0</p>
-        <p>&minus;2(<i>n</i> &minus; 1) = &minus;8</p>
-        <p><i>n</i> &minus; 1 = 4</p>
-        <p><i>n</i> = 5</p>
-        <p>Hence, the 5th term of the given AP is zero.</p>
-    </section>
+$$
+-5=a+17(-3)
+$$
 
-    <hr>
+$$
+-5=a-51
+$$
 
-    <!-- Question 10 -->
-    <section>
-        <p><strong>10. The 17th term of an AP exceeds its 10th term by 7. Find the common difference.</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the first term of the AP be <i>a</i> and its common difference be <i>d</i>.</p>
-        <p>We know that <i>a</i><sub>17</sub> = <i>a</i> + 16<i>d</i> and <i>a</i><sub>10</sub> = <i>a</i> + 9<i>d</i>.</p>
-        <p>According to the given condition:</p>
-        <p><i>a</i><sub>17</sub> &minus; <i>a</i><sub>10</sub> = 7</p>
-        <p>(<i>a</i> + 16<i>d</i>) &minus; (<i>a</i> + 9<i>d</i>) = 7</p>
-        <p>16<i>d</i> &minus; 9<i>d</i> = 7</p>
-        <p>7<i>d</i> = 7</p>
-        <p><i>d</i> = 1</p>
-        <p>Hence, the common difference of the AP is 1.</p>
-    </section>
+<p>Add 51 to both sides.</p>
 
-    <hr>
+$$
+a=-5+51
+$$
 
-    <!-- Question 11 -->
-    <section>
-        <p><strong>11. Which term of the AP : 3, 15, 27, 39, . . . will be 132 more than its 54th term?</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>For the given AP 3, 15, 27, 39, ..., the first term is <i>a</i> = 3 and the common difference is <i>d</i> = 15 &minus; 3 = 12.</p>
-        <p>Let the required term be the <i>n</i>th term. Therefore, according to the question:</p>
-        <p><i>a</i><sub><i>n</i></sub> = <i>a</i><sub>54</sub> + 132</p>
-        <p><i>a</i> + (<i>n</i> &minus; 1)<i>d</i> = [<i>a</i> + 53<i>d</i>] + 132</p>
-        <p>Subtracting <i>a</i> from both sides:</p>
-        <p>(<i>n</i> &minus; 1)12 = 53(12) + 132</p>
-        <p>(<i>n</i> &minus; 1)12 = 636 + 132</p>
-        <p>(<i>n</i> &minus; 1)12 = 768</p>
-        <p><i>n</i> &minus; 1 = 768 / 12</p>
-        <p><i>n</i> &minus; 1 = 64</p>
-        <p><i>n</i> = 65</p>
-        <p>Hence, the 65th term will be 132 more than its 54th term.</p>
-    </section>
+$$
+a=46
+$$
 
-    <hr>
+<hr>
 
-    <!-- Question 12 -->
-    <section>
-        <p><strong>12. Two APs have the same common difference. The difference between their 100th terms is 100, what is the difference between their 1000th terms?</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the first term of the first AP be <i>a</i><sub>1</sub> and that of the second AP be <i>a</i><sub>2</sub>. Let their identical common difference be <i>d</i>.</p>
-        <p>The 100th term of the first AP is <i>a</i><sub>1</sub> + 99<i>d</i> and the 100th term of the second AP is <i>a</i><sub>2</sub> + 99<i>d</i>.</p>
-        <p>The difference between their 100th terms is given as 100:</p>
-        <p>(<i>a</i><sub>1</sub> + 99<i>d</i>) &minus; (<i>a</i><sub>2</sub> + 99<i>d</i>) = 100</p>
-        <p><i>a</i><sub>1</sub> &minus; <i>a</i><sub>2</sub> = 100 &nbsp;&nbsp;&nbsp;&nbsp;&mdash; (1)</p>
-        <p>Now, let us find the difference between their 1000th terms:</p>
-        <p>Difference = (<i>a</i><sub>1</sub> + 999<i>d</i>) &minus; (<i>a</i><sub>2</sub> + 999<i>d</i>)</p>
-        <p>Difference = <i>a</i><sub>1</sub> &minus; <i>a</i><sub>2</sub></p>
-        <p>From equation (1), we know that <i>a</i><sub>1</sub> &minus; <i>a</i><sub>2</sub> = 100.</p>
-        <p>Hence, the difference between their 1000th terms is also 100.</p>
-    </section>
+<p><strong>Answer:</strong></p>
 
-    <hr>
+$$
+\boxed{a=46}
+$$
 
-    <!-- Question 13 -->
-    <section>
-        <p><strong>13. How many three-digit numbers are divisible by 7?</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>The smallest three-digit number divisible by 7 is 105, and the next numbers are 112, 119, and so on. The largest three-digit number divisible by 7 is 994.</p>
-        <p>This sequence forms an AP: 105, 112, 119, ..., 994.</p>
-        <p>Here, the first term is <i>a</i> = 105, the common difference is <i>d</i> = 7, and the last term is <i>a</i><sub><i>n</i></sub> = 994.</p>
-        <p>Using the general term formula:</p>
-        <p><i>a</i><sub><i>n</i></sub> = <i>a</i> + (<i>n</i> &minus; 1)<i>d</i></p>
-        <p>994 = 105 + (<i>n</i> &minus; 1)7</p>
-        <p>994 &minus; 105 = 7(<i>n</i> &minus; 1)</p>
-        <p>889 = 7(<i>n</i> &minus; 1)</p>
-        <p><i>n</i> &minus; 1 = 889 / 7</p>
-        <p><i>n</i> &minus; 1 = 127</p>
-        <p><i>n</i> = 128</p>
-        <p>Hence, there are 128 three-digit numbers divisible by 7.</p>
-    </section>
+<hr>
 
-    <hr>
+<h3>Question 1 (iv)</h3>
 
-    <!-- Question 14 -->
-    <section>
-        <p><strong>14. How many multiples of 4 lie between 10 and 250?</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>The smallest multiple of 4 greater than 10 is 12, and the largest multiple less than 250 is 248.</p>
-        <p>The sequence of multiples is given by the AP: 12, 16, 20, ..., 248.</p>
-        <p>Here, the first term is <i>a</i> = 12, the common difference is <i>d</i> = 4, and the last term is <i>a</i><sub><i>n</i></sub> = 248.</p>
-        <p>Using the general term formula:</p>
-        <p><i>a</i><sub><i>n</i></sub> = <i>a</i> + (<i>n</i> &minus; 1)<i>d</i></p>
-        <p>248 = 12 + (<i>n</i> &minus; 1)4</p>
-        <p>248 &minus; 12 = 4(<i>n</i> &minus; 1)</p>
-        <p> 236 = 4(n − 1)n − 1 = 236 / 4n − 1 = 59n = 60Hence, there are 60 multiples of 4 that lie between 10 and 250.</p>
+<p><strong>Given:</strong></p>
 
-        <p><strong>15. For what value of <i>n</i>, are the <i>n</i>th terms of two APs: 63, 65, 67, . . . and 3, 10, 17, . . . equal?</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>For the first arithmetic progression 63, 65, 67, ..., the first term is <i>a</i> = 63 and the common difference is <i>d</i> = 65 &minus; 63 = 2.</p>
-        <p>The <i>n</i>th term of this first progression is given by the formula:</p>
-        <p><i>a</i><sub><i>n</i></sub> = 63 + (<i>n</i> &minus; 1)2</p>
-        <p>For the second arithmetic progression 3, 10, 17, ..., the first term is <i>A</i> = 3 and the common difference is <i>D</i> = 10 &minus; 3 = 7.</p>
-        <p>The <i>n</i>th term of this second progression is given by the formula:</p>
-        <p><i>A</i><sub><i>n</i></sub> = 3 + (<i>n</i> &minus; 1)7</p>
-        <p>According to the given condition, their respective <i>n</i>th terms are equal to each other:</p>
-        <p>63 + (<i>n</i> &minus; 1)2 = 3 + (<i>n</i> &minus; 1)7</p>
-        <p>63 &minus; 3 = 7(<i>n</i> &minus; 1) &minus; 2(<i>n</i> &minus; 1)</p>
-        <p>60 = 5(<i>n</i> &minus; 1)</p>
-        <p><i>n</i> &minus; 1 = 60 / 5</p>
-        <p><i>n</i> &minus; 1 = 12</p>
-        <p><i>n</i> = 13</p>
-        <p>Hence, the 13th terms of both the given arithmetic progressions are equal.</p>
-    </section>
+$$
+a=-18.9,\qquad d=2.5,\qquad a_n=3.6
+$$
 
-    <hr>
+<p>Find the value of <strong>n</strong>.</p>
 
-    <!-- Question 16 -->
-    <section>
-        <p><strong>16. Determine the AP whose third term is 16 and the 7th term exceeds the 5th term by 12.</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the first term of the required progression be <i>a</i> and its common difference be <i>d</i>.</p>
-        <p>Given that the third term is 16, we can write our first linear relationship:</p>
-        <p><i>a</i><sub>3</sub> = <i>a</i> + 2<i>d</i> = 16 &nbsp;&nbsp;&nbsp;&nbsp;&mdash; (1)</p>
-        <p>We are also told that the 7th term exceeds the 5th term by a value of 12:</p>
-        <p><i>a</i><sub>7</sub> &minus; <i>a</i><sub>5</sub> = 12</p>
-        <p>(<i>a</i> + 6<i>d</i>) &minus; (<i>a</i> + 4<i>d</i>) = 12</p>
-        <p>6<i>d</i> &minus; 4<i>d</i> = 12</p>
-        <p>2<i>d</i> = 12</p>
-        <p><i>d</i> = 6</p>
-        <p>Substituting this value of the common difference <i>d</i> = 6 back into equation (1):</p>
-        <p><i>a</i> + 2(6) = 16</p>
-        <p><i>a</i> + 12 = 16</p>
-        <p><i>a</i> = 16 &minus; 12</p>
-        <p><i>a</i> = 4</p>
-        <p>The sequence terms are determined sequentially by adding the common difference to the first term:</p>
-        <p>First term = 4</p>
-        <p>Second term = 4 + 6 = 10</p>
-        <p>Third term = 10 + 6 = 16</p>
-        <p>Fourth term = 16 + 6 = 22</p>
-        <p>Hence, the required Arithmetic Progression is 4, 10, 16, 22, ...</p>
-    <p><strong>17. Find the 20th term from the last term of the AP : 3, 8, 13, . . . , 253.</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>For the given AP 3, 8, 13, ..., 253, the first term is <i>a</i> = 3, the common difference is <i>d</i> = 8 &minus; 3 = 5, and the last term is <i>l</i> = 253.</p>
-        <p>To find the <i>n</i>th term from the last term, we use the formula: <i>l</i> &minus; (<i>n</i> &minus; 1)<i>d</i>.</p>
-        <p>Here, we need to find the 20th term from the end, so <i>n</i> = 20.</p>
-        <p>Substituting the values into our formula:</p>
-        <p>20th term from the last term = 253 &minus; (20 &minus; 1) &times; 5</p>
-        <p>20th term from the last term = 253 &minus; 19 &times; 5</p>
-        <p>20th term from the last term = 253 &minus; 95</p>
-        <p>20th term from the last term = 158</p>
-        <p>Hence, the 20th term from the last term of the given AP is 158.</p>
-    </section>
+<hr>
 
-    <hr>
+<p><strong>Solution:</strong></p>
 
-    <!-- Question 18 -->
-    <section>
-        <p><strong>18. The sum of the 4th and 8th terms of an AP is 24 and the sum of the 6th and 10th terms is 44. Find the first three terms of the AP.</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the first term of the AP be <i>a</i> and its common difference be <i>d</i>.</p>
-        <p>According to the first condition, the sum of the 4th and 8th terms is 24:</p>
-        <p><i>a</i><sub>4</sub> + <i>a</i><sub>8</sub> = 24</p>
-        <p>(<i>a</i> + 3<i>d</i>) + (<i>a</i> + 7<i>d</i>) = 24</p>
-        <p>2<i>a</i> + 10<i>d</i> = 24</p>
-        <p>Dividing the equation by 2, we get:</p>
-        <p><i>a</i> + 5<i>d</i> = 12 &nbsp;&nbsp;&nbsp;&nbsp;&mdash; (1)</p>
-        <p>According to the second condition, the sum of the 6th and 10th terms is 44:</p>
-        <p><i>a</i><sub>6</sub> + <i>a</i><sub>10</sub> = 44</p>
-        <p>(<i>a</i> + 5<i>d</i>) + (<i>a</i> + 9<i>d</i>) = 44</p>
-        <p>2<i>a</i> + 14<i>d</i> = 44</p>
-        <p>Dividing the equation by 2, we get:</p>
-        <p><i>a</i> + 7<i>d</i> = 22 &nbsp;&nbsp;&nbsp;&nbsp;&mdash; (2)</p>
-        <p>Subtracting equation (1) from equation (2):</p>
-        <p>(<i>a</i> + 7<i>d</i>) &minus; (<i>a</i> + 5<i>d</i>) = 22 &minus; 12</p>
-        <p>2<i>d</i> = 10</p>
-        <p><i>d</i> = 5</p>
-        <p>Substituting <i>d</i> = 5 into equation (1):</p>
-        <p><i>a</i> + 5(5) = 12</p>
-        <p><i>a</i> + 25 = 12</p>
-        <p><i>a</i> = 12 &minus; 25</p>
-        <p><i>a</i> = &minus;13</p>
-        <p>The first three terms are determined sequentially by adding the common difference:</p>
-        <p>First term, <i>a</i><sub>1</sub> = &minus;13</p>
-        <p>Second term, <i>a</i><sub>2</sub> = &minus;13 + 5 = &minus;8</p>
-        <p>Third term, <i>a</i><sub>3</sub> = &minus;8 + 5 = &minus;3</p>
-        <p>Hence, the first three terms of the AP are &minus;13, &minus;8, and &minus;3.</p>
-    </section>
+<p>Use the formula</p>
 
-    <hr>
+$$
+a_n=a+(n-1)d
+$$
 
-    <!-- Question 19 -->
-    <section>
-        <p><strong>19. Subba Rao started work in 1995 at an annual salary of ₹ 5000 and received an increment of ₹ 200 each year. In which year did his income reach ₹ 7000?</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>The annual salary received by Subba Rao in subsequent years forms an Arithmetic Progression: 5000, 5200, 5400, ..., 7000.</p>
-        <p>Here, the first term is <i>a</i> = 5000, the common difference is <i>d</i> = 200, and the <i>n</i>th term representing the target salary is <i>a</i><sub><i>n</i></sub> = 7000.</p>
-        <p>Using the general term formula <i>a</i><sub><i>n</i></sub> = <i>a</i> + (<i>n</i> &minus; 1)<i>d</i>:</p>
-        <p>7000 = 5000 + (<i>n</i> &minus; 1) &times; 200</p>
-        <p>7000 &minus; 5000 = 200(<i>n</i> &minus; 1)</p>
-        <p>2000 = 200(<i>n</i> &minus; 1)</p>
-        <p><i>n</i> &minus; 1 = 2000 / 200</p>
-        <p><i>n</i> &minus; 1 = 10</p>
-        <p><i>n</i> = 11</p>
-        <p>Therefore, it takes 11 years for his salary to reach ₹ 7000.</p>
-        <p>The corresponding calendar year is calculated as: 1995 + (11 &minus; 1) = 1995 + 10 = 2005.</p>
-        <p>Hence, Subba Rao's income reached ₹ 7000 in the year 2005.</p>
-    </section>
+<p>Substitute the given values.</p>
 
-    <hr>
+$$
+3.6=-18.9+(n-1)(2.5)
+$$
 
-    <!-- Question 20 -->
-    <section>
-        <p><strong>20. Ramkali saved ₹ 5 in the first week of a year and then increased her weekly savings by ₹ 1.75. If in the <i>n</i>th week, her weekly savings become ₹ 20.75, find <i>n</i>.</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>The weekly savings accumulated by Ramkali form an Arithmetic Progression where the first term is <i>a</i> = 5 and the common weekly increment is <i>d</i> = 1.75.</p>
-        <p>Given that her savings in the <i>n</i>th week become ₹ 20.75, we have <i>a</i><sub><i>n</i></sub> = 20.75.</p>
-        <p>Using the general term formula <i>a</i><sub><i>n</i></sub> = <i>a</i> + (<i>n</i> &minus; 1)<i>d</i>:</p>
-        <p>20.75 = 5 + (<i>n</i> &minus; 1) &times; 1.75</p>
-        <p>20.75 &minus; 5 = (<i>n</i> &minus; 1) &times; 1.75</p>
-        <p>15.75 = (<i>n</i> &minus; 1) &times; 1.75</p>
-        <p><i>n</i> &minus; 1 = 15.75 / 1.75</p>
-        <p><i>n</i> &minus; 1 = 1575 / 175</p>
-        <p><i>n</i> &minus; 1 = 9</p>
-        <p><i>n</i> = 9 + 1</p>
-        <p><i>n</i> = 10</p>
-        <p>Hence, the value of <i>n</i> is 10.</p>
+<p>Add 18.9 to both sides.</p>
+
+$$
+3.6+18.9=(n-1)(2.5)
+$$
+
+$$
+22.5=2.5(n-1)
+$$
+
+<p>Divide both sides by 2.5.</p>
+
+$$
+\frac{22.5}{2.5}=n-1
+$$
+
+$$
+9=n-1
+$$
+
+$$
+n=10
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{n=10}
+$$
+
+<hr>
+<h3>Question 1 (v)</h3>
+
+<p><strong>Given:</strong></p>
+
+$$
+a=3.5,\qquad d=0,\qquad n=105
+$$
+
+<p>Find the value of <strong>a<sub>105</sub></strong>.</p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Use the formula for the <strong>n</strong>th term of an AP:</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+\begin{aligned}
+a_{105}
+&=3.5+(105-1)\times0\\[4pt]
+&=3.5+104\times0\\[4pt]
+&=3.5+0\\[4pt]
+&=3.5
+\end{aligned}
+$$
+
+<p>Since the common difference is</p>
+
+$$
+d=0,
+$$
+
+<p>all the terms of the AP are equal to the first term.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{a_{105}=3.5}
+$$
+
+<hr>
+
+<h3>Question 2 (i)</h3>
+
+<p><strong>Choose the correct choice in the following and justify:</strong></p>
+
+<p><strong>(i) 30th term of the AP:</strong></p>
+
+$$
+10,\;7,\;4,\;\ldots
+$$
+
+<p>Options:</p>
+
+<p>
+(A) 97 &nbsp;&nbsp;
+(B) 77 &nbsp;&nbsp;
+(C) −77 &nbsp;&nbsp;
+(D) −87
+</p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given AP is</p>
+
+$$
+10,\;7,\;4,\;\ldots
+$$
+
+<p>Therefore,</p>
+
+$$
+a=10,\qquad d=7-10=-3
+$$
+
+<p>Using the formula for the <strong>n</strong>th term,</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<p>Substitute</p>
+
+$$
+a=10,\qquad d=-3,\qquad n=30.
+$$
+
+$$
+\begin{aligned}
+a_{30}
+&=10+(30-1)(-3)\\[4pt]
+&=10+29(-3)\\[4pt]
+&=10-87\\[4pt]
+&=-77
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{a_{30}=-77}
+$$
+
+<p><strong>Correct Option:</strong></p>
+
+$$
+\boxed{\textbf{(C) }-77}
+$$
+
+<hr>
+
+<h3>Question 2 (ii)</h3>
+
+<p><strong>(ii) 11th term of the AP:</strong></p>
+
+$$
+-3,\;-\frac12,\;2,\;\ldots
+$$
+
+<p>Options:</p>
+
+<p>
+(A) 28 &nbsp;&nbsp;
+(B) 22 &nbsp;&nbsp;
+(C) −38 &nbsp;&nbsp;
+(D) −48
+</p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given AP is</p>
+
+$$
+-3,\;-\frac12,\;2,\;\ldots
+$$
+
+<p>Therefore,</p>
+
+$$
+a=-3
+$$
+
+<p>The common difference is</p>
+
+$$
+d=-\frac12-(-3)
+$$
+
+$$
+=-\frac12+3
+$$
+
+$$
+=\frac52
+$$
+
+<p>Using the formula</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<p>Substitute</p>
+
+$$
+a=-3,\qquad d=\frac52,\qquad n=11.
+$$
+
+$$
+\begin{aligned}
+a_{11}
+&=-3+(11-1)\times\frac52\\[4pt]
+&=-3+10\times\frac52\\[4pt]
+&=-3+25\\[4pt]
+&=22
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{a_{11}=22}
+$$
+
+<p><strong>Correct Option:</strong></p>
+
+$$
+\boxed{\textbf{(B) }22}
+$$
+
+<hr>
+<h3>Question 3 (i)</h3>
+
+<p><strong>Find the missing term in the following AP:</strong></p>
+
+$$
+2,\;\Box,\;26
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Let the missing term be</p>
+
+$$
+x.
+$$
+
+<p>Since the numbers are in an Arithmetic Progression, the common difference is the same.</p>
+
+$$
+x-2=26-x
+$$
+
+$$
+2x=28
+$$
+
+$$
+x=14
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+14-2=12
+$$
+
+$$
+26-14=12
+$$
+
+<p>The common difference is the same.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{14}
+$$
+
+<hr>
+
+<h3>Question 3 (ii)</h3>
+
+<p><strong>Find the missing terms in the following AP:</strong></p>
+
+$$
+\Box,\;13,\;\Box,\;3
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Let the first term be</p>
+
+$$
+a
+$$
+
+<p>and the common difference be</p>
+
+$$
+d.
+$$
+
+<p>The four terms are</p>
+
+$$
+a,\;a+d,\;a+2d,\;a+3d.
+$$
+
+<p>Given,</p>
+
+$$
+a+d=13
+$$
+
+$$
+a+3d=3
+$$
+
+<p>Subtracting the two equations,</p>
+
+$$
+(a+3d)-(a+d)=3-13
+$$
+
+$$
+2d=-10
+$$
+
+$$
+d=-5
+$$
+
+<p>Now,</p>
+
+$$
+a+d=13
+$$
+
+$$
+a-5=13
+$$
+
+$$
+a=18
+$$
+
+<p>The third term is</p>
+
+$$
+a+2d
+$$
+
+$$
+18+2(-5)
+$$
+
+$$
+18-10
+$$
+
+$$
+=8
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+18,\;13,\;8,\;3
+$$
+
+<p>Common difference:</p>
+
+$$
+13-18=-5
+$$
+
+$$
+8-13=-5
+$$
+
+$$
+3-8=-5
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{18,\;13,\;8,\;3}
+$$
+
+<hr>
+
+<h3>Question 3 (iii)</h3>
+
+<p><strong>Find the missing terms in the following AP:</strong></p>
+
+$$
+5,\;\Box,\;\Box,\;9\frac12
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Let the common difference be</p>
+
+$$
+d.
+$$
+
+<p>Since there are four terms,</p>
+
+$$
+a=5
+$$
+
+$$
+a+3d=9\frac12
+$$
+
+<p>Therefore,</p>
+
+$$
+5+3d=9\frac12
+$$
+
+$$
+3d=9\frac12-5
+$$
+
+$$
+3d=4\frac12
+$$
+
+$$
+3d=\frac92
+$$
+
+$$
+d=\frac32
+$$
+
+<p>Second term:</p>
+
+$$
+5+\frac32
+=
+6\frac12
+$$
+
+<p>Third term:</p>
+
+$$
+6\frac12+\frac32
+=
+8
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+5,\;6\frac12,\;8,\;9\frac12
+$$
+
+<p>Common difference:</p>
+
+$$
+6\frac12-5=\frac32
+$$
+
+$$
+8-6\frac12=\frac32
+$$
+
+$$
+9\frac12-8=\frac32
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{5,\;6\frac12,\;8,\;9\frac12}
+$$
+
+<hr>
+<h3>Question 3 (iv)</h3>
+
+<p><strong>Find the missing terms in the following AP:</strong></p>
+
+$$
+-4,\;\Box,\;\Box,\;\Box,\;\Box,\;6
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>There are six terms in the AP.</p>
+
+<p>Let the common difference be</p>
+
+$$
+d.
+$$
+
+<p>The first term is</p>
+
+$$
+a=-4.
+$$
+
+<p>The sixth term is</p>
+
+$$
+a_6=6.
+$$
+
+<p>Using the formula</p>
+
+$$
+a_n=a+(n-1)d,
+$$
+
+<p>we get</p>
+
+$$
+6=-4+(6-1)d
+$$
+
+$$
+6=-4+5d
+$$
+
+$$
+10=5d
+$$
+
+$$
+d=2
+$$
+
+<hr>
+
+<p>Now find the missing terms.</p>
+
+<p>Second term:</p>
+
+$$
+-4+2=-2
+$$
+
+<p>Third term:</p>
+
+$$
+-2+2=0
+$$
+
+<p>Fourth term:</p>
+
+$$
+0+2=2
+$$
+
+<p>Fifth term:</p>
+
+$$
+2+2=4
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+-4,\;-2,\;0,\;2,\;4,\;6
+$$
+
+<p>Common difference:</p>
+
+$$
+2
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{-4,\;-2,\;0,\;2,\;4,\;6}
+$$
+
+<hr>
+
+<h3>Question 3 (v)</h3>
+
+<p><strong>Find the missing terms in the following AP:</strong></p>
+
+$$
+\Box,\;38,\;\Box,\;\Box,\;\Box,\;-22
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Let the first term be</p>
+
+$$
+a
+$$
+
+<p>and the common difference be</p>
+
+$$
+d.
+$$
+
+<p>The six terms are</p>
+
+$$
+a,\;a+d,\;a+2d,\;a+3d,\;a+4d,\;a+5d.
+$$
+
+<p>Given,</p>
+
+$$
+a+d=38
+$$
+
+$$
+a+5d=-22
+$$
+
+<p>Subtract the first equation from the second.</p>
+
+$$
+(a+5d)-(a+d)=-22-38
+$$
+
+$$
+4d=-60
+$$
+
+$$
+d=-15
+$$
+
+<p>Now,</p>
+
+$$
+a+d=38
+$$
+
+$$
+a-15=38
+$$
+
+$$
+a=53
+$$
+
+<hr>
+
+<p>Hence, the six terms are</p>
+
+$$
+53,\;38,\;23,\;8,\;-7,\;-22
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+<p>Common difference:</p>
+
+$$
+38-53=-15
+$$
+
+$$
+23-38=-15
+$$
+
+$$
+8-23=-15
+$$
+
+$$
+-7-8=-15
+$$
+
+$$
+-22-(-7)=-15
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{53,\;38,\;23,\;8,\;-7,\;-22}
+$$
+
+<hr>
+<h3>Question 4</h3>
+
+<p><strong>Which term of the AP:</strong></p>
+
+$$
+3,\;8,\;13,\;18,\;\ldots
+$$
+
+<p><strong>is 78?</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given AP is</p>
+
+$$
+3,\;8,\;13,\;18,\;\ldots
+$$
+
+<p>Therefore,</p>
+
+$$
+a=3,\qquad d=5
+$$
+
+<p>Let the required term be the <strong>n</strong>th term.</p>
+
+<p>Then,</p>
+
+$$
+a_n=78
+$$
+
+<p>Using the formula for the <strong>n</strong>th term of an AP,</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+78=3+(n-1)\times5
+$$
+
+$$
+78=3+5(n-1)
+$$
+
+$$
+78-3=5(n-1)
+$$
+
+$$
+75=5(n-1)
+$$
+
+$$
+15=n-1
+$$
+
+$$
+n=16
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+\begin{aligned}
+a_{16}
+&=3+(16-1)\times5\\[4pt]
+&=3+15\times5\\[4pt]
+&=3+75\\[4pt]
+&=78
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>78 is the</strong></p>
+
+$$
+\boxed{16^{\text{th}}\text{ term}}
+$$
+
+<p><strong>of the given AP.</strong></p>
+
+<hr>
+
+<h3>Question 5 (i)</h3>
+
+<p><strong>Find the number of terms in the AP:</strong></p>
+
+$$
+7,\;13,\;19,\;\ldots,\;205
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Here,</p>
+
+$$
+a=7,\qquad d=6,\qquad a_n=205
+$$
+
+<p>Using the formula</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+205=7+(n-1)\times6
+$$
+
+$$
+205-7=6(n-1)
+$$
+
+$$
+198=6(n-1)
+$$
+
+$$
+33=n-1
+$$
+
+$$
+n=34
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{34\text{ terms}}
+$$
+
+<hr>
+
+<h3>Question 5 (ii)</h3>
+
+<p><strong>Find the number of terms in the AP:</strong></p>
+
+$$
+18,\;15\frac12,\;13,\;\ldots,\;-47
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Here,</p>
+
+$$
+a=18,\qquad d=15\frac12-18=-2\frac12=-\frac52,
+$$
+
+$$
+a_n=-47.
+$$
+
+<p>Using the formula</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+-47=18+(n-1)\left(-\frac52\right)
+$$
+
+$$
+-65=(n-1)\left(-\frac52\right)
+$$
+
+<p>Multiply both sides by 2.</p>
+
+$$
+-130=-5(n-1)
+$$
+
+$$
+26=n-1
+$$
+
+$$
+n=27
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{27\text{ terms}}
+$$
+
+<hr>
+
+<hr>
+
+<h3>Question 6</h3>
+
+<p><strong>Check whether −150 is a term of the AP:</strong></p>
+
+$$
+11,\;8,\;5,\;2,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given AP is</p>
+
+$$
+11,\;8,\;5,\;2,\;\ldots
+$$
+
+<p>Therefore,</p>
+
+$$
+a=11,\qquad d=-3
+$$
+
+<p>Let <strong>−150</strong> be the <strong>n</strong>th term of the AP.</p>
+
+<p>Using the formula</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+-150=11+(n-1)(-3)
+$$
+
+$$
+-150=11-3(n-1)
+$$
+
+<p>Subtract 11 from both sides.</p>
+
+$$
+-161=-3(n-1)
+$$
+
+<p>Divide both sides by −3.</p>
+
+$$
+n-1=\frac{161}{3}
+$$
+
+$$
+n=\frac{161}{3}+1
+$$
+
+$$
+n=\frac{164}{3}
+$$
+
+<p>Since</p>
+
+$$
+\frac{164}{3}=54\frac23
+$$
+
+<p>which is <strong>not a whole number</strong>, there is no such term in the AP.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>Since the value of <strong>n</strong> is not a positive integer,</p>
+
+$$
+\boxed{-150\text{ is not a term of the given AP.}}
+$$
+
+<hr>
+
+
+<h3>Question 7</h3>
+
+<p><strong>Find the 31st term of an AP whose 11th term is 38 and the 16th term is 73.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Let the first term be</p>
+
+$$
+a
+$$
+
+<p>and the common difference be</p>
+
+$$
+d.
+$$
+
+<p>Using the formula for the <strong>n</strong>th term of an AP,</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<hr>
+
+<p><strong>Step 1: Form the equations.</strong></p>
+
+<p>The 11th term is 38.</p>
+
+$$
+a_{11}=38
+$$
+
+$$
+a+10d=38
+\qquad\cdots(1)
+$$
+
+<p>The 16th term is 73.</p>
+
+$$
+a_{16}=73
+$$
+
+$$
+a+15d=73
+\qquad\cdots(2)
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the common difference.</strong></p>
+
+<p>Subtract equation (1) from equation (2).</p>
+
+$$
+(a+15d)-(a+10d)=73-38
+$$
+
+$$
+5d=35
+$$
+
+$$
+d=7
+$$
+
+<hr>
+
+<p><strong>Step 3: Find the first term.</strong></p>
+
+<p>Substitute</p>
+
+$$
+d=7
+$$
+
+<p>in equation (1).</p>
+
+$$
+a+10(7)=38
+$$
+
+$$
+a+70=38
+$$
+
+$$
+a=-32
+$$
+
+<hr>
+
+<p><strong>Step 4: Find the 31st term.</strong></p>
+
+$$
+a_{31}=a+(31-1)d
+$$
+
+$$
+=-32+30(7)
+$$
+
+$$
+=-32+210
+$$
+
+$$
+=178
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+a_{11}=-32+10(7)=38
+$$
+
+$$
+a_{16}=-32+15(7)=73
+$$
+
+<p>Hence, the values of <strong>a</strong> and <strong>d</strong> are correct.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{a_{31}=178}
+$$
+
+<hr>
+
+<h3>Question 8</h3>
+
+<p><strong>An AP consists of 50 terms of which the 3rd term is 12 and the last term is 106. Find the 29th term.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Let the first term be</p>
+
+$$
+a
+$$
+
+<p>and the common difference be</p>
+
+$$
+d.
+$$
+
+<p>Using the formula</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<hr>
+
+<p><strong>Step 1: Form the equations.</strong></p>
+
+<p>The 3rd term is 12.</p>
+
+$$
+a_3=12
+$$
+
+$$
+a+2d=12
+\qquad\cdots(1)
+$$
+
+<p>The last term is the 50th term and is equal to 106.</p>
+
+$$
+a_{50}=106
+$$
+
+$$
+a+49d=106
+\qquad\cdots(2)
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the common difference.</strong></p>
+
+<p>Subtract equation (1) from equation (2).</p>
+
+$$
+(a+49d)-(a+2d)=106-12
+$$
+
+$$
+47d=94
+$$
+
+$$
+d=2
+$$
+
+<hr>
+
+<p><strong>Step 3: Find the first term.</strong></p>
+
+<p>Substitute</p>
+
+$$
+d=2
+$$
+
+<p>in equation (1).</p>
+
+$$
+a+2(2)=12
+$$
+
+$$
+a+4=12
+$$
+
+$$
+a=8
+$$
+
+<hr>
+
+<p><strong>Step 4: Find the 29th term.</strong></p>
+
+$$
+a_{29}=a+(29-1)d
+$$
+
+$$
+=8+28(2)
+$$
+
+$$
+=8+56
+$$
+
+$$
+=64
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+a_{50}=8+49(2)=106
+$$
+
+<p>Hence, the values obtained are correct.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{64}
+$$
+
+<hr>
+
+<h3>Question 9</h3>
+
+<p><strong>If the 3rd and the 9th terms of an AP are 4 and −8 respectively, which term of this AP is 0?</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Let the first term be</p>
+
+$$
+a
+$$
+
+<p>and the common difference be</p>
+
+$$
+d.
+$$
+
+<p>The 3rd term is 4.</p>
+
+$$
+a+2d=4
+\qquad\cdots(1)
+$$
+
+<p>The 9th term is −8.</p>
+
+$$
+a+8d=-8
+\qquad\cdots(2)
+$$
+
+<hr>
+
+<p><strong>Step 1: Find the common difference.</strong></p>
+
+<p>Subtract equation (1) from equation (2).</p>
+
+$$
+(a+8d)-(a+2d)=-8-4
+$$
+
+$$
+6d=-12
+$$
+
+$$
+d=-2
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the first term.</strong></p>
+
+<p>Substitute</p>
+
+$$
+d=-2
+$$
+
+<p>in equation (1).</p>
+
+$$
+a+2(-2)=4
+$$
+
+$$
+a-4=4
+$$
+
+$$
+a=8
+$$
+
+<hr>
+
+<p><strong>Step 3: Find the required term.</strong></p>
+
+<p>Let the required term be the <strong>n</strong>th term.</p>
+
+$$
+a_n=0
+$$
+
+<p>Using the formula</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+$$
+0=8+(n-1)(-2)
+$$
+
+$$
+0=8-2(n-1)
+$$
+
+$$
+2(n-1)=8
+$$
+
+$$
+n-1=4
+$$
+
+$$
+n=5
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+a_5=8+4(-2)=0
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>The</strong></p>
+
+$$
+\boxed{5^{\text{th}}\text{ term}}
+$$
+
+<p><strong>of the AP is 0.</strong></p>
+
+<hr>
+<h3>Question 10</h3>
+
+<p><strong>The 17th term of an AP exceeds its 10th term by 7. Find the common difference.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Let the first term be</p>
+
+$$
+a
+$$
+
+<p>and the common difference be</p>
+
+$$
+d.
+$$
+
+<p>Using the formula for the <strong>n</strong>th term,</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<hr>
+
+<p><strong>Step 1: Write the 17th term.</strong></p>
+
+$$
+a_{17}=a+16d
+$$
+
+<p><strong>Step 2: Write the 10th term.</strong></p>
+
+$$
+a_{10}=a+9d
+$$
+
+<p>According to the question,</p>
+
+$$
+a_{17}-a_{10}=7
+$$
+
+<p>Substitute the values.</p>
+
+$$
+(a+16d)-(a+9d)=7
+$$
+
+$$
+7d=7
+$$
+
+$$
+d=1
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{d=1}
+$$
+
+<hr>
+
+<h3>Question 11</h3>
+
+<p><strong>Which term of the AP:</strong></p>
+
+$$
+3,\;15,\;27,\;39,\;\ldots
+$$
+
+<p><strong>will be 132 more than its 54th term?</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given AP is</p>
+
+$$
+3,\;15,\;27,\;39,\;\ldots
+$$
+
+<p>Therefore,</p>
+
+$$
+a=3,\qquad d=12
+$$
+
+<hr>
+
+<p><strong>Step 1: Find the 54th term.</strong></p>
+
+$$
+a_{54}=a+(54-1)d
+$$
+
+$$
+=3+53\times12
+$$
+
+$$
+=3+636
+$$
+
+$$
+=639
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the required term.</strong></p>
+
+<p>The required term is</p>
+
+$$
+639+132=771
+$$
+
+<p>Let it be the <strong>n</strong>th term.</p>
+
+$$
+a_n=771
+$$
+
+<p>Using the formula</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+$$
+771=3+(n-1)\times12
+$$
+
+$$
+768=12(n-1)
+$$
+
+$$
+64=n-1
+$$
+
+$$
+n=65
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+a_{65}=3+64\times12=771
+$$
+
+<p>Difference from the 54th term:</p>
+
+$$
+771-639=132
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>The required term is</p>
+
+$$
+\boxed{65^{\text{th}}\text{ term}}
+$$
+
+<hr>
+
+<h3>Question 12</h3>
+
+<p><strong>Two APs have the same common difference. The difference between their 100th terms is 100. What is the difference between their 1000th terms?</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Let the first terms of the two APs be</p>
+
+$$
+a_1 \text{ and } a_2,
+$$
+
+<p>and let their common difference be</p>
+
+$$
+d.
+$$
+
+<p>The 100th term of the first AP is</p>
+
+$$
+a_1+99d.
+$$
+
+<p>The 100th term of the second AP is</p>
+
+$$
+a_2+99d.
+$$
+
+<p>According to the question,</p>
+
+$$
+(a_1+99d)-(a_2+99d)=100.
+$$
+
+<p>Simplifying,</p>
+
+$$
+a_1-a_2=100.
+$$
+
+<hr>
+
+<p>Now, the 1000th term of the first AP is</p>
+
+$$
+a_1+999d.
+$$
+
+<p>The 1000th term of the second AP is</p>
+
+$$
+a_2+999d.
+$$
+
+<p>The difference between these terms is</p>
+
+$$
+(a_1+999d)-(a_2+999d).
+$$
+
+$$
+=a_1-a_2.
+$$
+
+$$
+=100.
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{100}
+$$
+
+<hr>
+
+<h3>Question 13</h3>
+
+<p><strong>How many three-digit numbers are divisible by 7?</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The smallest three-digit number is</p>
+
+$$
+100.
+$$
+
+<p>The smallest three-digit number divisible by 7 is</p>
+
+$$
+105=7\times15.
+$$
+
+<p>The largest three-digit number is</p>
+
+$$
+999.
+$$
+
+<p>The largest three-digit number divisible by 7 is</p>
+
+$$
+994=7\times142.
+$$
+
+<p>Thus, the required numbers form the AP</p>
+
+$$
+105,\;112,\;119,\;\ldots,\;994
+$$
+
+<p>Here,</p>
+
+$$
+a=105,\qquad d=7,\qquad a_n=994.
+$$
+
+<p>Using the formula</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+994=105+(n-1)\times7
+$$
+
+$$
+994-105=7(n-1)
+$$
+
+$$
+889=7(n-1)
+$$
+
+$$
+127=n-1
+$$
+
+$$
+n=128
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>The number of three-digit numbers divisible by 7 is</p>
+
+$$
+\boxed{128}.
+$$
+
+<hr>
+<h3>Question 14</h3>
+
+<p><strong>How many multiples of 4 lie between 10 and 250?</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The smallest multiple of 4 greater than 10 is</p>
+
+$$
+12.
+$$
+
+<p>The largest multiple of 4 less than 250 is</p>
+
+$$
+248.
+$$
+
+<p>Thus, the required multiples form the AP</p>
+
+$$
+12,\;16,\;20,\;\ldots,\;248
+$$
+
+<p>Here,</p>
+
+$$
+a=12,\qquad d=4,\qquad a_n=248.
+$$
+
+<p>Using the formula</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+248=12+(n-1)\times4
+$$
+
+$$
+248-12=4(n-1)
+$$
+
+$$
+236=4(n-1)
+$$
+
+$$
+59=n-1
+$$
+
+$$
+n=60
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>The number of multiples of 4 between 10 and 250 is</p>
+
+$$
+\boxed{60}
+$$
+
+<hr>
+
+<h3>Question 15</h3>
+
+<p><strong>For what value of <em>n</em>, are the <em>n</em>th terms of the two APs</strong></p>
+
+$$
+63,\;65,\;67,\;\ldots
+$$
+
+<p><strong>and</strong></p>
+
+$$
+3,\;10,\;17,\;\ldots
+$$
+
+<p><strong>equal?</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p><strong>First AP:</strong></p>
+
+$$
+63,\;65,\;67,\;\ldots
+$$
+
+<p>Here,</p>
+
+$$
+a_1=63,\qquad d_1=2.
+$$
+
+<p>The <strong>n</strong>th term is</p>
+
+$$
+\begin{aligned}
+T_n
+&=63+(n-1)\times2\\[4pt]
+&=2n+61
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Second AP:</strong></p>
+
+$$
+3,\;10,\;17,\;\ldots
+$$
+
+<p>Here,</p>
+
+$$
+a_2=3,\qquad d_2=7.
+$$
+
+<p>The <strong>n</strong>th term is</p>
+
+$$
+\begin{aligned}
+T_n'
+&=3+(n-1)\times7\\[4pt]
+&=7n-4
+\end{aligned}
+$$
+
+<hr>
+
+<p>Since the <strong>n</strong>th terms are equal,</p>
+
+$$
+2n+61=7n-4
+$$
+
+$$
+65=5n
+$$
+
+$$
+n=13
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+<p>First AP:</p>
+
+$$
+63+12\times2=87
+$$
+
+<p>Second AP:</p>
+
+$$
+3+12\times7=87
+$$
+
+<p>Both give the same value.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{n=13}
+$$
+
+<hr>
+
+<h3>Question 16</h3>
+
+<p><strong>Determine the AP whose 3rd term is 16 and the 7th term exceeds the 5th term by 12.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Let the first term be</p>
+
+$$
+a
+$$
+
+<p>and the common difference be</p>
+
+$$
+d.
+$$
+
+<p>Using the formula for the <strong>n</strong>th term of an AP,</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<hr>
+
+<p><strong>Step 1: Use the given 3rd term.</strong></p>
+
+<p>The 3rd term is 16.</p>
+
+$$
+a_3=16
+$$
+
+$$
+a+2d=16
+\qquad\cdots(1)
+$$
+
+<hr>
+
+<p><strong>Step 2: Use the condition on the 7th and 5th terms.</strong></p>
+
+<p>The 7th term exceeds the 5th term by 12.</p>
+
+$$
+a_7-a_5=12
+$$
+
+<p>Now,</p>
+
+$$
+a_7=a+6d
+$$
+
+$$
+a_5=a+4d
+$$
+
+<p>Therefore,</p>
+
+$$
+(a+6d)-(a+4d)=12
+$$
+
+$$
+2d=12
+$$
+
+$$
+d=6
+$$
+
+<hr>
+
+<p><strong>Step 3: Find the first term.</strong></p>
+
+<p>Substitute</p>
+
+$$
+d=6
+$$
+
+<p>in equation (1).</p>
+
+$$
+a+2(6)=16
+$$
+
+$$
+a+12=16
+$$
+
+$$
+a=4
+$$
+
+<hr>
+
+<p><strong>Step 4: Write the AP.</strong></p>
+
+<p>The first term is</p>
+
+$$
+a=4
+$$
+
+<p>and the common difference is</p>
+
+$$
+d=6.
+$$
+
+<p>Hence, the required AP is</p>
+
+$$
+4,\;10,\;16,\;22,\;28,\;34,\;40,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+<p>The 3rd term is</p>
+
+$$
+16.
+$$
+
+<p>The 5th term is</p>
+
+$$
+28.
+$$
+
+<p>The 7th term is</p>
+
+$$
+40.
+$$
+
+<p>Therefore,</p>
+
+$$
+40-28=12,
+$$
+
+<p>which satisfies the given condition.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{4,\;10,\;16,\;22,\;28,\;34,\;40,\;\ldots}
+$$
+
+<hr>
+<h3>Question 17</h3>
+
+<p><strong>Find the 20th term from the last term of the AP:</strong></p>
+
+$$
+3,\;8,\;13,\;\ldots,\;253
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given AP is</p>
+
+$$
+3,\;8,\;13,\;\ldots,\;253
+$$
+
+<p>Here,</p>
+
+$$
+a=3,\qquad d=5,\qquad l=253
+$$
+
+<hr>
+
+<p><strong>Step 1: Find the total number of terms.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+l=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+253=3+(n-1)\times5
+$$
+
+$$
+250=5(n-1)
+$$
+
+$$
+50=n-1
+$$
+
+$$
+n=51
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the 20th term from the last.</strong></p>
+
+<p>The 20th term from the last is the</p>
+
+$$
+(51-20+1)=32^{\text{nd}}
+$$
+
+<p>term from the beginning.</p>
+
+<p>Now find the 32nd term.</p>
+
+$$
+a_{32}=a+(32-1)d
+$$
+
+$$
+=3+31\times5
+$$
+
+$$
+=3+155
+$$
+
+$$
+=158
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{158}
+$$
+
+<hr>
+
+<h3>Question 18</h3>
+
+<p><strong>The sum of the 4th and 8th terms of an AP is 24 and the sum of the 6th and 10th terms is 44. Find the first three terms of the AP.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Let the first term be</p>
+
+$$
+a
+$$
+
+<p>and the common difference be</p>
+
+$$
+d.
+$$
+
+<hr>
+
+<p><strong>Step 1: Form the equations.</strong></p>
+
+<p>4th term:</p>
+
+$$
+a_4=a+3d
+$$
+
+<p>8th term:</p>
+
+$$
+a_8=a+7d
+$$
+
+<p>According to the question,</p>
+
+$$
+(a+3d)+(a+7d)=24
+$$
+
+$$
+2a+10d=24
+\qquad\cdots(1)
+$$
+
+<hr>
+
+<p>6th term:</p>
+
+$$
+a_6=a+5d
+$$
+
+<p>10th term:</p>
+
+$$
+a_{10}=a+9d
+$$
+
+<p>According to the question,</p>
+
+$$
+(a+5d)+(a+9d)=44
+$$
+
+$$
+2a+14d=44
+\qquad\cdots(2)
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the common difference.</strong></p>
+
+<p>Subtract equation (1) from equation (2).</p>
+
+$$
+(2a+14d)-(2a+10d)=44-24
+$$
+
+$$
+4d=20
+$$
+
+$$
+d=5
+$$
+
+<hr>
+
+<p><strong>Step 3: Find the first term.</strong></p>
+
+<p>Substitute</p>
+
+$$
+d=5
+$$
+
+<p>in equation (1).</p>
+
+$$
+2a+10(5)=24
+$$
+
+$$
+2a+50=24
+$$
+
+$$
+2a=-26
+$$
+
+$$
+a=-13
+$$
+
+<hr>
+
+<p><strong>Step 4: Write the first three terms.</strong></p>
+
+<p>First term:</p>
+
+$$
+a=-13
+$$
+
+<p>Second term:</p>
+
+$$
+a+d=-13+5=-8
+$$
+
+<p>Third term:</p>
+
+$$
+a+2d=-13+10=-3
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+a_4=2,\qquad a_8=22
+$$
+
+$$
+2+22=24
+$$
+
+$$
+a_6=12,\qquad a_{10}=32
+$$
+
+$$
+12+32=44
+$$
+
+<p>Hence, the obtained values are correct.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{-13,\;-8,\;-3}
+$$
+
+<hr>
+
+<h3>Question 19</h3>
+
+<p><strong>Subba Rao started work in 1995 at an annual salary of ₹5000 and received an increment of ₹200 each year. In which year did his income reach ₹7000?</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The annual salaries form an Arithmetic Progression.</p>
+
+<p>Here,</p>
+
+$$
+a=5000,\qquad d=200
+$$
+
+<p>The required salary is</p>
+
+$$
+a_n=7000.
+$$
+
+<hr>
+
+<p><strong>Step 1: Find the value of <em>n</em>.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+7000=5000+(n-1)\times200
+$$
+
+$$
+7000-5000=200(n-1)
+$$
+
+$$
+2000=200(n-1)
+$$
+
+$$
+10=n-1
+$$
+
+$$
+n=11
+$$
+
+<hr>
+
+<p><strong>Step 2: Find the year.</strong></p>
+
+<p>The 1st term corresponds to the year</p>
+
+$$
+1995.
+$$
+
+<p>Therefore, the 11th term corresponds to</p>
+
+$$
+1995+(11-1)
+$$
+
+$$
+=1995+10
+$$
+
+$$
+=2005.
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>Subba Rao's income reached <strong>₹7000</strong> in the year</p>
+
+$$
+\boxed{2005.}
+$$
+
+<hr>
+
+<h3>Question 20</h3>
+
+<p><strong>Ramkali saved ₹5 in the first week of a year and then increased her weekly savings by ₹1.75. If in the <em>n</em>th week, her weekly savings become ₹20.75, find <em>n</em>.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The weekly savings form an Arithmetic Progression.</p>
+
+<p>Here,</p>
+
+$$
+a=5,\qquad d=1.75,\qquad a_n=20.75.
+$$
+
+<hr>
+
+<p><strong>Step 1: Find the value of <em>n</em>.</strong></p>
+
+<p>Using the formula</p>
+
+$$
+a_n=a+(n-1)d
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+20.75=5+(n-1)\times1.75
+$$
+
+$$
+20.75-5=1.75(n-1)
+$$
+
+$$
+15.75=1.75(n-1)
+$$
+
+<p>Divide both sides by</p>
+
+$$
+1.75.
+$$
+
+$$
+n-1=\frac{15.75}{1.75}
+$$
+
+$$
+n-1=9
+$$
+
+$$
+n=10
+$$
+
+<hr>
+
+<p><strong>Verification:</strong></p>
+
+$$
+a_{10}=5+9(1.75)
+$$
+
+$$
+=5+15.75
+$$
+
+$$
+=20.75
+$$
+
+<p>Hence, the obtained value is correct.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>Ramkali's weekly savings became <strong>₹20.75</strong> in the</p>
+
+$$
+\boxed{10^{\text{th}}\text{ week}.}
+$$
+
+<hr>
+
+
+
+
     </div>
-
-
       </article>
       <aside class="related-box">
         <h2>Other solutions</h2>
@@ -690,5 +2810,16 @@ th,td{border:1px solid #ccc;padding:8px}
     </main>
     <!-- ━━━ FOOTER ━━━ -->
  <div id="footer"></div>  
+
+ <script>
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$",  right: "$",  inline: true  }
+      ]
+    });
+  </script>
+
+
   </body>
 </html>

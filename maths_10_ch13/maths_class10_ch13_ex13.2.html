@@ -8,6 +8,14 @@
 <link rel="stylesheet" href="../assets/styles.css">
 <script src="../loader.js"></script>
 <script src="../config.js"></script>
+
+<!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+
+
+
 <style>
 
 
@@ -22,6 +30,17 @@
 .solution-article p,.solution-article li{line-height:1.7}
 table{border-collapse:collapse;width:100%;margin:15px 0}
 th,td{border:1px solid #ccc;padding:8px}
+
+/* KATEX display */
+
+.katex-display {
+    text-align: left !important;
+    margin: 12px 0;
+}
+
+.katex-display > .katex {
+    text-align: left !important;
+}
 
 
 
@@ -43,79 +62,64 @@ th,td{border:1px solid #ccc;padding:8px}
 <h2>Exercise 13.2</h2>
 
 <hr>
-<h2>Q1. The following table shows the ages of the patients admitted in a hospital during a year. Find the mode and the mean of the data. Compare and interpret the two measures of central tendency.</h2>
 
-<table border="1" cellpadding="8">
+<h3>Question 1</h3>
+
+<p><strong>The following table shows the ages of the patients admitted in a hospital during a year. Find the mode and the mean of the data given above. Compare and interpret the two measures of central tendency.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<h3>Step 1: Find the Mean</h3>
+
+<p>Since the class intervals are equal, we use the <strong>Direct Method</strong>.</p>
+
+<table border="1" cellpadding="8" cellspacing="0">
 <tr>
-<th>Age (in years)</th>
-<th>5-15</th>
-<th>15-25</th>
-<th>25-35</th>
-<th>35-45</th>
-<th>45-55</th>
-<th>55-65</th>
+<th>Age (Years)</th>
+<th>Frequency (<i>f</i>)</th>
+<th>Class Mark (<i>x</i>)</th>
+<th><i>f × x</i></th>
 </tr>
 
 <tr>
-<th>Number of Patients (f)</th>
-<td>6</td>
-<td>11</td>
-<td>21</td>
-<td>23</td>
-<td>14</td>
-<td>5</td>
-</tr>
-</table>
-
-<br>
-
-<h3>Mean</h3>
-
-<table border="1" cellpadding="8">
-<tr>
-<th>Class Interval</th>
-<th>f</th>
-<th>Class Mark (x)</th>
-<th>fx</th>
-</tr>
-
-<tr>
-<td>5-15</td>
+<td>5–15</td>
 <td>6</td>
 <td>10</td>
 <td>60</td>
 </tr>
 
 <tr>
-<td>15-25</td>
+<td>15–25</td>
 <td>11</td>
 <td>20</td>
 <td>220</td>
 </tr>
 
 <tr>
-<td>25-35</td>
+<td>25–35</td>
 <td>21</td>
 <td>30</td>
 <td>630</td>
 </tr>
 
 <tr>
-<td>35-45</td>
+<td>35–45</td>
 <td>23</td>
 <td>40</td>
 <td>920</td>
 </tr>
 
 <tr>
-<td>45-55</td>
+<td>45–55</td>
 <td>14</td>
 <td>50</td>
 <td>700</td>
 </tr>
 
 <tr>
-<td>55-65</td>
+<td>55–65</td>
 <td>5</td>
 <td>60</td>
 <td>300</td>
@@ -124,523 +128,1071 @@ th,td{border:1px solid #ccc;padding:8px}
 <tr>
 <th>Total</th>
 <th>80</th>
-<th>-</th>
+<th>—</th>
 <th>2830</th>
 </tr>
+
 </table>
-
-<p>
-Mean = Σfx / Σf
-</p>
-
-<p>
-= 2830 / 80
-</p>
-
-<p>
-= 35.375
-</p>
-
-<p>
-≈ 35.38 years
-</p>
-
-<h3>Mode</h3>
-
-<p>
-Modal Class = 35-45
-</p>
-
-<p>
-l = 35, h = 10
-</p>
-
-<p>
-f₁ = 23, f₀ = 21, f₂ = 14
-</p>
-
-<p>
-Mode = l + [(f₁ − f₀)/(2f₁ − f₀ − f₂)] × h
-</p>
-
-<p>
-= 35 + [(23 − 21)/(46 − 21 − 14)] × 10
-</p>
-
-<p>
-= 35 + (2/11) × 10
-</p>
-
-<p>
-= 35 + 1.82
-</p>
-
-<p>
-= 36.82 years
-</p>
-
-<p>
-<b>Mean = 35.38 years</b>
-</p>
-
-<p>
-<b>Mode = 36.82 years</b>
-</p>
-
-<p>
-Interpretation: Most patients admitted were around 37 years of age. The mean age is about 35 years. Both values are close, indicating that the data is fairly consistent.
-</p>
 
 <hr>
 
-<h2>Q2. The following data gives the information on the observed lifetimes (in hours) of 225 electrical components. Determine the modal lifetime of the components.</h2>
+<p>Using the Direct Method,</p>
 
-<table border="1" cellpadding="8">
+$$
+\bar{x}=\frac{\sum fx}{\sum f}
+$$
+
+$$
+\bar{x}=\frac{2830}{80}
+$$
+
+$$
+\boxed{\bar{x}=35.375\text{ years}}
+$$
+
+<hr>
+
+<h3>Step 2: Find the Mode</h3>
+
+<p>The highest frequency is</p>
+
+$$
+23,
+$$
+
+<p>so the <strong>modal class</strong> is</p>
+
+$$
+35-45.
+$$
+
+<p>Here,</p>
+
+$$
+l=35,\qquad h=10,
+$$
+
+$$
+f_1=23,\qquad f_0=21,\qquad f_2=14.
+$$
+
+<p>Using the formula</p>
+
+$$
+\text{Mode}
+=
+l+
+\left(
+\frac{f_1-f_0}
+{2f_1-f_0-f_2}
+\right)h
+$$
+
+<p>Substitute the values.</p>
+
+$$
+\text{Mode}
+=
+35+
+\left(
+\frac{23-21}
+{2(23)-21-14}
+\right)\times10
+$$
+
+$$
+=
+35+
+\left(
+\frac{2}{46-35}
+\right)\times10
+$$
+
+$$
+=
+35+\frac{20}{11}
+$$
+
+$$
+=
+35+1.818
+$$
+
+$$
+\boxed{\text{Mode}\approx36.82\text{ years}}
+$$
+
+<hr>
+
+<h3>Comparison and Interpretation</h3>
+
+<p>The two measures of central tendency are:</p>
+
+$$
+\boxed{\text{Mean}=35.38\text{ years}}
+$$
+
+$$
+\boxed{\text{Mode}=36.82\text{ years}}
+$$
+
+<p>The mean and the mode are very close to each other. This indicates that most patients admitted to the hospital were around <strong>35–37 years of age</strong>. The age distribution is fairly balanced, and there is no large variation in the ages of the patients.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{\text{Mean}=35.38\text{ years}}
+$$
+
+$$
+\boxed{\text{Mode}\approx36.82\text{ years}}
+$$
+
+<p><strong>Interpretation:</strong> Most patients admitted during the year were approximately <strong>36 years old</strong>, and the average age of all patients was about <strong>35 years</strong>.</p>
+
+<hr>
+
+<h3>Question 2</h3>
+
+<p><strong>The following data gives the information on the observed lifetimes (in hours) of 225 electrical components. Determine the modal lifetime of the components.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The highest frequency is</p>
+
+$$
+61.
+$$
+
+<p>Therefore, the <strong>modal class</strong> is</p>
+
+$$
+60-80.
+$$
+
+<hr>
+
+<table border="1" cellpadding="8" cellspacing="0">
 <tr>
-<th>Lifetimes (in hours)</th>
-<th>0-20</th>
-<th>20-40</th>
-<th>40-60</th>
-<th>60-80</th>
-<th>80-100</th>
-<th>100-120</th>
+<th>Lifetime (Hours)</th>
+<th>Frequency (<i>f</i>)</th>
 </tr>
 
 <tr>
-<th>Frequency</th>
+<td>0–20</td>
 <td>10</td>
+</tr>
+
+<tr>
+<td>20–40</td>
 <td>35</td>
+</tr>
+
+<tr>
+<td>40–60</td>
 <td>52</td>
-<td>61</td>
+</tr>
+
+<tr>
+<td><strong>60–80</strong></td>
+<td><strong>61</strong></td>
+</tr>
+
+<tr>
+<td>80–100</td>
 <td>38</td>
+</tr>
+
+<tr>
+<td>100–120</td>
 <td>29</td>
 </tr>
+
 </table>
-
-<br>
-
-<p>
-Modal Class = 60-80
-</p>
-
-<p>
-l = 60, h = 20
-</p>
-
-<p>
-f₁ = 61, f₀ = 52, f₂ = 38
-</p>
-
-<p>
-Mode = l + [(f₁ − f₀)/(2f₁ − f₀ − f₂)] × h
-</p>
-
-<p>
-= 60 + [(61 − 52)/(122 − 52 − 38)] × 20
-</p>
-
-<p>
-= 60 + (9/32) × 20
-</p>
-
-<p>
-= 60 + 5.625
-</p>
-
-<p>
-= 65.625
-</p>
-
-<p>
-≈ 65.63 hours
-</p>
-
-<p>
-<b>Modal lifetime = 65.63 hours</b>
-</p>
 
 <hr>
 
-<h2>Q3. The following data gives the distribution of total monthly household expenditure of 200 families of a village. Find the modal monthly expenditure of the families. Also, find the mean monthly expenditure.</h2>
+<p>For the modal class,</p>
 
-<table border="1" cellpadding="8">
+$$
+l=60,\qquad h=20,
+$$
+
+$$
+f_1=61,\qquad f_0=52,\qquad f_2=38.
+$$
+
+<hr>
+
+<p>Using the formula for mode of grouped data,</p>
+
+$$
+\text{Mode}
+=
+l+
+\left(
+\frac{f_1-f_0}
+{2f_1-f_0-f_2}
+\right)h
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+\text{Mode}
+=
+60+
+\left(
+\frac{61-52}
+{2(61)-52-38}
+\right)\times20
+$$
+
+$$
+=
+60+
+\left(
+\frac{9}
+{122-90}
+\right)\times20
+$$
+
+$$
+=
+60+
+\frac{180}{32}
+$$
+
+$$
+=
+60+5.625
+$$
+
+$$
+=
+65.625
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{\text{Modal lifetime}=65.625\text{ hours}}
+$$
+
+<p>Hence, the modal lifetime of the electrical components is approximately</p>
+
+$$
+\boxed{65.63\text{ hours}.}
+$$
+
+<hr>
+
+<h3>Question 3</h3>
+
+<p><strong>The following data gives the distribution of total monthly household expenditure of 200 families of a village. Find the modal monthly expenditure of the families. Also, find the mean monthly expenditure.</strong></p>
+
+<hr>
+
+<h3>Part A: Find the Modal Monthly Expenditure</h3>
+
+<p><strong>Solution:</strong></p>
+
+<p>The highest frequency is</p>
+
+$$
+40.
+$$
+
+<p>Therefore, the <strong>modal class</strong> is</p>
+
+$$
+1500-2000.
+$$
+
+<hr>
+
+<p>Here,</p>
+
+$$
+l=1500,\qquad h=500,
+$$
+
+$$
+f_1=40,\qquad f_0=24,\qquad f_2=33.
+$$
+
+<p>Using the formula for mode of grouped data,</p>
+
+$$
+\text{Mode}
+=
+l+
+\left(
+\frac{f_1-f_0}
+{2f_1-f_0-f_2}
+\right)h
+$$
+
+<p>Substitute the values.</p>
+
+$$
+\text{Mode}
+=
+1500+
+\left(
+\frac{40-24}
+{2(40)-24-33}
+\right)\times500
+$$
+
+$$
+=
+1500+
+\left(
+\frac{16}
+{80-57}
+\right)\times500
+$$
+
+$$
+=
+1500+
+\frac{8000}{23}
+$$
+
+$$
+=
+1500+347.83
+$$
+
+$$
+=
+1847.83
+$$
+
+<hr>
+
+<p><strong>Modal Monthly Expenditure</strong></p>
+
+$$
+\boxed{\text{Mode}\approx₹1847.83}
+$$
+
+<hr>
+
+<h3>Part B: Find the Mean Monthly Expenditure</h3>
+
+<p>Since all class intervals are equal, we use the <strong>Step-Deviation Method</strong>.</p>
+
+<p>Take</p>
+
+$$
+A=2750,\qquad h=500.
+$$
+
+<hr>
+
+<table border="1" cellpadding="8" cellspacing="0">
 <tr>
 <th>Expenditure (₹)</th>
-<th>Number of Families</th>
-</tr>
-
-<tr><td>1000-1500</td><td>24</td></tr>
-<tr><td>1500-2000</td><td>40</td></tr>
-<tr><td>2000-2500</td><td>33</td></tr>
-<tr><td>2500-3000</td><td>28</td></tr>
-<tr><td>3000-3500</td><td>30</td></tr>
-<tr><td>3500-4000</td><td>22</td></tr>
-<tr><td>4000-4500</td><td>16</td></tr>
-<tr><td>4500-5000</td><td>7</td></tr>
-</table>
-
-<br>
-
-<h3>Mode</h3>
-
-<p>
-Modal Class = 1500-2000
-</p>
-
-<p>
-l = 1500, h = 500
-</p>
-
-<p>
-f₁ = 40, f₀ = 24, f₂ = 33
-</p>
-
-<p>
-Mode = l + [(f₁ − f₀)/(2f₁ − f₀ − f₂)] × h
-</p>
-
-<p>
-= 1500 + [(40 − 24)/(80 − 24 − 33)] × 500
-</p>
-
-<p>
-= 1500 + (16/23) × 500
-</p>
-
-<p>
-= 1500 + 347.83
-</p>
-
-<p>
-= 1847.83
-</p>
-
-<p>
-<b>Modal Monthly Expenditure ≈ ₹1847.83</b>
-</p>
-
-<h3>Mean</h3>
-
-<table border="1" cellpadding="8">
-<tr>
-<th>Class Interval</th>
-<th>f</th>
-<th>x</th>
-<th>fx</th>
+<th>Frequency (<i>f</i>)</th>
+<th>Class Mark (<i>x</i>)</th>
+<th>
+$$
+u=\frac{x-A}{h}
+$$
+</th>
+<th><i>fu</i></th>
 </tr>
 
 <tr>
-<td>1000-1500</td>
+<td>1000–1500</td>
 <td>24</td>
 <td>1250</td>
-<td>30000</td>
+<td>-3</td>
+<td>-72</td>
 </tr>
 
 <tr>
-<td>1500-2000</td>
+<td>1500–2000</td>
 <td>40</td>
 <td>1750</td>
-<td>70000</td>
+<td>-2</td>
+<td>-80</td>
 </tr>
 
 <tr>
-<td>2000-2500</td>
+<td>2000–2500</td>
 <td>33</td>
 <td>2250</td>
-<td>74250</td>
+<td>-1</td>
+<td>-33</td>
 </tr>
 
 <tr>
-<td>2500-3000</td>
+<td>2500–3000</td>
 <td>28</td>
 <td>2750</td>
-<td>77000</td>
+<td>0</td>
+<td>0</td>
 </tr>
 
 <tr>
-<td>3000-3500</td>
+<td>3000–3500</td>
 <td>30</td>
 <td>3250</td>
-<td>97500</td>
+<td>1</td>
+<td>30</td>
 </tr>
 
 <tr>
-<td>3500-4000</td>
+<td>3500–4000</td>
 <td>22</td>
 <td>3750</td>
-<td>82500</td>
+<td>2</td>
+<td>44</td>
 </tr>
 
 <tr>
-<td>4000-4500</td>
+<td>4000–4500</td>
 <td>16</td>
 <td>4250</td>
-<td>68000</td>
+<td>3</td>
+<td>48</td>
 </tr>
 
 <tr>
-<td>4500-5000</td>
+<td>4500–5000</td>
 <td>7</td>
 <td>4750</td>
-<td>33250</td>
+<td>4</td>
+<td>28</td>
 </tr>
 
 <tr>
 <th>Total</th>
 <th>200</th>
-<th>-</th>
-<th>532500</th>
+<th>—</th>
+<th>—</th>
+<th>-35</th>
 </tr>
+
 </table>
-
-<p>
-Mean = Σfx / Σf
-</p>
-
-<p>
-= 532500 / 200
-</p>
-
-<p>
-= 2662.5
-</p>
-
-<p>
-<b>Mean Monthly Expenditure = ₹2662.50</b>
-</p>
 
 <hr>
 
-<h2>Q4. The following distribution gives the state-wise teacher-student ratio in higher secondary schools of India. Find the mode and mean of this data. Interpret the two measures.</h2>
+<p>Using the Step-Deviation Method,</p>
 
-<table border="1" cellpadding="8">
+$$
+\bar{x}
+=
+A+h\left(\frac{\sum fu}{\sum f}\right)
+$$
+
+<p>Substitute the values.</p>
+
+$$
+\bar{x}
+=
+2750
++
+500\left(\frac{-35}{200}\right)
+$$
+
+$$
+=
+2750-87.5
+$$
+
+$$
+=
+2662.5
+$$
+
+<hr>
+
+<p><strong>Mean Monthly Expenditure</strong></p>
+
+$$
+\boxed{\bar{x}=₹2662.50}
+$$
+
+<hr>
+
+<h3>Answer</h3>
+
+<p>Modal Monthly Expenditure:</p>
+
+$$
+\boxed{₹1847.83}
+$$
+
+<p>Mean Monthly Expenditure:</p>
+
+$$
+\boxed{₹2662.50}
+$$
+
+<hr>
+
+<h3>Question 4</h3>
+
+<p><strong>The following distribution gives the state-wise teacher-student ratio in higher secondary schools of India. Find the mode and mean of this data. Interpret the two measures.</strong></p>
+
+<hr>
+
+<h3>Part A: Mean of the Distribution</h3>
+
+<p><strong>Solution:</strong></p>
+
+<p>Since all the class intervals are equal, we use the <strong>Step-Deviation Method</strong>.</p>
+
+<p>Take</p>
+
+$$
+A=32.5,\qquad h=5.
+$$
+
+<p>The class marks are</p>
+
+$$
+17.5,\;22.5,\;27.5,\;32.5,\;37.5,\;42.5,\;47.5,\;52.5.
+$$
+
+<hr>
+
+<table border="1" cellpadding="8" cellspacing="0">
 <tr>
-<th>Number of Students per Teacher</th>
-<th>Number of States/U.T. (f)</th>
+<th>Students per Teacher</th>
+<th>Number of States/U.T. (<i>f</i>)</th>
+<th>Class Mark (<i>x</i>)</th>
+<th>
+$$
+u=\frac{x-A}{h}
+$$
+</th>
+<th><i>fu</i></th>
 </tr>
 
-<tr><td>15-20</td><td>3</td></tr>
-<tr><td>20-25</td><td>8</td></tr>
-<tr><td>25-30</td><td>9</td></tr>
-<tr><td>30-35</td><td>10</td></tr>
-<tr><td>35-40</td><td>3</td></tr>
-<tr><td>40-45</td><td>0</td></tr>
-<tr><td>45-50</td><td>0</td></tr>
-<tr><td>50-55</td><td>2</td></tr>
-</table>
-
-<br>
-
-<h3>Mean</h3>
-
-<table border="1" cellpadding="8">
 <tr>
-<th>Class Interval</th>
-<th>f</th>
-<th>Class Mark (x)</th>
-<th>fx</th>
+<td>15–20</td>
+<td>3</td>
+<td>17.5</td>
+<td>-3</td>
+<td>-9</td>
 </tr>
 
-<tr><td>15-20</td><td>3</td><td>17.5</td><td>52.5</td></tr>
-<tr><td>20-25</td><td>8</td><td>22.5</td><td>180</td></tr>
-<tr><td>25-30</td><td>9</td><td>27.5</td><td>247.5</td></tr>
-<tr><td>30-35</td><td>10</td><td>32.5</td><td>325</td></tr>
-<tr><td>35-40</td><td>3</td><td>37.5</td><td>112.5</td></tr>
-<tr><td>40-45</td><td>0</td><td>42.5</td><td>0</td></tr>
-<tr><td>45-50</td><td>0</td><td>47.5</td><td>0</td></tr>
-<tr><td>50-55</td><td>2</td><td>52.5</td><td>105</td></tr>
+<tr>
+<td>20–25</td>
+<td>8</td>
+<td>22.5</td>
+<td>-2</td>
+<td>-16</td>
+</tr>
+
+<tr>
+<td>25–30</td>
+<td>9</td>
+<td>27.5</td>
+<td>-1</td>
+<td>-9</td>
+</tr>
+
+<tr>
+<td>30–35</td>
+<td>10</td>
+<td>32.5</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>35–40</td>
+<td>3</td>
+<td>37.5</td>
+<td>1</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>40–45</td>
+<td>0</td>
+<td>42.5</td>
+<td>2</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>45–50</td>
+<td>0</td>
+<td>47.5</td>
+<td>3</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>50–55</td>
+<td>2</td>
+<td>52.5</td>
+<td>4</td>
+<td>8</td>
+</tr>
 
 <tr>
 <th>Total</th>
 <th>35</th>
-<th>-</th>
-<th>1022.5</th>
+<th>—</th>
+<th>—</th>
+<th>-23</th>
 </tr>
+
 </table>
-
-<p>
-Mean = Σfx / Σf
-</p>
-
-<p>
-= 1022.5 / 35
-</p>
-
-<p>
-= 29.21
-</p>
-
-<p>
-<b>Mean = 29.21 students per teacher</b>
-</p>
-
-<h3>Mode</h3>
-
-<p>
-Modal Class = 30-35
-</p>
-
-<p>
-l = 30, h = 5
-</p>
-
-<p>
-f₁ = 10, f₀ = 9, f₂ = 3
-</p>
-
-<p>
-Mode = l + [(f₁ − f₀)/(2f₁ − f₀ − f₂)] × h
-</p>
-
-<p>
-= 30 + [(10 − 9)/(20 − 9 − 3)] × 5
-</p>
-
-<p>
-= 30 + (1/8) × 5
-</p>
-
-<p>
-= 30.625
-</p>
-
-<p>
-≈ 30.63
-</p>
-
-<p>
-<b>Mode = 30.63 students per teacher</b>
-</p>
-
-<p>
-Interpretation: The most common teacher-student ratio among the states is about 31 students per teacher, while the average ratio is about 29 students per teacher.
-</p>
 
 <hr>
 
-<h2>Q5. The given distribution shows the number of runs scored by some top batsmen of the world in one-day international cricket matches. Find the mode of the data.</h2>
+<p>Using the Step-Deviation Method,</p>
 
-<table border="1" cellpadding="8">
+$$
+\bar{x}
+=
+A+h\left(\frac{\sum fu}{\sum f}\right)
+$$
+
+<p>Substitute the values.</p>
+
+$$
+\bar{x}
+=
+32.5
++
+5\left(\frac{-23}{35}\right)
+$$
+
+$$
+=
+32.5-3.286
+$$
+
+$$
+=
+29.214
+$$
+
+<p>Therefore,</p>
+
+$$
+\boxed{\bar{x}\approx29.21}
+$$
+
+<hr>
+
+<h3>Part B: Mode of the Distribution</h3>
+
+<p>The highest frequency is</p>
+
+$$
+10.
+$$
+
+<p>Hence, the <strong>modal class</strong> is</p>
+
+$$
+30-35.
+$$
+
+<p>Here,</p>
+
+$$
+l=30,\qquad h=5,
+$$
+
+$$
+f_1=10,\qquad f_0=9,\qquad f_2=3.
+$$
+
+<p>Using the mode formula,</p>
+
+$$
+\text{Mode}
+=
+l+
+\left(
+\frac{f_1-f_0}
+{2f_1-f_0-f_2}
+\right)h
+$$
+
+<p>Substitute the values.</p>
+
+$$
+\text{Mode}
+=
+30+
+\left(
+\frac{10-9}
+{2(10)-9-3}
+\right)\times5
+$$
+
+$$
+=
+30+
+\frac{5}{8}
+$$
+
+$$
+=
+30.625
+$$
+
+<hr>
+
+<p><strong>Mode</strong></p>
+
+$$
+\boxed{\text{Mode}\approx30.63}
+$$
+
+<hr>
+
+<h3>Interpretation</h3>
+
+<p>The mean teacher-student ratio is</p>
+
+$$
+29.21,
+$$
+
+<p>while the modal teacher-student ratio is</p>
+
+$$
+30.63.
+$$
+
+<p>Both values are close to each other. This indicates that in most states and Union Territories, there are about <strong>29 to 31 students per teacher</strong>. Thus, the distribution is fairly balanced, and the teacher-student ratio in India is generally around <strong>30 students per teacher</strong>.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>Mean teacher-student ratio:</p>
+
+$$
+\boxed{29.21}
+$$
+
+<p>Mode:</p>
+
+$$
+\boxed{30.63}
+$$
+
+<p><strong>Interpretation:</strong> Most states and Union Territories have approximately <strong>30 students per teacher</strong>, and the average teacher-student ratio is about <strong>29 students per teacher</strong>.</p>
+
+<hr>
+
+<h3>Question 5</h3>
+
+<p><strong>The given distribution shows the number of runs scored by some top batsmen of the world in one-day international cricket matches. Find the mode of the data.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The highest frequency is</p>
+
+$$
+18.
+$$
+
+<p>Hence, the <strong>modal class</strong> is</p>
+
+$$
+4000-5000.
+$$
+
+<hr>
+
+<table border="1" cellpadding="8" cellspacing="0">
 <tr>
 <th>Runs Scored</th>
-<th>Number of Batsmen</th>
+<th>Number of Batsmen (<i>f</i>)</th>
 </tr>
 
-<tr><td>3000-4000</td><td>4</td></tr>
-<tr><td>4000-5000</td><td>18</td></tr>
-<tr><td>5000-6000</td><td>9</td></tr>
-<tr><td>6000-7000</td><td>7</td></tr>
-<tr><td>7000-8000</td><td>6</td></tr>
-<tr><td>8000-9000</td><td>3</td></tr>
-<tr><td>9000-10000</td><td>1</td></tr>
-<tr><td>10000-11000</td><td>1</td></tr>
+<tr>
+<td>3000–4000</td>
+<td>4</td>
+</tr>
+
+<tr>
+<td><strong>4000–5000</strong></td>
+<td><strong>18</strong></td>
+</tr>
+
+<tr>
+<td>5000–6000</td>
+<td>9</td>
+</tr>
+
+<tr>
+<td>6000–7000</td>
+<td>7</td>
+</tr>
+
+<tr>
+<td>7000–8000</td>
+<td>6</td>
+</tr>
+
+<tr>
+<td>8000–9000</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>9000–10000</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>10000–11000</td>
+<td>1</td>
+</tr>
+
 </table>
-
-<br>
-
-<p>
-Modal Class = 4000-5000
-</p>
-
-<p>
-l = 4000, h = 1000
-</p>
-
-<p>
-f₁ = 18, f₀ = 4, f₂ = 9
-</p>
-
-<p>
-Mode = l + [(f₁ − f₀)/(2f₁ − f₀ − f₂)] × h
-</p>
-
-<p>
-= 4000 + [(18 − 4)/(36 − 4 − 9)] × 1000
-</p>
-
-<p>
-= 4000 + (14/23) × 1000
-</p>
-
-<p>
-= 4000 + 608.70
-</p>
-
-<p>
-= 4608.70
-</p>
-
-<p>
-<b>Mode ≈ 4608.7 runs</b>
-</p>
 
 <hr>
 
-<h2>Q6. A student noted the number of cars passing through a spot on a road for 100 periods each of 3 minutes and summarised it in the table given below. Find the mode of the data.</h2>
+<p>For the modal class,</p>
 
-<table border="1" cellpadding="8">
+$$
+l=4000,\qquad h=1000,
+$$
+
+$$
+f_1=18,\qquad f_0=4,\qquad f_2=9.
+$$
+
+<hr>
+
+<p>Using the formula for the mode of grouped data,</p>
+
+$$
+\text{Mode}
+=
+l+
+\left(
+\frac{f_1-f_0}
+{2f_1-f_0-f_2}
+\right)h
+$$
+
+<p>Substitute the given values.</p>
+
+$$
+\text{Mode}
+=
+4000+
+\left(
+\frac{18-4}
+{2(18)-4-9}
+\right)\times1000
+$$
+
+$$
+=
+4000+
+\left(
+\frac{14}
+{36-13}
+\right)\times1000
+$$
+
+$$
+=
+4000+
+\frac{14000}{23}
+$$
+
+$$
+=
+4000+608.70
+$$
+
+$$
+=
+4608.70
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{\text{Mode}\approx4608.70\text{ runs}}
+$$
+
+<p>Hence, the most common number of runs scored by the batsmen is approximately</p>
+
+$$
+\boxed{4609\text{ runs}.}
+$$
+
+<hr>
+<h3>Question 6</h3>
+
+<p><strong>A student noted the number of cars passing through a spot on a road for 100 periods, each of 3 minutes, and summarised it in the table given below. Find the mode of the data.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The highest frequency is</p>
+
+$$
+20.
+$$
+
+<p>Hence, the <strong>modal class</strong> is</p>
+
+$$
+40-50.
+$$
+
+<hr>
+
+<table border="1" cellpadding="8" cellspacing="0">
 <tr>
 <th>Number of Cars</th>
-<th>0-10</th>
-<th>10-20</th>
-<th>20-30</th>
-<th>30-40</th>
-<th>40-50</th>
-<th>50-60</th>
-<th>60-70</th>
-<th>70-80</th>
+<th>Frequency (<i>f</i>)</th>
 </tr>
 
 <tr>
-<th>Frequency</th>
+<td>0–10</td>
 <td>7</td>
+</tr>
+
+<tr>
+<td>10–20</td>
 <td>14</td>
+</tr>
+
+<tr>
+<td>20–30</td>
 <td>13</td>
+</tr>
+
+<tr>
+<td>30–40</td>
 <td>12</td>
-<td>20</td>
+</tr>
+
+<tr>
+<td><strong>40–50</strong></td>
+<td><strong>20</strong></td>
+</tr>
+
+<tr>
+<td>50–60</td>
 <td>11</td>
+</tr>
+
+<tr>
+<td>60–70</td>
 <td>15</td>
+</tr>
+
+<tr>
+<td>70–80</td>
 <td>8</td>
 </tr>
+
 </table>
 
-<br>
+<hr>
 
-<p>
-Modal Class = 40-50
-</p>
+<p>For the modal class,</p>
 
-<p>
-l = 40, h = 10
-</p>
+$$
+l=40,\qquad h=10,
+$$
 
-<p>
-f₁ = 20, f₀ = 12, f₂ = 11
-</p>
+$$
+f_1=20,\qquad f_0=12,\qquad f_2=11.
+$$
 
-<p>
-Mode = l + [(f₁ − f₀)/(2f₁ − f₀ − f₂)] × h
-</p>
+<hr>
 
-<p>
-= 40 + [(20 − 12)/(40 − 12 − 11)] × 10
-</p>
+<p>Using the formula for the mode of grouped data,</p>
 
-<p>
-= 40 + (8/17) × 10
-</p>
+$$
+\text{Mode}
+=
+l+
+\left(
+\frac{f_1-f_0}
+{2f_1-f_0-f_2}
+\right)h
+$$
 
-<p>
-= 40 + 4.71
-</p>
+<p>Substitute the given values.</p>
 
-<p>
-= 44.71
-</p>
+$$
+\text{Mode}
+=
+40+
+\left(
+\frac{20-12}
+{2(20)-12-11}
+\right)\times10
+$$
 
-<p>
-<b>Mode ≈ 44.71 cars</b>
-</p>
+$$
+=
+40+
+\left(
+\frac{8}
+{40-23}
+\right)\times10
+$$
+
+$$
+=
+40+
+\frac{80}{17}
+$$
+
+$$
+=
+40+4.706
+$$
+
+$$
+=
+44.706
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{\text{Mode}\approx44.71}
+$$
+
+<p>Therefore, the most frequently occurring number of cars passing through the road in a 3-minute period is approximately</p>
+
+$$
+\boxed{45\text{ cars}.}
+$$
+
+<hr>
 
 </div>
 
@@ -661,5 +1213,14 @@ Mode = l + [(f₁ − f₀)/(2f₁ − f₀ − f₂)] × h
     </main>
     <!-- ━━━ FOOTER ━━━ -->
  <div id="footer"></div>  
+
+  <script>
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$",  right: "$",  inline: true  }
+      ]
+    });
+  </script>
   </body>
 </html>

@@ -8,6 +8,13 @@
 <link rel="stylesheet" href="../assets/styles.css">
 <script src="../loader.js"></script>
 <script src="../config.js"></script>
+
+<!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+
+
 <style>
 
 
@@ -24,6 +31,17 @@ table{border-collapse:collapse;width:100%;margin:15px 0}
 th,td{border:1px solid #ccc;padding:8px}
 
 
+/* KATEX display */
+
+.katex-display {
+    text-align: left !important;
+    margin: 12px 0;
+}
+
+.katex-display > .katex {
+    text-align: left !important;
+}
+
 
 </style>
 </head>
@@ -39,7 +57,7 @@ th,td{border:1px solid #ccc;padding:8px}
       
         <div class="solution-meta"><span>NCERT</span><span>Chapter 5</span><span>Solution- Exercise 5.1 </span></div>
         <section class="answer-block">
-<img src=".././memes/pehle-ye-samjho.png" width="200" height="100" >
+<img src=".././memes/pehle-ye-samjho.png" width="150" height="150" >
 
 <p style="color:rgb(11, 89, 27);">
 <b>
@@ -263,451 +281,1617 @@ S<sub>n</sub> = n/2 (a + l)
 <hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
 <h1>EXERCISE 5.1</h1>
 <hr>
-<h2>1. In which of the following situations, does the list of numbers involved make an arithmetic progression, and why?</h2>
 
-    <!-- 1(i) -->
-    <div>
-        <p><strong>(i) The taxi fare after each km when the fare is ₹ 15 for the first km and ₹ 8 for each additional km.</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the taxi fare for the first km be <i>a</i><sub>1</sub> = 15.</p>
-        <p>Fare for 2 km = 15 + 8 = 23</p>
-        <p>Fare for 3 km = 23 + 8 = 31</p>
-        <p>Fare for 4 km = 31 + 8 = 39</p>
-        <p>The list of numbers obtained is 15, 23, 31, 39, ...</p>
-        <p>Here, the difference between consecutive terms is constant:</p>
-        <p>23 &minus; 15 = 8</p>
-        <p>31 &minus; 23 = 8</p>
-        <p>39 &minus; 31 = 8</p>
-        <p>Since the difference between successive terms is always the same (8), this situation forms an Arithmetic Progression.</p>
-    </div>
 
-    <hr>
+<h3>Question 1 (i)</h3>
 
-    <!-- 1(ii) -->
-    <div>
-        <p><strong>(ii) The amount of air present in a cylinder when a vacuum pump removes 1/4 of the air remaining in the cylinder at a time.</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the initial volume of air present in the cylinder be <i>V</i>.</p>
-        <p>Air removed the first time = (1/4)<i>V</i></p>
-        <p>Remaining air, <i>a</i><sub>2</sub> = <i>V</i> &minus; (1/4)<i>V</i> = (3/4)<i>V</i></p>
-        <p>Air removed the second time = (1/4)(3/4)<i>V</i> = (3/16)<i>V</i></p>
-        <p>Remaining air, <i>a</i><sub>3</sub> = (3/4)<i>V</i> &minus; (3/16)<i>V</i> = (9/16)<i>V</i> = (3/4)<sup>2</sup><i>V</i></p>
-        <p>The list of remaining volumes is <i>V</i>, (3/4)<i>V</i>, (3/4)<sup>2</sup><i>V</i>, ...</p>
-        <p>Let us check the difference between consecutive terms:</p>
-        <p><i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> = (3/4)<i>V</i> &minus; <i>V</i> = &minus;(1/4)<i>V</i></p>
-        <p><i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub> = (9/16)<i>V</i> &minus; (3/4)<i>V</i> = &minus;(3/16)<i>V</i></p>
-        <p>Since <i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> &ne; <i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub>, the common difference is not the same. Therefore, this situation does not form an Arithmetic Progression.</p>
-    </div>
+<p><strong>In which of the following situations does the list of numbers involved make an arithmetic progression, and why?</strong></p>
 
-    <hr>
-
-    <!-- 1(iii) -->
-    <div>
-        <p><strong>(iii) The cost of digging a well after every metre of digging, when it costs ₹ 150 for the first metre and rises by ₹ 50 for each subsequent metre.</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Cost of digging for the first metre, <i>a</i><sub>1</sub> = 150</p>
-        <p>Cost of digging for 2 metres, <i>a</i><sub>2</sub> = 150 + 50 = 200</p>
-        <p>Cost of digging for 3 metres, <i>a</i><sub>3</sub> = 200 + 50 = 250</p>
-        <p>Cost of digging for 4 metres, <i>a</i><sub>4</sub> = 250 + 50 = 300</p>
-        <p>The list of numbers obtained is 150, 200, 250, 300, ...</p>
-        <p>Checking the consecutive differences:</p>
-        <p>200 &minus; 150 = 50</p>
-        <p>250 &minus; 200 = 50</p>
-        <p>300 &minus; 250 = 50</p>
-        <p>Since the difference between any two successive terms is constant (50), this situation forms an Arithmetic Progression.</p>
-    </div>
-
-    <hr>
-
-    <!-- 1(iv) -->
-    <div>
-        <p><strong>(iv) The amount of money in the account every year, when ₹ 10000 is deposited at compound interest at 8 % per annum.</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>We know that the amount under compound interest is given by the formula A = P(1 + r/100)<sup>n</sup>.</p>
-        <p>Amount in the account at the start, <i>a</i><sub>1</sub> = 10000</p>
-        <p>Amount after 1 year, <i>a</i><sub>2</sub> = 10000(1 + 8/100)<sup>1</sup> = 10000(1.08)</p>
-        <p>Amount after 2 years, <i>a</i><sub>3</sub> = 10000(1 + 8/100)<sup>2</sup> = 10000(1.08)<sup>2</sup></p>
-        <p>Amount after 3 years, <i>a</i><sub>4</sub> = 10000(1 + 8/100)<sup>3</sup> = 10000(1.08)<sup>3</sup></p>
-        <p>The list of amounts across subsequent years is 10000, 10000(1.08), 10000(1.08)<sup>2</sup>, 10000(1.08)<sup>3</sup>, ...</p>
-        <p>Let us check the differences:</p>
-        <p><i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> = 10000(1.08 &minus; 1) = 800</p>
-        <p><i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub> = 10000(1.08)(1.08 &minus; 1) = 864</p>
-        <p>Since the difference between successive years increases because the interest is calculated on a larger base amount each year, the common difference is not uniform. Therefore, this situation does not form an Arithmetic Progression.</p>
-    </div>
-
-    <hr>
-
-    <h2>2. Write first four terms of the AP, when the first term <i>a</i> and the common difference <i>d</i> are given as follows:</h2>
-
-    <!-- 2(i) -->
-    <div>
-        <p><strong>(i) <i>a</i> = 10, <i>d</i> = 10</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>First term, <i>a</i><sub>1</sub> = <i>a</i> = 10</p>
-        <p>Second term, <i>a</i><sub>2</sub> = <i>a</i> + <i>d</i> = 10 + 10 = 20</p>
-        <p>Third term, <i>a</i><sub>3</sub> = <i>a</i><sub>2</sub> + <i>d</i> = 20 + 10 = 30</p>
-        <p>Fourth term, <i>a</i><sub>4</sub> = <i>a</i><sub>3</sub> + <i>d</i> = 30 + 10 = 40</p>
-        <p>Hence, the first four terms of the AP are 10, 20, 30, and 40.</p>
-    </div>
-
-    <hr>
-
-    <!-- 2(ii) -->
-    <div>
-        <p><strong>(ii) <i>a</i> = &minus;2, <i>d</i> = 0</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>First term, <i>a</i><sub>1</sub> = <i>a</i> = &minus;2</p>
-        <p>Second term, <i>a</i><sub>2</sub> = <i>a</i> + <i>d</i> = &minus;2 + 0 = &minus;2</p>
-        <p>Third term, <i>a</i><sub>3</sub> = <i>a</i><sub>2</sub> + <i>d</i> = &minus;2 + 0 = &minus;2</p>
-        <p>Fourth term, <i>a</i><sub>4</sub> = <i>a</i><sub>3</sub> + <i>d</i> = &minus;2 + 0 = &minus;2</p>
-        <p>Hence, the first four terms of the AP are &minus;2, &minus;2, &minus;2, and &minus;2.</p>
-    </div>
-
-    <hr>
-
-    <!-- 2(iii) -->
-    <div>
-        <p><strong>(iii) <i>a</i> = 4, <i>d</i> = &minus;3</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>First term, <i>a</i><sub>1</sub> = <i>a</i> = 4</p>
-        <p>Second term, <i>a</i><sub>2</sub> = <i>a</i> + <i>d</i> = 4 + (&minus;3) = 1</p>
-        <p>Third term, <i>a</i><sub>3</sub> = <i>a</i><sub>2</sub> + <i>d</i> = 1 + (&minus;3) = &minus;2</p>
-        <p>Fourth term, <i>a</i><sub>4</sub> = <i>a</i><sub>3</sub> + <i>d</i> = &minus;2 + (&minus;3) = &minus;5</p>
-        <p>Hence, the first four terms of the AP are 4, 1, &minus;2, and &minus;5.</p>
-    </div>
-
-    <hr>
-
-    <!-- 2(iv) -->
-    <div>
-        <p><strong>(iv) <i>a</i> = &minus;1, <i>d</i> = 1/2</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>First term, <i>a</i><sub>1</sub> = <i>a</i> = &minus;1</p>
-        <p>Second term, <i>a</i><sub>2</sub> = <i>a</i> + <i>d</i> = &minus;1 + 1/2 = &minus;1/2</p>
-        <p>Third term, <i>a</i><sub>3</sub> = <i>a</i><sub>2</sub> + <i>d</i> = &minus;1/2 + 1/2 = 0</p>
-        <p>Fourth term, <i>a</i><sub>4</sub> = <i>a</i><sub>3</sub> + <i>d</i> = 0 + 1/2 = 1/2</p>
-        <p>Hence, the first four terms of the AP are &minus;1, &minus;1/2, 0, and 1/2.</p>
-    </div>
-
-    <hr>
-
-    <!-- 2(v) -->
-    <div>
-        <p><strong>(v) <i>a</i> = &minus;1.25, <i>d</i> = &minus;0.25</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>First term, <i>a</i><sub>1</sub> = <i>a</i> = &minus;1.25</p>
-        <p>Second term, <i>a</i><sub>2</sub> = <i>a</i> + <i>d</i> = &minus;1.25 + (&minus;0.25) = &minus;1.50</p>
-        <p>Third term, <i>a</i><sub>3</sub> = <i>a</i><sub>2</sub> + <i>d</i> = &minus;1.50 + (&minus;0.25) = &minus;1.75</p>
-        <p>Fourth term, <i>a</i><sub>4</sub> = <i>a</i><sub>3</sub> + <i>d</i> = &minus;1.75 + (&minus;0.25) = &minus;2.00</p>
-        <p>Hence, the first four terms of the AP are &minus;1.25, &minus;1.50, &minus;1.75, and &minus;2.00.</p>
-    </div>
-
-    <hr>
-
-    <h2>3. For the following APs, write the first term and the common difference:</h2>
-
-    <!-- 3(i) -->
-    <div>
-        <p><strong>(i) 3, 1, &minus;1, &minus;3, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>The given arithmetic progression is 3, 1, &minus;1, &minus;3, ...</p>
-        <p>First term (<i>a</i>) = 3</p>
-        <p>Common difference (<i>d</i>) = Second term &minus; First term = 1 &minus; 3 = &minus;2</p>
-        <p>Hence, first term <i>a</i> = 3 and common difference <i>d</i> = &minus;2.</p>
-    </div>
-
-    <hr>
-
-    <!-- 3(ii) -->
-    <div>
-        <p><strong>(ii) &minus;5, &minus;1, 3, 7, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>The given arithmetic progression is &minus;5, &minus;1, 3, 7, ...</p>
-        <p>First term (<i>a</i>) = &minus;5</p>
-        <p>Common difference (<i>d</i>) = Second term &minus; First term = &minus;1 &minus; (&minus;5) = &minus;1 + 5 = 4</p>
-        <p>Hence, first term <i>a</i> = &minus;5 and common difference <i>d</i> = 4.</p>
-    </div>
-
-    <hr>
-
-    <!-- 3(iii) -->
-    <div>
-        <p><strong>(iii) 1/3, 5/3, 9/3, 13/3, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>The given arithmetic progression is 1/3, 5/3, 9/3, 13/3, ...</p>
-        <p>First term (<i>a</i>) = 1/3</p>
-        <p>Common difference (<i>d</i>) = Second term &minus; First term = 5/3 &minus; 1/3 = 4/3</p>
-        <p>Hence, first term <i>a</i> = 1/3 and common difference <i>d</i> = 4/3.</p>
-    </div>
-
-    <hr>
-
-    <!-- 3(iv) -->
-    <div>
-        <p><strong>(iv) 0.6, 1.7, 2.8, 3.9, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>The given arithmetic progression is 0.6, 1.7, 2.8, 3.9, ...</p>
-        <p>First term (<i>a</i>) = 0.6</p>
-        <p>Common difference (<i>d</i>) = Second term &minus; First term = 1.7 &minus; 0.6 = 1.1</p>
-        <p>Hence, first term <i>a</i> = 0.6 and common difference <i>d</i> = 1.1.</p>
+<p><strong>(i) The taxi fare after each km when the fare is ₹15 for the first km and ₹8 for each additional km.</strong></p>
 
 <hr>
-         <h2>4. Which of the following are APs ? If they form an AP, find the common difference <i>d</i> and write three more terms.</h2>
 
-    <!-- (i) -->
-    <section>
-        <p><strong>(i) 2, 4, 8, 16, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the terms be <i>a</i><sub>1</sub> = 2, <i>a</i><sub>2</sub> = 4, <i>a</i><sub>3</sub> = 8, and <i>a</i><sub>4</sub> = 16.</p>
-        <p>Finding the differences between consecutive terms:</p>
-        <p><i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> = 4 &minus; 2 = 2</p>
-        <p><i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub> = 8 &minus; 4 = 4</p>
-        <p>Since <i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> &ne; <i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub>, the difference between consecutive terms is not constant. Therefore, the given list of numbers does not form an AP.</p>
-    </section>
+<p><strong>Solution:</strong></p>
 
-    <hr>
+<p>The taxi fare is</p>
 
-    <!-- (ii) -->
-    <section>
-        <p><strong>(ii) 2, 5/2, 3, 7/2, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the terms be <i>a</i><sub>1</sub> = 2, <i>a</i><sub>2</sub> = 5/2, <i>a</i><sub>3</sub> = 3, and <i>a</i><sub>4</sub> = 7/2.</p>
-        <p>Finding the differences between consecutive terms:</p>
-        <p><i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> = 5/2 &minus; 2 = 1/2</p>
-        <p><i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub> = 3 &minus; 5/2 = 1/2</p>
-        <p><i>a</i><sub>4</sub> &minus; <i>a</i><sub>3</sub> = 7/2 &minus; 3 = 1/2</p>
-        <p>Since the difference between consecutive terms is constant, the given list of numbers forms an AP with a common difference <i>d</i> = 1/2.</p>
-        <p>The next three terms are:</p>
-        <p><i>a</i><sub>5</sub> = 7/2 + 1/2 = 4</p>
-        <p><i>a</i><sub>6</sub> = 4 + 1/2 = 9/2</p>
-        <p><i>a</i><sub>7</sub> = 9/2 + 1/2 = 5</p>
-        <p>Hence, the common difference is 1/2 and the next three terms are 4, 9/2, and 5.</p>
-    </section>
+<ul>
+<li>For the first kilometre = ₹15</li>
+<li>For every additional kilometre = ₹8</li>
+</ul>
 
-    <hr>
+<p>Therefore, the total fare after each kilometre is</p>
 
-    <!-- (iii) -->
-    <section>
-        <p><strong>(iii) &minus;1.2, &minus;3.2, &minus;5.2, &minus;7.2, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the terms be <i>a</i><sub>1</sub> = &minus;1.2, <i>a</i><sub>2</sub> = &minus;3.2, <i>a</i><sub>3</sub> = &minus;5.2, and <i>a</i><sub>4</sub> = &minus;7.2.</p>
-        <p>Finding the differences between consecutive terms:</p>
-        <p><i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> = &minus;3.2 &minus; (&minus;1.2) = &minus;2.0</p>
-        <p><i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub> = &minus;5.2 &minus; (&minus;3.2) = &minus;2.0</p>
-        <p><i>a</i><sub>4</sub> &minus; <i>a</i><sub>3</sub> = &minus;7.2 &minus; (&minus;5.2) = &minus;2.0</p>
-        <p>Since the difference between consecutive terms is constant, the given list of numbers forms an AP with a common difference <i>d</i> = &minus;2.</p>
-        <p>The next three terms are:</p>
-        <p><i>a</i><sub>5</sub> = &minus;7.2 + (&minus;2) = &minus;9.2</p>
-        <p><i>a</i><sub>6</sub> = &minus;9.2 + (&minus;2) = &minus;11.2</p>
-        <p><i>a</i><sub>7</sub> = &minus;11.2 + (&minus;2) = &minus;13.2</p>
-        <p>Hence, the common difference is &minus;2 and the next three terms are &minus;9.2, &minus;11.2, and &minus;13.2.</p>
-    </section>
+$$
+15,\;23,\;31,\;39,\;47,\ldots
+$$
 
-    <hr>
+<hr>
 
-    <!-- (iv) -->
-    <section>
-        <p><strong>(iv) &minus;10, &minus;6, &minus;2, 2, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the terms be <i>a</i><sub>1</sub> = &minus;10, <i>a</i><sub>2</sub> = &minus;6, <i>a</i><sub>3</sub> = &minus;2, and <i>a</i><sub>4</sub> = 2.</p>
-        <p>Finding the differences between consecutive terms:</p>
-        <p><i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> = &minus;6 &minus; (&minus;10) = 4</p>
-        <p><i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub> = &minus;2 &minus; (&minus;6) = 4</p>
-        <p><i>a</i><sub>4</sub> &minus; <i>a</i><sub>3</sub> = 2 &minus; (&minus;2) = 4</p>
-        <p>Since the difference between consecutive terms is constant, the given list of numbers forms an AP with a common difference <i>d</i> = 4.</p>
-        <p>The next three terms are:</p>
-        <p><i>a</i><sub>5</sub> = 2 + 4 = 6</p>
-        <p><i>a</i><sub>6</sub> = 6 + 4 = 10</p>
-        <p><i>a</i><sub>7</sub> = 10 + 4 = 14</p>
-        <p>Hence, the common difference is 4 and the next three terms are 6, 10, and 14.</p>
-    </section>
+<p><strong>Find the difference between consecutive terms.</strong></p>
 
-    <hr>
+$$
+23-15=8
+$$
 
-    <!-- (v) -->
-    <section>
-        <p><strong>(v) 3, 3 + &radic;2, 3 + 2&radic;2, 3 + 3&radic;2, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the terms be <i>a</i><sub>1</sub> = 3, <i>a</i><sub>2</sub> = 3 + &radic;2, <i>a</i><sub>3</sub> = 3 + 2&radic;2, and <i>a</i><sub>4</sub> = 3 + 3&radic;2.</p>
-        <p>Finding the differences between consecutive terms:</p>
-        <p><i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> = (3 + &radic;2) &minus; 3 = &radic;2</p>
-        <p><i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub> = (3 + 2&radic;2) &minus; (3 + &radic;2) = &radic;2</p>
-        <p><i>a</i><sub>4</sub> &minus; <i>a</i><sub>3</sub> = (3 + 3&radic;2) &minus; (3 + 2&radic;2) = &radic;2</p>
-        <p>Since the difference between consecutive terms is constant, the given list of numbers forms an AP with a common difference <i>d</i> = &radic;2.</p>
-        <p>The next three terms are:</p>
-        <p><i>a</i><sub>5</sub> = (3 + 3&radic;2) + &radic;2 = 3 + 4&radic;2</p>
-        <p><i>a</i><sub>6</sub> = (3 + 4&radic;2) + &radic;2 = 3 + 5&radic;2</p>
-        <p><i>a</i><sub>7</sub> = (3 + 5&radic;2) + &radic;2 = 3 + 6&radic;2</p>
-        <p>Hence, the common difference is &radic;2 and the next three terms are 3 + 4&radic;2, 3 + 5&radic;2, and 3 + 6&radic;2.</p>
-    </section>
+$$
+31-23=8
+$$
 
-    <hr>
+$$
+39-31=8
+$$
 
-    <!-- (vi) -->
-    <section>
-        <p><strong>(vi) 0.2, 0.22, 0.222, 0.2222, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the terms be <i>a</i><sub>1</sub> = 0.2, <i>a</i><sub>2</sub> = 0.22, <i>a</i><sub>3</sub> = 0.222, and <i>a</i><sub>4</sub> = 0.2222.</p>
-        <p>Finding the differences between consecutive terms:</p>
-        <p><i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> = 0.22 &minus; 0.2 = 0.02</p>
-        <p><i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub> = 0.222 &minus; 0.22 = 0.002</p>
-        <p>Since <i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> &ne; <i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub>, the difference between consecutive terms is not constant. Therefore, the given list of numbers does not form an AP.</p>
-    </section>
+$$
+47-39=8
+$$
 
-    <hr>
+<p>The difference between every two consecutive terms is the same.</p>
 
-    <!-- (vii) -->
-    <section>
-        <p><strong>(vii) 0, &minus;4, &minus;8, &minus;12, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the terms be <i>a</i><sub>1</sub> = 0, <i>a</i><sub>2</sub> = &minus;4, <i>a</i><sub>3</sub> = &minus;8, and <i>a</i><sub>4</sub> = &minus;12.</p>
-        <p>Finding the differences between consecutive terms:</p>
-        <p><i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> = &minus;4 &minus; 0 = &minus;4</p>
-        <p><i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub> = &minus;8 &minus; (&minus;4) = &minus;4</p>
-        <p><i>a</i><sub>4</sub> &minus; <i>a</i><sub>3</sub> = &minus;12 &minus; (&minus;8) = &minus;4</p>
-        <p>Since the difference between consecutive terms is constant, the given list of numbers forms an AP with a common difference <i>d</i> = &minus;4.</p>
-        <p>The next three terms are:</p>
-        <p><i>a</i><sub>5</sub> = &minus;12 + (&minus;4) = &minus;16</p>
-        <p><i>a</i><sub>6</sub> = &minus;16 + (&minus;4) = &minus;20</p>
-        <p><i>a</i><sub>7</sub> = &minus;20 + (&minus;4) = &minus;24</p>
-        <p>Hence, the common difference is &minus;4 and the next three terms are &minus;16, &minus;20, and &minus;24.</p>
-    </section>
+$$
+d=8
+$$
 
-    <hr>
+<hr>
 
-    <!-- (viii) -->
-    <section>
-        <p><strong>(viii) &minus;1/2, &minus;1/2, &minus;1/2, &minus;1/2, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the terms be <i>a</i><sub>1</sub> = &minus;1/2, <i>a</i><sub>2</sub> = &minus;1/2, <i>a</i><sub>3</sub> = &minus;1/2, and <i>a</i><sub>4</sub> = &minus;1/2.</p>
-        <p>Finding the differences between consecutive terms:</p>
-        <p><i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> = &minus;1/2 &minus; (&minus;1/2) = 0</p>
-        <p><i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub> = &minus;1/2 &minus; (&minus;1/2) = 0</p>
-        <p><i>a</i><sub>4</sub> &minus; <i>a</i><sub>3</sub> = &minus;1/2 &minus; (&minus;1/2) = 0</p>
-        <p>Since the difference between consecutive terms is constant, the given list of numbers forms an AP with a common difference <i>d</i> = 0.</p>
-        <p>The next three terms remain unchanged because the common difference is zero:</p>
-        <p><i>a</i><sub>5</sub> = &minus;1/2</p>
-        <p><i>a</i><sub>6</sub> = &minus;1/2</p>
-        <p><i>a</i><sub>7</sub> = &minus;1/2</p>
-        <p>Hence, the common difference is 0 and the next three terms are &minus;1/2, &minus;1/2, and &minus;1/2.</p>
+<p><strong>Conclusion:</strong></p>
 
-    <hr>
-    
-    <!-- (ix) -->
-    <section>
-        <p><strong>(ix) 1, 3, 9, 27, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the terms be <i>a</i><sub>1</sub> = 1, <i>a</i><sub>2</sub> = 3, <i>a</i><sub>3</sub> = 9, and <i>a</i><sub>4</sub> = 27.</p>
-        <p>Finding the differences between consecutive terms:</p>
-        <p><i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> = 3 &minus; 1 = 2</p>
-        <p><i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub> = 9 &minus; 3 = 6</p>
-        <p>Since <i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> &ne; <i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub>, the difference between consecutive terms is not constant. Therefore, the given list of numbers does not form an AP.</p>
-    </section>
+<p>Since the common difference is constant, the given list forms an <strong>Arithmetic Progression (AP)</strong>.</p>
 
-    <hr>
+<hr>
 
-    <!-- (x) -->
-    <section>
-        <p><strong>(x) <i>a</i>, 2<i>a</i>, 3<i>a</i>, 4<i>a</i>, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the terms be <i>a</i><sub>1</sub> = <i>a</i>, <i>a</i><sub>2</sub> = 2<i>a</i>, <i>a</i><sub>3</sub> = 3<i>a</i>, and <i>a</i><sub>4</sub> = 4<i>a</i>.</p>
-        <p>Finding the differences between consecutive terms:</p>
-        <p><i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> = 2<i>a</i> &minus; <i>a</i> = <i>a</i></p>
-        <p><i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub> = 3<i>a</i> &minus; 2<i>a</i> = <i>a</i></p>
-        <p><i>a</i><sub>4</sub> &minus; <i>a</i><sub>3</sub> = 4<i>a</i> &minus; 3<i>a</i> = <i>a</i></p>
-        <p>Since the difference between consecutive terms is constant, the given list of numbers forms an AP with a common difference <i>d</i> = <i>a</i>.</p>
-        <p>The next three terms are:</p>
-        <p><i>a</i><sub>5</sub> = 4<i>a</i> + <i>a</i> = 5<i>a</i></p>
-        <p><i>a</i><sub>6</sub> = 5<i>a</i> + <i>a</i> = 6<i>a</i></p>
-        <p><i>a</i><sub>7</sub> = 6<i>a</i> + <i>a</i> = 7<i>a</i></p>
-        <p>Hence, the common difference is <i>a</i> and the next three terms are 5<i>a</i>, 6<i>a</i>, and 7<i>a</i>.</p>
-    </section>
+<p><strong>Answer:</strong></p>
 
-    <hr>
+<p><strong>Yes, the list forms an Arithmetic Progression because the common difference is</strong></p>
 
-    <!-- (xi) -->
-    <section>
-        <p><strong>(xi) <i>a</i>, <i>a</i><sup>2</sup>, <i>a</i><sup>3</sup>, <i>a</i><sup>4</sup>, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>Let the terms be <i>a</i><sub>1</sub> = <i>a</i>, <i>a</i><sub>2</sub> = <i>a</i><sup>2</sup>, <i>a</i><sub>3</sub> = <i>a</i><sup>3</sup>, and <i>a</i><sub>4</sub> = <i>a</i><sup>4</sup>.</p>
-        <p>Finding the differences between consecutive terms:</p>
-        <p><i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> = <i>a</i><sup>2</sup> &minus; <i>a</i> = <i>a</i>(<i>a</i> &minus; 1)</p>
-        <p><i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub> = <i>a</i><sup>3</sup> &minus; <i>a</i><sup>2</sup> = <i>a</i><sup>2</sup>(<i>a</i> &minus; 1)</p>
-        <p>Since <i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> &ne; <i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub>, the difference between consecutive terms is not constant. Therefore, the given list of numbers does not form an AP.</p>
-    </section>
+$$
+\boxed{8}.
+$$
 
-    <hr>
+<hr>
 
-    <!-- (xii) -->
-    <section>
-        <p><strong>(xii) &radic;2, &radic;8, &radic;18, &radic;32, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>The given terms can be rewritten as:</p>
-        <p><i>a</i><sub>1</sub> = &radic;2</p>
-        <p><i>a</i><sub>2</sub> = &radic;8 = &radic;(4 &times; 2) = 2&radic;2</p>
-        <p><i>a</i><sub>3</sub> = &radic;18 = &radic;(9 &times; 2) = 3&radic;2</p>
-        <p><i>a</i><sub>4</sub> = &radic;32 = &radic;(16 &times; 2) = 4&radic;2</p>
-        <p>Finding the differences between consecutive terms:</p>
-        <p><i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> = 2&radic;2 &minus; &radic;2 = &radic;2</p>
-        <p><i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub> = 3&radic;2 &minus; 2&radic;2 = &radic;2</p>
-        <p><i>a</i><sub>4</sub> &minus; <i>a</i><sub>3</sub> = 4&radic;2 &minus; 3&radic;2 = &radic;2</p>
-        <p>Since the difference between consecutive terms is constant, the given list of numbers forms an AP with a common difference <i>d</i> = &radic;2.</p>
-        <p>The next three terms are:</p>
-        <p><i>a</i><sub>5</sub> = 4&radic;2 + &radic;2 = 5&radic;2 = &radic;(25 &times; 2) = &radic;50</p>
-        <p><i>a</i><sub>6</sub> = 5&radic;2 + &radic;2 = 6&radic;2 = &radic;(36 &times; 2) = &radic;72</p>
-        <p><i>a</i><sub>7</sub> = 6&radic;2 + &radic;2 = 7&radic;2 = &radic;(49 &times; 2) = &radic;98</p>
-        <p>Hence, the common difference is &radic;2 and the next three terms are &radic;50, &radic;72, and &radic;98.</p>
-    </section>
+<h3>Question 1 (ii)</h3>
 
-    <hr>
+<p><strong>In which of the following situations does the list of numbers involved make an arithmetic progression, and why?</strong></p>
 
-    <!-- (xiii) -->
-    <section>
-        <p><strong>(xiii) &radic;3, &radic;6, &radic;9, &radic;12, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>The given terms can be simplified as <i>a</i><sub>1</sub> = &radic;3, <i>a</i><sub>2</sub> = &radic;6, <i>a</i><sub>3</sub> = 3, and <i>a</i><sub>4</sub> = 2&radic;3.</p>
-        <p>Finding the differences between consecutive terms:</p>
-        <p><i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> = &radic;6 &minus; &radic;3 = &radic;3(&radic;2 &minus; 1)</p>
-        <p><i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub> = 3 &minus; &radic;6 = &radic;3(&radic;3 &minus; &radic;2)</p>
-        <p>Since <i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> &ne; <i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub>, the difference between consecutive terms is not constant. Therefore, the given list of numbers does not form an AP.</p>
-    </section>
+<p><strong>(ii) The amount of air present in a cylinder when a vacuum pump removes <span style="font-size:1.1em;">¼</span> of the air remaining in the cylinder at a time.</strong></p>
 
-    <hr>
+<hr>
 
-    <!-- (xiv) -->
-    <section>
-        <p><strong>(xiv) 1<sup>2</sup>, 3<sup>2</sup>, 5<sup>2</sup>, 7<sup>2</sup>, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>The squares can be simplified to absolute values:</p>
-        <p><i>a</i><sub>1</sub> = 1, <i>a</i><sub>2</sub> = 9, <i>a</i><sub>3</sub> = 25, and <i>a</i><sub>4</sub> = 49.</p>
-        <p>Finding the differences between consecutive terms:</p>
-        <p><i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> = 9 &minus; 1 = 8</p>
-        <p><i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub> = 25 &minus; 9 = 16</p>
-        <p>Since <i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> &ne; <i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub>, the difference between consecutive terms is not constant. Therefore, the given list of numbers does not form an AP.</p>
-    </section>
+<p><strong>Solution:</strong></p>
 
-    <hr>
+<p>Suppose the cylinder initially contains <strong>100 units</strong> of air.</p>
 
-    <!-- (xv) -->
-    <section>
-        <p><strong>(xv) 1<sup>2</sup>, 5<sup>2</sup>, 7<sup>2</sup>, 73, ...</strong></p>
-        <p><strong>Solution:</strong></p>
-        <p>The terms can be simplified to numerical values:</p>
-        <p><i>a</i><sub>1</sub> = 1, <i>a</i><sub>2</sub> = 25, <i>a</i><sub>3</sub> = 49, and <i>a</i><sub>4</sub> = 73.</p>
-        <p>Finding the differences between consecutive terms:</p>
-        <p><i>a</i><sub>2</sub> &minus; <i>a</i><sub>1</sub> = 25 &minus; 1 = 24</p>
-        <p><i>a</i><sub>3</sub> &minus; <i>a</i><sub>2</sub> = 49 &minus; 25 = 24</p>
-        <p><i>a</i><sub>4</sub> &minus; <i>a</i><sub>3</sub> = 73 &minus; 49 = 24</p>
-        <p>Since the difference between consecutive terms is constant, the given list of numbers forms an AP with a common difference <i>d</i> = 24.</p>
-        <p>The next three terms are:</p>
-        <p><i>a</i><sub>5</sub> = 73 + 24 = 97</p>
-        <p><i>a</i><sub>6</sub> = 97 + 24 = 121</p>
-        <p><i>a</i><sub>7</sub> = 121 + 24 = 145</p>
-        <p>Hence, the common difference is 24 and the next three terms are 97, 121, and 145.</p>
-    </div>
+<p>After each operation, one-fourth of the remaining air is removed.</p>
+
+<p>Therefore, the amount of air left after each operation is</p>
+
+$$
+100,\;75,\;56.25,\;42.1875,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Find the differences between consecutive terms.</strong></p>
+
+$$
+75-100=-25
+$$
+
+$$
+56.25-75=-18.75
+$$
+
+$$
+42.1875-56.25=-14.0625
+$$
+
+<p>The differences are not equal.</p>
+
+$$
+-25\ne-18.75\ne-14.0625
+$$
+
+<hr>
+
+<p><strong>Conclusion:</strong></p>
+
+<p>Since the difference between consecutive terms is <strong>not constant</strong>, the given list does <strong>not</strong> form an Arithmetic Progression (AP).</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>No, the list does not form an Arithmetic Progression because the common difference is not constant.</strong></p>
+
+<hr>
+
+<h3>Question 1 (iii)</h3>
+
+<p><strong>In which of the following situations does the list of numbers involved make an arithmetic progression, and why?</strong></p>
+
+<p><strong>(iii) The cost of digging a well after every metre of digging, when it costs ₹150 for the first metre and rises by ₹50 for each subsequent metre.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The cost of digging is</p>
+
+<ul>
+<li>For the first metre = ₹150</li>
+<li>For every subsequent metre, the cost increases by ₹50.</li>
+</ul>
+
+<p>Therefore, the costs for successive metres are</p>
+
+$$
+150,\;200,\;250,\;300,\;350,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Find the difference between consecutive terms.</strong></p>
+
+$$
+200-150=50
+$$
+
+$$
+250-200=50
+$$
+
+$$
+300-250=50
+$$
+
+$$
+350-300=50
+$$
+
+<p>The difference between every two consecutive terms is the same.</p>
+
+$$
+d=50
+$$
+
+<hr>
+
+<p><strong>Conclusion:</strong></p>
+
+<p>Since the common difference is constant, the given list forms an <strong>Arithmetic Progression (AP)</strong>.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Yes, the list forms an Arithmetic Progression because the common difference is</strong></p>
+
+$$
+\boxed{50}.
+$$
+
+<hr>
+<h3>Question 1 (iv)</h3>
+
+<p><strong>In which of the following situations does the list of numbers involved make an arithmetic progression, and why?</strong></p>
+
+<p><strong>(iv) The amount of money in the account every year, when ₹10000 is deposited at compound interest at 8% per annum.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The initial amount deposited is</p>
+
+$$
+₹10000.
+$$
+
+<p>At <strong>8% compound interest per annum</strong>, the amount after each year is</p>
+
+$$
+10000,\;10800,\;11664,\;12597.12,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Find the difference between consecutive terms.</strong></p>
+
+$$
+10800-10000=800
+$$
+
+$$
+11664-10800=864
+$$
+
+$$
+12597.12-11664=933.12
+$$
+
+<p>The differences are not equal.</p>
+
+$$
+800\ne864\ne933.12
+$$
+
+<hr>
+
+<p><strong>Conclusion:</strong></p>
+
+<p>Since the difference between consecutive terms is <strong>not constant</strong>, the given list does <strong>not</strong> form an <strong>Arithmetic Progression (AP)</strong>.</p>
+
+<p>In fact, each term is obtained by multiplying the previous term by</p>
+
+$$
+1.08.
+$$
+
+<p>Therefore, it forms a <strong>Geometric Progression (GP)</strong>, not an Arithmetic Progression.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>No, the list does not form an Arithmetic Progression because the common difference is not constant.</strong></p>
+
+<hr>
+<h3>Question 2 (i)</h3>
+
+<p><strong>Write the first four terms of the Arithmetic Progression when the first term and the common difference are given.</strong></p>
+
+<p><strong>Given:</strong></p>
+
+$$
+a=10,\qquad d=10
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The first term is</p>
+
+$$
+a=10.
+$$
+
+<p>The common difference is</p>
+
+$$
+d=10.
+$$
+
+<p>Each successive term is obtained by adding the common difference to the previous term.</p>
+
+<p><strong>First term:</strong></p>
+
+$$
+a=10
+$$
+
+<p><strong>Second term:</strong></p>
+
+$$
+a+d=10+10=20
+$$
+
+<p><strong>Third term:</strong></p>
+
+$$
+a+2d=10+2(10)=30
+$$
+
+<p><strong>Fourth term:</strong></p>
+
+$$
+a+3d=10+3(10)=40
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{10,\;20,\;30,\;40}
+$$
+
+<hr>
+
+<h3>Question 2 (ii)</h3>
+
+<p><strong>Write the first four terms of the Arithmetic Progression when the first term and the common difference are given.</strong></p>
+
+<p><strong>Given:</strong></p>
+
+$$
+a=-2,\qquad d=0
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The first term is</p>
+
+$$
+a=-2.
+$$
+
+<p>The common difference is</p>
+
+$$
+d=0.
+$$
+
+<p>Since the common difference is zero, every term of the AP is the same.</p>
+
+<p><strong>First term:</strong></p>
+
+$$
+-2
+$$
+
+<p><strong>Second term:</strong></p>
+
+$$
+-2+0=-2
+$$
+
+<p><strong>Third term:</strong></p>
+
+$$
+-2+0=-2
+$$
+
+<p><strong>Fourth term:</strong></p>
+
+$$
+-2+0=-2
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{-2,\;-2,\;-2,\;-2}
+$$
+
+<hr>
+<h3>Question 2 (iii)</h3>
+
+<p><strong>Write the first four terms of the Arithmetic Progression when the first term and the common difference are given.</strong></p>
+
+<p><strong>Given:</strong></p>
+
+$$
+a=4,\qquad d=-3
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The first term is</p>
+
+$$
+a=4.
+$$
+
+<p>The common difference is</p>
+
+$$
+d=-3.
+$$
+
+<p>Each successive term is obtained by adding the common difference to the previous term.</p>
+
+<p><strong>First term:</strong></p>
+
+$$
+4
+$$
+
+<p><strong>Second term:</strong></p>
+
+$$
+4+(-3)=1
+$$
+
+<p><strong>Third term:</strong></p>
+
+$$
+1+(-3)=-2
+$$
+
+<p><strong>Fourth term:</strong></p>
+
+$$
+-2+(-3)=-5
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{4,\;1,\;-2,\;-5}
+$$
+
+<hr>
+
+<h3>Question 2 (iv)</h3>
+
+<p><strong>Write the first four terms of the Arithmetic Progression when the first term and the common difference are given.</strong></p>
+
+<p><strong>Given:</strong></p>
+
+$$
+a=-10,\qquad d=-2
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The first term is</p>
+
+$$
+a=-10.
+$$
+
+<p>The common difference is</p>
+
+$$
+d=-2.
+$$
+
+<p>Each successive term is obtained by adding the common difference to the previous term.</p>
+
+<p><strong>First term:</strong></p>
+
+$$
+-10
+$$
+
+<p><strong>Second term:</strong></p>
+
+$$
+-10+(-2)=-12
+$$
+
+<p><strong>Third term:</strong></p>
+
+$$
+-12+(-2)=-14
+$$
+
+<p><strong>Fourth term:</strong></p>
+
+$$
+-14+(-2)=-16
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{-10,\;-12,\;-14,\;-16}
+$$
+
+<hr>
+
+<h3>Question 2 (v)</h3>
+
+<p><strong>Write the first four terms of the Arithmetic Progression when the first term and the common difference are given.</strong></p>
+
+<p><strong>Given:</strong></p>
+
+$$
+a=-1,\qquad d=\frac12
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The first term is</p>
+
+$$
+a=-1.
+$$
+
+<p>The common difference is</p>
+
+$$
+d=\frac12.
+$$
+
+<p>Each successive term is obtained by adding the common difference to the previous term.</p>
+
+<p><strong>First term:</strong></p>
+
+$$
+-1
+$$
+
+<p><strong>Second term:</strong></p>
+
+$$
+-1+\frac12=-\frac12
+$$
+
+<p><strong>Third term:</strong></p>
+
+$$
+-\frac12+\frac12=0
+$$
+
+<p><strong>Fourth term:</strong></p>
+
+$$
+0+\frac12=\frac12
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{-1,\;-\frac12,\;0,\;\frac12}
+$$
+
+<hr>
+<h3>Question 3 (i)</h3>
+
+<p><strong>For the following Arithmetic Progressions (APs), write the first term and the common difference.</strong></p>
+
+<p><strong>AP:</strong></p>
+
+$$
+7,\;10,\;13,\;16,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The first term of an AP is the first number in the sequence.</p>
+
+$$
+a=7
+$$
+
+<p>The common difference is obtained by subtracting the first term from the second term.</p>
+
+$$
+d=10-7=3
+$$
+
+<p>Verification:</p>
+
+$$
+13-10=3
+$$
+
+$$
+16-13=3
+$$
+
+<p>Hence, the common difference is constant.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{a=7,\qquad d=3}
+$$
+
+<hr>
+
+<h3>Question 3 (ii)</h3>
+
+<p><strong>For the following Arithmetic Progressions (APs), write the first term and the common difference.</strong></p>
+
+<p><strong>AP:</strong></p>
+
+$$
+-18,\;-15,\;-12,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The first term is</p>
+
+$$
+a=-18
+$$
+
+<p>The common difference is</p>
+
+$$
+d=-15-(-18)
+$$
+
+$$
+=3
+$$
+
+<p>Verification:</p>
+
+$$
+-12-(-15)=3
+$$
+
+<p>Hence, the common difference is constant.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{a=-18,\qquad d=3}
+$$
+
+<hr>
+<h3>Question 3 (iii)</h3>
+
+<p><strong>For the following Arithmetic Progressions (APs), write the first term and the common difference.</strong></p>
+
+<p><strong>AP:</strong></p>
+
+$$
+-5,\;-3,\;-1,\;1,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The first term of the AP is</p>
+
+$$
+a=-5
+$$
+
+<p>The common difference is obtained by subtracting the first term from the second term.</p>
+
+$$
+d=-3-(-5)
+$$
+
+$$
+=2
+$$
+
+<p>Verification:</p>
+
+$$
+-1-(-3)=2
+$$
+
+$$
+1-(-1)=2
+$$
+
+<p>Since the difference between consecutive terms is the same, the common difference is</p>
+
+$$
+d=2.
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{a=-5,\qquad d=2}
+$$
+
+<hr>
+
+<h3>Question 3 (iv)</h3>
+
+<p><strong>For the following Arithmetic Progressions (APs), write the first term and the common difference.</strong></p>
+
+<p><strong>AP:</strong></p>
+
+$$
+\frac12,\;1,\;\frac32,\;2,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The first term is</p>
+
+$$
+a=\frac12
+$$
+
+<p>The common difference is</p>
+
+$$
+d=1-\frac12
+$$
+
+$$
+=\frac12
+$$
+
+<p>Verification:</p>
+
+$$
+\frac32-1=\frac12
+$$
+
+$$
+2-\frac32=\frac12
+$$
+
+<p>Hence, the common difference is constant.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{a=\frac12,\qquad d=\frac12}
+$$
+
+<hr>
+
+<h3>Question 4 (i)</h3>
+
+<p><strong>Which of the following are APs? If they form an AP, find the common difference <em>d</em> and write three more terms.</strong></p>
+
+<p><strong>(i)</strong></p>
+
+$$
+2,\;4,\;8,\;16,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Find the difference between consecutive terms.</p>
+
+$$
+4-2=2
+$$
+
+$$
+8-4=4
+$$
+
+$$
+16-8=8
+$$
+
+<p>Since</p>
+
+$$
+2\ne4\ne8,
+$$
+
+<p>the common difference is not constant.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>The given sequence is <u>not</u> an Arithmetic Progression (AP).</strong></p>
+
+<hr>
+
+<h3>Question 4 (ii)</h3>
+
+<p><strong>(ii)</strong></p>
+
+$$
+2,\;\frac{5}{2},\;3,\;\frac{7}{2},\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Find the difference between consecutive terms.</p>
+
+$$
+\frac52-2=\frac12
+$$
+
+$$
+3-\frac52=\frac12
+$$
+
+$$
+\frac72-3=\frac12
+$$
+
+<p>The common difference is the same.</p>
+
+$$
+d=\frac12
+$$
+
+<p>Hence, the sequence is an Arithmetic Progression.</p>
+
+<p>Add the common difference repeatedly to obtain the next three terms.</p>
+
+$$
+\frac72+\frac12=4
+$$
+
+$$
+4+\frac12=\frac92
+$$
+
+$$
+\frac92+\frac12=5
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>The given sequence is an <strong>Arithmetic Progression</strong>.</p>
+
+$$
+\boxed{d=\frac12}
+$$
+
+<p>The next three terms are</p>
+
+$$
+\boxed{4,\;\frac92,\;5}
+$$
+
+<hr>
+
+<h3>Question 4 (iii)</h3>
+
+<p><strong>(iii)</strong></p>
+
+$$
+-1.2,\;-3.2,\;-5.2,\;-7.2,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Find the difference between consecutive terms.</p>
+
+$$
+-3.2-(-1.2)=-2
+$$
+
+$$
+-5.2-(-3.2)=-2
+$$
+
+$$
+-7.2-(-5.2)=-2
+$$
+
+<p>The common difference is the same.</p>
+
+$$
+d=-2
+$$
+
+<p>Hence, the sequence is an Arithmetic Progression.</p>
+
+<p>Add the common difference repeatedly to obtain the next three terms.</p>
+
+$$
+-7.2+(-2)=-9.2
+$$
+
+$$
+-9.2+(-2)=-11.2
+$$
+
+$$
+-11.2+(-2)=-13.2
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>The given sequence is an <strong>Arithmetic Progression</strong>.</p>
+
+$$
+\boxed{d=-2}
+$$
+
+<p>The next three terms are</p>
+
+$$
+\boxed{-9.2,\;-11.2,\;-13.2}
+$$
+
+<hr>
+
+<h3>Question 4 (iv)</h3>
+
+<p><strong>(iv)</strong></p>
+
+$$
+-10,\;-6,\;-2,\;2,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Find the difference between consecutive terms.</p>
+
+$$
+-6-(-10)=4
+$$
+
+$$
+-2-(-6)=4
+$$
+
+$$
+2-(-2)=4
+$$
+
+<p>The common difference is the same.</p>
+
+$$
+d=4
+$$
+
+<p>Hence, the sequence is an Arithmetic Progression.</p>
+
+<p>Add the common difference repeatedly to obtain the next three terms.</p>
+
+$$
+2+4=6
+$$
+
+$$
+6+4=10
+$$
+
+$$
+10+4=14
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>The given sequence is an <strong>Arithmetic Progression</strong>.</p>
+
+$$
+\boxed{d=4}
+$$
+
+<p>The next three terms are</p>
+
+$$
+\boxed{6,\;10,\;14}
+$$
+
+<hr>
+
+<h3>Question 4 (v)</h3>
+
+<p><strong>(v)</strong></p>
+
+$$
+3,\;3+\sqrt2,\;3+2\sqrt2,\;3+3\sqrt2,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Find the difference between consecutive terms.</p>
+
+$$
+(3+\sqrt2)-3=\sqrt2
+$$
+
+$$
+(3+2\sqrt2)-(3+\sqrt2)=\sqrt2
+$$
+
+$$
+(3+3\sqrt2)-(3+2\sqrt2)=\sqrt2
+$$
+
+<p>The common difference is the same.</p>
+
+$$
+d=\sqrt2
+$$
+
+<p>Hence, the sequence is an Arithmetic Progression.</p>
+
+<p>Add the common difference repeatedly to obtain the next three terms.</p>
+
+$$
+3+3\sqrt2+\sqrt2=3+4\sqrt2
+$$
+
+$$
+3+4\sqrt2+\sqrt2=3+5\sqrt2
+$$
+
+$$
+3+5\sqrt2+\sqrt2=3+6\sqrt2
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>The given sequence is an <strong>Arithmetic Progression</strong>.</p>
+
+$$
+\boxed{d=\sqrt2}
+$$
+
+<p>The next three terms are</p>
+
+$$
+\boxed{3+4\sqrt2,\;3+5\sqrt2,\;3+6\sqrt2}
+$$
+
+<hr>
+
+<h3>Question 4 (vi)</h3>
+
+<p><strong>(vi)</strong></p>
+
+$$
+0.2,\;0.22,\;0.222,\;0.2222,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Find the difference between consecutive terms.</p>
+
+$$
+0.22-0.2=0.02
+$$
+
+$$
+0.222-0.22=0.002
+$$
+
+$$
+0.2222-0.222=0.0002
+$$
+
+<p>Since</p>
+
+$$
+0.02\ne0.002\ne0.0002,
+$$
+
+<p>the common difference is not constant.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>The given sequence is <u>not</u> an Arithmetic Progression (AP).</strong></p>
+
+<hr>
+<h3>Question 4 (vii)</h3>
+
+<p><strong>(vii)</strong></p>
+
+$$
+0,\;-4,\;-8,\;-12,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Find the difference between consecutive terms.</p>
+
+$$
+-4-0=-4
+$$
+
+$$
+-8-(-4)=-4
+$$
+
+$$
+-12-(-8)=-4
+$$
+
+<p>The common difference is the same.</p>
+
+$$
+d=-4
+$$
+
+<p>Hence, the sequence is an Arithmetic Progression.</p>
+
+<p>Add the common difference repeatedly to obtain the next three terms.</p>
+
+$$
+-12+(-4)=-16
+$$
+
+$$
+-16+(-4)=-20
+$$
+
+$$
+-20+(-4)=-24
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>The given sequence is an <strong>Arithmetic Progression</strong>.</p>
+
+$$
+\boxed{d=-4}
+$$
+
+<p>The next three terms are</p>
+
+$$
+\boxed{-16,\;-20,\;-24}
+$$
+
+<hr>
+
+<h3>Question 4 (viii)</h3>
+
+<p><strong>(viii)</strong></p>
+
+$$
+-\frac12,\;-\frac12,\;-\frac12,\;-\frac12,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Find the difference between consecutive terms.</p>
+
+$$
+-\frac12-\left(-\frac12\right)=0
+$$
+
+$$
+-\frac12-\left(-\frac12\right)=0
+$$
+
+$$
+-\frac12-\left(-\frac12\right)=0
+$$
+
+<p>The common difference is the same.</p>
+
+$$
+d=0
+$$
+
+<p>Hence, the sequence is an Arithmetic Progression.</p>
+
+<p>Add the common difference repeatedly to obtain the next three terms.</p>
+
+$$
+-\frac12
+$$
+
+$$
+-\frac12
+$$
+
+$$
+-\frac12
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>The given sequence is an <strong>Arithmetic Progression</strong>.</p>
+
+$$
+\boxed{d=0}
+$$
+
+<p>The next three terms are</p>
+
+$$
+\boxed{-\frac12,\;-\frac12,\;-\frac12}
+$$
+
+<hr>
+
+<h3>Question 4 (ix)</h3>
+
+<p><strong>(ix)</strong></p>
+
+$$
+1,\;3,\;9,\;27,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Find the difference between consecutive terms.</p>
+
+$$
+3-1=2
+$$
+
+$$
+9-3=6
+$$
+
+$$
+27-9=18
+$$
+
+<p>Since</p>
+
+$$
+2\ne6\ne18,
+$$
+
+<p>the common difference is not constant.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>The given sequence is <u>not</u> an Arithmetic Progression (AP).</strong></p>
+
+<hr>
+<h3>Question 4 (x)</h3>
+
+<p><strong>(x)</strong></p>
+
+$$
+a,\;2a,\;3a,\;4a,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Find the difference between consecutive terms.</p>
+
+$$
+2a-a=a
+$$
+
+$$
+3a-2a=a
+$$
+
+$$
+4a-3a=a
+$$
+
+<p>The common difference is the same.</p>
+
+$$
+d=a
+$$
+
+<p>Hence, the sequence is an Arithmetic Progression.</p>
+
+<p>Add the common difference repeatedly to obtain the next three terms.</p>
+
+$$
+4a+a=5a
+$$
+
+$$
+5a+a=6a
+$$
+
+$$
+6a+a=7a
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>The given sequence is an <strong>Arithmetic Progression</strong>.</p>
+
+$$
+\boxed{d=a}
+$$
+
+<p>The next three terms are</p>
+
+$$
+\boxed{5a,\;6a,\;7a}
+$$
+
+<hr>
+
+<h3>Question 4 (xi)</h3>
+
+<p><strong>(xi)</strong></p>
+
+$$
+a,\;a^2,\;a^3,\;a^4,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Find the difference between consecutive terms.</p>
+
+$$
+a^2-a
+$$
+
+$$
+a^3-a^2
+$$
+
+$$
+a^4-a^3
+$$
+
+<p>These differences are not equal in general.</p>
+
+<p>Therefore, the common difference is not constant.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>The given sequence is <u>not</u> an Arithmetic Progression (AP).</strong></p>
+
+<hr>
+
+<h3>Question 4 (xii)</h3>
+
+<p><strong>(xii)</strong></p>
+
+$$
+\sqrt2,\;\sqrt8,\;\sqrt{18},\;\sqrt{32},\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Simplify each term.</p>
+
+$$
+\sqrt8=2\sqrt2
+$$
+
+$$
+\sqrt{18}=3\sqrt2
+$$
+
+$$
+\sqrt{32}=4\sqrt2
+$$
+
+<p>Thus, the sequence becomes</p>
+
+$$
+\sqrt2,\;2\sqrt2,\;3\sqrt2,\;4\sqrt2,\;\ldots
+$$
+
+<p>Find the difference between consecutive terms.</p>
+
+$$
+2\sqrt2-\sqrt2=\sqrt2
+$$
+
+$$
+3\sqrt2-2\sqrt2=\sqrt2
+$$
+
+$$
+4\sqrt2-3\sqrt2=\sqrt2
+$$
+
+<p>The common difference is the same.</p>
+
+$$
+d=\sqrt2
+$$
+
+<p>Hence, the sequence is an Arithmetic Progression.</p>
+
+<p>Add the common difference repeatedly to obtain the next three terms.</p>
+
+$$
+4\sqrt2+\sqrt2=5\sqrt2
+$$
+
+$$
+5\sqrt2+\sqrt2=6\sqrt2
+$$
+
+$$
+6\sqrt2+\sqrt2=7\sqrt2
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>The given sequence is an <strong>Arithmetic Progression</strong>.</p>
+
+$$
+\boxed{d=\sqrt2}
+$$
+
+<p>The next three terms are</p>
+
+$$
+\boxed{5\sqrt2,\;6\sqrt2,\;7\sqrt2}
+$$
+
+<hr>
+<h3>Question 4 (xiii)</h3>
+
+<p><strong>(xiii)</strong></p>
+
+$$
+1^2,\;2^2,\;3^2,\;4^2,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Evaluate the terms.</p>
+
+$$
+1,\;4,\;9,\;16,\;\ldots
+$$
+
+<p>Find the difference between consecutive terms.</p>
+
+$$
+4-1=3
+$$
+
+$$
+9-4=5
+$$
+
+$$
+16-9=7
+$$
+
+<p>Since</p>
+
+$$
+3\ne5\ne7,
+$$
+
+<p>the common difference is not constant.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>The given sequence is <u>not</u> an Arithmetic Progression (AP).</strong></p>
+
+<hr>
+
+<h3>Question 4 (xiv)</h3>
+
+<p><strong>(xiv)</strong></p>
+
+$$
+1,\;\frac12,\;\frac13,\;\frac14,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Find the difference between consecutive terms.</p>
+
+$$
+\frac12-1=-\frac12
+$$
+
+$$
+\frac13-\frac12=-\frac16
+$$
+
+$$
+\frac14-\frac13=-\frac1{12}
+$$
+
+<p>Since</p>
+
+$$
+-\frac12\ne-\frac16\ne-\frac1{12},
+$$
+
+<p>the common difference is not constant.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>The given sequence is <u>not</u> an Arithmetic Progression (AP).</strong></p>
+
+<hr>
+
+<h3>Question 4 (xv)</h3>
+
+<p><strong>(xv)</strong></p>
+
+$$
+1,\;\sqrt2,\;\sqrt3,\;2,\;\ldots
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>Find the difference between consecutive terms.</p>
+
+$$
+\sqrt2-1
+$$
+
+$$
+\sqrt3-\sqrt2
+$$
+
+$$
+2-\sqrt3
+$$
+
+<p>These differences are not equal.</p>
+
+<p>Therefore, the common difference is not constant.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>The given sequence is <u>not</u> an Arithmetic Progression (AP).</strong></p>
+
+<hr>
 
 
-      </article>
+
+</div>
+
+</article>
       <aside class="related-box">
         <h2>Other solutions</h2>
               <a href=".././index.html">Home</a>
@@ -722,5 +1906,15 @@ S<sub>n</sub> = n/2 (a + l)
     </main>
     <!-- ━━━ FOOTER ━━━ -->
  <div id="footer"></div>  
+
+  <script>
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$",  right: "$",  inline: true  }
+      ]
+    });
+  </script>
+
   </body>
 </html>
