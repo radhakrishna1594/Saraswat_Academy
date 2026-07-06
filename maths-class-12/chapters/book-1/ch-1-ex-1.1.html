@@ -1252,12 +1252,3884 @@ $$
 <hr>
 <hr>
 
+<h3>Question 2</h3>
+
+<p><strong>Show that the relation</strong> <strong>R</strong> <strong>in the set of real numbers</strong> 
+$$
+\mathbb{R}
+$$
+<strong>defined by</strong>
+
+$$
+R=\{(a,b):a\le b^2\}
+$$
+
+<strong>is neither reflexive nor symmetric nor transitive.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given relation is</p>
+
+$$
+(a,b)\in R
+\iff
+a\le b^2.
+$$
+
+<p>We shall check each property one by one.</p>
+
+<hr>
+
+<h3>1. Reflexive</h3>
+
+<p>A relation is <strong>reflexive</strong> if</p>
+
+$$
+(a,a)\in R
+$$
+
+<p>for every</p>
+
+$$
+a\in\mathbb{R}.
+$$
+
+<p>For reflexivity, we must have</p>
+
+$$
+a\le a^2
+$$
+
+<p>for every real number.</p>
+
+<p>This is not always true.</p>
+
+<p>Take</p>
+
+$$
+a=\frac12.
+$$
+
+<p>Then</p>
+
+$$
+\frac12\le\left(\frac12\right)^2
+$$
+
+$$
+\frac12\le\frac14,
+$$
+
+<p>which is false.</p>
+
+<p>Hence,</p>
+
+$$
+\left(\frac12,\frac12\right)\notin R.
+$$
+
+<p>Therefore, the relation is <strong>not reflexive</strong>.</p>
+
+<hr>
+
+<h3>2. Symmetric</h3>
+
+<p>A relation is <strong>symmetric</strong> if</p>
+
+$$
+(a,b)\in R
+\Longrightarrow
+(b,a)\in R.
+$$
+
+<p>Take</p>
+
+$$
+a=1,\qquad b=2.
+$$
+
+<p>Then</p>
+
+$$
+1\le2^2
+$$
+
+$$
+1\le4,
+$$
+
+<p>which is true.</p>
+
+<p>Therefore,</p>
+
+$$
+(1,2)\in R.
+$$
+
+<p>Now check the reverse pair.</p>
+
+$$
+2\le1^2
+$$
+
+$$
+2\le1,
+$$
+
+<p>which is false.</p>
+
+<p>Hence,</p>
+
+$$
+(2,1)\notin R.
+$$
+
+<p>Therefore, the relation is <strong>not symmetric</strong>.</p>
+
+<hr>
+
+<h3>3. Transitive</h3>
+
+<p>A relation is <strong>transitive</strong> if</p>
+
+$$
+(a,b)\in R
+\quad\text{and}\quad
+(b,c)\in R
+\Longrightarrow
+(a,c)\in R.
+$$
+
+<p>Take</p>
+
+$$
+a=4,\qquad
+b=-2,\qquad
+c=1.
+$$
+
+<p>Then</p>
+
+$$
+4\le(-2)^2
+$$
+
+$$
+4\le4,
+$$
+
+<p>so</p>
+
+$$
+(4,-2)\in R.
+$$
+
+<p>Also,</p>
+
+$$
+-2\le1^2
+$$
+
+$$
+-2\le1,
+$$
+
+<p>so</p>
+
+$$
+(-2,1)\in R.
+$$
+
+<p>Now check</p>
+
+$$
+(4,1).
+$$
+
+<p>We have</p>
+
+$$
+4\le1^2
+$$
+
+$$
+4\le1,
+$$
+
+<p>which is false.</p>
+
+<p>Hence,</p>
+
+$$
+(4,1)\notin R.
+$$
+
+<p>Therefore, the relation is <strong>not transitive</strong>.</p>
+
+<hr>
+
+<h3>Final Answer</h3>
+
+<table border="1" cellpadding="8" cellspacing="0">
+
+<tr>
+<th>Property</th>
+<th>Result</th>
+<th>Reason</th>
+</tr>
+
+<tr>
+<td>Reflexive</td>
+<td>No</td>
+<td>For example, $\left(\frac12,\frac12\right)\notin R$.</td>
+</tr>
+
+<tr>
+<td>Symmetric</td>
+<td>No</td>
+<td>$(1,2)\in R$, but $(2,1)\notin R$.</td>
+</tr>
+
+<tr>
+<td>Transitive</td>
+<td>No</td>
+<td>$(4,-2)\in R$ and $(-2,1)\in R$, but $(4,1)\notin R$.</td>
+</tr>
+
+</table>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{\text{The relation is neither reflexive, nor symmetric, nor transitive.}}
+$$
+
+<hr>
+
+<h3>Question 3</h3>
+
+<p><strong>Check whether the relation</strong> <strong>R</strong> <strong>defined on the set</strong>
+
+$$
+A=\{1,2,3,4,5,6\}
+$$
+
+<p><strong>by</strong></p>
+
+$$
+R=\{(a,b):b=a+1\}
+$$
+
+<p><strong>is reflexive, symmetric or transitive.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The relation is defined by</p>
+
+$$
+b=a+1.
+$$
+
+<p>Hence, the ordered pairs belonging to the relation are</p>
+
+$$
+R=\{(1,2),(2,3),(3,4),(4,5),(5,6)\}.
+$$
+
+<hr>
+
+<h3>1. Reflexive</h3>
+
+<p>A relation is <strong>reflexive</strong> if</p>
+
+$$
+(a,a)\in R
+$$
+
+<p>for every</p>
+
+$$
+a\in A.
+$$
+
+<p>Here, the relation contains only the pairs</p>
+
+$$
+(1,2),\;(2,3),\;(3,4),\;(4,5),\;(5,6).
+$$
+
+<p>No ordered pair of the form</p>
+
+$$
+(a,a)
+$$
+
+<p>belongs to the relation.</p>
+
+<p>For example,</p>
+
+$$
+(1,1)\notin R,\qquad
+(2,2)\notin R.
+$$
+
+<p>Therefore, the relation is <strong>not reflexive</strong>.</p>
+
+<hr>
+
+<h3>2. Symmetric</h3>
+
+<p>A relation is <strong>symmetric</strong> if</p>
+
+$$
+(a,b)\in R
+\Longrightarrow
+(b,a)\in R.
+$$
+
+<p>Consider the ordered pair</p>
+
+$$
+(1,2)\in R.
+$$
+
+<p>Its reverse pair is</p>
+
+$$
+(2,1).
+$$
+
+<p>Check whether it belongs to the relation.</p>
+
+<p>For</p>
+
+$$
+(2,1),
+$$
+
+<p>we require</p>
+
+$$
+1=2+1,
+$$
+
+<p>which is false.</p>
+
+<p>Hence,</p>
+
+$$
+(2,1)\notin R.
+$$
+
+<p>Therefore, the relation is <strong>not symmetric</strong>.</p>
+
+<hr>
+
+<h3>3. Transitive</h3>
+
+<p>A relation is <strong>transitive</strong> if</p>
+
+$$
+(a,b)\in R
+\quad\text{and}\quad
+(b,c)\in R
+\Longrightarrow
+(a,c)\in R.
+$$
+
+<p>Consider the pairs</p>
+
+$$
+(1,2)\in R
+$$
+
+<p>and</p>
+
+$$
+(2,3)\in R.
+$$
+
+<p>If the relation were transitive, then</p>
+
+$$
+(1,3)
+$$
+
+<p>must also belong to</p>
+
+$$
+R.
+$$
+
+<p>But for</p>
+
+$$
+(1,3),
+$$
+
+<p>we have</p>
+
+$$
+3\ne1+1.
+$$
+
+<p>Hence,</p>
+
+$$
+(1,3)\notin R.
+$$
+
+<p>Therefore, the relation is <strong>not transitive</strong>.</p>
+
+<hr>
+
+<h3>Final Answer</h3>
+
+<table border="1" cellpadding="8" cellspacing="0">
+
+<tr>
+<th>Property</th>
+<th>Result</th>
+<th>Reason</th>
+</tr>
+
+<tr>
+<td>Reflexive</td>
+<td>No</td>
+<td>No ordered pair of the form $(a,a)$ belongs to the relation.</td>
+</tr>
+
+<tr>
+<td>Symmetric</td>
+<td>No</td>
+<td>$(1,2)\in R$, but $(2,1)\notin R$.</td>
+</tr>
+
+<tr>
+<td>Transitive</td>
+<td>No</td>
+<td>$(1,2)$ and $(2,3)$ belong to $R$, but $(1,3)\notin R$.</td>
+</tr>
+
+</table>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{\text{The relation is neither reflexive, nor symmetric, nor transitive.}}
+$$
+
+<hr>
+<h3>Question 4</h3>
+
+<p><strong>Show that the relation</strong> <strong>R</strong> <strong>on the set of real numbers</strong>
+
+$$
+\mathbb{R}
+$$
+
+<p><strong>defined by</strong></p>
+
+$$
+R=\{(a,b):a\le b\}
+$$
+
+<p><strong>is reflexive and transitive but not symmetric.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given relation is</p>
+
+$$
+(a,b)\in R
+\iff
+a\le b.
+$$
+
+<p>We shall verify each property one by one.</p>
+
+<hr>
+
+<h3>1. Reflexive</h3>
+
+<p>A relation is <strong>reflexive</strong> if</p>
+
+$$
+(a,a)\in R
+$$
+
+<p>for every</p>
+
+$$
+a\in\mathbb{R}.
+$$
+
+<p>Since every real number is always less than or equal to itself,</p>
+
+$$
+a\le a.
+$$
+
+<p>Therefore,</p>
+
+$$
+(a,a)\in R
+$$
+
+<p>for every</p>
+
+$$
+a\in\mathbb{R}.
+$$
+
+<p>Hence, the relation is <strong>reflexive</strong>.</p>
+
+<hr>
+
+<h3>2. Symmetric</h3>
+
+<p>A relation is <strong>symmetric</strong> if</p>
+
+$$
+(a,b)\in R
+\Longrightarrow
+(b,a)\in R.
+$$
+
+<p>Take</p>
+
+$$
+a=2,\qquad b=5.
+$$
+
+<p>Since</p>
+
+$$
+2\le5,
+$$
+
+<p>we have</p>
+
+$$
+(2,5)\in R.
+$$
+
+<p>Now check the reverse pair.</p>
+
+$$
+5\le2,
+$$
+
+<p>which is false.</p>
+
+<p>Therefore,</p>
+
+$$
+(5,2)\notin R.
+$$
+
+<p>Hence, the relation is <strong>not symmetric</strong>.</p>
+
+<hr>
+
+<h3>3. Transitive</h3>
+
+<p>A relation is <strong>transitive</strong> if</p>
+
+$$
+(a,b)\in R
+\quad\text{and}\quad
+(b,c)\in R
+\Longrightarrow
+(a,c)\in R.
+$$
+
+<p>Suppose</p>
+
+$$
+(a,b)\in R
+$$
+
+<p>and</p>
+
+$$
+(b,c)\in R.
+$$
+
+<p>Then</p>
+
+$$
+a\le b
+$$
+
+<p>and</p>
+
+$$
+b\le c.
+$$
+
+<p>By the transitive property of inequalities,</p>
+
+$$
+a\le c.
+$$
+
+<p>Therefore,</p>
+
+$$
+(a,c)\in R.
+$$
+
+<p>Hence, the relation is <strong>transitive</strong>.</p>
+
+<hr>
+
+<h3>Final Answer</h3>
+
+<table border="1" cellpadding="8" cellspacing="0">
+
+<tr>
+<th>Property</th>
+<th>Result</th>
+<th>Reason</th>
+</tr>
+
+<tr>
+<td>Reflexive</td>
+<td>Yes</td>
+<td>Every real number satisfies $a\le a$.</td>
+</tr>
+
+<tr>
+<td>Symmetric</td>
+<td>No</td>
+<td>$(2,5)\in R$, but $(5,2)\notin R$.</td>
+</tr>
+
+<tr>
+<td>Transitive</td>
+<td>Yes</td>
+<td>If $a\le b$ and $b\le c$, then $a\le c$.</td>
+</tr>
+
+</table>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{\text{The relation is reflexive and transitive, but not symmetric.}}
+$$
+
+<hr>
+
+<h3>Question 5</h3>
+
+<p><strong>Prove that the relation</strong> <strong>R</strong> <strong>in the set</strong>
+
+$$
+A=\{1,2,3,\ldots,14\}
+$$
+
+<p><strong>defined by</strong></p>
+
+$$
+R=\{(a,b):3a-b=0\}
+$$
+
+<p><strong>is neither reflexive nor symmetric nor transitive.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given relation is</p>
+
+$$
+3a-b=0
+$$
+
+<p>or equivalently,</p>
+
+$$
+b=3a.
+$$
+
+<p>Since both <strong>a</strong> and <strong>b</strong> belong to the set</p>
+
+$$
+A=\{1,2,3,\ldots,14\},
+$$
+
+<p>the ordered pairs in the relation are</p>
+
+$$
+R=\{(1,3),(2,6),(3,9),(4,12)\}.
+$$
+
+<p>For</p>
+
+$$
+a=5,
+$$
+
+<p>we get</p>
+
+$$
+b=15,
+$$
+
+<p>which does not belong to the set</p>
+
+$$
+A.
+$$
+
+<p>Hence, there are no more ordered pairs.</p>
+
+<hr>
+
+<h3>1. Reflexive</h3>
+
+<p>A relation is <strong>reflexive</strong> if</p>
+
+$$
+(a,a)\in R
+$$
+
+<p>for every</p>
+
+$$
+a\in A.
+$$
+
+<p>For</p>
+
+$$
+(a,a)\in R,
+$$
+
+<p>we must have</p>
+
+$$
+3a-a=0
+$$
+
+$$
+2a=0.
+$$
+
+<p>This is not true for any element of the given set.</p>
+
+<p>For example,</p>
+
+$$
+(1,1)\notin R,\qquad
+(2,2)\notin R.
+$$
+
+<p>Therefore, the relation is <strong>not reflexive</strong>.</p>
+
+<hr>
+
+<h3>2. Symmetric</h3>
+
+<p>A relation is <strong>symmetric</strong> if</p>
+
+$$
+(a,b)\in R
+\Longrightarrow
+(b,a)\in R.
+$$
+
+<p>Consider the ordered pair</p>
+
+$$
+(1,3)\in R.
+$$
+
+<p>The reverse ordered pair is</p>
+
+$$
+(3,1).
+$$
+
+<p>Check whether it belongs to the relation.</p>
+
+$$
+3(3)-1=8\ne0.
+$$
+
+<p>Hence,</p>
+
+$$
+(3,1)\notin R.
+$$
+
+<p>Therefore, the relation is <strong>not symmetric</strong>.</p>
+
+<hr>
+
+<h3>3. Transitive</h3>
+
+<p>A relation is <strong>transitive</strong> if</p>
+
+$$
+(a,b)\in R
+\quad\text{and}\quad
+(b,c)\in R
+\Longrightarrow
+(a,c)\in R.
+$$
+
+<p>Consider the ordered pairs</p>
+
+$$
+(1,3)\in R
+$$
+
+<p>and</p>
+
+$$
+(3,9)\in R.
+$$
+
+<p>If the relation were transitive, then</p>
+
+$$
+(1,9)
+$$
+
+<p>must also belong to the relation.</p>
+
+<p>Check:</p>
+
+$$
+3(1)-9=-6\ne0.
+$$
+
+<p>Hence,</p>
+
+$$
+(1,9)\notin R.
+$$
+
+<p>Therefore, the relation is <strong>not transitive</strong>.</p>
+
+<hr>
+
+<h3>Final Answer</h3>
+
+<table border="1" cellpadding="8" cellspacing="0">
+
+<tr>
+<th>Property</th>
+<th>Result</th>
+<th>Reason</th>
+</tr>
+
+<tr>
+<td>Reflexive</td>
+<td>No</td>
+<td>No ordered pair of the form $(a,a)$ satisfies $3a-b=0$.</td>
+</tr>
+
+<tr>
+<td>Symmetric</td>
+<td>No</td>
+<td>$(1,3)\in R$, but $(3,1)\notin R$.</td>
+</tr>
+
+<tr>
+<td>Transitive</td>
+<td>No</td>
+<td>$(1,3)$ and $(3,9)$ belong to $R$, but $(1,9)\notin R$.</td>
+</tr>
+
+</table>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{\text{The relation is neither reflexive, nor symmetric, nor transitive.}}
+$$
+
+<hr>
+
+<h3>Question 6</h3>
+
+<p><strong>Show that the relation</strong> <strong>R</strong> <strong>in the set</strong>
+
+$$
+A=\{1,2,3\}
+$$
+
+<p><strong>given by</strong></p>
+
+$$
+R=\{(1,2),(2,1)\}
+$$
+
+<p><strong>is symmetric but neither reflexive nor transitive.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given set is</p>
+
+$$
+A=\{1,2,3\}
+$$
+
+<p>and the relation is</p>
+
+$$
+R=\{(1,2),(2,1)\}.
+$$
+
+<p>We examine each property one by one.</p>
+
+<hr>
+
+<h3>1. Reflexive</h3>
+
+<p>A relation is <strong>reflexive</strong> if</p>
+
+$$
+(a,a)\in R
+$$
+
+<p>for every</p>
+
+$$
+a\in A.
+$$
+
+<p>Therefore, the relation must contain the ordered pairs</p>
+
+$$
+(1,1),\ (2,2),\ (3,3).
+$$
+
+<p>But</p>
+
+$$
+R=\{(1,2),(2,1)\}
+$$
+
+<p>does not contain any of these ordered pairs.</p>
+
+<p>Hence,</p>
+
+$$
+(1,1)\notin R,\qquad
+(2,2)\notin R,\qquad
+(3,3)\notin R.
+$$
+
+<p>Therefore, the relation is <strong>not reflexive</strong>.</p>
+
+<hr>
+
+<h3>2. Symmetric</h3>
+
+<p>A relation is <strong>symmetric</strong> if</p>
+
+$$
+(a,b)\in R
+\Longrightarrow
+(b,a)\in R.
+$$
+
+<p>Here,</p>
+
+$$
+(1,2)\in R
+$$
+
+<p>and its reverse pair</p>
+
+$$
+(2,1)\in R.
+$$
+
+<p>Similarly,</p>
+
+$$
+(2,1)\in R
+$$
+
+<p>and its reverse pair</p>
+
+$$
+(1,2)\in R.
+$$
+
+<p>Thus, whenever</p>
+
+$$
+(a,b)\in R,
+$$
+
+<p>the pair</p>
+
+$$
+(b,a)
+$$
+
+<p>also belongs to</p>
+
+$$
+R.
+$$
+
+<p>Therefore, the relation is <strong>symmetric</strong>.</p>
+
+<hr>
+
+<h3>3. Transitive</h3>
+
+<p>A relation is <strong>transitive</strong> if</p>
+
+$$
+(a,b)\in R
+\quad\text{and}\quad
+(b,c)\in R
+\Longrightarrow
+(a,c)\in R.
+$$
+
+<p>Consider the ordered pairs</p>
+
+$$
+(1,2)\in R
+$$
+
+<p>and</p>
+
+$$
+(2,1)\in R.
+$$
+
+<p>If the relation were transitive, then</p>
+
+$$
+(1,1)
+$$
+
+<p>must also belong to</p>
+
+$$
+R.
+$$
+
+<p>But</p>
+
+$$
+(1,1)\notin R.
+$$
+
+<p>Hence, the transitive property fails.</p>
+
+<p>Similarly,</p>
+
+$$
+(2,1)\in R
+$$
+
+<p>and</p>
+
+$$
+(1,2)\in R,
+$$
+
+<p>but</p>
+
+$$
+(2,2)\notin R.
+$$
+
+<p>Therefore, the relation is <strong>not transitive</strong>.</p>
+
+<hr>
+
+<h3>Final Answer</h3>
+
+<table border="1" cellpadding="8" cellspacing="0">
+
+<tr>
+<th>Property</th>
+<th>Result</th>
+<th>Reason</th>
+</tr>
+
+<tr>
+<td>Reflexive</td>
+<td>No</td>
+<td>$(1,1)$, $(2,2)$ and $(3,3)$ do not belong to the relation.</td>
+</tr>
+
+<tr>
+<td>Symmetric</td>
+<td>Yes</td>
+<td>$(1,2)\in R$ and $(2,1)\in R$.</td>
+</tr>
+
+<tr>
+<td>Transitive</td>
+<td>No</td>
+<td>$(1,2)$ and $(2,1)$ belong to $R$, but $(1,1)\notin R$.</td>
+</tr>
+
+</table>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{\text{The relation is symmetric but neither reflexive nor transitive.}}
+$$
+
+<hr>
+
+<h3>Question 7</h3>
+
+<p><strong>Show that the relation</strong> <strong>R</strong> <strong>on the set</strong>
+
+$$
+A=\{\text{all the books in a library of a college}\}
+$$
+
+<p><strong>defined by</strong></p>
+
+$$
+R=\{(x,y):x\text{ and }y\text{ have the same number of pages}\}
+$$
+
+<p><strong>is an equivalence relation.</strong></p>
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>To prove that <strong>R</strong> is an <strong>equivalence relation</strong>, we must show that it is:</p>
+
+<ul>
+<li>Reflexive</li>
+<li>Symmetric</li>
+<li>Transitive</li>
+</ul>
+
+<hr>
+
+<h3>1. Reflexive</h3>
+
+<p>A relation is <strong>reflexive</strong> if</p>
+
+$$
+(x,x)\in R
+$$
+
+<p>for every</p>
+
+$$
+x\in A.
+$$
+
+<p>Every book has the same number of pages as itself.</p>
+
+<p>Hence,</p>
+
+$$
+(x,x)\in R
+$$
+
+<p>for every book</p>
+
+$$
+x\in A.
+$$
+
+<p>Therefore, the relation is <strong>reflexive</strong>.</p>
+
+<hr>
+
+<h3>2. Symmetric</h3>
+
+<p>A relation is <strong>symmetric</strong> if</p>
+
+$$
+(x,y)\in R
+\Longrightarrow
+(y,x)\in R.
+$$
+
+<p>Suppose</p>
+
+$$
+(x,y)\in R.
+$$
+
+<p>Then book</p>
+
+$$
+x
+$$
+
+<p>and book</p>
+
+$$
+y
+$$
+
+<p>have the same number of pages.</p>
+
+<p>Therefore, book</p>
+
+$$
+y
+$$
+
+<p>also has the same number of pages as book</p>
+
+$$
+x.
+$$
+
+<p>Hence,</p>
+
+$$
+(y,x)\in R.
+$$
+
+<p>Therefore, the relation is <strong>symmetric</strong>.</p>
+
+<hr>
+
+<h3>3. Transitive</h3>
+
+<p>A relation is <strong>transitive</strong> if</p>
+
+$$
+(x,y)\in R
+\quad\text{and}\quad
+(y,z)\in R
+\Longrightarrow
+(x,z)\in R.
+$$
+
+<p>Suppose</p>
+
+$$
+(x,y)\in R
+$$
+
+<p>and</p>
+
+$$
+(y,z)\in R.
+$$
+
+<p>Then</p>
+
+<ul>
+<li>Book <strong>x</strong> and book <strong>y</strong> have the same number of pages.</li>
+<li>Book <strong>y</strong> and book <strong>z</strong> have the same number of pages.</li>
+</ul>
+
+<p>Therefore, book</p>
+
+$$
+x
+$$
+
+<p>and book</p>
+
+$$
+z
+$$
+
+<p>also have the same number of pages.</p>
+
+<p>Hence,</p>
+
+$$
+(x,z)\in R.
+$$
+
+<p>Therefore, the relation is <strong>transitive</strong>.</p>
+
+<hr>
+
+<h3>Final Conclusion</h3>
+
+<table border="1" cellpadding="8" cellspacing="0">
+
+<tr>
+<th>Property</th>
+<th>Result</th>
+<th>Reason</th>
+</tr>
+
+<tr>
+<td>Reflexive</td>
+<td>Yes</td>
+<td>Every book has the same number of pages as itself.</td>
+</tr>
+
+<tr>
+<td>Symmetric</td>
+<td>Yes</td>
+<td>If two books have the same number of pages, then the reverse is also true.</td>
+</tr>
+
+<tr>
+<td>Transitive</td>
+<td>Yes</td>
+<td>If book <em>x</em> and <em>y</em> have the same number of pages, and <em>y</em> and <em>z</em> have the same number of pages, then <em>x</em> and <em>z</em> also have the same number of pages.</td>
+</tr>
+
+</table>
+
+<hr>
+
+<p>Since the relation is <strong>reflexive</strong>, <strong>symmetric</strong>, and <strong>transitive</strong>, it is an <strong>equivalence relation</strong>.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{\text{The relation }R\text{ is an equivalence relation.}}
+$$
+
+<hr>
+<h3>Question 8</h3>
+
+<p><strong>Show that the relation</strong> <strong>R</strong> <strong>in the set</strong>
+
+$$
+A=\{1,2,3,4,5\}
+$$
+
+<p><strong>given by</strong></p>
+
+$$
+R=\{(a,b):|a-b|\text{ is even}\}
+$$
+
+<p><strong>is an equivalence relation. Show that all the elements of</strong>
+
+$$
+\{1,3,5\}
+$$
+
+<p><strong>are related to each other and all the elements of</strong>
+
+$$
+\{2,4\}
+$$
+
+<p><strong>are related to each other. But no element of</strong>
+
+$$
+\{1,3,5\}
+$$
+
+<p><strong>is related to any element of</strong>
+
+$$
+\{2,4\}.
+$$
+
+<hr>
+
+<p><strong>Solution:</strong></p>
+
+<p>The relation is defined by</p>
+
+$$
+(a,b)\in R
+\iff
+|a-b|
+\text{ is even.}
+$$
+
+<p>An even difference means that both numbers have the <strong>same parity</strong>, i.e., both are odd or both are even.</p>
+
+<p>The set</p>
+
+$$
+A=\{1,2,3,4,5\}
+$$
+
+<p>contains</p>
+
+<ul>
+<li>Odd elements:
+$$
+\{1,3,5\}
+$$
+</li>
+
+<li>Even elements:
+$$
+\{2,4\}
+$$
+</li>
+</ul>
+
+<hr>
+
+<h3>1. Reflexive</h3>
+
+<p>A relation is <strong>reflexive</strong> if</p>
+
+$$
+(a,a)\in R
+$$
+
+<p>for every</p>
+
+$$
+a\in A.
+$$
+
+<p>Since</p>
+
+$$
+|a-a|=0,
+$$
+
+<p>and</p>
+
+$$
+0
+$$
+
+<p>is an even number, every element is related to itself.</p>
+
+<p>Therefore, the relation is <strong>reflexive</strong>.</p>
+
+<hr>
+
+<h3>2. Symmetric</h3>
+
+<p>A relation is <strong>symmetric</strong> if</p>
+
+$$
+(a,b)\in R
+\Longrightarrow
+(b,a)\in R.
+$$
+
+<p>If</p>
+
+$$
+|a-b|
+$$
+
+<p>is even, then</p>
+
+$$
+|b-a|=|a-b|,
+$$
+
+<p>which is also even.</p>
+
+<p>Hence,</p>
+
+$$
+(b,a)\in R.
+$$
+
+<p>Therefore, the relation is <strong>symmetric</strong>.</p>
+
+<hr>
+
+<h3>3. Transitive</h3>
+
+<p>A relation is <strong>transitive</strong> if</p>
+
+$$
+(a,b)\in R
+\quad\text{and}\quad
+(b,c)\in R
+\Longrightarrow
+(a,c)\in R.
+$$
+
+<p>If</p>
+
+$$
+|a-b|
+$$
+
+<p>and</p>
+
+$$
+|b-c|
+$$
+
+<p>are even, then</p>
+
+$$
+a
+$$
+
+<p>and</p>
+
+$$
+b
+$$
+
+<p>have the same parity, and</p>
+
+$$
+b
+$$
+
+<p>and</p>
+
+$$
+c
+$$
+
+<p>also have the same parity.</p>
+
+<p>Hence,</p>
+
+$$
+a
+$$
+
+<p>and</p>
+
+$$
+c
+$$
+
+<p>have the same parity.</p>
+
+<p>Therefore,</p>
+
+$$
+|a-c|
+$$
+
+<p>is even.</p>
+
+<p>Thus,</p>
+
+$$
+(a,c)\in R.
+$$
+
+<p>Hence, the relation is <strong>transitive</strong>.</p>
+
+<hr>
+
+<h3>Therefore, R is an Equivalence Relation.</h3>
+
+<p>Since the relation is</p>
+
+<ul>
+<li>Reflexive</li>
+<li>Symmetric</li>
+<li>Transitive</li>
+</ul>
+
+<p>it is an <strong>equivalence relation</strong>.</p>
+
+<hr>
+
+<h3>Elements of the set</h3>
+
+$$
+\{1,3,5\}
+$$
+
+<p>All these numbers are odd.</p>
+
+<p>The difference between any two odd numbers is always even.</p>
+
+<p>For example,</p>
+
+$$
+|1-3|=2,
+$$
+
+$$
+|1-5|=4,
+$$
+
+$$
+|3-5|=2.
+$$
+
+<p>All these are even numbers.</p>
+
+<p>Hence, every element of</p>
+
+$$
+\{1,3,5\}
+$$
+
+<p>is related to every other element of the same set.</p>
+
+<hr>
+
+<h3>Elements of the set</h3>
+
+$$
+\{2,4\}
+$$
+
+<p>Both numbers are even.</p>
+
+<p>Their difference is</p>
+
+$$
+|2-4|=2,
+$$
+
+<p>which is even.</p>
+
+<p>Therefore, the elements</p>
+
+$$
+2
+$$
+
+<p>and</p>
+
+$$
+4
+$$
+
+<p>are related to each other.</p>
+
+<hr>
+
+<h3>Relation between</h3>
+
+$$
+\{1,3,5\}
+$$
+
+<p>and</p>
+
+$$
+\{2,4\}
+$$
+
+<p>Every element of</p>
+
+$$
+\{1,3,5\}
+$$
+
+<p>is odd, while every element of</p>
+
+$$
+\{2,4\}
+$$
+
+<p>is even.</p>
+
+<p>The difference between an odd number and an even number is always odd.</p>
+
+<p>For example,</p>
+
+$$
+|1-2|=1,
+$$
+
+$$
+|3-4|=1,
+$$
+
+$$
+|5-2|=3.
+$$
+
+<p>All these differences are odd.</p>
+
+<p>Hence, no element of</p>
+
+$$
+\{1,3,5\}
+$$
+
+<p>is related to any element of</p>
+
+$$
+\{2,4\}.
+$$
+
+<hr>
+
+<h3>Final Answer</h3>
+
+<table border="1" cellpadding="8" cellspacing="0">
+
+<tr>
+<th>Property</th>
+<th>Result</th>
+</tr>
+
+<tr>
+<td>Reflexive</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td>Symmetric</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td>Transitive</td>
+<td>Yes</td>
+</tr>
+
+</table>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{\text{The relation }R\text{ is an equivalence relation.}}
+$$
+
+<p>The equivalence classes are</p>
+
+$$
+\boxed{\{1,3,5\}\quad\text{and}\quad\{2,4\}.}
+$$
+
+<p>All elements within each class are related to one another, whereas no element of one class is related to any element of the other class.</p>
+
+<hr>
+<h3>Question 9 (i)</h3>
+
+<p><strong>Show that the relation</strong></p>
+
+$$
+R=\{(a,b):|a-b|\text{ is a multiple of }4\}
+$$
+
+<p><strong>on the set</strong></p>
+
+$$
+A=\{0,1,2,\ldots,12\}
+$$
+
+<p><strong>is an equivalence relation. Find the set of all elements related to 1.</strong></p>
+
+<hr>
+
+<h3>Proof</h3>
+
+<p>To prove that <strong>R</strong> is an equivalence relation, we verify the three properties.</p>
+
+<h3>Reflexive</h3>
+
+<p>For every</p>
+
+$$
+a\in A,
+$$
+
+$$
+|a-a|=0,
+$$
+
+<p>and</p>
+
+$$
+0=4\times0,
+$$
+
+<p>which is a multiple of 4.</p>
+
+<p>Hence,</p>
+
+$$
+(a,a)\in R
+$$
+
+<p>for every</p>
+
+$$
+a\in A.
+$$
+
+<p>Therefore, the relation is <strong>reflexive</strong>.</p>
+
+<h3>Symmetric</h3>
+
+<p>Suppose</p>
+
+$$
+(a,b)\in R.
+$$
+
+<p>Then</p>
+
+$$
+|a-b|
+$$
+
+<p>is a multiple of 4.</p>
+
+<p>Since</p>
+
+$$
+|b-a|=|a-b|,
+$$
+
+<p>it is also a multiple of 4.</p>
+
+<p>Therefore,</p>
+
+$$
+(b,a)\in R.
+$$
+
+<p>Hence, the relation is <strong>symmetric</strong>.</p>
+
+<h3>Transitive</h3>
+
+<p>Suppose</p>
+
+$$
+(a,b)\in R
+$$
+
+<p>and</p>
+
+$$
+(b,c)\in R.
+$$
+
+<p>Then there exist integers</p>
+
+$$
+m,n
+$$
+
+<p>such that</p>
+
+$$
+a-b=4m
+$$
+
+<p>and</p>
+
+$$
+b-c=4n.
+$$
+
+<p>Adding the two equations,</p>
+
+$$
+a-c=4m+4n
+$$
+
+$$
+=4(m+n).
+$$
+
+<p>Since</p>
+
+$$
+m+n
+$$
+
+<p>is an integer,</p>
+
+$$
+|a-c|
+$$
+
+<p>is also a multiple of 4.</p>
+
+<p>Hence,</p>
+
+$$
+(a,c)\in R.
+$$
+
+<p>Therefore, the relation is <strong>transitive</strong>.</p>
+
+<p>Since the relation is reflexive, symmetric and transitive, it is an <strong>equivalence relation</strong>.</p>
+
+<hr>
+
+<h3>Elements Related to 1</h3>
+
+<p>We need all elements</p>
+
+$$
+x\in A
+$$
+
+<p>such that</p>
+
+$$
+|x-1|
+$$
+
+<p>is a multiple of 4.</p>
+
+<p>Checking the elements of</p>
+
+$$
+A=\{0,1,2,\ldots,12\},
+$$
+
+$$
+|1-1|=0,
+$$
+
+$$
+|5-1|=4,
+$$
+
+$$
+|9-1|=8.
+$$
+
+<p>All are multiples of 4.</p>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{\{1,5,9\}}
+$$
+
+<hr>
+
+<h3>Question 9 (ii)</h3>
+
+<p><strong>Show that the relation</strong></p>
+
+$$
+R=\{(a,b):a=b\}
+$$
+
+<p><strong>on the set</strong></p>
+
+$$
+A=\{0,1,2,\ldots,12\}
+$$
+
+<p><strong>is an equivalence relation. Find the set of all elements related to 1.</strong></p>
+
+<hr>
+
+<h3>Proof</h3>
+
+<p>We verify the three properties.</p>
+
+<h3>Reflexive</h3>
+
+<p>For every</p>
+
+$$
+a\in A,
+$$
+
+$$
+a=a.
+$$
+
+<p>Therefore,</p>
+
+$$
+(a,a)\in R.
+$$
+
+<p>Hence, the relation is <strong>reflexive</strong>.</p>
+
+<h3>Symmetric</h3>
+
+<p>Suppose</p>
+
+$$
+(a,b)\in R.
+$$
+
+<p>Then</p>
+
+$$
+a=b.
+$$
+
+<p>Therefore,</p>
+
+$$
+b=a,
+$$
+
+<p>which implies</p>
+
+$$
+(b,a)\in R.
+$$
+
+<p>Hence, the relation is <strong>symmetric</strong>.</p>
+
+<h3>Transitive</h3>
+
+<p>Suppose</p>
+
+$$
+(a,b)\in R
+$$
+
+<p>and</p>
+
+$$
+(b,c)\in R.
+$$
+
+<p>Then</p>
+
+$$
+a=b
+$$
+
+<p>and</p>
+
+$$
+b=c.
+$$
+
+<p>Therefore,</p>
+
+$$
+a=c,
+$$
+
+<p>which implies</p>
+
+$$
+(a,c)\in R.
+$$
+
+<p>Hence, the relation is <strong>transitive</strong>.</p>
+
+<p>Therefore, the relation is an <strong>equivalence relation</strong>.</p>
+
+<hr>
+
+<h3>Elements Related to 1</h3>
+
+<p>An element</p>
+
+$$
+x
+$$
+
+<p>is related to</p>
+
+$$
+1
+$$
+
+<p>only if</p>
+
+$$
+x=1.
+$$
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{\{1\}}
+$$
+
+<hr>
+<h3>Question 10 (i)</h3>
+
+<p><strong>Give an example of a relation which is symmetric but neither reflexive nor transitive.</strong></p>
+
+<hr>
+
+<h3>Solution</h3>
+
+<p>Let</p>
+
+$$
+A=\{1,2,3\}
+$$
+
+<p>and define</p>
+
+$$
+R=\{(1,2),(2,1)\}.
+$$
+
+<p><strong>Verification:</strong></p>
+
+<ul>
+
+<li><strong>Symmetric:</strong><br>
+
+Since
+
+$$
+(1,2)\in R
+$$
+
+and
+
+$$
+(2,1)\in R,
+$$
+
+the relation is symmetric.
+
+</li>
+
+<li><strong>Not Reflexive:</strong><br>
+
+The pairs
+
+$$
+(1,1),\ (2,2),\ (3,3)
+$$
+
+are not in
+
+$$
+R.
+$$
+
+Hence, the relation is not reflexive.
+
+</li>
+
+<li><strong>Not Transitive:</strong><br>
+
+Since
+
+$$
+(1,2)\in R
+$$
+
+and
+
+$$
+(2,1)\in R,
+$$
+
+transitivity requires
+
+$$
+(1,1)\in R.
+$$
+
+But
+
+$$
+(1,1)\notin R.
+$$
+
+Therefore, the relation is not transitive.
+
+</li>
+
+</ul>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{R=\{(1,2),(2,1)\}}
+$$
+
+<hr>
+
+<h3>Question 10 (ii)</h3>
+
+<p><strong>Give an example of a relation which is transitive but neither reflexive nor symmetric.</strong></p>
+
+<hr>
+
+<h3>Solution</h3>
+
+<p>Let</p>
+
+$$
+A=\{1,2,3\}
+$$
+
+<p>and define</p>
+
+$$
+R=\{(1,2)\}.
+$$
+
+<p><strong>Verification:</strong></p>
+
+<ul>
+
+<li><strong>Transitive:</strong><br>
+
+There are no ordered pairs of the form
+
+$$
+(a,b)
+$$
+
+and
+
+$$
+(b,c)
+$$
+
+in
+
+$$
+R.
+$$
+
+Hence, the transitive condition is satisfied.
+
+</li>
+
+<li><strong>Not Reflexive:</strong><br>
+
+The pairs
+
+$$
+(1,1),\ (2,2),\ (3,3)
+$$
+
+are not in
+
+$$
+R.
+$$
+
+Hence, the relation is not reflexive.
+
+</li>
+
+<li><strong>Not Symmetric:</strong><br>
+
+Since
+
+$$
+(1,2)\in R
+$$
+
+but
+
+$$
+(2,1)\notin R,
+$$
+
+the relation is not symmetric.
+
+</li>
+
+</ul>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{R=\{(1,2)\}}
+$$
+
+<hr>
+
+<h3>Question 10 (iii)</h3>
+
+<p><strong>Give an example of a relation which is reflexive and symmetric but not transitive.</strong></p>
+
+<hr>
+
+<h3>Solution</h3>
+
+<p>Let</p>
+
+$$
+A=\{1,2,3\}
+$$
+
+<p>and define</p>
+
+$$
+R=\{(1,1),(2,2),(3,3),(1,2),(2,1),(2,3),(3,2)\}.
+$$
+
+<p><strong>Verification:</strong></p>
+
+<ul>
+
+<li><strong>Reflexive:</strong><br>
+
+Since
+
+$$
+(1,1),\ (2,2),\ (3,3)
+$$
+
+belong to
+
+$$
+R,
+$$
+
+the relation is reflexive.
+
+</li>
+
+<li><strong>Symmetric:</strong><br>
+
+The pair
+
+$$
+(1,2)
+$$
+
+has its reverse
+
+$$
+(2,1),
+$$
+
+and the pair
+
+$$
+(2,3)
+$$
+
+has its reverse
+
+$$
+(3,2).
+$$
+
+Hence, the relation is symmetric.
+
+</li>
+
+<li><strong>Not Transitive:</strong><br>
+
+Since
+
+$$
+(1,2)\in R
+$$
+
+and
+
+$$
+(2,3)\in R,
+$$
+
+transitivity requires
+
+$$
+(1,3)\in R.
+$$
+
+But
+
+$$
+(1,3)\notin R.
+$$
+
+Therefore, the relation is not transitive.
+
+</li>
+
+</ul>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{R=\{(1,1),(2,2),(3,3),(1,2),(2,1),(2,3),(3,2)\}}
+$$
+
+<hr>
+
+<h3>Question 10 (iv)</h3>
+
+<p><strong>Give an example of a relation which is reflexive and transitive but not symmetric.</strong></p>
+
+<hr>
+
+<h3>Solution</h3>
+
+<p>Let</p>
+
+$$
+A=\{1,2,3\}
+$$
+
+<p>and define</p>
+
+$$
+R=\{(1,1),(2,2),(3,3),(1,2)\}.
+$$
+
+<p><strong>Verification:</strong></p>
+
+<ul>
+
+<li><strong>Reflexive:</strong><br>
+
+Since
+
+$$
+(1,1),\ (2,2),\ (3,3)
+$$
+
+belong to
+
+$$
+R,
+$$
+
+the relation is reflexive.
+
+</li>
+
+<li><strong>Transitive:</strong><br>
+
+The only non-reflexive pair is
+
+$$
+(1,2).
+$$
+
+Since
+
+$$
+(2,2)\in R,
+$$
+
+transitivity requires
+
+$$
+(1,2)\in R,
+$$
+
+which already belongs to
+
+$$
+R.
+$$
+
+All other possible combinations also satisfy transitivity.
+
+Hence, the relation is transitive.
+
+</li>
+
+<li><strong>Not Symmetric:</strong><br>
+
+Since
+
+$$
+(1,2)\in R
+$$
+
+but
+
+$$
+(2,1)\notin R,
+$$
+
+the relation is not symmetric.
+
+</li>
+
+</ul>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{R=\{(1,1),(2,2),(3,3),(1,2)\}}
+$$
+
+<hr>
+
+<h3>Question 10 (v)</h3>
+
+<p><strong>Give an example of a relation which is symmetric and transitive but not reflexive.</strong></p>
+
+<hr>
+
+<h3>Solution</h3>
+
+<p>Let</p>
+
+$$
+A=\{1,2,3\}
+$$
+
+<p>and define</p>
+
+$$
+R=\{(1,1)\}.
+$$
+
+<p><strong>Verification:</strong></p>
+
+<ul>
+
+<li><strong>Symmetric:</strong><br>
+
+Since
+
+$$
+(1,1)
+$$
+
+is its own reverse, the relation is symmetric.
+
+</li>
+
+<li><strong>Transitive:</strong><br>
+
+Since
+
+$$
+(1,1)\in R
+$$
+
+and
+
+$$
+(1,1)\in R,
+$$
+
+transitivity requires
+
+$$
+(1,1)\in R,
+$$
+
+which is true.
+
+Hence, the relation is transitive.
+
+</li>
+
+<li><strong>Not Reflexive:</strong><br>
+
+For the set
+
+$$
+A=\{1,2,3\},
+$$
+
+a reflexive relation must contain
+
+$$
+(1,1),\ (2,2),\ (3,3).
+$$
+
+But
+
+$$
+(2,2)\notin R
+$$
+
+and
+
+$$
+(3,3)\notin R.
+$$
+
+Hence, the relation is not reflexive.
+
+</li>
+
+</ul>
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{R=\{(1,1)\}}
+$$
+
+<hr>
+<h3>Question 11</h3>
+
+<p><strong>Show that the relation</strong></p>
+
+$$
+R=\{(P,Q):\text{distance of the point }P\text{ from the origin is the same as the distance of the point }Q\text{ from the origin}\}
+$$
+
+<p><strong>defined on the set of all points in a plane is an equivalence relation. Further, show that the set of all points related to a point</strong></p>
+
+$$
+P\neq(0,0)
+$$
+
+<p><strong>is the circle passing through</strong></p>
+
+$$
+P
+$$
+
+<p><strong>with origin as centre.</strong></p>
+
+<hr>
+
+<h3>Proof</h3>
+
+<p>Let</p>
+
+$$
+O=(0,0)
+$$
+
+<p>be the origin.</p>
+
+<p>For any two points</p>
+
+$$
+P,Q,
+$$
+
+<p>the relation</p>
+
+$$
+(P,Q)\in R
+$$
+
+<p>means</p>
+
+$$
+OP=OQ,
+$$
+
+<p>where</p>
+
+$$
+OP
+$$
+
+<p>and</p>
+
+$$
+OQ
+$$
+
+<p>denote the distances of the points</p>
+
+$$
+P
+$$
+
+<p>and</p>
+
+$$
+Q
+$$
+
+<p>from the origin.</p>
+
+<p>We verify the three properties of an equivalence relation.</p>
+
+<hr>
+
+<h3>Reflexive</h3>
+
+<p>For every point</p>
+
+$$
+P,
+$$
+
+<p>its distance from the origin is equal to itself.</p>
+
+$$
+OP=OP.
+$$
+
+<p>Hence,</p>
+
+$$
+(P,P)\in R.
+$$
+
+<p>Therefore, the relation is <strong>reflexive</strong>.</p>
+
+<hr>
+
+<h3>Symmetric</h3>
+
+<p>Suppose</p>
+
+$$
+(P,Q)\in R.
+$$
+
+<p>Then</p>
+
+$$
+OP=OQ.
+$$
+
+<p>Since equality is symmetric,</p>
+
+$$
+OQ=OP.
+$$
+
+<p>Therefore,</p>
+
+$$
+(Q,P)\in R.
+$$
+
+<p>Hence, the relation is <strong>symmetric</strong>.</p>
+
+<hr>
+
+<h3>Transitive</h3>
+
+<p>Suppose</p>
+
+$$
+(P,Q)\in R
+$$
+
+<p>and</p>
+
+$$
+(Q,S)\in R.
+$$
+
+<p>Then</p>
+
+$$
+OP=OQ
+$$
+
+<p>and</p>
+
+$$
+OQ=OS.
+$$
+
+<p>Therefore,</p>
+
+$$
+OP=OS.
+$$
+
+<p>Hence,</p>
+
+$$
+(P,S)\in R.
+$$
+
+<p>Thus, the relation is <strong>transitive</strong>.</p>
+
+<hr>
+
+<p>Since the relation is reflexive, symmetric and transitive, it is an <strong>equivalence relation</strong>.</p>
+
+<hr>
+
+<h3>Set of all Points Related to a Point</h3>
+
+<p>Let</p>
+
+$$
+P\neq(0,0)
+$$
+
+<p>and let</p>
+
+$$
+OP=r,
+$$
+
+<p>where</p>
+
+$$
+r>0.
+$$
+
+<p>A point</p>
+
+$$
+Q
+$$
+
+<p>is related to</p>
+
+$$
+P
+$$
+
+<p>if and only if</p>
+
+$$
+OQ=OP=r.
+$$
+
+<p>Thus, every point related to</p>
+
+$$
+P
+$$
+
+<p>is at a distance</p>
+
+$$
+r
+$$
+
+<p>from the origin.</p>
+
+<p>But the set of all points at a fixed distance</p>
+
+$$
+r
+$$
+
+<p>from the origin is a <strong>circle</strong> having the origin as its centre and radius</p>
+
+$$
+r.
+$$
+
+<p>Since</p>
+
+$$
+OP=r,
+$$
+
+<p>the point</p>
+
+$$
+P
+$$
+
+<p>also lies on this circle.</p>
+
+<p>Hence, the set of all points related to</p>
+
+$$
+P
+$$
+
+<p>is the circle passing through</p>
+
+$$
+P
+$$
+
+<p>with the origin as its centre.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<ul>
+
+<li>The relation is <strong>reflexive</strong>, <strong>symmetric</strong> and <strong>transitive</strong>.</li>
+
+<li>Therefore, it is an <strong>equivalence relation</strong>.</li>
+
+<li>The equivalence class of a point</li>
+
+</ul>
+
+$$
+P\neq(0,0)
+$$
+
+<p>is</p>
+
+$$
+\boxed{\{Q:OQ=OP\}},
+$$
+
+<p>which is the <strong>circle centred at the origin and passing through</strong></p>
+
+$$
+\boxed{P.}
+$$
+
+<hr>
+<h3>Question 12</h3>
+
+<p><strong>Show that the relation</strong></p>
+
+$$
+R=\{(T_1,T_2):T_1\text{ is similar to }T_2\}
+$$
+
+<p><strong>defined on the set of all triangles is an equivalence relation. Consider three right-angled triangles</strong></p>
+
+$$
+T_1=(3,4,5),\qquad
+T_2=(5,12,13),\qquad
+T_3=(6,8,10).
+$$
+
+<p><strong>Which triangles among</strong></p>
+
+$$
+T_1,\ T_2\ \text{and}\ T_3
+$$
+
+<p><strong>are related?</strong></p>
+
+<hr>
+
+<h3>Proof</h3>
+
+<p>We verify the three properties of an equivalence relation.</p>
+
+<hr>
+
+<h3>Reflexive</h3>
+
+<p>Every triangle is similar to itself because all its corresponding angles are equal and the corresponding sides are in the ratio</p>
+
+$$
+1:1.
+$$
+
+<p>Hence,</p>
+
+$$
+(T,T)\in R
+$$
+
+<p>for every triangle</p>
+
+$$
+T.
+$$
+
+<p>Therefore, the relation is <strong>reflexive</strong>.</p>
+
+<hr>
+
+<h3>Symmetric</h3>
+
+<p>Suppose</p>
+
+$$
+(T_1,T_2)\in R.
+$$
+
+<p>Then</p>
+
+$$
+T_1
+$$
+
+<p>is similar to</p>
+
+$$
+T_2.
+$$
+
+<p>Similarity of triangles is a symmetric property.</p>
+
+<p>Therefore,</p>
+
+$$
+T_2
+$$
+
+<p>is also similar to</p>
+
+$$
+T_1.
+$$
+
+<p>Hence,</p>
+
+$$
+(T_2,T_1)\in R.
+$$
+
+<p>Therefore, the relation is <strong>symmetric</strong>.</p>
+
+<hr>
+
+<h3>Transitive</h3>
+
+<p>Suppose</p>
+
+$$
+(T_1,T_2)\in R
+$$
+
+<p>and</p>
+
+$$
+(T_2,T_3)\in R.
+$$
+
+<p>Then</p>
+
+$$
+T_1
+$$
+
+<p>is similar to</p>
+
+$$
+T_2,
+$$
+
+<p>and</p>
+
+$$
+T_2
+$$
+
+<p>is similar to</p>
+
+$$
+T_3.
+$$
+
+<p>Therefore,</p>
+
+$$
+T_1
+$$
+
+<p>is similar to</p>
+
+$$
+T_3.
+$$
+
+<p>Hence,</p>
+
+$$
+(T_1,T_3)\in R.
+$$
+
+<p>Therefore, the relation is <strong>transitive</strong>.</p>
+
+<hr>
+
+<p>Since the relation is reflexive, symmetric and transitive, it is an <strong>equivalence relation</strong>.</p>
+
+<hr>
+
+<h3>Triangles Related Among</h3>
+
+$$
+T_1,\ T_2\ \text{and}\ T_3
+$$
+
+<p>Now compare the ratios of the corresponding sides.</p>
+
+<p><strong>Triangles</strong></p>
+
+$$
+T_1=(3,4,5)
+$$
+
+<p>and</p>
+
+$$
+T_3=(6,8,10)
+$$
+
+<p>have</p>
+
+$$
+\frac{6}{3}=2,\qquad
+\frac{8}{4}=2,\qquad
+\frac{10}{5}=2.
+$$
+
+<p>Since all corresponding sides are proportional,</p>
+
+$$
+T_1\sim T_3.
+$$
+
+<p>Hence,</p>
+
+$$
+(T_1,T_3)\in R
+$$
+
+<p>and</p>
+
+$$
+(T_3,T_1)\in R.
+$$
+
+<hr>
+
+<p>Now compare</p>
+
+$$
+T_1=(3,4,5)
+$$
+
+<p>and</p>
+
+$$
+T_2=(5,12,13).
+$$
+
+<p>The corresponding side ratios are</p>
+
+$$
+\frac{5}{3},\qquad
+\frac{12}{4}=3,\qquad
+\frac{13}{5},
+$$
+
+<p>which are not equal.</p>
+
+<p>Therefore,</p>
+
+$$
+T_1
+$$
+
+<p>is <strong>not</strong> similar to</p>
+
+$$
+T_2.
+$$
+
+<hr>
+
+<p>Now compare</p>
+
+$$
+T_2=(5,12,13)
+$$
+
+<p>and</p>
+
+$$
+T_3=(6,8,10).
+$$
+
+<p>The corresponding side ratios are</p>
+
+$$
+\frac{6}{5},\qquad
+\frac{8}{12},\qquad
+\frac{10}{13},
+$$
+
+<p>which are not equal.</p>
+
+<p>Therefore,</p>
+
+$$
+T_2
+$$
+
+<p>is <strong>not</strong> similar to</p>
+
+$$
+T_3.
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>The relation is <strong>reflexive</strong>, <strong>symmetric</strong> and <strong>transitive</strong>. Hence, it is an <strong>equivalence relation</strong>.</p>
+
+<p>Among the given triangles, only</p>
+
+$$
+\boxed{T_1\text{ and }T_3}
+$$
+
+<p>are related because</p>
+
+$$
+T_1\sim T_3.
+$$
+
+<p>The triangle</p>
+
+$$
+T_2
+$$
+
+<p>is not related to either</p>
+
+$$
+T_1
+$$
+
+<p>or</p>
+
+$$
+T_3.
+$$
+
+<hr>
+
+<h3>Question 13</h3>
+
+<p><strong>Show that the relation</strong></p>
+
+$$
+R=\{(P_1,P_2):P_1\text{ and }P_2\text{ have the same number of sides}\}
+$$
+
+<p><strong>defined on the set of all polygons is an equivalence relation. What is the set of all elements in</strong></p>
+
+$$
+A
+$$
+
+<p><strong>related to the right-angled triangle</strong></p>
+
+$$
+T
+$$
+
+<p><strong>with sides</strong></p>
+
+$$
+3,\ 4,\ 5?
+$$
+
+<hr>
+
+<h3>Proof</h3>
+
+<p>We verify the three properties of an equivalence relation.</p>
+
+<hr>
+
+<h3>Reflexive</h3>
+
+<p>Every polygon has the same number of sides as itself.</p>
+
+<p>Therefore, for every polygon</p>
+
+$$
+P,
+$$
+
+$$
+(P,P)\in R.
+$$
+
+<p>Hence, the relation is <strong>reflexive</strong>.</p>
+
+<hr>
+
+<h3>Symmetric</h3>
+
+<p>Suppose</p>
+
+$$
+(P_1,P_2)\in R.
+$$
+
+<p>Then</p>
+
+$$
+P_1
+$$
+
+<p>and</p>
+
+$$
+P_2
+$$
+
+<p>have the same number of sides.</p>
+
+<p>Therefore,</p>
+
+$$
+P_2
+$$
+
+<p>and</p>
+
+$$
+P_1
+$$
+
+<p>also have the same number of sides.</p>
+
+<p>Hence,</p>
+
+$$
+(P_2,P_1)\in R.
+$$
+
+<p>Therefore, the relation is <strong>symmetric</strong>.</p>
+
+<hr>
+
+<h3>Transitive</h3>
+
+<p>Suppose</p>
+
+$$
+(P_1,P_2)\in R
+$$
+
+<p>and</p>
+
+$$
+(P_2,P_3)\in R.
+$$
+
+<p>Then</p>
+
+$$
+P_1
+$$
+
+<p>and</p>
+
+$$
+P_2
+$$
+
+<p>have the same number of sides, and</p>
+
+$$
+P_2
+$$
+
+<p>and</p>
+
+$$
+P_3
+$$
+
+<p>also have the same number of sides.</p>
+
+<p>Therefore,</p>
+
+$$
+P_1
+$$
+
+<p>and</p>
+
+$$
+P_3
+$$
+
+<p>have the same number of sides.</p>
+
+<p>Hence,</p>
+
+$$
+(P_1,P_3)\in R.
+$$
+
+<p>Therefore, the relation is <strong>transitive</strong>.</p>
+
+<hr>
+
+<p>Since the relation is reflexive, symmetric and transitive, it is an <strong>equivalence relation</strong>.</p>
+
+<hr>
+
+<h3>Set of all Elements Related to the Triangle</h3>
+
+<p>The given polygon</p>
+
+$$
+T
+$$
+
+<p>is a triangle.</p>
+
+<p>A polygon is related to</p>
+
+$$
+T
+$$
+
+<p>if and only if it has the same number of sides as</p>
+
+$$
+T.
+$$
+
+<p>Since every triangle has</p>
+
+$$
+3
+$$
+
+<p>sides, all triangles are related to</p>
+
+$$
+T.
+$$
+
+<p>Thus, the equivalence class of</p>
+
+$$
+T
+$$
+
+<p>is the set of all triangles.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<ul>
+
+<li>The relation is <strong>reflexive</strong>, <strong>symmetric</strong> and <strong>transitive</strong>.</li>
+
+<li>Therefore, it is an <strong>equivalence relation</strong>.</li>
+
+<li>The set of all elements related to the triangle</li>
+
+</ul>
+
+$$
+\boxed{T}
+$$
+
+<p>is</p>
+
+$$
+\boxed{\text{the set of all triangles}.}
+$$
+
+<hr>
+<h3>Question 14</h3>
+
+<p><strong>Let</strong></p>
+
+$$
+L
+$$
+
+<p><strong>be the set of all lines in the</strong></p>
+
+$$
+XY
+$$
+
+<p><strong>plane and let the relation</strong></p>
+
+$$
+R=\{(L_1,L_2):L_1\text{ is parallel to }L_2\}
+$$
+
+<p><strong>be defined on</strong></p>
+
+$$
+L.
+$$
+
+<p><strong>Show that</strong></p>
+
+$$
+R
+$$
+
+<p><strong>is an equivalence relation. Find the set of all lines related to the line</strong></p>
+
+$$
+y=2x+4.
+$$
+
+<hr>
+
+<h3>Proof</h3>
+
+<p>We verify the three properties of an equivalence relation.</p>
+
+<hr>
+
+<h3>Reflexive</h3>
+
+<p>Every line is parallel to itself.</p>
+
+<p>Hence, for every line</p>
+
+$$
+L,
+$$
+
+$$
+(L,L)\in R.
+$$
+
+<p>Therefore, the relation is <strong>reflexive</strong>.</p>
+
+<hr>
+
+<h3>Symmetric</h3>
+
+<p>Suppose</p>
+
+$$
+(L_1,L_2)\in R.
+$$
+
+<p>Then</p>
+
+$$
+L_1
+$$
+
+<p>is parallel to</p>
+
+$$
+L_2.
+$$
+
+<p>Since the property of parallelism is symmetric,</p>
+
+$$
+L_2
+$$
+
+<p>is also parallel to</p>
+
+$$
+L_1.
+$$
+
+<p>Hence,</p>
+
+$$
+(L_2,L_1)\in R.
+$$
+
+<p>Therefore, the relation is <strong>symmetric</strong>.</p>
+
+<hr>
+
+<h3>Transitive</h3>
+
+<p>Suppose</p>
+
+$$
+(L_1,L_2)\in R
+$$
+
+<p>and</p>
+
+$$
+(L_2,L_3)\in R.
+$$
+
+<p>Then</p>
+
+$$
+L_1
+$$
+
+<p>is parallel to</p>
+
+$$
+L_2,
+$$
+
+<p>and</p>
+
+$$
+L_2
+$$
+
+<p>is parallel to</p>
+
+$$
+L_3.
+$$
+
+<p>Therefore,</p>
+
+$$
+L_1
+$$
+
+<p>is parallel to</p>
+
+$$
+L_3.
+$$
+
+<p>Hence,</p>
+
+$$
+(L_1,L_3)\in R.
+$$
+
+<p>Therefore, the relation is <strong>transitive</strong>.</p>
+
+<hr>
+
+<p>Since the relation is reflexive, symmetric and transitive, it is an <strong>equivalence relation</strong>.</p>
+
+<hr>
+
+<h3>Set of all Lines Related to</h3>
+
+$$
+y=2x+4
+$$
+
+<p>The given line has slope</p>
+
+$$
+m=2.
+$$
+
+<p>Any line parallel to it must have the same slope.</p>
+
+<p>The general equation of every line parallel to</p>
+
+$$
+y=2x+4
+$$
+
+<p>is</p>
+
+$$
+y=2x+c,
+$$
+
+<p>where</p>
+
+$$
+c
+$$
+
+<p>is any real number.</p>
+
+<p>Each of these lines has slope</p>
+
+$$
+2,
+$$
+
+<p>so each is parallel to</p>
+
+$$
+y=2x+4.
+$$
+
+<p>Conversely, every line related to</p>
+
+$$
+y=2x+4
+$$
+
+<p>must have slope</p>
+
+$$
+2,
+$$
+
+<p>and therefore can be written in the form</p>
+
+$$
+y=2x+c.
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<ul>
+
+<li>The relation is <strong>reflexive</strong>, <strong>symmetric</strong> and <strong>transitive</strong>.</li>
+
+<li>Therefore, it is an <strong>equivalence relation</strong>.</li>
+
+<li>The set of all lines related to</li>
+
+</ul>
+
+$$
+y=2x+4
+$$
+
+<p>is</p>
+
+$$
+\boxed{\{\,y=2x+c\;:\;c\in\mathbb{R}\,\}.}
+$$
+
+<p>That is, the equivalence class of</p>
+
+$$
+y=2x+4
+$$
+
+<p>consists of all lines having slope</p>
+
+$$
+2.
+$$
+
+<hr>
+<h3>Question 15</h3>
+
+<p><strong>Let the relation</strong></p>
+
+$$
+R=\{(1,2),(2,2),(1,1),(4,4),(1,3),(3,3),(3,2)\}
+$$
+
+<p><strong>be defined on the set</strong></p>
+
+$$
+A=\{1,2,3,4\}.
+$$
+
+<p><strong>Choose the correct answer.</strong></p>
+
+<hr>
+
+<h3>Solution</h3>
+
+<p><strong>Step 1: Check Reflexivity</strong></p>
+
+<p>For a relation to be reflexive, the pairs</p>
+
+$$
+(1,1),\ (2,2),\ (3,3)\ \text{and}\ (4,4)
+$$
+
+<p>must belong to the relation.</p>
+
+<p>Since all these pairs are present in</p>
+
+$$
+R,
+$$
+
+<p>the relation is <strong>reflexive</strong>.</p>
+
+<hr>
+
+<p><strong>Step 2: Check Symmetry</strong></p>
+
+<p>If the relation were symmetric, then whenever</p>
+
+$$
+(a,b)\in R,
+$$
+
+<p>the pair</p>
+
+$$
+(b,a)
+$$
+
+<p>should also belong to</p>
+
+$$
+R.
+$$
+
+<p>Here,</p>
+
+$$
+(1,2)\in R,
+$$
+
+<p>but</p>
+
+$$
+(2,1)\notin R.
+$$
+
+<p>Therefore, the relation is <strong>not symmetric</strong>.</p>
+
+<hr>
+
+<p><strong>Step 3: Check Transitivity</strong></p>
+
+<p>We verify the transitive property.</p>
+
+<p>Since</p>
+
+$$
+(1,3)\in R
+\quad\text{and}\quad
+(3,2)\in R,
+$$
+
+<p>transitivity requires</p>
+
+$$
+(1,2)\in R,
+$$
+
+<p>which is present.</p>
+
+<p>Also,</p>
+
+$$
+(1,1),(2,2),(3,3)\ \text{and}\ (4,4)
+$$
+
+<p>ensure that all remaining possible combinations satisfy the transitive property.</p>
+
+<p>Hence, the relation is <strong>transitive</strong>.</p>
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>The relation is <strong>reflexive</strong> and <strong>transitive</strong> but <strong>not symmetric</strong>.</p>
+
+$$
+\boxed{\text{Option (B)}}
+$$
+
+<hr>
 
 
 </div>
       </article>
 <aside class="related-box">
         <h2>Other solutions</h2>
+        
         <!-- Put aside content here  -->
         
               <a href="/link_page/maths_link_all_classes.html">Mathematics</a>
