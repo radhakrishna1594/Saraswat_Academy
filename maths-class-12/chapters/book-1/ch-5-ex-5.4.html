@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 12 Mathematics solution NCERT NCERT- Saraswatacademy.in</title>
+<link rel="stylesheet" href="/header.css">
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/loader.js"></script>
+<script src="/config.js"></script>
+
+<!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+
+
+<style>
+
+
+/* CONTENT */
+.solution-layout{
+    max-width:1400px;
+    margin:30px auto;
+}
+.solution-article{background:#fff;padding:30px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.solution-article h1{margin:10px 0}
+.solution-article h2{margin:20px 0 10px}
+.solution-article p,.solution-article li{line-height:1.7}
+table{border-collapse:collapse;width:100%;margin:15px 0}
+th,td{border:1px solid #ccc;padding:8px}
+
+
+/* KATEX display */
+
+.katex-display {
+    text-align: left !important;
+    margin: 12px 0;
+}
+
+.katex-display > .katex {
+    text-align: left !important;
+}
+
+
+</style>
+</head>
+
+ <div id="header"></div>
+   
+  <body class="solution-page">
+    <main class="solution-layout">
+      <article class="solution-article">
+        <a class="breadcrumb" href="../../index.html">Back to all solutions</a>
+        <p class="eyebrow">MATHEMATICS CLASS- 12 </p>
+        <h1>CHAPTER-5<br>(CONTINUITY AND
+DIFFERENTIABILITY)</h1> 
+      
+        <div class="solution-meta"><span>CBSE</span><span>Chapter 5</span><span>EXERCISE 5.4</span></div>
+        <section class="answer-block">
+</section>  
+
+        <div class="note-box"> 
+
+            <h1>Exercise 5.4</h1> <hr>
+
+<h3>Q.1 Differentiate</h3>
+
+$$
+y=\frac{e^x}{\sin x}
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y=\frac{e^x}{\sin x}.
+$$
+
+<p>
+Using the quotient rule,
+</p>
+
+$$
+\frac{d}{dx}\left(\frac{u}{v}\right)
+=
+\frac{v\frac{du}{dx}-u\frac{dv}{dx}}{v^2},
+$$
+
+<p>
+where
+</p>
+
+$$
+u=e^x,
+\qquad
+v=\sin x.
+$$
+
+<p>
+Now,
+</p>
+
+$$
+\frac{du}{dx}=e^x,
+\qquad
+\frac{dv}{dx}=\cos x.
+$$
+
+<p>
+Substituting in the quotient rule,
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+\frac{\sin x\,(e^x)-e^x(\cos x)}
+{\sin^2x}\\[2mm]
+&=
+\frac{e^x(\sin x-\cos x)}
+{\sin^2x}.
+\end{aligned}
+$$
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+\frac{e^x(\sin x-\cos x)}
+{\sin^2x}
+}
+$$
+
+<hr>
+
+<h3>Q.2 Differentiate</h3>
+
+$$
+y=e^{\sin^{-1}x}
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y=e^{\sin^{-1}x}.
+$$
+
+<p>
+Using the chain rule,
+</p>
+
+$$
+\frac{d}{dx}(e^u)
+=
+e^u\frac{du}{dx},
+$$
+
+<p>
+where
+</p>
+
+$$
+u=\sin^{-1}x.
+$$
+
+<p>
+Now,
+</p>
+
+$$
+\frac{du}{dx}
+=
+\frac{1}{\sqrt{1-x^2}}.
+$$
+
+<p>
+Therefore,
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+e^{\sin^{-1}x}
+\cdot
+\frac{1}{\sqrt{1-x^2}}.
+\end{aligned}
+$$
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+\frac{e^{\sin^{-1}x}}
+{\sqrt{1-x^2}}
+}
+$$
+
+<hr>
+
+<h3>Q.3 Differentiate</h3>
+
+$$
+y=e^{x^3}
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y=e^{x^3}.
+$$
+
+<p>
+Using the chain rule,
+</p>
+
+$$
+\frac{d}{dx}(e^u)
+=
+e^u\frac{du}{dx},
+$$
+
+<p>
+where
+</p>
+
+$$
+u=x^3.
+$$
+
+<p>
+Now,
+</p>
+
+$$
+\frac{du}{dx}=3x^2.
+$$
+
+<p>
+Therefore,
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+e^{x^3}\cdot3x^2\\
+&=
+3x^2e^{x^3}.
+\end{aligned}
+$$
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+3x^2e^{x^3}
+}
+$$
+
+<hr>
+<h3>Q.4 Differentiate</h3>
+
+$$
+y=\sin\left(\tan^{-1}e^{-x}\right)
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y=\sin\left(\tan^{-1}e^{-x}\right).
+$$
+
+<p>
+Using the chain rule,
+</p>
+
+$$
+\frac{d}{dx}(\sin u)=\cos u\cdot\frac{du}{dx},
+$$
+
+<p>
+where
+</p>
+
+$$
+u=\tan^{-1}e^{-x}.
+$$
+
+<p>
+Now,
+</p>
+
+$$
+\frac{d}{dx}(\tan^{-1}v)
+=
+\frac{1}{1+v^2}\cdot\frac{dv}{dx},
+$$
+
+<p>
+where
+</p>
+
+$$
+v=e^{-x}.
+$$
+
+<p>
+Since
+</p>
+
+$$
+\frac{dv}{dx}=-e^{-x},
+$$
+
+<p>
+we obtain
+</p>
+
+$$
+\begin{aligned}
+\frac{du}{dx}
+&=
+\frac{-e^{-x}}
+{1+e^{-2x}}.
+\end{aligned}
+$$
+
+<p>
+Therefore,
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+\cos\left(\tan^{-1}e^{-x}\right)
+\left(
+\frac{-e^{-x}}
+{1+e^{-2x}}
+\right).
+\end{aligned}
+$$
+
+<p>
+Using
+</p>
+
+$$
+\cos(\tan^{-1}t)=\frac{1}{\sqrt{1+t^2}},
+$$
+
+<p>
+with $t=e^{-x}$,
+</p>
+
+$$
+\cos\left(\tan^{-1}e^{-x}\right)
+=
+\frac{1}{\sqrt{1+e^{-2x}}}.
+$$
+
+<p>
+Hence,
+</p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+-\frac{e^{-x}}
+{\left(1+e^{-2x}\right)^{3/2}}
+}
+$$
+
+<hr>
+
+<h3>Q.5 Differentiate</h3>
+
+$$
+y=\log(\cos e^x)
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y=\log(\cos e^x).
+$$
+
+<p>
+Using the chain rule,
+</p>
+
+$$
+\frac{d}{dx}(\log u)
+=
+\frac{1}{u}\cdot\frac{du}{dx},
+$$
+
+<p>
+where
+</p>
+
+$$
+u=\cos e^x.
+$$
+
+<p>
+Now,
+</p>
+
+$$
+\begin{aligned}
+\frac{du}{dx}
+&=
+-\sin(e^x)\cdot e^x.
+\end{aligned}
+$$
+
+<p>
+Therefore,
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+\frac{-e^x\sin(e^x)}
+{\cos(e^x)}\\[2mm]
+&=
+-e^x\tan(e^x).
+\end{aligned}
+$$
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+-e^x\tan(e^x)
+}
+$$
+
+<hr>
+
+<h3>Q.6 Differentiate</h3>
+
+$$
+y=e^x+e^{x^2}+e^{x^3}+\cdots+e^{x^5}
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y=e^x+e^{x^2}+e^{x^3}+e^{x^4}+e^{x^5}.
+$$
+
+<p>
+Differentiate each term separately using the chain rule.
+</p>
+
+<p>
+We know that
+</p>
+
+$$
+\frac{d}{dx}(e^{x^n})
+=
+ne^{x^n}x^{n-1}.
+$$
+
+<p>
+Therefore,
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+e^x
++
+2xe^{x^2}
++
+3x^2e^{x^3}
++
+4x^3e^{x^4}
++
+5x^4e^{x^5}.
+\end{aligned}
+$$
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+e^x
++
+2xe^{x^2}
++
+3x^2e^{x^3}
++
+4x^3e^{x^4}
++
+5x^4e^{x^5}
+}
+$$
+
+<hr>
+<h3>Q.7 Differentiate</h3>
+
+$$
+y=\sqrt{e^{\sqrt{x}}},
+\qquad x>0
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y=\sqrt{e^{\sqrt{x}}}.
+$$
+
+<p>
+We can write
+</p>
+
+$$
+y=\left(e^{\sqrt{x}}\right)^{\frac12}.
+$$
+
+<p>
+Using the chain rule,
+</p>
+
+$$
+\frac{d}{dx}\left(u^{\frac12}\right)
+=
+\frac{1}{2\sqrt{u}}\cdot\frac{du}{dx},
+$$
+
+<p>
+where
+</p>
+
+$$
+u=e^{\sqrt{x}}.
+$$
+
+<p>
+Now,
+</p>
+
+$$
+\frac{du}{dx}
+=
+e^{\sqrt{x}}
+\cdot
+\frac{d}{dx}(\sqrt{x}).
+$$
+
+<p>
+Since
+</p>
+
+$$
+\frac{d}{dx}(\sqrt{x})
+=
+\frac{1}{2\sqrt{x}},
+$$
+
+<p>
+we get
+</p>
+
+$$
+\begin{aligned}
+\frac{du}{dx}
+&=
+\frac{e^{\sqrt{x}}}{2\sqrt{x}}.
+\end{aligned}
+$$
+
+<p>
+Therefore,
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+\frac{1}{2\sqrt{e^{\sqrt{x}}}}
+\cdot
+\frac{e^{\sqrt{x}}}{2\sqrt{x}}\\[2mm]
+&=
+\frac{\sqrt{e^{\sqrt{x}}}}
+{4\sqrt{x}}.
+\end{aligned}
+$$
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+\frac{\sqrt{e^{\sqrt{x}}}}
+{4\sqrt{x}}
+}
+$$
+
+<hr>
+
+<h3>Q.8 Differentiate</h3>
+
+$$
+y=\log(\log x),
+\qquad x>1
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y=\log(\log x).
+$$
+
+<p>
+Using the chain rule,
+</p>
+
+$$
+\frac{d}{dx}(\log u)
+=
+\frac{1}{u}\cdot\frac{du}{dx},
+$$
+
+<p>
+where
+</p>
+
+$$
+u=\log x.
+$$
+
+<p>
+Now,
+</p>
+
+$$
+\frac{du}{dx}
+=
+\frac{1}{x}.
+$$
+
+<p>
+Therefore,
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+\frac{1}{\log x}
+\cdot
+\frac{1}{x}\\[2mm]
+&=
+\frac{1}{x\log x}.
+\end{aligned}
+$$
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+\frac{1}{x\log x}
+}
+$$
+
+<hr>
+<h3>Q.9 Differentiate</h3>
+
+$$
+y=\frac{\cos x}{\log x},
+\qquad x>0
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y=\frac{\cos x}{\log x}.
+$$
+
+<p>
+Using the quotient rule,
+</p>
+
+$$
+\frac{d}{dx}\left(\frac{u}{v}\right)
+=
+\frac{v\frac{du}{dx}-u\frac{dv}{dx}}{v^2},
+$$
+
+<p>
+where
+</p>
+
+$$
+u=\cos x,
+\qquad
+v=\log x.
+$$
+
+<p>
+Now,
+</p>
+
+$$
+\frac{du}{dx}=-\sin x,
+\qquad
+\frac{dv}{dx}=\frac{1}{x}.
+$$
+
+<p>
+Applying the quotient rule,
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+\frac{\log x(-\sin x)-\cos x\left(\frac1x\right)}
+{(\log x)^2}\\[2mm]
+&=
+\frac{-x\log x\sin x-\cos x}
+{x(\log x)^2}.
+\end{aligned}
+$$
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+-\frac{x\log x\,\sin x+\cos x}
+{x(\log x)^2}
+}
+$$
+
+<hr>
+
+<h3>Q.10 Differentiate</h3>
+
+$$
+y=\cos(\log x+e^x),
+\qquad x>0
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y=\cos(\log x+e^x).
+$$
+
+<p>
+Using the chain rule,
+</p>
+
+$$
+\frac{d}{dx}(\cos u)
+=
+-\sin u\cdot\frac{du}{dx},
+$$
+
+<p>
+where
+</p>
+
+$$
+u=\log x+e^x.
+$$
+
+<p>
+Now,
+</p>
+
+$$
+\begin{aligned}
+\frac{du}{dx}
+&=
+\frac{d}{dx}(\log x)
++
+\frac{d}{dx}(e^x)\\
+&=
+\frac1x+e^x.
+\end{aligned}
+$$
+
+<p>
+Therefore,
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+-\sin(\log x+e^x)
+\left(\frac1x+e^x\right).
+\end{aligned}
+$$
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+-\left(\frac1x+e^x\right)
+\sin(\log x+e^x)
+}
+$$
+
+<hr>
+
+
+
+</div>
+      </article>
+<aside class="related-box">
+        <h2>Other solutions</h2>
+        
+        <!-- Put aside content here  -->
+        
+              <a href="/link_page/maths_link_all_classes.html">Mathematics</a>
+        <a href="/link_page/science_link_all_classes.html">Science</a>
+        <a href="/link_page/sst_link_all_classes.html">Social Studies</a>
+        <a href="/link_page/english_link_all_classes.html">English</a>
+        <a href="/link_page/hindi_link_all_classes.html">Hindi</a>
+        <a href="/link_page/computer_science_link_all_classes.html">Computer Science/ IT/ IP</a>  </aside>
+    </main>      <!-- ━━━ FOOTER ━━━ -->
+<!-- ━━━ FOOTER ━━━ -->
+<div id="footer"></div>
+
+  <script>
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$",  right: "$",  inline: true  }
+      ]
+    });
+  </script>
+
+   </body>
+</html>
+

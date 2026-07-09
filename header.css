@@ -50,6 +50,7 @@ body {
   background: var(--off-white);
   color: var(--text);
   overflow-x: hidden;
+  
 }
 
 /* ─── TOPBAR ─── */
@@ -58,6 +59,7 @@ body {
   color: #d1d5db;
   padding: 8px 20px;
   font-size: 14px;
+  
 }
 .topbar-left {
   display: flex;
@@ -73,11 +75,12 @@ body {
 
 /* ─── HEADER ─── */
 
-header {
+header{
   background: var(--white);
   border-bottom: 1px solid var(--border);
   position: sticky; top: 0; z-index: 300;
   box-shadow: 0 2px 16px rgba(12,15,30,.07);
+  
 }
 .header-inner {
   max-width: 1280px; margin: 0 auto; padding: 0 24px;
@@ -150,9 +153,9 @@ header {
   gap: 4px;
   padding: 8px 13px;
   border-radius: 7px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text2);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #1c255d;;
   text-decoration: none;
   cursor: pointer;
   transition: background .15s, color .15s;
@@ -245,31 +248,9 @@ header {
 }
 
 /* ─── HERO ─── */
-.hero {
-  background: linear-gradient(140deg, var(--navy3) 0%, var(--navy) 45%, #0E3060 100%);
-  padding: 80px 24px 100px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute; top: -80px; right: -80px;
-  width: 380px; height: 380px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,107,0,.15) 0%, transparent 70%);
-  pointer-events: none;
-}
-.hero::after {
-  content: '';
-  position: absolute; bottom: -60px; left: -60px;
-  width: 300px; height: 300px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(19,136,8,.12) 0%, transparent 70%);
-  pointer-events: none;
-}
+
 
 /* ─── SECTION WRAPPERS ─── */
-.section { max-width: 1280px; margin: 0 auto; padding: 64px 24px; }
-.section-sm { max-width: 1280px; margin: 0 auto; padding: 40px 24px; }
 
 /* ─── PAGE TITLE ─── */
 .page-title {

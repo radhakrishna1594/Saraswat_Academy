@@ -1,0 +1,2415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 12 Mathematics solution NCERT NCERT- Saraswatacademy.in</title>
+<link rel="stylesheet" href="/header.css">
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/loader.js"></script>
+<script src="/config.js"></script>
+
+<!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+
+
+<style>
+
+
+/* CONTENT */
+.solution-layout{
+    max-width:1400px;
+    margin:30px auto;
+}
+.solution-article{background:#fff;padding:30px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.solution-article h1{margin:10px 0}
+.solution-article h2{margin:20px 0 10px}
+.solution-article p,.solution-article li{line-height:1.7}
+table{border-collapse:collapse;width:100%;margin:15px 0}
+th,td{border:1px solid #ccc;padding:8px}
+
+
+/* KATEX display */
+
+.katex-display {
+    text-align: left !important;
+    margin: 12px 0;
+}
+
+.katex-display > .katex {
+    text-align: left !important;
+}
+
+
+</style>
+</head>
+
+ <div id="header"></div>
+   
+  <body class="solution-page">
+    <main class="solution-layout">
+      <article class="solution-article">
+        <a class="breadcrumb" href="../../index.html">Back to all solutions</a>
+        <p class="eyebrow">MATHEMATICS CLASS- 12 </p>
+        <h1>CHAPTER-5<br>(CONTINUITY AND
+DIFFERENTIABILITY)</h1> 
+      
+        <div class="solution-meta"><span>CBSE</span><span>Chapter 5</span><span>EXERCISE 5.5</span></div>
+        <section class="answer-block">
+</section>  
+
+        <div class="note-box"> 
+
+            <h1>Exercise 5.5</h1> <hr>
+
+<h3>Q.1 Differentiate</h3>
+
+$$
+y=\cos x\cdot\cos2x\cdot\cos3x
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y=\cos x\cdot\cos2x\cdot\cos3x.
+$$
+
+<p>
+Since the function is the product of three functions, we use <strong>logarithmic differentiation</strong>.
+</p>
+
+<p>
+Taking logarithm on both sides,
+</p>
+
+$$
+\log y
+=
+\log(\cos x)
++
+\log(\cos2x)
++
+\log(\cos3x).
+$$
+
+<p>
+Differentiating both sides with respect to $x$,
+</p>
+
+$$
+\begin{aligned}
+\frac1y\frac{dy}{dx}
+&=
+-\tan x
+-
+2\tan2x
+-
+3\tan3x.
+\end{aligned}
+$$
+
+<p>
+Multiplying both sides by $y$,
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+\cos x\cos2x\cos3x
+\left(
+-\tan x
+-
+2\tan2x
+-
+3\tan3x
+\right).
+\end{aligned}
+$$
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+-\cos x\cos2x\cos3x
+\left(
+\tan x
++
+2\tan2x
++
+3\tan3x
+\right)
+}
+$$
+
+<hr>
+
+<h3>Q.2 Differentiate</h3>
+
+$$
+y=
+\sqrt{
+\frac{(x-1)(x-2)}
+{(x-3)(x-4)(x-5)}
+}
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y=
+\sqrt{
+\frac{(x-1)(x-2)}
+{(x-3)(x-4)(x-5)}
+}.
+$$
+
+<p>
+Using logarithmic differentiation,
+</p>
+
+$$
+\begin{aligned}
+\log y
+&=
+\frac12
+\left[
+\log(x-1)
++\log(x-2)
+-\log(x-3)
+-\log(x-4)
+-\log(x-5)
+\right].
+\end{aligned}
+$$
+
+<p>
+Differentiating both sides,
+</p>
+
+$$
+\begin{aligned}
+\frac1y\frac{dy}{dx}
+&=
+\frac12
+\left(
+\frac1{x-1}
++\frac1{x-2}
+-\frac1{x-3}
+-\frac1{x-4}
+-\frac1{x-5}
+\right).
+\end{aligned}
+$$
+
+<p>
+Multiplying both sides by $y$,
+</p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+\frac12
+\sqrt{
+\frac{(x-1)(x-2)}
+{(x-3)(x-4)(x-5)}
+}
+\left(
+\frac1{x-1}
++\frac1{x-2}
+-\frac1{x-3}
+-\frac1{x-4}
+-\frac1{x-5}
+\right)
+}
+$$
+
+<hr>
+
+<h3>Q.3 Differentiate</h3>
+
+$$
+y=(\log x)^{\cos x}
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y=(\log x)^{\cos x}.
+$$
+
+<p>
+Since both the base and the exponent are functions of $x$, we use <strong>logarithmic differentiation</strong>.
+</p>
+
+<p>
+Taking logarithm on both sides,
+</p>
+
+$$
+\log y
+=
+\cos x\,
+\log(\log x).
+$$
+
+<p>
+Differentiating both sides,
+</p>
+
+$$
+\begin{aligned}
+\frac1y\frac{dy}{dx}
+&=
+-\sin x\,\log(\log x)
++
+\cos x\cdot
+\frac1{\log x}
+\cdot
+\frac1x.
+\end{aligned}
+$$
+
+<p>
+Hence,
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+(\log x)^{\cos x}
+\left[
+-\sin x\,\log(\log x)
++
+\frac{\cos x}{x\log x}
+\right].
+\end{aligned}
+$$
+
+<p><strong>Answer:</strong></p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+(\log x)^{\cos x}
+\left[
+-\sin x\,\log(\log x)
++
+\frac{\cos x}{x\log x}
+\right]
+}
+$$
+
+<hr>
+
+<h3>Q.4 Differentiate</h3>
+
+$$
+y=x^x-2^{\sin x}
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y=x^x-2^{\sin x}.
+$$
+
+<p>
+Differentiate each term separately.
+</p>
+
+<p><strong>First term:</strong> $x^x$</p>
+
+<p>
+Using logarithmic differentiation,
+</p>
+
+$$
+\begin{aligned}
+u&=x^x,\\
+\log u&=x\log x.
+\end{aligned}
+$$
+
+<p>
+Differentiating,
+</p>
+
+$$
+\begin{aligned}
+\frac1u\frac{du}{dx}
+&=\log x+1.
+\end{aligned}
+$$
+
+<p>
+Hence,
+</p>
+
+$$
+\frac{du}{dx}
+=
+x^x(\log x+1).
+$$
+
+<p><strong>Second term:</strong> $2^{\sin x}$</p>
+
+<p>
+Using
+</p>
+
+$$
+\frac{d}{dx}(a^u)=a^u\log a\cdot\frac{du}{dx},
+$$
+
+<p>
+where $u=\sin x$,
+</p>
+
+$$
+\frac{du}{dx}=\cos x.
+$$
+
+<p>
+Therefore,
+</p>
+
+$$
+\frac{d}{dx}(2^{\sin x})
+=
+2^{\sin x}\log2\cos x.
+$$
+
+<p>
+Hence,
+</p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+x^x(\log x+1)
+-
+2^{\sin x}\log2\cos x
+}
+$$
+
+<hr>
+
+<h3>Q.5 Differentiate</h3>
+
+$$
+y=(x+3)^2(x+4)^3(x+5)^4
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y=(x+3)^2(x+4)^3(x+5)^4.
+$$
+
+<p>
+Using logarithmic differentiation,
+</p>
+
+$$
+\log y
+=
+2\log(x+3)
++
+3\log(x+4)
++
+4\log(x+5).
+$$
+
+<p>
+Differentiating,
+</p>
+
+$$
+\begin{aligned}
+\frac1y\frac{dy}{dx}
+&=
+\frac2{x+3}
++
+\frac3{x+4}
++
+\frac4{x+5}.
+\end{aligned}
+$$
+
+<p>
+Multiplying by $y$,
+</p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+(x+3)^2(x+4)^3(x+5)^4
+\left(
+\frac2{x+3}
++
+\frac3{x+4}
++
+\frac4{x+5}
+\right)
+}
+$$
+
+<hr>
+
+<h3>Q.6 Differentiate</h3>
+
+$$
+y=
+\left(x+\frac1x\right)^x
++
+x^{\left(1+\frac1x\right)}
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Differentiate each term separately.
+</p>
+
+<p><strong>First term:</strong></p>
+
+$$
+u=\left(x+\frac1x\right)^x.
+$$
+
+<p>
+Taking logarithm,
+</p>
+
+$$
+\log u
+=
+x\log\left(x+\frac1x\right).
+$$
+
+<p>
+Differentiating,
+</p>
+
+$$
+\begin{aligned}
+\frac1u\frac{du}{dx}
+&=
+\log\left(x+\frac1x\right)
++
+x
+\cdot
+\frac{1-\frac1{x^2}}
+{x+\frac1x}.
+\end{aligned}
+$$
+
+<p>
+Since
+</p>
+
+$$
+x+\frac1x=\frac{x^2+1}{x},
+$$
+
+<p>
+we obtain
+</p>
+
+$$
+\begin{aligned}
+x
+\cdot
+\frac{1-\frac1{x^2}}
+{x+\frac1x}
+&=
+\frac{x^2-1}{x^2+1}.
+\end{aligned}
+$$
+
+<p>
+Hence,
+</p>
+
+$$
+\frac{du}{dx}
+=
+\left(x+\frac1x\right)^x
+\left[
+\log\left(x+\frac1x\right)
++
+\frac{x^2-1}{x^2+1}
+\right].
+$$
+
+<p><strong>Second term:</strong></p>
+
+$$
+v=x^{\left(1+\frac1x\right)}.
+$$
+
+<p>
+Taking logarithm,
+</p>
+
+$$
+\log v
+=
+\left(1+\frac1x\right)\log x.
+$$
+
+<p>
+Differentiating,
+</p>
+
+$$
+\begin{aligned}
+\frac1v\frac{dv}{dx}
+&=
+-\frac{\log x}{x^2}
++
+\left(1+\frac1x\right)\frac1x\\[2mm]
+&=
+\frac1x+\frac1{x^2}-\frac{\log x}{x^2}.
+\end{aligned}
+$$
+
+<p>
+Therefore,
+</p>
+
+$$
+\frac{dv}{dx}
+=
+x^{\left(1+\frac1x\right)}
+\left(
+\frac1x+\frac1{x^2}-\frac{\log x}{x^2}
+\right).
+$$
+
+<p>
+Finally,
+</p>
+
+$$
+\boxed{
+\begin{aligned}
+\frac{dy}{dx}
+&=
+\left(x+\frac1x\right)^x
+\left[
+\log\left(x+\frac1x\right)
++
+\frac{x^2-1}{x^2+1}
+\right]
+\\[2mm]
+&\quad+
+x^{\left(1+\frac1x\right)}
+\left(
+\frac1x+\frac1{x^2}-\frac{\log x}{x^2}
+\right).
+\end{aligned}
+}
+$$
+
+<hr>
+
+<h3>Q.7 Differentiate</h3>
+
+$$
+y=(\log x)^x+x^{\log x}
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y=(\log x)^x+x^{\log x}.
+$$
+
+<p>
+Differentiate each term separately using logarithmic differentiation.
+</p>
+
+<hr>
+
+<p><strong>First term:</strong></p>
+
+$$
+u=(\log x)^x.
+$$
+
+<p>
+Taking logarithm on both sides,
+</p>
+
+$$
+\log u=x\log(\log x).
+$$
+
+<p>
+Differentiating,
+</p>
+
+$$
+\begin{aligned}
+\frac1u\frac{du}{dx}
+&=\log(\log x)
++x\cdot\frac1{\log x}\cdot\frac1x\\
+&=\log(\log x)+\frac1{\log x}.
+\end{aligned}
+$$
+
+<p>
+Hence,
+</p>
+
+$$
+\frac{du}{dx}
+=
+(\log x)^x
+\left(
+\log(\log x)+\frac1{\log x}
+\right).
+$$
+
+<hr>
+
+<p><strong>Second term:</strong></p>
+
+$$
+v=x^{\log x}.
+$$
+
+<p>
+Taking logarithm,
+</p>
+
+$$
+\log v=(\log x)^2.
+$$
+
+<p>
+Differentiating,
+</p>
+
+$$
+\begin{aligned}
+\frac1v\frac{dv}{dx}
+&=
+2(\log x)\cdot\frac1x.
+\end{aligned}
+$$
+
+<p>
+Therefore,
+</p>
+
+$$
+\frac{dv}{dx}
+=
+x^{\log x}
+\cdot
+\frac{2\log x}{x}.
+$$
+
+<hr>
+
+<p>
+Hence,
+</p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+(\log x)^x
+\left(
+\log(\log x)+\frac1{\log x}
+\right)
++
+\frac{2\log x}{x}\,
+x^{\log x}
+}
+$$
+
+<hr>
+
+<h3>Q.8 Differentiate</h3>
+
+$$
+y=(\sin x)^x+\sin^{-1}\sqrt{x}
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y=(\sin x)^x+\sin^{-1}\sqrt{x}.
+$$
+
+<p>
+Differentiate each term separately.
+</p>
+
+<hr>
+
+<p><strong>First term:</strong></p>
+
+$$
+u=(\sin x)^x.
+$$
+
+<p>
+Taking logarithm,
+</p>
+
+$$
+\log u=x\log(\sin x).
+$$
+
+<p>
+Differentiating,
+</p>
+
+$$
+\begin{aligned}
+\frac1u\frac{du}{dx}
+&=
+\log(\sin x)
++
+x\cdot\frac{\cos x}{\sin x}\\
+&=
+\log(\sin x)+x\cot x.
+\end{aligned}
+$$
+
+<p>
+Hence,
+</p>
+
+$$
+\frac{du}{dx}
+=
+(\sin x)^x
+\left(
+\log(\sin x)+x\cot x
+\right).
+$$
+
+<hr>
+
+<p><strong>Second term:</strong></p>
+
+$$
+v=\sin^{-1}\sqrt{x}.
+$$
+
+<p>
+Using the chain rule,
+</p>
+
+$$
+\frac{dv}{dx}
+=
+\frac1{\sqrt{1-(\sqrt{x})^2}}
+\cdot
+\frac1{2\sqrt{x}}.
+$$
+
+<p>
+Since
+</p>
+
+$$
+(\sqrt{x})^2=x,
+$$
+
+<p>
+we obtain
+</p>
+
+$$
+\frac{dv}{dx}
+=
+\frac1{2\sqrt{x}\sqrt{1-x}}.
+$$
+
+<hr>
+
+<p>
+Therefore,
+</p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+(\sin x)^x
+\left(
+\log(\sin x)+x\cot x
+\right)
++
+\frac1{2\sqrt{x}\sqrt{1-x}}
+}
+$$
+
+<hr>
+
+<h3>Q.9 Differentiate</h3>
+
+$$
+y=x^{\sin x}+(\sin x)^{\cos x}
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Differentiate each term separately.
+</p>
+
+<hr>
+
+<p><strong>First term:</strong></p>
+
+$$
+u=x^{\sin x}.
+$$
+
+<p>
+Taking logarithm,
+</p>
+
+$$
+\log u=\sin x\log x.
+$$
+
+<p>
+Differentiating,
+</p>
+
+$$
+\begin{aligned}
+\frac1u\frac{du}{dx}
+&=
+\cos x\log x
++\frac{\sin x}{x}.
+\end{aligned}
+$$
+
+<p>
+Hence,
+</p>
+
+$$
+\frac{du}{dx}
+=
+x^{\sin x}
+\left(
+\cos x\log x
++\frac{\sin x}{x}
+\right).
+$$
+
+<hr>
+
+<p><strong>Second term:</strong></p>
+
+$$
+v=(\sin x)^{\cos x}.
+$$
+
+<p>
+Taking logarithm,
+</p>
+
+$$
+\log v=\cos x\log(\sin x).
+$$
+
+<p>
+Differentiating,
+</p>
+
+$$
+\begin{aligned}
+\frac1v\frac{dv}{dx}
+&=
+-\sin x\log(\sin x)
++
+\cos x\cdot\cot x.
+\end{aligned}
+$$
+
+<p>
+Therefore,
+</p>
+
+$$
+\frac{dv}{dx}
+=
+(\sin x)^{\cos x}
+\left(
+-\sin x\log(\sin x)
++\cos x\cot x
+\right).
+$$
+
+<hr>
+
+<p>
+Hence,
+</p>
+
+$$
+\boxed{
+\begin{aligned}
+\frac{dy}{dx}
+&=
+x^{\sin x}
+\left(
+\cos x\log x
++\frac{\sin x}{x}
+\right)
+\\[2mm]
+&\quad+
+(\sin x)^{\cos x}
+\left(
+-\sin x\log(\sin x)
++\cos x\cot x
+\right).
+\end{aligned}
+}
+$$
+
+<hr>
+<h3>Q.10 Differentiate</h3>
+
+$$
+y=x^{x\cos x}+\frac{x^2+1}{x^2-1}
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y=x^{x\cos x}+\frac{x^2+1}{x^2-1}.
+$$
+
+<p>
+Differentiate each term separately.
+</p>
+
+<hr>
+
+<p><strong>First term:</strong></p>
+
+$$
+u=x^{x\cos x}.
+$$
+
+<p>
+Using logarithmic differentiation,
+</p>
+
+$$
+\log u=x\cos x\cdot\log x.
+$$
+
+<p>
+Differentiating both sides,
+</p>
+
+$$
+\begin{aligned}
+\frac1u\frac{du}{dx}
+&=
+\frac{d}{dx}(x\cos x)\cdot\log x
++x\cos x\cdot\frac1x.
+\end{aligned}
+$$
+
+<p>
+Now,
+</p>
+
+$$
+\begin{aligned}
+\frac{d}{dx}(x\cos x)
+&=
+\cos x-x\sin x.
+\end{aligned}
+$$
+
+<p>
+Hence,
+</p>
+
+$$
+\begin{aligned}
+\frac1u\frac{du}{dx}
+&=
+(\cos x-x\sin x)\log x
++\cos x.
+\end{aligned}
+$$
+
+<p>
+Therefore,
+</p>
+
+$$
+\boxed{
+\frac{du}{dx}
+=
+x^{x\cos x}
+\left[
+(\cos x-x\sin x)\log x
++\cos x
+\right]
+}
+$$
+
+<hr>
+
+<p><strong>Second term:</strong></p>
+
+$$
+v=\frac{x^2+1}{x^2-1}.
+$$
+
+<p>
+Using the quotient rule,
+</p>
+
+$$
+\frac{dv}{dx}
+=
+\frac{(x^2-1)(2x)-(x^2+1)(2x)}
+{(x^2-1)^2}.
+$$
+
+<p>
+Simplifying,
+</p>
+
+$$
+\begin{aligned}
+\frac{dv}{dx}
+&=
+\frac{2x(x^2-1-x^2-1)}
+{(x^2-1)^2}\\
+&=
+-\frac{4x}{(x^2-1)^2}.
+\end{aligned}
+$$
+
+<hr>
+
+<p>
+Hence,
+</p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+x^{x\cos x}
+\left[
+(\cos x-x\sin x)\log x
++\cos x
+\right]
+-
+\frac{4x}{(x^2-1)^2}
+}
+$$
+
+<hr>
+
+<h3>Q.11 Differentiate</h3>
+
+$$
+y=(x\cos x)^x+(x\sin x)^{\frac1x}
+$$
+
+<p>
+with respect to $x$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Differentiate each term separately.
+</p>
+
+<hr>
+
+<p><strong>First term:</strong></p>
+
+$$
+u=(x\cos x)^x.
+$$
+
+<p>
+Taking logarithm,
+</p>
+
+$$
+\log u
+=
+x\log(x\cos x).
+$$
+
+<p>
+Differentiating,
+</p>
+
+$$
+\begin{aligned}
+\frac1u\frac{du}{dx}
+&=
+\log(x\cos x)
++
+x\cdot
+\frac{\cos x-x\sin x}
+{x\cos x}.
+\end{aligned}
+$$
+
+<p>
+Since
+</p>
+
+$$
+\frac{\cos x-x\sin x}
+{x\cos x}
+=
+\frac1x-\tan x,
+$$
+
+<p>
+we obtain
+</p>
+
+$$
+\begin{aligned}
+\frac1u\frac{du}{dx}
+&=
+\log(x\cos x)
++
+1
+-
+x\tan x.
+\end{aligned}
+$$
+
+<p>
+Hence,
+</p>
+
+$$
+\boxed{
+\frac{du}{dx}
+=
+(x\cos x)^x
+\left[
+\log(x\cos x)
++
+1
+-
+x\tan x
+\right]
+}
+$$
+
+<hr>
+
+<p><strong>Second term:</strong></p>
+
+$$
+v=(x\sin x)^{\frac1x}.
+$$
+
+<p>
+Taking logarithm,
+</p>
+
+$$
+\log v
+=
+\frac1x\log(x\sin x).
+$$
+
+<p>
+Differentiating,
+</p>
+
+$$
+\begin{aligned}
+\frac1v\frac{dv}{dx}
+&=
+-\frac{\log(x\sin x)}{x^2}
++
+\frac1x
+\left(
+\frac1x+\cot x
+\right).
+\end{aligned}
+$$
+
+<p>
+Therefore,
+</p>
+
+$$
+\boxed{
+\frac{dv}{dx}
+=
+(x\sin x)^{\frac1x}
+\left[
+-\frac{\log(x\sin x)}{x^2}
++
+\frac1{x^2}
++
+\frac{\cot x}{x}
+\right]
+}
+$$
+
+<hr>
+
+<p>
+Hence,
+</p>
+
+$$
+\boxed{
+\begin{aligned}
+\frac{dy}{dx}
+&=
+(x\cos x)^x
+\left[
+\log(x\cos x)
++
+1
+-
+x\tan x
+\right]
+\\[2mm]
+&\quad+
+(x\sin x)^{\frac1x}
+\left[
+-\frac{\log(x\sin x)}{x^2}
++
+\frac1{x^2}
++
+\frac{\cot x}{x}
+\right].
+\end{aligned}
+}
+$$
+
+<hr>
+<h3>Q.12 Find $\dfrac{dy}{dx}$ if</h3>
+
+$$
+x^y+y^x=1.
+$$
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+x^y+y^x=1.
+$$
+
+<p>
+Differentiate both sides with respect to $x$.
+</p>
+
+<p>
+Using logarithmic differentiation,
+</p>
+
+$$
+\frac{d}{dx}(u^v)
+=
+u^v
+\left(
+\frac{dv}{dx}\log u
++
+\frac{v}{u}\frac{du}{dx}
+\right).
+$$
+
+<hr>
+
+<p><strong>Differentiate $x^y$:</strong></p>
+
+$$
+\begin{aligned}
+\frac{d}{dx}(x^y)
+&=
+x^y
+\left(
+\frac{dy}{dx}\log x
++\frac{y}{x}
+\right).
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Differentiate $y^x$:</strong></p>
+
+$$
+\begin{aligned}
+\frac{d}{dx}(y^x)
+&=
+y^x
+\left(
+\log y
++
+\frac{x}{y}\frac{dy}{dx}
+\right).
+\end{aligned}
+$$
+
+<hr>
+
+<p>
+Differentiating the given equation,
+</p>
+
+$$
+x^y
+\left(
+\frac{dy}{dx}\log x+\frac{y}{x}
+\right)
++
+y^x
+\left(
+\log y+\frac{x}{y}\frac{dy}{dx}
+\right)
+=0.
+$$
+
+<p>
+Collecting the terms containing $\dfrac{dy}{dx}$,
+</p>
+
+$$
+\begin{aligned}
+\left(
+x^y\log x
++
+\frac{x}{y}y^x
+\right)
+\frac{dy}{dx}
+&=
+-
+\left(
+\frac{yx^y}{x}
++
+y^x\log y
+\right).
+\end{aligned}
+$$
+
+<p>
+Therefore,
+</p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+-
+\frac{
+\dfrac{yx^y}{x}
++
+y^x\log y
+}{
+x^y\log x
++
+\dfrac{x}{y}y^x
+}.
+}
+$$
+
+<hr>
+
+<h3>Q.13 Find $\dfrac{dy}{dx}$ if</h3>
+
+$$
+y^x=x^y.
+$$
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+y^x=x^y.
+$$
+
+<p>
+Taking logarithm on both sides,
+</p>
+
+$$
+x\log y
+=
+y\log x.
+$$
+
+<p>
+Differentiate both sides with respect to $x$.
+</p>
+
+$$
+\begin{aligned}
+\frac{d}{dx}(x\log y)
+&=
+\frac{d}{dx}(y\log x).
+\end{aligned}
+$$
+
+<p>
+Using the product rule,
+</p>
+
+$$
+\begin{aligned}
+\log y
++
+\frac{x}{y}\frac{dy}{dx}
+&=
+\frac{dy}{dx}\log x
++
+\frac{y}{x}.
+\end{aligned}
+$$
+
+<p>
+Collecting the terms containing $\dfrac{dy}{dx}$,
+</p>
+
+$$
+\begin{aligned}
+\left(
+\frac{x}{y}
+-
+\log x
+\right)
+\frac{dy}{dx}
+&=
+\frac{y}{x}
+-
+\log y.
+\end{aligned}
+$$
+
+<p>
+Hence,
+</p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+\frac{
+\dfrac{y}{x}
+-
+\log y
+}{
+\dfrac{x}{y}
+-
+\log x
+}.
+}
+$$
+
+<hr>
+
+<h3>Q.14 Find $\dfrac{dy}{dx}$ if</h3>
+
+$$
+(\cos x)^y=(\cos y)^x.
+$$
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+(\cos x)^y=(\cos y)^x.
+$$
+
+<p>
+Taking logarithm on both sides,
+</p>
+
+$$
+y\log(\cos x)
+=
+x\log(\cos y).
+$$
+
+<p>
+Differentiate both sides with respect to $x$.
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}\log(\cos x)
+-y\tan x
+&=
+\log(\cos y)
+-
+x\tan y\frac{dy}{dx}.
+\end{aligned}
+$$
+
+<p>
+Collecting the terms containing $\dfrac{dy}{dx}$,
+</p>
+
+$$
+\begin{aligned}
+\left(
+\log(\cos x)
++
+x\tan y
+\right)
+\frac{dy}{dx}
+&=
+\log(\cos y)
++
+y\tan x.
+\end{aligned}
+$$
+
+<p>
+Therefore,
+</p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+\frac{
+\log(\cos y)
++
+y\tan x
+}{
+\log(\cos x)
++
+x\tan y
+}.
+}
+$$
+
+<hr>
+
+<h3>Q.15 Find $\dfrac{dy}{dx}$ if</h3>
+
+$$
+xy=e^{(x-y)}.
+$$
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+xy=e^{x-y}.
+$$
+
+<p>
+Taking natural logarithm on both sides,
+</p>
+
+$$
+\log(xy)=x-y.
+$$
+
+<p>
+Using the property of logarithms,
+</p>
+
+$$
+\log x+\log y=x-y.
+$$
+
+<p>
+Differentiate both sides with respect to $x$.
+</p>
+
+$$
+\frac1x+\frac1y\frac{dy}{dx}
+=
+1-\frac{dy}{dx}.
+$$
+
+<p>
+Collecting the terms containing $\dfrac{dy}{dx}$,
+</p>
+
+$$
+\begin{aligned}
+\frac1y\frac{dy}{dx}
++\frac{dy}{dx}
+&=
+1-\frac1x.
+\end{aligned}
+$$
+
+<p>
+Therefore,
+</p>
+
+$$
+\begin{aligned}
+\left(
+\frac{1+y}{y}
+\right)
+\frac{dy}{dx}
+&=
+\frac{x-1}{x}.
+\end{aligned}
+$$
+
+<p>
+Hence,
+</p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+\frac{y(x-1)}
+{x(1+y)}.
+}
+$$
+
+<hr>
+
+<h3>Q.16 Find the derivative of the function</h3>
+
+$$
+f(x)=(1+x)(1+x^2)(1+x^4)(1+x^8)
+$$
+
+<p>
+and hence find $f'(1)$.
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>
+Given,
+</p>
+
+$$
+f(x)=(1+x)(1+x^2)(1+x^4)(1+x^8).
+$$
+
+<p>
+Since the function is the product of several factors, we use <strong>logarithmic differentiation</strong>.
+</p>
+
+<hr>
+
+<p><strong>Step 1: Take logarithm on both sides.</strong></p>
+
+$$
+\log f(x)
+=
+\log(1+x)
++
+\log(1+x^2)
++
+\log(1+x^4)
++
+\log(1+x^8).
+$$
+
+<hr>
+
+<p><strong>Step 2: Differentiate both sides with respect to $x$.</strong></p>
+
+$$
+\begin{aligned}
+\frac{f'(x)}{f(x)}
+&=
+\frac{1}{1+x}
++
+\frac{2x}{1+x^2}
++
+\frac{4x^3}{1+x^4}
++
+\frac{8x^7}{1+x^8}.
+\end{aligned}
+$$
+
+<p>
+Therefore,
+</p>
+
+$$
+\boxed{
+f'(x)
+=
+(1+x)(1+x^2)(1+x^4)(1+x^8)
+\left(
+\frac{1}{1+x}
++
+\frac{2x}{1+x^2}
++
+\frac{4x^3}{1+x^4}
++
+\frac{8x^7}{1+x^8}
+\right).
+}
+$$
+
+<hr>
+
+<p><strong>Step 3: Find $f(1)$.</strong></p>
+
+$$
+\begin{aligned}
+f(1)
+&=(1+1)(1+1)(1+1)(1+1)\\
+&=2\times2\times2\times2\\
+&=16.
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Step 4: Find $\dfrac{f'(1)}{f(1)}$.</strong></p>
+
+$$
+\begin{aligned}
+\frac{f'(1)}{f(1)}
+&=
+\frac12
++\frac22
++\frac42
++\frac82\\[2mm]
+&=
+\frac12+1+2+4\\[2mm]
+&=
+\frac{15}{2}.
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Step 5: Find $f'(1)$.</strong></p>
+
+$$
+\begin{aligned}
+f'(1)
+&=
+f(1)\times\frac{15}{2}\\[2mm]
+&=
+16\times\frac{15}{2}\\[2mm]
+&=
+8\times15\\[2mm]
+&=
+120.
+\end{aligned}
+$$
+
+<hr>
+
+<p><strong>Answer:</strong></p>
+
+<p>
+The derivative of the given function is
+</p>
+
+$$
+\boxed{
+f'(x)
+=
+(1+x)(1+x^2)(1+x^4)(1+x^8)
+\left(
+\frac{1}{1+x}
++
+\frac{2x}{1+x^2}
++
+\frac{4x^3}{1+x^4}
++
+\frac{8x^7}{1+x^8}
+\right).
+}
+$$
+
+<p>
+Hence,
+</p>
+
+$$
+\boxed{f'(1)=120.}
+$$
+
+<hr>
+
+<h3>Q.17 Differentiate</h3>
+
+$$
+(x^2-5x+8)(x^3+7x+9)
+$$
+
+<p>
+in the following three ways:</p>
+
+<ol>
+<li>Using the product rule.</li>
+<li>By expanding the product to obtain a single polynomial.</li>
+<li>By logarithmic differentiation.</li>
+</ol>
+
+<p>
+Do all three methods give the same answer?
+</p>
+
+<p><strong>Solution:</strong></p>
+
+<hr>
+
+<p><strong>(i) Using the Product Rule</strong></p>
+
+<p>
+Let
+</p>
+
+$$
+u=x^2-5x+8,
+\qquad
+v=x^3+7x+9.
+$$
+
+<p>
+Then,
+</p>
+
+$$
+\frac{du}{dx}=2x-5,
+\qquad
+\frac{dv}{dx}=3x^2+7.
+$$
+
+<p>
+By the product rule,
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+u\frac{dv}{dx}
++
+v\frac{du}{dx}\\[2mm]
+&=
+(x^2-5x+8)(3x^2+7)
++(x^3+7x+9)(2x-5).
+\end{aligned}
+$$
+
+<p>
+Hence,
+</p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+(x^2-5x+8)(3x^2+7)
++(x^3+7x+9)(2x-5).
+}
+$$
+
+<hr>
+
+<p><strong>(ii) By Expanding the Product</strong></p>
+
+<p>
+First expand the expression:
+</p>
+
+$$
+\begin{aligned}
+y
+&=(x^2-5x+8)(x^3+7x+9)\\[2mm]
+&=
+x^5
+-5x^4
++15x^3
+-26x^2
++11x
++72.
+\end{aligned}
+$$
+
+<p>
+Differentiating term by term,
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+5x^4
+-20x^3
++45x^2
+-52x
++11.
+\end{aligned}
+$$
+
+<p>
+Hence,
+</p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+5x^4
+-20x^3
++45x^2
+-52x
++11.
+}
+$$
+
+<hr>
+
+<p><strong>(iii) By Logarithmic Differentiation</strong></p>
+
+<p>
+Taking logarithm on both sides,
+</p>
+
+$$
+\log y
+=
+\log(x^2-5x+8)
++
+\log(x^3+7x+9).
+$$
+
+<p>
+Differentiating,
+</p>
+
+$$
+\begin{aligned}
+\frac1y\frac{dy}{dx}
+&=
+\frac{2x-5}{x^2-5x+8}
++
+\frac{3x^2+7}{x^3+7x+9}.
+\end{aligned}
+$$
+
+<p>
+Multiplying both sides by $y$,
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+(x^2-5x+8)(x^3+7x+9)
+\left[
+\frac{2x-5}{x^2-5x+8}
++
+\frac{3x^2+7}{x^3+7x+9}
+\right].
+\end{aligned}
+$$
+
+<p>
+Simplifying,
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+(x^2-5x+8)(3x^2+7)
++
+(x^3+7x+9)(2x-5).
+\end{aligned}
+$$
+
+<p>
+Expanding this expression gives
+</p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+5x^4
+-20x^3
++45x^2
+-52x
++11.
+}
+$$
+
+<hr>
+
+<p><strong>Conclusion:</strong></p>
+
+<p>
+All the three methods give the <strong>same derivative</strong>.
+</p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+5x^4
+-20x^3
++45x^2
+-52x
++11.
+}
+$$
+
+<hr>
+
+<h3>Q.18 If $u$, $v$ and $w$ are functions of $x$, then show that</h3>
+
+$$
+\frac{d}{dx}(uvw)
+=
+\frac{du}{dx}\,vw
++
+u\,\frac{dv}{dx}\,w
++
+uv\,\frac{dw}{dx}
+$$
+
+<p>
+in two ways:
+</p>
+
+<ol>
+<li>By repeated application of the product rule.</li>
+<li>By logarithmic differentiation.</li>
+</ol>
+
+<p><strong>Solution:</strong></p>
+
+<hr>
+
+<p><strong>Method I: By Repeated Application of the Product Rule</strong></p>
+
+<p>
+Let
+</p>
+
+$$
+y=uvw.
+$$
+
+<p>
+Treat $uv$ as one function and $w$ as another.
+</p>
+
+<p>
+Applying the product rule,
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+\frac{d}{dx}(uv)\cdot w
++
+uv\cdot\frac{dw}{dx}.
+\end{aligned}
+$$
+
+<p>
+Now differentiate $uv$ again using the product rule.
+</p>
+
+$$
+\frac{d}{dx}(uv)
+=
+u\frac{dv}{dx}
++
+v\frac{du}{dx}.
+$$
+
+<p>
+Substituting this into the previous equation,
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+\left(
+u\frac{dv}{dx}
++
+v\frac{du}{dx}
+\right)w
++
+uv\frac{dw}{dx}.
+\end{aligned}
+$$
+
+<p>
+Expanding,
+</p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+\frac{du}{dx}\,vw
++
+u\,\frac{dv}{dx}\,w
++
+uv\,\frac{dw}{dx}.
+}
+$$
+
+<hr>
+
+<p><strong>Method II: By Logarithmic Differentiation</strong></p>
+
+<p>
+Let
+</p>
+
+$$
+y=uvw.
+$$
+
+<p>
+Taking logarithm on both sides,
+</p>
+
+$$
+\log y
+=
+\log u
++
+\log v
++
+\log w.
+$$
+
+<p>
+Differentiating both sides with respect to $x$,
+</p>
+
+$$
+\begin{aligned}
+\frac1y\frac{dy}{dx}
+&=
+\frac1u\frac{du}{dx}
++
+\frac1v\frac{dv}{dx}
++
+\frac1w\frac{dw}{dx}.
+\end{aligned}
+$$
+
+<p>
+Multiplying both sides by
+</p>
+
+$$
+y=uvw,
+$$
+
+<p>
+we obtain
+</p>
+
+$$
+\begin{aligned}
+\frac{dy}{dx}
+&=
+uvw
+\left(
+\frac1u\frac{du}{dx}
++
+\frac1v\frac{dv}{dx}
++
+\frac1w\frac{dw}{dx}
+\right).
+\end{aligned}
+$$
+
+<p>
+Distributing $uvw$,
+</p>
+
+$$
+\boxed{
+\frac{dy}{dx}
+=
+\frac{du}{dx}\,vw
++
+u\,\frac{dv}{dx}\,w
++
+uv\,\frac{dw}{dx}.
+}
+$$
+
+<hr>
+
+<p><strong>Conclusion:</strong></p>
+
+<p>
+Thus, by both repeated application of the product rule and logarithmic differentiation, we obtain the same result:
+</p>
+
+$$
+\boxed{
+\frac{d}{dx}(uvw)
+=
+\frac{du}{dx}\,vw
++
+u\,\frac{dv}{dx}\,w
++
+uv\,\frac{dw}{dx}.
+}
+$$
+
+<hr>
+
+
+
+
+</div>
+      </article>
+<aside class="related-box">
+        <h2>Other solutions</h2>
+        
+        <!-- Put aside content here  -->
+        
+              <a href="/link_page/maths_link_all_classes.html">Mathematics</a>
+        <a href="/link_page/science_link_all_classes.html">Science</a>
+        <a href="/link_page/sst_link_all_classes.html">Social Studies</a>
+        <a href="/link_page/english_link_all_classes.html">English</a>
+        <a href="/link_page/hindi_link_all_classes.html">Hindi</a>
+        <a href="/link_page/computer_science_link_all_classes.html">Computer Science/ IT/ IP</a>  </aside>
+    </main>      <!-- ━━━ FOOTER ━━━ -->
+<!-- ━━━ FOOTER ━━━ -->
+<div id="footer"></div>
+
+  <script>
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$",  right: "$",  inline: true  }
+      ]
+    });
+  </script>
+
+   </body>
+</html>
+
