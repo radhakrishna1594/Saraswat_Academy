@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5363507070190468"
-     crossorigin="anonymous"></script><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5363507070190468" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ask a Question</title>
 <meta name="description" content="Submit your doubts and questions. Our team will answer every question for free.">
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet"> 
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./header.css">
 <script src="./loader.js"></script>
 <script src="./config.js"></script>
-<style>
 
+<style>
 body{
 font-family:Arial,sans-serif;
 background:#f5f5f5;
@@ -19,163 +20,83 @@ margin:0;
 }
 
 .ask-box{
-
 max-width:800px;
-
 margin:40px auto;
-
 background:#fcfcfc;
-
 padding:30px;
-
 border-radius:10px;
-
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-
+box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
-h1{
-
+h2{
 text-align:center;
-
 margin-bottom:10px;
-
-}
-
-.description{
-
-text-align:center;
-
-color:#666;
-
-margin-bottom:30px;
-
 }
 
 .field{
-
 margin-bottom:20px;
-
 }
 
 label{
-
 display:block;
-
 font-weight:bold;
-
 margin-bottom:8px;
-
 }
 
-input,
-
-select,
-
-textarea{
-
+input,select,textarea{
 width:100%;
-
 padding:12px;
-
 font-size:16px;
-
 border:1px solid #610e0e;
-
 border-radius:6px;
-
 box-sizing:border-box;
-
 }
 
 textarea{
-
-min-height:100px;
-
+min-height:120px;
 resize:vertical;
-
 }
 
 button{
-
 width:100%;
-
 padding:14px;
-
 background:#0a2540;
-
-color:rgb(255, 255, 255);
-
+color:#fff;
 border:none;
-
 border-radius:6px;
-
 font-size:17px;
-
 cursor:pointer;
-
 }
 
 button:hover{
-
-opacity:0.9;
-
+opacity:.9;
 }
 
 .google-form-box{
-
 max-width:700px;
-
-margin:40px auto;
-
+margin:40px auto 0;
 padding:30px;
-
 text-align:center;
-
 background:#f2df92;
-
 border-radius:10px;
-
-box-shadow:0 2px 10px rgba(247, 245, 245, 0.1);
-
 }
 
 .ask-btn{
-
 display:inline-block;
-
 padding:14px 25px;
-
 background:#071f37;
-
-color:rgb(255, 255, 255);
-
+color:#fff;
 text-decoration:none;
-
 border-radius:6px;
-
 font-weight:bold;
-
-}
-
-.ask-btn:hover{
-
-opacity:0.9;
-
 }
 
 @media(max-width:768px){
-
 .ask-box{
-
 margin:20px;
-
 padding:20px;
-
 }
-
 }
-
 </style>
 </head>
 
@@ -187,184 +108,88 @@ padding:20px;
 
 <h2>🙋 Ask Your Doubts</h2>
 
-<br>
-
-<form action="https://formsubmit.co/grassrootedtech@gmail.com" method="POST">
-
-<input type="hidden" name="_subject" value="New Student Doubt">
-
-<input type="hidden" name="_captcha" value="false">
-
-<input type="hidden" name="_template" value="table">
-
-<input type="hidden" name="_next" value="https://www.saraswatacademy.in/thank-you.html">
-
-<input
-type="hidden"
-name="_autoresponse"
-value="Thank you for contacting Saraswat Academy.
-
-We have received your question successfully.
-
-Our subject experts will review your doubt and reply as soon as possible.
-
-Regards,
-Saraswat Academy
-https://www.saraswatacademy.in">
-
+<form id="doubtForm">
 
 <div class="field">
-
 <label>Your Name *</label>
-
-<input type="text" name="Student Name" required>
-
+<input type="text" id="studentName" required>
 </div>
 
 <div class="field">
-
 <label>Email Id *</label>
-
-<input type="email" name="Student Email" required>
-
+<input type="email" id="studentEmail" required>
 </div>
 
 <div class="field">
-
 <label>WhatsApp Number (Optional)</label>
-
-<input type="tel" name="WhatsApp Number">
-
+<input type="tel" id="whatsapp">
 </div>
 
 <div class="field">
-
 <label>Class *</label>
-
-<select name="Class" required>
-
+<select id="studentClass" required>
 <option value="">Select Class</option>
-
 <option>Class 6</option>
-
 <option>Class 7</option>
-
 <option>Class 8</option>
-
 <option>Class 9</option>
-
 <option>Class 10</option>
-
 <option>Class 11</option>
-
 <option>Class 12</option>
-
 </select>
-
 </div>
 
-
 <div class="field">
-
 <label>Board</label>
-
-<select name="Board">
-
+<select id="board">
 <option>CBSE</option>
-
 <option>RBSE</option>
-
 <option>ICSE</option>
-
 <option>Other</option>
-
 </select>
-
 </div>
 
-
 <div class="field">
-
 <label>Subject *</label>
-
-<select name="Subject" required>
-
+<select id="subject" required>
 <option value="">Select Subject</option>
-
 <option>Mathematics</option>
-
 <option>Science</option>
-
 <option>English</option>
-
 <option>Social Science</option>
-
 <option>Hindi</option>
-
 <option>IT / AI</option>
-
 <option>Other</option>
-
 </select>
-
 </div>
 
 <div class="field">
-
 <label>Chapter Name</label>
-
-<input type="text" name="Chapter Name">
-
+<input type="text" id="chapter">
 </div>
 
 <div class="field">
-
 <label>Your Question *</label>
-
-<textarea name="Question" required></textarea>
-
+<textarea id="question" required></textarea>
 </div>
-
 
 <div class="field">
-
 <label>Can we publish your question on Saraswat Academy?</label>
-
-<select name="Permission">
-
+<select id="permission">
 <option>Yes</option>
-
 <option>No</option>
-
 </select>
-
 </div>
 
-
-<button type="submit">
-
-Submit Question
-
-</button>
+<button type="submit">Submit Question</button>
 
 <div class="google-form-box">
-
 <h3>Need to Upload Images or PDFs?</h3>
-
-<p>
-Click the button below to submit your doubt along with images, PDFs or documents.
-</p>
+<p>Click the button below to submit your doubt along with images, PDFs or documents.</p>
 <br>
-<a
-href="https://forms.gle/EhFBTpRAaMsXdYm78"
-target="_blank"
-class="ask-btn">
+<a href="https://forms.gle/EhFBTpRAaMsXdYm78" target="_blank" class="ask-btn">
 Submit Your Doubt
-
 </a>
-
-
-
 </div>
 
 </form>
@@ -372,7 +197,39 @@ Submit Your Doubt
 </div>
 
 <div id="footer"></div>
- 
-</body>
 
+<script>
+document.getElementById("doubtForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let name=document.getElementById("studentName").value;
+let email=document.getElementById("studentEmail").value;
+let whatsapp=document.getElementById("whatsapp").value;
+let studentClass=document.getElementById("studentClass").value;
+let board=document.getElementById("board").value;
+let subject=document.getElementById("subject").value;
+let chapter=document.getElementById("chapter").value;
+let question=document.getElementById("question").value;
+let permission=document.getElementById("permission").value;
+
+let message=
+"📚 *New Student Doubt*%0A%0A"+
+"👤 Name: "+name+"%0A"+
+"📧 Email: "+email+"%0A"+
+"📱 WhatsApp: "+whatsapp+"%0A"+
+"🏫 Class: "+studentClass+"%0A"+
+"📖 Board: "+board+"%0A"+
+"📘 Subject: "+subject+"%0A"+
+"📑 Chapter: "+chapter+"%0A%0A"+
+"❓ Question:%0A"+question+"%0A%0A"+
+"📝 Publish Permission: "+permission;
+
+/* WhatsApp number */
+window.open("https://wa.me/917073468838?text="+message,"_blank");
+
+});
+</script>
+
+</body>
 </html>
