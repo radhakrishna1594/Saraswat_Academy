@@ -239,29 +239,28 @@ Your ideas help us improve Saraswat Academy for every student and teacher.
 Share your feedback, report an issue, or suggest a new feature.
 </p>
 
-<form action="mailto:grassrootedtech@gmail.com" method="post" enctype="text/plain">
+<form id="feedbackForm">
 
 <div class="row">
 
 <div class="input-box">
 <label>Full Name</label>
-<input type="text" name="Full Name" placeholder="Enter your name" required>
+<input type="text" id="name" placeholder="Enter your name" required>
 </div>
 
 <div class="input-box">
 <label>Email Address</label>
-<input type="email" name="Email Address" placeholder="Enter your email" required>
+<input type="email" id="email" placeholder="Enter your email" required>
 </div>
 
 </div>
-
 
 <div class="row">
 
 <div class="input-box">
 <label>I am a</label>
 
-<select name="Role" required>
+<select id="role" required>
 <option value="">Select</option>
 <option>Student</option>
 <option>Teacher</option>
@@ -275,7 +274,7 @@ Share your feedback, report an issue, or suggest a new feature.
 
 <label>Suggestion Category</label>
 
-<select name="Suggestion Category" required>
+<select id="category" required>
 <option value="">Select Category</option>
 <option>NCERT Solutions</option>
 <option>Notes</option>
@@ -293,13 +292,12 @@ Share your feedback, report an issue, or suggest a new feature.
 
 </div>
 
-
 <div class="input-box">
 
 <label>Your Suggestion</label>
 
 <textarea
-name="Suggestion"
+id="suggestion"
 rows="8"
 placeholder="Write your feedback or suggestion here..."
 required></textarea>
@@ -316,34 +314,25 @@ required></textarea>
 
 <div class="star-rating">
 
-<input type="radio" id="5-stars" name="Rating" value="5" required>
+<input type="radio" id="5-stars" name="rating" value="5" required>
 <label for="5-stars">&#9733;</label>
 
-<input type="radio" id="4-stars" name="Rating" value="4">
+<input type="radio" id="4-stars" name="rating" value="4">
 <label for="4-stars">&#9733;</label>
 
-<input type="radio" id="3-stars" name="Rating" value="3">
+<input type="radio" id="3-stars" name="rating" value="3">
 <label for="3-stars">&#9733;</label>
 
-<input type="radio" id="2-stars" name="Rating" value="2">
+<input type="radio" id="2-stars" name="rating" value="2">
 <label for="2-stars">&#9733;</label>
 
-<input type="radio" id="1-star" name="Rating" value="1">
+<input type="radio" id="1-star" name="rating" value="1">
 <label for="1-star">&#9733;</label>
 
 </div>
 
 </div>
 
-<div class="input-box">
-
-<label>Upload Screenshot (Optional)</label>
-
-<input type="file" name="Screenshot">
-
-</div>
-
-</div>
 
 <button type="submit" class="submit-btn">
 Send Suggestion
@@ -359,5 +348,35 @@ Send Suggestion
 
  <div id="footer"></div>  
 
+ <script>
+
+document.getElementById("feedbackForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let role=document.getElementById("role").value;
+let category=document.getElementById("category").value;
+let suggestion=document.getElementById("suggestion").value;
+
+let rating=document.querySelector('input[name="rating"]:checked');
+
+rating=rating?rating.value:"Not Given";
+
+let message=
+"📚 *Saraswat Academy Feedback*%0A%0A"+
+"👤 Name: "+name+"%0A"+
+"📧 Email: "+email+"%0A"+
+"🎓 Role: "+role+"%0A"+
+"📂 Category: "+category+"%0A"+
+"⭐ Rating: "+rating+" Stars%0A%0A"+
+"💬 Suggestion:%0A"+suggestion;
+
+window.open("https://wa.me/917073468838?text="+message,"_blank");
+
+});
+
+</script>
 </body>
 </html>
