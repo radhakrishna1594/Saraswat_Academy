@@ -4,30 +4,129 @@
 <meta charset="UTF-8">
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5363507070190468"
      crossorigin="anonymous"></script><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Classes by Subjects</title>
+<title>Multiple choice questions practice for all classes</title>
 <meta name="description" content="Learn about Saraswatacademy.in — who we are, our mission to make free NCERT education available to every Indian student, and the team behind it.">
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet"> <link rel="stylesheet" href="../header.css">
 
-<script src="../config.js"></script>
+<link rel="stylesheet" href="../header.css"><link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet"> <script src="../config.js"></script>
 <script src="../loader.js"></script>
+<style>
 
-</head> 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7fa;
+    padding-bottom: 40px;
+}
+
+.page-title{
+    text-align:center;
+    margin-top: 40px;
+    margin-bottom:30px;
+}
+
+.page-title h1{
+    color:#0d3b66;
+    margin-bottom:10px;
+}
+
+.page-title p{
+    color:#666;
+}
+
+.chapter-box{
+    max-width:900px;
+    margin:auto;
+}
+
+.solution-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    text-decoration:none;
+
+    background:white;
+
+    padding:18px 25px;
+
+    margin-bottom:15px;
+
+    border-radius:15px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+}
+
+.solution-row:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+
+.badge{
+    background:#d9f3f7;
+    color:#006d77;
+
+    padding:10px 18px;
+
+    border-radius:25px;
+
+    font-weight:bold;
+}
+
+.open-link{
+    color:white;
+    background:#0d6efd;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+}
+
+.solution-row:hover .open-link{
+    background:#084298;
+}
+
+.chapter-heading{
+    background:#0d3b66;
+    color:white;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+    text-align:center;
+}
+
+</style>
+</head>
 <body>
 
-<!-- ── HEADER ── -->
-
-<div id="header"></div>
-
-
-
+  <div id="header"></div>
+   
 
 <div class="page-title"> <br>
-    <h1>Subjects</h1>
-
+    <h1>MCQ Practice (Subjectwise)</h1>
+    <p>CBSE</p>
 </div>
 
+<div class="chapter-box">
+
+    <div class="chapter-heading">
+        Subject-wise MCQs for Class 10
+    </div>
 
     </a>
+
 
     <a class="solution-row"
        href="/MCQ_Practice/class_10/10_maths/chapters_class10_maths.html">
@@ -106,23 +205,8 @@
 
     </a>
 
-    
-</div>
 
-<!-- ━━━ FOOTER ━━━ -->
- <div id="footer"></div><!-- ── SCROLL REVEAL ── -->
-<script>
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      observer.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.12 });
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
+    </div>
 
 </body>
 </html>
