@@ -98,13 +98,13 @@ header {
 .main-nav { display: flex; align-items: center; gap: 2px; flex: 1; flex-wrap: wrap; }
 .nav-link {
   display: flex; align-items: center; gap: 4px;
-  padding: 8px 13px; border-radius: 7px;
-  font-size: 14px; font-weight: 600; color: var(--text2);
+  padding: 8px 13px; border-radius: 12px;
+  font-size: 14px; font-weight: 600; color: #100b49;
   text-decoration: none; cursor: pointer;
   transition: background .15s, color .15s;
   white-space: nowrap; min-height: 44px;
 }
-.nav-link:hover { background: var(--cream); color: var(--indigo); }
+.nav-link:hover { background: var(--cream); color: #8B1A1A; }
 .nav-link.active { color: var(--indigo); font-weight: 600; }
 
 /* HAMBURGER */
@@ -186,11 +186,11 @@ header {
   font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
   margin-bottom: 22px;
 }
-.hero-eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold2); animation: pulse 2s ease-in-out infinite; flex-shrink: 0; }
+.hero-eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold2); animation: pulse 3s ease-in-out infinite; flex-shrink: 0; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.7)} }
 
 .hero h1 {
-  font-family: 'Cormorant Garamond', serif; font-weight: 600;
+  font-family: 'Cormorant Garamond', serif; font-weight: 700;
   font-size: clamp(2.4rem, 5vw, 4.2rem); color: #fff; line-height: 1.12;
   margin-bottom: 20px; letter-spacing: -.01em;
 }
@@ -198,7 +198,7 @@ header {
 .hero h1 span { display: block; }
 
 .hero-sub {
-  font-size: 15px; color: #9CA3AF; line-height: 1.75;
+  font-size: 15px; color: #ffffff; line-height: 1.75;
   max-width: 500px; margin-bottom: 32px; font-weight: 300;
 }
 
@@ -210,8 +210,8 @@ header {
   letter-spacing: .04em; border: 1px solid; min-height: 34px;
   display: inline-flex; align-items: center;
 }
-.bc-cbse  { background: rgba(30,42,94,.5);  border-color: rgba(70,90,180,.5); color: #A5B4FC; }
-.bc-icse  { background: rgba(13,110,110,.3); border-color: rgba(20,160,158,.4); color: #5EEAD4; }
+.bc-cbse  { background: rgba(0, 0, 0, 0.5);  border-color: rgba(255, 255, 255, 0.5); color: #f4f4f4; }
+.bc-icse  { background: rgba(6, 4, 68, 0.3); border-color: rgba(20,160,158,.4); color: #5EEAD4; }
 .bc-ib    { background: rgba(139,26,26,.3);  border-color: rgba(200,50,50,.35); color: #FCA5A5; }
 .bc-eng   { background: rgba(201,147,58,.15);border-color: rgba(201,147,58,.35);color: var(--gold2); }
 .bc-comp  { background: rgba(10,74,58,.4);   border-color: rgba(16,120,90,.4); color: #6EE7B7; }
@@ -220,7 +220,7 @@ header {
 .btn-hero-primary {
   padding: 14px 28px; border-radius: 9px;
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold2) 100%);
-  color: var(--deep); font-weight: 700; font-size: 15px;
+  color: var(--deep); font-weight: 800; font-size: 15px;
   text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
   box-shadow: 0 6px 24px rgba(201,147,58,.4); transition: all .2s; min-height: 48px;
 }
@@ -241,8 +241,8 @@ header {
   border: 1px solid rgba(255,255,255,.1); border-radius: 16px; padding: 24px;
 }
 .hero-card-title {
-  font-family: 'Cormorant Garamond', serif; font-size: 14px; color: var(--gold2);
-  letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; font-weight: 600;
+  font-family: 'Cormorant Garamond', serif  ; font-size: 20px; color: var(--gold2);
+  letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; font-weight: 700;
 }
 .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .stat-item {
@@ -257,18 +257,6 @@ header {
 .stat-label { font-size: 11px; color: #6B7280; font-weight: 500; letter-spacing: .02em; }
 
 /* TRUST BOX */
-.trust-box {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 20px 22px;
-  border: 3px solid #d39a34;
-  border-radius: 16px;
-  background: rgba(255,255,255,.04);
-  backdrop-filter: blur(8px);
-  margin-bottom: 16px;
-}
 .trust-left {
   display: flex;
   align-items: flex-start;
@@ -282,8 +270,8 @@ header {
   font-size: 24px; flex-shrink: 0;
 }
 .small-text {
-  margin: 0; color: #d5d5d5;
-  font-size: clamp(13px, 2.5vw, 16px);
+  margin: 0; color: #ffffff;
+  font-size: clamp(16px, 2.5vw, 16px);
 }
 .trust-content h2 {
   margin: 6px 0;
@@ -293,7 +281,7 @@ header {
   line-height: 1.2;
 }
 .description {
-  margin: 0; color: #cfcfcf;
+  margin: 0; color: #ffffff;
   font-size: clamp(12px, 2vw, 14px);
   line-height: 1.6;
 }
