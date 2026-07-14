@@ -22,4 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (document.getElementById("footer"))
         loadComponent("footer", "footer.html");
+
+    
 });
