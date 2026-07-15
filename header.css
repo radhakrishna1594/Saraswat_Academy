@@ -220,138 +220,7 @@ header{
 .btn-enroll:hover { background: var(--saffron-deep); }
 
 
-
-
 /* ─── PAGE TITLE ─── */
-.page-title {
-  text-align: center;
-  margin-bottom: 32px;
-  padding: 0 16px;
-}
-.page-title h1 {
-  font-family: 'Inter', serif;
-  color: var(--navy);
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  font-weight: 700;
-  margin-bottom: 10px;
-  line-height: 1.2;
-}
-.page-title p {
-  color: var(--text3);
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-/* ─── CHAPTER BOX ─── */
-.chapter-box {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 16px;
-  width: 100%;
-}
-
-/* ─── CHAPTER HEADING ─── */
-.chapter-heading {
-  background: var(--navy);
-  color: var(--white);
-  padding: 18px 24px;
-  border-radius: var(--radius);
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: clamp(1rem, 3vw, 1.25rem);
-  font-weight: 700;
-  font-family: 'Inter', sans-serif;
-}
-
-/* ─── SOLUTION ROWS ─── */
-.solution-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-decoration: none;
-  background: var(--white);
-  padding: 16px 22px;
-  margin-bottom: 12px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: transform .25s, box-shadow .25s;
-  gap: 12px;
-  border: 1px solid var(--grey2);
-}
-.solution-row:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--indigo);
-}
-
-.badge {
-  background: #d9f3f7;
-  color: #006d77;
-  padding: 8px 16px;
-  border-radius: 25px;
-  font-weight: 700;
-  font-size: 14px;
-  font-family: 'Inter', sans-serif;
-  flex-shrink: 0;
-  white-space: nowrap;
-}
-
-.open-link {
-  color: var(--white);
-  background: var(--indigo);
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 14px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  flex-shrink: 0;
-  white-space: nowrap;
-  min-height: 44px;
-  transition: background .2s;
-}
-.open-link:hover { background: var(--navy); }
-
-/* Solution row middle text */
-.solution-row-title {
-  flex: 1;
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--text);
-  font-family: 'Inter', sans-serif;
-  line-height: 1.4;
-}
-
-/* ─── MISSION / OFFER LAYOUTS ─── */
-.mission-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-.offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.impact-inner { display: grid; grid-template-columns: repeat(4, 1fr); }
-.contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-
-/* Timeline */
-.timeline::before { content: ''; position: absolute; left: 50%; width: 2px; background: var(--grey2); top: 0; bottom: 0; transform: translateX(-50%); }
-.tl-item { display: grid; grid-template-columns: 1fr 48px 1fr; gap: 16px; align-items: center; position: relative; margin-bottom: 32px; }
-.tl-dot { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; background: var(--indigo); color: var(--white); z-index: 1; }
-.tl-content { padding: 16px; background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); }
-.tl-content.left { text-align: right; }
-
-/* CTA Banner */
-.cta-banner {
-  background: linear-gradient(135deg, var(--indigo) 0%, var(--indigo2) 100%);
-  border-radius: 20px;
-  padding: 56px 48px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-  flex-wrap: wrap;
-  position: relative;
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-}
 
 /* ─── FOOTER ─── */
 footer { background: var(--deep); color: #ffffff; }
@@ -493,3 +362,367 @@ footer { background: var(--deep); color: #ffffff; }
   .badge, .open-link { font-size: 12px; }
 }
 
+
+
+
+
+/* ==========================================
+   PAGE TITLE
+========================================== */
+
+.page-title{
+    max-width:700px;
+    margin:25px auto 30px;
+    padding:35px 25px;
+    text-align:center;
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    border:1px solid #e7edf5;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+.page-title h1{
+
+    margin:0;
+    font-size:34px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-weight:800;
+
+    color:#17365d;
+
+    letter-spacing:.5px;
+
+    line-height:1;
+}
+
+.page-title p{
+
+    margin-top:15px;
+
+    font-size:20px;
+
+    font-weight:800;
+
+    color:#0d6efd;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+}
+
+/* ==========================================
+   BOOK COVER
+========================================== */
+
+
+/* ==========================================
+   CHAPTER BOX
+========================================== */
+
+.chapter-box{
+
+    max-width:900px;
+
+    margin:0 auto 60px;
+
+    background:#ffffff;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    border:1px solid #e8edf3;
+
+    box-shadow:
+    0 8px 24px rgba(0,0,0,.06);
+}
+
+
+/* ==========================================
+   CHAPTER HEADING
+========================================== */
+
+.chapter-heading{
+    width:650px;
+    max-width:90%;
+    margin:20px auto;
+    padding:14px;
+    background:#0448ad;
+    color:#fff;
+    text-align:center;
+    font-size:22px;
+    font-weight:600;
+    border-radius:8px;
+}
+    
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.page-title{
+
+    margin:30px 15px 25px;
+
+    padding:25px 18px;
+}
+
+.page-title h1{
+
+    font-size:26px;
+}
+
+.page-title p{
+
+    font-size:17px;
+
+    letter-spacing:2px;
+}
+
+.chapter-box{
+
+    margin:0 15px 50px;
+}
+
+.chapter-heading{
+
+    font-size:18px;
+
+    padding:15px;
+}
+
+.book-cover img{
+
+    width:210px;
+}
+
+}
+
+/* ===========================
+   Chapter Box
+=========================== */
+
+.chapter-box{
+    max-width:900px;
+    margin:50px auto;
+    padding:20px 30px;
+}
+
+/* ===========================
+   Individual Row
+=========================== */
+
+.solution-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    text-decoration:none;
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:18px;
+
+    padding:18px 24px;
+
+    margin-bottom:18px;
+
+    box-shadow:
+        0 4px 14px rgba(0,0,0,.05);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease,
+        background .25s ease;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* Blue Accent */
+
+.solution-row::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:6px;
+
+    height:100%;
+
+    background:#0d6efd;
+
+    transition:.25s;
+
+}
+
+/* Hover */
+
+.solution-row:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 14px 35px rgba(13,110,253,.15);
+
+    border-color:#0d6efd;
+
+    background:#f8fbff;
+
+}
+
+.solution-row:hover::before{
+
+    width:10px;
+
+}
+
+/* ===========================
+   Class Name
+=========================== */
+
+.badge{
+
+    font-size:19px;
+
+    font-weight:700;
+
+    color:#17365d;
+
+    letter-spacing:.3px;
+
+    transition:.25s;
+
+}
+
+.solution-row:hover .badge{
+
+    color:#0d6efd;
+
+}
+
+/* ===========================
+   Open Button
+=========================== */
+
+.open-link{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:120px;
+
+    height:46px;
+
+    border-radius:50px;
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    font-weight:600;
+
+    font-size:16px;
+
+    transition:.25s;
+
+    box-shadow:
+        0 6px 18px rgba(13,110,253,.25);
+
+}
+
+.solution-row:hover .open-link{
+
+    background:#084298;
+
+    transform:scale(1.05);
+
+}
+
+/* ===========================
+   Active Click
+=========================== */
+
+.solution-row:active{
+
+    transform:scale(.98);
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:768px){
+
+.solution-row{
+
+    padding:16px;
+
+}
+
+.badge{
+
+    font-size:18px;
+
+}
+
+.open-link{
+
+    min-width:95px;
+
+    height:40px;
+
+    font-size:14px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.solution-row{
+
+    padding:14px;
+
+    border-radius:14px;
+
+}
+
+.badge{
+
+    font-size:17px;
+
+}
+
+.open-link{
+
+    min-width:82px;
+
+    height:36px;
+
+    font-size:13px;
+
+}
+
+}
