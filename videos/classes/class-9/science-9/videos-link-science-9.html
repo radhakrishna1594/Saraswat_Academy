@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saraswat Academy Video Library</title>
+
+<link rel="stylesheet" href="/header.css">
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/loader.js"></script>
+<script src="/config.js"></script>
+<script src="/header.js"></script>
+
+<style>
+/* ===== Saraswat Academy Video Library ===== */
+
+
+.sa-video-library,
+.sa-video-library *{
+    box-sizing:border-box;
+}
+
+.sa-video-library{
+    max-width:1400px;
+    margin:30px auto;
+    padding:20px;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.sa-video-title{
+    font-size:32px;
+    margin-bottom:25px;
+    color:#0c51a1;
+}
+
+.sa-video-featured{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+    margin-bottom:35px;
+}
+
+.sa-video-player{
+    background:#000;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.sa-video-player video{
+    width:100%;
+    display:block;
+    aspect-ratio:16/9;
+}
+
+.sa-video-info{
+    background:#fff;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 2px 8px rgba(0, 0, 0, 0.1);
+    color:#070229;
+}
+
+.sa-video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+    gap:20px;
+}
+
+.sa-video-card{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    cursor:pointer;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+    transition:.25s;
+}
+
+.sa-video-card:hover{
+    transform:translateY(-5px);
+}
+
+.sa-video-thumb{
+    position:relative;
+}
+
+.sa-video-thumb img{
+    width:100%;
+    display:block;
+    aspect-ratio:16/9;
+    object-fit:cover;
+}
+
+.sa-video-play{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#e53935;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+}
+
+.sa-video-duration{
+    position:absolute;
+    right:8px;
+    bottom:8px;
+    background:#000;
+    color:#fff;
+    padding:4px 8px;
+    border-radius:4px;
+    font-size:12px;
+}
+
+.sa-video-content{
+    padding:15px;
+}
+
+.sa-video-content h3{
+    margin:0;
+    font-size:18px;
+}
+
+.sa-video-meta{
+    color:#666;
+    margin-top:8px;
+    line-height:1.5;
+}
+
+@media(max-width:900px){
+    .sa-video-featured{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="sa-video-library">
+
+<h1 class="sa-video-title">Saraswat Academy Video Library</h1>
+
+<div class="sa-video-featured">
+
+<div class="sa-video-player">
+<video id="mainVideo" controls poster="">
+<source id="videoSource"
+src="/videos/classes/class-9/science-9/science-9-chapter-1.mp4"
+type="video/mp4">
+</video>
+</div>
+
+<div class="sa-video-info">
+<h2 id="videoTitle">Exploration: Entering 
+the World of 
+Secondary Science - Chapter 1</h2>
+<p id="videoClass">Class 9 Science</p>
+<hr> <br> 
+<p>
+Welcome to the first chapter, <strong>"Exploration: Entering the World of Secondary Science"</strong>. In this introductory lesson, students will explore the exciting world of science and understand how scientific knowledge helps us explain natural phenomena and solve real-life problems.
+</p>
+</div>
+
+</div>
+
+<h2>Latest Videos</h2>
+
+<div class="sa-video-grid" id="videoGrid"></div>
+
+</div>
+
+<div id="footer"></div>
+
+<script>
+const videos=[
+{
+title:"Motion - Part 1",
+className:"Class 9 Science",
+duration:"12:35",
+views:"12K views",
+thumbnail:"",
+video:""
+},
+{
+title:"Force and Laws of Motion",
+className:"Class 9 Science",
+duration:"18:20",
+views:"18K views",
+thumbnail:"",
+video:""
+},
+{
+title:"Gravitation",
+className:"Class 9 Science",
+duration:"21:08",
+views:"10K views",
+thumbnail:"",
+video:""
+}
+];
+
+const grid=document.getElementById("videoGrid");
+
+videos.forEach(v=>{
+grid.innerHTML+=`
+<div class="sa-video-card" onclick="playVideo('${v.video}','${v.thumbnail}','${v.title}','${v.className}')">
+<div class="sa-video-thumb">
+<img src="${v.thumbnail}" alt="${v.title}">
+<div class="sa-video-play">▶</div>
+<div class="sa-video-duration">${v.duration}</div>
+</div>
+<div class="sa-video-content">
+<h3>${v.title}</h3>
+<div class="sa-video-meta">
+${v.className}<br>
+${v.views}
+</div>
+</div>
+</div>`;
+});
+
+function playVideo(videoFile,poster,title,className){
+const video=document.getElementById("mainVideo");
+const source=document.getElementById("videoSource");
+source.src=videoFile;
+video.poster=poster;
+video.load();
+video.play();
+document.getElementById("videoTitle").textContent=title;
+document.getElementById("videoClass").textContent=className;
+window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
