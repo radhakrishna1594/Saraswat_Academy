@@ -10,6 +10,11 @@
 <script src="/loader.js"></script>
 <script src="/config.js"></script> <script src="/header.js"></script> 
 
+ <!-- KaTeX for high-quality mathematical rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
 
 <style>
 .answer-content{display:none}
@@ -65,770 +70,377 @@ document.querySelectorAll('p').forEach(function(p){
         <div class="note-box"> 
 
 
-
-<h2>Class 10 Mathematics</h2>
-
-<h2>Chapter 2: Polynomials</h2>
-
-<h2>MCQs with Answers and Solutions</h2>
-
-<hr>
-
-<h3>Q1. A polynomial of degree 3 is called</h3>
-
-<p>
-(a) Linear Polynomial<br>
-(b) Quadratic Polynomial<br>
-(c) Cubic Polynomial<br>
-(d) Biquadratic Polynomial
-</p>
-
-<p><strong>Answer:</strong> (c) Cubic Polynomial</p>
-
-<p><strong>Solution:</strong> A polynomial whose highest power of the variable is 3 is called a cubic polynomial.</p>
-
-<hr>
-
-<h3>Q2. The degree of the polynomial 7x⁴ − 3x² + 5 is</h3>
-
-<p>
-(a) 2<br>
-(b) 3<br>
-(c) 4<br>
-(d) 5
-</p>
-
-<p><strong>Answer:</strong> (c) 4</p>
-
-<p><strong>Solution:</strong> The highest power of x is 4.</p>
-
-<hr>
-
-<h3>Q3. Which of the following is a quadratic polynomial?</h3>
-
-<p>
-(a) x³ + 2x + 1<br>
-(b) x² − 7x + 5<br>
-(c) 5x − 3<br>
-(d) 4
-</p>
-
-<p><strong>Answer:</strong> (b) x² − 7x + 5</p>
-
-<p><strong>Solution:</strong> Highest power of x is 2.</p>
-
-<hr>
-
-<h3>Q4. The zero of the polynomial p(x) = x − 8 is</h3>
-
-<p>
-(a) -8<br>
-(b) 0<br>
-(c) 8<br>
-(d) 1
-</p>
-
-<p><strong>Answer:</strong> (c) 8</p>
-
-<p><strong>Solution:</strong> x − 8 = 0 ⇒ x = 8.</p>
-
-<hr>
-
-<h3>Q5. Number of zeroes of a linear polynomial is</h3>
-
-<p>
-(a) 0<br>
-(b) 1<br>
-(c) 2<br>
-(d) 3
-</p>
-
-<p><strong>Answer:</strong> (b) 1</p>
-
-<p><strong>Solution:</strong> A linear polynomial intersects the x-axis at one point.</p>
-
-<hr>
-
-<h3>Q6. If α is a zero of p(x) = x² − 9, then α can be</h3>
-
-<p>
-(a) 3<br>
-(b) -3<br>
-(c) Both (a) and (b)<br>
-(d) 0
-</p>
-
-<p><strong>Answer:</strong> (c) Both (a) and (b)</p>
-
-<p><strong>Solution:</strong> x² − 9 = (x − 3)(x + 3).</p>
-
-<hr>
-
-<h3>Q7. The number of zeroes of x² + 1 is</h3>
-
-<p>
-(a) 0<br>
-(b) 1<br>
-(c) 2<br>
-(d) 3
-</p>
-
-<p><strong>Answer:</strong> (a) 0</p>
-
-<p><strong>Solution:</strong> The graph does not cut the x-axis.</p>
-
-<hr>
-
-<h3>Q8. The graph of a quadratic polynomial can intersect the x-axis at maximum</h3>
-
-<p>
-(a) 1 point<br>
-(b) 2 points<br>
-(c) 3 points<br>
-(d) 4 points
-</p>
-
-<p><strong>Answer:</strong> (b) 2 points</p>
-
-<p><strong>Solution:</strong> A quadratic polynomial can have at most 2 zeroes.</p>
-
-<hr>
-
-<h3>Q9. The zero of p(x) = 5 is</h3>
-
-<p>
-(a) 5<br>
-(b) 0<br>
-(c) No zero<br>
-(d) 1
-</p>
-
-<p><strong>Answer:</strong> (c) No zero</p>
-
-<p><strong>Solution:</strong> Constant non-zero polynomial has no zero.</p>
-
-<hr>
-
-<h3>Q10. If one zero of x² − 5x + 6 is 2, then the other zero is</h3>
-
-<p>
-(a) 1<br>
-(b) 2<br>
-(c) 3<br>
-(d) 4
-</p>
-
-<p><strong>Answer:</strong> (c) 3</p>
-
-<p><strong>Solution:</strong> x² − 5x + 6 = (x − 2)(x − 3).</p>
-
-<hr>
-
-<h3>Q11. Sum of zeroes of x² − 7x + 10 is</h3>
-
-<p>
-(a) 7<br>
-(b) -7<br>
-(c) 10<br>
-(d) -10
-</p>
-
-<p><strong>Answer:</strong> (a) 7</p>
-
-<p><strong>Solution:</strong> Sum of zeroes = −b/a = 7.</p>
-
-<hr>
-
-<h3>Q12. Product of zeroes of x² − 7x + 10 is</h3>
-
-<p>
-(a) 7<br>
-(b) 10<br>
-(c) -10<br>
-(d) -7
-</p>
-
-<p><strong>Answer:</strong> (b) 10</p>
-
-<p><strong>Solution:</strong> Product = c/a = 10.</p>
-
-<hr>
-
-<h3>Q13. If the zeroes of x² − 8x + 15 are α and β, then α + β equals</h3>
-
-<p>
-(a) 8<br>
-(b) -8<br>
-(c) 15<br>
-(d) -15
-</p>
-
-<p><strong>Answer:</strong> (a) 8</p>
-
-<p><strong>Solution:</strong> α + β = −b/a = 8.</p>
-
-<hr>
-
-<h3>Q14. If α and β are zeroes of x² − 8x + 15, then αβ equals</h3>
-
-<p>
-(a) 8<br>
-(b) 15<br>
-(c) -15<br>
-(d) -8
-</p>
-
-<p><strong>Answer:</strong> (b) 15</p>
-
-<p><strong>Solution:</strong> αβ = c/a = 15.</p>
-
-<hr>
-
-<h3>Q15. The degree of the zero polynomial is</h3>
-
-<p>
-(a) 0<br>
-(b) 1<br>
-(c) Not defined<br>
-(d) 2
-</p>
-
-<p><strong>Answer:</strong> (c) Not defined</p>
-
-<p><strong>Solution:</strong> Degree of zero polynomial is not defined.</p>
-
-<hr>
-
-<h3>Q16. If one zero of x² − 4x − 5 is -1, the other zero is</h3>
-
-<p>
-(a) 5<br>
-(b) -5<br>
-(c) 1<br>
-(d) 4
-</p>
-
-<p><strong>Answer:</strong> (a) 5</p>
-
-<p><strong>Solution:</strong> (x + 1)(x − 5) = 0.</p>
-
-<hr>
-
-<h3>Q17. The polynomial whose zeroes are 2 and 5 is</h3>
-
-<p>
-(a) x² − 7x + 10<br>
-(b) x² + 7x + 10<br>
-(c) x² − 10x + 7<br>
-(d) x² + 10x + 7
-</p>
-
-<p><strong>Answer:</strong> (a) x² − 7x + 10</p>
-
-<p><strong>Solution:</strong> (x − 2)(x − 5).</p>
-
-<hr>
-
-<h3>Q18. Which polynomial has zeroes 3 and −4?</h3>
-
-<p>
-(a) x² + x − 12<br>
-(b) x² − x − 12<br>
-(c) x² + 7x + 12<br>
-(d) x² − 7x + 12
-</p>
-
-<p><strong>Answer:</strong> (b) x² − x − 12</p>
-
-<p><strong>Solution:</strong> (x − 3)(x + 4).</p>
-
-<hr>
-
-<h3>Q19. If α + β = 6 and αβ = 8, then the polynomial is</h3>
-
-<p>
-(a) x² + 6x + 8<br>
-(b) x² − 6x + 8<br>
-(c) x² − 8x + 6<br>
-(d) x² + 8x + 6
-</p>
-
-<p><strong>Answer:</strong> (b) x² − 6x + 8</p>
-
-<p><strong>Solution:</strong> x² − (sum)x + product.</p>
-
-<hr>
-
-<h3>Q20. Number of zeroes of a cubic polynomial can be at most</h3>
-
-<p>
-(a) 1<br>
-(b) 2<br>
-(c) 3<br>
-(d) 4
-</p>
-
-<p><strong>Answer:</strong> (c) 3</p>
-
-<p><strong>Solution:</strong> Degree = 3, so maximum 3 zeroes.</p>
-
-<hr>
-
-<h3>Q21. Which of the following is not a polynomial?</h3>
-
-<p>
-(a) x² + 2x + 1<br>
-(b) 5x³ − 7<br>
-(c) 1/x + 2<br>
-(d) 4x
-</p>
-
-<p><strong>Answer:</strong> (c) 1/x + 2</p>
-
-<p><strong>Solution:</strong> Exponents must be non-negative integers.</p>
-
-<hr>
-
-<h3>Q22. The value of p(2) for p(x) = x² − 3x + 2 is</h3>
-
-<p>
-(a) 0<br>
-(b) 1<br>
-(c) 2<br>
-(d) 4
-</p>
-
-<p><strong>Answer:</strong> (a) 0</p>
-
-<p><strong>Solution:</strong> 2² − 3(2) + 2 = 0.</p>
-
-<hr>
-
-<h3>Q23. If x = 3 is a zero of p(x), then p(3) equals</h3>
-
-<p>
-(a) 1<br>
-(b) 3<br>
-(c) 0<br>
-(d) -3
-</p>
-
-<p><strong>Answer:</strong> (c) 0</p>
-
-<p><strong>Solution:</strong> Definition of a zero of a polynomial.</p>
-
-<hr>
-
-<h3>Q24. The graph of y = x² − 4 cuts the x-axis at</h3>
-
-<p>
-(a) x = ±2<br>
-(b) x = ±4<br>
-(c) x = 2 only<br>
-(d) x = 4 only
-</p>
-
-<p><strong>Answer:</strong> (a) x = ±2</p>
-
-<p><strong>Solution:</strong> x² − 4 = 0 ⇒ x = ±2.</p>
-
-<hr>
-
-<h3>Q25. Sum of zeroes of 2x² − 9x + 7 is</h3>
-
-<p>
-(a) 9/2<br>
-(b) -9/2<br>
-(c) 7/2<br>
-(d) -7/2
-</p>
-
-<p><strong>Answer:</strong> (a) 9/2</p>
-
-<p><strong>Solution:</strong> −b/a = 9/2.</p>
-
-<hr>
-
-<h3>Q26. Product of zeroes of 2x² − 9x + 7 is</h3>
-
-<p>
-(a) 7/2<br>
-(b) -7/2<br>
-(c) 9/2<br>
-(d) 2/7
-</p>
-
-<p><strong>Answer:</strong> (a) 7/2</p>
-
-<p><strong>Solution:</strong> c/a = 7/2.</p>
-
-<hr>
-
-<h3>Q27. If one zero of x² + 5x + 6 is -2, then the other zero is</h3>
-
-<p>
-(a) -3<br>
-(b) 3<br>
-(c) -6<br>
-(d) 6
-</p>
-
-<p><strong>Answer:</strong> (a) -3</p>
-
-<p><strong>Solution:</strong> (x + 2)(x + 3).</p>
-
-<hr>
-
-<h3>Q28. A polynomial having exactly one zero is</h3>
-
-<p>
-(a) Linear Polynomial<br>
-(b) Quadratic Polynomial<br>
-(c) Cubic Polynomial<br>
-(d) Constant Polynomial
-</p>
-
-<p><strong>Answer:</strong> (a) Linear Polynomial</p>
-
-<p><strong>Solution:</strong> A linear polynomial has exactly one zero.</p>
-
-<hr>
-
-<h3>Q29. If α and β are zeroes of x² + px + q, then α + β equals</h3>
-
-<p>
-(a) p<br>
-(b) -p<br>
-(c) q<br>
-(d) -q
-</p>
-
-<p><strong>Answer:</strong> (b) -p</p>
-
-<p><strong>Solution:</strong> α + β = −p.</p>
-
-<hr>
-
-<h3>Q30. If α and β are zeroes of x² + px + q, then αβ equals</h3>
-
-<p>
-(a) p<br>
-(b) -p<br>
-(c) q<br>
-(d) -q
-</p>
-
-<p><strong>Answer:</strong> (c) q</p>
-
-<p><strong>Solution:</strong> αβ = q.</p>
-
-<hr>
-
-<h3>Q31. (CBSE PYQ) If α and β are zeroes of x² − 6x + 5, then α²β + αβ² equals</h3>
-
-<p>
-(a) 5<br>
-(b) 6<br>
-(c) 25<br>
-(d) 30
-</p>
-
-<p><strong>Answer:</strong> (d) 30</p>
-
-<p><strong>Solution:</strong> αβ(α + β) = 5 × 6 = 30.</p>
-
-<hr>
-
-<h3>Q32. (CBSE PYQ) If α and β are zeroes of x² − 4x + 1, then α² + β² equals</h3>
-
-<p>
-(a) 12<br>
-(b) 14<br>
-(c) 16<br>
-(d) 18
-</p>
-
-<p><strong>Answer:</strong> (b) 14</p>
-
-<p><strong>Solution:</strong> (α+β)²−2αβ = 16−2 = 14.</p>
-
-<hr>
-
-<h3>Q33. If α + β = 10 and αβ = 21, then α² + β² equals</h3>
-
-<p>
-(a) 58<br>
-(b) 100<br>
-(c) 42<br>
-(d) 84
-</p>
-
-<p><strong>Answer:</strong> (a) 58</p>
-
-<p><strong>Solution:</strong> 10² − 2(21) = 58.</p>
-
-<hr>
-
-<h3>Q34. The polynomial whose zeroes are -1 and -5 is</h3>
-
-<p>
-(a) x² + 6x + 5<br>
-(b) x² − 6x + 5<br>
-(c) x² + 5x + 6<br>
-(d) x² − 5x + 6
-</p>
-
-<p><strong>Answer:</strong> (a) x² + 6x + 5</p>
-
-<p><strong>Solution:</strong> (x + 1)(x + 5).</p>
-
-<hr>
-
-<h3>Q35. If one zero of p(x) = x² − x − 20 is 5, then the other zero is</h3>
-
-<p>
-(a) -4<br>
-(b) 4<br>
-(c) -5<br>
-(d) 20
-</p>
-
-<p><strong>Answer:</strong> (a) -4</p>
-
-<p><strong>Solution:</strong> (x − 5)(x + 4).</p>
-
-<hr>
-
-<h3>Q36. The polynomial x² − 2x + 1 has</h3>
-
-<p>
-(a) Two distinct zeroes<br>
-(b) One repeated zero<br>
-(c) Three zeroes<br>
-(d) No zero
-</p>
-
-<p><strong>Answer:</strong> (b) One repeated zero</p>
-
-<p><strong>Solution:</strong> (x − 1)².</p>
-
-<hr>
-
-<h3>Q37. The graph of a polynomial and x-axis intersect at three points. The polynomial is most likely</h3>
-
-<p>
-(a) Linear<br>
-(b) Quadratic<br>
-(c) Cubic<br>
-(d) Constant
-</p>
-
-<p><strong>Answer:</strong> (c) Cubic</p>
-
-<p><strong>Solution:</strong> A cubic polynomial can have three zeroes.</p>
-
-<hr>
-
-<h3>Q38. Which expression represents a polynomial?</h3>
-
-<p>
-(a) √x + 1<br>
-(b) x⁻¹ + 2<br>
-(c) 3x² − 2x + 5<br>
-(d) 1/x²
-</p>
-
-<p><strong>Answer:</strong> (c) 3x² − 2x + 5</p>
-
-<p><strong>Solution:</strong> All exponents are non-negative integers.</p>
-
-<hr>
-
-<h3>Q39. If α and β are zeroes of x² − 3x − 10, then αβ equals</h3>
-
-<p>
-(a) -10<br>
-(b) 10<br>
-(c) 3<br>
-(d) -3
-</p>
-
-<p><strong>Answer:</strong> (a) -10</p>
-
-<p><strong>Solution:</strong> Product = c/a = -10.</p>
-
-<hr>
-
-<h3>Q40. Sum of the zeroes of 5x² + 7x − 6 is</h3>
-
-<p>
-(a) -7/5<br>
-(b) 7/5<br>
-(c) -6/5<br>
-(d) 6/5
-</p>
-
-<p><strong>Answer:</strong> (a) -7/5</p>
-
-<p><strong>Solution:</strong> −b/a = −7/5.</p>
-
-<hr>
-
-<h3>Q41. Product of the zeroes of 5x² + 7x − 6 is</h3>
-
-<p>
-(a) 6/5<br>
-(b) -6/5<br>
-(c) 7/5<br>
-(d) -7/5
-</p>
-
-<p><strong>Answer:</strong> (b) -6/5</p>
-
-<p><strong>Solution:</strong> c/a = -6/5.</p>
-
-<hr>
-
-<h3>Q42. Which polynomial has sum of zeroes 4 and product 3?</h3>
-
-<p>
-(a) x² − 4x + 3<br>
-(b) x² + 4x + 3<br>
-(c) x² − 3x + 4<br>
-(d) x² + 3x + 4
-</p>
-
-<p><strong>Answer:</strong> (a) x² − 4x + 3</p>
-
-<p><strong>Solution:</strong> x² − (sum)x + product.</p>
-
-<hr>
-
-<h3>Q43. If α and β are the zeroes of x² − 7x + 12, then α⁻¹ + β⁻¹ equals</h3>
-
-<p>
-(a) 7/12<br>
-(b) 12/7<br>
-(c) 19/12<br>
-(d) 5/12
-</p>
-
-<p><strong>Answer:</strong> (a) 7/12</p>
-
-<p><strong>Solution:</strong> (α+β)/αβ = 7/12.</p>
-
-<hr>
-
-<h3>Q44. The polynomial whose zeroes are 1/2 and 3 is</h3>
-
-<p>
-(a) 2x² − 7x + 3<br>
-(b) 2x² + 7x + 3<br>
-(c) x² − 7x + 6<br>
-(d) x² + 7x + 6
-</p>
-
-<p><strong>Answer:</strong> (a) 2x² − 7x + 3</p>
-
-<p><strong>Solution:</strong> (2x − 1)(x − 3).</p>
-
-<hr>
-
-<h3>Q45. If α and β are zeroes of x² − 5x + 4, then α²β² equals</h3>
-
-<p>
-(a) 4<br>
-(b) 8<br>
-(c) 16<br>
-(d) 25
-</p>
-
-<p><strong>Answer:</strong> (c) 16</p>
-
-<p><strong>Solution:</strong> (αβ)² = 4² = 16.</p>
-
-<hr>
-
-<h3>Q46. A quadratic polynomial can have minimum</h3>
-
-<p>
-(a) 0 zeroes<br>
-(b) 1 zero<br>
-(c) 2 zeroes<br>
-(d) 3 zeroes
-</p>
-
-<p><strong>Answer:</strong> (a) 0 zeroes</p>
-
-<p><strong>Solution:</strong> Example: x² + 1 has no real zero.</p>
-
-<hr>
-
-<h3>Q47. The degree of polynomial 9x⁵ − 4x³ + 2x − 7 is</h3>
-
-<p>
-(a) 3<br>
-(b) 4<br>
-(c) 5<br>
-(d) 7
-</p>
-
-<p><strong>Answer:</strong> (c) 5</p>
-
-<p><strong>Solution:</strong> Highest power is 5.</p>
-
-<hr>
-
-<h3>Q48. If p(x)=x²−9, then p(−3) equals</h3>
-
-<p>
-(a) 6<br>
-(b) -6<br>
-(c) 0<br>
-(d) 9
-</p>
-
-<p><strong>Answer:</strong> (c) 0</p>
-
-<p><strong>Solution:</strong> (-3)²−9=0.</p>
-
-<hr>
-
-<h3>Q49. (CBSE PYQ) If α and β are zeroes of x²−8x+15, then α³β + αβ³ equals</h3>
-
-<p>
-(a) 600<br>
-(b) 720<br>
-(c) 900<br>
-(d) 1200
-</p>
-
-<p><strong>Answer:</strong> (c) 900</p>
-
-<p><strong>Solution:</strong> αβ(α²+β²)<br>
-=15[(8)²−2(15)]<br>
-=15(34)=510.
-</p>
-
-<p><strong>Correct Value:</strong> 510 (This type is often asked in CBSE competency questions.)</p>
-
-<hr>
-
-<h3>Q50. Which of the following statements is true?</h3>
-
-<p>
-(a) Degree of a quadratic polynomial is 3<br>
-(b) Sum of zeroes of ax²+bx+c is b/a<br>
-(c) Product of zeroes of ax²+bx+c is c/a<br>
-(d) A linear polynomial can have two zeroes
-</p>
-
-<p><strong>Answer:</strong> (c) Product of zeroes of ax²+bx+c is c/a</p>
-
-<p><strong>Solution:</strong> For ax² + bx + c, product of zeroes = c/a.</p>
-
-<hr>
-
+<center>
+        <h1>CLASS 10 MATHEMATICS</h1>
+        <h2>Chapter 2: Polynomials</h2>
+    </center>
+
+    <p><b>Note:</b> These questions are designed based on NCERT concepts. Select the correct option for each question.</p>
+
+    <hr>
+
+    <ol>
+        <li>If \( p(x) \) is a polynomial in \( x \), the highest power of \( x \) in \( p(x) \) is called the:
+            <br>a) Root
+            <br>b) Zero
+            <br>c) Degree
+            <br>d) Coefficient
+        </li><br>
+
+        <li>Which of the following is NOT a polynomial?
+            <br>a) \( 4x + 2 \)
+            <br>b) \( 2y^2 - 3y + 4 \)
+            <br>c) \( \frac{1}{x-1} \)
+            <br>d) \( 7u^6 - 4 \)
+        </li><br>
+
+        <li>A polynomial of degree 1 is called a:
+            <br>a) Constant polynomial
+            <br>b) Linear polynomial
+            <br>c) Quadratic polynomial
+            <br>d) Cubic polynomial
+        </li><br>
+
+        <li>The word ‘quadratic’ is derived from the word ‘quadrate’, which means:
+            <br>a) Four
+            <br>b) Square
+            <br>c) Root
+            <br>d) Product
+        </li><br>
+
+        <li>The general form of a quadratic polynomial in \( x \) is \( ax^2 + bx + c \), where \( a, b, c \) are real numbers and:
+            <br>a) \( a = 0 \)
+            <br>b) \( a \neq 0 \)
+            <br>c) \( b \neq 0 \)
+            <br>d) \( c \neq 0 \)
+        </li><br>
+
+        <li>A cubic polynomial has a degree of:
+            <br>a) 1
+            <br>b) 2
+            <br>c) 3
+            <br>d) 4
+        </li><br>
+
+        <li>If \( k \) is a real number such that \( p(k) = 0 \), then \( k \) is called a:
+            <br>a) Constant of the polynomial
+            <br>b) Degree of the polynomial
+            <br>c) Zero of the polynomial
+            <br>d) Factor of the coefficient
+        </li><br>
+
+        <li>The zero of the linear polynomial \( ax + b \) is related to its coefficients as:
+            <br>a) \( b/a \)
+            <br>b) \( -a/b \)
+            <br>c) \( -b/a \)
+            <br>d) \( ab \)
+        </li><br>
+
+        <li>Geometrically, the zeroes of a polynomial \( p(x) \) are the x-coordinates of the points where the graph of \( y = p(x) \) intersects the:
+            <br>a) Y-axis
+            <br>b) X-axis
+            <br>c) Origin
+            <br>d) Line \( y = x \)
+        </li><br>
+
+        <li>The graph of a linear polynomial \( y = ax + b \) is a:
+            <br>a) Parabola
+            <br>b) Hyperbola
+            <br>c) Straight line
+            <br>d) Circle
+        </li><br>
+
+        <li>The shape of the graph of a quadratic polynomial \( y = ax^2 + bx + c \) is called a:
+            <br>a) Linear curve
+            <br>b) Parabola
+            <br>c) Cubic curve
+            <br>d) Ellipse
+        </li><br>
+
+        <li>A parabola \( y = ax^2 + bx + c \) opens upwards if:
+            <br>a) \( a < 0 \)
+            <br>b) \( a > 0 \)
+            <br>c) \( a = 0 \)
+            <br>d) \( b > 0 \)
+        </li><br>
+
+        <li>The maximum number of zeroes a quadratic polynomial can have is:
+            <br>a) 1
+            <br>b) 2
+            <br>c) 3
+            <br>d) 0
+        </li><br>
+
+        <li>If the graph of a quadratic polynomial touches the x-axis at exactly one point, the polynomial has:
+            <br>a) Two distinct zeroes
+            <br>b) No real zero
+            <br>c) Two equal zeroes (one zero)
+            <br>d) Infinite zeroes
+        </li><br>
+
+        <li>If the graph of a quadratic polynomial is completely above the x-axis, the number of zeroes is:
+            <br>a) 1
+            <br>b) 2
+            <br>c) 0
+            <br>d) 3
+        </li><br>
+
+        <li>A polynomial of degree \( n \) can have at most:
+            <br>a) \( n+1 \) zeroes
+            <br>b) \( n-1 \) zeroes
+            <br>c) \( n \) zeroes
+            <br>d) 1 zero
+        </li><br>
+
+        <li>The zeroes of the quadratic polynomial \( x^2 - 3x - 4 \) are:
+            <br>a) 1 and 4
+            <br>b) -1 and 4
+            <br>c) -1 and -4
+            <br>d) 1 and -4
+        </li><br>
+
+        <li>For a quadratic polynomial \( ax^2 + bx + c \), the sum of the zeroes \( \alpha + \beta \) is:
+            <br>a) \( c/a \)
+            <br>b) \( b/a \)
+            <br>c) \( -b/a \)
+            <br>d) \( -c/a \)
+        </li><br>
+
+        <li>For a quadratic polynomial \( ax^2 + bx + c \), the product of the zeroes \( \alpha\beta \) is:
+            <br>a) \( -b/a \)
+            <br>b) \( c/a \)
+            <br>c) \( b/a \)
+            <br>d) \( -c/a \)
+        </li><br>
+
+        <li>If the sum and product of zeroes of a quadratic polynomial are \( -3 \) and \( 2 \) respectively, the polynomial is:
+            <br>a) \( x^2 - 3x + 2 \)
+            <br>b) \( x^2 + 3x + 2 \)
+            <br>c) \( x^2 + 3x - 2 \)
+            <br>d) \( x^2 - 3x - 2 \)
+        </li><br>
+
+        <li>The zeroes of the polynomial \( x^2 + 7x + 10 \) are:
+            <br>a) 2, 5
+            <br>b) -2, -5
+            <br>c) -2, 5
+            <br>d) 2, -5
+        </li><br>
+
+        <li>The zeroes of the polynomial \( x^2 - 3 \) are:
+            <br>a) 3, -3
+            <br>b) \( \sqrt{3}, -\sqrt{3} \)
+            <br>c) 3, 0
+            <br>d) \( \sqrt{3}, 0 \)
+        </li><br>
+
+        <li>The number of zeroes for the cubic polynomial \( y = x^3 - 4x \) is:
+            <br>a) 1
+            <br>b) 2
+            <br>c) 3
+            <br>d) 4
+        </li><br>
+
+        <li>For the cubic polynomial \( ax^3 + bx^2 + cx + d \), the sum of the zeroes \( \alpha + \beta + \gamma \) is:
+            <br>a) \( c/a \)
+            <br>b) \( -b/a \)
+            <br>c) \( -d/a \)
+            <br>d) \( b/a \)
+        </li><br>
+
+        <li>For a cubic polynomial, the product of the zeroes \( \alpha\beta\gamma \) is:
+            <br>a) \( c/a \)
+            <br>b) \( -b/a \)
+            <br>c) \( -d/a \)
+            <br>d) \( d/a \)
+        </li><br>
+
+        <li>In a cubic polynomial, the sum of the products of zeroes taken two at a time (\( \alpha\beta + \beta\gamma + \gamma\alpha \)) is:
+            <br>a) \( -b/a \)
+            <br>b) \( c/a \)
+            <br>c) \( -d/a \)
+            <br>d) \( -c/a \)
+        </li><br>
+
+        <li>If a cubic polynomial is \( x^3 - x^2 \), its zeroes are:
+            <br>a) 1 only
+            <br>b) 0 only
+            <br>c) 0 and 1
+            <br>d) 0, 1, and -1
+        </li><br>
+
+        <li>The number of zeroes of a polynomial whose graph is parallel to the x-axis and does not touch it is:
+            <br>a) 1
+            <br>b) 0
+            <br>c) Infinite
+            <br>d) 2
+        </li><br>
+
+        <li>Competency-Based: A student observes that the graph of a polynomial intersects the x-axis at 4 distinct points. This polynomial must have a degree of at least:
+            <br>a) 3
+            <br>b) 4
+            <br>c) 5
+            <br>d) 2
+        </li><br>
+
+        <li>The constant term of a linear polynomial \( ax + b \) is \( b \). Its zero is:
+            <br>a) \( \frac{\text{Constant term}}{\text{Coefficient of } x} \)
+            <br>b) \( -\frac{\text{Constant term}}{\text{Coefficient of } x} \)
+            <br>c) \( \frac{\text{Coefficient of } x}{\text{Constant term}} \)
+            <br>d) \( -\frac{\text{Coefficient of } x}{\text{Constant term}} \)
+        </li><br>
+
+        <li>If \( \alpha, \beta \) are the zeroes of \( 2x^2 - 8x + 6 \), then \( \alpha + \beta \) is:
+            <br>a) 4
+            <br>b) -4
+            <br>c) 3
+            <br>d) -3
+        </li><br>
+
+        <li>The product of zeroes of the polynomial \( 3x^2 + 5x - 2 \) is:
+            <br>a) \( 5/3 \)
+            <br>b) \( -5/3 \)
+            <br>c) \( -2/3 \)
+            <br>d) \( 2/3 \)
+        </li><br>
+
+        <li>Which of the following polynomials has \( -2 \) and \( 4 \) as its zeroes?
+            <br>a) \( x^2 - 2x - 8 \)
+            <br>b) \( x^2 + 2x - 8 \)
+            <br>c) \( x^2 - 2x + 8 \)
+            <br>d) \( x^2 + 2x + 8 \)
+        </li><br>
+
+        <li>A quadratic polynomial whose sum of zeroes is \( 0 \) and one zero is \( 3 \) is:
+            <br>a) \( x^2 - 9 \)
+            <br>b) \( x^2 + 9 \)
+            <br>c) \( x^2 - 3 \)
+            <br>d) \( x^2 + 3 \)
+        </li><br>
+
+        <li>In the cubic polynomial \( p(x) = 3x^3 - 5x^2 - 11x - 3 \), the value of \( \alpha\beta\gamma \) is:
+            <br>a) 1
+            <br>b) -1
+            <br>c) 3
+            <br>d) -3
+        </li><br>
+
+        <li>If a polynomial \( p(x) \) has zeroes \( 4, -2, \) and \( 1/2 \), it is most likely a:
+            <br>a) Linear polynomial
+            <br>b) Quadratic polynomial
+            <br>c) Cubic polynomial
+            <br>d) Bi-quadratic polynomial
+        </li><br>
+
+        <li>Competency-Based: If the graph of \( y = p(x) \) passes through the origin, then one of the zeroes of \( p(x) \) is:
+            <br>a) 1
+            <br>b) -1
+            <br>c) 0
+            <br>d) Cannot be determined
+        </li><br>
+
+        <li>The degree of the polynomial \( 5x^3 - 4x^2 + x - 2 \) is:
+            <br>a) 2
+            <br>b) 3
+            <br>c) 1
+            <br>d) 0
+        </li><br>
+
+        <li>A quadratic polynomial can have at most how many points of intersection with the x-axis?
+            <br>a) 0
+            <br>b) 1
+            <br>c) 2
+            <br>d) 3
+        </li><br>
+
+        <li>The zeroes of the polynomial \( 4u^2 + 8u \) are:
+            <br>a) 0, 2
+            <br>b) 0, -2
+            <br>c) 4, 8
+            <br>d) -4, -8
+        </li><br>
+
+        <li>If \( \alpha + \beta = 4 \) and \( \alpha\beta = 1 \) for a quadratic polynomial, the polynomial is:
+            <br>a) \( x^2 - 4x + 1 \)
+            <br>b) \( x^2 + 4x + 1 \)
+            <br>c) \( x^2 - 4x - 1 \)
+            <br>d) \( x^2 + 4x - 1 \)
+        </li><br>
+
+        <li>The sum of the zeroes of the cubic polynomial \( 2x^3 - 5x^2 - 14x + 8 \) is:
+            <br>a) \( -5/2 \)
+            <br>b) \( 5/2 \)
+            <br>c) \( 7 \)
+            <br>d) \( -7 \)
+        </li><br>
+
+        <li>If one zero of the quadratic polynomial \( ax^2 + bx + c \) is the reciprocal of the other, then:
+            <br>a) \( a = b \)
+            <br>b) \( b = c \)
+            <br>c) \( a = c \)
+            <br>d) \( a = 0 \)
+        </li><br>
+
+        <li>Competency-Based: For which value of \( a \) will the graph of \( y = ax^2 + bx + c \) be a downward parabola?
+            <br>a) \( a = 5 \)
+            <br>b) \( a = 0 \)
+            <br>c) \( a = -3 \)
+            <br>d) \( a = 1 \)
+        </li><br>
+
+        <li>The degree of a constant polynomial (like \( p(x) = 5 \)) is:
+            <br>a) 1
+            <br>b) 0
+            <br>c) Undefined
+            <br>d) 2
+        </li><br>
+
+        <li>If the zeroes of a quadratic polynomial are \( \alpha \) and \( \beta \), then the polynomial can be written as:
+            <br>a) \( k[x^2 + (\alpha+\beta)x + \alpha\beta] \)
+            <br>b) \( k[x^2 - (\alpha+\beta)x + \alpha\beta] \)
+            <br>c) \( k[x^2 - (\alpha+\beta)x - \alpha\beta] \)
+            <br>d) \( k[x^2 + (\alpha+\beta)x - \alpha\beta] \)
+        </li><br>
+
+        <li>The zeroes of the polynomial \( t^2 - 15 \) are:
+            <br>a) 15, -15
+            <br>b) \( \sqrt{15}, -\sqrt{15} \)
+            <br>c) 0, 15
+            <br>d) \( \sqrt{15}, 0 \)
+        </li><br>
+
+        <li>In the quadratic polynomial \( 4s^2 - 4s + 1 \), the sum of zeroes is:
+            <br>a) 1
+            <br>b) -1
+            <br>c) 1/4
+            <br>d) 4
+        </li><br>
+
+        <li>A cubic polynomial has zeroes \( \alpha, \beta, \gamma \). If \( \alpha + \beta + \gamma = 2 \), \( \alpha\beta + \beta\gamma + \gamma\alpha = -7 \), and \( \alpha\beta\gamma = -14 \), the polynomial is:
+            <br>a) \( x^3 - 2x^2 - 7x + 14 \)
+            <br>b) \( x^3 - 2x^2 - 7x - 14 \)
+            <br>c) \( x^3 + 2x^2 - 7x + 14 \)
+            <br>d) \( x^3 - 2x^2 + 7x + 14 \)
+        </li><br>
+
+        <li>If a polynomial has no real zeroes, its graph:
+            <br>a) Intersects the x-axis at two points
+            <br>b) Touches the x-axis at one point
+            <br>c) Does not intersect the x-axis at all
+            <br>d) Is a straight line through the origin
+        </li><br>
+    </ol>
+
+    <hr>
+
+    <h3>Answer Key</h3>
+    <p>
+        1(c), 2(c), 3(b), 4(b), 5(b), 6(c), 7(c), 8(c), 9(b), 10(c),<br>
+        11(b), 12(b), 13(b), 14(c), 15(c), 16(c), 17(b), 18(c), 19(b), 20(b),<br>
+        21(b), 22(b), 23(c), 24(b), 25(c), 26(b), 27(c), 28(b), 29(b), 30(b),<br>
+        31(a), 32(c), 33(a), 34(a), 35(a), 36(c), 37(c), 38(b), 39(c), 40(b),<br>
+        41(a), 42(b), 43(c), 44(c), 45(b), 46(b), 47(b), 48(a), 49(a), 50(c)
+    </p>
 
 
 </div>
