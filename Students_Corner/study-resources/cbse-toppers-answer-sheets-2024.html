@@ -8,7 +8,7 @@
 <meta name="keywords" content="Study Resources, CBSE Official Website, NCERT Resources, CBSE Study Material, Educational Websites, Student Resources, NCERT, CBSE, Saraswat Academy">
 
 <meta name="robots" content="index,follow,max-image-preview:large">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Krishna Kumar Saraswat">
 
 <meta name="theme-color" content="#0a2540">
@@ -50,10 +50,13 @@
 
 /* ===== Support Material ===== */
 
+/* ===== Support Material ===== */
+
 .support-material{
     max-width:1050px;
     margin:40px auto;
-    padding:0 40px;
+    padding:0 20px;
+    box-sizing:border-box;
 }
 
 .support-material .sm-title{
@@ -61,20 +64,25 @@
     font-size:34px;
     margin-bottom:35px;
     color:#1a3ea0;
+    line-height:1.3;
 }
 
 .support-material .sm-class{
     font-size:30px;
-    margin:25px 0 15px;
+    margin:30px 0 15px;
     color:#222;
 }
 
 .support-material .sm-table-wrap{
-    overflow-x:auto;    
+    width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    margin-bottom:35px;
 }
 
 .support-material .sm-table{
     width:100%;
+    min-width:650px;
     border-collapse:collapse;
     background:#fff;
 }
@@ -85,13 +93,13 @@
     padding:14px;
     text-align:left;
     font-weight:600;
-     text-transform: uppercase;
-
+    text-transform:uppercase;
 }
 
 .support-material .sm-table td{
-    padding:11px;
+    padding:12px;
     border:1px solid #e5e7eb;
+    word-break:break-word;
 }
 
 .support-material .sm-table tbody tr:nth-child(even){
@@ -112,24 +120,56 @@
     text-decoration:underline;
 }
 
-@media(max-width:768px){
+/* Mobile */
+
+@media (max-width:768px){
+
+.support-material{
+    padding:0 12px;
+}
 
 .support-material .sm-title{
-    font-size:28px;
+    font-size:26px;
+    margin-bottom:25px;
 }
 
 .support-material .sm-class{
     font-size:22px;
 }
 
+.support-material .sm-table{
+    min-width:560px;
+}
+
 .support-material .sm-table th,
 .support-material .sm-table td{
-    padding:12px;
-    font-size:15px;
+    padding:10px;
+    font-size:14px;
 }
 
 }
 
+@media (max-width:480px){
+
+.support-material{
+    padding:0 10px;
+}
+
+.support-material .sm-title{
+    font-size:22px;
+}
+
+.support-material .sm-class{
+    font-size:20px;
+}
+
+.support-material .sm-table th,
+.support-material .sm-table td{
+    font-size:13px;
+    padding:8px;
+}
+
+}
 
 </style>
 
@@ -207,6 +247,8 @@
 </tbody>
 
 </table>
+
+</div>
 
 <!-- ================= CLASS XII ================= -->
 <h2 class="sm-class">Class XII(2024)</h2>
@@ -322,17 +364,9 @@
 
 </table>
 
-<!-- ================= CLASS XI ================= -->
- <!-- ================= CLASS X ================= -->
-  <!-- ================= CLASS X ================= -->
-   <!-- ================= CLASS X ================= -->
-    <!-- ================= CLASS X ================= -->
-
-
 </div>
 
 </section>
-</main>
 
  <div id="footer"></div>
 </body>
