@@ -233,18 +233,18 @@ footer { background: var(--deep); color: #ffffff; }
   color: #fff; letter-spacing: .06em; margin-bottom: 10px;
 }
 .footer-brand-tag { font-size: 11px; color: var(--gold); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 14px; font-weight: 600; }
-.footer-brand p { font-size: 13px; color: #d1d5db; line-height: 1.7; max-width: 260px; }
+.footer-brand p { font-size: 13px; color: #fdfdfd; line-height: 1.7; max-width: 260px; }
 .footer-boards { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
 .fb-tag {
   font-size: 10.5px; padding: 3px 9px; border-radius: 8px;
-  border: 1px solid rgba(255,255,255,.1); color: #d1d5db;
+  border: 1px solid rgba(255,255,255,.1); color: #ffffff;
 }
 .footer-col h4 {
-  font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px;
-  color: #D1D5DB; margin-bottom: 14px; letter-spacing: .03em;
+  font-family: 'Inter', sans-serif; font-weight: 800; font-size: 14px;
+  color: #ffffff; margin-bottom: 14px; letter-spacing: .03em;
 }
 .footer-col a {
-  display: block; font-size: 13px; color: #9CA3AF; text-decoration: none;
+  display: block; font-size: 13px; color: #fafafa; text-decoration: none;
   margin-bottom: 10px; transition: color .15s; min-height: 28px;
 }
 .footer-col a:hover { color: var(--gold2); }
