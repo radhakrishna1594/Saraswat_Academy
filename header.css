@@ -61,9 +61,9 @@ body {
 /* ─── TOPBAR ─── */
 .topbar {
   background: #020b25;
-  color: #d1d5db;
+  color: #ffffff;
   padding: 8px 20px;
-  font-size: 14px;
+  font-size: 16px;
   
 }
 .topbar-left {
