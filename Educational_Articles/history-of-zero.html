@@ -103,18 +103,29 @@ h1{font-size:2.2rem;}
 h2{font-size:1.7rem;}
 h3{font-size:1.35rem;}
 
-table{
+/* Responsive Table Wrapper */
+.table-responsive{
     width:100%;
-    border-collapse:collapse;
-    margin:20px 0;
-    font-size:1rem;
     overflow-x:auto;
+    overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;
+    margin:20px 0;
 }
 
-th,td{
+/* Table */
+.table-responsive table{
+    width:100%;
+    min-width:700px;      /* Scroll only if needed */
+    border-collapse:collapse;
+}
+
+/* Table Cells */
+th,
+td{
     border:1px solid #ddd;
     padding:12px 15px;
     text-align:left;
+    white-space:nowrap;   /* Prevent text breaking */
 }
 
 th{
@@ -131,31 +142,42 @@ tr:hover{
     background:#eef6ff;
 }
 
-@media(max-width:768px){
-    table{
-        font-size:0.9rem;
+/* Desktop */
+@media (min-width:769px){
+    .table-responsive table{
+        min-width:100%;
     }
 
-    th,td{
+    th,
+    td{
+        white-space:normal;
+    }
+}
+
+/* Mobile */
+@media (max-width:768px){
+    body{
+        font-size:16px;
+    }
+
+    th,
+    td{
         padding:10px;
+        font-size:14px;
     }
 }
 
-
-.table-responsive{
-    width:100%;
-    overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
+.published-by{
+    display:inline-block;
+    margin:15px 0;
+    padding:8px 16px;
+    background:#fbfbfc;
+    border-left:4px solid #0b4f8a;
+    border-radius:6px;
+    font-size:16px;
+    font-weight:600;
+    color:#070315;
 }
-
-.table-responsive table{
-    width:100%;
-    min-width:700px; /* Adjust based on your table */
-    border-collapse:collapse;
-}
-
-.published-by{display:inline-block;margin:15px 0;padding:8px 16px;background:#fbfbfc;border-left:4px solid #0b4f8a;border-radius:6px;font-size:16px;font-weight:600;color:#070315;}
-
 </style>
 </head>
 
