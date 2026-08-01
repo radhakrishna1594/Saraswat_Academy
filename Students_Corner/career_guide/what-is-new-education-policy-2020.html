@@ -54,42 +54,89 @@ content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-
 
 /* CONTENT */
 
-.solution-layout{
-    max-width:1400px;
-    margin:30px auto;
-}
-.solution-article{background:#fff;padding:30px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
-.solution-article h1{margin:10px 0}
-.solution-article h2{margin:20px 0 10px}
-.solution-article p,.solution-article li{line-height:1.7}
-th,td{border:1px solid #ccc;padding:8px}
-
-/* Normal Table */
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin:15px 0;
+body{
+    font-size:18px;
+    line-height:1.8;
 }
 
-/* Mobile Scroll */
+h1{font-size:2.2rem;}
+h2{font-size:1.7rem;}
+h3{font-size:1.35rem;}
+
+/* Responsive Table Wrapper */
 .table-responsive{
     width:100%;
     overflow-x:auto;
+    overflow-y:hidden;
     -webkit-overflow-scrolling:touch;
+    margin:20px 0;
 }
 
-/* Prevent table from shrinking */
+/* Table */
 .table-responsive table{
-    min-width:700px; /* Increase if your table has many columns */
+    width:100%;
+    min-width:700px;      /* Scroll only if needed */
+    border-collapse:collapse;
+}
+
+/* Table Cells */
+th,
+td{
+    border:1px solid #ddd;
+    padding:12px 15px;
+    text-align:left;
+    white-space:nowrap;   /* Prevent text breaking */
+}
+
+th{
+    background:#0b4f8a;
+    color:#fff;
+    font-weight:600;
+}
+
+tr:nth-child(even){
+    background:#f8f9fa;
+}
+
+tr:hover{
+    background:#eef6ff;
+}
+
+/* Desktop */
+@media (min-width:769px){
+    .table-responsive table{
+        min-width:100%;
+    }
+
+    th,
+    td{
+        white-space:normal;
+    }
 }
 
 /* Mobile */
 @media (max-width:768px){
-
-    .table-responsive{
-        display:block;
+    body{
+        font-size:16px;
     }
 
+    th,
+    td{
+        padding:10px;
+        font-size:14px;
+    }
+}
+
+.published-by{
+    display:inline-block;
+    margin:15px 0;
+    padding:8px 16px;
+    background:#fbfbfc;
+    border-left:4px solid #0b4f8a;
+    border-radius:6px;
+    font-size:16px;
+    font-weight:600;
+    color:#070315;
 }
 
 </style>
@@ -149,6 +196,9 @@ table{
 </ul>
 
 <h2>The New 5+3+3+4 Structure</h2>
+
+<div class="table-responsive">
+
 <table>
 <tr><th>Stage</th><th>Age</th><th>Classes</th><th>Main Focus</th></tr>
 <tr><td>Foundational</td><td>3–8</td><td>Pre-school + Classes 1–2</td><td>Play, stories, language, numbers and activities</td></tr>
@@ -156,6 +206,8 @@ table{
 <tr><td>Middle</td><td>11–14</td><td>Classes 6–8</td><td>Science, coding, projects, vocational exposure</td></tr>
 <tr><td>Secondary</td><td>14–18</td><td>Classes 9–12</td><td>Flexible subject choices, deeper learning, career preparation</td></tr>
 </table>
+
+</div>
 
 <h2>Key Features Explained</h2>
 
@@ -178,6 +230,9 @@ table{
 <p>Assessments increasingly focus on understanding, application and reasoning rather than memorization.</p>
 
 <h2>How Does NEP Benefit Students?</h2>
+
+<div class="table-responsive">
+
 <table>
 <tr><th>Area</th><th>Benefit</th></tr>
 <tr><td>Learning</td><td>Better conceptual understanding</td></tr>
@@ -186,6 +241,8 @@ table{
 <tr><td>Career</td><td>Early exposure to practical and vocational skills</td></tr>
 <tr><td>Confidence</td><td>Reduced fear of examinations through holistic assessment</td></tr>
 </table>
+
+</div>
 
 <h2>Benefits for Teachers</h2>
 <ul>
@@ -201,6 +258,9 @@ table{
 </ul>
 
 <h2>Old System vs NEP 2020</h2>
+
+<div class="table-responsive">
+
 <table>
 <tr><th>Earlier Approach</th><th>NEP 2020</th></tr>
 <tr><td>10+2 structure</td><td>5+3+3+4 developmental structure</td></tr>
@@ -208,6 +268,8 @@ table{
 <tr><td>Limited flexibility</td><td>Flexible learning pathways</td></tr>
 <tr><td>Exam-centred</td><td>Competency-centred assessment</td></tr>
 </table>
+
+</div>
 
 <h2>Real-Life Example</h2>
 <blockquote>
