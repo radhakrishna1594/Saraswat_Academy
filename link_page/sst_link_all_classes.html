@@ -80,33 +80,20 @@ crossorigin="anonymous"></script>
 <style>
     
 /* Classes Intro */
-.classes-intro{
-    max-width:800px;
-    margin:60px auto 40px;
-    padding:0 20px;
-    text-align:center;
-   
-}
+.container{max-width:1100px;margin:auto;padding:20px}
+.breadcrumb{font-size:14px;margin:10px 0}
+.breadcrumb a{text-decoration:none;color:#0a2540}
+.hero,.info,.chapter-box,.faq{background:#fff;border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,.08);padding:28px;margin:25px 0}
+.hero{text-align:center}
+.hero h1{font-family:"Baloo 2",cursive;font-size:38px;color:#0a2540;margin-bottom:10px}
+.hero p{max-width:850px;margin:auto;line-height:1.8}
+.hero img{border-radius:10px}
+.solution-row{display:flex;justify-content:space-between;align-items:center;text-decoration:none;color:#222;border:1px solid #e5e7eb;padding:14px 16px;margin:12px 0;border-radius:10px;transition:.2s}
+.solution-row:hover{background:#eef5ff;transform:translateY(-2px)}
+.badge{font-weight:700}
 
-.classes-intro h2{
-    font-size:34px;
-    font-weight:700;
-    color:#0d2b52;
-    margin-bottom:20px;
-}
+@media(max-width:768px){.hero h1{font-size:30px}}
 
-.classes-intro p{
-    font-size:17px;
-    line-height:1.5;
-    color:#555;
-    max-width:850px;
-    margin:auto;
-}
-
-.classes-intro strong{
-    color:#0d2b52;
-    font-weight:600;
-}
 
 </style>
 
@@ -115,7 +102,7 @@ crossorigin="anonymous"></script>
 
  <div id="header"></div>
 
- <section class="classes-intro">
+<section class="hero">
      <h2>Which class do you want to explore?</h2>
       <img src="/ncert-logo.png" alt="Student studying for board exams using daily timetable"
 
@@ -133,7 +120,7 @@ loading="lazy" width="300" height="350">
 </section>
 
 
-<div class="chapter-box">
+<section class="chapter-box">
     
 
     <a class="solution-row"
@@ -199,7 +186,11 @@ loading="lazy" width="300" height="350">
         </span>
 
     </a>
-</div>
+
+</section>
+</body>
+<main>
+
 
 
 <!-- ━━━ FOOTER ━━━ -->
