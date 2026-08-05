@@ -363,55 +363,41 @@ footer { background: var(--deep); color: #ffffff; }
 }
 
 
-
-
-
 /* ==========================================
    PAGE TITLE
 ========================================== */
 
 .page-title{
     max-width:700px;
-    margin:25px auto 30px;
-    padding:35px 25px;
+    margin:10px auto 30px;
+    padding:15px 10px;
     text-align:center;
-
     background:#ffffff;
-
     border-radius:22px;
-
     border:1px solid #e7edf5;
-
     box-shadow:0 10px 30px rgba(0,0,0,.06);
 }
 
 .page-title h1{
-
-    margin:0;
-    font-size:34px;
+    font-size:30px;
     font-family: Arial, Helvetica, sans-serif;
 
     font-weight:800;
 
     color:#17365d;
-
-    letter-spacing:.5px;
-
     line-height:1;
 }
 
 .page-title p{
 
-    margin-top:15px;
+    margin-top:10px;
 
-    font-size:20px;
+    font-size:15px;
 
-    font-weight:800;
+    font-weight:600;
 
     color:#0d6efd;
-
-    letter-spacing:3px;
-
+    
     text-transform:uppercase;
 }
 
