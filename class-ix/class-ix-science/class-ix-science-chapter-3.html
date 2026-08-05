@@ -159,10 +159,14 @@ transition:.35s;
 flex-shrink:0;
 }
 .accordion-content{
-    overflow:hidden;
-    max-height:0;
-    padding-top:0;
-    transition:max-height .45s ease, padding-top .35s ease;
+overflow:hidden;
+max-height:0;
+transition:max-height .45s ease,padding-top .35s ease;
+padding-top:0;
+}
+section.open .accordion-content{
+max-height:5000px;
+padding-top:22px;
 }
 section.open .accordion-icon{
 transform:rotate(180deg);
