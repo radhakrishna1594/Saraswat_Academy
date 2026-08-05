@@ -20,13 +20,16 @@ background:var(--bg);
 color:var(--text);
 line-height:1.8;
 overflow-x:hidden;
+ width:100%;
 }
 
 .wrapper{
-max-width:1200px;
-margin:auto;
-padding:20px;
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    padding:16px;
 }
+
 
 .hero{
 background:linear-gradient(135deg,#0f172a,#2563eb);
@@ -49,11 +52,13 @@ margin-bottom:12px;
 }
 
 .grid{
-display:grid;
-grid-template-columns:280px 1fr;
-gap:25px;
-margin-top:25px;
-align-items:start;
+    display:grid;
+    grid-template-columns:280px minmax(0,1fr);
+    gap:24px;
+}
+
+main{
+    min-width:0;
 }
 
 aside{
