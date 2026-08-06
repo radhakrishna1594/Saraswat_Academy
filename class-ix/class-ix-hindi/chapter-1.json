@@ -1,0 +1,226 @@
+{
+  "seo": {
+    "title": "NCERT Solutions Class 9 Maths Chapter 3 - Coordinate Geometry | Saraswat Academy",
+    "description": "Complete NCERT Solutions, Notes, Examples, MCQs, Important Questions and Worksheets for Class 9 Maths Chapter 3.",
+    "keywords": [
+      "Class 9 Maths",
+      "Coordinate Geometry",
+      "NCERT Solutions",
+      "CBSE"
+    ],
+    "canonical": "https://saraswatacademy.in/class-ix/class-ix-maths/chapter-3"
+  },
+
+  "chapter": {
+    "class": "Class IX",
+    "subject": "Mathematics",
+    "chapterNo": 3,
+    "title": "Coordinate Geometry",
+    "tagline": "Learn to locate points accurately on the Cartesian Plane.",
+    "icon": "📍"
+  },
+
+  "breadcrumb": [
+    {
+      "title": "Home",
+      "url": "/"
+    },
+    {
+      "title": "Class IX",
+      "url": "/class-ix/"
+    },
+    {
+      "title": "Mathematics",
+      "url": "/class-ix/class-ix-maths/"
+    },
+    {
+      "title": "Chapter 3"
+    }
+  ],
+
+  "quickLinks": [
+    "Overview",
+    "Learning Outcomes",
+    "Important Topics",
+    "Notes",
+    "Examples",
+    "Exercise",
+    "MCQs",
+    "Worksheet",
+    "FAQ"
+  ],
+
+  "overview": {
+    "title": "Chapter Overview",
+    "content": "Coordinate Geometry introduces the Cartesian Plane, axes, origin and quadrants. It helps students locate points using ordered pairs."
+  },
+
+  "learningOutcomes": [
+    "Understand Cartesian Plane",
+    "Plot ordered pairs",
+    "Identify quadrants",
+    "Locate points accurately"
+  ],
+
+  "importantTopics": [
+    "Cartesian Plane",
+    "Origin",
+    "X-axis",
+    "Y-axis",
+    "Quadrants",
+    "Ordered Pair"
+  ],
+
+  "formulaBox": [
+    {
+      "title": "Origin",
+      "formula": "(0,0)"
+    },
+    {
+      "title": "Positive X-axis",
+      "formula": "(+x,0)"
+    }
+  ],
+
+  "sections": [
+    {
+      "type": "notes",
+      "title": "Chapter Notes",
+      "items": [
+        {
+          "heading": "Cartesian Plane",
+          "content": "The Cartesian Plane consists of two perpendicular number lines."
+        },
+        {
+          "heading": "Origin",
+          "content": "The intersection point of the two axes is called the Origin."
+        }
+      ]
+    },
+
+    {
+      "type": "examples",
+      "title": "Solved Examples",
+      "items": [
+        {
+          "question": "Locate (3,2).",
+          "answer": "Move 3 units right and 2 units upward."
+        }
+      ]
+    },
+
+    {
+      "type": "exercise",
+      "title": "Exercise Questions",
+      "items": [
+        {
+          "question": "Plot the point (4,-2).",
+          "answer": ""
+        }
+      ]
+    },
+
+    {
+      "type": "mcq",
+      "title": "MCQs",
+      "items": [
+        {
+          "question": "Coordinates of origin are:",
+          "options": [
+            "(0,0)",
+            "(1,0)",
+            "(0,1)",
+            "(1,1)"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+
+    {
+      "type": "assertionReason",
+      "title": "Assertion & Reason",
+      "items": [
+        {
+          "assertion": "Origin is (0,0).",
+          "reason": "Both coordinates are zero."
+        }
+      ]
+    },
+
+    {
+      "type": "caseStudy",
+      "title": "Case Study",
+      "items": [
+        {
+          "title": "School Map",
+          "content": "Represent locations on a school map using coordinates."
+        }
+      ]
+    },
+
+    {
+      "type": "worksheet",
+      "title": "Worksheet",
+      "items": [
+        "Plot (2,3)",
+        "Plot (-3,4)",
+        "Locate (-2,-5)"
+      ]
+    },
+
+    {
+      "type": "hots",
+      "title": "Higher Order Thinking Questions",
+      "items": [
+        {
+          "question": "Why is coordinate geometry useful in GPS?"
+        }
+      ]
+    },
+
+    {
+      "type": "video",
+      "title": "Video Lectures",
+      "items": [
+        {
+          "title": "Coordinate Geometry Explained",
+          "youtube": "VIDEO_ID"
+        }
+      ]
+    }
+  ],
+
+  "downloads": [
+    {
+      "title": "Chapter Notes PDF",
+      "url": "notes.pdf"
+    },
+    {
+      "title": "Worksheet PDF",
+      "url": "worksheet.pdf"
+    }
+  ],
+
+  "faq": [
+    {
+      "question": "What is the Origin?",
+      "answer": "The point where the X-axis and Y-axis intersect."
+    },
+    {
+      "question": "How many quadrants are there?",
+      "answer": "There are four quadrants."
+    }
+  ],
+
+  "relatedChapters": [
+    {
+      "title": "Introduction to Euclid's Geometry",
+      "url": "chapter-2.html"
+    },
+    {
+      "title": "Linear Equations in Two Variables",
+      "url": "chapter-4.html"
+    }
+  ]
+}
