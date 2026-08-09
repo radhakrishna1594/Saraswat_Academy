@@ -817,3 +817,51 @@ footer { background: var(--deep); color: #ffffff; }
 }
 
 }
+
+/* Whats App icon */
+ .floating-whatsapp {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 60px;
+        height: 60px;
+
+        background: #25D366;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-decoration: none;
+
+        z-index: 999999;
+
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+
+        transition: transform 0.3s ease,
+                    box-shadow 0.3s ease;
+    }
+
+    .floating-whatsapp:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    }
+
+    .floating-whatsapp svg {
+        display: block;
+    }
+
+    @media (max-width: 600px) {
+        .floating-whatsapp {
+            width: 54px;
+            height: 54px;
+            right: 15px;
+            bottom: 15px;
+        }
+
+        .floating-whatsapp svg {
+            width: 29px;
+            height: 29px;
+        }
+    }
