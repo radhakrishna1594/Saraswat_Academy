@@ -25,4 +25,28 @@ document.addEventListener("click",function(e){
 
     }
 
+
 });
+
+
+    let websiteZoom = 1;
+
+    function changeZoom(amount) {
+
+        websiteZoom += amount;
+
+        if (websiteZoom < 0.8) {
+            websiteZoom = 0.8;
+        }
+
+        if (websiteZoom > 1.3) {
+            websiteZoom = 1.3;
+        }
+
+        document.body.style.zoom = websiteZoom;
+    }
+
+    function resetZoom() {
+        websiteZoom = 1;
+        document.body.style.zoom = "1";
+    }

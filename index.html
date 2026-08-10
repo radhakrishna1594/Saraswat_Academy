@@ -202,6 +202,12 @@ header {
 .nav-link:hover { background: var(--cream); color: #8B1A1A; }
 .nav-link.active { color: var(--indigo); font-weight: 600; }
 
+/* ================================
+   WEBSITE ZOOM CONTROLS
+================================ */
+
+
+
 /* HAMBURGER */
 .hamburger {
   display: none; flex-direction: column; justify-content: center; gap: 5px;
@@ -745,7 +751,7 @@ footer { background: var(--deep); color: #ffffff; }
 
     border-radius:50px;
 
-    font-size:16px;
+    font-size:14px;
     font-weight:600;
 
     transition:.3s;
@@ -934,6 +940,22 @@ footer { background: var(--deep); color: #ffffff; }
 
   
 <!-- ━━━ TOPBAR ━━━ -->
+<div class="zoom-controls">
+
+    <button onclick="changeZoom(-0.1)">
+        A−
+    </button>
+
+    <button onclick="resetZoom()">
+        A
+    </button>
+
+    <button onclick="changeZoom(0.1)">
+        A+
+    </button>
+
+</div>
+
 <div class="topbar">
   <div class="topbar-left">
     <span>Feel Free to contact us @ - 📞 +91 7073468838</span>
@@ -941,9 +963,8 @@ footer { background: var(--deep); color: #ffffff; }
   </div>
 </div>
 
+
 <!-- ━━━ HEADER ━━━ -->
-
-
 <header>
   <div class="header-inner">
     <a data-link="" class="logo">
@@ -965,6 +986,7 @@ footer { background: var(--deep); color: #ffffff; }
       </div>
     </a>
 
+    
     <nav class="main-nav">
       <a data-link="./index.html" class="nav-link">Home</a>
       <a data-link="/Students_Corner/link_pages/main_page.html" class="nav-link">Student Corner</a>
@@ -976,10 +998,10 @@ footer { background: var(--deep); color: #ffffff; }
       <a data-link="/book-selling/category.html" class="nav-link"> Book Store</a>
       <a data-link="/about_us.html" class="nav-link">About Us</a>
       <a data-link="/contact.html" class="nav-link">Contact Us</a>
-
-
       <a data-link="/ask.html" class="nav-link">🙋 Ask a Doubt</a>
     </nav>
+
+    
 
     <!-- Hamburger button (mobile only) -->
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -1352,6 +1374,31 @@ mobileNav.querySelectorAll('.nav-link').forEach(link => {
     <path d="M12.004 2C6.48 2 2 6.477 2 12c0 1.768.462 3.429 1.268 4.886L2 22l5.247-1.378A9.957 9.957 0 0 0 12.004 22C17.523 22 22 17.523 22 12S17.523 2 12.004 2zm0 18.18a8.137 8.137 0 0 1-4.15-1.134l-.297-.176-3.114.817.831-3.036-.193-.312A8.146 8.146 0 1 1 12.004 20.18z"/>
 </svg>
 </a>
+
+
+<script>
+    let websiteZoom = 1;
+
+    function changeZoom(amount) {
+
+        websiteZoom += amount;
+
+        if (websiteZoom < 0.8) {
+            websiteZoom = 0.8;
+        }
+
+        if (websiteZoom > 1.3) {
+            websiteZoom = 1.3;
+        }
+
+        document.body.style.zoom = websiteZoom;
+    }
+
+    function resetZoom() {
+        websiteZoom = 1;
+        document.body.style.zoom = "1";
+    }
+</script>
 
 </body>
 </html>
