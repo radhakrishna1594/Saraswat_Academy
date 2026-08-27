@@ -1,1232 +1,1354 @@
-:root{
-  --sacp26-bg:#f5f7fb;
-  --sacp26-white:#ffffff;
-  --sacp26-ink:#111827;
-  --sacp26-muted:#667085;
-  --sacp26-primary:#155eef;
-  --sacp26-primary-dark:#1048bd;
-  --sacp26-primary-soft:#eef4ff;
-  --sacp26-green:#087443;
-  --sacp26-green-soft:#ecfdf3;
-  --sacp26-orange:#b54708;
-  --sacp26-orange-soft:#fff7ed;
-  --sacp26-border:#e4e7ec;
-  --sacp26-dark:#0b1220;
-  --sacp26-dark-2:#16233c;
-  --sacp26-shadow:0 8px 28px rgba(16,24,40,.07);
-  --sacp26-radius:16px;
-  --sacp26-max:1200px;
-}
+/* =========================================================
+   SARASWAT ACADEMY
+   CHAPTER PAGE STYLES
+   Namespace: sa-chapter-
+   ========================================================= */
 
-*{box-sizing:border-box}
-
-html{
-  scroll-behavior:smooth;
-  scroll-padding-top:90px;
-}
-
-body{
-  margin:0;
-  background:var(--sacp26-bg);
-  color:var(--sacp26-ink);
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.72;
-  font-size:16px;
-}
-
-body.sacp26-focus-mode .sacp26-sa-sidebar,
-body.sacp26-focus-mode .sa-header-extra,
-body.sacp26-focus-mode .sacp26-sa-topbar,
-body.sacp26-focus-mode .sacp26-sa-footer{
-  display:none;
-}
-
-body.sacp26-focus-mode .sacp26-sa-main{
-  max-width:900px;
-  margin:auto;
-}
-
-a{
-  color:var(--sacp26-primary);
-  text-decoration:none;
-}
-
-a:hover{text-decoration:underline}
-
-button,input{font:inherit}
-
-img{
-  display:block;
-  max-width:100%;
-  height:auto;
-}
-
-.sacp26-sa-container{
-  width:min(calc(100% - 32px),var(--sacp26-max));
-  margin:auto;
-}
-
-.sacp26-sa-skip{
-  position:absolute;
-  left:-9999px;
-  top:auto;
-}
-
-.sacp26-sa-skip:focus{
-  left:12px;
-  top:12px;
-  z-index:99999;
-  background:#fff;
-  padding:10px 14px;
-  border-radius:8px;
-  box-shadow:var(--sacp26-shadow);
-}
 
 /* =========================================================
-   TOPBAR
+   MAIN PAGE WRAPPER
    ========================================================= */
+
+.sa-chapter-page {
+    width: 100%;
+    min-width: 0;
+    background: #f4f7fb;
+    color: #182230;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.sa-chapter-page *,
+.sa-chapter-page *::before,
+.sa-chapter-page *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN WIDTH
+   ========================================================= */
+
+.sa-chapter-container {
+    width: min(1650px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 24px 0 60px;
+}
+
 
 /* =========================================================
    HERO
    ========================================================= */
-.sacp26-sa-hero{
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 90% 10%,rgba(83,141,255,.28),transparent 30%),
-    linear-gradient(135deg,var(--sacp26-dark),var(--sacp26-dark-2));
-  color:#fff;
-  border-radius:24px;
-  padding:38px;
-  box-shadow:var(--sacp26-shadow);
+
+.sa-chapter-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 58px 50px 48px;
+    border-radius: 28px;
+    color: #ffffff;
+    background:
+        linear-gradient(
+            115deg,
+            #111b38 0%,
+            #18336f 42%,
+            #2459c8 75%,
+            #2b65e8 100%
+        );
+    box-shadow: 0 18px 45px rgba(22, 55, 115, 0.16);
 }
 
-.sacp26-sa-eyebrow{
-  display:inline-flex;
-  align-items:center;
-  gap:7px;
-  color:#c7d7ff;
-  font-size:13px;
-  font-weight:700;
-  letter-spacing:.04em;
-  text-transform:uppercase;
+.sa-chapter-hero::after {
+    content: "";
+    position: absolute;
+    right: -100px;
+    bottom: -150px;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.055);
+    pointer-events: none;
 }
 
-.sacp26-sa-hero h1{
-  margin:10px 0 12px;
-  max-width:900px;
-  font-size:clamp(30px,5vw,48px);
-  line-height:1.14;
-  letter-spacing:-.02em;
+.sa-chapter-breadcrumb {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 28px;
+    font-size: 16px;
 }
 
-.sacp26-sa-hero-description{
-  max-width:820px;
-  color:#dbe7ff;
-  margin:0 0 24px;
+.sa-chapter-breadcrumb-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
-.sacp26-sa-hero-actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
+.sa-chapter-breadcrumb-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
-.sacp26-sa-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:44px;
-  padding:10px 17px;
-  border-radius:10px;
-  border:1px solid transparent;
-  font-weight:700;
-  cursor:pointer;
+.sa-chapter-breadcrumb-arrow {
+    color: rgba(255, 255, 255, 0.7);
 }
 
-.sacp26-sa-btn-primary{
-  background:#fff;
-  color:#12336f;
+.sa-chapter-breadcrumb-current {
+    color: rgba(255, 255, 255, 0.96);
 }
 
-.sacp26-sa-btn-primary:hover{
-  text-decoration:none;
-  background:#eef4ff;
+.sa-chapter-hero-labels {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 17px;
 }
 
-.sacp26-sa-btn-secondary{
-  color:#fff;
-  border-color:rgba(255,255,255,.28);
-  background:rgba(255,255,255,.08);
+.sa-chapter-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 4px 13px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
 }
 
-.sacp26-sa-btn-secondary:hover{
-  text-decoration:none;
-  background:rgba(255,255,255,.14);
+.sa-chapter-title {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(34px, 4vw, 57px);
+    font-weight: 750;
+    line-height: 1.18;
+    letter-spacing: -1.5px;
 }
+
+.sa-chapter-description {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 20px 0 0;
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.sa-chapter-hero-bottom {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px;
+    margin-top: 28px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+}
+
+.sa-chapter-update,
+.sa-chapter-reading {
+    display: inline-flex;
+    align-items: center;
+}
+
 
 /* =========================================================
-   QUICK RESOURCES
+   ADSENSE AREAS
    ========================================================= */
-.sacp26-sa-resource-grid{
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  gap:10px;
-  margin:18px 0 24px;
+
+.sa-chapter-ad {
+    width: 100%;
+    min-width: 0;
+    margin: 24px 0;
+    text-align: center;
 }
 
-.sacp26-sa-resource{
-  background:#fff;
-  border:1px solid var(--sacp26-border);
-  border-radius:12px;
-  padding:13px 10px;
-  text-align:center;
-  font-size:13px;
-  font-weight:700;
-  color:var(--sacp26-ink);
-  box-shadow:0 3px 12px rgba(16,24,40,.03);
+.sa-chapter-ad-top {
+    min-height: 90px;
 }
 
-.sacp26-sa-resource:hover{
-  text-decoration:none;
-  border-color:#b2ccff;
-  background:#f8fbff;
+.sa-chapter-ad-content {
+    min-height: 120px;
+    margin: 30px 0;
 }
+
+.sa-chapter-ad-mid {
+    min-height: 120px;
+    margin: 34px 0;
+}
+
+.sa-chapter-ad-bottom {
+    min-height: 120px;
+    margin-top: 34px;
+}
+
 
 /* =========================================================
-   CHAPTER AT A GLANCE
+   TWO COLUMN LAYOUT
    ========================================================= */
-.sacp26-sa-glance{
-  background:#fff;
-  border:1px solid var(--sacp26-border);
-  border-radius:var(--sacp26-radius);
-  box-shadow:var(--sacp26-shadow);
-  margin:0 0 24px;
-  overflow:hidden;
+
+.sa-chapter-layout {
+    display: grid;
+    grid-template-columns: 330px minmax(0, 1fr);
+    align-items: start;
+    gap: 30px;
 }
 
-.sacp26-sa-glance-title{
-  padding:18px 20px;
-  background:#f8fafc;
-  border-bottom:1px solid var(--sacp26-border);
-  font-size:18px;
-  font-weight:800;
-}
-
-.sacp26-sa-glance-grid{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-}
-
-.sacp26-sa-glance-item{
-  padding:16px 18px;
-  border-right:1px solid var(--sacp26-border);
-}
-
-.sacp26-sa-glance-item:last-child{border-right:0}
-
-.sacp26-sa-glance-label{
-  display:block;
-  font-size:12px;
-  color:var(--sacp26-muted);
-  margin-bottom:3px;
-}
-
-.sacp26-sa-glance-value{
-  font-weight:700;
-}
 
 /* =========================================================
-   ADSENSE PLACEHOLDERS
+   SIDEBAR
    ========================================================= */
-.sacp26-sa-ad{
-  min-height:100px;
-  margin:20px 0 26px;
-  padding:10px;
-  border:1px dashed #d0d5dd;
-  background:#fafafa;
-  border-radius:12px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  color:#98a2b3;
-  font-size:11px;
+
+.sa-chapter-sidebar {
+    min-width: 0;
 }
 
-.sacp26-sa-ad-label{
-  font-size:10px;
-  text-transform:uppercase;
-  letter-spacing:.06em;
+.sa-chapter-navigation {
+    position: sticky;
+    top: 24px;
+    padding: 28px 26px;
+    border: 1px solid #e7ebf2;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 12px 30px rgba(22, 34, 58, 0.07);
 }
 
-.sacp26-sa-ad-top{min-height:110px}
-.sacp26-sa-ad-mid{min-height:120px}
-.sacp26-sa-ad-bottom{min-height:120px}
+.sa-chapter-navigation-title {
+    margin: 0 0 23px;
+    color: #2460d8;
+    font-size: 28px;
+    font-weight: 750;
+    line-height: 1.25;
+    letter-spacing: -0.6px;
+}
+
+.sa-chapter-navigation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sa-chapter-navigation-link {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-width: 0;
+    padding: 11px 12px;
+    border-radius: 10px;
+    color: #384152;
+    font-size: 15px;
+    font-weight: 550;
+    text-decoration: none;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.sa-chapter-navigation-link:hover {
+    background: #f0f5ff;
+    color: #245fd4;
+    transform: translateX(2px);
+}
+
+.sa-chapter-navigation-link-active {
+    background: #edf4ff;
+    color: #225ed4;
+    font-weight: 700;
+}
+
+.sa-chapter-navigation-icon {
+    display: inline-flex;
+    flex: 0 0 25px;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 7px;
+    background: #eaf2ff;
+    color: #2865dc;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.sa-chapter-resource-box {
+    margin-top: 20px;
+    padding: 23px;
+    border: 1px solid #e6ebf3;
+    border-radius: 18px;
+    background: #ffffff;
+}
+
+.sa-chapter-resource-title {
+    margin: 0 0 12px;
+    color: #172033;
+    font-size: 17px;
+    font-weight: 750;
+}
+
+.sa-chapter-resource-link {
+    display: block;
+    padding: 7px 0;
+    color: #3568ca;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.sa-chapter-resource-link:hover {
+    color: #174cae;
+    text-decoration: underline;
+}
+
 
 /* =========================================================
-   MAIN LAYOUT
+   MAIN CONTENT
    ========================================================= */
-.sacp26-sa-layout{
-  display:grid;
-  grid-template-columns:245px minmax(0,1fr);
-  gap:24px;
-  align-items:start;
+
+.sa-chapter-main-content {
+    min-width: 0;
 }
 
-.sacp26-sa-sidebar{
-  position:sticky;
-  top:82px;
-  background:#fff;
-  border:1px solid var(--sacp26-border);
-  border-radius:var(--sacp26-radius);
-  box-shadow:var(--sacp26-shadow);
-  overflow:hidden;
+.sa-chapter-section {
+    position: relative;
+    margin-bottom: 25px;
+    padding: 34px 39px;
+    border: 1px solid #e7ebf2;
+    border-top: 5px solid #2863dc;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(24, 39, 68, 0.055);
 }
 
-.sacp26-sa-sidebar-title{
-  padding:16px 18px;
-  font-weight:800;
-  border-bottom:1px solid var(--sacp26-border);
+.sa-chapter-overview-section {
+    padding-top: 39px;
 }
 
-.sacp26-sa-sidebar a{
-  display:block;
-  padding:9px 18px;
-  color:#475467;
-  border-left:3px solid transparent;
-  font-size:14px;
+.sa-chapter-section-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.sacp26-sa-sidebar a:hover{
-  background:#f8fbff;
-  text-decoration:none;
+.sa-chapter-section-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #4d73bb;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.sacp26-sa-sidebar a.active{
-  color:var(--sacp26-primary);
-  background:var(--sacp26-primary-soft);
-  border-left-color:var(--sacp26-primary);
-  font-weight:700;
+.sa-chapter-section-title {
+    margin: 0 0 22px;
+    color: #2460d8;
+    font-size: clamp(27px, 3vw, 39px);
+    font-weight: 750;
+    line-height: 1.2;
+    letter-spacing: -0.8px;
 }
+
+.sa-chapter-text {
+    margin: 0 0 17px;
+    color: #4d5667;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.sa-chapter-text:last-child {
+    margin-bottom: 0;
+}
+
 
 /* =========================================================
-   MOBILE CHAPTER MENU
+   HIGHLIGHT
    ========================================================= */
-.sacp26-sa-mobile-menu{
-  display:none;
-  width:100%;
-  background:#fff;
-  border:1px solid var(--sacp26-border);
-  border-radius:12px;
-  padding:12px 14px;
-  margin-bottom:18px;
-  font-weight:700;
-  cursor:pointer;
+
+.sa-chapter-highlight-box {
+    margin: 0 0 22px;
+    padding: 19px 22px;
+    border-left: 6px solid #2864dc;
+    border-radius: 12px;
+    background: #edf4ff;
 }
+
+.sa-chapter-highlight-text {
+    margin: 0;
+    color: #243d67;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
 
 /* =========================================================
-   MAIN CARDS
+   OBJECTIVES
    ========================================================= */
-.sacp26-sa-card{
-  background:#fff;
-  border:1px solid var(--sacp26-border);
-  border-radius:var(--sacp26-radius);
-  box-shadow:0 4px 18px rgba(16,24,40,.04);
-  margin-bottom:20px;
-  overflow:hidden;
+
+.sa-chapter-objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 25px;
 }
 
-.sacp26-sa-card-header{
-  padding:20px 22px;
-  border-bottom:1px solid var(--sacp26-border);
+.sa-chapter-objective-card {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #e8edf4;
+    border-radius: 15px;
+    background: #fafcff;
 }
 
-.sacp26-sa-card-header h2{
-  margin:0;
-  font-size:24px;
-  line-height:1.3;
+.sa-chapter-objective-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 31px;
+    height: 31px;
+    margin-bottom: 13px;
+    border-radius: 9px;
+    background: #eaf2ff;
+    color: #2864dc;
+    font-size: 12px;
+    font-weight: 800;
 }
 
-.sacp26-sa-card-body{
-  padding:22px;
+.sa-chapter-objective-title {
+    margin: 0 0 7px;
+    color: #202a3a;
+    font-size: 17px;
+    font-weight: 750;
 }
 
-.sacp26-sa-intro{
-  background:var(--sacp26-primary-soft);
-  border-left:4px solid var(--sacp26-primary);
-  padding:18px;
-  border-radius:10px;
+.sa-chapter-objective-text {
+    margin: 0;
+    color: #687284;
+    font-size: 14px;
+    line-height: 1.65;
 }
 
-.sacp26-sa-card-body h3{
-  color:#102a56;
-  margin-top:28px;
-  line-height:1.35;
-}
-
-.sacp26-sa-card-body hr{
-  border:0;
-  border-top:1px solid var(--sacp26-border);
-  margin:28px 0;
-}
-
-.sacp26-sa-list{
-  padding-left:22px;
-}
 
 /* =========================================================
-   ACCORDION
+   QUICK INFORMATION
    ========================================================= */
-.sacp26-sa-accordion{
-  border-top:1px solid var(--sacp26-border);
+
+.sa-chapter-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 13px;
 }
 
-.sacp26-sa-acc-item{
-  border-bottom:1px solid var(--sacp26-border);
+.sa-chapter-info-card {
+    min-width: 0;
+    padding: 18px;
+    border: 1px solid #e8edf4;
+    border-radius: 14px;
+    background: #f9fbfe;
 }
 
-.sacp26-sa-acc-button{
-  width:100%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:14px;
-  border:0;
-  background:#fff;
-  color:var(--sacp26-ink);
-  padding:18px 20px;
-  cursor:pointer;
-  text-align:left;
+.sa-chapter-info-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #7a8494;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
 }
 
-.sacp26-sa-acc-button:hover{
-  background:#fafcff;
+.sa-chapter-info-value {
+    display: block;
+    color: #202a3a;
+    font-size: 16px;
+    font-weight: 750;
 }
 
-.sacp26-sa-acc-title{
-  font-size:17px;
-  font-weight:800;
-}
-
-.sacp26-sa-acc-icon{
-  transition:transform .2s ease;
-}
-
-.sacp26-sa-acc-item.sacp26-open .sacp26-sa-acc-icon{
-  transform:rotate(180deg);
-}
-
-.sacp26-sa-acc-panel{
-  display:none;
-  padding:0 20px 20px;
-}
-
-.sacp26-sa-acc-item.sacp26-open .sacp26-sa-acc-panel{
-  display:block;
-}
 
 /* =========================================================
-   TABLES
+   CONCEPTS
    ========================================================= */
-.sacp26-sa-table-wrap{
-  overflow-x:auto;
-  margin:18px 0;
+
+.sa-chapter-concept-card {
+    margin-top: 15px;
+    padding: 22px 24px;
+    border: 1px solid #e7ebf2;
+    border-radius: 15px;
+    background: #fcfdff;
 }
 
-table{
-  width:100%;
-  min-width:580px;
-  border-collapse:collapse;
+.sa-chapter-subtitle {
+    margin: 0 0 9px;
+    color: #26344d;
+    font-size: 20px;
+    font-weight: 750;
 }
 
-th,td{
-  border:1px solid var(--sacp26-border);
-  padding:11px 12px;
-  text-align:left;
-  vertical-align:top;
+.sa-chapter-example-box {
+    margin-top: 18px;
+    padding: 17px 19px;
+    border-radius: 11px;
+    background: #f1f6ff;
 }
 
-th{
-  background:#f8fafc;
+.sa-chapter-example-title {
+    display: block;
+    margin-bottom: 4px;
+    color: #2864d9;
+    font-size: 13px;
 }
+
+.sa-chapter-example-text {
+    margin: 0;
+    color: #4d5c72;
+    font-size: 15px;
+}
+
 
 /* =========================================================
-   RESOURCE CARDS
+   FORMULAS
    ========================================================= */
-.sacp26-sa-link-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
+
+.sa-chapter-formula-section {
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #fbfdff 100%
+        );
 }
 
-.sacp26-sa-link-card{
-  display:block;
-  padding:16px;
-  border:1px solid var(--sacp26-border);
-  border-radius:12px;
-  color:var(--sacp26-ink);
-  background:#fff;
-  transition:.18s ease;
+.sa-chapter-formula-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
 }
 
-.sacp26-sa-link-card:hover{
-  text-decoration:none;
-  border-color:#b2ccff;
-  background:#f8fbff;
-  transform:translateY(-1px);
+.sa-chapter-formula-card {
+    min-width: 0;
+    padding: 21px;
+    border: 1px solid #dfe8f7;
+    border-radius: 15px;
+    background: #f5f8fe;
 }
+
+.sa-chapter-formula-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: #dfeaff;
+    color: #2762d4;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.sa-chapter-formula-name {
+    margin: 13px 0 12px;
+    color: #3d4b61;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.sa-chapter-formula {
+    overflow-x: auto;
+    padding: 14px 10px;
+    color: #162b51;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+}
+
 
 /* =========================================================
-   EXAM CORNER
+   EXERCISE
    ========================================================= */
-.sacp26-sa-exam{
-  background:var(--sacp26-orange-soft);
-  border:1px solid #fed7aa;
-  border-radius:14px;
-  padding:20px;
+
+.sa-chapter-exercise {
+    overflow: hidden;
+    border: 1px solid #e4e9f1;
+    border-radius: 16px;
+    background: #ffffff;
 }
 
-.sacp26-sa-exam h3{
-  color:var(--sacp26-orange);
-  margin-top:0;
+.sa-chapter-exercise-heading {
+    padding: 20px 23px;
+    border-bottom: 1px solid #e7ebf2;
+    background: #f7f9fc;
 }
+
+.sa-chapter-exercise-label {
+    display: block;
+    margin-bottom: 3px;
+    color: #6d7890;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.sa-chapter-exercise-title {
+    margin: 0;
+    color: #25324a;
+    font-size: 20px;
+    font-weight: 750;
+}
+
+.sa-chapter-question {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 18px;
+    padding: 27px 23px;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.sa-chapter-question:last-child {
+    border-bottom: 0;
+}
+
+.sa-chapter-question-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 11px;
+    background: #eaf2ff;
+    color: #2561d6;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.sa-chapter-question-content {
+    min-width: 0;
+}
+
+.sa-chapter-question-title {
+    margin: 0 0 7px;
+    color: #273348;
+    font-size: 18px;
+    font-weight: 750;
+}
+
+.sa-chapter-question-text {
+    margin: 0;
+    color: #505b6d;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.sa-chapter-solution {
+    margin-top: 18px;
+    padding: 18px;
+    border-left: 4px solid #2864dc;
+    border-radius: 10px;
+    background: #f7faff;
+}
+
+.sa-chapter-solution-title {
+    margin: 0 0 8px;
+    color: #2864dc;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.sa-chapter-solution-text {
+    margin: 0;
+    color: #515c6d;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.sa-chapter-answer-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 9px;
+    margin-top: 16px;
+    padding: 12px 14px;
+    border: 1px solid #dce7fa;
+    border-radius: 9px;
+    background: #ffffff;
+}
+
+.sa-chapter-answer-label {
+    color: #718096;
+    font-size: 12px;
+    font-weight: 750;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sa-chapter-answer {
+    color: #1f56bd;
+    font-size: 15px;
+}
+
 
 /* =========================================================
-   COMMON MISTAKES
+   QUESTION CATEGORIES
    ========================================================= */
-.sacp26-sa-mistakes{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
+
+.sa-chapter-question-category {
+    margin-top: 17px;
+    padding: 20px 22px;
+    border: 1px solid #e7ebf2;
+    border-radius: 14px;
+    background: #fbfcfe;
 }
 
-.sacp26-sa-mistake{
-  background:#fff8f7;
-  border:1px solid #fecdca;
-  border-radius:12px;
-  padding:15px;
+.sa-chapter-category-title {
+    margin: 0 0 12px;
+    color: #29364c;
+    font-size: 18px;
+    font-weight: 750;
 }
 
-.sacp26-sa-mistake strong{
-  color:#b42318;
+.sa-chapter-question-list {
+    margin: 0;
+    padding-left: 24px;
 }
+
+.sa-chapter-list-question {
+    margin: 8px 0;
+    padding-left: 5px;
+    color: #4e596a;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
 
 /* =========================================================
    REVISION
    ========================================================= */
-.sacp26-sa-revision{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
+
+.sa-chapter-revision-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
 }
 
-.sacp26-sa-revision-item{
-  background:#f8fafc;
-  border:1px solid var(--sacp26-border);
-  padding:15px;
-  border-radius:12px;
+.sa-chapter-revision-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid #e5ebf3;
+    border-radius: 12px;
+    background: #fafcff;
 }
 
-.sacp26-sa-formula{
-  background:#f8fafc;
-  border:1px solid var(--sacp26-border);
-  border-radius:12px;
-  padding:15px;
-  margin:12px 0;
-  font-family:Georgia,serif;
-  overflow:auto;
+.sa-chapter-revision-icon {
+    display: inline-flex;
+    flex: 0 0 27px;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+    border-radius: 8px;
+    background: #e9f5ee;
+    color: #2c8b55;
+    font-size: 12px;
+    font-weight: 800;
 }
 
-/* =========================================================
-   FAQ
-   ========================================================= */
-.sacp26-sa-faq details{
-  border:1px solid var(--sacp26-border);
-  border-radius:10px;
-  margin:10px 0;
-  background:#fff;
+.sa-chapter-revision-text {
+    margin: 1px 0 0;
+    color: #4f5a6c;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-.sacp26-sa-faq summary{
-  cursor:pointer;
-  padding:14px 16px;
-  font-weight:700;
-}
-
-.sacp26-sa-faq details p{
-  padding:0 16px 16px;
-  margin:0;
-}
 
 /* =========================================================
-   DOWNLOADS
+   COMMON MISTAKES
    ========================================================= */
-.sacp26-sa-download-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
+
+.sa-chapter-mistake-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.sacp26-sa-download{
-  border:1px solid var(--sacp26-border);
-  border-radius:12px;
-  padding:17px;
-  background:#fff;
+.sa-chapter-mistake-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 15px 17px;
+    border: 1px solid #f0dfdf;
+    border-radius: 12px;
+    background: #fffafa;
 }
 
-.sacp26-sa-download strong{
-  display:block;
-  margin-bottom:4px;
+.sa-chapter-mistake-number {
+    display: inline-flex;
+    flex: 0 0 30px;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: #fff0f0;
+    color: #bf5555;
+    font-size: 11px;
+    font-weight: 800;
 }
+
+.sa-chapter-mistake-text {
+    margin: 2px 0 0;
+    color: #5c555a;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   EXAM TIPS
+   ========================================================= */
+
+.sa-chapter-tip-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow: hidden;
+    border: 1px solid #e1e8f3;
+    border-radius: 15px;
+    background: #f8faff;
+}
+
+.sa-chapter-tip-item {
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 14px;
+    padding: 19px 20px;
+    border-bottom: 1px solid #e5eaf2;
+}
+
+.sa-chapter-tip-item:last-child {
+    border-bottom: 0;
+}
+
+.sa-chapter-tip-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: #e8f0ff;
+    color: #2762d4;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.sa-chapter-tip-title {
+    margin: 1px 0 4px;
+    color: #29364b;
+    font-size: 16px;
+    font-weight: 750;
+}
+
+.sa-chapter-tip-text {
+    margin: 0;
+    color: #657084;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   RELATED RESOURCES
+   ========================================================= */
+
+.sa-chapter-related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.sa-chapter-related-card {
+    display: grid;
+    grid-template-columns: 39px minmax(0, 1fr) 20px;
+    align-items: center;
+    gap: 11px;
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid #e4eaf2;
+    border-radius: 13px;
+    color: inherit;
+    text-decoration: none;
+    background: #fbfcfe;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.sa-chapter-related-card:hover {
+    border-color: #bcd0f4;
+    box-shadow: 0 8px 20px rgba(35, 79, 145, 0.08);
+    transform: translateY(-2px);
+}
+
+.sa-chapter-related-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 39px;
+    border-radius: 10px;
+    background: #eaf2ff;
+    color: #2864d8;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.sa-chapter-related-title {
+    display: block;
+    overflow: hidden;
+    color: #29364a;
+    font-size: 14px;
+    font-weight: 750;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sa-chapter-related-description {
+    display: block;
+    margin-top: 2px;
+    overflow: hidden;
+    color: #7a8494;
+    font-size: 11px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sa-chapter-related-arrow {
+    color: #6280b5;
+    font-size: 17px;
+    font-weight: 700;
+}
+
 
 /* =========================================================
    PREVIOUS / NEXT
    ========================================================= */
-.sacp26-sa-nextprev{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  margin:24px 0;
+
+.sa-chapter-pagination {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 25px;
 }
 
-.sacp26-sa-nextprev a{
-  background:#fff;
-  border:1px solid var(--sacp26-border);
-  border-radius:12px;
-  padding:16px;
-  color:var(--sacp26-ink);
+.sa-chapter-pagination-card {
+    display: block;
+    min-width: 0;
+    padding: 18px 20px;
+    border: 1px solid #e3e9f1;
+    border-radius: 14px;
+    color: inherit;
+    text-decoration: none;
+    background: #ffffff;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.sacp26-sa-nextprev a:hover{
-  text-decoration:none;
-  background:#f8fbff;
+.sa-chapter-pagination-card:hover {
+    border-color: #bdd0f1;
+    box-shadow: 0 8px 20px rgba(25, 56, 110, 0.07);
 }
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
+.sa-chapter-pagination-label {
+    display: block;
+    margin-bottom: 3px;
+    color: #7a8494;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-/* =========================================================
-   SARASWAT ACADEMY — MOBILE / RESPONSIVE FIX
-   Unique namespace: sacp26-
-   ========================================================= */
+.sa-chapter-pagination-title {
+    display: block;
+    overflow: hidden;
+    color: #2c5fc2;
+    font-size: 15px;
+    font-weight: 750;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
-/* ---------- TABLET ---------- */
+.sa-chapter-pagination-next {
+    text-align: right;
+}
 
-@media (max-width: 1050px){
-
-    .sacp26-sa-resource-grid{
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .sacp26-sa-glance-grid{
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .sacp26-sa-glance-item:nth-child(3){
-        border-right: 0;
-    }
-
-    .sacp26-sa-glance-item:nth-child(-n+3){
-        border-bottom: 1px solid var(--sacp26-border);
-    }
-
-    .sacp26-sa-hero{
-        padding: 32px;
-    }
-
-    .sacp26-sa-layout{
-        gap: 18px;
-    }
-
+.sa-chapter-pagination-disabled {
+    opacity: 0.6;
 }
 
 
 /* =========================================================
-   MOBILE / TABLET
+   TABLE RESPONSIVENESS
    ========================================================= */
 
-@media (max-width: 850px){
-
-    html{
-        overflow-x: hidden;
-    }
-
-    body{
-        overflow-x: hidden;
-        width: 100%;
-    }
-
-    .sacp26-sa-container{
-        width: calc(100% - 24px);
-        max-width: var(--sacp26-max);
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    /* ---------- HEADER ---------- */
-
-    .sacp26-sa-header{
-        width: 100%;
-    }
-
-    .sacp26-sa-header-inner{
-        min-height: 60px;
-        padding: 0;
-        gap: 8px;
-    }
-
-    .sacp26-sa-brand{
-        font-size: 18px;
-        min-width: 0;
-    }
-
-    .sacp26-sa-header-actions{
-        margin-left: auto;
-        flex-shrink: 0;
-    }
-
-    .sacp26-sa-icon-btn{
-        padding: 7px 10px;
-        font-size: 13px;
-        white-space: nowrap;
-    }
-
-
-    /* ---------- BREADCRUMB ---------- */
-
-    .sacp26-sa-breadcrumb{
-        padding: 14px 0 10px;
-        font-size: 13px;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-    }
-
-    .sacp26-sa-breadcrumb::-webkit-scrollbar{
-        display: none;
-    }
-
-
-    /* ---------- HERO ---------- */
-
-    .sacp26-sa-hero{
-        width: 100%;
-        padding: 26px 20px;
-        border-radius: 18px;
-    }
-
-    .sacp26-sa-eyebrow{
-        font-size: 11px;
-        line-height: 1.4;
-    }
-
-    .sacp26-sa-hero h1{
-        font-size: clamp(27px, 7vw, 36px);
-        line-height: 1.15;
-        margin: 9px 0 13px;
-        word-break: normal;
-        overflow-wrap: anywhere;
-    }
-
-    .sacp26-sa-hero-description{
-        font-size: 14px;
-        line-height: 1.65;
-        margin-bottom: 20px;
-    }
-
-    .sacp26-sa-hero-actions{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 9px;
-    }
-
-    .sacp26-sa-btn{
-        width: 100%;
-        min-height: 45px;
-    }
-
-
-    /* ---------- QUICK RESOURCES ---------- */
-
-    .sacp26-sa-resource-grid{
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8px;
-        margin: 14px 0 20px;
-    }
-
-    .sacp26-sa-resource{
-        min-width: 0;
-        padding: 12px 8px;
-        font-size: 12px;
-        line-height: 1.35;
-    }
-
-
-    /* ---------- CHAPTER GLANCE ---------- */
-
-    .sacp26-sa-glance{
-        border-radius: 14px;
-    }
-
-    .sacp26-sa-glance-title{
-        padding: 15px 16px;
-        font-size: 17px;
-    }
-
-    .sacp26-sa-glance-grid{
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .sacp26-sa-glance-item{
-        min-width: 0;
-        padding: 13px 14px;
-        border-right: 1px solid var(--sacp26-border);
-        border-bottom: 1px solid var(--sacp26-border);
-    }
-
-    .sacp26-sa-glance-item:nth-child(even){
-        border-right: 0;
-    }
-
-    .sacp26-sa-glance-item:last-child{
-        grid-column: 1 / -1;
-        border-right: 0;
-    }
-
-    .sacp26-sa-glance-label{
-        font-size: 11px;
-    }
-
-    .sacp26-sa-glance-value{
-        font-size: 14px;
-    }
-
-
-    /* ---------- ADS ---------- */
-
-    .sacp26-sa-ad{
-        width: 100%;
-        min-height: 90px;
-        margin: 16px 0 20px;
-    }
-
-
-    /* ---------- MOBILE MENU ---------- */
-
-    .sacp26-sa-mobile-menu{
-        display: block;
-        width: 100%;
-        margin: 0 0 16px;
-        padding: 13px 15px;
-        border-radius: 11px;
-        position: relative;
-    }
-
-    .sacp26-sa-mobile-menu > div{
-        margin-top: 12px !important;
-    }
-
-    .sacp26-sa-mobile-menu a{
-        display: block;
-        padding: 9px 4px;
-        border-bottom: 1px solid var(--sacp26-border);
-        color: var(--sacp26-ink);
-        font-size: 14px;
-    }
-
-    .sacp26-sa-mobile-menu a:last-child{
-        border-bottom: 0;
-    }
-
-
-    /* ---------- MAIN LAYOUT ---------- */
-
-    .sacp26-sa-layout{
-        display: block;
-        width: 100%;
-    }
-
-    .sacp26-sa-sidebar{
-        display: none;
-    }
-
-    .sacp26-sa-main{
-        width: 100%;
-        min-width: 0;
-    }
-
-
-    /* ---------- CARDS ---------- */
-
-    .sacp26-sa-card{
-        width: 100%;
-        margin-bottom: 16px;
-        border-radius: 14px;
-    }
-
-    .sacp26-sa-card-header{
-        padding: 16px;
-    }
-
-    .sacp26-sa-card-header h2{
-        font-size: 20px;
-        line-height: 1.3;
-    }
-
-    .sacp26-sa-card-body{
-        padding: 17px 16px;
-    }
-
-    .sacp26-sa-card-body h3{
-        font-size: 17px;
-        line-height: 1.4;
-        margin-top: 24px;
-    }
-
-    .sacp26-sa-card-body p{
-        line-height: 1.7;
-    }
-
-
-    /* ---------- INTRO BOX ---------- */
-
-    .sacp26-sa-intro{
-        padding: 15px;
-        font-size: 14px;
-        line-height: 1.7;
-    }
-
-
-    /* ---------- ACCORDION ---------- */
-
-    .sacp26-sa-acc-button{
-        padding: 15px 14px;
-        gap: 10px;
-    }
-
-    .sacp26-sa-acc-title{
-        font-size: 15px;
-        line-height: 1.4;
-    }
-
-    .sacp26-sa-acc-panel{
-        padding: 0 15px 17px;
-    }
-
-
-    /* ---------- LINK CARDS ---------- */
-
-    .sacp26-sa-link-grid{
-        grid-template-columns: 1fr;
-        gap: 9px;
-    }
-
-    .sacp26-sa-link-card{
-        padding: 14px;
-    }
-
-
-    /* ---------- TABLES ---------- */
-
-    .sacp26-sa-table-wrap{
-        width: 100%;
-        max-width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    table{
-        min-width: 560px;
-    }
-
-
-    /* ---------- EXAM CORNER ---------- */
-
-    .sacp26-sa-exam{
-        padding: 16px;
-        border-radius: 12px;
-    }
-
-
-    /* ---------- COMMON MISTAKES ---------- */
-
-    .sacp26-sa-mistakes{
-        grid-template-columns: 1fr;
-        gap: 9px;
-    }
-
-    .sacp26-sa-mistake{
-        padding: 14px;
-    }
-
-
-    /* ---------- REVISION ---------- */
-
-    .sacp26-sa-revision{
-        grid-template-columns: 1fr;
-        gap: 9px;
-    }
-
-    .sacp26-sa-revision-item{
-        padding: 14px;
-    }
-
-
-    /* ---------- DOWNLOADS ---------- */
-
-    .sacp26-sa-download-grid{
-        grid-template-columns: 1fr;
-        gap: 9px;
-    }
-
-    .sacp26-sa-download{
-        padding: 15px;
-    }
-
-
-    /* ---------- PREVIOUS / NEXT ---------- */
-
-    .sacp26-sa-nextprev{
-        grid-template-columns: 1fr;
-        gap: 9px;
-    }
-
-    .sacp26-sa-nextprev a{
-        padding: 14px;
-    }
-
-
-    /* ---------- FOOTER ---------- */
-
-    .sacp26-sa-footer{
-        margin-top: 30px;
-        padding: 30px 0;
-    }
-
-    .sacp26-sa-footer-grid{
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
-
+.sa-chapter-table-responsive {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.sa-chapter-table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+.sa-chapter-table th {
+    padding: 13px 15px;
+    border: 1px solid #dfe5ee;
+    background: #f0f5fd;
+    color: #263a5b;
+    font-size: 14px;
+    font-weight: 750;
+    text-align: left;
+}
+
+.sa-chapter-table td {
+    padding: 13px 15px;
+    border: 1px solid #e1e6ed;
+    color: #4d5869;
+    font-size: 14px;
+    vertical-align: top;
 }
 
 
 /* =========================================================
-   SMALL MOBILE — 640px
+   FOCUS ACCESSIBILITY
    ========================================================= */
 
-@media (max-width: 640px){
+.sa-chapter-page a:focus-visible {
+    outline: 3px solid rgba(39, 99, 218, 0.35);
+    outline-offset: 3px;
+}
 
-    body{
-        font-size: 15px;
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .sa-chapter-container {
+        width: min(100% - 32px, 1000px);
     }
 
-    .sacp26-sa-container{
+    .sa-chapter-layout {
+        grid-template-columns: 270px minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .sa-chapter-navigation {
+        padding: 23px 19px;
+    }
+
+    .sa-chapter-navigation-title {
+        font-size: 23px;
+    }
+
+    .sa-chapter-section {
+        padding: 29px 28px;
+    }
+
+    .sa-chapter-objectives-grid,
+    .sa-chapter-formula-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sa-chapter-info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sa-chapter-related-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 780px) {
+
+    .sa-chapter-container {
         width: calc(100% - 20px);
+        padding-top: 10px;
+        padding-bottom: 35px;
     }
 
-
-    /* ---------- TOP BAR ---------- */
-
-    .sacp26-sa-topbar{
-        padding: 7px 10px;
-        font-size: 11px;
-        line-height: 1.4;
+    .sa-chapter-hero {
+        padding: 34px 23px 30px;
+        border-radius: 21px;
     }
 
-
-    /* ---------- HEADER ---------- */
-
-    .sacp26-sa-header-inner{
-        min-height: 56px;
-    }
-
-    .sacp26-sa-brand{
-        font-size: 16px;
-    }
-
-    .sacp26-sa-header-actions{
+    .sa-chapter-breadcrumb {
+        margin-bottom: 21px;
+        font-size: 13px;
         gap: 5px;
     }
 
-    .sacp26-sa-icon-btn{
-        padding: 6px 8px;
-        font-size: 12px;
+    .sa-chapter-hero-labels {
+        gap: 6px;
     }
 
-
-    /* ---------- HERO ---------- */
-
-    .sacp26-sa-hero{
-        padding: 23px 16px;
-        border-radius: 16px;
+    .sa-chapter-hero-badge {
+        min-height: 29px;
+        padding: 3px 10px;
+        font-size: 11px;
     }
 
-    .sacp26-sa-eyebrow{
-        font-size: 10px;
+    .sa-chapter-title {
+        font-size: 32px;
+        letter-spacing: -0.8px;
     }
 
-    .sacp26-sa-hero h1{
-        font-size: 28px;
-        line-height: 1.15;
-    }
-
-    .sacp26-sa-hero-description{
-        font-size: 13.5px;
+    .sa-chapter-description {
+        margin-top: 16px;
+        font-size: 14px;
         line-height: 1.65;
     }
 
+    .sa-chapter-hero-bottom {
+        margin-top: 20px;
+        font-size: 12px;
+    }
 
-    /* ---------- QUICK RESOURCES ---------- */
+    .sa-chapter-layout {
+        display: block;
+    }
 
-    .sacp26-sa-resource-grid{
+    .sa-chapter-sidebar {
+        margin-bottom: 20px;
+    }
+
+    .sa-chapter-navigation {
+        position: static;
+        padding: 21px;
+        border-radius: 17px;
+    }
+
+    .sa-chapter-navigation-title {
+        margin-bottom: 14px;
+        font-size: 23px;
+    }
+
+    .sa-chapter-navigation-list {
+        display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 7px;
+        gap: 4px;
     }
 
-    .sacp26-sa-resource{
-        padding: 11px 6px;
-        font-size: 11.5px;
-        border-radius: 10px;
+    .sa-chapter-navigation-link {
+        padding: 9px 8px;
+        font-size: 12px;
     }
 
+    .sa-chapter-navigation-icon {
+        flex-basis: 22px;
+        width: 22px;
+        height: 22px;
+        font-size: 10px;
+    }
 
-    /* ---------- GLANCE ---------- */
+    .sa-chapter-resource-box {
+        display: none;
+    }
 
-    .sacp26-sa-glance-title{
+    .sa-chapter-section {
+        margin-bottom: 17px;
+        padding: 25px 19px;
+        border-radius: 17px;
+    }
+
+    .sa-chapter-section-title {
+        margin-bottom: 17px;
+        font-size: 27px;
+    }
+
+    .sa-chapter-text {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .sa-chapter-highlight-box {
+        padding: 15px 16px;
+    }
+
+    .sa-chapter-highlight-text {
+        font-size: 14px;
+    }
+
+    .sa-chapter-objectives-grid,
+    .sa-chapter-formula-grid,
+    .sa-chapter-info-grid,
+    .sa-chapter-revision-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sa-chapter-objective-card {
+        padding: 17px;
+    }
+
+    .sa-chapter-formula {
+        font-size: 18px;
+    }
+
+    .sa-chapter-question {
+        grid-template-columns: 38px minmax(0, 1fr);
+        gap: 11px;
+        padding: 21px 16px;
+    }
+
+    .sa-chapter-question-number {
+        width: 35px;
+        height: 35px;
+        border-radius: 9px;
+        font-size: 11px;
+    }
+
+    .sa-chapter-question-title {
         font-size: 16px;
+    }
+
+    .sa-chapter-question-text,
+    .sa-chapter-solution-text {
+        font-size: 14px;
+    }
+
+    .sa-chapter-solution {
         padding: 14px;
     }
 
-    .sacp26-sa-glance-item{
-        padding: 12px;
+    .sa-chapter-question-category {
+        padding: 17px;
     }
 
-    .sacp26-sa-glance-value{
-        font-size: 13px;
-    }
-
-
-    /* ---------- CARD ---------- */
-
-    .sacp26-sa-card{
-        border-radius: 12px;
-    }
-
-    .sacp26-sa-card-header{
-        padding: 15px 14px;
-    }
-
-    .sacp26-sa-card-header h2{
-        font-size: 19px;
-    }
-
-    .sacp26-sa-card-body{
-        padding: 15px 14px;
-    }
-
-
-    /* ---------- CONTENT ---------- */
-
-    .sacp26-sa-card-body h3{
+    .sa-chapter-category-title {
         font-size: 16px;
     }
 
-    .sacp26-sa-list{
-        padding-left: 20px;
-    }
-
-
-    /* ---------- ACCORDION ---------- */
-
-    .sacp26-sa-acc-button{
-        padding: 14px 12px;
-    }
-
-    .sacp26-sa-acc-title{
+    .sa-chapter-list-question {
         font-size: 14px;
     }
 
-    .sacp26-sa-acc-panel{
-        padding: 0 13px 15px;
+    .sa-chapter-pagination {
+        grid-template-columns: 1fr;
     }
 
-
-    /* ---------- ADS ---------- */
-
-    .sacp26-sa-ad{
-        min-height: 80px;
-        margin: 14px 0 18px;
-        border-radius: 10px;
+    .sa-chapter-pagination-next {
+        text-align: left;
     }
 
-
-    /* ---------- FAQ ---------- */
-
-    .sacp26-sa-faq summary{
-        padding: 13px 14px;
-        font-size: 14px;
+    .sa-chapter-ad-top,
+    .sa-chapter-ad-content,
+    .sa-chapter-ad-mid,
+    .sa-chapter-ad-bottom {
+        min-height: 70px;
     }
-
-    .sacp26-sa-faq details p{
-        padding: 0 14px 14px;
-        font-size: 14px;
-    }
-
-
-    /* ---------- FORMULA ---------- */
-
-    .sacp26-sa-formula{
-        font-size: 14px;
-        padding: 13px;
-        overflow-x: auto;
-    }
-
 }
 
 
 /* =========================================================
-   VERY SMALL PHONES — 400px
+   SMALL MOBILE
    ========================================================= */
 
-@media (max-width: 400px){
+@media (max-width: 450px) {
 
-    .sacp26-sa-container{
-        width: calc(100% - 16px);
+    .sa-chapter-container {
+        width: calc(100% - 14px);
     }
 
-    .sacp26-sa-brand{
-        font-size: 15px;
+    .sa-chapter-hero {
+        padding: 28px 17px 25px;
+        border-radius: 18px;
     }
 
-    .sacp26-sa-icon-btn{
-        font-size: 11px;
-        padding: 6px 7px;
+    .sa-chapter-title {
+        font-size: 27px;
+        line-height: 1.22;
     }
 
-    .sacp26-sa-hero h1{
-        font-size: 25px;
+    .sa-chapter-navigation {
+        padding: 17px 13px;
     }
 
-    .sacp26-sa-resource{
-        font-size: 10.5px;
-        padding: 10px 5px;
-    }
-
-    .sacp26-sa-glance-grid{
+    .sa-chapter-navigation-list {
         grid-template-columns: 1fr;
     }
 
-    .sacp26-sa-glance-item,
-    .sacp26-sa-glance-item:nth-child(even){
-        grid-column: auto;
-        border-right: 0;
+    .sa-chapter-navigation-link {
+        font-size: 13px;
     }
 
+    .sa-chapter-section {
+        padding: 22px 15px;
+    }
+
+    .sa-chapter-section-title {
+        font-size: 25px;
+    }
+
+    .sa-chapter-formula-card {
+        padding: 17px 13px;
+    }
+
+    .sa-chapter-related-card {
+        grid-template-columns: 35px minmax(0, 1fr) 16px;
+        padding: 12px;
+    }
+
+    .sa-chapter-related-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .sa-chapter-page *,
+    .sa-chapter-page *::before,
+    .sa-chapter-page *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
 }
