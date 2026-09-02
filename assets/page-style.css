@@ -46,10 +46,21 @@ line-height:1.35;
 .hero p{margin-top:10px;}
 
 .breadcrumb{
-font-size:.9rem;
-opacity:.9;
+font-size:.98rem;
+opacity:1.1;
 margin-bottom:12px;
+color:#efff15;
 }
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
 
 .grid{
     display:grid;
