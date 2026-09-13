@@ -926,4 +926,25 @@ footer { background: var(--deep); color: #ffffff; }
 .book-section strong {
     color: #b45309;
 }
+
+.breadcrumb {
+    font-size: 14px;
+    margin: 15px 0;
+    padding: 8px 12px;
+    color: #555;
+}
+
+.breadcrumb a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb a:last-of-type {
+    color: #555;
+    pointer-events: none;
+}
     
