@@ -458,8 +458,1010 @@
 
     /* FOOTER */
     
-    /* FLOAT */
+    /* Subjects Covered */
+    .subjects-covered {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.subjects-covered h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--heading);
+}
+
+.subject-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.subject-list span {
+    padding: 9px 16px;
+    border: 1px solid var(--line);
+    border-radius: 30px;
+    background: #fff;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.subject-list span:hover {
+    background: var(--gold);
+    color: #111;
+    border-color: var(--gold);
+}
     
+/* ==========================================
+   HOME TUITION / ONLINE CLASSES HERO
+   ========================================== */
+
+.tutor-hero {
+    width: 100%;
+    padding: 45px 20px;
+    background: #f8f9fc;
+}
+
+.tutor-hero-inner {
+    width: 100%;
+    max-width: 1400px;
+    min-height: 500px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 47% 53%;
+    align-items: center;
+
+    background: #ffffff;
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 45px rgba(28, 31, 60, 0.08);
+}
+
+
+/* ==========================================
+   LEFT VISUAL
+   ========================================== */
+
+.tutor-visual {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+
+    background: #f4f7fb;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+/* soft background circle */
+
+.visual-circle {
+    position: absolute;
+
+    width: 520px;
+    height: 400px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: #e4eefb;
+
+    border-radius: 50%;
+}
+
+
+/* yellow decorative circle */
+
+.visual-circle::after {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    left: -40px;
+    bottom: 20px;
+
+    background: #ffe2a0;
+
+    border-radius: 50%;
+}
+
+
+/* ==========================================
+   STUDY NOTE
+   ========================================== */
+
+.study-note {
+    position: absolute;
+
+    z-index: 5;
+
+    top: 80px;
+    left: 50%;
+
+    transform: translateX(-50%)
+               rotate(-3deg);
+
+    width: 145px;
+    padding: 18px 14px;
+
+    background: #fffdf4;
+
+    color: #172b4d;
+
+    font-family: "Comic Sans MS",
+                 "Segoe Print",
+                 cursive;
+
+    font-size: 17px;
+    line-height: 1.25;
+
+    text-align: center;
+
+    box-shadow:
+        0 7px 15px rgba(0,0,0,.10);
+}
+
+.study-note::before {
+    content: "";
+
+    position: absolute;
+
+    width: 28px;
+    height: 10px;
+
+    top: -5px;
+    left: 50%;
+
+    transform: translateX(-50%)
+               rotate(-2deg);
+
+    background: #f3c95b;
+}
+
+
+/* ==========================================
+   BOOKS
+   ========================================== */
+
+.books {
+    position: absolute;
+
+    z-index: 4;
+
+    left: 65px;
+    bottom: 95px;
+
+    width: 360px;
+}
+
+.book {
+    height: 52px;
+
+    margin-top: 4px;
+
+    border-radius: 6px 12px 12px 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 22px;
+    font-weight: 800;
+
+    letter-spacing: .5px;
+
+    box-shadow:
+        0 4px 6px rgba(0,0,0,.10);
+}
+
+.book-blue {
+    width: 300px;
+    background: #347ac1;
+}
+
+.book-yellow {
+    width: 325px;
+    background: #eebc48;
+}
+
+.book-navy {
+    width: 350px;
+    background: #20395f;
+}
+
+
+/* ==========================================
+   STUDY TABLE
+   ========================================== */
+
+.study-table {
+    position: absolute;
+
+    z-index: 3;
+
+    bottom: 0;
+    left: 40px;
+    right: 40px;
+
+    height: 90px;
+
+    background: #e7c18f;
+
+    border-radius: 50% 50% 15px 15px / 30% 30% 10px 10px;
+}
+
+
+/* ==========================================
+   LAPTOP
+   ========================================== */
+
+.laptop {
+    position: absolute;
+
+    right: 80px;
+    bottom: 30px;
+
+    width: 190px;
+}
+
+.laptop-screen {
+    width: 160px;
+    height: 105px;
+
+    margin: auto;
+
+    background: #25395d;
+
+    border: 7px solid #182b4b;
+
+    border-radius: 8px;
+}
+
+.laptop-base {
+    width: 190px;
+    height: 12px;
+
+    margin: -2px auto 0;
+
+    background: #1d3152;
+
+    border-radius: 0 0 8px 8px;
+}
+
+
+/* ==========================================
+   PLANT
+   ========================================== */
+
+.plant {
+    position: absolute;
+
+    left: 20px;
+    bottom: 28px;
+
+    font-size: 65px;
+}
+
+
+/* ==========================================
+   LAMP
+   ========================================== */
+
+.lamp {
+    position: absolute;
+
+    right: 10px;
+    top: -105px;
+
+    font-size: 70px;
+}
+
+
+/* ==========================================
+   OPEN BOOK
+   ========================================== */
+
+.open-book {
+    position: absolute;
+
+    left: 50%;
+    bottom: 18px;
+
+    transform: translateX(-50%)
+               rotate(-3deg);
+
+    font-size: 60px;
+}
+
+
+/* ==========================================
+   PENCIL
+   ========================================== */
+
+.pencil {
+    position: absolute;
+
+    right: 225px;
+    bottom: 15px;
+
+    font-size: 27px;
+
+    transform: rotate(-15deg);
+}
+
+
+/* ==========================================
+   RIGHT CONTENT
+   ========================================== */
+
+.tutor-content {
+    padding: 55px 65px;
+}
+
+
+/* eyebrow */
+
+.tutor-eyebrow {
+    margin-bottom: 14px;
+
+    color: #294b7c;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+
+/* heading */
+
+.tutor-content h2 {
+    margin: 0;
+
+    color: #142f58;
+
+    font-size: clamp(36px, 3.4vw, 58px);
+
+    line-height: 1.08;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+}
+
+.tutor-content h2 span {
+    color: #d99b2b;
+
+    position: relative;
+}
+
+.tutor-content h2 span::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: -7px;
+
+    height: 4px;
+
+    background: #f1c348;
+
+    border-radius: 10px;
+}
+
+
+/* description */
+
+.tutor-description {
+    max-width: 680px;
+
+    margin: 25px 0;
+
+    color: #5a6780;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   FEATURES
+   ========================================== */
+
+.tutor-features {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 0;
+
+    margin: 28px 0;
+}
+
+.tutor-feature {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 5px 20px;
+
+    border-right: 1px solid #e5e8ef;
+
+    color: #293c5b;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+.tutor-feature:first-child {
+    padding-left: 0;
+}
+
+.tutor-feature:last-child {
+    border-right: none;
+}
+
+.feature-icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eef4fc;
+
+    color: #173c6a;
+
+    font-size: 20px;
+}
+
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+
+.tutor-buttons {
+    display: flex;
+
+    gap: 18px;
+
+    margin-top: 28px;
+}
+
+.tutor-btn {
+    min-width: 250px;
+
+    padding: 17px 28px;
+
+    border-radius: 35px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    transition: .25s ease;
+}
+
+
+/* primary */
+
+.tutor-btn.primary {
+    background: #f2c04c;
+
+    color: #142f58;
+}
+
+.tutor-btn.primary:hover {
+    background: #e8b33a;
+
+    transform: translateY(-2px);
+}
+
+.tutor-btn.primary span {
+    font-size: 25px;
+}
+
+
+/* WhatsApp */
+
+.tutor-btn.whatsapp {
+    background: #ffffff;
+
+    border: 2px solid #f0c04c;
+
+    color: #142f58;
+}
+
+.tutor-btn.whatsapp:hover {
+    background: #fff8df;
+
+    transform: translateY(-2px);
+}
+
+.whatsapp-icon {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #25d366;
+
+    color: white;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   LOCATION
+   ========================================== */
+
+.tutor-location {
+    margin-top: 25px;
+
+    color: #65728a;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+.tutor-location span {
+    margin-right: 6px;
+}
+
+
+/* ==========================================
+   HIRE / JOIN TUTOR CARDS
+   ========================================== */
+
+.tutor-options {
+    width: 100%;
+    padding: 45px 20px;
+    background: #f8f9fc;
+}
+
+.tutor-options-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+
+/* CARD */
+
+.tutor-option-card {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e9eaf0;
+    border-radius: 22px;
+
+    box-shadow: 0 8px 30px rgba(25, 35, 60, 0.06);
+
+    transition: transform .25s ease,
+                box-shadow .25s ease;
+}
+
+.tutor-option-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 35px rgba(25, 35, 60, 0.10);
+}
+
+
+/* ICON */
+
+.tutor-option-icon {
+    flex: 0 0 58px;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #eef4fc;
+
+    font-size: 28px;
+}
+
+
+/* CONTENT */
+
+.tutor-option-content {
+    flex: 1;
+}
+
+.tutor-option-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #8a6b25;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.tutor-option-content h3 {
+    margin: 0 0 10px;
+
+    color: #142f58;
+
+    font-size: 30px;
+    line-height: 1.15;
+
+    font-weight: 800;
+}
+
+.tutor-option-content p {
+    margin: 0 0 18px;
+
+    color: #667085;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* LIST */
+
+.tutor-option-content ul {
+    margin: 0 0 22px;
+    padding: 0;
+
+    list-style: none;
+
+    display: grid;
+    gap: 8px;
+}
+
+.tutor-option-content li {
+    color: #35445d;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* BUTTON */
+
+.tutor-option-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 20px;
+
+    border-radius: 30px;
+
+    background: #142f58;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: .2s ease;
+}
+
+.tutor-option-btn:hover {
+    background: #203f70;
+    transform: translateX(2px);
+}
+
+.tutor-option-btn span {
+    font-size: 20px;
+    line-height: 1;
+}
+
+
+/* ==========================================
+   SECOND CARD DIFFERENT ACCENT
+   ========================================== */
+
+.join-card .tutor-option-icon {
+    background: #fff5d9;
+}
+
+.join-card .tutor-option-label {
+    color: #a87915;
+}
+
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+@media (max-width: 850px) {
+
+    .tutor-options-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tutor-option-card {
+        padding: 30px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 500px) {
+
+    .tutor-options {
+        padding: 30px 12px;
+    }
+
+    .tutor-option-card {
+        display: block;
+
+        padding: 25px;
+
+        border-radius: 18px;
+    }
+
+    .tutor-option-icon {
+        margin-bottom: 18px;
+    }
+
+    .tutor-option-content h3 {
+        font-size: 26px;
+    }
+
+    .tutor-option-content p {
+        font-size: 14px;
+    }
+
+    .tutor-option-btn {
+        width: 100%;
+
+        justify-content: center;
+    }
+}
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+@media (max-width: 1100px) {
+
+    .tutor-hero-inner {
+        grid-template-columns: 42% 58%;
+    }
+
+    .tutor-content {
+        padding: 45px 40px;
+    }
+
+    .tutor-feature {
+        margin-bottom: 10px;
+    }
+
+    .tutor-buttons {
+        flex-wrap: wrap;
+    }
+
+    .tutor-btn {
+        min-width: 210px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 800px) {
+
+    .tutor-hero {
+        padding: 20px 10px;
+    }
+
+    .tutor-hero-inner {
+        display: block;
+
+        min-height: auto;
+
+        border-radius: 18px;
+    }
+
+    .tutor-visual {
+        height: 300px;
+    }
+
+    .visual-circle {
+        width: 330px;
+        height: 260px;
+    }
+
+    .books {
+        left: 30px;
+        bottom: 65px;
+
+        width: 250px;
+    }
+
+    .book {
+        height: 38px;
+
+        font-size: 16px;
+    }
+
+    .book-blue {
+        width: 210px;
+    }
+
+    .book-yellow {
+        width: 230px;
+    }
+
+    .book-navy {
+        width: 250px;
+    }
+
+    .study-note {
+        top: 35px;
+
+        width: 110px;
+
+        font-size: 13px;
+    }
+
+    .laptop {
+        right: 25px;
+        bottom: 25px;
+
+        width: 120px;
+    }
+
+    .laptop-screen {
+        width: 100px;
+        height: 70px;
+    }
+
+    .laptop-base {
+        width: 120px;
+    }
+
+    .lamp {
+        display: none;
+    }
+
+    .plant {
+        font-size: 45px;
+        left: 10px;
+    }
+
+    .open-book {
+        font-size: 40px;
+    }
+
+    .pencil {
+        display: none;
+    }
+
+
+    .tutor-content {
+        padding: 35px 22px 40px;
+    }
+
+    .tutor-eyebrow {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .tutor-content h2 {
+        font-size: 34px;
+
+        letter-spacing: -.7px;
+    }
+
+    .tutor-description {
+        font-size: 16px;
+    }
+
+
+    .tutor-features {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+    }
+
+    .tutor-feature {
+        padding: 0;
+
+        border: none;
+
+        font-size: 13px;
+    }
+
+    .feature-icon {
+        width: 38px;
+        height: 38px;
+
+        font-size: 17px;
+    }
+
+
+    .tutor-buttons {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .tutor-btn {
+        width: 100%;
+
+        min-width: 0;
+    }
+}
     /* RESPONSIVE */
     @media(max-width:1000px){
       .nav-links{gap:18px;font-size:14px}
