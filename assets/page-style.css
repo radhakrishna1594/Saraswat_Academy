@@ -45,22 +45,6 @@ line-height:1.35;
 
 .hero p{margin-top:10px;}
 
-.breadcrumb{
-font-size:.98rem;
-opacity:1.1;
-margin-bottom:12px;
-color:#efff15;
-}
-
-.breadcrumb a {
-    color: white;
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
 
 .grid{
     display:grid;
@@ -229,9 +213,6 @@ border-radius:15px;
 font-size:1.6rem;
 }
 
-.breadcrumb{
-font-size:.8rem;
-}
 
 section{
 padding:18px;
@@ -284,9 +265,7 @@ padding:20px 15px;
 font-size:1.35rem;
 }
 
-.breadcrumb{
-display:none;
-}
+
 
 section{
 padding:15px;
