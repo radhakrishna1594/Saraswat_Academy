@@ -1940,3 +1940,139 @@
     }
 
 }
+
+/* ================================
+   SUBJECT SECTIONS
+================================ */
+
+.subject-sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    width: 100%;
+}
+
+
+/* Individual Section */
+
+.subject-group {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 18px;
+    transition: 0.25s ease;
+}
+
+.subject-group:hover {
+    border-color: #d1d5db;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Section Heading */
+
+.subject-group h3 {
+    margin: 0 0 14px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+
+/* Subject Card Container */
+
+.subject-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+
+/* Small Subject Cards */
+
+.subject-list span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+
+    color: #334155;
+
+    padding: 7px 11px;
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+/* Hover */
+
+.subject-list span:hover {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+    color: #111827;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 768px) {
+
+    .subject-sections {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .subject-group {
+        padding: 15px;
+    }
+
+    .subject-group h3 {
+        font-size: 16px;
+    }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+    .subject-sections {
+        gap: 12px;
+    }
+
+    .subject-group {
+        padding: 13px;
+        border-radius: 12px;
+    }
+
+    .subject-group h3 {
+        font-size: 15px;
+        margin-bottom: 11px;
+    }
+
+    .subject-list {
+        gap: 6px;
+    }
+
+    .subject-list span {
+        padding: 6px 9px;
+        font-size: 12px;
+        border-radius: 7px;
+    }
+
+}
