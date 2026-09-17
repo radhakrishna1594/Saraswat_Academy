@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Class 7 Hindi Chapter 7 वर्षा-बहार NCERT Solutions | मल्हार | Saraswat Academy</title><link rel="stylesheet" href="/assets/styles.css">
 <meta name="description" content="कक्षा 7 हिंदी मल्हार अध्याय 7 वर्षा-बहार के प्रश्न-उत्तर और NCERT Solutions सरल भाषा में पढ़ें।">
 
@@ -67,22 +68,153 @@
 <script src="../../loader.js"></script>
 <script src="../../config.js"></script> <script src="../../header.js"></script> 
 <style>
-
-
-/* CONTENT */
-.solution-layout{
-    max-width:1400px;
-    margin:30px auto;
+/* Page layout */
+.solution-layout {
+    width: min(1400px, 100%);
+    margin: 30px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 24px;
+    align-items: start;
 }
-.solution-article{background:#fff;padding:30px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
-.solution-article h1{margin:10px 0}
-.solution-article h2{margin:20px 0 10px}
-.solution-article p,.solution-article li{line-height:1.7}
-table{border-collapse:collapse;width:100%;margin:15px 0}
-th,td{border:1px solid #ccc;padding:8px}
 
+.solution-article {
+    min-width: 0;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    overflow-wrap: anywhere;
+    box-sizing: border-box;
+}
 
+.solution-article h1 {
+    margin: 10px 0;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
 
+.solution-article h2 { margin: 20px 0 10px; line-height: 1.35; }
+.solution-article h3 { line-height: 1.5; overflow-wrap: anywhere; }
+.solution-article p,
+.solution-article li { line-height: 1.7; }
+
+.solution-article img,
+.solution-article video,
+.solution-article iframe {
+    max-width: 100%;
+}
+
+.solution-article table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.solution-article th,
+.solution-article td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    overflow-wrap: anywhere;
+}
+
+.related-box {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Tablet and mobile */
+@media (max-width: 900px) {
+    .solution-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        margin: 20px auto;
+        padding: 0 16px;
+    }
+
+    .solution-article {
+        width: 100%;
+        padding: 24px;
+    }
+
+    .related-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .solution-layout {
+        display: block;
+        width: 100%;
+        margin: 12px auto;
+        padding: 0 10px;
+    }
+
+    .solution-article {
+        width: 100%;
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: 0 1px 6px rgba(0,0,0,.08);
+    }
+
+    .solution-article h1 {
+        font-size: clamp(22px, 6vw, 30px);
+    }
+
+    .solution-article h2 {
+        font-size: 21px;
+        margin-top: 22px;
+    }
+
+    .solution-article h3 {
+        font-size: 17px;
+        line-height: 1.55;
+    }
+
+    .solution-article p,
+    .solution-article li {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .breadcrumb {
+        font-size: 13px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+    .solution-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .related-box {
+        margin-top: 18px;
+        padding: 16px;
+    }
+
+    .solution-article table {
+        font-size: 14px;
+    }
+
+    .solution-article th,
+    .solution-article td {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 360px) {
+    .solution-layout { padding: 0 7px; }
+    .solution-article { padding: 13px; }
+    .solution-article h3 { font-size: 16px; }
+}
 </style>
 </head>
 <body class="solution-page">
