@@ -37,20 +37,165 @@
 </script>
 
 <style>
-.contact-container{max-width:1000px;margin:40px auto;padding:0 20px}
-.page-title{text-align:center;margin-bottom:35px}
-.page-title h1{font-size:38px;color:#0a2540;margin-bottom:10px}
-.page-title p{max-width:750px;margin:auto;line-height:1.2;color:#555; }
-.contact-grid{display:grid;grid-template-columns:0.5fr 1fr;gap:25px}
-.contact-card{background:#fff;padding:28px;border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,.08)}
-.contact-card h2{margin-top:0;color:#0a2540}
-.contact-item{margin-bottom:20px}
-.contact-item strong{display:block;margin-bottom:6px}
-.contact-item a{text-decoration:none;color:#0a2540;font-weight:600}
-.contact-btn{display:inline-block;padding:12px 22px;background:#0a2540;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold}
-.contact-btn:hover{opacity:.9}
-ul{line-height:2}
-@media(max-width:768px){.contact-grid{grid-template-columns:1fr}.page-title h1{font-size:30px}}
+
+/* ===== CONTACT PAGE ===== */
+
+.contact-container {
+    max-width: 1000px;
+    margin: 45px auto;
+    padding: 0 20px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.contact-container * {
+    box-sizing: border-box;
+}
+
+/* ===== PAGE HEADING ===== */
+
+.page-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.page-title h1 {
+    margin: 0 0 12px;
+    color: #0a2540;
+    font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.25;
+}
+
+.page-title p {
+    max-width: 700px;
+    margin: auto;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ===== CONTACT GRID ===== */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 24px;
+    align-items: start;
+}
+
+/* ===== CONTACT CARDS ===== */
+
+.contact-card {
+    min-width: 0;
+    padding: 26px;
+    background: #fff;
+    border: 1px solid #e5eaf0;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(10, 37, 64, 0.06);
+}
+
+.contact-card h2 {
+    margin: 0 0 22px;
+    color: #0a2540;
+    font-size: 23px;
+    line-height: 1.4;
+}
+
+/* ===== CONTACT DETAILS ===== */
+
+.contact-item {
+    margin-bottom: 20px;
+    overflow-wrap: anywhere;
+}
+
+.contact-item strong {
+    display: block;
+    margin-bottom: 7px;
+    color: #334155;
+    font-size: 14px;
+}
+
+.contact-item a {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contact-item a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* ===== BUTTON ===== */
+
+.contact-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #0a2540;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s ease;
+}
+
+.contact-btn:hover {
+    background: #17466f;
+}
+
+/* ===== LISTS ===== */
+
+.contact-container ul {
+    padding-left: 22px;
+    line-height: 1.8;
+    color: #475569;
+}
+
+.contact-container li {
+    margin-bottom: 6px;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+    .contact-container {
+        margin: 30px auto;
+        padding: 0 16px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .contact-card {
+        padding: 22px;
+    }
+
+    .page-title {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-card {
+        padding: 18px;
+    }
+
+    .contact-card h2 {
+        font-size: 21px;
+    }
+
+    .page-title p {
+        font-size: 14px;
+    }
+
+    .contact-btn {
+        width: 100%;
+    }
+}
 </style>
 </head>
 <body>
@@ -63,7 +208,7 @@ ul{line-height:2}
 <main class="contact-container">
 
 <section class="page-title">
-<h1>📞 Contact Saraswat Academy</h1>
+<h1>Contact Us</h1>
 <p>We are always happy to help students. Contact us for NCERT Solutions, CBSE studies, subject doubts, career guidance, website suggestions or any educational query.</p>
 </section>
 
