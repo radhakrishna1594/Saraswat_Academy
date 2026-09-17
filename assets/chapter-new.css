@@ -72,35 +72,6 @@
     pointer-events: none;
 }
 
-.sa-chapter-breadcrumb {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 28px;
-    font-size: 16px;
-}
-
-.sa-chapter-breadcrumb-link {
-    color: rgba(255, 255, 255, 0.9);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.sa-chapter-breadcrumb-link:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
-.sa-chapter-breadcrumb-arrow {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.sa-chapter-breadcrumb-current {
-    color: rgba(255, 255, 255, 0.96);
-}
 
 .sa-chapter-hero-labels {
     position: relative;
@@ -1116,11 +1087,7 @@
         border-radius: 21px;
     }
 
-    .sa-chapter-breadcrumb {
-        margin-bottom: 21px;
-        font-size: 13px;
-        gap: 5px;
-    }
+
 
     .sa-chapter-hero-labels {
         gap: 6px;

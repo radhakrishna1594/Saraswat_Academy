@@ -58,13 +58,6 @@ footer{
   padding:24px;
 }
 
-#breadcrumb{
-  max-width:var(--max-width);
-  margin:20px auto 0;
-  padding:0 24px;
-  color:var(--muted);
-  font-size:.92rem;
-}
 
 #hero{
   background:linear-gradient(135deg,var(--primary),var(--primary-dark));
@@ -209,9 +202,7 @@ footer{
     padding:16px;
   }
 
-  #breadcrumb{
-    padding:0 16px;
-  }
+
 
   #hero{
     padding:28px 20px;
