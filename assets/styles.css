@@ -342,3 +342,159 @@ tr:hover{
 
 
 
+/* Popular Articles */
+.popular-articles {
+    padding: 35px 16px;
+    margin-top: 25px;
+    background: #f7f9ff;
+    font-family: inherit;
+}
+
+.popular-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.popular-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.popular-tag {
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.popular-heading h2 {
+    margin: 10px 0;
+    color: #172554;
+    font-size: 30px;
+}
+
+.popular-heading p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Cards */
+.popular-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.popular-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #e5eaf3;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.popular-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px #00000012;
+}
+
+.popular-card-top {
+    min-height: 55px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.nda-bg   { background: #dbeafe; }
+.nep-bg   { background: #dcfce7; }
+.zero-bg  { background: #fef3c7; }
+.nobel-bg { background: #f3e8ff; }
+
+.popular-icon {
+    font-size: 28px;
+}
+
+.popular-category {
+    padding: 5px 10px;
+    background: #ffffffcc;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #334155;
+}
+
+.popular-card-content {
+    flex: 1;
+    padding: 15px 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.popular-card-content h3 {
+    margin: 0 0 8px;
+    color: #172554;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.popular-card-content p {
+    margin: 0 0 12px;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.popular-link {
+    margin-top: auto;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.popular-link:hover {
+    color: #1e40af;
+}
+
+/* Explore Button */
+.popular-footer {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.popular-all-btn {
+    display: inline-block;
+    padding: 11px 22px;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.popular-all-btn:hover {
+    background: #1e40af;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .popular-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .popular-heading h2 {
+        font-size: 25px;
+    }
+
+    .popular-articles {
+        padding: 25px 12px;
+    }
+}
+
