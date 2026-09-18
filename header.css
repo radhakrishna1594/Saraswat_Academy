@@ -938,7 +938,7 @@ footer { background: var(--deep); color: #ffffff; }
     padding: 0.15px  2px;
     border-radius: 2px;
 
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 500;
 
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
