@@ -929,41 +929,80 @@ footer { background: var(--deep); color: #ffffff; }
 
 /* Breadcrumb white chip */
 .breadcrumb {
-    display: inline-flex;
-    gap: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 
     background: #ffffff;
-    color: #111827;
+    color: #374151;
 
-    padding: 0.15px  2px;
-    border-radius: 2px;
+    padding: 8px 0;
+    margin: 0;
 
-    font-size: 9px;
+    border-radius: 4px;
+    font-size: 13px;
     font-weight: 500;
+    line-height: 1.6;
 
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-
-    width: fit-content;
+    box-shadow: none;
 }
 
 /* Breadcrumb links */
 .breadcrumb a {
-    color: #000000;
+    color: #2563eb;
     text-decoration: none;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    transition: color 0.2s ease;
 }
 
 /* Hover effect */
 .breadcrumb a:hover {
-    color: #2563eb;
+    color: #1d4ed8;
+    text-decoration: underline;
 }
 
 /* Arrow separators */
 .breadcrumb .separator {
-    color: #000000;
+    color: #9ca3af;
+    font-size: 12px;
     font-weight: 400;
+    flex-shrink: 0;
 }
-    
 
+/* Current page */
+.breadcrumb .current {
+    color: #374151;
+    font-weight: 600;
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+    .breadcrumb {
+        gap: 4px;
+        padding: 6px 0;
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .breadcrumb .separator {
+        font-size: 10px;
+    }
+}
+
+/* Very small mobile screens */
+@media (max-width: 360px) {
+    .breadcrumb {
+        gap: 3px;
+        font-size: 10px;
+    }
+}
 
 /* Home Tutor Banner */
 
