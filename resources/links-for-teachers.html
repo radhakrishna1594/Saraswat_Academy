@@ -15,6 +15,613 @@
 <style>
 
 
+/* =========================================
+   TEACHER RESOURCE CENTRE
+   SARASWAT ACADEMY
+========================================= */
+
+/* Main page */
+.view-test-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 20px 50px;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', 'Hind', sans-serif;
+    color: #263445;
+}
+
+/* =========================================
+   INTRODUCTION SECTION
+========================================= */
+
+.teacher-intro {
+    max-width: 950px;
+    margin: 0 auto 35px;
+    padding: 30px 32px;
+    background: #f0f7ff;
+    border: 1px solid #dceafe;
+    border-left: 5px solid #1769aa;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.teacher-intro h2 {
+    margin: 0 0 16px;
+    color: #124e83;
+    font-size: clamp(25px, 3vw, 34px);
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.teacher-intro p {
+    margin: 0 0 14px;
+    color: #435469;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.teacher-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.teacher-intro strong {
+    color: #174f86;
+    font-weight: 700;
+}
+
+/* =========================================
+   TEACHER RESOURCE TABLE
+========================================= */
+
+.test-table {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background: #ffffff;
+    border: 1px solid #dce4ed;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 22px rgba(20, 50, 80, 0.07);
+    font-size: 16px;
+}
+
+/* Table cells */
+.test-table td,
+.test-table th {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5ebf2;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 1.6;
+}
+
+/* First column: serial number */
+.test-table td:first-child {
+    width: 75px;
+    text-align: center;
+    color: #52677d;
+    font-weight: 700;
+}
+
+/* Resource name */
+.test-table td:nth-child(2) {
+    color: #27394d;
+    font-weight: 600;
+}
+
+/* Button column */
+.test-table td:last-child {
+    width: 150px;
+    text-align: center;
+}
+
+/* Alternate row backgrounds */
+.test-table tr:nth-child(even) {
+    background: #f7faff;
+}
+
+/* Row hover */
+.test-table tr {
+    transition: background 0.2s ease;
+}
+
+.test-table tr:hover {
+    background: #edf5ff;
+}
+
+/* Remove last border */
+.test-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* =========================================
+   DOWNLOAD BUTTON
+========================================= */
+
+.download-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 105px;
+    padding: 9px 18px;
+    background: #1769aa;
+    color: #ffffff !important;
+    border: 1px solid #1769aa;
+    border-radius: 7px;
+    text-decoration: none !important;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+    white-space: nowrap;
+    box-sizing: border-box;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.download-btn:hover {
+    background: #0e4f87;
+    border-color: #0e4f87;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(23, 105, 170, 0.22);
+}
+
+.download-btn:focus-visible {
+    outline: 3px solid #8bc5ff;
+    outline-offset: 3px;
+}
+
+/* =========================================
+   POPULAR STUDY RESOURCES SECTION
+========================================= */
+
+.popular-articles {
+    width: 100%;
+    padding: 65px 20px;
+    background: #f5f8fc;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', 'Hind', sans-serif;
+}
+
+.popular-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section heading */
+.popular-heading {
+    max-width: 750px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.popular-tag {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 6px 15px;
+    background: #e2efff;
+    color: #1769aa;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.popular-heading h2 {
+    margin: 0 0 12px;
+    color: #183653;
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.popular-heading p {
+    margin: 0;
+    color: #65758a;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   POPULAR CARDS GRID
+========================================= */
+
+.popular-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* Individual card */
+.popular-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e1e8f0;
+    border-radius: 13px;
+    box-shadow: 0 4px 15px rgba(30, 55, 85, 0.06);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.popular-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(30, 55, 85, 0.12);
+}
+
+/* Card top banner */
+.popular-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 100px;
+    padding: 20px 24px;
+    box-sizing: border-box;
+}
+
+/* Banner themes */
+.nda-bg {
+    background: linear-gradient(135deg, #e8f1ff, #d5e5ff);
+}
+
+.nep-bg {
+    background: linear-gradient(135deg, #e8f8ed, #d4f0df);
+}
+
+.zero-bg {
+    background: linear-gradient(135deg, #fff1df, #ffe3c4);
+}
+
+.nobel-bg {
+    background: linear-gradient(135deg, #f1eaff, #e5d9ff);
+}
+
+/* Emoji icon */
+.popular-icon {
+    font-size: 35px;
+    line-height: 1.2;
+}
+
+/* Class label */
+.popular-category {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.85);
+    color: #34475c;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Card content */
+.popular-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px 24px 25px;
+    box-sizing: border-box;
+}
+
+.popular-card-content h3 {
+    margin: 0 0 12px;
+    color: #203c59;
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.45;
+}
+
+.popular-card-content p {
+    margin: 0 0 22px;
+    color: #65758a;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Card link */
+.popular-link,
+.popular-card-content > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    color: #1769aa;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.6;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.popular-link:hover,
+.popular-card-content > a:hover {
+    color: #0b477c;
+    text-decoration: underline;
+}
+
+.popular-link span,
+.popular-card-content > a span {
+    font-size: 20px;
+    transition: transform 0.2s ease;
+}
+
+.popular-link:hover span,
+.popular-card-content > a:hover span {
+    transform: translateX(4px);
+}
+
+/* =========================================
+   EXPLORE ALL BUTTON
+========================================= */
+
+.popular-footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.popular-all-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 100%;
+    padding: 14px 27px;
+    background: #1769aa;
+    color: #ffffff !important;
+    border: 1px solid #1769aa;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none !important;
+    box-sizing: border-box;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.popular-all-btn:hover {
+    background: #0e4f87;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(23, 105, 170, 0.2);
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 992px) {
+
+    .view-test-page {
+        padding: 28px 18px 40px;
+    }
+
+    .teacher-intro {
+        padding: 25px;
+    }
+
+    .popular-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .popular-articles {
+        padding: 50px 18px;
+    }
+
+    .popular-card-content {
+        padding: 20px;
+    }
+
+    .popular-card-content h3 {
+        font-size: 20px;
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .view-test-page {
+        padding: 20px 12px 35px;
+    }
+
+    /* Intro */
+    .teacher-intro {
+        margin-bottom: 25px;
+        padding: 20px 17px;
+        border-left-width: 4px;
+        border-radius: 10px;
+    }
+
+    .teacher-intro h2 {
+        margin-bottom: 12px;
+        font-size: 25px;
+    }
+
+    .teacher-intro p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    /* Table: allow horizontal scrolling */
+    .test-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 9px;
+        font-size: 14px;
+    }
+
+    .test-table td,
+    .test-table th {
+        padding: 12px 13px;
+    }
+
+    .test-table td:first-child {
+        width: 40px;
+        min-width: 40px;
+    }
+
+    .test-table td:nth-child(2) {
+        min-width: 170px;
+    }
+
+    .test-table td:last-child {
+        width: 115px;
+        min-width: 115px;
+    }
+
+    .download-btn {
+        min-width: 90px;
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+
+    /* Popular section */
+    .popular-articles {
+        padding: 40px 12px;
+    }
+
+    .popular-heading {
+        margin-bottom: 25px;
+    }
+
+    .popular-heading h2 {
+        font-size: 28px;
+    }
+
+    .popular-heading p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    /* One card per row */
+    .popular-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .popular-card {
+        border-radius: 11px;
+    }
+
+    .popular-card-top {
+        min-height: 85px;
+        padding: 17px 20px;
+    }
+
+    .popular-icon {
+        font-size: 31px;
+    }
+
+    .popular-category {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .popular-card-content {
+        padding: 19px 20px 22px;
+    }
+
+    .popular-card-content h3 {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .popular-card-content p {
+        margin-bottom: 18px;
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .popular-link,
+    .popular-card-content > a {
+        font-size: 14px;
+    }
+
+    .popular-footer {
+        margin-top: 28px;
+    }
+
+    .popular-all-btn {
+        width: 100%;
+        padding: 13px 15px;
+        font-size: 14px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE DEVICES
+========================================= */
+
+@media (max-width: 360px) {
+
+    .teacher-intro h2 {
+        font-size: 22px;
+    }
+
+    .teacher-intro p {
+        font-size: 14px;
+    }
+
+    .popular-heading h2 {
+        font-size: 25px;
+    }
+
+    .popular-card-content h3 {
+        font-size: 18px;
+    }
+
+    .popular-card-top {
+        padding: 15px;
+    }
+
+    .popular-card-content {
+        padding: 17px;
+    }
+}
+
+/* =========================================
+   ACCESSIBILITY: REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .download-btn,
+    .popular-card,
+    .popular-link,
+    .popular-link span,
+    .popular-card-content > a,
+    .popular-card-content > a span,
+    .popular-all-btn {
+        transition: none;
+    }
+
+    .popular-card:hover,
+    .download-btn:hover,
+    .popular-all-btn:hover {
+        transform: none;
+    }
+}
 </style>
 
 </head>

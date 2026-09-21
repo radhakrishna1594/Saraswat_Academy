@@ -14,60 +14,614 @@
 
 <style>
 
-.view-test-page{
-    max-width:900px;
-    margin:10px;
-    padding:60px;
+
+/* =========================================
+   TEACHER RESOURCE CENTRE
+   SARASWAT ACADEMY
+========================================= */
+
+/* Main page */
+.view-test-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 20px 50px;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', 'Hind', sans-serif;
+    color: #263445;
 }
 
-.view-heading{
-    margin-bottom:30px;
+/* =========================================
+   INTRODUCTION SECTION
+========================================= */
+
+.teacher-intro {
+    max-width: 950px;
+    margin: 0 auto 35px;
+    padding: 30px 32px;
+    background: #f0f7ff;
+    border: 1px solid #dceafe;
+    border-left: 5px solid #1769aa;
+    border-radius: 12px;
+    box-sizing: border-box;
 }
 
-.view-heading h1{
-    color:#0c3a7e;
-    margin-bottom:10px;
+.teacher-intro h2 {
+    margin: 0 0 16px;
+    color: #124e83;
+    font-size: clamp(25px, 3vw, 34px);
+    font-weight: 800;
+    line-height: 1.3;
 }
 
-.view-heading p{
-    color:#666;
+.teacher-intro p {
+    margin: 0 0 14px;
+    color: #435469;
+    font-size: 17px;
+    line-height: 1.8;
 }
 
-.test-table{
-    width:100%;
-    border-collapse:collapse;
-    background:#fff;
+.teacher-intro p:last-child {
+    margin-bottom: 0;
 }
 
-.test-table th{
-    background:#0b5ed7;
-    color:#fff;
-    padding:12px;
+.teacher-intro strong {
+    color: #174f86;
+    font-weight: 700;
 }
 
-.test-table td{
-    border:1px solid #ddd;
-    padding:12px;
-    text-align:center;
+/* =========================================
+   TEACHER RESOURCE TABLE
+========================================= */
+
+.test-table {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background: #ffffff;
+    border: 1px solid #dce4ed;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 22px rgba(20, 50, 80, 0.07);
+    font-size: 16px;
 }
 
-.test-table tr:nth-child(even){
-    background:#f8f9fa;
+/* Table cells */
+.test-table td,
+.test-table th {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5ebf2;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 1.6;
 }
 
-.download-btn{
-    text-decoration:none;
-    background:#198754;
-    color:#fff;
-    padding:8px 15px;
-    border-radius:5px;
-    display:inline-block;
+/* First column: serial number */
+.test-table td:first-child {
+    width: 75px;
+    text-align: center;
+    color: #52677d;
+    font-weight: 700;
 }
 
-.download-btn:hover{
-    background:#157347;
+/* Resource name */
+.test-table td:nth-child(2) {
+    color: #27394d;
+    font-weight: 600;
 }
 
+/* Button column */
+.test-table td:last-child {
+    width: 150px;
+    text-align: center;
+}
+
+/* Alternate row backgrounds */
+.test-table tr:nth-child(even) {
+    background: #f7faff;
+}
+
+/* Row hover */
+.test-table tr {
+    transition: background 0.2s ease;
+}
+
+.test-table tr:hover {
+    background: #edf5ff;
+}
+
+/* Remove last border */
+.test-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* =========================================
+   DOWNLOAD BUTTON
+========================================= */
+
+.download-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 105px;
+    padding: 9px 18px;
+    background: #1769aa;
+    color: #ffffff !important;
+    border: 1px solid #1769aa;
+    border-radius: 7px;
+    text-decoration: none !important;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+    white-space: nowrap;
+    box-sizing: border-box;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.download-btn:hover {
+    background: #0e4f87;
+    border-color: #0e4f87;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(23, 105, 170, 0.22);
+}
+
+.download-btn:focus-visible {
+    outline: 3px solid #8bc5ff;
+    outline-offset: 3px;
+}
+
+/* =========================================
+   POPULAR STUDY RESOURCES SECTION
+========================================= */
+
+.popular-articles {
+    width: 100%;
+    padding: 65px 20px;
+    background: #f5f8fc;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', 'Hind', sans-serif;
+}
+
+.popular-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section heading */
+.popular-heading {
+    max-width: 750px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.popular-tag {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 6px 15px;
+    background: #e2efff;
+    color: #1769aa;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.popular-heading h2 {
+    margin: 0 0 12px;
+    color: #183653;
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.popular-heading p {
+    margin: 0;
+    color: #65758a;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   POPULAR CARDS GRID
+========================================= */
+
+.popular-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* Individual card */
+.popular-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e1e8f0;
+    border-radius: 13px;
+    box-shadow: 0 4px 15px rgba(30, 55, 85, 0.06);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.popular-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(30, 55, 85, 0.12);
+}
+
+/* Card top banner */
+.popular-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 100px;
+    padding: 20px 24px;
+    box-sizing: border-box;
+}
+
+/* Banner themes */
+.nda-bg {
+    background: linear-gradient(135deg, #e8f1ff, #d5e5ff);
+}
+
+.nep-bg {
+    background: linear-gradient(135deg, #e8f8ed, #d4f0df);
+}
+
+.zero-bg {
+    background: linear-gradient(135deg, #fff1df, #ffe3c4);
+}
+
+.nobel-bg {
+    background: linear-gradient(135deg, #f1eaff, #e5d9ff);
+}
+
+/* Emoji icon */
+.popular-icon {
+    font-size: 35px;
+    line-height: 1.2;
+}
+
+/* Class label */
+.popular-category {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.85);
+    color: #34475c;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Card content */
+.popular-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px 24px 25px;
+    box-sizing: border-box;
+}
+
+.popular-card-content h3 {
+    margin: 0 0 12px;
+    color: #203c59;
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.45;
+}
+
+.popular-card-content p {
+    margin: 0 0 22px;
+    color: #65758a;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Card link */
+.popular-link,
+.popular-card-content > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    color: #1769aa;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.6;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.popular-link:hover,
+.popular-card-content > a:hover {
+    color: #0b477c;
+    text-decoration: underline;
+}
+
+.popular-link span,
+.popular-card-content > a span {
+    font-size: 20px;
+    transition: transform 0.2s ease;
+}
+
+.popular-link:hover span,
+.popular-card-content > a:hover span {
+    transform: translateX(4px);
+}
+
+/* =========================================
+   EXPLORE ALL BUTTON
+========================================= */
+
+.popular-footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.popular-all-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 100%;
+    padding: 14px 27px;
+    background: #1769aa;
+    color: #ffffff !important;
+    border: 1px solid #1769aa;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none !important;
+    box-sizing: border-box;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.popular-all-btn:hover {
+    background: #0e4f87;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(23, 105, 170, 0.2);
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 992px) {
+
+    .view-test-page {
+        padding: 28px 18px 40px;
+    }
+
+    .teacher-intro {
+        padding: 25px;
+    }
+
+    .popular-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .popular-articles {
+        padding: 50px 18px;
+    }
+
+    .popular-card-content {
+        padding: 20px;
+    }
+
+    .popular-card-content h3 {
+        font-size: 20px;
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .view-test-page {
+        padding: 20px 12px 35px;
+    }
+
+    /* Intro */
+    .teacher-intro {
+        margin-bottom: 25px;
+        padding: 20px 17px;
+        border-left-width: 4px;
+        border-radius: 10px;
+    }
+
+    .teacher-intro h2 {
+        margin-bottom: 12px;
+        font-size: 25px;
+    }
+
+    .teacher-intro p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    /* Table: allow horizontal scrolling */
+    .test-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 9px;
+        font-size: 14px;
+    }
+
+    .test-table td,
+    .test-table th {
+        padding: 12px 13px;
+    }
+
+    .test-table td:first-child {
+        width: 40px;
+        min-width: 40px;
+    }
+
+    .test-table td:nth-child(2) {
+        min-width: 170px;
+    }
+
+    .test-table td:last-child {
+        width: 115px;
+        min-width: 115px;
+    }
+
+    .download-btn {
+        min-width: 90px;
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+
+    /* Popular section */
+    .popular-articles {
+        padding: 40px 12px;
+    }
+
+    .popular-heading {
+        margin-bottom: 25px;
+    }
+
+    .popular-heading h2 {
+        font-size: 28px;
+    }
+
+    .popular-heading p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    /* One card per row */
+    .popular-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .popular-card {
+        border-radius: 11px;
+    }
+
+    .popular-card-top {
+        min-height: 85px;
+        padding: 17px 20px;
+    }
+
+    .popular-icon {
+        font-size: 31px;
+    }
+
+    .popular-category {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .popular-card-content {
+        padding: 19px 20px 22px;
+    }
+
+    .popular-card-content h3 {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .popular-card-content p {
+        margin-bottom: 18px;
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .popular-link,
+    .popular-card-content > a {
+        font-size: 14px;
+    }
+
+    .popular-footer {
+        margin-top: 28px;
+    }
+
+    .popular-all-btn {
+        width: 100%;
+        padding: 13px 15px;
+        font-size: 14px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE DEVICES
+========================================= */
+
+@media (max-width: 360px) {
+
+    .teacher-intro h2 {
+        font-size: 22px;
+    }
+
+    .teacher-intro p {
+        font-size: 14px;
+    }
+
+    .popular-heading h2 {
+        font-size: 25px;
+    }
+
+    .popular-card-content h3 {
+        font-size: 18px;
+    }
+
+    .popular-card-top {
+        padding: 15px;
+    }
+
+    .popular-card-content {
+        padding: 17px;
+    }
+}
+
+/* =========================================
+   ACCESSIBILITY: REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .download-btn,
+    .popular-card,
+    .popular-link,
+    .popular-link span,
+    .popular-card-content > a,
+    .popular-card-content > a span,
+    .popular-all-btn {
+        transition: none;
+    }
+
+    .popular-card:hover,
+    .download-btn:hover,
+    .popular-all-btn:hover {
+        transform: none;
+    }
+}
 </style>
 
 </head>
@@ -78,8 +632,29 @@
 <main class="view-test-page">
 
 <div class="view-heading">
-<h1>Useful Links For Students</h1>
-<p></p>
+<section class="teacher-intro">
+    <h2>Useful Links for Students</h2>
+
+    <p>
+        At <strong>Saraswat Academy</strong>, we believe that every student
+        deserves access to quality educational resources. This page brings
+        together useful links to official <strong>NCERT</strong> and
+        <strong>CBSE</strong> websites, textbooks, syllabi, sample papers,
+        previous year question papers, online learning platforms, scholarship
+        opportunities, and competitive examination resources in one convenient
+        place.
+    </p>
+
+    <p>
+        Whether you are studying in primary, secondary, or senior secondary
+        classes, these resources will help you understand important concepts,
+        prepare for examinations, practise questions, explore new subjects,
+        and develop your knowledge beyond the classroom. Use these trusted
+        educational platforms to support your studies, improve your learning
+        experience, and take a confident step towards your academic and
+        professional goals.
+    </p>
+</section>
 </div>
 <table class="test-table">
 
@@ -272,7 +847,129 @@
 </table>
 </div>
 
+<section class="teacher-intro">
+    <h2>Frequently Asked Questions (FAQs)</h2>
 
+    <h3>1. What are useful educational links for students?</h3>
+    <p>
+        Useful educational links are online resources that help students
+        access textbooks, syllabi, sample papers, study materials,
+        scholarships, and online courses. Platforms such as NCERT, CBSE,
+        DIKSHA, and ePathshala provide valuable learning resources.
+    </p>
+    <hr>
+
+    <h3>2. Where can students download NCERT textbooks?</h3>
+    <p>
+        Students can download NCERT textbooks for different classes and
+        subjects from the official NCERT website. Visit the
+        <a href="https://ncert.nic.in/textbooks.php?ln=en"
+           target="_blank" rel="noopener noreferrer">
+            NCERT Textbooks page
+        </a>
+        to find available textbooks.
+    </p>
+    <hr>
+
+    <h3>3. Where can students find the CBSE syllabus?</h3>
+    <p>
+        Students can visit the official CBSE Academic website to access
+        curriculum documents, subject syllabi, and academic resources.
+        Always check the syllabus applicable to your academic session.
+    </p>
+    <hr>
+
+    <h3>4. Where can students download CBSE sample question papers?</h3>
+    <p>
+        Students can find official CBSE sample question papers and marking
+        schemes on the
+        <a href="https://cbseacademic.nic.in/"
+           target="_blank" rel="noopener noreferrer">
+            CBSE Academic website
+        </a>.
+        These resources help students understand examination patterns
+        and practise answering questions.
+    </p>
+    <hr>
+
+    <h3>5. Are these educational links free to use?</h3>
+    <p>
+        Many government educational portals provide free access to textbooks,
+        learning materials, and academic information. However, some courses,
+        services, or activities may have specific eligibility requirements
+        or fees. Check the relevant official website for details.
+    </p>
+    <hr>
+
+    <h3>6. Which online platforms can students use for learning?</h3>
+    <p>
+        Students can explore platforms such as DIKSHA, ePathshala, SWAYAM,
+        PM eVIDYA, and SWAYAM PRABHA for educational content, digital
+        textbooks, video lessons, and online learning opportunities.
+        The resources available may vary by class and subject.
+    </p>
+    <hr>
+
+    <h3>7. Where can students find scholarship opportunities?</h3>
+    <p>
+        Students can visit the
+        <a href="https://scholarships.gov.in/"
+           target="_blank" rel="noopener noreferrer">
+            National Scholarship Portal
+        </a>
+        to explore scholarship schemes and application information.
+        Eligibility, application dates, and required documents differ
+        from one scholarship to another.
+    </p>
+    <hr>
+
+    <h3>8. Can teachers also use the educational links on this page?</h3>
+    <p>
+        Yes. Teachers can use these links to access curriculum documents,
+        textbooks, teaching resources, assessment materials, and
+        professional development opportunities. The resources can support
+        lesson planning, classroom activities, and examination preparation.
+    </p>
+    <hr>
+
+    <h3>9. How can students use these links for examination preparation?</h3>
+    <p>
+        Students can begin by reviewing the official syllabus, studying
+        their prescribed textbooks, practising sample papers, and revising
+        important concepts. They can also use additional learning resources
+        to strengthen their understanding of difficult topics.
+    </p>
+    <hr>
+
+    <h3>10. Are the links on Saraswat Academy official government websites?</h3>
+    <p>
+        This page includes links to official educational portals as well as
+        learning resources provided by Saraswat Academy. Each link should
+        be checked individually to identify its publisher and purpose.
+        For official notifications, examinations, and applications, always
+        refer to the relevant authorized website.
+    </p>
+    <hr>
+
+    <h3>11. Do students need to register to access these resources?</h3>
+    <p>
+        Registration requirements depend on the platform. Some websites
+        allow users to access textbooks and learning materials without
+        creating an account, while other services may require registration
+        for courses, examinations, scholarships, or personalized features.
+    </p>
+    <hr>
+
+    <h3>12. How often should students check these educational websites?</h3>
+    <p>
+        Students should check relevant official websites regularly,
+        especially during examination preparation, scholarship application
+        periods, and admission seasons. This helps them stay informed about
+        updated syllabi, important announcements, application deadlines,
+        and newly available learning resources.
+    </p>
+    <hr>
+</section>
 </main>
 
  <!-- Popular Solutions Section -->
