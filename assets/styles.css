@@ -114,21 +114,25 @@ h3 {
 }
 .answer-block h2 {
   font-family: 'Inter', serif;
-  font-size: clamp(1.3rem, 3vw, 1.7rem);
-  color: var(--indigo);
+  font-size: clamp(1.8rem, 3vw, 1.7rem);
   margin-bottom: 14px;
+    font-size: 16px;
+    
+
 }
+
 .answer-block p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.75;
-  color: var(--text2);
+  color:  #000000;
 }
 .answer-block li {
   margin: 10px 0;
   font-size: 15px;
   line-height: 1.7;
-  color: var(--text2);
+  color:  #000000;
 }
+
 .answer-block ul,
 .answer-block ol {
   padding-left: 20px;
