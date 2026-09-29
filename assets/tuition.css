@@ -16,17 +16,17 @@
       --sans:"DM Sans",Arial,sans-serif;
       --head:"Manrope",Arial,sans-serif;
     }
-body:has(.service-grid) *{box-sizing:border-box;margin:0;padding:0}
+body.tuition-page *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body:has(.service-grid){
+    body.tuition-page{
       background:var(--bg);
       color:var(--white);
       font-family:var(--sans);
       line-height:1.65;
       overflow-x:hidden;
     }
-    body:has(.service-grid) a{text-decoration:none;color:inherit}
-    body:has(.service-grid) button,body:has(.service-grid) input,body:has(.service-grid) select,body:has(.service-grid) textarea{font:inherit}
+    body.tuition-page a{text-decoration:none;color:inherit}
+    body.tuition-page button,body.tuition-page input,body.tuition-page select,body.tuition-page textarea{font:inherit}
     .container{width:min(1180px,92%);margin:auto}
 
     /* TOP CONTACT BAR */
