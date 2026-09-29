@@ -106,7 +106,7 @@ jobs:
           import re, xml.etree.ElementTree as ET
 
           SITE="https://www.saraswatacademy.in"
-          SKIP={"student/login.html","student/signup.html","student/verify-email.html","student/dashboard.html","student/test.html","thank-you.html","thank-you-tutor.html","under-construction.html","Formula_sheets/maths_formula.html"}
+          SKIP={"student/login.html","student/signup.html","student/verify-email.html","student/dashboard.html","student/test.html","thank-you.html","thank-you-tutor.html","under-construction.html","Formula_sheets/maths_formula.html","header.html","footer.html"}
           html_files=[p for p in Path(".").rglob("*.html") if p.stat().st_size>0]
           indexable=[p for p in html_files if p.as_posix().lstrip("./") not in SKIP and "noindex" not in p.read_text(encoding="utf-8",errors="ignore").lower()]
           problems={"missing_title":[],"duplicate_title":[],"missing_description":[],"duplicate_description":[],"missing_canonical":[],"wrong_canonical":[],"missing_og":[],"wrong_og":[],"keywords":[],"old_domain":[],"empty_href":[]}
