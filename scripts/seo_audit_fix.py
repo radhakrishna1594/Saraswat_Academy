@@ -88,6 +88,55 @@ def set_meta(value, name, new_value):
     )
 
 
+def set_property(value, prop, new_value):
+    escaped = html.escape(new_value, quote=True)
+    pattern = rf'<meta\\b([^>]*\\bproperty=["\\']{re.escape(prop)}["\\'][^>]*)>'
+    match = re.search(pattern, value, flags=re.I)
+    if match:
+        attrs = match.group(1)
+        attrs = re.sub(r'\\bcontent\\s*=\\s*["\\'][^"\\']*["\\']', f'content="{escaped}"', attrs, count=1, flags=re.I)
+        return value[:match.start()] + "<meta" + attrs + ">" + value[match.end():]
+    return re.sub(r"(</head>)", f'  <meta property="{prop}" content="{escaped}">\\n\\1', value, count=1, flags=re.I)
+
+
+def remove_duplicate_meta(value, attr, name):
+    pattern = rf'<meta\\b[^>]*\\b{attr}=["\\']{re.escape(name)}["\\'][^>]*>'
+    matches = list(re.finditer(pattern, value, flags=re.I))
+    if len(matches) <= 1:
+        return value
+    for match in reversed(matches[1:]):
+        value = value[:match.start()] + value[match.end():]
+    return value
+
+
+def normalize_social(value, title, description, canonical):
+    for prop, val in (
+        ("og:type", "website"),
+        ("og:title", title),
+        ("og:description", description),
+        ("og:url", canonical),
+    ):
+        value = remove_duplicate_meta(value, "property", prop)
+        value = set_property(value, prop, val)
+
+    for name, val in (
+        ("twitter:title", title),
+        ("twitter:description", description),
+    ):
+        value = remove_duplicate_meta(value, "name", name)
+        value = set_meta(value, name, val)
+
+    value = remove_duplicate_meta(value, "name", "twitter:card")
+    card = "summary_large_image" if re.search(r'<meta\\b[^>]*\\bproperty=["\\']og:image["\\'][^>]*>', value, flags=re.I) else "summary"
+    value = set_meta(value, "twitter:card", card)
+
+    og_image = re.search(r'<meta\\b[^>]*\\bproperty=["\\']og:image["\\'][^>]*\\bcontent=["\\']([^"\\']+)', value, flags=re.I)
+    if og_image:
+        value = remove_duplicate_meta(value, "name", "twitter:image")
+        value = set_meta(value, "twitter:image", og_image.group(1))
+    return value
+
+
 def set_link(value, rel, href):
     pattern = rf'<link\b[^>]*\brel=["\']{re.escape(rel)}["\'][^>]*>'
     tag = f'<link rel="{rel}" href="{html.escape(href, quote=True)}">'
@@ -249,6 +298,7 @@ for path in sorted(html_files):
         canonical_url = canonical_for(path)
         source = set_link(source, "canonical", canonical_url)
         source = set_main_entity(source, canonical_url)
+        source = normalize_social(source, title, description, canonical_url)
         indexable.append(path)
 
     if source != original:
