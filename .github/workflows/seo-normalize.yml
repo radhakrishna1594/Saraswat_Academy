@@ -1,0 +1,111 @@
+name: One-time SEO normalization
+
+on:
+  push:
+    paths:
+      - '.github/workflows/seo-normalize.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  seo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Normalize SEO
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          import re, html
+
+          SITE = "https://www.saraswatacademy.in"
+          SKIP = {
+              "student/login.html", "student/signup.html", "student/verify-email.html",
+              "student/dashboard.html", "student/test.html", "thank-you.html",
+              "thank-you-tutor.html", "under-construction.html",
+              "Formula_sheets/maths_formula.html"
+          }
+
+          def clean_text(s):
+              s = re.sub(r"<[^>]+>", " ", s)
+              s = html.unescape(s)
+              return re.sub(r"\s+", " ", s).strip()
+
+          def esc(s):
+              return html.escape(s, quote=True)
+
+          changed = 0
+          for p in Path(".").rglob("*.html"):
+              rel = p.as_posix().lstrip("./")
+              if rel in SKIP or p.stat().st_size == 0:
+                  continue
+              s = p.read_text(encoding="utf-8", errors="ignore")
+              original = s
+
+              # Remove obsolete meta keywords.
+              s = re.sub(r"\s*<meta\b[^>]*\bname=[\"']keywords[\"'][^>]*>\s*", "\n", s, flags=re.I)
+
+              # Normalize the old production domain everywhere in HTML.
+              s = re.sub(r"https?://(?:www\.)?saraswatacademy\.com", SITE, s, flags=re.I)
+
+              # Determine canonical URL from the actual repository path.
+              canonical = SITE + "/" if rel == "index.html" else SITE + "/" + rel
+              canon_tag = f'<link rel="canonical" href="{canonical}">'
+
+              canon_re = re.compile(r"<link\b[^>]*\brel=[\"']canonical[\"'][^>]*>", re.I)
+              cms = list(canon_re.finditer(s))
+              if not cms:
+                  m = re.search(r"<head\b[^>]*>", s, re.I)
+                  if m:
+                      s = s[:m.end()] + "\n  " + canon_tag + s[m.end():]
+              else:
+                  first = cms[0]
+                  s = s[:first.start()] + canon_tag + s[first.end():]
+                  s = canon_re.sub("", s)
+
+              # Exactly one og:url matching canonical.
+              og_re = re.compile(r"<meta\b[^>]*\bproperty=[\"']og:url[\"'][^>]*>", re.I)
+              og_tag = f'<meta property="og:url" content="{canonical}">'
+              om = list(og_re.finditer(s))
+              if not om:
+                  m = re.search(r"<head\b[^>]*>", s, re.I)
+                  if m:
+                      s = s[:m.end()] + "\n  " + og_tag + s[m.end():]
+              else:
+                  first = om[0]
+                  s = s[:first.start()] + og_tag + s[first.end():]
+                  s = og_re.sub("", s)
+
+              # Add a useful description only when one is genuinely missing.
+              desc_re = re.compile(r"<meta\b[^>]*\bname=[\"']description[\"'][^>]*>", re.I)
+              if not desc_re.search(s):
+                  tm = re.search(r"<title\b[^>]*>(.*?)</title>", s, re.I | re.S)
+                  hm = re.search(r"<h1\b[^>]*>(.*?)</h1>", s, re.I | re.S)
+                  basis = clean_text(hm.group(1) if hm else (tm.group(1) if tm else rel.rsplit("/",1)[-1].replace(".html","").replace("-"," ")))
+                  basis = re.sub(r"\s*\|\s*Saraswat Academy.*$", "", basis, flags=re.I).strip()
+                  desc = f"{basis}. Get clear explanations, NCERT solutions, notes and exam-oriented study material from Saraswat Academy."
+                  if len(desc) > 160:
+                      desc = desc[:157].rsplit(" ",1)[0] + "..."
+                  m = re.search(r"<head\b[^>]*>", s, re.I)
+                  if m:
+                      s = s[:m.end()] + '\n  <meta name="description" content="' + esc(desc) + '">' + s[m.end():]
+
+              if s != original:
+                  p.write_text(s, encoding="utf-8")
+                  changed += 1
+
+          print(f"Changed HTML files: {changed}")
+          PY
+
+          git config user.name "Saraswat Academy SEO Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add '*.html'
+          if git diff --cached --quiet; then
+            echo "No SEO changes required."
+          else
+            git commit -m "Automated SEO normalization [skip ci]"
+            git push
+          fi
