@@ -130,7 +130,7 @@ jobs:
               if "saraswatacademy.com" in s.lower(): problems["old_domain"].append(rel)
               if re.search(r"<a\b[^>]*\bhref=[\"']\s*[\"']",s,re.I): problems["empty_href"].append(rel)
           print("Indexable HTML:",len(indexable))
-          for k,v in problems.items(): print(k, len(v))
+          for k,v in problems.items():\n              print(k, len(v))\n              if v: print("  " + "\n  ".join(v))
           sm=Path("sitemap.xml").read_text(encoding="utf-8",errors="ignore")
           locs=re.findall(r"<loc>(.*?)</loc>",sm,re.I|re.S)
           print("Sitemap URLs:",len(locs),"duplicates:",len(locs)-len(set(locs)))
