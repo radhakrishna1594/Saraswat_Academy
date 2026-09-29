@@ -98,3 +98,48 @@ jobs:
             git commit -m "Automated SEO normalization [skip ci]"
             git push
           fi
+
+
+          echo "=== FINAL SEO AUDIT ==="
+          python3 <<'PY'
+          from pathlib import Path
+          import re, xml.etree.ElementTree as ET
+
+          SITE="https://www.saraswatacademy.in"
+          SKIP={"student/login.html","student/signup.html","student/verify-email.html","student/dashboard.html","student/test.html","thank-you.html","thank-you-tutor.html","under-construction.html","Formula_sheets/maths_formula.html"}
+          html_files=[p for p in Path(".").rglob("*.html") if p.stat().st_size>0]
+          indexable=[p for p in html_files if p.as_posix().lstrip("./") not in SKIP and "noindex" not in p.read_text(encoding="utf-8",errors="ignore").lower()]
+          problems={"missing_title":[],"duplicate_title":[],"missing_description":[],"duplicate_description":[],"missing_canonical":[],"wrong_canonical":[],"missing_og":[],"wrong_og":[],"keywords":[],"old_domain":[],"empty_href":[]}
+          for p in indexable:
+              rel=p.as_posix().lstrip("./"); s=p.read_text(encoding="utf-8",errors="ignore")
+              expected=SITE+"/" if rel=="index.html" else SITE+"/"+rel
+              for key,pat in [
+                ("missing_title",r"<title\b[^>]*>.*?</title>"),
+                ("missing_description",r"<meta\b[^>]*\bname=[\"']description[\"'][^>]*>"),
+                ("missing_canonical",r"<link\b[^>]*\brel=[\"']canonical[\"'][^>]*>"),
+                ("missing_og",r"<meta\b[^>]*\bproperty=[\"']og:url[\"'][^>]*>")
+              ]:
+                  if not re.search(pat,s,re.I|re.S): problems[key].append(rel)
+              for key,pat in [("duplicate_title",r"<title\b[^>]*>.*?</title>"),("duplicate_description",r"<meta\b[^>]*\bname=[\"']description[\"'][^>]*>")]:
+                  if len(re.findall(pat,s,re.I|re.S))!=1: problems[key].append(rel)
+              cm=re.search(r"<link\b[^>]*\brel=[\"']canonical[\"'][^>]*\bhref=[\"']([^\"']+)",s,re.I)
+              if cm and cm.group(1)!=expected: problems["wrong_canonical"].append(rel)
+              om=re.search(r"<meta\b[^>]*\bproperty=[\"']og:url[\"'][^>]*\bcontent=[\"']([^\"']+)",s,re.I)
+              if om and om.group(1)!=expected: problems["wrong_og"].append(rel)
+              if re.search(r"<meta\b[^>]*\bname=[\"']keywords[\"']",s,re.I): problems["keywords"].append(rel)
+              if "saraswatacademy.com" in s.lower(): problems["old_domain"].append(rel)
+              if re.search(r"<a\b[^>]*\bhref=[\"']\s*[\"']",s,re.I): problems["empty_href"].append(rel)
+          print("Indexable HTML:",len(indexable))
+          for k,v in problems.items(): print(k, len(v))
+          sm=Path("sitemap.xml").read_text(encoding="utf-8",errors="ignore")
+          locs=re.findall(r"<loc>(.*?)</loc>",sm,re.I|re.S)
+          print("Sitemap URLs:",len(locs),"duplicates:",len(locs)-len(set(locs)))
+          repo=set(p.as_posix().lstrip("./") for p in html_files)
+          missing=[]
+          for u in locs:
+              path=u.replace(SITE+"/","")
+              if u==SITE+"/": path="index.html"
+              if path not in repo: missing.append(path)
+          print("Sitemap missing files:",len(missing))
+          print("=== END SEO AUDIT ===")
+          PY
