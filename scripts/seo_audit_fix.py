@@ -124,6 +124,47 @@ def dedupe_assets(source):
     )
 
 
+def image_alt_text(src, title="", caption=""):
+    """Build a conservative human-readable alt value from available page context."""
+    text = clean(caption) or clean(title)
+    if text:
+        return text[:180]
+
+    value = re.sub(r"[/_+-]+", " ", src.rsplit("/", 1)[-1])
+    value = re.sub(r"\.(?:png|jpe?g|webp|gif|svg|avif)$", "", value, flags=re.I)
+    value = clean(value)
+    value = re.sub(r"\b(?:img|image|pic|picture|photo|screenshot)\b", "", value, flags=re.I)
+    value = clean(value)
+    return value[:180]
+
+
+def fix_missing_image_alts(source):
+    """Add alt only when it is genuinely missing; preserve alt="" for decorative images."""
+    changed = 0
+
+    def replace(match):
+        nonlocal changed
+        tag = match.group(0)
+        if re.search(r'\balt\s*=', tag, flags=re.I):
+            return tag
+
+        src_match = re.search(r'\bsrc\s*=\s*["\']([^"\']+)["\']', tag, flags=re.I)
+        if not src_match:
+            return tag
+
+        src = html.unescape(src_match.group(1))
+        alt = image_alt_text(src)
+        if not alt:
+            return tag
+
+        changed += 1
+        insertion = f' alt="{html.escape(alt, quote=True)}"'
+        return re.sub(r"\s*/?>$", insertion + r"\g<0>", tag)
+
+    fixed = re.sub(r"<img\b[^>]*>", replace, source, flags=re.I)
+    return fixed, changed
+
+
 def image_alt_issues(source):
     missing = 0
     empty = 0
@@ -252,6 +293,11 @@ for path in html_files:
 
     if bad_description(description):
         issues.append(f"DESCRIPTION: {path}")
+
+    source, alt_fixed = fix_missing_image_alts(source)
+    if alt_fixed:
+        changed.append(path.as_posix())
+        issues.append(f"IMAGE_ALT_FIXED: {path} count={alt_fixed}")
 
     source = externalize_common_styles(source, path)
     source = dedupe_assets(source)
