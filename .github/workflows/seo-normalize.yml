@@ -57,6 +57,8 @@ jobs:
               canon_re = re.compile(r"<link\b[^>]*\brel=[\"']canonical[\"'][^>]*>", re.I)
               s = canon_re.sub("", s)
               m = re.search(r"<head\b[^>]*>", s, re.I)
+              if not m:
+                  m = re.search(r"<html\b[^>]*>", s, re.I)
               if m:
                   s = s[:m.end()] + "\n  " + canon_tag + s[m.end():]
 
@@ -65,8 +67,13 @@ jobs:
               og_re = re.compile(r"<meta\b[^>]*\bproperty=[\"']og:url[\"'][^>]*>", re.I)
               s = og_re.sub("", s)
               m = re.search(r"<head\b[^>]*>", s, re.I)
+              if not m:
+                  m = re.search(r"<html\b[^>]*>", s, re.I)
               if m:
                   s = s[:m.end()] + "\n  " + og_tag + s[m.end():]
+
+              # Remove broken empty-href anchors while preserving their visible content.
+              s = re.sub(r'<a\b([^>]*?)\bhref=["']\s*["']([^>]*)>([\s\S]*?)</a>', lambda m: '<span' + re.sub(r'\s+(?:target|rel|download|hreflang|type|referrerpolicy)=(?:["'][^"']*["']|[^\s>]+)', '', m.group(1) + m.group(2), flags=re.I) + '>' + m.group(3) + '</span>', s, flags=re.I)
 
               # Add a useful description only when one is genuinely missing.
               desc_re = re.compile(r"<meta\b[^>]*\bname=[\"']description[\"'][^>]*>", re.I)
