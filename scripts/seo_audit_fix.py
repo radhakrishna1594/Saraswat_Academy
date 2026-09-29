@@ -108,7 +108,7 @@ def dedupe_assets(source):
     def replace(match):
         tag = match.group(0)
         m = re.search(r'\b(?:href|src)=["\']([^"\']+)["\']', tag, flags=re.I)
-        if not m or not re.search(r'\.(?:css|js)(?:\?[^"\']*)?, m.group(1), flags=re.I):
+        if not m or not re.search(r'\.(?:css|js)(?:\?.*)?$', m.group(1), flags=re.I):
             return tag
         key = m.group(1).lower()
         if key in seen:
