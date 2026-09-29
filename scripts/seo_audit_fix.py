@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(".")
 DOMAIN = "https://www.saraswatacademy.in"
-SKIP_DIRS = {".git", ".github", "node_modules"}
+SKIP_DIRS = {".git", ".github", "node_modules", "templates"}
 EXCLUDE_FILES = {"header.html", "footer.html"}
 NOINDEX_FILES = {
     "thank-you.html",
