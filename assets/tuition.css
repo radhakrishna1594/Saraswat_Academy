@@ -1353,7 +1353,7 @@ body.tuition-form-page .cta-btn {display:inline-block;padding:13px 24px;backgrou
 body.tuition-form-page footer {padding:30px 20px;background:var(--navy-dark);color:#dce4ef;text-align:center;font-size:13px}
 body.tuition-form-page footer a {color:#fff;text-decoration:none}
 body.tuition-form-page .footer-contact {margin-bottom:7px}
-body.tuition-form-page @media(max-width:800px) {
+@media(max-width:800px) {
  .nav{display:none}
 body.tuition-form-page .hero {padding:52px 16px 40px}
 body.tuition-form-page .hero p {font-size:16px}
@@ -1364,7 +1364,7 @@ body.tuition-form-page .full-width,
 body.tuition-form-page .form-submit {grid-column:auto}
 body.tuition-form-page .benefit-grid {grid-template-columns:1fr 1fr}
 }
-body.tuition-form-page @media(max-width:520px) {
+@media(max-width:520px) {
  .header-inner{min-height:64px}
 body.tuition-form-page .brand-text {font-size:17px}
 body.tuition-form-page .brand img {width:36px;height:36px}
@@ -1466,7 +1466,7 @@ body.tuition-form-page .cta-btn {display:inline-block;padding:13px 24px;backgrou
 body.tuition-form-page footer {padding:30px 20px;background:var(--navy-dark);color:#dce4ef;text-align:center;font-size:13px}
 body.tuition-form-page footer a {color:#fff;text-decoration:none}
 body.tuition-form-page .footer-contact {margin-bottom:7px}
-body.tuition-form-page @media(max-width:800px) {
+@media(max-width:800px) {
  .nav{display:none}
 body.tuition-form-page .hero {padding:52px 16px 40px}
 body.tuition-form-page .hero p {font-size:16px}
@@ -1477,7 +1477,7 @@ body.tuition-form-page .full-width,
 body.tuition-form-page .form-submit {grid-column:auto}
 body.tuition-form-page .benefit-grid {grid-template-columns:1fr 1fr}
 }
-body.tuition-form-page @media(max-width:520px) {
+@media(max-width:520px) {
  .header-inner{min-height:64px}
 body.tuition-form-page .brand-text {font-size:17px}
 body.tuition-form-page .brand img {width:36px;height:36px}
@@ -1600,7 +1600,7 @@ body.tuition-form-page .tutor-trust-card .icon {
 }
 body.tuition-form-page .tutor-trust-card h3 {color:var(--navy);font-size:17px;margin-bottom:5px}
 body.tuition-form-page .tutor-trust-card p {color:var(--muted);font-size:13px;line-height:1.55}
-body.tuition-form-page @media(max-width:800px) {
+@media(max-width:800px) {
     .tutor-registration-form{grid-template-columns:1fr;padding:25px 20px}
 body.tuition-form-page .tutor-full,
 body.tuition-form-page .tutor-section-title,
@@ -1608,7 +1608,7 @@ body.tuition-form-page .tutor-declaration,
 body.tuition-form-page .tutor-submit {grid-column:auto}
 body.tuition-form-page .tutor-trust-grid {grid-template-columns:1fr}
 }
-body.tuition-form-page @media(max-width:520px) {
+@media(max-width:520px) {
     .tutor-register-hero{padding:50px 15px 40px}
 body.tuition-form-page .tutor-register-hero h1 {font-size:35px}
 body.tuition-form-page .tutor-register-hero p {font-size:16px}
