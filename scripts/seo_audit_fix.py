@@ -90,17 +90,17 @@ def set_meta(value, name, new_value):
 
 def set_property(value, prop, new_value):
     escaped = html.escape(new_value, quote=True)
-    pattern = rf'<meta\\b([^>]*\\bproperty=["\\']{re.escape(prop)}["\\'][^>]*)>'
+    pattern = rf'<meta\b([^>]*\bproperty=["\']{re.escape(prop)}["\'][^>]*)>'
     match = re.search(pattern, value, flags=re.I)
     if match:
         attrs = match.group(1)
-        attrs = re.sub(r'\\bcontent\\s*=\\s*["\\'][^"\\']*["\\']', f'content="{escaped}"', attrs, count=1, flags=re.I)
+        attrs = re.sub(r'\bcontent\s*=\s*["\'][^"\']*["\']', f'content="{escaped}"', attrs, count=1, flags=re.I)
         return value[:match.start()] + "<meta" + attrs + ">" + value[match.end():]
-    return re.sub(r"(</head>)", f'  <meta property="{prop}" content="{escaped}">\\n\\1', value, count=1, flags=re.I)
+    return re.sub(r"(</head>)", f'  <meta property="{prop}" content="{escaped}">\n\1', value, count=1, flags=re.I)
 
 
 def remove_duplicate_meta(value, attr, name):
-    pattern = rf'<meta\\b[^>]*\\b{attr}=["\\']{re.escape(name)}["\\'][^>]*>'
+    pattern = rf'<meta\b[^>]*\b{attr}=["\']{re.escape(name)}["\'][^>]*>'
     matches = list(re.finditer(pattern, value, flags=re.I))
     if len(matches) <= 1:
         return value
@@ -127,10 +127,10 @@ def normalize_social(value, title, description, canonical):
         value = set_meta(value, name, val)
 
     value = remove_duplicate_meta(value, "name", "twitter:card")
-    card = "summary_large_image" if re.search(r'<meta\\b[^>]*\\bproperty=["\\']og:image["\\'][^>]*>', value, flags=re.I) else "summary"
+    card = "summary_large_image" if re.search(r'<meta\b[^>]*\bproperty=["\']og:image["\'][^>]*>', value, flags=re.I) else "summary"
     value = set_meta(value, "twitter:card", card)
 
-    og_image = re.search(r'<meta\\b[^>]*\\bproperty=["\\']og:image["\\'][^>]*\\bcontent=["\\']([^"\\']+)', value, flags=re.I)
+    og_image = re.search(r'<meta\b[^>]*\bproperty=["\']og:image["\'][^>]*\bcontent=["\']([^"\']+)', value, flags=re.I)
     if og_image:
         value = remove_duplicate_meta(value, "name", "twitter:image")
         value = set_meta(value, "twitter:image", og_image.group(1))
