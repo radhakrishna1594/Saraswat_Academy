@@ -96,6 +96,12 @@ def set_link(value, rel, href):
     return re.sub(r"(</head>)", f"  {tag}\n\\1", value, count=1, flags=re.I)
 
 
+def set_main_entity(value, href):
+    """Keep an existing JSON-LD mainEntityOfPage aligned with the page canonical."""
+    pattern = r'("mainEntityOfPage"\s*:\s*")[^"]+(")'
+    return re.sub(pattern, rf'\1{href}\2', value, count=1, flags=re.I)
+
+
 def canonical_for(path):
     relative = path.as_posix()
     return f"{DOMAIN}/" if relative == "index.html" else f"{DOMAIN}/{relative}"
@@ -220,6 +226,7 @@ for path in sorted(html_files):
     if should_index(path, source):
         canonical_url = canonical_for(path)
         source = set_link(source, "canonical", canonical_url)
+        source = set_main_entity(source, canonical_url)
         indexable.append(path)
 
     if source != original:
