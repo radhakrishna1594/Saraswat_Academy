@@ -1631,6 +1631,6 @@ body.tuition-form-page .container { width: min(1180px, calc(100% - 32px)); margi
 body.tuition-form-page .breadcrumb { position: relative; z-index: 2; }
 body.tuition-form-page main { display: block; }
 body.tuition-form-page :focus-visible { outline: 3px solid rgba(201,149,36,.35); outline-offset: 2px; }
-body.tuition-form-page @media (prefers-reduced-motion: reduce) {
-  scroll-behavior: auto;
+@media (prefers-reduced-motion: reduce) {
+  body.tuition-form-page { scroll-behavior: auto; }
 }
