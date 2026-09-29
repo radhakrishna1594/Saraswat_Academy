@@ -16,18 +16,17 @@
       --sans:"DM Sans",Arial,sans-serif;
       --head:"Manrope",Arial,sans-serif;
     }
-
-    *{box-sizing:border-box;margin:0;padding:0}
+body:has(.service-grid) *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{
+    body:has(.service-grid){
       background:var(--bg);
       color:var(--white);
       font-family:var(--sans);
       line-height:1.65;
       overflow-x:hidden;
     }
-    a{text-decoration:none;color:inherit}
-    button,input,select,textarea{font:inherit}
+    body:has(.service-grid) a{text-decoration:none;color:inherit}
+    body:has(.service-grid) button,body:has(.service-grid) input,body:has(.service-grid) select,body:has(.service-grid) textarea{font:inherit}
     .container{width:min(1180px,92%);margin:auto}
 
     /* TOP CONTACT BAR */
