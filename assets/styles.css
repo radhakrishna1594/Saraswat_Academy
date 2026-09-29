@@ -63,21 +63,7 @@ html { scroll-behavior: smooth; }
 }
 
 /* ─── SOLUTION PAGE WRAPPER ─── */
-.solution-page {
-  --paper: #f6f6f4;
-  --surface: #ffffff;
-  --border: #e8e3d8;
-  --shadow: 0 8px 24px rgba(12,15,30,.08);
-  --cream: #fbf3e3;
-  --gold: #c9933a;
-  --line: #e8e3d8;
-  --teal: #0d6e6e;
-  font-family: 'Inter', sans-serif;
-  color: #000000;
-  background: var(--paper);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+
 
 /* ─── SOLUTION LAYOUT (sidebar + main) ─── */
 .solution-layout {
