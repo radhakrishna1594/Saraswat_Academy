@@ -204,12 +204,12 @@ margin-bottom:20px;
 padding:12px;
 }
 
-.hero{
+body:has(.wrapper) .hero{
 padding:25px 18px;
 border-radius:15px;
 }
 
-.hero h1{
+body:has(.wrapper) .hero h1{
 font-size:1.6rem;
 }
 
@@ -257,11 +257,11 @@ min-width:600px;
 padding:10px;
 }
 
-.hero{
+body:has(.wrapper) .hero{
 padding:20px 15px;
 }
 
-.hero h1{
+body:has(.wrapper) .hero h1{
 font-size:1.35rem;
 }
 
