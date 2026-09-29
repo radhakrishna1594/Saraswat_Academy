@@ -51,33 +51,22 @@ jobs:
               # Normalize the old production domain everywhere in HTML.
               s = re.sub(r"https?://(?:www\.)?saraswatacademy\.com", SITE, s, flags=re.I)
 
-              # Determine canonical URL from the actual repository path.
+              # Normalize canonical: remove all existing canonical tags, then add exactly one.
               canonical = SITE + "/" if rel == "index.html" else SITE + "/" + rel
               canon_tag = f'<link rel="canonical" href="{canonical}">'
-
               canon_re = re.compile(r"<link\b[^>]*\brel=[\"']canonical[\"'][^>]*>", re.I)
-              cms = list(canon_re.finditer(s))
-              if not cms:
-                  m = re.search(r"<head\b[^>]*>", s, re.I)
-                  if m:
-                      s = s[:m.end()] + "\n  " + canon_tag + s[m.end():]
-              else:
-                  first = cms[0]
-                  s = s[:first.start()] + canon_tag + s[first.end():]
-                  s = canon_re.sub("", s)
+              s = canon_re.sub("", s)
+              m = re.search(r"<head\b[^>]*>", s, re.I)
+              if m:
+                  s = s[:m.end()] + "\n  " + canon_tag + s[m.end():]
 
-              # Exactly one og:url matching canonical.
-              og_re = re.compile(r"<meta\b[^>]*\bproperty=[\"']og:url[\"'][^>]*>", re.I)
+              # Normalize og:url to exactly one tag matching canonical.
               og_tag = f'<meta property="og:url" content="{canonical}">'
-              om = list(og_re.finditer(s))
-              if not om:
-                  m = re.search(r"<head\b[^>]*>", s, re.I)
-                  if m:
-                      s = s[:m.end()] + "\n  " + og_tag + s[m.end():]
-              else:
-                  first = om[0]
-                  s = s[:first.start()] + og_tag + s[first.end():]
-                  s = og_re.sub("", s)
+              og_re = re.compile(r"<meta\b[^>]*\bproperty=[\"']og:url[\"'][^>]*>", re.I)
+              s = og_re.sub("", s)
+              m = re.search(r"<head\b[^>]*>", s, re.I)
+              if m:
+                  s = s[:m.end()] + "\n  " + og_tag + s[m.end():]
 
               # Add a useful description only when one is genuinely missing.
               desc_re = re.compile(r"<meta\b[^>]*\bname=[\"']description[\"'][^>]*>", re.I)
