@@ -8,14 +8,23 @@
 /* ─── BASE ─── */
 html { scroll-behavior: smooth; }
 
-body {
+.solution-page {
+  --paper: #f6f6f4;
+  --surface: #ffffff;
+  --border: #e8e3d8;
+  --shadow: 0 8px 24px rgba(12,15,30,.08);
+  --cream: #fbf3e3;
+  --gold: #c9933a;
+  --line: #e8e3d8;
+  --teal: #0d6e6e;
   font-family: 'Inter', sans-serif;
   color: #000000;
   background: var(--paper);
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
-h1 {
+.solution-page h1 {
   margin: 0;
   font-family: 'Inter', serif;
   font-size: clamp(2.2rem, 5vw, 5rem);
@@ -23,7 +32,7 @@ h1 {
   letter-spacing: -0.01em;
 }
 
-h2 {
+.solution-page h2 {
   margin: 0;
   font-family: 'Inter', serif;
   font-size: clamp(1.6rem, 3.5vw, 2.8rem);
@@ -31,7 +40,7 @@ h2 {
   letter-spacing: 0;
 }
 
-h3 {
+.solution-page h3 {
   margin: 18px 0 8px;
   font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
@@ -54,10 +63,7 @@ h3 {
 }
 
 /* ─── SOLUTION PAGE WRAPPER ─── */
-.solution-page {
-  background:  #f6f6f4;
-  min-height: 100vh;
-}
+
 
 /* ─── SOLUTION LAYOUT (sidebar + main) ─── */
 .solution-layout {
@@ -114,9 +120,8 @@ h3 {
 }
 .answer-block h2 {
   font-family: 'Inter', serif;
-  font-size: clamp(1.8rem, 3vw, 1.7rem);
+  font-size: clamp(1.7rem, 3vw, 2rem);
   margin-bottom: 14px;
-    font-size: 16px;
     
 
 }
@@ -216,7 +221,6 @@ table{
     border-collapse:collapse;
     margin:20px 0;
     font-size:1rem;
-    overflow-x:auto;
 }
 
 th,td{
@@ -289,7 +293,7 @@ tr:hover{
 
   .site-header { padding: 0 16px; }
 
-  .hero {
+  .solution-page .hero {
     padding: 44px 16px 52px;
     gap: 18px;
   }
@@ -326,7 +330,7 @@ tr:hover{
 
   .note-box { padding: 12px 14px; font-size: 13px; }
 
-  .hero { padding: 32px 12px 40px; }
+  .solution-page .hero { padding: 32px 12px 40px; }
   .section { padding: 32px 12px; }
 
   .upload-panel {

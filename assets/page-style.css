@@ -10,11 +10,11 @@
 --text:#1f2937;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+body:has(.wrapper) *{margin:0;padding:0;box-sizing:border-box;}
 
 html{scroll-behavior:smooth;}
 
-body{
+body:has(.wrapper){
 font-family:Segoe UI,Arial,sans-serif;
 background:var(--bg);
 color:var(--text);
@@ -31,19 +31,19 @@ overflow-x:hidden;
 }
 
 
-.hero{
+body:has(.wrapper) .hero{
 background:linear-gradient(135deg,#0f172a,#2563eb);
 color:#fff;
 padding:45px 35px;
 border-radius:20px;
 }
 
-.hero h1{
+body:has(.wrapper) .hero h1{
 font-size:2.3rem;
 line-height:1.35;
 }
 
-.hero p{margin-top:10px;}
+body:has(.wrapper) .hero p{margin-top:10px;}
 
 
 .grid{
@@ -52,11 +52,11 @@ line-height:1.35;
     gap:24px;
 }
 
-main{
+body:has(.wrapper) main{
     min-width:0;
 }
 
-aside{
+body:has(.wrapper) aside{
 background:#fff;
 padding:25px;
 border-radius:16px;
@@ -66,13 +66,13 @@ top:20px;
 height:max-content;
 }
 
-aside h2{margin-bottom:15px;color:#2563eb;}
+body:has(.wrapper) aside h2{margin-bottom:15px;color:#2563eb;}
 
-aside ul{list-style:none;}
+body:has(.wrapper) aside ul{list-style:none;}
 
-aside li{margin:10px 0;}
+body:has(.wrapper) aside li{margin:10px 0;}
 
-aside a{
+body:has(.wrapper) aside a{
 display:block;
 padding:10px 12px;
 border-radius:10px;
@@ -80,13 +80,13 @@ font-weight:600;
 color:#333;
 }
 
-aside a:hover{
+body:has(.wrapper) aside a:hover{
 background:#eef5ff;
 }
 
-main{min-width:0;}
+body:has(.wrapper) main{min-width:0;}
 
-section{
+body:has(.wrapper) section{
 background:#fff;
 border-radius:18px;
 padding:28px;
@@ -95,8 +95,8 @@ border-top:5px solid var(--primary);
 box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
-h2{color:#2563eb;margin-bottom:15px;}
-h3{margin:20px 0 10px;color:#1d4ed8;}
+body:has(.wrapper) h2{color:#2563eb;margin-bottom:15px;}
+body:has(.wrapper) h3{margin:20px 0 10px;color:#1d4ed8;}
 
 .intro{
 background:#eef5ff;
@@ -169,16 +169,16 @@ padding-top:0;
 transition:max-height .45s ease,padding-top .35s ease;
 }
 
-section.open .accordion-content{
+body:has(.wrapper) section.open .accordion-content{
 max-height:50000px;
 padding-top:20px;
 }
 
-section.open .accordion-icon{
+body:has(.wrapper) section.open .accordion-icon{
 transform:rotate(180deg);
 }
 
-img{
+body:has(.wrapper) img{
 max-width:100%;
 height:auto;
 }
@@ -190,7 +190,7 @@ height:auto;
 grid-template-columns:1fr;
 }
 
-aside{
+body:has(.wrapper) aside{
 position:static;
 margin-bottom:20px;
 }
@@ -204,17 +204,17 @@ margin-bottom:20px;
 padding:12px;
 }
 
-.hero{
+body:has(.wrapper) .hero{
 padding:25px 18px;
 border-radius:15px;
 }
 
-.hero h1{
+body:has(.wrapper) .hero h1{
 font-size:1.6rem;
 }
 
 
-section{
+body:has(.wrapper) section{
 padding:18px;
 }
 
@@ -230,17 +230,17 @@ height:34px;
 font-size:18px;
 }
 
-aside{
+body:has(.wrapper) aside{
 padding:18px;
 }
 
-aside ul{
+body:has(.wrapper) aside ul{
 display:flex;
 flex-direction:column;
 gap:8px;
 }
 
-aside li{
+body:has(.wrapper) aside li{
 margin:0;
 }
 
@@ -257,25 +257,25 @@ min-width:600px;
 padding:10px;
 }
 
-.hero{
+body:has(.wrapper) .hero{
 padding:20px 15px;
 }
 
-.hero h1{
+body:has(.wrapper) .hero h1{
 font-size:1.35rem;
 }
 
 
 
-section{
+body:has(.wrapper) section{
 padding:15px;
 }
 
-h2{
+body:has(.wrapper) h2{
 font-size:1.2rem;
 }
 
-h3{
+body:has(.wrapper) h3{
 font-size:1.05rem;
 }
 
