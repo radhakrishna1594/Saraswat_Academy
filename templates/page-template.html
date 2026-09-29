@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="description" content="{{PAGE_DESCRIPTION}}">
+  <meta name="author" content="{{PAGE_AUTHOR}}">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+
+  <link rel="canonical" href="https://www.saraswatacademy.in/{{PAGE_PATH}}">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Saraswat Academy">
+  <meta property="og:title" content="{{PAGE_TITLE}}">
+  <meta property="og:description" content="{{PAGE_DESCRIPTION}}">
+  <meta property="og:url" content="https://www.saraswatacademy.in/{{PAGE_PATH}}">
+  <meta property="og:image" content="https://www.saraswatacademy.in/{{OG_IMAGE}}">
+  <meta property="og:image:alt" content="{{OG_IMAGE_ALT}}">
+  <meta property="og:locale" content="en_IN">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{PAGE_TITLE}}">
+  <meta name="twitter:description" content="{{PAGE_DESCRIPTION}}">
+  <meta name="twitter:image" content="https://www.saraswatacademy.in/{{OG_IMAGE}}">
+
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/header.css">
+
+  <script src="/config.js" defer></script>
+  <script src="/header.js" defer></script>
+  <script src="/loader.js" defer></script>
+
+  <!-- Optional page-specific structured data. Keep one primary schema per page. -->
+  {{STRUCTURED_DATA}}
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div id="header"></div>
+
+  <main id="main-content">
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        {{BREADCRUMBS}}
+      </ol>
+    </nav>
+
+    <article>
+      <header>
+        <h1>{{H1_TITLE}}</h1>
+        {{HERO_INTRO}}
+      </header>
+
+      {{PAGE_CONTENT}}
+    </article>
+  </main>
+
+  <div id="footer"></div>
+</body>
+</html>
