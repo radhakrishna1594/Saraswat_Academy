@@ -1,0 +1,36 @@
+name: Repository SEO Audit and Fix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+      - 'sitemap.xml'
+      - 'robots.txt'
+      - 'scripts/seo_audit_fix.py'
+      - '.github/workflows/seo-audit-fix.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  seo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Run repository-wide SEO fixer
+        run: python3 scripts/seo_audit_fix.py
+      - name: Commit SEO fixes
+        run: |
+          git config user.name "Saraswat Academy SEO Bot"
+          git config user.email "actions@github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No additional SEO changes required."
+          else
+            git commit -m "Fix repository-wide SEO metadata and sitemap [skip ci]"
+            git push
+          fi
