@@ -108,9 +108,25 @@ def dedupe_asset_references(value):
 
     def replace_tag(match):
         tag = match.group(0)
-        attr = re.search(r'\\b(?:href|src)=["\\']([^"\\']+)["\\']', tag, flags=re.I)
-        if not attr or not re.search(r'\\.(?:css|js)(?:\\?[^"\\']*)?    relative = path.as_posix()
-    return f"{DOMAIN}/" if relative == "index.html" else f"{DOMAIN}/{relative}"
+        attr = re.search(r'\b(?:href|src)=["\']([^"\']+)["\']', tag, flags=re.I)
+        if not attr or not re.search(r'\.(?:css|js)(?:\?[^"\']*)?$', attr.group(1), flags=re.I):
+            return tag
+        url = attr.group(1).replace('.././', '../')
+        url = re.sub(r'^(?:\.\./)+assets/', '/assets/', url)
+        key = url.lower()
+        if key in seen:
+            return ''
+        seen.add(key)
+        if url != attr.group(1):
+            return tag[:attr.start(1)] + url + tag[attr.end(1):]
+        return tag
+
+    return re.sub(
+        r'<(?:link|script)\b[^>]*?(?:href|src)=["\'][^"\']+["\'][^>]*>(?:</script>)?',
+        replace_tag,
+        value,
+        flags=re.I,
+    )
 
 
 def should_index(path, value):
