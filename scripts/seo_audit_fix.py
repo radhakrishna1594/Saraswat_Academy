@@ -215,8 +215,11 @@ for path in sorted(html_files):
             flags=re.I,
         )
 
+    # Canonical must always resolve to the current page URL derived from its repository path.
+    # This prevents legacy/copied canonical URLs from surviving future audits.
     if should_index(path, source):
-        source = set_link(source, "canonical", canonical_for(path))
+        canonical_url = canonical_for(path)
+        source = set_link(source, "canonical", canonical_url)
         indexable.append(path)
 
     if source != original:
