@@ -69,7 +69,7 @@ crossorigin="anonymous"></script>
 
 
 
-<meta property="og:image" content="https://www.saraswatacademy.in/images/home-banner.webp">
+<meta property="og:image" content="https://www.saraswatacademy.in/Students_Corner/career_guide/images/CBSE.png">
 
 <meta property="og:image:alt" content="Saraswat Academy - Free Study Material">
 
@@ -82,11 +82,7 @@ crossorigin="anonymous"></script>
 
 <meta name="twitter:description" content="Saraswat Academy is a free learning platform providing NCERT solutions, CBSE study material, notes, MCQs, worksheets, important questions, sample papers, previous year questions and exam preparation resources for students.">
 
-<meta name="twitter:image" content="https://www.saraswatacademy.in/images/home-banner.webp">
-
-<meta name="twitter:description" content="Saraswat Academy is a free learning platform providing NCERT solutions, CBSE study material, notes, MCQs, worksheets, important questions, sample papers, previous year questions and exam preparation resources for students.">
-
-<meta name="twitter:image" content="https://www.saraswatacademy.in/images/home-banner.webp">
+<meta name="twitter:image" content="https://www.saraswatacademy.in/Students_Corner/career_guide/images/CBSE.png">
 
 <!-- Structured Data -->
 <script type="application/ld+json">
@@ -96,7 +92,7 @@ crossorigin="anonymous"></script>
   "name":"Saraswat Academy",
   "url":"https://www.saraswatacademy.in/",
   "logo":"https://www.saraswatacademy.in/favicon.png",
-  "description":"Free educational platform providing NCERT Solutions, Notes, MCQs, Worksheets, Previous Year Questions and study material for CBSE Class 6 to 12. home tuition, online classes, CBSE tuition, Class 1 tuition, Class 2 tuition, Class 3 tuition, Class 4 tuition, Class 5 tuition, Class 6 tuition, Class 7 tuition, Class 8 tuition, Class 9 tuition, Class 10 tuition, Class 11 tuition, Class 12 tuition, maths tuition, science tuition, Saraswat Academy",
+  "description":"Free educational platform providing NCERT Solutions, Notes, MCQs, Worksheets, Previous Year Questions and study material for CBSE Class 6 to 12.",
   "sameAs":[
     "https://www.linkedin.com/company/saraswat-academy"
   ]
@@ -109,17 +105,13 @@ crossorigin="anonymous"></script>
   "@type":"WebSite",
   "name":"Saraswat Academy",
   "url":"https://www.saraswatacademy.in/",
-  "potentialAction":{
-    "@type":"SearchAction",
-    "target":"https://www.saraswatacademy.in/search?q={search_term_string}",
-    "query-input":"required name=search_term_string"
-  }
 }
 </script>
 
 <!-- Loader -->
-<script src="config.js"></script>
-<script src="loader.js"></script>
+<script src="/config.js" defer></script>
+<script src="/loader.js" defer></script>
+<script src="/assets/js/home.js" defer></script>
 <link rel="stylesheet" href="/assets/index.css">
 
 </head>
@@ -139,7 +131,7 @@ crossorigin="anonymous"></script>
 <!-- ━━━ HEADER ━━━ -->
 <header>
   <div class="header-inner">
-    <a data-link="" class="logo">
+    <a data-link="/" href="/" class="logo" aria-label="Saraswat Academy Home">
       <div class="logo-emblem">
         <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="24" cy="24" r="23" fill="#0C0F1E" stroke="url(#gold-grad)" stroke-width="1.5"/>
@@ -172,7 +164,7 @@ crossorigin="anonymous"></script>
     </nav>
 
     <!-- Hamburger button (mobile only) -->
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <button class="hamburger" id="hamburger" type="button" aria-label="Toggle menu" aria-controls="mobileNav" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
@@ -180,7 +172,7 @@ crossorigin="anonymous"></script>
   </div>
 
   <!-- Mobile nav drawer -->
-  <nav class="mobile-nav" id="mobileNav">
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
     <a data-link=".././index.html" class="nav-link">🏠 Home</a>
     <a data-link="/Students_Corner/link_pages/main_page.html" class="nav-link">🧑‍🎓 Student Corner</a>
                 <a data-link="/home-tutor/home-tuition-online-classes.html" class="nav-link">👩‍🏫 Tuition</a>      
@@ -298,7 +290,7 @@ crossorigin="anonymous"></script>
 
      <a href="/Educational_Articles/sqp-2026-27/sqp-solutions-class-10/sample-papers-class-10.html" class="news-card">
 
-        <img src="/Students_Corner/career_guide/images/CBSE.png" alt="Class X Sample Question Paper & Marking Scheme for Exam 2026-27">
+        <img loading="lazy" decoding="async" src="/Students_Corner/career_guide/images/CBSE.png" alt="Class X Sample Question Paper & Marking Scheme for Exam 2026-27">
         <div>
             <h3>Class X Sample Question Paper & Marking Scheme for Exam 2026-27</h3>
             <p>Published on 24 September 2026</p>
@@ -307,7 +299,7 @@ crossorigin="anonymous"></script>
 
     <a href="/Educational_Articles/online-course-for-school-students-iit-madras.html" class="news-card">
 
-        <img src="/Educational_Articles/photos/science.jpg" alt="IIT Madras Courses for School Students">
+        <img loading="lazy" decoding="async" src="/Educational_Articles/photos/science.jpg" alt="IIT Madras Courses for School Students">
         <div>
             <h3>IIT Madras Invites School Students to Explore New Learning Opportunities</h3>
             <p>Published on 20 September 2026</p>
@@ -316,7 +308,7 @@ crossorigin="anonymous"></script>
 
     
     <a href="/Educational_Articles/goverment-exams-after-class12.html" class="news-card">
-        <img src="/Educational_Articles/photos/govt-jobs-after-12.png" alt="Top Govt exams after 12">
+        <img loading="lazy" decoding="async" src="/Educational_Articles/photos/govt-jobs-after-12.png" alt="Top Govt exams after 12">
         <div>
             <h3>Top Government Exams and Career Options After Class 12 in India</h3>
             <p>Published on 19 August 2026</p>
@@ -324,7 +316,7 @@ crossorigin="anonymous"></script>
     </a>
 
      <a href="/abhivyakti/shiksha-ki-taiyari-prathmik-star-par.html" class="news-card">
-        <img src="/abhivyakti/images/dr.poonam-article-1.png" alt="शिक्षा की तैयारी प्राथमिक स्तर पर">
+        <img loading="lazy" decoding="async" src="/abhivyakti/images/dr.poonam-article-1.png" alt="शिक्षा की तैयारी प्राथमिक स्तर पर">
         <div>
             <h3>शिक्षा की तैयारी प्राथमिक स्तर पर</h3>
             <p>Published on 18 September 2026</p>
@@ -332,7 +324,7 @@ crossorigin="anonymous"></script>
     </a>
 
      <a href="/Students_Corner/career_guide/advance-level-in-maths-and-science.html" class="news-card">
-        <img src="/Students_Corner/career_guide/images/CBSE.png" alt="CBSE Advanced Level Mathematics and Science">
+        <img loading="lazy" decoding="async" src="/Students_Corner/career_guide/images/CBSE.png" alt="CBSE Advanced Level Mathematics and Science">
         <div>
             <h3>What is CBSE Advanced Level Mathematics and Science ?</h3>
             <p>Published on 31 July 2026</p>
@@ -340,14 +332,14 @@ crossorigin="anonymous"></script>
     </a>
 
     <a href="/Students_Corner/career_guide/what-is-new-education-policy-2020.html" class="news-card">
-        <img src="/Students_Corner/career_guide/images/education-policy-2020.png" alt="NEP-2020">
+        <img loading="lazy" decoding="async" src="/Students_Corner/career_guide/images/education-policy-2020.png" alt="NEP-2020">
         <div>
             <h3>The National Education Policy (NEP) 2020</h3>
             <p>Published on 31 July 2026</p>
         </div>
     </a>
       <a href="/Educational_Articles/history-of-zero.html" class="news-card">
-        <img src="/Educational_Articles/photos/zero.png" alt="How to score 95+ in board exams">
+        <img loading="lazy" decoding="async" src="/Educational_Articles/photos/zero.png" alt="How to score 95+ in board exams">
         <div>
             <h3>Discovery Of Zero</h3>
             <p>Published on 30 July 2026</p>
@@ -355,7 +347,7 @@ crossorigin="anonymous"></script>
     </a>
 
     <a href="/Educational_Articles/noble-prize.html" class="news-card">
-        <img src="/Educational_Articles/photos/mr-noble.png" alt="Nobel Prize">
+        <img loading="lazy" decoding="async" src="/Educational_Articles/photos/mr-noble.png" alt="Nobel Prize">
         <div>
             <h3>Nobel Prize: History, Story & Interesting Facts</h3>
             <p>Published on 29 July 2026</p>
@@ -365,26 +357,27 @@ crossorigin="anonymous"></script>
 </section>
 
 <!-- ━━━ SUBJECTS ━━━ -->
+<main id="main-content">
 <div class="subjects-bg">
   <div class="section">
     <div class="sec-header">
       <div>
         <div class="sec-eyebrow reveal">Subjects</div>
-        <h2 class="sec-title reveal" style="transition-delay:.07s">Every Subject, <em>Covered Deeply</em></h2>
+        <h2 class="sec-title reveal reveal-delay-1">Every Subject, <em>Covered Deeply</em></h2>
       </div>
-      <a href="#" class="see-all reveal">All subjects →</a>
+      <a href="/link_page/subjects_list.html" class="see-all reveal">All subjects →</a>
     </div>
     <div class="subj-grid">
       <a href="./link_page/maths_link_all_classes.html" target="_blank" class="subj-card reveal"><div class="subj-icon si-blue">📐</div><div class="subj-name">Mathematics</div></a>
-      <a href="./link_page/science_link_all_classes.html" class="subj-card reveal" style="transition-delay:.05s"><div class="subj-icon si-green">🔬</div><div class="subj-name">Science</div></a>
-      <a href="./link_page/english_link_all_classes.html" class="subj-card reveal" style="transition-delay:.1s"><div class="subj-icon si-amber">📖</div><div class="subj-name">English</div></a>
-      <a href="./link_page/sst_link_all_classes.html" class="subj-card reveal" style="transition-delay:.15s"><div class="subj-icon si-red">🌏</div><div class="subj-name">Social Studies</div></a>
+      <a href="./link_page/science_link_all_classes.html" class="subj-card reveal reveal-delay-1"><div class="subj-icon si-green">🔬</div><div class="subj-name">Science</div></a>
+      <a href="./link_page/english_link_all_classes.html" class="subj-card reveal reveal-delay-2"><div class="subj-icon si-amber">📖</div><div class="subj-name">English</div></a>
+      <a href="./link_page/sst_link_all_classes.html" class="subj-card reveal reveal-delay-3"><div class="subj-icon si-red">🌏</div><div class="subj-name">Social Studies</div></a>
       <a href="./link_page/hindi_link_all_classes.html" class="subj-card reveal" style="transition-delay:.15s"><div class="subj-icon si-red">🪔</div><div class="subj-name">Hindi</div></a>
     
 
        <a href="/sanskrit-class-9/link-page-sanskrit-class-9/chapters-class-9-sanskrit.html" class="subj-card reveal" style="transition-delay:.15s"><div class="subj-icon si-red">ૐ</div><div class="subj-name">Sanskrit</div></a>
 
-       <a href="/mathematic-advanced-class-9/mathematics-advanced-class-9-chapters/mathematics-advanced-class-9-chapters.html"_blank" class="subj-card reveal"><div class="subj-icon si-blue">📐</div><div class="subj-name">Advanced Mathematics Class 9</div></a>
+       <a href="/mathematic-advanced-class-9/mathematics-advanced-class-9-chapters/mathematics-advanced-class-9-chapters.html" target="_blank" rel="noopener noreferrer" class="subj-card reveal"><div class="subj-icon si-blue">📐</div><div class="subj-name">Advanced Mathematics Class 9</div></a>
 
 
     </div>
@@ -402,7 +395,7 @@ crossorigin="anonymous"></script>
       <p>Join students who trust Saraswat Academy for CBSE, ICSE, IB, NCERT Solutions, Engineering and Competitive Exam preparation — completely free to start.</p>
     </div>
     <div class="cta-actions">
-      <a href=".././index.html" class="btn-cta-main">🚀 Start Learning Free</a>
+      <a href="/Students_Corner/link_pages/main_page.html" class="btn-cta-main">🚀 Start Learning Free</a>
       <a href="./ask.html" class="btn-cta-ghost">🙋 Ask a Doubt</a>
     </div>
   </div>
@@ -482,36 +475,13 @@ crossorigin="anonymous"></script>
 </div>
 
 
+</main>
+
 <!-- ━━━ FOOTER ━━━ -->
 
 <div id="footer"></div>
 
 <!-- SCROLL REVEAL + HAMBURGER -->
-<script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-  });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal, .reveal-l, .reveal-r').forEach(el => observer.observe(el));
-
-const hamburger = document.getElementById('hamburger');
-const mobileNav = document.getElementById('mobileNav');
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  mobileNav.classList.toggle('open');
-  document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
-});
-// Close mobile nav when a link is tapped
-mobileNav.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    mobileNav.classList.remove('open');
-    document.body.style.overflow = '';
-  });
-});
-</script>
-
 <a
     href="https://wa.me/917073468838?text=Hello%20Saraswat%20Academy%2C%20I%20want%20to%20know%20more%20about%20your%20courses."
     class="floating-whatsapp"
@@ -533,30 +503,6 @@ mobileNav.querySelectorAll('.nav-link').forEach(link => {
 </svg>
 </a>
 
-
-<script>
-    let websiteZoom = 1;
-
-    function changeZoom(amount) {
-
-        websiteZoom += amount;
-
-        if (websiteZoom < 0.8) {
-            websiteZoom = 0.8;
-        }
-
-        if (websiteZoom > 1.3) {
-            websiteZoom = 1.3;
-        }
-
-        document.body.style.zoom = websiteZoom;
-    }
-
-    function resetZoom() {
-        websiteZoom = 1;
-        document.body.style.zoom = "1";
-    }
-</script>
 
 </body>
 </html>
