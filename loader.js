@@ -13,7 +13,7 @@ function normalizeUrl(url) {
 function normalizeBreadcrumbs() {
     const currentPath = normalizeUrl(window.location.href);
 
-    document.querySelectorAll(".breadcrumb, nav[aria-label="Breadcrumb"]").forEach(breadcrumb => {
+    document.querySelectorAll('.breadcrumb, nav[aria-label="Breadcrumb"]').forEach(breadcrumb => {
         breadcrumb.classList.add("sa-breadcrumb");
         breadcrumb.setAttribute("aria-label", "Breadcrumb");
 
