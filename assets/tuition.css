@@ -1791,3 +1791,215 @@ body.tuition-form-page .cta p {
     width: 100%;
   }
 }
+
+/* =========================================================
+   FINAL HOME-TUTOR OVERRIDES
+   Kept fully scoped to tuition pages.
+   ========================================================= */
+
+/* Prevent site-wide stylesheet rules from changing page geometry. */
+:is(body.tuition-page, body.tuition-form-page) {
+  min-width: 0;
+}
+
+:is(body.tuition-page, body.tuition-form-page) main {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+:is(body.tuition-page, body.tuition-form-page) section {
+  max-width: none;
+}
+
+/* Shared legacy/content sections used by the home-tutor HTML. */
+:is(body.tuition-page, body.tuition-form-page) .areas {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 70px 20px;
+  background: #f5f7fa;
+  color: #172238;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .areas .container {
+  width: min(1180px, 100%);
+}
+
+:is(body.tuition-page, body.tuition-form-page) .areas ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: min(900px, 100%);
+  margin: 25px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .areas li {
+  margin: 0;
+  padding: 0;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .areas li a {
+  display: block;
+  padding: 16px 18px;
+  background: #fff;
+  border: 1px solid #e1e6ed;
+  border-radius: 12px;
+  color: #172238;
+  box-shadow: 0 7px 22px rgba(19,34,55,.05);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .areas li a:hover {
+  transform: translateY(-2px);
+  border-color: #e1b23c;
+  box-shadow: 0 12px 28px rgba(19,34,55,.09);
+}
+
+:is(body.tuition-page, body.tuition-form-page) .areas .section-title {
+  color: #172238;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .popular-articles {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 70px 20px;
+  background: #fff;
+  color: #172238;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .popular-container {
+  width: min(1180px, 100%);
+  margin-inline: auto;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .popular-heading {
+  margin-bottom: 30px;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .popular-heading h2 {
+  margin: 6px 0 8px;
+  color: #172238;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.1;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .popular-heading p {
+  margin: 0;
+  color: #68778b;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .popular-grid {
+  width: 100%;
+  margin: 0;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .popular-card-top {
+  min-height: 58px;
+  padding: 15px 18px;
+  background: #f5f7fa;
+  border-bottom: 1px solid #e3e8ee;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .popular-card-content h3 {
+  margin: 0 0 8px;
+  color: #172238;
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .popular-card-content p {
+  margin: 0 0 14px;
+  color: #68778b;
+  font-size: 13px;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .popular-link {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .popular-card {
+  height: 100%;
+  box-shadow: 0 8px 28px rgba(19,34,55,.06);
+}
+
+/* Find-a-tutor: actual HTML has no .form-grid wrapper. */
+body.tuition-form-page .form-card form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 18px;
+}
+
+body.tuition-form-page .form-card form > input[type="hidden"] {
+  display: none;
+}
+
+body.tuition-form-page .form-card form > .form-submit {
+  grid-column: 1 / -1;
+}
+
+body.tuition-form-page .form-card form > .form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Join-as-tutor: actual HTML is a direct sequence of form groups. */
+body.tuition-form-page .tutor-registration-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 18px;
+}
+
+body.tuition-form-page .tutor-registration-form > input[type="hidden"] {
+  display: none;
+}
+
+body.tuition-form-page .tutor-registration-form > .tutor-section-title,
+body.tuition-form-page .tutor-registration-form > .tutor-full,
+body.tuition-form-page .tutor-registration-form > .tutor-declaration,
+body.tuition-form-page .tutor-registration-form > .tutor-submit {
+  grid-column: 1 / -1;
+}
+
+body.tuition-form-page .tutor-registration-form > .tutor-form-group {
+  min-width: 0;
+}
+
+body.tuition-form-page .tutor-registration-form .tutor-submit button {
+  width: 100%;
+}
+
+@media (max-width: 760px) {
+  :is(body.tuition-page, body.tuition-form-page) .areas ul,
+  :is(body.tuition-page, body.tuition-form-page) .popular-grid,
+  body.tuition-form-page .form-card form,
+  body.tuition-form-page .tutor-registration-form {
+    grid-template-columns: 1fr;
+  }
+
+  body.tuition-form-page .form-card form > .form-group.full-width,
+  body.tuition-form-page .tutor-registration-form > .tutor-section-title,
+  body.tuition-form-page .tutor-registration-form > .tutor-full,
+  body.tuition-form-page .tutor-registration-form > .tutor-declaration,
+  body.tuition-form-page .tutor-registration-form > .tutor-submit {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  :is(body.tuition-page, body.tuition-form-page) .areas,
+  :is(body.tuition-page, body.tuition-form-page) .popular-articles {
+    padding: 52px 14px;
+  }
+
+  :is(body.tuition-page, body.tuition-form-page) .areas ul {
+    gap: 10px;
+  }
+}
