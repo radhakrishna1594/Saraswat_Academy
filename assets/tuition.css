@@ -22,6 +22,7 @@
   --tuition-light-text: #526176;
   --tuition-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
   --tuition-radius: 22px;
+  margin: 0;
   color: var(--tuition-text);
   background: var(--tuition-navy);
   font-family: "DM Sans", Arial, sans-serif;
@@ -1439,7 +1440,62 @@ body.tuition-form-page .tutor-form-top p {
 }
 
 body.tuition-form-page form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 17px;
   width: 100%;
+}
+
+body.tuition-form-page form > input[type="hidden"] {
+  display: none;
+}
+
+body.tuition-form-page form > .form-submit,
+body.tuition-form-page form > .tutor-declaration,
+body.tuition-form-page form > .tutor-submit {
+  grid-column: 1 / -1;
+}
+
+body.tuition-form-page form > .tutor-section-title {
+  grid-column: 1 / -1;
+}
+
+body.tuition-form-page .form-submit,
+body.tuition-form-page .tutor-submit {
+  margin-top: 9px;
+}
+
+body.tuition-form-page .tutor-declaration {
+  grid-column: 1 / -1;
+  margin-top: 12px;
+}
+
+body.tuition-form-page .tutor-check-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+body.tuition-form-page .tutor-upload {
+  padding: 12px;
+  background: #f9fafc;
+  border: 1px dashed #cfd8e3;
+  border-radius: 10px;
+}
+
+body.tuition-form-page .tutor-upload input[type="file"] {
+  width: 100%;
+  min-height: auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+
+body.tuition-form-page .tutor-upload small {
+  display: block;
+  margin-top: 6px;
+  color: #7b8798;
+  font-size: 11px;
 }
 
 body.tuition-form-page .form-grid,
@@ -1684,6 +1740,7 @@ body.tuition-form-page .cta p {
 
 /* Mobile */
 @media (max-width: 900px) {
+  body.tuition-form-page form,
   body.tuition-form-page .form-grid,
   body.tuition-form-page .tutor-form-grid {
     grid-template-columns: 1fr;
