@@ -1,8 +1,8 @@
 function normalizeUrl(url) {
     try {
         const u = new URL(url, window.location.origin);
-        let path = u.pathname.replace(/\\/+$/, "");
-        path = path.replace(/\\/index\\.html$/i, "");
+        let path = u.pathname.replace(/\/+$/, "");
+        path = path.replace(/\/index\.html$/i, "");
         if (path === "") path = "/";
         return path.toLowerCase();
     } catch {
@@ -17,11 +17,9 @@ function normalizeBreadcrumbs() {
         breadcrumb.classList.add("sa-breadcrumb");
         breadcrumb.setAttribute("aria-label", "Breadcrumb");
 
-        // Template breadcrumbs use an ordered list.
         const list = breadcrumb.querySelector("ol");
         if (list) list.classList.add("sa-breadcrumb-list");
 
-        // Convert old text-arrow separators (→) into consistent separator elements.
         const walker = document.createTreeWalker(
             breadcrumb,
             NodeFilter.SHOW_TEXT
@@ -54,7 +52,6 @@ function normalizeBreadcrumbs() {
             node.parentNode.replaceChild(fragment, node);
         });
 
-        // Convert links pointing to the current page into a non-clickable current item.
         breadcrumb.querySelectorAll("a[href]").forEach(link => {
             const linkPath = normalizeUrl(link.href);
 
@@ -67,32 +64,26 @@ function normalizeBreadcrumbs() {
             }
         });
 
-        // Mark the final breadcrumb item as the current page when it is not already marked.
-        const items = breadcrumb.querySelectorAll("a, span.current, li");
-        if (items.length) {
-            const last = items[items.length - 1];
-            if (last.matches && last.matches("span.current")) return;
+        const currentItem = breadcrumb.querySelector(".current");
+        if (currentItem) return;
 
-            // Only mark a plain final span as current; never remove an existing parent link.
-            if (last.matches && last.matches("span") && !last.classList.contains("separator")) {
-                last.classList.add("current");
-                last.setAttribute("aria-current", "page");
-            }
+        const plainSpans = breadcrumb.querySelectorAll("span:not(.separator)");
+        if (plainSpans.length) {
+            const last = plainSpans[plainSpans.length - 1];
+            last.classList.add("current");
+            last.setAttribute("aria-current", "page");
         }
     });
 }
 
 function removeStrayMetaText() {
-    // Some older pages contain a malformed meta-description line such as:
-    // name="description" content="..."
-    // Without the opening <meta ...>, browsers render that text visibly.
     const walker = document.createTreeWalker(
         document.body,
         NodeFilter.SHOW_TEXT
     );
 
     const strayNodes = [];
-    const pattern = /^\\s*name=["']description["']\\s+content=["'][\\s\\S]*?["']\\s*$/i;
+    const pattern = /^\s*name=["']description["']\s+content=["'][\s\S]*?["']\s*$/i;
 
     while (walker.nextNode()) {
         const node = walker.currentNode;
@@ -113,7 +104,6 @@ async function loadComponent(id, file) {
     }
 
     const html = await response.text();
-
     const target = document.getElementById(id);
     if (!target) return;
 
