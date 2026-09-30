@@ -1383,3 +1383,37 @@ nav[aria-label="Breadcrumb"] li {
         font-size: 15px;
     }
 }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   RESPONSIVE IMAGE SAFETY
+   Prevents images from overflowing or distorting layouts,
+   especially on mobile screens.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+img {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+/* Images with HTML width/height attributes must preserve their aspect ratio. */
+img[width][height] {
+    height: auto;
+}
+
+/* Never allow an image to create horizontal page overflow. */
+figure,
+picture {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+picture img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    img {
+        max-width: 100%;
+    }
+}
