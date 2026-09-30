@@ -879,3 +879,148 @@ body.tuition-form-page .cta p{max-width:650px;margin:0 auto 22px;color:#aebbd0}
     align-items:flex-start;
   }
 }
+
+/* =========================================================
+   STUDENT TESTIMONIALS / RESULTS CARDS
+   Scoped to Home Tutor pages
+   ========================================================= */
+
+:is(body.tuition-page, body.tuition-form-page) .sa-testimonial-card{
+  position:relative;
+  padding:26px 23px;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:19px;
+  box-shadow:0 8px 25px rgba(15,23,42,.05);
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .sa-testimonial-card:hover{
+  transform:translateY(-5px);
+  border-color:#bfdbfe;
+  box-shadow:0 15px 34px rgba(15,23,42,.09);
+}
+
+:is(body.tuition-page, body.tuition-form-page) .sa-testimonial-quote{
+  margin:0;
+  color:#334155;
+  font-size:14px;
+  line-height:1.8;
+  font-style:italic;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .sa-testimonial-quote:before{
+  content:"“";
+  display:block;
+  margin-bottom:-8px;
+  color:#2563eb;
+  font-family:Georgia,serif;
+  font-size:52px;
+  line-height:1;
+  font-weight:700;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .sa-testimonial-name{
+  margin:18px 0 3px;
+  color:#0f172a;
+  font-size:14px;
+  font-weight:800;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .sa-testimonial-info{
+  margin:0;
+  color:#64748b;
+  font-size:11px;
+  line-height:1.5;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .sa-student-photo{
+  width:62px;
+  height:62px;
+  margin-bottom:14px;
+  object-fit:cover;
+  border-radius:50%;
+  border:3px solid #fff;
+  box-shadow:0 5px 18px rgba(15,23,42,.12);
+}
+
+/* Extra polish for the existing Student Results section */
+:is(body.tuition-page, body.tuition-form-page) .sa-results-showcase{
+  position:relative;
+  overflow:hidden;
+  border-radius:28px;
+  box-shadow:0 18px 55px rgba(15,23,42,.07);
+}
+
+:is(body.tuition-page, body.tuition-form-page) .sa-results-showcase:before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  width:110px;
+  height:4px;
+  transform:translateX(-50%);
+  border-radius:0 0 10px 10px;
+  background:linear-gradient(90deg,#2563eb,#10b981);
+}
+
+:is(body.tuition-page, body.tuition-form-page) .sa-result-card{
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .sa-result-card:hover{
+  transform:translateY(-5px);
+  border-color:#bfdbfe;
+  box-shadow:0 15px 34px rgba(15,23,42,.09);
+}
+
+:is(body.tuition-page, body.tuition-form-page) .sa-result-subjects span{
+  transition:background-color .2s ease,border-color .2s ease;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .sa-result-card:hover .sa-result-subjects span{
+  background:#eff6ff;
+  border-color:#dbeafe;
+}
+
+@media(max-width:760px){
+  :is(body.tuition-page, body.tuition-form-page) .sa-testimonial-card{
+    padding:22px 19px;
+  }
+
+  :is(body.tuition-page, body.tuition-form-page) .sa-student-photo{
+    width:56px;
+    height:56px;
+  }
+
+  :is(body.tuition-page, body.tuition-form-page) .sa-results-showcase{
+    border-radius:22px;
+  }
+}
+
+@media(max-width:480px){
+  :is(body.tuition-page, body.tuition-form-page) .sa-testimonial-card{
+    padding:20px 17px;
+  }
+
+  :is(body.tuition-page, body.tuition-form-page) .sa-testimonial-quote{
+    font-size:13px;
+  }
+
+  :is(body.tuition-page, body.tuition-form-page) .sa-results-showcase{
+    border-radius:18px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  :is(body.tuition-page, body.tuition-form-page) .sa-testimonial-card,
+  :is(body.tuition-page, body.tuition-form-page) .sa-result-card,
+  :is(body.tuition-page, body.tuition-form-page) .sa-result-subjects span{
+    transition:none;
+  }
+
+  :is(body.tuition-page, body.tuition-form-page) .sa-testimonial-card:hover,
+  :is(body.tuition-page, body.tuition-form-page) .sa-result-card:hover{
+    transform:none;
+  }
+}
