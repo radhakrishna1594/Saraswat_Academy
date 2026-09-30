@@ -1005,3 +1005,48 @@ picture img {
         padding-right: 0;
     }
 }
+
+
+/* =========================================================
+   SOLUTION PAGES — GLOBAL VISUAL THEME
+   Keep every solution page consistent with the Chapter 8 theme.
+   ========================================================= */
+
+body.solution-page,
+body:has(.solution-layout) {
+  background: #f7f9fc !important;
+  color: #1f2937;
+}
+
+body.solution-page .solution-article,
+body:has(.solution-layout) .solution-article {
+  background: #ffffff !important;
+  border: 1px solid #e4e9f0 !important;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.07);
+}
+
+body.solution-page .related-box,
+body:has(.solution-layout) .related-box {
+  background: #ffffff !important;
+  border: 1px solid #e4e9f0;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+body.solution-page .answer-block,
+body:has(.solution-layout) .answer-block {
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  body.solution-page,
+  body:has(.solution-layout) {
+    background: #f7f9fc !important;
+  }
+
+  body.solution-page .solution-article,
+  body:has(.solution-layout) .solution-article {
+    background: #ffffff !important;
+  }
+}
+
