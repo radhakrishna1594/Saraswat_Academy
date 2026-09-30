@@ -65,10 +65,20 @@ document.addEventListener("click",function(e){
         if (/[.!?]{1}/.test(value) && /[A-Za-z]{2,}/.test(value)) return false;
 
         var words = value.match(/[A-Za-z]+(?:'[A-Za-z]+)?/g) || [];
-        var allowedWords = /^(sin|cos|tan|cot|sec|cosec|log|ln|sqrt|sin|cos|tan)$/i;
+        var allowedWords = /^(sin|cos|tan|cot|sec|cosec|log|ln|sqrt|m|cm|mm|km|kg|g|l|ml|s|min|hr)$/i;
 
         for (var i = 0; i < words.length; i++) {
-            if (words[i].length > 1 && !allowedWords.test(words[i])) return false;
+            var word = words[i];
+
+            /* Common mathematical function/unit names. */
+            if (allowedWords.test(word)) continue;
+
+            /* Single variables and geometry labels such as AB, AC, PQ, ABC. */
+            if (/^[A-Z]{1,4}$/.test(word)) continue;
+            if (/^[a-zA-Z]$/.test(word)) continue;
+
+            /* Anything else is ordinary prose. */
+            return false;
         }
 
         if (!/\d/.test(value)) return false;
