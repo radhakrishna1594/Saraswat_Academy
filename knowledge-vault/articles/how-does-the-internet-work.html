@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>How Does the Internet Work? | A Simple Visual Explanation</title>
+  <meta name="description" content="Learn how the internet works in simple language. Understand devices, routers, IP addresses, DNS, packets, servers, data centres and how a webpage travels across the internet.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Saraswat Academy">
+  <meta name="theme-color" content="#17365d">
+
+  <link rel="canonical" href="https://www.saraswatacademy.in/knowledge-vault/articles/how-does-the-internet-work.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Saraswat Academy">
+  <meta property="og:title" content="How Does the Internet Work? | A Simple Visual Explanation">
+  <meta property="og:description" content="A visual, student-friendly explanation of how the internet connects devices, routers, servers and data centres to deliver webpages and other online services.">
+  <meta property="og:url" content="https://www.saraswatacademy.in/knowledge-vault/articles/how-does-the-internet-work.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How Does the Internet Work?">
+  <meta name="twitter:description" content="Understand devices, routers, DNS, packets, servers and data centres with simple explanations and visual diagrams.">
+
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/header.css">
+  <link rel="stylesheet" href="/knowledge-vault/articles/articles.css">
+
+  <script src="/loader.js"></script>
+  <script src="/config.js"></script>
+  <script src="/header.js"></script>
+
+  <style>
+    .kva-visual {
+      margin: 1.75rem 0 2rem;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(23, 54, 93, 0.14);
+      background: #f7f9fc;
+    }
+    .kva-visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 620px;
+      object-fit: contain;
+      background: #fff;
+    }
+    .kva-visual figcaption {
+      padding: .85rem 1rem;
+      font-size: .9rem;
+      line-height: 1.55;
+      color: #526070;
+    }
+    .kva-visual figcaption a {
+      color: inherit;
+    }
+    .kva-flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: .65rem;
+      margin: 1.5rem 0 2rem;
+    }
+    .kva-flow-step {
+      position: relative;
+      padding: 1rem .75rem;
+      text-align: center;
+      border: 1px solid rgba(23, 54, 93, .12);
+      border-radius: 14px;
+      background: #fff;
+    }
+    .kva-flow-step strong { display: block; margin-bottom: .3rem; }
+    .kva-flow-step span { font-size: .86rem; color: #5a6675; }
+    .kva-flow-step:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: 700;
+      z-index: 2;
+    }
+    @media (max-width: 760px) {
+      .kva-flow { grid-template-columns: 1fr; }
+      .kva-flow-step:not(:last-child)::after {
+        content: "↓";
+        right: 50%;
+        top: auto;
+        bottom: -.7rem;
+        transform: translateX(50%);
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "@id":"https://www.saraswatacademy.in/knowledge-vault/articles/how-does-the-internet-work.html#article",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.saraswatacademy.in/knowledge-vault/articles/how-does-the-internet-work.html"},
+    "headline":"How Does the Internet Work?",
+    "description":"A visual, student-friendly explanation of how the internet connects devices, routers, servers and data centres to deliver webpages and online services.",
+    "author":{"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},
+    "publisher":{"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},
+    "isPartOf":{"@type":"CollectionPage","name":"Knowledge Vault","url":"https://www.saraswatacademy.in/knowledge-vault/index.html"},
+    "about":[
+      {"@type":"Thing","name":"Internet"},
+      {"@type":"Thing","name":"Computer networks"},
+      {"@type":"Thing","name":"Internet Protocol"},
+      {"@type":"Thing","name":"Domain Name System"}
+    ],
+    "learningResourceType":"Educational article",
+    "inLanguage":"en-IN"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.saraswatacademy.in/index.html"},
+      {"@type":"ListItem","position":2,"name":"Knowledge Vault","item":"https://www.saraswatacademy.in/knowledge-vault/index.html"},
+      {"@type":"ListItem","position":3,"name":"How Does the Internet Work?","item":"https://www.saraswatacademy.in/knowledge-vault/articles/how-does-the-internet-work.html"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What is the internet?","acceptedAnswer":{"@type":"Answer","text":"The internet is a global network of interconnected computer networks that exchange data using common communication protocols."}},
+      {"@type":"Question","name":"How does a webpage reach my device?","acceptedAnswer":{"@type":"Answer","text":"Your device sends a request through a local network and internet service provider. The request is routed across networks to a server, which sends data back to your device."}},
+      {"@type":"Question","name":"What is an IP address?","acceptedAnswer":{"@type":"Answer","text":"An IP address is a numerical address used to identify and route data to a device or network interface on an IP network."}},
+      {"@type":"Question","name":"What does DNS do?","acceptedAnswer":{"@type":"Answer","text":"DNS translates human-readable domain names such as example.com into IP addresses that computers use to locate services."}},
+      {"@type":"Question","name":"What is a router?","acceptedAnswer":{"@type":"Answer","text":"A router forwards data packets between networks and helps choose a path towards their destination."}},
+      {"@type":"Question","name":"What are data packets?","acceptedAnswer":{"@type":"Answer","text":"Data sent over the internet is commonly divided into smaller units called packets, which can be routed across networks and reassembled at the destination."}},
+      {"@type":"Question","name":"Does the internet use only one cable?","acceptedAnswer":{"@type":"Answer","text":"No. The internet is made from many interconnected networks using fibre-optic cables, wireless links, cellular networks, satellites and other technologies."}},
+      {"@type":"Question","name":"Where are websites stored?","acceptedAnswer":{"@type":"Answer","text":"Websites and their data are stored on servers, often located in data centres or distributed across multiple locations."}}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <div class="breadcrumb">
+    <a href="/index.html">Home</a> →
+    <a href="/knowledge-vault/index.html">Knowledge Vault</a> →
+    <span class="current">How Does the Internet Work?</span>
+  </div>
+
+  <main class="kva-page">
+    <article class="kva-article">
+
+      <header class="kva-hero">
+        <div class="kva-hero-inner">
+          <span class="kva-eyebrow">Technology</span>
+          <h1>How Does the Internet Work?</h1>
+          <p class="kva-hero-description">
+            When you open a website, a surprisingly long journey happens in a fraction of a second.
+            Your device, router, internet service provider, many other networks and a remote server
+            work together to deliver the information you asked for.
+          </p>
+        </div>
+      </header>
+
+      <section class="kva-section" aria-labelledby="simple-answer">
+        <div class="kva-lead">
+          <strong>In simple words:</strong> The internet is a huge network of connected networks.
+          Your device sends digital data through several networks to a destination, and the destination
+          sends data back.
+        </div>
+
+        <h2 id="simple-answer">1. What Is the Internet?</h2>
+        <p>
+          The internet is not one giant computer and it is not owned by one machine. It is a
+          <strong>global network of interconnected networks</strong>. Computers, phones, servers,
+          routers and other devices communicate using agreed communication protocols.
+        </p>
+        <p>
+          Your home Wi-Fi network is only one small part of this much larger system. Your internet
+          service provider connects your local network to other networks, which can eventually
+          connect to the server providing the website, video, game or other service you requested.
+        </p>
+
+        <figure class="kva-visual">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Internet_access_diagram_(english).svg"
+            alt="Diagram showing a home device connecting through an internet service provider and other networks to a remote server"
+            loading="lazy"
+            decoding="async">
+          <figcaption>
+            A simplified view of the journey from a user's device to a remote service.
+            Diagram by Ferran, available under
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>
+            via Wikimedia Commons.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="kva-section" aria-labelledby="webpage-journey">
+        <h2 id="webpage-journey">2. What Happens When You Open a Website?</h2>
+        <p>
+          Suppose you type <strong>www.example.com</strong> into your browser. Your device has to
+          discover where the website is, send a request to the correct server and receive the required
+          data before the browser can display the page.
+        </p>
+
+        <div class="kva-flow" aria-label="Simplified webpage request journey">
+          <div class="kva-flow-step"><strong>1. Your device</strong><span>You enter a web address.</span></div>
+          <div class="kva-flow-step"><strong>2. DNS</strong><span>The domain is mapped to an IP address.</span></div>
+          <div class="kva-flow-step"><strong>3. Routers</strong><span>Packets travel between networks.</span></div>
+          <div class="kva-flow-step"><strong>4. Server</strong><span>The requested resource is found.</span></div>
+          <div class="kva-flow-step"><strong>5. Browser</strong><span>Returned data becomes a webpage.</span></div>
+        </div>
+
+        <div class="kva-example">
+          <strong>Think of it like sending a parcel:</strong> your device prepares the request,
+          addresses it, sends it through a chain of delivery networks, and the destination sends
+          the requested information back.
+        </div>
+      </section>
+
+      <section class="kva-section" aria-labelledby="device-router">
+        <h2 id="device-router">3. Your Device and Router</h2>
+        <p>
+          Your phone or computer usually connects to the internet through a local network. At home,
+          that may happen through Wi-Fi or an Ethernet cable. A router helps connect your local devices
+          to the wider network.
+        </p>
+
+        <figure class="kva-visual">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Wireless_network.jpg"
+            alt="Laptop and wireless router showing a home Wi-Fi connection to the internet"
+            loading="lazy"
+            decoding="async">
+          <figcaption>
+            A real-world example of a laptop communicating with a wireless router that connects
+            onward to the internet. Wikimedia Commons image.
+          </figcaption>
+        </figure>
+
+        <p>
+          A router does not contain the entire internet. Its job is to forward packets between networks
+          and help traffic move towards its destination.
+        </p>
+      </section>
+
+      <section class="kva-section" aria-labelledby="isp">
+        <h2 id="isp">4. What Does an Internet Service Provider Do?</h2>
+        <p>
+          An <strong>Internet Service Provider (ISP)</strong> provides the connection between your
+          local network and larger internet networks. Depending on the service, the connection may use
+          fibre-optic cable, cable, telephone infrastructure, cellular networks, fixed wireless or
+          other technologies.
+        </p>
+
+        <div class="kva-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Part</th>
+                <th scope="col">What it does</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Your device</td><td>Creates and receives digital data.</td></tr>
+              <tr><td>Router</td><td>Forwards traffic between networks.</td></tr>
+              <tr><td>ISP</td><td>Connects your network to wider internet infrastructure.</td></tr>
+              <tr><td>Backbone networks</td><td>Carry large volumes of traffic between major networks and locations.</td></tr>
+              <tr><td>Server</td><td>Provides the website, file, video or other service requested.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="kva-visual">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Internet_Access_Networks.svg"
+            alt="Diagram showing different internet access technologies including fibre, wireless, cellular and satellite"
+            loading="lazy"
+            decoding="async">
+          <figcaption>
+            Internet access can use several technologies, including fibre, wireless, cellular and satellite networks.
+            Diagram by BWenk, available under CC BY-SA 4.0 via Wikimedia Commons.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="kva-section" aria-labelledby="ip">
+        <h2 id="ip">5. What Is an IP Address?</h2>
+        <p>
+          Devices communicating over the internet use <strong>IP addresses</strong> to identify
+          network destinations. An IP address is a numerical address used by network protocols to
+          deliver packets towards the correct destination.
+        </p>
+        <p>
+          Humans generally prefer names such as <strong>www.saraswatacademy.in</strong>, while network
+          communication uses IP addressing. This is one reason the Domain Name System is important.
+        </p>
+
+        <div class="kva-important">
+          <strong>Remember:</strong> A domain name is a human-friendly name. An IP address is a
+          network address used for communication and routing.
+        </div>
+      </section>
+
+      <section class="kva-section" aria-labelledby="dns">
+        <h2 id="dns">6. How Does DNS Work?</h2>
+        <p>
+          <strong>DNS</strong> stands for Domain Name System. It helps translate a domain name into
+          an IP address so that your device can locate the appropriate service.
+        </p>
+
+        <div class="kva-flow" aria-label="Simplified DNS process">
+          <div class="kva-flow-step"><strong>Domain name</strong><span>You type a website name.</span></div>
+          <div class="kva-flow-step"><strong>DNS lookup</strong><span>The name is looked up.</span></div>
+          <div class="kva-flow-step"><strong>IP address</strong><span>A numerical destination is returned.</span></div>
+          <div class="kva-flow-step"><strong>Connection</strong><span>Your device contacts the service.</span></div>
+          <div class="kva-flow-step"><strong>Webpage</strong><span>The browser receives content.</span></div>
+        </div>
+
+        <p>
+          DNS is often compared with a phone directory: instead of remembering a numerical address
+          for every website, you can use an easier name and let DNS help find the corresponding address.
+        </p>
+      </section>
+
+      <section class="kva-section" aria-labelledby="packets">
+        <h2 id="packets">7. How Does Data Travel? Packets!</h2>
+        <p>
+          Large pieces of information are commonly divided into smaller units called
+          <strong>packets</strong>. These packets contain information that helps network equipment
+          deliver them towards the intended destination.
+        </p>
+        <p>
+          Different packets may travel through different network paths. At the destination, the
+          information can be processed and reassembled so that your application receives the requested data.
+        </p>
+
+        <figure class="kva-visual">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/IP_stack_connections_(corrected).svg"
+            alt="Diagram showing hosts communicating through routers using the Internet protocol suite"
+            loading="lazy"
+            decoding="async">
+          <figcaption>
+            A technical diagram illustrating communication between hosts through routers using the Internet protocol suite.
+            Wikimedia Commons, CC BY-SA 3.0 / GFDL.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="kva-section" aria-labelledby="server">
+        <h2 id="server">8. Where Is the Website Actually Stored?</h2>
+        <p>
+          A website's files and other data are stored on <strong>servers</strong>. Servers are computers
+          designed to provide services to other computers over a network.
+        </p>
+        <p>
+          Large online services often use many servers in data centres and may distribute content across
+          different geographical locations. This helps them handle large numbers of users and can reduce
+          the distance data needs to travel.
+        </p>
+
+        <figure class="kva-visual">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Network_equipment_and_cables_organized_in_a_server_rack_at_a_modern_office_environment_during_the_afternoon.jpg"
+            alt="Network equipment and cables arranged inside a server rack"
+            loading="lazy"
+            decoding="async">
+          <figcaption>
+            Network equipment and cables in a server rack, illustrating the physical infrastructure
+            behind networked services. Wikimedia Commons image.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="kva-section" aria-labelledby="return">
+        <h2 id="return">9. How Does the Webpage Come Back to You?</h2>
+        <p>
+          Once the server receives your request, it sends the required data back through the network.
+          The response travels through routers and other network links until it reaches your device.
+        </p>
+        <p>
+          Your browser then processes resources such as HTML, CSS, JavaScript, images and fonts and
+          uses them to construct the page you see on your screen.
+        </p>
+
+        <div class="kva-lead">
+          <strong>The complete idea:</strong> You request information → the network finds the destination
+          → the server responds → data travels back → your browser turns that data into something you can use.
+        </div>
+      </section>
+
+      <section class="kva-section" aria-labelledby="real-life">
+        <h2 id="real-life">10. A Simple Real-Life Example</h2>
+        <p>
+          Imagine you open Saraswat Academy on your phone. Your phone sends a request through your
+          Wi-Fi or mobile connection. Network systems help identify the destination, routers forward
+          packets across interconnected networks, and the web server returns the website resources.
+        </p>
+
+        <div class="kva-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">What you see</th>
+                <th scope="col">What is happening behind the scenes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>You type a website address.</td><td>Your browser begins the process of locating and contacting the service.</td></tr>
+              <tr><td>The page starts loading.</td><td>Network requests and responses are travelling between your device and servers.</td></tr>
+              <tr><td>Images appear.</td><td>Additional resources have been requested and downloaded.</td></tr>
+              <tr><td>The page becomes usable.</td><td>Your browser has processed the received resources.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="kva-section" aria-labelledby="mistakes">
+        <h2 id="mistakes">11. Common Misconceptions</h2>
+        <ul class="kva-checklist">
+          <li>The internet is not the same thing as the World Wide Web. The web is one service that runs over the internet.</li>
+          <li>Your Wi-Fi router is not the internet itself; it connects your local network to wider networks.</li>
+          <li>There is no single cable carrying all internet traffic.</li>
+          <li>Websites are not stored inside your browser; browsers request resources from servers.</li>
+          <li>Data does not necessarily travel through exactly the same physical path every time.</li>
+          <li>DNS does not contain the entire webpage; it primarily helps resolve names to network addresses.</li>
+        </ul>
+      </section>
+
+      <section class="kva-section" aria-labelledby="revision">
+        <h2 id="revision">12. Quick Revision</h2>
+        <div class="kva-revision">
+          <p><strong>Internet:</strong> A global network of interconnected networks.</p>
+          <p><strong>Router:</strong> Forwards packets between networks.</p>
+          <p><strong>ISP:</strong> Provides connectivity between a user's network and wider internet infrastructure.</p>
+          <p><strong>IP address:</strong> A numerical network address used for communication and routing.</p>
+          <p><strong>DNS:</strong> Helps translate domain names into IP addresses.</p>
+          <p><strong>Packets:</strong> Smaller units used to carry data across networks.</p>
+          <p><strong>Server:</strong> A computer or system that provides a network service or resource.</p>
+          <p><strong>Browser:</strong> Software that requests and processes web resources and displays webpages.</p>
+        </div>
+      </section>
+
+      <section class="kva-section kva-faq" aria-labelledby="faq">
+        <h2 id="faq">13. Frequently Asked Questions</h2>
+
+        <details><summary>What is the internet?</summary><p>The internet is a global network of interconnected computer networks that exchange data using common communication protocols.</p></details>
+        <details><summary>How does a webpage reach my device?</summary><p>Your device sends a request through a local network and internet service provider. The request is routed across networks to a server, which sends data back to your device.</p></details>
+        <details><summary>What is an IP address?</summary><p>An IP address is a numerical address used to identify and route data to a device or network interface on an IP network.</p></details>
+        <details><summary>What does DNS do?</summary><p>DNS translates human-readable domain names such as example.com into IP addresses that computers use to locate services.</p></details>
+        <details><summary>What is a router?</summary><p>A router forwards data packets between networks and helps choose a path towards their destination.</p></details>
+        <details><summary>What are data packets?</summary><p>Data sent over the internet is commonly divided into smaller units called packets, which can be routed across networks and processed at the destination.</p></details>
+        <details><summary>Does the internet use only one cable?</summary><p>No. The internet is made from many interconnected networks using fibre-optic cables, wireless links, cellular networks, satellites and other technologies.</p></details>
+        <details><summary>Where are websites stored?</summary><p>Websites and their data are stored on servers, often located in data centres or distributed across multiple locations.</p></details>
+      </section>
+
+      <section class="kva-doubt">
+        <span class="kva-doubt-label">STILL CURIOUS?</span>
+        <h2>Ask Your Doubt</h2>
+        <p>If a networking or technology concept is still confusing, send your question to Saraswat Academy.</p>
+        <a href="/ask.html">🙋 Ask a Doubt</a>
+      </section>
+
+      <nav class="kva-bottom-nav" aria-label="Knowledge Vault navigation">
+        <a href="/knowledge-vault/index.html">← Back to Knowledge Vault</a>
+        <a href="/index.html">Saraswat Academy Home</a>
+      </nav>
+
+    </article>
+  </main>
+
+  <div id="footer"></div>
+</body>
+</html>
