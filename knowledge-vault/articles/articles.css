@@ -331,6 +331,28 @@
   text-decoration: underline;
 }
 
+/* KaTeX mathematics */
+.kva-formula .katex-display {
+  margin: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 0;
+}
+
+.kva-formula-small .katex-display {
+  text-align: left;
+}
+
+.kva-working .katex-display {
+  margin: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.kva-table-wrap .katex {
+  font-size: 1em;
+}
+
 /* Mobile */
 @media (max-width: 700px) {
   .kva-page {
