@@ -3,7 +3,7 @@
    Premium, responsive, page-scoped design
    ========================================================= */
 
-body.tuition-page {
+:is(body.tuition-page, body.tuition-form-page) {
   --tuition-navy: #07111f;
   --tuition-navy-2: #0b1728;
   --tuition-navy-3: #101f34;
@@ -29,30 +29,30 @@ body.tuition-page {
   overflow-x: hidden;
 }
 
-body.tuition-page *,
-body.tuition-page *::before,
-body.tuition-page *::after {
+:is(body.tuition-page, body.tuition-form-page) *,
+:is(body.tuition-page, body.tuition-form-page) *::before,
+:is(body.tuition-page, body.tuition-form-page) *::after {
   box-sizing: border-box;
 }
 
-body.tuition-page a {
+:is(body.tuition-page, body.tuition-form-page) a {
   color: inherit;
   text-decoration: none;
 }
 
-body.tuition-page button,
-body.tuition-page input,
-body.tuition-page select,
-body.tuition-page textarea {
+:is(body.tuition-page, body.tuition-form-page) button,
+:is(body.tuition-page, body.tuition-form-page) input,
+:is(body.tuition-page, body.tuition-form-page) select,
+:is(body.tuition-page, body.tuition-form-page) textarea {
   font: inherit;
 }
 
-body.tuition-page img {
+:is(body.tuition-page, body.tuition-form-page) img {
   max-width: 100%;
   height: auto;
 }
 
-body.tuition-page .container {
+:is(body.tuition-page, body.tuition-form-page) .container {
   width: min(1180px, calc(100% - 40px));
   margin-inline: auto;
 }
@@ -61,7 +61,7 @@ body.tuition-page .container {
    BREADCRUMB
    --------------------------------------------------------- */
 
-body.tuition-page .breadcrumb {
+:is(body.tuition-page, body.tuition-form-page) .breadcrumb {
   width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
   padding: 14px 0;
@@ -69,12 +69,12 @@ body.tuition-page .breadcrumb {
   font-size: 13px;
 }
 
-body.tuition-page .breadcrumb a {
+:is(body.tuition-page, body.tuition-form-page) .breadcrumb a {
   color: #aeb9c8;
   transition: color .2s ease;
 }
 
-body.tuition-page .breadcrumb a:hover {
+:is(body.tuition-page, body.tuition-form-page) .breadcrumb a:hover {
   color: var(--tuition-gold);
 }
 
@@ -82,12 +82,12 @@ body.tuition-page .breadcrumb a:hover {
    COMMON SECTIONS
    --------------------------------------------------------- */
 
-body.tuition-page .section {
+:is(body.tuition-page, body.tuition-form-page) .section {
   position: relative;
   padding: 88px 0;
 }
 
-body.tuition-page .eyebrow {
+:is(body.tuition-page, body.tuition-form-page) .eyebrow {
   margin-bottom: 12px;
   color: var(--tuition-gold);
   font-size: 12px;
@@ -97,7 +97,7 @@ body.tuition-page .eyebrow {
   text-transform: uppercase;
 }
 
-body.tuition-page .section-title {
+:is(body.tuition-page, body.tuition-form-page) .section-title {
   max-width: 800px;
   margin: 0;
   color: inherit;
@@ -108,7 +108,7 @@ body.tuition-page .section-title {
   line-height: 1.08;
 }
 
-body.tuition-page .section-intro {
+:is(body.tuition-page, body.tuition-form-page) .section-intro {
   max-width: 720px;
   margin: 17px 0 0;
   color: var(--tuition-muted);
@@ -119,21 +119,21 @@ body.tuition-page .section-intro {
    SERVICES
    --------------------------------------------------------- */
 
-body.tuition-page .services {
+:is(body.tuition-page, body.tuition-form-page) .services {
   background:
     radial-gradient(circle at 15% 10%, rgba(77, 156, 255, .12), transparent 32%),
     radial-gradient(circle at 90% 20%, rgba(245, 184, 61, .09), transparent 28%),
     var(--tuition-navy);
 }
 
-body.tuition-page .service-grid {
+:is(body.tuition-page, body.tuition-form-page) .service-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
   margin-top: 44px;
 }
 
-body.tuition-page .service-card {
+:is(body.tuition-page, body.tuition-form-page) .service-card {
   position: relative;
   min-height: 100%;
   padding: 34px;
@@ -145,7 +145,7 @@ body.tuition-page .service-card {
   transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
 
-body.tuition-page .service-card::after {
+:is(body.tuition-page, body.tuition-form-page) .service-card::after {
   position: absolute;
   right: -70px;
   bottom: -90px;
@@ -157,13 +157,13 @@ body.tuition-page .service-card::after {
   pointer-events: none;
 }
 
-body.tuition-page .service-card:hover {
+:is(body.tuition-page, body.tuition-form-page) .service-card:hover {
   transform: translateY(-6px);
   border-color: rgba(245,184,61,.35);
   box-shadow: var(--tuition-shadow);
 }
 
-body.tuition-page .service-icon {
+:is(body.tuition-page, body.tuition-form-page) .service-icon {
   display: grid;
   width: 58px;
   height: 58px;
@@ -175,7 +175,7 @@ body.tuition-page .service-icon {
   font-size: 26px;
 }
 
-body.tuition-page .service-card h3 {
+:is(body.tuition-page, body.tuition-form-page) .service-card h3 {
   margin: 0 0 10px;
   color: #fff;
   font-family: "Manrope", Arial, sans-serif;
@@ -183,13 +183,13 @@ body.tuition-page .service-card h3 {
   line-height: 1.25;
 }
 
-body.tuition-page .service-card p {
+:is(body.tuition-page, body.tuition-form-page) .service-card p {
   margin: 0;
   color: var(--tuition-muted);
   font-size: 15px;
 }
 
-body.tuition-page .service-list {
+:is(body.tuition-page, body.tuition-form-page) .service-list {
   display: grid;
   gap: 10px;
   margin: 23px 0 0;
@@ -197,12 +197,12 @@ body.tuition-page .service-list {
   list-style: none;
 }
 
-body.tuition-page .service-list li {
+:is(body.tuition-page, body.tuition-form-page) .service-list li {
   color: #d7e0eb;
   font-size: 14px;
 }
 
-body.tuition-page .service-list li::before {
+:is(body.tuition-page, body.tuition-form-page) .service-list li::before {
   margin-right: 10px;
   color: var(--tuition-green);
   content: "✓";
@@ -213,12 +213,12 @@ body.tuition-page .service-list li::before {
    HIRE / JOIN
    --------------------------------------------------------- */
 
-body.tuition-page .tutor-options {
+:is(body.tuition-page, body.tuition-form-page) .tutor-options {
   padding: 76px 0;
   background: #091525;
 }
 
-body.tuition-page .tutor-options-container {
+:is(body.tuition-page, body.tuition-form-page) .tutor-options-container {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
@@ -226,7 +226,7 @@ body.tuition-page .tutor-options-container {
   margin-inline: auto;
 }
 
-body.tuition-page .tutor-option-card {
+:is(body.tuition-page, body.tuition-form-page) .tutor-option-card {
   display: flex;
   gap: 24px;
   align-items: flex-start;
@@ -237,21 +237,21 @@ body.tuition-page .tutor-option-card {
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
-body.tuition-page .hire-card {
+:is(body.tuition-page, body.tuition-form-page) .hire-card {
   background: linear-gradient(135deg, #122d3b, #0e202f);
 }
 
-body.tuition-page .join-card {
+:is(body.tuition-page, body.tuition-form-page) .join-card {
   background: linear-gradient(135deg, #211d32, #151a2b);
 }
 
-body.tuition-page .tutor-option-card:hover {
+:is(body.tuition-page, body.tuition-form-page) .tutor-option-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--tuition-shadow);
   border-color: rgba(245,184,61,.3);
 }
 
-body.tuition-page .tutor-option-icon {
+:is(body.tuition-page, body.tuition-form-page) .tutor-option-icon {
   display: grid;
   flex: 0 0 58px;
   width: 58px;
@@ -263,11 +263,11 @@ body.tuition-page .tutor-option-icon {
   font-size: 25px;
 }
 
-body.tuition-page .tutor-option-content {
+:is(body.tuition-page, body.tuition-form-page) .tutor-option-content {
   min-width: 0;
 }
 
-body.tuition-page .tutor-option-label {
+:is(body.tuition-page, body.tuition-form-page) .tutor-option-label {
   display: inline-block;
   margin-bottom: 8px;
   color: var(--tuition-gold);
@@ -276,7 +276,7 @@ body.tuition-page .tutor-option-label {
   letter-spacing: .12em;
 }
 
-body.tuition-page .tutor-option-content h3 {
+:is(body.tuition-page, body.tuition-form-page) .tutor-option-content h3 {
   margin: 0 0 9px;
   color: #fff;
   font-family: "Manrope", Arial, sans-serif;
@@ -284,13 +284,13 @@ body.tuition-page .tutor-option-content h3 {
   line-height: 1.2;
 }
 
-body.tuition-page .tutor-option-content p {
+:is(body.tuition-page, body.tuition-form-page) .tutor-option-content p {
   margin: 0;
   color: #aab7c8;
   font-size: 14px;
 }
 
-body.tuition-page .tutor-option-content ul {
+:is(body.tuition-page, body.tuition-form-page) .tutor-option-content ul {
   display: grid;
   gap: 6px;
   margin: 17px 0 22px;
@@ -300,7 +300,7 @@ body.tuition-page .tutor-option-content ul {
   list-style: none;
 }
 
-body.tuition-page .tutor-option-btn {
+:is(body.tuition-page, body.tuition-form-page) .tutor-option-btn {
   display: inline-flex;
   gap: 9px;
   align-items: center;
@@ -313,7 +313,7 @@ body.tuition-page .tutor-option-btn {
   transition: transform .2s ease, background .2s ease;
 }
 
-body.tuition-page .tutor-option-btn:hover {
+:is(body.tuition-page, body.tuition-form-page) .tutor-option-btn:hover {
   transform: translateX(3px);
   background: var(--tuition-gold-2);
 }
@@ -322,23 +322,23 @@ body.tuition-page .tutor-option-btn:hover {
    WHY / DIFFERENCE
    --------------------------------------------------------- */
 
-body.tuition-page .difference {
+:is(body.tuition-page, body.tuition-form-page) .difference {
   background: var(--tuition-light);
   color: var(--tuition-dark);
 }
 
-body.tuition-page .difference .section-intro {
+:is(body.tuition-page, body.tuition-form-page) .difference .section-intro {
   color: var(--tuition-light-text);
 }
 
-body.tuition-page .difference-grid {
+:is(body.tuition-page, body.tuition-form-page) .difference-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 17px;
   margin-top: 43px;
 }
 
-body.tuition-page .difference-card {
+:is(body.tuition-page, body.tuition-form-page) .difference-card {
   padding: 27px;
   background: #fff;
   border: 1px solid #e5e9ef;
@@ -347,12 +347,12 @@ body.tuition-page .difference-card {
   transition: transform .22s ease, box-shadow .22s ease;
 }
 
-body.tuition-page .difference-card:hover {
+:is(body.tuition-page, body.tuition-form-page) .difference-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 38px rgba(27,43,64,.09);
 }
 
-body.tuition-page .difference-card .num {
+:is(body.tuition-page, body.tuition-form-page) .difference-card .num {
   color: #b07819;
   font-family: "Manrope", Arial, sans-serif;
   font-size: 11px;
@@ -360,7 +360,7 @@ body.tuition-page .difference-card .num {
   letter-spacing: .08em;
 }
 
-body.tuition-page .difference-card h3 {
+:is(body.tuition-page, body.tuition-form-page) .difference-card h3 {
   margin: 12px 0 7px;
   color: #152238;
   font-family: "Manrope", Arial, sans-serif;
@@ -368,7 +368,7 @@ body.tuition-page .difference-card h3 {
   line-height: 1.35;
 }
 
-body.tuition-page .difference-card p {
+:is(body.tuition-page, body.tuition-form-page) .difference-card p {
   margin: 0;
   color: #66748a;
   font-size: 14px;
@@ -378,28 +378,28 @@ body.tuition-page .difference-card p {
    PRICING
    --------------------------------------------------------- */
 
-body.tuition-page .rate-cards-section {
+:is(body.tuition-page, body.tuition-form-page) .rate-cards-section {
   padding: 92px 0;
   background:
     radial-gradient(circle at 85% 5%, rgba(77,156,255,.10), transparent 28%),
     #0b1627;
 }
 
-body.tuition-page .rate-header {
+:is(body.tuition-page, body.tuition-form-page) .rate-header {
   width: min(760px, calc(100% - 40px));
   margin: 0 auto 55px;
   text-align: center;
 }
 
-body.tuition-page .rate-kicker,
-body.tuition-page .category-label {
+:is(body.tuition-page, body.tuition-form-page) .rate-kicker,
+:is(body.tuition-page, body.tuition-form-page) .category-label {
   color: var(--tuition-gold);
   font-size: 11px;
   font-weight: 900;
   letter-spacing: .14em;
 }
 
-body.tuition-page .rate-header h2 {
+:is(body.tuition-page, body.tuition-form-page) .rate-header h2 {
   margin: 9px 0 12px;
   color: #fff;
   font-family: "Playfair Display", Georgia, serif;
@@ -407,18 +407,18 @@ body.tuition-page .rate-header h2 {
   line-height: 1.1;
 }
 
-body.tuition-page .rate-header p {
+:is(body.tuition-page, body.tuition-form-page) .rate-header p {
   margin: 0;
   color: var(--tuition-muted);
   font-size: 15px;
 }
 
-body.tuition-page .rate-category {
+:is(body.tuition-page, body.tuition-form-page) .rate-category {
   width: min(1180px, calc(100% - 40px));
   margin: 0 auto 54px;
 }
 
-body.tuition-page .category-heading {
+:is(body.tuition-page, body.tuition-form-page) .category-heading {
   display: flex;
   align-items: end;
   justify-content: space-between;
@@ -426,7 +426,7 @@ body.tuition-page .category-heading {
   margin-bottom: 22px;
 }
 
-body.tuition-page .category-heading h3 {
+:is(body.tuition-page, body.tuition-form-page) .category-heading h3 {
   margin: 5px 0 0;
   color: #fff;
   font-family: "Manrope", Arial, sans-serif;
@@ -434,28 +434,28 @@ body.tuition-page .category-heading h3 {
   line-height: 1.2;
 }
 
-body.tuition-page .category-heading > p {
+:is(body.tuition-page, body.tuition-form-page) .category-heading > p {
   margin: 0 0 2px;
   color: #9eacbd;
   font-size: 13px;
   text-align: right;
 }
 
-body.tuition-page .rate-slider-wrapper {
+:is(body.tuition-page, body.tuition-form-page) .rate-slider-wrapper {
   position: relative;
   display: flex;
   align-items: stretch;
   gap: 12px;
 }
 
-body.tuition-page .rate-slider {
+:is(body.tuition-page, body.tuition-form-page) .rate-slider {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 17px;
   width: 100%;
 }
 
-body.tuition-page .rate-card {
+:is(body.tuition-page, body.tuition-form-page) .rate-card {
   position: relative;
   display: flex;
   min-width: 0;
@@ -468,13 +468,13 @@ body.tuition-page .rate-card {
   box-shadow: 0 12px 35px rgba(0,0,0,.14);
 }
 
-body.tuition-page .rate-card.featured {
+:is(body.tuition-page, body.tuition-form-page) .rate-card.featured {
   border-color: rgba(245,184,61,.5);
   background: linear-gradient(155deg, #24334a, #17243a);
   box-shadow: 0 20px 55px rgba(245,184,61,.08);
 }
 
-body.tuition-page .popular-tag {
+:is(body.tuition-page, body.tuition-form-page) .popular-tag {
   position: absolute;
   top: 0;
   right: 0;
@@ -487,21 +487,21 @@ body.tuition-page .popular-tag {
   letter-spacing: .08em;
 }
 
-body.tuition-page .rate-card-top h4 {
+:is(body.tuition-page, body.tuition-form-page) .rate-card-top h4 {
   margin: 0 0 5px;
   color: #fff;
   font-family: "Manrope", Arial, sans-serif;
   font-size: 19px;
 }
 
-body.tuition-page .rate-card-top p {
+:is(body.tuition-page, body.tuition-form-page) .rate-card-top p {
   margin: 0;
   min-height: 42px;
   color: #9eacbd;
   font-size: 12px;
 }
 
-body.tuition-page .rate-price {
+:is(body.tuition-page, body.tuition-form-page) .rate-price {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
@@ -511,24 +511,24 @@ body.tuition-page .rate-price {
   border-bottom: 1px solid var(--tuition-line);
 }
 
-body.tuition-page .rate-price strong {
+:is(body.tuition-page, body.tuition-form-page) .rate-price strong {
   color: #fff;
   font-family: "Manrope", Arial, sans-serif;
   font-size: 33px;
   line-height: 1;
 }
 
-body.tuition-page .rate-price span {
+:is(body.tuition-page, body.tuition-form-page) .rate-price span {
   color: #9eacbd;
   font-size: 11px;
 }
 
-body.tuition-page .rate-price .currency {
+:is(body.tuition-page, body.tuition-form-page) .rate-price .currency {
   color: var(--tuition-gold-2);
   font-weight: 700;
 }
 
-body.tuition-page .rate-card ul {
+:is(body.tuition-page, body.tuition-form-page) .rate-card ul {
   display: grid;
   flex: 1;
   gap: 9px;
@@ -539,8 +539,8 @@ body.tuition-page .rate-card ul {
   list-style: none;
 }
 
-body.tuition-page .rate-btn,
-body.tuition-page .btn-gold {
+:is(body.tuition-page, body.tuition-form-page) .rate-btn,
+:is(body.tuition-page, body.tuition-form-page) .btn-gold {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -556,14 +556,14 @@ body.tuition-page .btn-gold {
   transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
 }
 
-body.tuition-page .rate-btn:hover,
-body.tuition-page .btn-gold:hover {
+:is(body.tuition-page, body.tuition-form-page) .rate-btn:hover,
+:is(body.tuition-page, body.tuition-form-page) .btn-gold:hover {
   transform: translateY(-2px);
   background: var(--tuition-gold-2);
   box-shadow: 0 10px 25px rgba(245,184,61,.18);
 }
 
-body.tuition-page .rate-arrow {
+:is(body.tuition-page, body.tuition-form-page) .rate-arrow {
   display: none;
   width: 40px;
   min-width: 40px;
@@ -575,7 +575,7 @@ body.tuition-page .rate-arrow {
   cursor: pointer;
 }
 
-body.tuition-page .rate-arrow:hover {
+:is(body.tuition-page, body.tuition-form-page) .rate-arrow:hover {
   background: var(--tuition-gold);
   color: #172238;
 }
@@ -584,48 +584,48 @@ body.tuition-page .rate-arrow:hover {
    CLASSES / SUBJECTS
    --------------------------------------------------------- */
 
-body.tuition-page .classes {
+:is(body.tuition-page, body.tuition-form-page) .classes {
   background: #0a1525;
 }
 
-body.tuition-page .subjects-covered {
+:is(body.tuition-page, body.tuition-form-page) .subjects-covered {
   margin-top: 45px;
 }
 
-body.tuition-page .subjects-covered > h3 {
+:is(body.tuition-page, body.tuition-form-page) .subjects-covered > h3 {
   margin: 0 0 18px;
   color: #fff;
   font-family: "Manrope", Arial, sans-serif;
   font-size: 24px;
 }
 
-body.tuition-page .subject-sections {
+:is(body.tuition-page, body.tuition-form-page) .subject-sections {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 15px;
 }
 
-body.tuition-page .subject-group {
+:is(body.tuition-page, body.tuition-form-page) .subject-group {
   padding: 23px;
   background: rgba(255,255,255,.035);
   border: 1px solid var(--tuition-line);
   border-radius: 16px;
 }
 
-body.tuition-page .subject-group h3 {
+:is(body.tuition-page, body.tuition-form-page) .subject-group h3 {
   margin: 0 0 15px;
   color: #eaf0f7;
   font-family: "Manrope", Arial, sans-serif;
   font-size: 16px;
 }
 
-body.tuition-page .subject-list {
+:is(body.tuition-page, body.tuition-form-page) .subject-list {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
 }
 
-body.tuition-page .subject-list span {
+:is(body.tuition-page, body.tuition-form-page) .subject-list span {
   padding: 6px 10px;
   background: rgba(255,255,255,.055);
   border: 1px solid rgba(255,255,255,.08);
@@ -638,39 +638,39 @@ body.tuition-page .subject-list span {
    PROCESS
    --------------------------------------------------------- */
 
-body.tuition-page .process {
+:is(body.tuition-page, body.tuition-form-page) .process {
   background: #07111f;
 }
 
-body.tuition-page .process-grid {
+:is(body.tuition-page, body.tuition-form-page) .process-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 15px;
   margin-top: 45px;
 }
 
-body.tuition-page .process-step {
+:is(body.tuition-page, body.tuition-form-page) .process-step {
   padding: 26px;
   background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.015));
   border-top: 2px solid rgba(245,184,61,.45);
   border-radius: 0 0 15px 15px;
 }
 
-body.tuition-page .process-step .number {
+:is(body.tuition-page, body.tuition-form-page) .process-step .number {
   color: var(--tuition-gold);
   font-family: "Playfair Display", Georgia, serif;
   font-size: 38px;
   line-height: 1;
 }
 
-body.tuition-page .process-step h3 {
+:is(body.tuition-page, body.tuition-form-page) .process-step h3 {
   margin: 12px 0 7px;
   color: #fff;
   font-family: "Manrope", Arial, sans-serif;
   font-size: 16px;
 }
 
-body.tuition-page .process-step p {
+:is(body.tuition-page, body.tuition-form-page) .process-step p {
   margin: 0;
   color: var(--tuition-muted);
   font-size: 13px;
@@ -680,34 +680,34 @@ body.tuition-page .process-step p {
    PARENT
    --------------------------------------------------------- */
 
-body.tuition-page .parent {
+:is(body.tuition-page, body.tuition-form-page) .parent {
   background: var(--tuition-light);
   color: var(--tuition-dark);
 }
 
-body.tuition-page .parent .section-title {
+:is(body.tuition-page, body.tuition-form-page) .parent .section-title {
   color: var(--tuition-dark);
 }
 
-body.tuition-page .parent-grid {
+:is(body.tuition-page, body.tuition-form-page) .parent-grid {
   display: grid;
   grid-template-columns: .9fr 1.1fr;
   gap: 65px;
   align-items: center;
 }
 
-body.tuition-page .parent-list {
+:is(body.tuition-page, body.tuition-form-page) .parent-list {
   display: grid;
   gap: 19px;
   margin-top: 29px;
 }
 
-body.tuition-page .parent-list article {
+:is(body.tuition-page, body.tuition-form-page) .parent-list article {
   display: flex;
   gap: 12px;
 }
 
-body.tuition-page .check {
+:is(body.tuition-page, body.tuition-form-page) .check {
   display: grid;
   width: 28px;
   height: 28px;
@@ -719,20 +719,20 @@ body.tuition-page .check {
   font-weight: 900;
 }
 
-body.tuition-page .parent-list h3 {
+:is(body.tuition-page, body.tuition-form-page) .parent-list h3 {
   margin: 0;
   color: #172238;
   font-family: "Manrope", Arial, sans-serif;
   font-size: 16px;
 }
 
-body.tuition-page .parent-list p {
+:is(body.tuition-page, body.tuition-form-page) .parent-list p {
   margin: 2px 0 0;
   color: #69778a;
   font-size: 13px;
 }
 
-body.tuition-page .parent-quote {
+:is(body.tuition-page, body.tuition-form-page) .parent-quote {
   padding: 44px;
   background: #fff;
   border: 1px solid #e3e8ee;
@@ -741,7 +741,7 @@ body.tuition-page .parent-quote {
   box-shadow: 0 20px 55px rgba(31,37,48,.08);
 }
 
-body.tuition-page .parent-quote p {
+:is(body.tuition-page, body.tuition-form-page) .parent-quote p {
   margin: 0;
   color: #172238;
   font-family: "Playfair Display", Georgia, serif;
@@ -749,7 +749,7 @@ body.tuition-page .parent-quote p {
   line-height: 1.35;
 }
 
-body.tuition-page .parent-quote small {
+:is(body.tuition-page, body.tuition-form-page) .parent-quote small {
   display: block;
   margin-top: 17px;
   color: #7a8797;
@@ -759,27 +759,27 @@ body.tuition-page .parent-quote small {
    ENQUIRY
    --------------------------------------------------------- */
 
-body.tuition-page .enquiry {
+:is(body.tuition-page, body.tuition-form-page) .enquiry {
   background:
     radial-gradient(circle at 80% 15%, rgba(77,156,255,.11), transparent 30%),
     #0d192a;
 }
 
-body.tuition-page .enquiry-grid {
+:is(body.tuition-page, body.tuition-form-page) .enquiry-grid {
   display: grid;
   grid-template-columns: .72fr 1.28fr;
   gap: 22px;
   margin-top: 42px;
 }
 
-body.tuition-page .contact-card {
+:is(body.tuition-page, body.tuition-form-page) .contact-card {
   padding: 34px;
   background: linear-gradient(145deg, #172941, #101d30);
   border: 1px solid var(--tuition-line);
   border-radius: 20px;
 }
 
-body.tuition-page .contact-card h3 {
+:is(body.tuition-page, body.tuition-form-page) .contact-card h3 {
   margin: 0;
   color: #fff;
   font-family: "Playfair Display", Georgia, serif;
@@ -787,28 +787,28 @@ body.tuition-page .contact-card h3 {
   line-height: 1.12;
 }
 
-body.tuition-page .contact-card > p {
+:is(body.tuition-page, body.tuition-form-page) .contact-card > p {
   margin: 13px 0 27px;
   color: var(--tuition-muted);
   font-size: 14px;
 }
 
-body.tuition-page .contact-info {
+:is(body.tuition-page, body.tuition-form-page) .contact-info {
   display: grid;
   gap: 17px;
 }
 
-body.tuition-page .contact-info a {
+:is(body.tuition-page, body.tuition-form-page) .contact-info a {
   display: flex;
   gap: 12px;
   align-items: flex-start;
 }
 
-body.tuition-page .contact-info a:hover .contact-text strong {
+:is(body.tuition-page, body.tuition-form-page) .contact-info a:hover .contact-text strong {
   color: var(--tuition-gold);
 }
 
-body.tuition-page .contact-icon {
+:is(body.tuition-page, body.tuition-form-page) .contact-icon {
   display: grid;
   width: 42px;
   height: 42px;
@@ -819,7 +819,7 @@ body.tuition-page .contact-icon {
   border-radius: 11px;
 }
 
-body.tuition-page .contact-text strong {
+:is(body.tuition-page, body.tuition-form-page) .contact-text strong {
   display: block;
   color: #f0f4f9;
   font-family: "Manrope", Arial, sans-serif;
@@ -827,13 +827,13 @@ body.tuition-page .contact-text strong {
   transition: color .2s ease;
 }
 
-body.tuition-page .contact-text span {
+:is(body.tuition-page, body.tuition-form-page) .contact-text span {
   display: block;
   color: #9aa9bb;
   font-size: 12px;
 }
 
-body.tuition-page .form-card {
+:is(body.tuition-page, body.tuition-form-page) .form-card {
   padding: 33px;
   background: #fff;
   color: #172238;
@@ -841,33 +841,33 @@ body.tuition-page .form-card {
   box-shadow: 0 20px 60px rgba(0,0,0,.15);
 }
 
-body.tuition-page .form-card h3 {
+:is(body.tuition-page, body.tuition-form-page) .form-card h3 {
   margin: 0;
   font-family: "Manrope", Arial, sans-serif;
   font-size: 24px;
 }
 
-body.tuition-page .form-card > p {
+:is(body.tuition-page, body.tuition-form-page) .form-card > p {
   margin: 5px 0 25px;
   color: #718096;
   font-size: 13px;
 }
 
-body.tuition-page .form-grid {
+:is(body.tuition-page, body.tuition-form-page) .form-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
-body.tuition-page .field {
+:is(body.tuition-page, body.tuition-form-page) .field {
   min-width: 0;
 }
 
-body.tuition-page .field.full {
+:is(body.tuition-page, body.tuition-form-page) .field.full {
   grid-column: 1 / -1;
 }
 
-body.tuition-page .field label {
+:is(body.tuition-page, body.tuition-form-page) .field label {
   display: block;
   margin-bottom: 6px;
   color: #26354a;
@@ -875,9 +875,9 @@ body.tuition-page .field label {
   font-weight: 800;
 }
 
-body.tuition-page .field input,
-body.tuition-page .field select,
-body.tuition-page .field textarea {
+:is(body.tuition-page, body.tuition-form-page) .field input,
+:is(body.tuition-page, body.tuition-form-page) .field select,
+:is(body.tuition-page, body.tuition-form-page) .field textarea {
   width: 100%;
   padding: 11px 12px;
   background: #f8fafc;
@@ -888,30 +888,30 @@ body.tuition-page .field textarea {
   transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
 }
 
-body.tuition-page .field input,
-body.tuition-page .field select {
+:is(body.tuition-page, body.tuition-form-page) .field input,
+:is(body.tuition-page, body.tuition-form-page) .field select {
   min-height: 44px;
 }
 
-body.tuition-page .field textarea {
+:is(body.tuition-page, body.tuition-form-page) .field textarea {
   min-height: 115px;
   resize: vertical;
 }
 
-body.tuition-page .field input::placeholder,
-body.tuition-page .field textarea::placeholder {
+:is(body.tuition-page, body.tuition-form-page) .field input::placeholder,
+:is(body.tuition-page, body.tuition-form-page) .field textarea::placeholder {
   color: #9aa6b5;
 }
 
-body.tuition-page .field input:focus,
-body.tuition-page .field select:focus,
-body.tuition-page .field textarea:focus {
+:is(body.tuition-page, body.tuition-form-page) .field input:focus,
+:is(body.tuition-page, body.tuition-form-page) .field select:focus,
+:is(body.tuition-page, body.tuition-form-page) .field textarea:focus {
   background: #fff;
   border-color: #d9a331;
   box-shadow: 0 0 0 3px rgba(245,184,61,.14);
 }
 
-body.tuition-page .form-submit {
+:is(body.tuition-page, body.tuition-form-page) .form-submit {
   margin-top: 19px;
 }
 
@@ -919,26 +919,26 @@ body.tuition-page .form-submit {
    FAQ
    --------------------------------------------------------- */
 
-body.tuition-page .faq {
+:is(body.tuition-page, body.tuition-form-page) .faq {
   background: #f6f8fa;
   color: var(--tuition-dark);
 }
 
-body.tuition-page .faq .section-title {
+:is(body.tuition-page, body.tuition-form-page) .faq .section-title {
   color: var(--tuition-dark);
 }
 
-body.tuition-page .faq-wrap {
+:is(body.tuition-page, body.tuition-form-page) .faq-wrap {
   max-width: 900px;
   margin-top: 38px;
   border-top: 1px solid #dfe5ec;
 }
 
-body.tuition-page .faq-item {
+:is(body.tuition-page, body.tuition-form-page) .faq-item {
   border-bottom: 1px solid #dfe5ec;
 }
 
-body.tuition-page .faq-q {
+:is(body.tuition-page, body.tuition-form-page) .faq-q {
   display: flex;
   width: 100%;
   align-items: center;
@@ -952,13 +952,13 @@ body.tuition-page .faq-q {
   text-align: left;
 }
 
-body.tuition-page .faq-question {
+:is(body.tuition-page, body.tuition-form-page) .faq-question {
   font-family: "Manrope", Arial, sans-serif;
   font-size: 15px;
   font-weight: 800;
 }
 
-body.tuition-page .faq-plus {
+:is(body.tuition-page, body.tuition-form-page) .faq-plus {
   display: grid;
   width: 30px;
   height: 30px;
@@ -971,13 +971,13 @@ body.tuition-page .faq-plus {
   transition: transform .2s ease, background .2s ease, color .2s ease;
 }
 
-body.tuition-page .faq-q:hover .faq-plus {
+:is(body.tuition-page, body.tuition-form-page) .faq-q:hover .faq-plus {
   background: var(--tuition-gold);
   border-color: var(--tuition-gold);
   color: #172238;
 }
 
-body.tuition-page .faq-a {
+:is(body.tuition-page, body.tuition-form-page) .faq-a {
   max-width: 820px;
   padding: 0 48px 20px 3px;
   color: #66748a;
@@ -988,48 +988,48 @@ body.tuition-page .faq-a {
    LEGACY / OPTIONAL TUITION COMPONENTS
    --------------------------------------------------------- */
 
-body.tuition-page .popular-articles,
-body.tuition-page .featured,
-body.tuition-page .final,
-body.tuition-page .areas,
-body.tuition-page .nda-bg,
-body.tuition-page .nep-bg,
-body.tuition-page .nobel-bg,
-body.tuition-page .zero-bg {
+:is(body.tuition-page, body.tuition-form-page) .popular-articles,
+:is(body.tuition-page, body.tuition-form-page) .featured,
+:is(body.tuition-page, body.tuition-form-page) .final,
+:is(body.tuition-page, body.tuition-form-page) .areas,
+:is(body.tuition-page, body.tuition-form-page) .nda-bg,
+:is(body.tuition-page, body.tuition-form-page) .nep-bg,
+:is(body.tuition-page, body.tuition-form-page) .nobel-bg,
+:is(body.tuition-page, body.tuition-form-page) .zero-bg {
   max-width: 1180px;
   margin-inline: auto;
 }
 
-body.tuition-page .popular-grid {
+:is(body.tuition-page, body.tuition-form-page) .popular-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
-body.tuition-page .popular-card {
+:is(body.tuition-page, body.tuition-form-page) .popular-card {
   overflow: hidden;
   background: #fff;
   border: 1px solid #e3e8ee;
   border-radius: 16px;
 }
 
-body.tuition-page .popular-card-content {
+:is(body.tuition-page, body.tuition-form-page) .popular-card-content {
   padding: 20px;
 }
 
-body.tuition-page .popular-card-top {
+:is(body.tuition-page, body.tuition-form-page) .popular-card-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
 }
 
-body.tuition-page .popular-icon {
+:is(body.tuition-page, body.tuition-form-page) .popular-icon {
   font-size: 24px;
 }
 
-body.tuition-page .popular-category,
-body.tuition-page .popular-tag {
+:is(body.tuition-page, body.tuition-form-page) .popular-category,
+:is(body.tuition-page, body.tuition-form-page) .popular-tag {
   color: #a87519;
   font-size: 10px;
   font-weight: 900;
@@ -1037,22 +1037,22 @@ body.tuition-page .popular-tag {
   text-transform: uppercase;
 }
 
-body.tuition-page .popular-heading {
+:is(body.tuition-page, body.tuition-form-page) .popular-heading {
   color: #172238;
   font-family: "Manrope", Arial, sans-serif;
 }
 
-body.tuition-page .popular-link {
+:is(body.tuition-page, body.tuition-form-page) .popular-link {
   color: #a87519;
   font-weight: 800;
 }
 
-body.tuition-page .popular-footer {
+:is(body.tuition-page, body.tuition-form-page) .popular-footer {
   margin-top: 25px;
   text-align: center;
 }
 
-body.tuition-page .popular-all-btn {
+:is(body.tuition-page, body.tuition-form-page) .popular-all-btn {
   display: inline-flex;
   padding: 11px 17px;
   background: #172238;
@@ -1062,19 +1062,19 @@ body.tuition-page .popular-all-btn {
   font-weight: 800;
 }
 
-body.tuition-page .category-heading,
-body.tuition-page .rate-header {
+:is(body.tuition-page, body.tuition-form-page) .category-heading,
+:is(body.tuition-page, body.tuition-form-page) .rate-header {
   position: relative;
 }
 
-body.tuition-page .final-box {
+:is(body.tuition-page, body.tuition-form-page) .final-box {
   padding: 40px;
   background: linear-gradient(135deg, #172b42, #101e31);
   border: 1px solid var(--tuition-line);
   border-radius: 20px;
 }
 
-body.tuition-page .currency {
+:is(body.tuition-page, body.tuition-form-page) .currency {
   white-space: nowrap;
 }
 
@@ -1082,15 +1082,15 @@ body.tuition-page .currency {
    ACCESSIBILITY / MOTION
    --------------------------------------------------------- */
 
-body.tuition-page :focus-visible {
+:is(body.tuition-page, body.tuition-form-page) :focus-visible {
   outline: 3px solid rgba(245,184,61,.65);
   outline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body.tuition-page *,
-  body.tuition-page *::before,
-  body.tuition-page *::after {
+  :is(body.tuition-page, body.tuition-form-page) *,
+  :is(body.tuition-page, body.tuition-form-page) *::before,
+  :is(body.tuition-page, body.tuition-form-page) *::after {
     scroll-behavior: auto !important;
     transition: none !important;
     animation: none !important;
@@ -1102,45 +1102,45 @@ body.tuition-page :focus-visible {
    --------------------------------------------------------- */
 
 @media (max-width: 900px) {
-  body.tuition-page .service-grid,
-  body.tuition-page .tutor-options-container,
-  body.tuition-page .enquiry-grid {
+  :is(body.tuition-page, body.tuition-form-page) .service-grid,
+  :is(body.tuition-page, body.tuition-form-page) .tutor-options-container,
+  :is(body.tuition-page, body.tuition-form-page) .enquiry-grid {
     grid-template-columns: 1fr;
   }
 
-  body.tuition-page .difference-grid {
+  :is(body.tuition-page, body.tuition-form-page) .difference-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  body.tuition-page .subject-sections {
+  :is(body.tuition-page, body.tuition-form-page) .subject-sections {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  body.tuition-page .process-grid {
+  :is(body.tuition-page, body.tuition-form-page) .process-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  body.tuition-page .parent-grid {
+  :is(body.tuition-page, body.tuition-form-page) .parent-grid {
     grid-template-columns: 1fr;
     gap: 38px;
   }
 
-  body.tuition-page .rate-slider {
+  :is(body.tuition-page, body.tuition-form-page) .rate-slider {
     grid-template-columns: repeat(3, minmax(280px, 1fr));
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: thin;
   }
 
-  body.tuition-page .rate-card {
+  :is(body.tuition-page, body.tuition-form-page) .rate-card {
     scroll-snap-align: start;
   }
 
-  body.tuition-page .rate-slider-wrapper {
+  :is(body.tuition-page, body.tuition-form-page) .rate-slider-wrapper {
     display: block;
   }
 
-  body.tuition-page .rate-arrow {
+  :is(body.tuition-page, body.tuition-form-page) .rate-arrow {
     position: absolute;
     z-index: 2;
     top: 50%;
@@ -1150,11 +1150,11 @@ body.tuition-page :focus-visible {
     transform: translateY(-50%);
   }
 
-  body.tuition-page .rate-prev {
+  :is(body.tuition-page, body.tuition-form-page) .rate-prev {
     left: -8px;
   }
 
-  body.tuition-page .rate-next {
+  :is(body.tuition-page, body.tuition-form-page) .rate-next {
     right: -8px;
   }
 }
@@ -1164,107 +1164,573 @@ body.tuition-page :focus-visible {
    --------------------------------------------------------- */
 
 @media (max-width: 640px) {
-  body.tuition-page .container,
-  body.tuition-page .tutor-options-container,
-  body.tuition-page .rate-category,
-  body.tuition-page .rate-header {
+  :is(body.tuition-page, body.tuition-form-page) .container,
+  :is(body.tuition-page, body.tuition-form-page) .tutor-options-container,
+  :is(body.tuition-page, body.tuition-form-page) .rate-category,
+  :is(body.tuition-page, body.tuition-form-page) .rate-header {
     width: min(100% - 28px, 1180px);
   }
 
-  body.tuition-page .section,
-  body.tuition-page .rate-cards-section {
+  :is(body.tuition-page, body.tuition-form-page) .section,
+  :is(body.tuition-page, body.tuition-form-page) .rate-cards-section {
     padding: 62px 0;
   }
 
-  body.tuition-page .breadcrumb {
+  :is(body.tuition-page, body.tuition-form-page) .breadcrumb {
     width: calc(100% - 28px);
     padding: 10px 0;
     font-size: 12px;
   }
 
-  body.tuition-page .section-title {
+  :is(body.tuition-page, body.tuition-form-page) .section-title {
     font-size: clamp(32px, 10vw, 43px);
   }
 
-  body.tuition-page .section-intro {
+  :is(body.tuition-page, body.tuition-form-page) .section-intro {
     font-size: 14px;
   }
 
-  body.tuition-page .service-card,
-  body.tuition-page .tutor-option-card,
-  body.tuition-page .contact-card,
-  body.tuition-page .form-card {
+  :is(body.tuition-page, body.tuition-form-page) .service-card,
+  :is(body.tuition-page, body.tuition-form-page) .tutor-option-card,
+  :is(body.tuition-page, body.tuition-form-page) .contact-card,
+  :is(body.tuition-page, body.tuition-form-page) .form-card {
     padding: 24px;
   }
 
-  body.tuition-page .tutor-option-card {
+  :is(body.tuition-page, body.tuition-form-page) .tutor-option-card {
     flex-direction: column;
   }
 
-  body.tuition-page .difference-grid,
-  body.tuition-page .subject-sections,
-  body.tuition-page .process-grid,
-  body.tuition-page .form-grid {
+  :is(body.tuition-page, body.tuition-form-page) .difference-grid,
+  :is(body.tuition-page, body.tuition-form-page) .subject-sections,
+  :is(body.tuition-page, body.tuition-form-page) .process-grid,
+  :is(body.tuition-page, body.tuition-form-page) .form-grid {
     grid-template-columns: 1fr;
   }
 
-  body.tuition-page .field.full {
+  :is(body.tuition-page, body.tuition-form-page) .field.full {
     grid-column: auto;
   }
 
-  body.tuition-page .category-heading {
+  :is(body.tuition-page, body.tuition-form-page) .category-heading {
     display: block;
   }
 
-  body.tuition-page .category-heading h3 {
+  :is(body.tuition-page, body.tuition-form-page) .category-heading h3 {
     font-size: 23px;
   }
 
-  body.tuition-page .category-heading > p {
+  :is(body.tuition-page, body.tuition-form-page) .category-heading > p {
     margin-top: 7px;
     text-align: left;
   }
 
-  body.tuition-page .rate-slider {
+  :is(body.tuition-page, body.tuition-form-page) .rate-slider {
     grid-template-columns: minmax(265px, 88vw);
     gap: 13px;
     padding: 2px 4px 12px;
   }
 
-  body.tuition-page .rate-card {
+  :is(body.tuition-page, body.tuition-form-page) .rate-card {
     padding: 23px;
   }
 
-  body.tuition-page .rate-price strong {
+  :is(body.tuition-page, body.tuition-form-page) .rate-price strong {
     font-size: 29px;
   }
 
-  body.tuition-page .parent-quote {
+  :is(body.tuition-page, body.tuition-form-page) .parent-quote {
     padding: 30px;
   }
 
-  body.tuition-page .parent-quote p {
+  :is(body.tuition-page, body.tuition-form-page) .parent-quote p {
     font-size: 25px;
   }
 
-  body.tuition-page .contact-card h3 {
+  :is(body.tuition-page, body.tuition-form-page) .contact-card h3 {
     font-size: 30px;
   }
 
-  body.tuition-page .form-card {
+  :is(body.tuition-page, body.tuition-form-page) .form-card {
     padding: 23px;
   }
 
-  body.tuition-page .faq-q {
+  :is(body.tuition-page, body.tuition-form-page) .faq-q {
     padding: 18px 0;
   }
 
-  body.tuition-page .faq-question {
+  :is(body.tuition-page, body.tuition-form-page) .faq-question {
     font-size: 14px;
   }
 
-  body.tuition-page .faq-a {
+  :is(body.tuition-page, body.tuition-form-page) .faq-a {
     padding-right: 28px;
     font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   FORM / REGISTRATION PAGES
+   Shared, page-scoped styles for:
+   - find-a-tutor.html
+   - join-as-a-tutor.html
+   ========================================================= */
+
+body.tuition-form-page {
+  --form-navy: #07111f;
+  --form-navy-2: #0d1b2d;
+  --form-card: #ffffff;
+  --form-text: #172238;
+  --form-muted: #68778b;
+  --form-line: #dfe5ec;
+  --form-gold: #f5b83d;
+  --form-gold-dark: #a87519;
+  margin: 0;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(77,156,255,.10), transparent 28%),
+    var(--form-navy);
+  color: #eaf0f7;
+  font-family: "DM Sans", Arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+body.tuition-form-page *,
+body.tuition-form-page *::before,
+body.tuition-form-page *::after {
+  box-sizing: border-box;
+}
+
+body.tuition-form-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body.tuition-form-page button,
+body.tuition-form-page input,
+body.tuition-form-page select,
+body.tuition-form-page textarea {
+  font: inherit;
+}
+
+body.tuition-form-page img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Shared area/resource sections on form pages */
+body.tuition-form-page .section {
+  position: relative;
+  padding: 82px 0;
+}
+
+body.tuition-form-page .container {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+body.tuition-form-page .section-title {
+  margin: 0;
+  color: #172238;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.08;
+}
+
+body.tuition-form-page .eyebrow {
+  margin-bottom: 10px;
+  color: var(--form-gold-dark);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+/* Find-a-tutor hero */
+body.tuition-form-page .hero,
+body.tuition-form-page .tutor-register-hero {
+  padding: 72px 20px 58px;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(245,184,61,.12), transparent 25%),
+    linear-gradient(145deg, #0b1728, #081321);
+}
+
+body.tuition-form-page .hero-inner {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+body.tuition-form-page .hero h1,
+body.tuition-form-page .tutor-register-hero h1 {
+  margin: 10px 0 14px;
+  color: #fff;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(42px, 7vw, 72px);
+  font-weight: 600;
+  letter-spacing: -.035em;
+  line-height: 1.05;
+}
+
+body.tuition-form-page .hero h1 span,
+body.tuition-form-page .tutor-register-hero h1 span {
+  color: var(--form-gold);
+}
+
+body.tuition-form-page .hero p,
+body.tuition-form-page .tutor-register-hero p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #aebaca;
+  font-size: 16px;
+}
+
+body.tuition-form-page .hero-note {
+  color: var(--form-gold);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+/* Find-a-tutor form */
+body.tuition-form-page .form-section,
+body.tuition-form-page .tutor-form-section {
+  padding: 70px 20px 82px;
+  background: #f5f7fa;
+  color: var(--form-text);
+}
+
+body.tuition-form-page .form-wrap,
+body.tuition-form-page .tutor-form-wrap {
+  width: min(920px, 100%);
+  margin: 0 auto;
+}
+
+body.tuition-form-page .form-card,
+body.tuition-form-page .tutor-form-card {
+  padding: clamp(24px, 4vw, 42px);
+  background: var(--form-card);
+  border: 1px solid #e1e6ed;
+  border-radius: 22px;
+  box-shadow: 0 22px 65px rgba(19,34,55,.10);
+}
+
+body.tuition-form-page .form-top,
+body.tuition-form-page .tutor-form-top {
+  margin-bottom: 28px;
+}
+
+body.tuition-form-page .form-top h2,
+body.tuition-form-page .tutor-form-top h2 {
+  margin: 0 0 8px;
+  color: var(--form-text);
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+body.tuition-form-page .form-top p,
+body.tuition-form-page .tutor-form-top p {
+  margin: 0;
+  color: var(--form-muted);
+  font-size: 14px;
+}
+
+body.tuition-form-page form {
+  width: 100%;
+}
+
+body.tuition-form-page .form-grid,
+body.tuition-form-page .tutor-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+body.tuition-form-page .form-group,
+body.tuition-form-page .tutor-form-group {
+  min-width: 0;
+  margin-bottom: 16px;
+}
+
+body.tuition-form-page .form-group.full-width,
+body.tuition-form-page .tutor-form-group.tutor-full {
+  grid-column: 1 / -1;
+}
+
+body.tuition-form-page .form-group label,
+body.tuition-form-page .tutor-form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #26354a;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+body.tuition-form-page .form-group input,
+body.tuition-form-page .form-group select,
+body.tuition-form-page .form-group textarea,
+body.tuition-form-page .tutor-form-group input:not([type="checkbox"]):not([type="radio"]),
+body.tuition-form-page .tutor-form-group select,
+body.tuition-form-page .tutor-form-group textarea {
+  width: 100%;
+  min-height: 45px;
+  padding: 11px 13px;
+  background: #f9fafc;
+  border: 1px solid #d8e0e8;
+  border-radius: 10px;
+  color: #18263a;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+body.tuition-form-page .form-group textarea,
+body.tuition-form-page .tutor-form-group textarea {
+  min-height: 115px;
+  resize: vertical;
+}
+
+body.tuition-form-page .form-group input:focus,
+body.tuition-form-page .form-group select:focus,
+body.tuition-form-page .form-group textarea:focus,
+body.tuition-form-page .tutor-form-group input:not([type="checkbox"]):not([type="radio"]):focus,
+body.tuition-form-page .tutor-form-group select:focus,
+body.tuition-form-page .tutor-form-group textarea:focus {
+  background: #fff;
+  border-color: #d9a331;
+  box-shadow: 0 0 0 3px rgba(245,184,61,.15);
+}
+
+body.tuition-form-page .form-submit {
+  margin-top: 9px;
+}
+
+body.tuition-form-page .submit-btn,
+body.tuition-form-page .cta-btn {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--form-gold);
+  color: #172238 !important;
+  cursor: pointer;
+  font-weight: 900;
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+}
+
+body.tuition-form-page .submit-btn:hover,
+body.tuition-form-page .cta-btn:hover {
+  transform: translateY(-2px);
+  background: #ffd66f;
+  box-shadow: 0 10px 25px rgba(245,184,61,.18);
+}
+
+/* Form section headings */
+body.tuition-form-page .tutor-section-title {
+  grid-column: 1 / -1;
+  margin: 28px 0 4px;
+  padding-bottom: 9px;
+  color: #172238;
+  border-bottom: 2px solid #edf0f4;
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+body.tuition-form-page .tutor-help {
+  display: block;
+  margin-top: 7px;
+  color: #7b8798;
+  font-size: 12px;
+}
+
+body.tuition-form-page .tutor-check {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  gap: 7px;
+  margin: 0 7px 8px 0;
+  padding: 7px 10px;
+  background: #f7f9fb;
+  border: 1px solid #e1e6ed;
+  border-radius: 8px;
+}
+
+body.tuition-form-page .tutor-check input {
+  width: auto;
+  min-height: auto;
+  accent-color: #d59d28;
+}
+
+body.tuition-form-page .tutor-check label {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Benefits */
+body.tuition-form-page .why-section,
+body.tuition-form-page .subjects-section,
+body.tuition-form-page .tutor-trust {
+  padding: 78px 20px;
+  background: #fff;
+  color: var(--form-text);
+}
+
+body.tuition-form-page .section-heading {
+  width: min(900px, 100%);
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+body.tuition-form-page .section-heading h2 {
+  margin: 0 0 10px;
+  color: #172238;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(32px, 5vw, 50px);
+  line-height: 1.1;
+}
+
+body.tuition-form-page .section-heading p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--form-muted);
+}
+
+body.tuition-form-page .benefit-grid,
+body.tuition-form-page .tutor-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+body.tuition-form-page .benefit,
+body.tuition-form-page .tutor-trust-card {
+  padding: 25px;
+  background: #f8fafc;
+  border: 1px solid #e3e8ef;
+  border-radius: 16px;
+}
+
+body.tuition-form-page .benefit-icon {
+  margin-bottom: 13px;
+  font-size: 25px;
+}
+
+body.tuition-form-page .benefit h3,
+body.tuition-form-page .tutor-trust-card h3 {
+  margin: 0 0 7px;
+  color: #172238;
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 17px;
+}
+
+body.tuition-form-page .benefit p,
+body.tuition-form-page .tutor-trust-card p {
+  margin: 0;
+  color: #68778b;
+  font-size: 13px;
+}
+
+body.tuition-form-page .subjects-section {
+  background: #f5f7fa;
+}
+
+body.tuition-form-page .subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  width: min(1050px, 100%);
+  margin: 0 auto;
+}
+
+body.tuition-form-page .subject {
+  padding: 8px 12px;
+  background: #fff;
+  border: 1px solid #dfe5ec;
+  border-radius: 8px;
+  color: #34445a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Tutor registration CTA */
+body.tuition-form-page .cta {
+  padding: 70px 20px;
+  background: #0b1728;
+  text-align: center;
+}
+
+body.tuition-form-page .cta h2 {
+  margin: 0 0 18px;
+  color: #fff;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 5vw, 48px);
+}
+
+body.tuition-form-page .cta p {
+  max-width: 680px;
+  margin: 0 auto 25px;
+  color: #aebaca;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  body.tuition-form-page .form-grid,
+  body.tuition-form-page .tutor-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.tuition-form-page .benefit-grid,
+  body.tuition-form-page .tutor-trust-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  body.tuition-form-page .hero,
+  body.tuition-form-page .tutor-register-hero {
+    padding: 54px 14px 45px;
+  }
+
+  body.tuition-form-page .form-section,
+  body.tuition-form-page .tutor-form-section,
+  body.tuition-form-page .why-section,
+  body.tuition-form-page .subjects-section,
+  body.tuition-form-page .tutor-trust {
+    padding: 55px 14px;
+  }
+
+  body.tuition-form-page .container {
+    width: min(100% - 28px, 1180px);
+  }
+
+  body.tuition-form-page .form-card,
+  body.tuition-form-page .tutor-form-card {
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+
+  body.tuition-form-page .benefit-grid,
+  body.tuition-form-page .tutor-trust-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.tuition-form-page .hero h1,
+  body.tuition-form-page .tutor-register-hero h1 {
+    font-size: clamp(38px, 13vw, 54px);
+  }
+
+  body.tuition-form-page .submit-btn,
+  body.tuition-form-page .cta-btn {
+    width: 100%;
   }
 }
