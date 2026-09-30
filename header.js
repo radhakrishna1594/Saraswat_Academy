@@ -55,68 +55,77 @@ document.addEventListener("click",function(e){
 /* =========================================================
    UNIVERSAL MATHEMATICS RENDERER
    Class 9 & Class 10 maths solution pages
-   Safe conversion: never turns normal prose into math.
    ========================================================= */
 (function () {
+    function isMathLine(text) {
+        var value = (text || "").replace(/\s+/g, " ").trim();
+        if (!value || value.length > 180) return false;
+
+        /* Never touch prose. */
+        if (/[.!?]{1}/.test(value) && /[A-Za-z]{2,}/.test(value)) return false;
+
+        var words = value.match(/[A-Za-z]+(?:'[A-Za-z]+)?/g) || [];
+        var allowedWords = /^(sin|cos|tan|cot|sec|cosec|log|ln|sqrt|sin|cos|tan)$/i;
+
+        for (var i = 0; i < words.length; i++) {
+            if (words[i].length > 1 && !allowedWords.test(words[i])) return false;
+        }
+
+        if (!/\d/.test(value)) return false;
+        if (!/[=+\-−×÷/^√<>≤≥%]|\b(sin|cos|tan|cot|sec|cosec)\b/i.test(value)) return false;
+
+        return true;
+    }
+
+    function toTex(text) {
+        var tex = text.trim()
+            .replace(/√\s*\(([^()]*)\)/g, "\\sqrt{$1}")
+            .replace(/√\s*([A-Za-z0-9]+)/g, "\\sqrt{$1}")
+            .replace(/×/g, "\\times ")
+            .replace(/÷/g, "\\div ")
+            .replace(/−/g, "-")
+            .replace(/≤/g, "\\le ")
+            .replace(/≥/g, "\\ge ")
+            .replace(/π/g, "\\pi ")
+            .replace(/(\d+(?:\.\d+)?)\s*°/g, "$1^\\circ")
+            .replace(/(\d+)\s*\/\s*(\d+)/g, "\\frac{$1}{$2}");
+
+        /* TeX ignores ordinary HTML whitespace in math. Use explicit spaces
+           only between tokens so equations remain readable. */
+        tex = tex.replace(/\s+/g, "\\ ");
+        return tex;
+    }
+
+    function render() {
+        if (!window.renderMathInElement) return;
+
+        var article = document.querySelector(".solution-article");
+        if (!article) return;
+
+        article.querySelectorAll("p, li, td, h3, h4").forEach(function (el) {
+            if (el.closest(".katex, .katex-display, script, style, nav, a, button, pre, code")) return;
+            if (el.querySelector(".katex")) return;
+
+            var text = (el.textContent || "").replace(/\s+/g, " ").trim();
+            if (!isMathLine(text)) return;
+
+            el.textContent = "\\(" + toTex(text) + "\\)";
+        });
+
+        renderMathInElement(article, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["katex", "katex-display"],
+            throwOnError: false,
+            output: "htmlAndMathml"
+        });
+    }
+
     function loadKaTeX() {
         if (!document.body || !document.body.classList.contains("solution-page")) return;
-
-        function render() {
-            if (!window.renderMathInElement) return;
-
-            var article = document.querySelector(".solution-article");
-            if (!article) return;
-
-            /*
-             * Convert only short, equation-like lines.
-             * The previous renderer converted complete English sentences
-             * containing numbers into math mode, which removed normal
-             * word spacing and caused text to run together on mobile.
-             */
-            article.querySelectorAll("p, li, td, h3, h4").forEach(function (el) {
-                if (el.closest(".katex, script, style, nav, a, button")) return;
-                if (el.querySelector(".katex")) return;
-
-                var text = (el.textContent || "").replace(/\s+/g, " ").trim();
-                if (!text || text.length > 180) return;
-
-                var wordTokens = text.match(/[A-Za-z]+(?:'[A-Za-z]+)?/g) || [];
-                var hasLongEnglishWord = wordTokens.some(function (word) {
-                    return word.length > 1;
-                });
-
-                /* Never convert ordinary English words into math. */
-                if (hasLongEnglishWord) return;
-                if (/^(solution|answer|therefore|hence|since|let|using|given|we know|now|here|for|from|thus|so|the|this|note|where|because)\b/i.test(text)) return;
-
-                var hasNumber = /\d/.test(text);
-                var hasMathOperator = /[=+\u2212\u00d7\u00f7/^√<>≤≥%]/.test(text);
-                if (!hasNumber || !hasMathOperator) return;
-
-                var tex = text
-                    .replace(/√\s*([A-Za-z0-9]+)/g, "\\sqrt{$1}")
-                    .replace(/×/g, "\\times ")
-                    .replace(/÷/g, "\\div ")
-                    .replace(/−/g, "-")
-                    .replace(/\bπ\b/g, "\\pi")
-                    .replace(/(\d)\s*°/g, "$1^\\circ")
-                    .replace(/(\d+)\s*\/\s*(\d+)/g, "\\frac{$1}{$2}");
-
-                /* Preserve spaces if an eligible expression contains them. */
-                tex = tex.replace(/\s+/g, "\\ ");
-                el.textContent = "\\(" + tex + "\\)";
-            });
-
-            renderMathInElement(article, {
-                delimiters: [
-                    { left: "$$", right: "$$", display: true },
-                    { left: "\\(", right: "\\)", display: false },
-                    { left: "\\[", right: "\\]", display: true }
-                ],
-                ignoredClasses: ["katex", "katex-display"],
-                throwOnError: false
-            });
-        }
 
         if (window.renderMathInElement) {
             render();
@@ -128,22 +137,24 @@ document.addEventListener("click",function(e){
             css.id = "saraswat-katex-css";
             css.rel = "stylesheet";
             css.href = "https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.css";
+            css.crossOrigin = "anonymous";
             document.head.appendChild(css);
         }
 
         if (!document.getElementById("saraswat-katex-js")) {
             var js = document.createElement("script");
             js.id = "saraswat-katex-js";
-            js.defer = true;
             js.src = "https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.js";
+            js.defer = true;
+            js.crossOrigin = "anonymous";
             document.head.appendChild(js);
         }
 
         if (!document.getElementById("saraswat-katex-render")) {
             var renderScript = document.createElement("script");
             renderScript.id = "saraswat-katex-render";
-            renderScript.defer = true;
             renderScript.src = "https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/contrib/auto-render.min.js";
+            renderScript.defer = true;
             renderScript.onload = render;
             document.head.appendChild(renderScript);
         }
