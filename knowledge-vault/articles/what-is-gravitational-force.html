@@ -15,10 +15,26 @@
   <link rel="stylesheet" href="/assets/styles.css">
   <link rel="stylesheet" href="/header.css">
   <link rel="stylesheet" href="/knowledge-vault/articles/articles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"></script>
 
   <script src="/loader.js"></script>
   <script src="/config.js"></script>
   <script src="/header.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.renderMathInElement) {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "\\[", right: "\\]", display: true },
+            { left: "\\(", right: "\\)", display: false }
+          ],
+          throwOnError: false
+        });
+      }
+    });
+  </script>
 </head>
 
 <body>
@@ -116,13 +132,13 @@
         </p>
 
         <div class="kva-formula">
-          <span>F = G m<sub>1</sub>m<sub>2</sub> / r<sup>2</sup></span>
+          \\[ F = G\\frac{m_1m_2}{r^2} \\]
         </div>
 
         <p>Here:</p>
         <ul>
           <li><strong>F</strong> = gravitational force between the two objects</li>
-          <li><strong>G</strong> = universal gravitational constant = 6.67 × 10<sup>−11</sup> N m<sup>2</sup>/kg<sup>2</sup></li>
+          <li><strong>G</strong> = universal gravitational constant = \\(6.67\\times10^{-11}\\,\\mathrm{N\\,m^2/kg^2}\\)</li>
           <li><strong>m<sub>1</sub></strong> and <strong>m<sub>2</sub></strong> = masses of the two objects</li>
           <li><strong>r</strong> = distance between the centres of the two objects</li>
         </ul>
@@ -184,12 +200,12 @@
         </p>
 
         <div class="kva-formula">
-          <span>g ≈ 9.8 m/s<sup>2</sup></span>
+          \\[ g \\approx 9.8\\,\\mathrm{m/s^2} \\]
         </div>
 
         <p>
-          Near the Earth's surface, we usually take <strong>g = 9.8 m/s<sup>2</sup></strong> unless
-          a question gives another value. In many school problems, <strong>g = 10 m/s<sup>2</sup></strong>
+          Near the Earth's surface, we usually take <strong>g = \\(9.8\\,\\mathrm{m/s^2}\\)</strong> unless
+          a question gives another value. In many school problems, <strong>g = \\(10\\,\\mathrm{m/s^2}\\)</strong>
           may be used to make calculations easier.
         </p>
 
@@ -199,7 +215,7 @@
         </p>
 
         <div class="kva-formula">
-          <span>W = mg</span>
+          \\[ W = mg \\]
         </div>
 
         <div class="kva-table-wrap">
@@ -244,7 +260,7 @@
           <h3>Numerical 1: Force between two masses</h3>
           <p>
             Two objects have masses 5 kg and 10 kg. Their centres are 2 m apart. Find the gravitational
-            force between them. Take G = 6.67 × 10<sup>−11</sup> N m<sup>2</sup>/kg<sup>2</sup>.
+            force between them. Take G = \\(6.67\\times10^{-11}\\,\\mathrm{N\\,m^2/kg^2}\\).
           </p>
 
           <p><strong>Given:</strong></p>
@@ -256,14 +272,20 @@
 
           <p><strong>Formula:</strong></p>
           <div class="kva-formula kva-formula-small">
-            F = Gm<sub>1</sub>m<sub>2</sub>/r<sup>2</sup>
+            \\(F = G\\frac{m_1m_2}{r^2}\\)
           </div>
 
           <p><strong>Substitution:</strong></p>
           <div class="kva-working">
-            F = (6.67 × 10<sup>−11</sup> × 5 × 10) / 2<sup>2</sup><br>
-            F = (6.67 × 10<sup>−11</sup> × 50) / 4<br>
-            F = 8.3375 × 10<sup>−10</sup> N
+            \\[
+              F = \\frac{6.67\\times10^{-11}\\times5\\times10}{2^2}
+            \\]
+            \\[
+              F = \\frac{6.67\\times10^{-11}\\times50}{4}
+            \\]
+            \\[
+              F = 8.3375\\times10^{-10}\\,\\mathrm{N}
+            \\]
           </div>
 
           <p><strong>Answer:</strong> The gravitational force is approximately <strong>8.34 × 10<sup>−10</sup> N</strong>.</p>
@@ -273,17 +295,21 @@
           <h3>Numerical 2: Finding the weight of a student</h3>
           <p>
             A student has a mass of 50 kg. Find the student's weight on Earth. Take
-            g = 9.8 m/s<sup>2</sup>.
+            g = \\(9.8\\,\\mathrm{m/s^2}\\).
           </p>
 
-          <p><strong>Given:</strong> m = 50 kg, g = 9.8 m/s<sup>2</sup></p>
+          <p><strong>Given:</strong> m = 50 kg, g = \\(9.8\\,\\mathrm{m/s^2}\\)</p>
 
           <p><strong>Formula:</strong></p>
           <div class="kva-formula kva-formula-small">W = mg</div>
 
           <div class="kva-working">
-            W = 50 × 9.8<br>
-            W = 490 N
+            \\[
+              W = 50\\times9.8
+            \\]
+            \\[
+              W = 490\\,\\mathrm{N}
+            \\]
           </div>
 
           <p><strong>Answer:</strong> The student's weight is <strong>490 N</strong>.</p>
@@ -297,15 +323,19 @@
           </p>
 
           <p>We know:</p>
-          <div class="kva-formula kva-formula-small">F ∝ 1/r<sup>2</sup></div>
+          <div class="kva-formula kva-formula-small">\\(F \\propto \\frac{1}{r^2}\\)</div>
 
           <p>
             If the new distance is 2r, then:
           </p>
 
           <div class="kva-working">
-            F' = F/(2)<sup>2</sup><br>
-            F' = F/4
+            \\[
+              F' = \\frac{F}{2^2}
+            \\]
+            \\[
+              F' = \\frac{F}{4}
+            \\]
           </div>
 
           <p><strong>Answer:</strong> The new gravitational force becomes <strong>one-fourth of the original force</strong>.</p>
@@ -323,12 +353,18 @@
           <p>Using W = mg:</p>
 
           <div class="kva-working">
-            g = W/m<br>
-            g = 196/20<br>
-            g = 9.8 m/s<sup>2</sup>
+            \\[
+              g = \\frac{W}{m}
+            \\]
+            \\[
+              g = \\frac{196}{20}
+            \\]
+            \\[
+              g = 9.8\\,\\mathrm{m/s^2}
+            \\]
           </div>
 
-          <p><strong>Answer:</strong> The acceleration due to gravity is <strong>9.8 m/s<sup>2</sup></strong>.</p>
+          <p><strong>Answer:</strong> The acceleration due to gravity is <strong>\\(9.8\\,\\mathrm{m/s^2}\\)</strong>.</p>
         </div>
       </section>
 
@@ -357,7 +393,7 @@
               </tr>
               <tr>
                 <td>Acceleration due to gravity</td>
-                <td>g ≈ 9.8 m/s<sup>2</sup> near Earth's surface</td>
+                <td>g ≈ \\(9.8\\,\\mathrm{m/s^2}\\) near Earth's surface</td>
                 <td>Free-fall calculations near Earth</td>
               </tr>
               <tr>
@@ -367,7 +403,7 @@
               </tr>
               <tr>
                 <td>Mass effect</td>
-                <td>F ∝ m<sub>1</sub>m<sub>2</sub></td>
+                <td>\\(F \\propto m_1m_2\\)</td>
                 <td>Questions involving change in masses</td>
               </tr>
             </tbody>
@@ -392,8 +428,8 @@
         <div class="kva-revision">
           <p><strong>Gravitational force:</strong> Attractive force between any two masses.</p>
           <p><strong>Newton's law:</strong> F = Gm<sub>1</sub>m<sub>2</sub>/r<sup>2</sup>.</p>
-          <p><strong>Universal constant:</strong> G = 6.67 × 10<sup>−11</sup> N m<sup>2</sup>/kg<sup>2</sup>.</p>
-          <p><strong>Acceleration due to gravity:</strong> g ≈ 9.8 m/s<sup>2</sup> near Earth's surface.</p>
+          <p><strong>Universal constant:</strong> G = \\(6.67\\times10^{-11}\\,\\mathrm{N\\,m^2/kg^2}\\).</p>
+          <p><strong>Acceleration due to gravity:</strong> g ≈ \\(9.8\\,\\mathrm{m/s^2}\\) near Earth's surface.</p>
           <p><strong>Weight:</strong> W = mg.</p>
           <p><strong>Key idea:</strong> More mass means more gravitational force; greater distance means less gravitational force.</p>
         </div>
@@ -414,7 +450,7 @@
 
         <details>
           <summary>What is the value of G?</summary>
-          <p>The universal gravitational constant is approximately 6.67 × 10<sup>−11</sup> N m<sup>2</sup>/kg<sup>2</sup>.</p>
+          <p>The universal gravitational constant is approximately \\(6.67\\times10^{-11}\\,\\mathrm{N\\,m^2/kg^2}\\).</p>
         </details>
 
         <details>
