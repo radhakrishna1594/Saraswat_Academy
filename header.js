@@ -80,10 +80,13 @@ document.addEventListener("click",function(e){
                 var text = (el.textContent || "").replace(/\s+/g, " ").trim();
                 if (!text || text.length > 180) return;
 
-                var wordCount = (text.match(/[A-Za-z]+(?:'[A-Za-z]+)?/g) || []).length;
+                var wordTokens = text.match(/[A-Za-z]+(?:'[A-Za-z]+)?/g) || [];
+                var hasLongEnglishWord = wordTokens.some(function (word) {
+                    return word.length > 1;
+                });
 
-                /* Never convert normal prose into math. */
-                if (wordCount > 6) return;
+                /* Never convert ordinary English words into math. */
+                if (hasLongEnglishWord) return;
                 if (/^(solution|answer|therefore|hence|since|let|using|given|we know|now|here|for|from|thus|so|the|this|note|where|because)\b/i.test(text)) return;
 
                 var hasNumber = /\d/.test(text);
@@ -99,6 +102,8 @@ document.addEventListener("click",function(e){
                     .replace(/(\d)\s*°/g, "$1^\\circ")
                     .replace(/(\d+)\s*\/\s*(\d+)/g, "\\frac{$1}{$2}");
 
+                /* Preserve spaces if an eligible expression contains them. */
+                tex = tex.replace(/\s+/g, "\\ ");
                 el.textContent = "\\(" + tex + "\\)";
             });
 
