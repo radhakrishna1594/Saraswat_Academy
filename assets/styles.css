@@ -939,3 +939,18 @@ picture img {
     padding: 14px 15px;
   }
 }
+
+
+/* Remove legacy yellow/cream inline panels from solution pages as well. */
+.solution-page [style*="background:#fff3e0"],
+.solution-page [style*="background: #fff3e0"],
+.solution-page [style*="background:#fff8e6"],
+.solution-page [style*="background: #fff8e6"],
+.solution-page [style*="background:#fff8eb"],
+.solution-page [style*="background: #fff8eb"],
+.solution-page [style*="background:#fff7e6"],
+.solution-page [style*="background: #fff7e6"] {
+  background: #ffffff !important;
+  border-color: #e4e9f0 !important;
+  color: #1f2937;
+}
