@@ -1079,80 +1079,119 @@ footer {
     color: #b45309;
 }
 
-/* Breadcrumb white chip */
-.breadcrumb {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 6px;
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   SARASWAT ACADEMY — UNIVERSAL BREADCRUMB
+   One consistent style and navigation treatment across pages.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
+.breadcrumb,
+nav[aria-label="Breadcrumb"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
 
-    background: #ffffff;
-    color: #374151;
+    margin: 0 0 18px !important;
+    padding: 9px 12px !important;
 
-    padding: 8px 0;
-    margin: 0;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05) !important;
 
-    border-radius: 4px;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1.6;
-
-    box-shadow: none;
+    color: #374151 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    line-height: 1.6 !important;
 }
 
-/* Breadcrumb links */
-.breadcrumb a {
-    color: #2563eb;
-    text-decoration: none;
-    white-space: normal;
-    overflow-wrap: anywhere;
-    transition: color 0.2s ease;
+.breadcrumb a,
+nav[aria-label="Breadcrumb"] a {
+    color: #2563eb !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
 }
 
-/* Hover effect */
-.breadcrumb a:hover {
-    color: #1d4ed8;
-    text-decoration: underline;
+.breadcrumb a:hover,
+nav[aria-label="Breadcrumb"] a:hover {
+    color: #1d4ed8 !important;
+    text-decoration: underline !important;
 }
 
-/* Arrow separators */
-.breadcrumb .separator {
-    color: #9ca3af;
-    font-size: 12px;
-    font-weight: 400;
-    flex-shrink: 0;
+.breadcrumb .separator,
+nav[aria-label="Breadcrumb"] .separator {
+    display: inline-flex !important;
+    align-items: center !important;
+    color: #9ca3af !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+    flex-shrink: 0 !important;
 }
 
-/* Current page */
-.breadcrumb .current {
-    color: #374151;
-    font-weight: 600;
+.breadcrumb .current,
+nav[aria-label="Breadcrumb"] .current {
+    color: #374151 !important;
+    font-weight: 600 !important;
+    overflow-wrap: anywhere !important;
 }
 
-/* Mobile view */
+/* Template breadcrumbs */
+nav[aria-label="Breadcrumb"] ol,
+nav[aria-label="Breadcrumb"] .sa-breadcrumb-list {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+nav[aria-label="Breadcrumb"] li {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 @media (max-width: 600px) {
-    .breadcrumb {
-        gap: 4px;
-        padding: 6px 0;
-        font-size: 11px;
-        line-height: 1.5;
+    .breadcrumb,
+    nav[aria-label="Breadcrumb"] {
+        gap: 4px !important;
+        margin-bottom: 14px !important;
+        padding: 7px 9px !important;
+        border-radius: 8px !important;
+        font-size: 11px !important;
+        line-height: 1.5 !important;
     }
 
-    .breadcrumb .separator {
-        font-size: 10px;
+    .breadcrumb .separator,
+    nav[aria-label="Breadcrumb"] .separator {
+        font-size: 14px !important;
+    }
+
+    nav[aria-label="Breadcrumb"] ol,
+    nav[aria-label="Breadcrumb"] .sa-breadcrumb-list,
+    nav[aria-label="Breadcrumb"] li {
+        gap: 4px !important;
     }
 }
 
-/* Very small mobile screens */
 @media (max-width: 360px) {
-    .breadcrumb {
-        gap: 3px;
-        font-size: 10px;
+    .breadcrumb,
+    nav[aria-label="Breadcrumb"] {
+        gap: 3px !important;
+        padding: 6px 8px !important;
+        font-size: 10px !important;
     }
 }
 
