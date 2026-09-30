@@ -1,49 +1,51 @@
 /* =========================================================
-   KNOWLEDGE VAULT — ARTICLE SYSTEM
-   One CSS file for every article page.
-   All selectors are scoped to .kva-* to avoid site conflicts.
+   KNOWLEDGE VAULT — SHARED ARTICLE CSS
+   Clean, responsive, non-sticky article system.
+   All selectors are scoped to .kva-*.
 ========================================================= */
 
 .kva-page {
   width: 100%;
   box-sizing: border-box;
-  padding: 20px 16px 70px;
+  padding: 18px 16px 72px;
 }
 
 .kva-article {
   width: 100%;
-  max-width: 1080px;
+  max-width: 1040px;
   margin: 0 auto;
 }
 
-/* Article hero — editorial design */
-.kva-article .kv-hero {
+/* ---------------------------------------------------------
+   Article hero
+--------------------------------------------------------- */
+
+.kva-hero {
   position: static !important;
+  top: auto !important;
+  bottom: auto !important;
   width: 100%;
-  max-width: none;
-  margin: 4px 0 56px;
+  margin: 8px 0 54px;
   padding: 0;
-  border-radius: 0;
   background: transparent;
-  color: #17365d;
-  overflow: visible;
 }
 
-.kva-article .kv-hero-inner {
+.kva-hero-inner {
+  position: static !important;
   max-width: 900px;
   margin: 0 auto;
-  padding: 48px 20px 42px;
-  text-align: center;
+  padding: 46px 28px 42px;
   border-top: 1px solid #e5e7eb;
   border-bottom: 1px solid #e5e7eb;
+  text-align: center;
 }
 
-.kva-article .kv-eyebrow {
+.kva-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  margin-bottom: 18px;
-  padding: 7px 13px;
+  margin-bottom: 20px;
+  padding: 7px 14px;
   border: 1px solid #dbe4ee;
   border-radius: 999px;
   background: #f8fafc;
@@ -51,28 +53,29 @@
   font-size: 11px;
   font-weight: 800;
   letter-spacing: .16em;
+  text-transform: uppercase;
 }
 
-.kva-article .kv-eyebrow::before,
-.kva-article .kv-eyebrow::after {
+.kva-eyebrow::before,
+.kva-eyebrow::after {
   content: "";
   width: 22px;
   height: 1px;
   background: #cbd5e1;
 }
 
-.kva-article .kv-hero h1 {
+.kva-hero h1 {
   max-width: 820px;
   margin: 0 auto 18px;
   color: #14213d;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.5rem, 6vw, 4.6rem);
+  font-size: clamp(2.5rem, 6vw, 4.4rem);
   font-weight: 500;
-  line-height: 1.05;
+  line-height: 1.06;
   letter-spacing: -.025em;
 }
 
-.kva-article .kv-hero p {
+.kva-hero-description {
   max-width: 760px;
   margin: 0 auto;
   color: #64748b;
@@ -80,17 +83,12 @@
   line-height: 1.85;
 }
 
-/* Main content */
-.kva-section {
-  margin: 0 0 46px;
-}
+/* ---------------------------------------------------------
+   Article content
+--------------------------------------------------------- */
 
-/* Keep article hero completely non-sticky */
-.kva-article .kv-hero,
-.kva-article .kv-hero-inner {
-  position: static !important;
-  top: auto !important;
-  bottom: auto !important;
+.kva-section {
+  margin: 0 0 48px;
 }
 
 .kva-section h2 {
@@ -102,7 +100,7 @@
 }
 
 .kva-section h3 {
-  margin: 28px 0 12px;
+  margin: 30px 0 12px;
   color: #17365d;
   font-size: 1.3rem;
   line-height: 1.4;
@@ -117,25 +115,30 @@
 
 .kva-section ul,
 .kva-section ol {
-  padding-left: 24px;
+  margin: 0 0 18px;
+  padding-left: 25px;
 }
 
 .kva-section li {
-  margin: 8px 0;
+  margin: 7px 0;
 }
 
 .kva-section strong {
   color: #1f2937;
 }
 
-/* Intro / information boxes */
+/* ---------------------------------------------------------
+   Information boxes
+--------------------------------------------------------- */
+
 .kva-lead,
 .kva-example,
 .kva-important {
-  margin: 0 0 24px;
-  padding: 18px 20px;
+  margin: 0 0 26px;
+  padding: 19px 21px;
+  border: 1px solid #e2e8f0;
   border-left: 4px solid #2563eb;
-  border-radius: 10px;
+  border-radius: 12px;
   background: #f8fafc;
   color: #334155;
   line-height: 1.75;
@@ -151,35 +154,70 @@
   background: #fffbeb;
 }
 
-/* Formulas */
-.kva-formula {
-  display: block;
-  margin: 22px 0;
-  padding: 18px 20px;
+/* ---------------------------------------------------------
+   KaTeX mathematics
+--------------------------------------------------------- */
+
+.kva-math-display {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 24px 0;
+  padding: 20px 18px;
   border: 1px solid #dbe4ee;
-  border-radius: 12px;
+  border-radius: 14px;
   background: #f8fafc;
   color: #17365d;
   text-align: center;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.2rem, 3vw, 1.6rem);
-  font-weight: 700;
-  line-height: 1.6;
   overflow-x: auto;
+  overflow-y: hidden;
 }
 
-.kva-formula-small {
-  font-size: 1.15rem;
+.kva-math-display .katex-display {
+  margin: 0;
+}
+
+.kva-math-display .katex {
+  font-size: clamp(1.15rem, 3vw, 1.55rem);
+}
+
+.kva-math-display.kva-math-left {
   text-align: left;
 }
 
-/* Tables */
+.kva-working {
+  margin: 18px 0;
+  padding: 18px 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #f8fafc;
+  overflow-x: auto;
+}
+
+.kva-working .kva-math-display {
+  margin: 0;
+  padding: 6px 0;
+  border: 0;
+  background: transparent;
+}
+
+.kva-working .katex-display {
+  text-align: left;
+}
+
+.kva-inline-math {
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------
+   Tables
+--------------------------------------------------------- */
+
 .kva-table-wrap {
   width: 100%;
   margin: 22px 0;
   overflow-x: auto;
   border: 1px solid #e5e7eb;
-  border-radius: 12px;
+  border-radius: 14px;
   background: #ffffff;
   -webkit-overflow-scrolling: touch;
 }
@@ -211,33 +249,35 @@
   border-bottom: 0;
 }
 
-/* Solved numerical / example cards */
+/* ---------------------------------------------------------
+   Numerical examples
+--------------------------------------------------------- */
+
 .kva-problem {
   margin: 28px 0;
-  padding: 25px;
+  padding: 26px;
   border: 1px solid #e2e8f0;
   border-radius: 16px;
   background: #ffffff;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, .05);
+  box-shadow: 0 7px 22px rgba(15, 23, 42, .045);
 }
 
 .kva-problem h3 {
   margin-top: 0;
 }
 
-.kva-working {
-  margin: 16px 0;
-  padding: 16px 18px;
+.kva-answer {
+  margin-top: 20px;
+  padding: 15px 17px;
   border-radius: 10px;
-  background: #f8fafc;
-  color: #1f2937;
-  font-family: "Courier New", monospace;
-  font-size: 15px;
-  line-height: 1.9;
-  overflow-x: auto;
+  background: #eff6ff;
+  color: #17365d;
 }
 
-/* Lists / revision */
+/* ---------------------------------------------------------
+   Revision and checklist
+--------------------------------------------------------- */
+
 .kva-checklist {
   margin: 0;
   padding: 22px 28px;
@@ -256,7 +296,10 @@
   margin: 9px 0;
 }
 
-/* FAQ */
+/* ---------------------------------------------------------
+   FAQ
+--------------------------------------------------------- */
+
 .kva-faq details {
   margin: 12px 0;
   border: 1px solid #e2e8f0;
@@ -271,7 +314,6 @@
   color: #17365d;
   font-weight: 800;
   line-height: 1.5;
-  list-style-position: inside;
 }
 
 .kva-faq details p {
@@ -279,22 +321,25 @@
   padding: 0 18px 18px;
 }
 
-/* Ask a doubt */
+/* ---------------------------------------------------------
+   Ask a doubt
+--------------------------------------------------------- */
+
 .kva-doubt {
-  margin: 54px 0 30px;
-  padding: 38px 28px;
+  margin: 58px 0 34px;
+  padding: 40px 28px;
   border-radius: 20px;
   background: linear-gradient(135deg, #172554, #1e3a8a);
   color: #ffffff;
   text-align: center;
 }
 
-.kva-doubt .kv-section-label {
+.kva-doubt-label {
   display: inline-block;
   color: #e8b254;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
-  letter-spacing: .15em;
+  letter-spacing: .16em;
 }
 
 .kva-doubt h2 {
@@ -321,20 +366,17 @@
   color: #17365d;
   font-weight: 800;
   text-decoration: none;
-  transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.kva-doubt a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
-}
+/* ---------------------------------------------------------
+   Navigation and accessibility
+--------------------------------------------------------- */
 
-/* Bottom navigation */
 .kva-bottom-nav {
   display: flex;
   justify-content: space-between;
   gap: 18px;
-  padding-top: 8px;
+  padding-top: 10px;
 }
 
 .kva-bottom-nav a {
@@ -344,68 +386,52 @@
   text-decoration: none;
 }
 
-.kva-bottom-nav a:hover {
+.kva-bottom-nav a:hover,
+.kva-doubt a:hover {
   text-decoration: underline;
 }
 
-/* Images added to future articles */
-.kva-article img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-
-.kva-figure {
-  margin: 26px 0;
-  text-align: center;
-}
-
-.kva-figure figcaption {
-  margin-top: 8px;
-  color: #64748b;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-/* Links inside article content */
-.kva-section a:not(.kva-bottom-nav a) {
+.kva-section a {
   color: #0d6efd;
 }
 
-.kva-section a:hover {
-  text-decoration: underline;
+.kva-section a:focus-visible,
+.kva-bottom-nav a:focus-visible,
+.kva-doubt a:focus-visible,
+.kva-faq summary:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, .3);
+  outline-offset: 3px;
 }
 
-/* KaTeX mathematics */
-.kva-formula .katex-display {
-  margin: 0;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 4px 0;
-}
+/* ---------------------------------------------------------
+   Responsive
+--------------------------------------------------------- */
 
-.kva-formula-small .katex-display {
-  text-align: left;
-}
-
-.kva-working .katex-display {
-  margin: 0;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-.kva-table-wrap .katex {
-  font-size: 1em;
-}
-
-/* Mobile */
 @media (max-width: 700px) {
   .kva-page {
-    padding: 12px 10px 50px;
+    padding: 12px 10px 52px;
+  }
+
+  .kva-hero {
+    margin-bottom: 42px;
+  }
+
+  .kva-hero-inner {
+    padding: 38px 15px 34px;
+  }
+
+  .kva-hero h1 {
+    font-size: clamp(2.25rem, 11vw, 3.2rem);
+    line-height: 1.08;
+  }
+
+  .kva-hero-description {
+    font-size: 15.5px;
+    line-height: 1.75;
   }
 
   .kva-section {
-    margin-bottom: 36px;
+    margin-bottom: 38px;
   }
 
   .kva-section p,
@@ -429,11 +455,11 @@
   }
 
   .kva-checklist {
-    padding: 18px 22px;
+    padding: 18px 21px;
   }
 
   .kva-doubt {
-    padding: 30px 20px;
+    padding: 31px 20px;
   }
 
   .kva-bottom-nav {
@@ -443,17 +469,26 @@
 
 @media (max-width: 480px) {
   .kva-page {
-    padding-left: 7px;
-    padding-right: 7px;
+    padding-left: 8px;
+    padding-right: 8px;
   }
 
-  .kva-formula {
-    font-size: 1.05rem;
-    padding: 15px;
+  .kva-eyebrow {
+    font-size: 9.5px;
+    letter-spacing: .12em;
+  }
+
+  .kva-math-display {
+    padding: 16px 12px;
   }
 
   .kva-working {
-    font-size: 13px;
-    padding: 14px;
+    padding: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kva-doubt a {
+    transition: none;
   }
 }
