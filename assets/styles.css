@@ -757,3 +757,185 @@ picture img {
         max-width: 100%;
     }
 }
+
+
+/* =========================================================
+   SOLUTION PAGES — CLEAN ANSWER SURFACE
+   Replaces the old cream/yellow solution-page treatment.
+   Applies to all pages using .solution-page.
+   ========================================================= */
+
+.solution-page {
+  --solution-bg: #f7f9fc;
+  --solution-surface: #ffffff;
+  --solution-border: #e4e9f0;
+  --solution-accent: #1e3a8a;
+  --solution-accent-2: #2563eb;
+  --solution-soft: #f5f8ff;
+  --solution-text: #1f2937;
+  --solution-muted: #64748b;
+  background: var(--solution-bg);
+  color: var(--solution-text);
+}
+
+/* The answer content currently sits inside .note-box.
+   Remove the old yellow/cream appearance globally on solution pages. */
+.solution-page .note-box {
+  margin-top: 8px;
+  padding: clamp(18px, 3vw, 34px);
+  background: var(--solution-surface);
+  border: 1px solid var(--solution-border);
+  border-left: 4px solid var(--solution-accent-2);
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+  color: var(--solution-text);
+  font-size: 15.5px;
+  line-height: 1.8;
+}
+
+/* Main article becomes a calm, editorial reading surface. */
+.solution-page .solution-article {
+  background: var(--solution-surface);
+  border: 1px solid var(--solution-border);
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.07);
+}
+
+/* Cleaner chapter heading hierarchy. */
+.solution-page .solution-article h1 {
+  color: #102a56;
+  letter-spacing: -0.02em;
+}
+
+.solution-page .solution-article h2 {
+  color: #173b75;
+  margin-top: 30px;
+  margin-bottom: 14px;
+}
+
+.solution-page .solution-article h3 {
+  color: #1e40af;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.solution-page .solution-article h4 {
+  color: #27364d;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  line-height: 1.55;
+}
+
+/* Answer text is easier to scan without the old yellow box. */
+.solution-page .solution-article p,
+.solution-page .solution-article li {
+  color: var(--solution-text);
+}
+
+.solution-page .solution-article p {
+  margin-bottom: 10px;
+}
+
+.solution-page .solution-article strong {
+  color: #172554;
+}
+
+/* Modern question/answer separators. */
+.solution-page .solution-article hr {
+  border: 0;
+  border-top: 1px solid #e8edf3;
+  margin: 26px 0;
+}
+
+/* Tables get a cleaner academic look. */
+.solution-page .solution-article table {
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid #dfe5ec;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.solution-page .solution-article th {
+  background: #173b75;
+  color: #fff;
+  border-color: #173b75;
+  font-weight: 700;
+}
+
+.solution-page .solution-article td {
+  background: #fff;
+  border-color: #e3e8ef;
+}
+
+.solution-page .solution-article tr:nth-child(even) td {
+  background: #f8fafc;
+}
+
+.solution-page .solution-article tr:hover td {
+  background: #f1f5f9;
+}
+
+/* Quoted textbook extracts. */
+.solution-page .solution-article blockquote {
+  margin: 20px 0;
+  padding: 18px 20px;
+  background: var(--solution-soft);
+  border-left: 4px solid var(--solution-accent-2);
+  border-radius: 10px;
+  color: #334155;
+}
+
+/* Meta pills match the new palette. */
+.solution-page .solution-meta span {
+  color: #173b75;
+  background: #f5f8ff;
+  border-color: #cbd8f5;
+}
+
+/* Breadcrumb becomes quieter so the lesson remains the focus. */
+.solution-page .breadcrumb {
+  color: var(--solution-muted);
+}
+
+.solution-page .breadcrumb a {
+  color: #2563eb;
+}
+
+/* Images inside solutions stay contained and polished. */
+.solution-page .solution-article img {
+  border-radius: 10px;
+}
+
+/* Mobile reading improvements. */
+@media (max-width: 768px) {
+  .solution-page .solution-article {
+    border-radius: 14px;
+    box-shadow: 0 6px 22px rgba(15, 23, 42, 0.06);
+  }
+
+  .solution-page .note-box {
+    padding: 18px 15px;
+    border-left-width: 3px;
+    border-radius: 12px;
+    font-size: 15px;
+  }
+
+  .solution-page .solution-article h1 {
+    font-size: 1.8rem;
+  }
+
+  .solution-page .solution-article h2 {
+    font-size: 1.45rem;
+  }
+
+  .solution-page .solution-article h3 {
+    font-size: 1.08rem;
+  }
+
+  .solution-page .solution-article blockquote {
+    padding: 14px 15px;
+  }
+}
