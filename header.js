@@ -55,6 +55,7 @@ document.addEventListener("click",function(e){
 /* =========================================================
    UNIVERSAL MATHEMATICS RENDERER
    Class 9 & Class 10 maths solution pages
+   Safe conversion: never turns normal prose into math.
    ========================================================= */
 (function () {
     function loadKaTeX() {
@@ -66,8 +67,12 @@ document.addEventListener("click",function(e){
             var article = document.querySelector(".solution-article");
             if (!article) return;
 
-            /* Convert common legacy/plain-text mathematical lines to TeX.
-               Existing KaTeX delimiters are left untouched. */
+            /*
+             * Convert only short, equation-like lines.
+             * The previous renderer converted complete English sentences
+             * containing numbers into math mode, which removed normal
+             * word spacing and caused text to run together on mobile.
+             */
             article.querySelectorAll("p, li, td, h3, h4").forEach(function (el) {
                 if (el.closest(".katex, script, style, nav, a, button")) return;
                 if (el.querySelector(".katex")) return;
@@ -75,31 +80,35 @@ document.addEventListener("click",function(e){
                 var text = (el.textContent || "").replace(/\s+/g, " ").trim();
                 if (!text || text.length > 180) return;
 
-                /* Do not turn ordinary explanatory sentences into equations. */
-                if (/^(solution|answer|therefore|hence|since|let|using|given|we know|now|here|for |from |thus|so |the |this |note|where |because )/i.test(text)) return;
+                var wordCount = (text.match(/[A-Za-z]+(?:'[A-Za-z]+)?/g) || []).length;
+
+                /* Never convert normal prose into math. */
+                if (wordCount > 6) return;
+                if (/^(solution|answer|therefore|hence|since|let|using|given|we know|now|here|for|from|thus|so|the|this|note|where|because)\b/i.test(text)) return;
 
                 var hasNumber = /\d/.test(text);
-                var hasMathOperator = /[=+\u2212\u00d7\u00f7\/^√<>≤≥%]/.test(text);
+                var hasMathOperator = /[=+\u2212\u00d7\u00f7/^√<>≤≥%]/.test(text);
                 if (!hasNumber || !hasMathOperator) return;
 
                 var tex = text
-                    .replace(/√\s*([A-Za-z0-9]+)/g, "\\\\sqrt{$1}")
-                    .replace(/×/g, "\\\\times ")
-                    .replace(/÷/g, "\\\\div ")
+                    .replace(/√\s*([A-Za-z0-9]+)/g, "\\sqrt{$1}")
+                    .replace(/×/g, "\\times ")
+                    .replace(/÷/g, "\\div ")
                     .replace(/−/g, "-")
-                    .replace(/\bπ\b/g, "\\\\pi")
-                    .replace(/(\d)\s*°/g, "$1^\\\\circ")
-                    .replace(/(\d+)\s*\/\s*(\d+)/g, "\\\\frac{$1}{$2}");
+                    .replace(/\bπ\b/g, "\\pi")
+                    .replace(/(\d)\s*°/g, "$1^\\circ")
+                    .replace(/(\d+)\s*\/\s*(\d+)/g, "\\frac{$1}{$2}");
 
-                el.textContent = "\\\\(" + tex + "\\\\)";
+                el.textContent = "\\(" + tex + "\\)";
             });
 
             renderMathInElement(article, {
                 delimiters: [
                     { left: "$$", right: "$$", display: true },
-                    { left: "\\\\(", right: "\\\\)", display: false },
-                    { left: "\\\\[", right: "\\\\]", display: true }
+                    { left: "\\(", right: "\\)", display: false },
+                    { left: "\\[", right: "\\]", display: true }
                 ],
+                ignoredClasses: ["katex", "katex-display"],
                 throwOnError: false
             });
         }
