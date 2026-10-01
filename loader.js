@@ -95,8 +95,50 @@ function removeStrayMetaText() {
     strayNodes.forEach(node => node.remove());
 }
 
+function getSiteBase() {
+    if (location.hostname.endsWith("github.io")) return "/Saraswat_Academy";
+    return "";
+}
+
+function ensureSharedStyles() {
+    if (!document.querySelector('link[data-saraswat-header-css]')) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = getSiteBase() + "/header.css";
+        link.dataset.saraswatHeaderCss = "true";
+        document.head.appendChild(link);
+    }
+}
+
+function ensureComponentTarget(id) {
+    if (!document.body) return null;
+    const nodes = Array.from(document.querySelectorAll("#" + id));
+    const insideBody = nodes.find(node => document.body.contains(node));
+    nodes.forEach(node => { if (node !== insideBody) node.remove(); });
+    if (insideBody) return insideBody;
+
+    // Legacy pages sometimes contain a complete inline <header>/<footer>
+    // instead of the shared component placeholder. Replace that old wrapper
+    // with the shared component target so the original site design stays
+    // consistent without producing duplicate headers or footers.
+    const legacy = document.body.querySelector(id === "header" ? "header" : "footer");
+    if (legacy) {
+        const target = document.createElement("div");
+        target.id = id;
+        legacy.replaceWith(target);
+        return target;
+    }
+
+    const target = document.createElement("div");
+    target.id = id;
+    if (id === "header") document.body.prepend(target);
+    else document.body.appendChild(target);
+    return target;
+}
+
 async function loadComponent(id, file) {
-    const response = await fetch(window.BASE_URL + "/" + file);
+    const base = window.BASE_URL || getSiteBase();
+    const response = await fetch(base + "/" + file);
 
     if (!response.ok) {
         console.error(file + " not found");
@@ -104,7 +146,7 @@ async function loadComponent(id, file) {
     }
 
     const html = await response.text();
-    const target = document.getElementById(id);
+    const target = ensureComponentTarget(id);
     if (!target) return;
 
     target.innerHTML = html;
@@ -118,11 +160,11 @@ async function loadComponent(id, file) {
 
 document.addEventListener("DOMContentLoaded", () => {
     removeStrayMetaText();
+    ensureSharedStyles();
     normalizeBreadcrumbs();
 
-    if (document.getElementById("header"))
-        loadComponent("header", "header.html");
-
-    if (document.getElementById("footer"))
-        loadComponent("footer", "footer.html");
+    // Keep the existing Saraswat Academy header/footer design everywhere.
+    // This also repairs legacy pages that have duplicate/missing containers.
+    loadComponent("header", "header.html");
+    loadComponent("footer", "footer.html");
 });
