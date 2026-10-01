@@ -11,9 +11,14 @@
 <link rel="icon" href="/favicon.png">
 <link rel="stylesheet" href="/assets/styles.css">
 <link rel="stylesheet" href="/header.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
 <script src="/config.js" defer></script>
 <script src="/header.js" defer></script>
 <script src="/loader.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
 <style>
 .chapter-page{max-width:1250px;margin:25px auto;padding:0 16px}
 .chapter-card{background:#fff;border-radius:14px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:22px}
@@ -117,5 +122,20 @@ th,td{border:1px solid #ccc;padding:9px;text-align:left}
 </section>
 </main>
 <div id="footer"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof renderMathInElement === "function") {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: "$", right: "$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+      ],
+      throwOnError: false
+    });
+  }
+});
+</script>
 </body>
 </html>
