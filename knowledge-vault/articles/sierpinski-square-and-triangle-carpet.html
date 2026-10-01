@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sierpiński Triangle and Square Carpet | Fractals Explained</title>
+  <meta name="description" content="Learn how the Sierpiński triangle and Sierpiński carpet are constructed, why they repeat the same pattern at smaller scales, and what makes these fractals mathematically fascinating.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Saraswat Academy">
+  <meta name="theme-color" content="#17365d">
+
+  <link rel="canonical" href="https://www.saraswatacademy.in/knowledge-vault/articles/sierpinski-square-and-triangle-carpet.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Saraswat Academy">
+  <meta property="og:title" content="Sierpiński Triangle and Square Carpet | Fractals Explained">
+  <meta property="og:description" content="A visual, student-friendly explanation of the Sierpiński triangle and Sierpiński carpet, including their recursive construction, patterns, formulas and real-world significance.">
+  <meta property="og:url" content="https://www.saraswatacademy.in/knowledge-vault/articles/sierpinski-square-and-triangle-carpet.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Sierpiński Triangle and Square Carpet">
+  <meta name="twitter:description" content="Understand two famous fractals through simple explanations and original mathematical diagrams.">
+
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/header.css">
+  <link rel="stylesheet" href="/knowledge-vault/articles/articles.css">
+
+  <style>
+    .sierpinski-visual {
+      margin: 1.75rem 0 2rem;
+      padding: 1rem;
+      border: 1px solid rgba(23,54,93,.14);
+      border-radius: 18px;
+      background: #f7faff;
+      overflow: hidden;
+    }
+    .sierpinski-visual svg {
+      display:block;
+      width:100%;
+      height:auto;
+      max-width:900px;
+      margin:auto;
+    }
+    .sierpinski-caption {
+      margin:.8rem auto 0;
+      max-width:760px;
+      text-align:center;
+      color:#5b6877;
+      font-size:.92rem;
+      line-height:1.6;
+    }
+    .sierpinski-grid {
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:1rem;
+      margin:1.4rem 0 2rem;
+    }
+    .sierpinski-box {
+      padding:1.15rem;
+      border:1px solid rgba(23,54,93,.12);
+      border-radius:16px;
+      background:#fff;
+    }
+    .sierpinski-box h3 { margin-top:0; }
+    .sierpinski-table {
+      width:100%;
+      border-collapse:collapse;
+      margin:1.2rem 0 2rem;
+      background:#fff;
+    }
+    .sierpinski-table th,
+    .sierpinski-table td {
+      border:1px solid #dbe3ec;
+      padding:.75rem;
+      text-align:left;
+    }
+    .sierpinski-table th { background:#f3f7fb; }
+    .sierpinski-highlight {
+      padding:1.1rem 1.2rem;
+      border-left:4px solid #17365d;
+      border-radius:10px;
+      background:#f3f7fb;
+      margin:1.3rem 0 1.8rem;
+    }
+    .sierpinski-facts {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:.8rem;
+      margin:1.25rem 0 2rem;
+    }
+    .sierpinski-fact {
+      padding:1rem;
+      border:1px solid #dfe7ef;
+      border-radius:14px;
+      background:#fff;
+    }
+    .sierpinski-fact strong { display:block; font-size:1.15rem; margin-bottom:.35rem; }
+    @media(max-width:760px){
+      .sierpinski-grid,.sierpinski-facts{grid-template-columns:1fr;}
+      .sierpinski-table{font-size:.9rem;}
+    }
+  </style>
+
+  <script src="/loader.js"></script>
+  <script src="/config.js"></script>
+  <script src="/header.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "@id":"https://www.saraswatacademy.in/knowledge-vault/articles/sierpinski-square-and-triangle-carpet.html#article",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.saraswatacademy.in/knowledge-vault/articles/sierpinski-square-and-triangle-carpet.html"},
+    "headline":"Sierpiński Triangle and Square Carpet",
+    "description":"A visual explanation of two famous recursive fractals: the Sierpiński triangle and Sierpiński carpet.",
+    "author":{"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},
+    "publisher":{"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},
+    "isPartOf":{"@type":"CollectionPage","name":"Knowledge Vault","url":"https://www.saraswatacademy.in/knowledge-vault/index.html"},
+    "about":[
+      {"@type":"Thing","name":"Sierpiński triangle"},
+      {"@type":"Thing","name":"Sierpiński carpet"},
+      {"@type":"Thing","name":"Fractal geometry"},
+      {"@type":"Thing","name":"Recursive geometry"}
+    ],
+    "learningResourceType":"Educational article",
+    "inLanguage":"en-IN"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.saraswatacademy.in/index.html"},
+      {"@type":"ListItem","position":2,"name":"Knowledge Vault","item":"https://www.saraswatacademy.in/knowledge-vault/index.html"},
+      {"@type":"ListItem","position":3,"name":"Sierpiński Triangle and Square Carpet","item":"https://www.saraswatacademy.in/knowledge-vault/articles/sierpinski-square-and-triangle-carpet.html"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What is the Sierpiński triangle?","acceptedAnswer":{"@type":"Answer","text":"The Sierpiński triangle is a recursive fractal made by starting with an equilateral triangle, dividing it into four congruent smaller triangles, removing the central one, and repeating the process on the three remaining triangles."}},
+      {"@type":"Question","name":"What is the Sierpiński carpet?","acceptedAnswer":{"@type":"Answer","text":"The Sierpiński carpet is a square-based fractal made by dividing a square into a 3 by 3 grid, removing the central square, and repeating the same operation on each of the eight remaining squares."}},
+      {"@type":"Question","name":"What makes these shapes fractals?","acceptedAnswer":{"@type":"Answer","text":"They are generated by repeating a rule at smaller scales, producing self-similar structure: parts of the figure resemble the whole figure."}},
+      {"@type":"Question","name":"Does the area of these fractals become zero?","acceptedAnswer":{"@type":"Answer","text":"For the limiting Sierpiński triangle and Sierpiński carpet, the remaining area tends to zero as the construction continues indefinitely, even though the figures retain intricate structure."}},
+      {"@type":"Question","name":"Where are Sierpiński patterns useful?","acceptedAnswer":{"@type":"Answer","text":"Sierpiński-type patterns are useful for studying recursion, self-similarity, fractal geometry, algorithms, computer graphics and mathematical models of complex structures."}}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <div class="breadcrumb">
+    <a href="/index.html">Home</a> →
+    <a href="/knowledge-vault/index.html">Knowledge Vault</a> →
+    <span class="current">Sierpiński Triangle &amp; Square Carpet</span>
+  </div>
+
+  <main class="kva-page">
+    <article class="kva-article">
+
+      <header class="kva-hero">
+        <div class="kva-hero-inner">
+          <span class="kva-eyebrow">Mathematics • Fractals</span>
+          <h1>Sierpiński Triangle and Square Carpet</h1>
+          <p class="kva-hero-description">
+            What happens when a simple geometric shape is repeatedly divided and parts of it are removed?
+            The answer is surprisingly beautiful: a fractal. The Sierpiński triangle and Sierpiński carpet
+            are two classic examples of this idea.
+          </p>
+        </div>
+      </header>
+
+      <section class="kva-section">
+        <div class="kva-lead">
+          <strong>In simple words:</strong> A Sierpiński fractal is created by following the same geometric
+          rule again and again at smaller and smaller scales.
+        </div>
+
+        <h2>1. What is a fractal?</h2>
+        <p>
+          A fractal is a mathematical pattern that can show similar structure at different scales.
+          Instead of drawing a complicated shape all at once, we can often create it by repeating
+          a simple rule.
+        </p>
+        <p>
+          Think about a photograph of a tree. A large branch divides into smaller branches, and those
+          smaller branches divide again. A mathematical fractal uses a precise rule to create a similar
+          kind of repeated structure.
+        </p>
+
+        <div class="sierpinski-highlight">
+          <strong>The key idea is recursion.</strong>
+          <p>
+            Recursion means that after completing one step, we apply the same rule to the smaller pieces
+            created in that step.
+          </p>
+        </div>
+
+        <h2>2. The Sierpiński triangle</h2>
+        <p>
+          The Sierpiński triangle, also called the Sierpiński gasket, begins with an equilateral triangle.
+          The construction is repeated as follows:
+        </p>
+        <ol>
+          <li>Divide the triangle into four congruent smaller equilateral triangles.</li>
+          <li>Remove the central, upside-down triangle.</li>
+          <li>Three smaller triangles remain.</li>
+          <li>Apply exactly the same rule to each of those three triangles.</li>
+          <li>Continue the process again and again.</li>
+        </ol>
+
+        <figure class="sierpinski-visual">
+          <svg viewBox="0 0 900 330" role="img" aria-labelledby="triTitle triDesc">
+            <title id="triTitle">Construction of the Sierpiński triangle</title>
+            <desc id="triDesc">Three stages showing a solid triangle, the first central triangular opening, and a more detailed recursive pattern.</desc>
+            <rect x="0" y="0" width="900" height="330" rx="18" fill="#ffffff"/>
+            <g font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#17365d">
+              <text x="150" y="35">Step 0</text>
+              <text x="450" y="35">Step 1</text>
+              <text x="750" y="35">Step 2</text>
+            </g>
+            <g transform="translate(50 55)">
+              <polygon points="100,0 0,173 200,173" fill="#17365d"/>
+            </g>
+            <g transform="translate(350 55)">
+              <polygon points="100,0 0,173 200,173" fill="#17365d"/>
+              <polygon points="100,86.5 50,0? 150,0?" fill="#ffffff"/>
+              <polygon points="100,86.5 50,86.5 150,86.5" fill="#ffffff"/>
+            </g>
+            <g transform="translate(650 55)">
+              <polygon points="100,0 0,173 200,173" fill="#17365d"/>
+              <polygon points="100,86.5 50,0 150,0" fill="#ffffff"/>
+              <polygon points="50,86.5 25,43.25 75,43.25" fill="#17365d"/>
+              <polygon points="150,86.5 125,43.25 175,43.25" fill="#17365d"/>
+              <polygon points="100,129.75 75,86.5 125,86.5" fill="#ffffff"/>
+              <polygon points="50,129.75 25,86.5 75,86.5" fill="#ffffff"/>
+              <polygon points="150,129.75 125,86.5 175,86.5" fill="#ffffff"/>
+              <polygon points="100,173 50,86.5 150,86.5" fill="#17365d"/>
+              <polygon points="50,129.75 25,86.5 75,86.5" fill="#ffffff"/>
+              <polygon points="150,129.75 125,86.5 175,86.5" fill="#ffffff"/>
+            </g>
+            <g font-family="Arial, sans-serif" font-size="14" fill="#5d6b78" text-anchor="middle">
+              <text x="150" y="275">Start with one triangle</text>
+              <text x="450" y="275">Remove the centre</text>
+              <text x="750" y="275">Repeat on the smaller triangles</text>
+            </g>
+          </svg>
+          <figcaption class="sierpinski-caption">
+            The same rule is repeated at smaller scales. The diagram is an original mathematical illustration
+            created for this article.
+          </figcaption>
+        </figure>
+
+        <h3>What happens at each step?</h3>
+        <p>
+          At every iteration, each filled triangle is replaced by three smaller filled triangles.
+          Therefore, the number of filled triangles is multiplied by 3 at each step.
+        </p>
+
+        <div class="sierpinski-facts">
+          <div class="sierpinski-fact">
+            <strong>3ⁿ</strong>
+            Number of filled triangles after n steps
+          </div>
+          <div class="sierpinski-fact">
+            <strong>(1/2)ⁿ</strong>
+            Side length of each small triangle, relative to the original
+          </div>
+          <div class="sierpinski-fact">
+            <strong>(3/4)ⁿ</strong>
+            Remaining area after n steps, relative to the original
+          </div>
+        </div>
+
+        <h2>3. The Sierpiński square carpet</h2>
+        <p>
+          The square version is usually called the <strong>Sierpiński carpet</strong>. Its construction
+          follows the same recursive idea, but it starts with a square rather than a triangle.
+        </p>
+        <ol>
+          <li>Divide the square into a 3 × 3 grid.</li>
+          <li>Remove the central square.</li>
+          <li>Eight smaller squares remain.</li>
+          <li>Divide each remaining square into a 3 × 3 grid.</li>
+          <li>Remove the centre of every one and repeat.</li>
+        </ol>
+
+        <figure class="sierpinski-visual">
+          <svg viewBox="0 0 900 330" role="img" aria-labelledby="carpetTitle carpetDesc">
+            <title id="carpetTitle">Construction of the Sierpiński carpet</title>
+            <desc id="carpetDesc">Three stages showing a square, a square with its centre removed, and a second recursive stage.</desc>
+            <rect x="0" y="0" width="900" height="330" rx="18" fill="#ffffff"/>
+            <g font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#17365d">
+              <text x="150" y="35">Step 0</text>
+              <text x="450" y="35">Step 1</text>
+              <text x="750" y="35">Step 2</text>
+            </g>
+            <rect x="65" y="65" width="170" height="170" fill="#17365d"/>
+            <rect x="365" y="65" width="170" height="170" fill="#17365d"/>
+            <rect x="421.67" y="121.67" width="56.67" height="56.67" fill="#ffffff"/>
+            <rect x="665" y="65" width="170" height="170" fill="#17365d"/>
+            <g fill="#ffffff">
+              <rect x="721.67" y="121.67" width="56.67" height="56.67"/>
+            </g>
+            <g fill="#ffffff">
+              <rect x="684" y="84" width="18.89" height="18.89"/>
+              <rect x="740.67" y="84" width="18.89" height="18.89"/>
+              <rect x="797.33" y="84" width="18.89" height="18.89"/>
+              <rect x="684" y="140.67" width="18.89" height="18.89"/>
+              <rect x="740.67" y="140.67" width="18.89" height="18.89"/>
+              <rect x="797.33" y="140.67" width="18.89" height="18.89"/>
+              <rect x="684" y="197.33" width="18.89" height="18.89"/>
+              <rect x="740.67" y="197.33" width="18.89" height="18.89"/>
+              <rect x="797.33" y="197.33" width="18.89" height="18.89"/>
+            </g>
+            <g font-family="Arial, sans-serif" font-size="14" fill="#5d6b78" text-anchor="middle">
+              <text x="150" y="275">Start with one square</text>
+              <text x="450" y="275">Remove the centre</text>
+              <text x="750" y="275">Repeat inside the eight squares</text>
+            </g>
+          </svg>
+          <figcaption class="sierpinski-caption">
+            The square carpet uses a 3 × 3 subdivision at every stage. The same construction rule keeps
+            appearing inside the remaining squares.
+          </figcaption>
+        </figure>
+
+        <h3>The numbers behind the carpet</h3>
+        <p>
+          Each step keeps 8 of the 9 smaller squares. Consequently, the number of remaining squares
+          grows by a factor of 8 while the side length of each square is reduced by a factor of 3.
+        </p>
+
+        <div class="sierpinski-facts">
+          <div class="sierpinski-fact">
+            <strong>8ⁿ</strong>
+            Number of remaining small squares after n steps
+          </div>
+          <div class="sierpinski-fact">
+            <strong>(1/3)ⁿ</strong>
+            Side length of each small square, relative to the original
+          </div>
+          <div class="sierpinski-fact">
+            <strong>(8/9)ⁿ</strong>
+            Remaining area after n steps, relative to the original
+          </div>
+        </div>
+
+        <h2>4. Why are they called self-similar?</h2>
+        <p>
+          Look closely at a Sierpiński triangle. Each of its three large remaining parts has the same
+          basic structure as the complete figure. The same is true for the Sierpiński carpet: each of
+          the eight main remaining squares contains a smaller version of the carpet pattern.
+        </p>
+        <p>
+          This property is called <strong>self-similarity</strong>. It is one of the most important ideas
+          in fractal geometry.
+        </p>
+
+        <div class="sierpinski-grid">
+          <div class="sierpinski-box">
+            <h3>🔺 Triangle</h3>
+            <p>
+              Divide into 4 equal triangles, remove 1, and repeat on the remaining 3.
+            </p>
+          </div>
+          <div class="sierpinski-box">
+            <h3>⬛ Square carpet</h3>
+            <p>
+              Divide into 9 equal squares, remove 1, and repeat on the remaining 8.
+            </p>
+          </div>
+        </div>
+
+        <h2>5. A surprising fact about area</h2>
+        <p>
+          Both constructions become increasingly full of holes. Yet their areas approach zero in the
+          limiting process.
+        </p>
+        <p>
+          For the triangle, the remaining area after n steps is
+          <strong>(3/4)ⁿ</strong> times the original area. As n becomes very large, this approaches 0.
+        </p>
+        <p>
+          For the carpet, the remaining area after n steps is
+          <strong>(8/9)ⁿ</strong> times the original area. This also approaches 0.
+        </p>
+        <p>
+          This is a beautiful example of how an object can have an increasingly intricate boundary and
+          structure even while the ordinary area left inside it becomes arbitrarily small.
+        </p>
+
+        <h2>6. Fractal dimension</h2>
+        <p>
+          Ordinary geometry gives familiar dimensions: a line has dimension 1, a plane has dimension 2,
+          and a solid has dimension 3. Fractals can have dimensions between these familiar values.
+        </p>
+
+        <table class="sierpinski-table">
+          <thead>
+            <tr>
+              <th>Fractal</th>
+              <th>Self-similar copies</th>
+              <th>Scale factor</th>
+              <th>Fractal dimension</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sierpiński triangle</td>
+              <td>3</td>
+              <td>1/2</td>
+              <td>log(3) / log(2) ≈ 1.585</td>
+            </tr>
+            <tr>
+              <td>Sierpiński carpet</td>
+              <td>8</td>
+              <td>1/3</td>
+              <td>log(8) / log(3) ≈ 1.893</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          These dimensions are larger than 1 but smaller than 2, reflecting the fact that these objects
+          are more complicated than a simple curve but do not fill a two-dimensional region in the
+          ordinary sense.
+        </p>
+
+        <h2>7. Connection with computer science</h2>
+        <p>
+          Sierpiński patterns are also useful for understanding ideas that appear in computer science.
+          Their construction is naturally recursive: a program can create a large figure by calling the
+          same procedure on smaller parts.
+        </p>
+        <p>
+          This makes fractals a good classroom example of <strong>recursion</strong>, <strong>divide-and-conquer</strong>,
+          algorithms and computer-generated graphics.
+        </p>
+
+        <h2>8. Where do we see fractal ideas?</h2>
+        <ul>
+          <li><strong>Computer graphics:</strong> recursive rules can generate detailed patterns and landscapes.</li>
+          <li><strong>Mathematics:</strong> fractals provide important examples in geometry, limits and dimension.</li>
+          <li><strong>Computer science:</strong> recursive algorithms can be visualised through fractal construction.</li>
+          <li><strong>Nature:</strong> some natural structures show approximate self-similar patterns, although real natural objects are not exact mathematical fractals.</li>
+          <li><strong>Art and design:</strong> repeated geometric patterns can create complex visual structures from very simple rules.</li>
+        </ul>
+
+        <h2>9. Sierpiński triangle vs Sierpiński carpet</h2>
+        <table class="sierpinski-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Sierpiński triangle</th>
+              <th>Sierpiński carpet</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Starting shape</td>
+              <td>Equilateral triangle</td>
+              <td>Square</td>
+            </tr>
+            <tr>
+              <td>Subdivision</td>
+              <td>4 smaller triangles</td>
+              <td>9 smaller squares</td>
+            </tr>
+            <tr>
+              <td>Removed each step</td>
+              <td>1 central triangle</td>
+              <td>1 central square</td>
+            </tr>
+            <tr>
+              <td>Copies retained</td>
+              <td>3</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>Scale of each copy</td>
+              <td>1/2</td>
+              <td>1/3</td>
+            </tr>
+            <tr>
+              <td>Limiting area</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>10. The big idea to remember</h2>
+        <div class="sierpinski-highlight">
+          <strong>Simple rule + repetition = complex pattern.</strong>
+          <p>
+            The Sierpiński triangle and carpet show that complicated-looking mathematical structures
+            do not always require complicated instructions. A short recursive rule, repeated many times,
+            can produce extraordinary geometry.
+          </p>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>Is the Sierpiński triangle an ordinary triangle?</h3>
+        <p>
+          It starts as an equilateral triangle, but after repeated removals its final fractal structure
+          is much more intricate than an ordinary filled triangle.
+        </p>
+
+        <h3>Why is the Sierpiński carpet called a carpet?</h3>
+        <p>
+          Its construction begins with a square and repeatedly removes the central square, producing
+          a perforated, carpet-like pattern.
+        </p>
+
+        <h3>Can a computer generate these patterns?</h3>
+        <p>
+          Yes. A recursive program can generate both patterns by applying the same construction rule
+          to smaller regions. This is a simple and visual introduction to recursion.
+        </p>
+
+        <h3>Are these patterns infinite?</h3>
+        <p>
+          The mathematical fractals are defined by continuing the process indefinitely. A computer
+          or printed page can only show a finite number of iterations, but each additional iteration
+          reveals more of the underlying pattern.
+        </p>
+
+      </section>
+
+      <nav class="kva-bottom-nav" aria-label="Knowledge Vault navigation">
+        <a href="/knowledge-vault/index.html">← Back to Knowledge Vault</a>
+        <a href="/index.html">Saraswat Academy Home</a>
+      </nav>
+
+    </article>
+  </main>
+
+  <div id="footer"></div>
+</body>
+</html>
