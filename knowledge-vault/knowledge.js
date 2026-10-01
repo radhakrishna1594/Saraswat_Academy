@@ -138,6 +138,15 @@
   }
 
   function setupHome(articles) {
+    const homeSearch = document.getElementById("kvHomeSearch");
+    if (homeSearch) {
+      homeSearch.addEventListener("submit", function () {
+        const input = document.getElementById("knowledgeSearch");
+        if (!input.value.trim()) {
+          input.removeAttribute("name");
+        }
+      });
+    }
     const grid = document.getElementById("kvFeaturedGrid");
     if (grid) {
       grid.innerHTML = articles.slice(-6).reverse().map(card).join("");
