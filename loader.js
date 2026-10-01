@@ -117,6 +117,18 @@ function ensureComponentTarget(id) {
     nodes.forEach(node => { if (node !== insideBody) node.remove(); });
     if (insideBody) return insideBody;
 
+    // Legacy pages sometimes contain a complete inline <header>/<footer>
+    // instead of the shared component placeholder. Replace that old wrapper
+    // with the shared component target so the original site design stays
+    // consistent without producing duplicate headers or footers.
+    const legacy = document.body.querySelector(id === "header" ? "header" : "footer");
+    if (legacy) {
+        const target = document.createElement("div");
+        target.id = id;
+        legacy.replaceWith(target);
+        return target;
+    }
+
     const target = document.createElement("div");
     target.id = id;
     if (id === "header") document.body.prepend(target);
