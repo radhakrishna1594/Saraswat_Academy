@@ -144,6 +144,17 @@ html { scroll-behavior: smooth; }
 }
 
 /* ─── NOTE BOX ─── */
+.solution-article .note-box {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: inherit;
+  line-height: inherit;
+}
+
 .note-box {
   margin-top: 5px;
   padding: 16px 18px;
