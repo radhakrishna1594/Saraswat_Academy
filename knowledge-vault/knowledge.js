@@ -133,8 +133,12 @@
     if (!page) return;
     const wanted = page.dataset.kvSubject;
     const filtered = articles.filter(a => a.category === wanted);
-    document.getElementById("kvSubjectCount").textContent = `${filtered.length} concepts`;
-    document.getElementById("kvSubjectGrid").innerHTML = filtered.map(card).join("");
+    document.getElementById("kvSubjectCount").textContent = `${filtered.length} concepts in this subject`;
+    document.getElementById("kvSubjectGrid").innerHTML = filtered.slice(-6).reverse().map(card).join("");
+    const subjectGrid = document.getElementById("kvSubjectGrid");
+    if (filtered.length > 6) {
+      subjectGrid.insertAdjacentHTML("afterend", `<p class="kv-subject-more"><a href="/knowledge-vault/browse.html?subject=${encodeURIComponent(wanted)}">Browse all ${esc(wanted)} concepts →</a></p>`);
+    }
   }
 
   function setupHome(articles) {
