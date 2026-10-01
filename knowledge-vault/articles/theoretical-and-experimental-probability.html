@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Theoretical and Experimental Probability | Easy Explanation | Saraswat Academy</title>
+  <meta name="description" content="Learn theoretical and experimental probability in simple language. Understand the difference between them with easy coin, dice and real-life examples, formulas and a clear comparison.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Saraswat Academy">
+  <link rel="canonical" href="https://www.saraswatacademy.in/knowledge-vault/articles/theoretical-and-experimental-probability.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Saraswat Academy">
+  <meta property="og:title" content="Theoretical and Experimental Probability | Easy Explanation">
+  <meta property="og:description" content="Understand theoretical and experimental probability with simple examples, formulas and an easy comparison.">
+  <meta property="og:url" content="https://www.saraswatacademy.in/knowledge-vault/articles/theoretical-and-experimental-probability.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Theoretical and Experimental Probability">
+  <meta name="twitter:description" content="A simple student-friendly explanation of theoretical and experimental probability.">
+
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/header.css">
+  <link rel="stylesheet" href="/knowledge-vault/articles/articles.css">
+
+  <style>
+    .prob-visual{margin:1.5rem 0 2rem;padding:1.1rem;border:1px solid #dfe7ef;border-radius:18px;background:#f7faff;overflow:hidden}
+    .prob-visual svg{display:block;width:100%;height:auto;max-width:900px;margin:auto}
+    .prob-caption{text-align:center;color:#5b6877;font-size:.94rem;line-height:1.6;margin:.7rem auto 0;max-width:760px}
+    .prob-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.25rem 0 2rem}
+    .prob-box{padding:1.15rem;border:1px solid #dfe7ef;border-radius:16px;background:#fff}
+    .prob-box h3{margin-top:0}
+    .prob-highlight{padding:1.1rem 1.2rem;border-left:4px solid #17365d;border-radius:10px;background:#f3f7fb;margin:1.3rem 0 1.8rem}
+    .prob-table{width:100%;border-collapse:collapse;margin:1.2rem 0 2rem;background:#fff}
+    .prob-table th,.prob-table td{border:1px solid #dbe3ec;padding:.75rem;text-align:left;vertical-align:top}
+    .prob-table th{background:#f3f7fb}
+    .prob-steps{counter-reset:steps;list-style:none;padding:0;margin:1rem 0 2rem}
+    .prob-steps li{counter-increment:steps;margin:.7rem 0;padding:.9rem 1rem .9rem 3rem;border:1px solid #e1e7ee;border-radius:12px;position:relative;background:#fff}
+    .prob-steps li:before{content:counter(steps);position:absolute;left:.85rem;top:.75rem;width:1.6rem;height:1.6rem;border-radius:50%;background:#17365d;color:#fff;text-align:center;line-height:1.6rem;font-weight:700}
+    .prob-memory{font-size:1.05rem}
+    @media(max-width:760px){.prob-grid{grid-template-columns:1fr}.prob-table{font-size:.9rem}}
+  </style>
+
+  <script src="/loader.js"></script>
+  <script src="/config.js"></script>
+  <script src="/header.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "@id":"https://www.saraswatacademy.in/knowledge-vault/articles/theoretical-and-experimental-probability.html#article",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.saraswatacademy.in/knowledge-vault/articles/theoretical-and-experimental-probability.html"},
+    "headline":"Theoretical and Experimental Probability",
+    "description":"An easy explanation of theoretical and experimental probability with simple examples and a comparison.",
+    "author":{"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},
+    "publisher":{"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},
+    "isPartOf":{"@type":"CollectionPage","name":"Knowledge Vault","url":"https://www.saraswatacademy.in/knowledge-vault/index.html"},
+    "learningResourceType":"Educational article",
+    "inLanguage":"en-IN"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What is theoretical probability?","acceptedAnswer":{"@type":"Answer","text":"Theoretical probability is calculated from the possible outcomes of an experiment when those outcomes are equally likely. It is the number of favourable outcomes divided by the total number of possible outcomes."}},
+      {"@type":"Question","name":"What is experimental probability?","acceptedAnswer":{"@type":"Answer","text":"Experimental probability is calculated from actual observations. It is the number of times the event occurs divided by the total number of trials."}},
+      {"@type":"Question","name":"Why can experimental probability be different from theoretical probability?","acceptedAnswer":{"@type":"Answer","text":"A limited number of trials can produce results that do not exactly match the theoretical value. As the number of trials becomes large, the experimental relative frequency tends to get closer to the theoretical probability."}},
+      {"@type":"Question","name":"Which probability uses actual data?","acceptedAnswer":{"@type":"Answer","text":"Experimental probability uses actual observed data from repeated trials."}}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <div class="breadcrumb">
+    <a href="/index.html">Home</a> →
+    <a href="/knowledge-vault/index.html">Knowledge Vault</a> →
+    <span class="current">Theoretical and Experimental Probability</span>
+  </div>
+
+  <main class="kva-page">
+    <article class="kva-article">
+
+      <header class="kva-hero">
+        <span class="kva-eyebrow">MATHEMATICS • PROBABILITY</span>
+        <h1>Theoretical and Experimental Probability</h1>
+        <p class="kva-hero-description">
+          Probability tells us how likely an event is to happen. But there are two very useful ways
+          to find a probability: <strong>think about all possible outcomes</strong>, or
+          <strong>perform the experiment and look at what actually happened</strong>.
+        </p>
+      </header>
+
+      <section>
+        <h3>First, what is probability?</h3>
+        <p>
+          Probability is a number that describes how likely an event is to occur. It lies between
+          <strong>0 and 1</strong>, or equivalently between <strong>0% and 100%</strong>.
+          A probability of 0 means an event is impossible, while a probability of 1 means it is certain. citeturn0search0turn0search1
+        </p>
+
+        <div class="prob-visual">
+          <svg viewBox="0 0 900 210" role="img" aria-label="Probability scale from impossible to certain">
+            <rect x="35" y="25" width="830" height="155" rx="20" fill="#ffffff" stroke="#dbe3ec"/>
+            <text x="450" y="62" text-anchor="middle" font-size="22" font-weight="700" fill="#17365d">Probability scale</text>
+            <line x1="115" y1="115" x2="785" y2="115" stroke="#9aabba" stroke-width="6"/>
+            <circle cx="115" cy="115" r="11" fill="#17365d"/>
+            <circle cx="450" cy="115" r="11" fill="#17365d"/>
+            <circle cx="785" cy="115" r="11" fill="#17365d"/>
+            <text x="115" y="150" text-anchor="middle" font-size="17" fill="#34495e">0</text>
+            <text x="450" y="150" text-anchor="middle" font-size="17" fill="#34495e">0.5</text>
+            <text x="785" y="150" text-anchor="middle" font-size="17" fill="#34495e">1</text>
+            <text x="115" y="92" text-anchor="middle" font-size="15" fill="#5b6877">Impossible</text>
+            <text x="450" y="92" text-anchor="middle" font-size="15" fill="#5b6877">Equally likely</text>
+            <text x="785" y="92" text-anchor="middle" font-size="15" fill="#5b6877">Certain</text>
+          </svg>
+          <p class="prob-caption">Probability can be written as a fraction, decimal or percentage.</p>
+        </div>
+      </section>
+
+      <section>
+        <h3>The two ideas in one minute</h3>
+        <div class="prob-grid">
+          <div class="prob-box">
+            <h3>🧠 Theoretical probability</h3>
+            <p><strong>“What should happen?”</strong></p>
+            <p>
+              We look at the possible outcomes before doing the experiment. When the outcomes are equally likely,
+              we count the favourable outcomes and divide by the total possible outcomes.
+            </p>
+          </div>
+          <div class="prob-box">
+            <h3>🧪 Experimental probability</h3>
+            <p><strong>“What actually happened?”</strong></p>
+            <p>
+              We perform the experiment, record the results and use the observed frequency of the event.
+            </p>
+          </div>
+        </div>
+
+        <div class="prob-highlight prob-memory">
+          <strong>Easy memory trick:</strong><br>
+          Theoretical = <strong>before the experiment, based on possible outcomes.</strong><br>
+          Experimental = <strong>after the experiment, based on observed results.</strong>
+        </div>
+      </section>
+
+      <section>
+        <h3>1. What is theoretical probability?</h3>
+        <p>
+          Theoretical probability is calculated from the possible outcomes of an experiment.
+          It is especially useful when the outcomes are <strong>equally likely</strong>. citeturn0search0turn0search2
+        </p>
+
+        <div class="prob-highlight">
+          <strong>Formula:</strong><br><br>
+          Theoretical Probability =
+          <strong>Number of favourable outcomes ÷ Total number of possible outcomes</strong>
+        </div>
+
+        <h3>Example: tossing a fair coin</h3>
+        <p>
+          A fair coin has two equally likely outcomes: <strong>Head</strong> and <strong>Tail</strong>.
+          If we want the probability of getting a Head:
+        </p>
+        <p><strong>P(Head) = 1 ÷ 2 = 1/2 = 0.5 = 50%</strong></p>
+
+        <p>
+          We did not need to toss the coin. We simply looked at the possible outcomes.
+          That is why this is <strong>theoretical probability</strong>.
+        </p>
+      </section>
+
+      <section>
+        <h3>Another theoretical example: rolling a die</h3>
+        <p>
+          Imagine rolling a fair six-sided die. The possible results are 1, 2, 3, 4, 5 and 6.
+        </p>
+
+        <p>Suppose we want the probability of rolling an even number.</p>
+
+        <p>
+          Favourable outcomes = <strong>2, 4, 6</strong> → 3 outcomes<br>
+          Total outcomes = <strong>6</strong>
+        </p>
+
+        <p><strong>P(even) = 3/6 = 1/2 = 50%</strong></p>
+
+        <p>
+          Again, we calculated the answer by thinking about the possible outcomes rather than by actually
+          rolling the die.
+        </p>
+      </section>
+
+      <section>
+        <h3>2. What is experimental probability?</h3>
+        <p>
+          Experimental probability uses the results of an experiment that has actually been performed.
+          We count how many times the event occurred and compare that with the total number of trials. citeturn0search0turn0search1
+        </p>
+
+        <div class="prob-highlight">
+          <strong>Formula:</strong><br><br>
+          Experimental Probability =
+          <strong>Number of times the event occurs ÷ Total number of trials</strong>
+        </div>
+
+        <h3>Example: actually tossing a coin</h3>
+        <p>
+          Suppose a student tosses a coin <strong>20 times</strong>. The results are:
+        </p>
+
+        <table class="prob-table">
+          <thead><tr><th>Result</th><th>Number of times</th></tr></thead>
+          <tbody>
+            <tr><td>Heads</td><td>12</td></tr>
+            <tr><td>Tails</td><td>8</td></tr>
+            <tr><td>Total</td><td>20</td></tr>
+          </tbody>
+        </table>
+
+        <p>
+          Experimental probability of Heads =
+          <strong>12/20 = 0.6 = 60%</strong>.
+        </p>
+
+        <p>
+          Notice that the theoretical probability of Heads for a fair coin is 50%, but our experiment gave
+          60%. That is completely possible. A small number of trials does not have to match the theoretical
+          probability exactly. citeturn0search1
+        </p>
+      </section>
+
+      <section>
+        <h3>Why are the two answers sometimes different?</h3>
+        <p>
+          This is one of the most important ideas in probability.
+        </p>
+
+        <p>
+          If you toss a fair coin 10 times, you might get 7 Heads and 3 Tails. You might even get 8 Heads
+          and 2 Tails. The coin does not have to produce exactly 5 Heads and 5 Tails in every small experiment.
+        </p>
+
+        <p>
+          As the number of trials becomes much larger, the experimental relative frequency generally tends
+          to move closer to the theoretical probability. This is described by the <strong>law of large numbers</strong>. citeturn0search1turn0search3
+        </p>
+
+        <div class="prob-visual">
+          <svg viewBox="0 0 900 245" role="img" aria-label="Experimental probability moving closer to theoretical probability as trials increase">
+            <rect x="35" y="25" width="830" height="195" rx="20" fill="#ffffff" stroke="#dbe3ec"/>
+            <text x="450" y="58" text-anchor="middle" font-size="21" font-weight="700" fill="#17365d">Coin toss example</text>
+            <line x1="120" y1="125" x2="780" y2="125" stroke="#c3ced9" stroke-width="4"/>
+            <line x1="120" y1="100" x2="780" y2="100" stroke="#17365d" stroke-width="3" stroke-dasharray="9 8"/>
+            <text x="790" y="105" font-size="15" fill="#17365d">Theoretical = 50%</text>
+            <circle cx="190" cy="80" r="9" fill="#5b6877"/>
+            <circle cx="350" cy="145" r="9" fill="#5b6877"/>
+            <circle cx="510" cy="108" r="9" fill="#5b6877"/>
+            <circle cx="670" cy="101" r="9" fill="#5b6877"/>
+            <text x="190" y="175" text-anchor="middle" font-size="14" fill="#5b6877">20 trials</text>
+            <text x="350" y="175" text-anchor="middle" font-size="14" fill="#5b6877">100 trials</text>
+            <text x="510" y="175" text-anchor="middle" font-size="14" fill="#5b6877">1,000 trials</text>
+            <text x="670" y="175" text-anchor="middle" font-size="14" fill="#5b6877">many trials</text>
+            <text x="450" y="205" text-anchor="middle" font-size="15" fill="#5b6877">More trials usually give a relative frequency closer to the theoretical value.</text>
+          </svg>
+          <p class="prob-caption">The result of a small experiment can fluctuate; repeated trials tend to give a more stable relative frequency.</p>
+        </div>
+      </section>
+
+      <section>
+        <h3>Theoretical vs experimental probability</h3>
+        <table class="prob-table">
+          <thead>
+            <tr><th>Theoretical Probability</th><th>Experimental Probability</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Based on possible outcomes.</td><td>Based on actual observations.</td></tr>
+            <tr><td>Can often be calculated before the experiment.</td><td>Is calculated after collecting results.</td></tr>
+            <tr><td>Does not require repeated trials for the calculation.</td><td>Requires one or more trials and recorded results.</td></tr>
+            <tr><td>For equally likely outcomes: favourable outcomes ÷ total possible outcomes.</td><td>Number of times event occurs ÷ total number of trials.</td></tr>
+            <tr><td>Example: P(Head) = 1/2 for a fair coin.</td><td>Example: 12 Heads in 20 tosses gives 12/20 = 0.6.</td></tr>
+            <tr><td>Describes what the model predicts.</td><td>Describes what the experiment observed.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h3>A real-life example: bus arrivals</h3>
+        <p>
+          Imagine a student records whether a school bus arrives between <strong>7:45 and 8:00 a.m.</strong>
+          over 30 school days.
+        </p>
+
+        <p>
+          Suppose the bus arrived during that time on <strong>24 of the 30 days</strong>.
+        </p>
+
+        <div class="prob-highlight">
+          Experimental probability =
+          <strong>24/30 = 0.8 = 80%</strong>
+        </div>
+
+        <p>
+          This does not mean that the bus is mathematically guaranteed to arrive on time 80% of the time.
+          It means that, in those 30 observed days, the event occurred 24 times out of 30.
+        </p>
+
+        <p>
+          This is a good example of when actual data is useful. For many real-world events, there is no simple
+          list of equally likely outcomes from which we can calculate a theoretical probability.
+        </p>
+      </section>
+
+      <section>
+        <h3>A school example: guessing a multiple-choice question</h3>
+        <p>
+          Suppose a question has <strong>4 answer choices</strong> and exactly one is correct.
+          If a student chooses randomly, the theoretical probability of selecting the correct answer is:
+        </p>
+
+        <p><strong>P(correct) = 1/4 = 25%</strong></p>
+
+        <p>
+          Now imagine the student randomly guesses 40 questions and gets 13 correct.
+          The experimental probability is:
+        </p>
+
+        <p><strong>13/40 = 0.325 = 32.5%</strong></p>
+
+        <p>
+          The two values are different because the experimental result came from only 40 actual trials.
+          More trials would generally give a relative frequency that moves closer to the theoretical value
+          when the same random conditions are maintained.
+        </p>
+      </section>
+
+      <section>
+        <h3>One important point: experimental probability is not “wrong”</h3>
+        <p>
+          Students sometimes see a theoretical probability of 50% and an experimental probability of 60%
+          and think that one answer must be wrong. That is not necessarily true.
+        </p>
+
+        <p>
+          Theoretical probability describes the expected long-run behaviour of the model, while experimental
+          probability describes what happened in the trials you actually observed. With a limited number of
+          trials, the two values can be different. citeturn0search1turn0search3
+        </p>
+      </section>
+
+      <section>
+        <h3>How to identify the type in an exam</h3>
+        <ol class="prob-steps">
+          <li>If the question asks you to count <strong>possible outcomes</strong>, think about theoretical probability.</li>
+          <li>If it gives you the results of an experiment, such as “the event occurred 18 times in 50 trials,” think about experimental probability.</li>
+          <li>For a fair coin, die or other equally likely model, theoretical probability can often be calculated without performing the experiment.</li>
+          <li>For situations such as bus arrivals, machine failures or observed sports performance, actual data may be used to estimate an experimental probability.</li>
+          <li>Always check the denominator: theoretical probability uses <strong>total possible outcomes</strong>, while experimental probability uses <strong>total trials</strong>.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Quick comparison with one example</h3>
+        <div class="prob-grid">
+          <div class="prob-box">
+            <h3>🎯 Theoretical</h3>
+            <p>Fair die → probability of rolling 6:</p>
+            <p><strong>1/6 ≈ 16.67%</strong></p>
+            <p>We know there is one favourable face among six equally likely faces.</p>
+          </div>
+          <div class="prob-box">
+            <h3>🧪 Experimental</h3>
+            <p>Roll the die 60 times → 8 sixes:</p>
+            <p><strong>8/60 ≈ 13.33%</strong></p>
+            <p>This value comes from what actually happened in the 60 trials.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>The easiest way to remember everything</h3>
+        <div class="prob-highlight prob-memory">
+          <p><strong>THEORETICAL → Think first.</strong></p>
+          <p>“What are the possible outcomes, and how many favour my event?”</p>
+          <br>
+          <p><strong>EXPERIMENTAL → Try it and count.</strong></p>
+          <p>“How many times did my event actually happen?”</p>
+        </div>
+      </section>
+
+      <section>
+        <h3>Frequently asked questions</h3>
+
+        <h3>Can theoretical and experimental probability be equal?</h3>
+        <p>
+          Yes. An experiment may produce a relative frequency exactly equal to the theoretical probability,
+          although this is not guaranteed in a small number of trials.
+        </p>
+
+        <h3>Why does experimental probability change?</h3>
+        <p>
+          It depends on the results observed in the trials. If the number of trials changes, the number of
+          successful outcomes may also change, so the calculated relative frequency can change.
+        </p>
+
+        <h3>Does experimental probability always become exactly equal to theoretical probability?</h3>
+        <p>
+          No. As the number of trials increases, the experimental relative frequency tends to get closer
+          to the theoretical probability under the same conditions, but it does not have to become exactly equal.
+          citeturn0search1
+        </p>
+
+        <h3>Which probability uses actual data?</h3>
+        <p>
+          Experimental probability uses actual observed data from repeated trials.
+        </p>
+      </section>
+
+      <section>
+        <h3>Quick recap</h3>
+        <table class="prob-table">
+          <thead><tr><th>Term</th><th>Easy meaning</th></tr></thead>
+          <tbody>
+            <tr><td>Probability</td><td>A measure of how likely an event is.</td></tr>
+            <tr><td>Theoretical probability</td><td>Probability calculated from possible outcomes.</td></tr>
+            <tr><td>Experimental probability</td><td>Probability calculated from observed results.</td></tr>
+            <tr><td>Favourable outcome</td><td>An outcome that matches the event we are interested in.</td></tr>
+            <tr><td>Trial</td><td>One performance or repetition of a probability experiment.</td></tr>
+            <tr><td>Relative frequency</td><td>Event occurrences divided by the total number of trials.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <nav class="kva-bottom-nav">
+        <a href="/knowledge-vault/index.html">← Back to Knowledge Vault</a>
+        <a href="/knowledge-vault/articles/explicit-and-recursive-rules-sequences.html">Explore sequences and rules →</a>
+      </nav>
+
+    </article>
+  </main>
+
+  <div id="footer"></div>
+</body>
+</html>
