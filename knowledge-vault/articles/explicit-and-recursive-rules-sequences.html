@@ -29,7 +29,7 @@
     .sequence-box{padding:1.15rem;border:1px solid #dfe7ef;border-radius:16px;background:#fff}
     .sequence-box h3{margin-top:0}
     .sequence-highlight{padding:1.1rem 1.2rem;border-left:4px solid #17365d;border-radius:10px;background:#f3f7fb;margin:1.3rem 0 1.8rem}
-    .sequence-table{width:100%;border-collapse:collapse;margin:1.2rem 0 2rem;background:#fff}
+    .sequence-table{width:100%;border-collapse:collapse;margin:0;background:#fff;min-width:620px}
     .sequence-table th,.sequence-table td{border:1px solid #dbe3ec;padding:.75rem;text-align:left}
     .sequence-table th{background:#f3f7fb}
     .sequence-steps{counter-reset:steps;list-style:none;padding:0;margin:1rem 0 2rem}
@@ -85,6 +85,7 @@
     <article class="kva-article">
 
       <header class="kva-hero">
+        <div class="kva-hero-inner">
         <span class="kva-eyebrow">MATHEMATICS • SEQUENCES</span>
         <h1>Explicit and Recursive Rules in Sequences</h1>
         <p class="kva-hero-description">
@@ -92,9 +93,10 @@
           what each rule is telling you: <strong>explicit means go directly to the term</strong>,
           while <strong>recursive means use the previous term to get the next one.</strong>
         </p>
+        </div>
       </header>
 
-      <section>
+      <section class="kva-section">
         <h3>First, what is a sequence?</h3>
         <p>
           A <strong>sequence</strong> is an ordered list of numbers. Each number has a position,
@@ -119,7 +121,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="kva-section">
         <h3>The big idea: two different ways to describe a sequence</h3>
         <div class="sequence-grid">
           <div class="sequence-box">
@@ -137,7 +139,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="kva-section">
         <h3>1. What is an explicit rule?</h3>
         <p>
           An explicit rule gives the value of the <strong>n<sup>th</sup> term directly from its position</strong>.
@@ -157,7 +159,7 @@
         </p>
       </section>
 
-      <section>
+      <section class="kva-section">
         <h3>2. What is a recursive rule?</h3>
         <p>
           A recursive rule tells you how to find a term from one or more earlier terms.
@@ -185,9 +187,11 @@
         <p><strong>5, 8, 11, 14, 17, ...</strong></p>
       </section>
 
-      <section>
+      <section class="kva-section">
         <h3>Explicit vs recursive: the easiest comparison</h3>
-        <table class="sequence-table">
+        <div class="kva-table-wrap">
+
+          <table class="sequence-table">
           <thead>
             <tr><th>Explicit rule</th><th>Recursive rule</th></tr>
           </thead>
@@ -198,10 +202,12 @@
             <tr><td>Useful for finding a far-away term.</td><td>Useful for describing how a sequence grows.</td></tr>
             <tr><td>Example: a<sub>n</sub> = 3n + 2</td><td>Example: a<sub>1</sub> = 5, a<sub>n</sub> = a<sub>n-1</sub> + 3</td></tr>
           </tbody>
-        </table>
+          </table>
+
+        </div>
       </section>
 
-      <section>
+      <section class="kva-section">
         <h3>One sequence, two rules</h3>
         <p>
           This is the part that often confuses students. The <strong>same sequence can have both an explicit
@@ -233,7 +239,7 @@
         </p>
       </section>
 
-      <section>
+      <section class="kva-section">
         <h3>Arithmetic sequences: the most common example</h3>
         <p>
           In an arithmetic sequence, the difference between consecutive terms is constant.
@@ -253,7 +259,7 @@
         <p>a<sub>n</sub> = 12 + 5(n − 1) = 5n + 7</p>
       </section>
 
-      <section>
+      <section class="kva-section">
         <h3>Geometric sequences work in the same way</h3>
         <p>
           In a geometric sequence, each term is obtained by multiplying the previous term by the same number.
@@ -278,7 +284,7 @@
         </p>
       </section>
 
-      <section>
+      <section class="kva-section">
         <h3>A simple real-life way to remember the difference</h3>
         <div class="sequence-grid">
           <div class="sequence-box">
@@ -299,9 +305,11 @@
         </div>
       </section>
 
-      <section>
+      <section class="kva-section">
         <h3>When should you use each rule?</h3>
-        <table class="sequence-table">
+        <div class="kva-table-wrap">
+
+          <table class="sequence-table">
           <thead>
             <tr><th>If you want to...</th><th>A useful choice</th><th>Why?</th></tr>
           </thead>
@@ -311,10 +319,12 @@
             <tr><td>Describe a constant-addition pattern</td><td>Either</td><td>Arithmetic sequences have both standard forms.</td></tr>
             <tr><td>Describe a pattern based on earlier terms</td><td>Recursive</td><td>The rule naturally shows how one term depends on earlier terms.</td></tr>
           </tbody>
-        </table>
+          </table>
+
+        </div>
       </section>
 
-      <section>
+      <section class="kva-section">
         <h3>Fibonacci: a famous recursive sequence</h3>
         <p>
           The Fibonacci sequence is a good example of why recursive rules are useful.
@@ -338,7 +348,7 @@
         </p>
       </section>
 
-      <section>
+      <section class="kva-section">
         <h3>How to identify the rule in an exam</h3>
         <ol class="sequence-steps">
           <li>If the formula contains <strong>n</strong> and directly gives a<sub>n</sub>, it is usually an <strong>explicit rule</strong>.</li>
@@ -349,7 +359,7 @@
         </ol>
       </section>
 
-      <section>
+      <section class="kva-section">
         <h3>The easiest memory trick</h3>
         <div class="sequence-highlight">
           <p><strong>Explicit = Exact position → exact term.</strong></p>
@@ -362,7 +372,7 @@
         </p>
       </section>
 
-      <section>
+      <section class="kva-section">
         <h3>Frequently asked questions</h3>
 
         <h3>What does “explicit” mean in a sequence?</h3>
@@ -387,9 +397,11 @@
         </p>
       </section>
 
-      <section>
+      <section class="kva-section">
         <h3>Quick recap</h3>
-        <table class="sequence-table">
+        <div class="kva-table-wrap">
+
+          <table class="sequence-table">
           <thead><tr><th>Concept</th><th>Easy meaning</th></tr></thead>
           <tbody>
             <tr><td>Sequence</td><td>An ordered list of numbers.</td></tr>
@@ -399,7 +411,9 @@
             <tr><td>Arithmetic sequence</td><td>Add the same number each time.</td></tr>
             <tr><td>Geometric sequence</td><td>Multiply by the same number each time.</td></tr>
           </tbody>
-        </table>
+          </table>
+
+        </div>
       </section>
 
       <nav class="kva-bottom-nav">
