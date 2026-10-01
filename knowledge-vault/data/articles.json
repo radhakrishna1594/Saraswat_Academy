@@ -1,0 +1,92 @@
+[
+  {
+    "title": "What Is Gravitational Force?",
+    "category": "Physics",
+    "subcategory": "Force and Motion",
+    "level": "Classes 9–10",
+    "icon": "🌍",
+    "description": "Learn what gravity is, why objects fall towards Earth, and how gravitational force works between masses.",
+    "url": "/knowledge-vault/articles/what-is-gravitational-force.html",
+    "keywords": "gravitational force gravity gravitation mass weight physics falling objects"
+  },
+  {
+    "title": "What Are Newton's Laws of Motion?",
+    "category": "Physics",
+    "subcategory": "Force and Motion",
+    "level": "Classes 9–10",
+    "icon": "🍎",
+    "description": "Understand Newton's three laws with familiar examples such as buses, footballs, bicycles and moving objects.",
+    "url": "/knowledge-vault/articles/what-are-newtons-laws-of-motion.html",
+    "keywords": "newton laws motion force inertia momentum physics"
+  },
+  {
+    "title": "What Is Photosynthesis?",
+    "category": "Biology",
+    "subcategory": "Plants",
+    "level": "Classes 7–10",
+    "icon": "🌱",
+    "description": "Understand how green plants make food using sunlight, carbon dioxide and water, and why this process matters to life on Earth.",
+    "url": "/knowledge-vault/articles/what-is-photosynthesis.html",
+    "keywords": "photosynthesis plants biology chlorophyll sunlight carbon dioxide glucose oxygen"
+  },
+  {
+    "title": "What Is the Human Digestive System?",
+    "category": "Biology",
+    "subcategory": "Human Biology",
+    "level": "Classes 6–10",
+    "icon": "🫀",
+    "description": "Follow the journey of food through the mouth, stomach, intestines and other digestive organs.",
+    "url": "/knowledge-vault/articles/human-digestive-system.html",
+    "keywords": "human digestive system digestion biology stomach intestine liver pancreas food"
+  },
+  {
+    "title": "What Is Integration?",
+    "category": "Mathematics",
+    "subcategory": "Calculus",
+    "level": "Classes 11–12",
+    "icon": "∫",
+    "description": "Understand the basic idea of integration, why we study it, and how it helps us find areas, distances, volumes and accumulated quantities.",
+    "url": "/knowledge-vault/articles/what-is-integration.html",
+    "keywords": "integration calculus integral area volume distance mathematics"
+  },
+  {
+    "title": "Theoretical and Experimental Probability",
+    "category": "Mathematics",
+    "subcategory": "Probability",
+    "level": "Classes 9–12",
+    "icon": "🎲",
+    "description": "Understand the difference between what probability predicts and what an experiment actually shows.",
+    "url": "/knowledge-vault/articles/theoretical-and-experimental-probability.html",
+    "keywords": "theoretical experimental probability chance outcomes trials mathematics dice coin"
+  },
+  {
+    "title": "Explicit and Recursive Rules in Sequences",
+    "category": "Mathematics",
+    "subcategory": "Sequences",
+    "level": "Classes 9–12",
+    "icon": "🔢",
+    "description": "Understand explicit and recursive rules in simple language, with arithmetic, geometric and Fibonacci examples.",
+    "url": "/knowledge-vault/articles/explicit-and-recursive-rules-sequences.html",
+    "keywords": "explicit recursive rules sequences series nth term arithmetic geometric fibonacci mathematics"
+  },
+  {
+    "title": "Sierpiński Triangle and Square Carpet",
+    "category": "Mathematics",
+    "subcategory": "Geometry and Fractals",
+    "level": "Classes 9–12",
+    "icon": "🔺",
+    "description": "Discover how two famous fractals are built by repeating simple geometric rules.",
+    "url": "/knowledge-vault/articles/sierpinski-square-and-triangle-carpet.html",
+    "keywords": "sierpinski triangle carpet square fractal geometry recursion self similarity mathematics"
+  },
+  {
+    "title": "How Does the Internet Work?",
+    "category": "Technology",
+    "subcategory": "Internet and Networking",
+    "level": "All learners",
+    "icon": "🌐",
+    "description": "Follow the simple journey of a message or webpage from your device to another computer on the internet.",
+    "url": "/knowledge-vault/articles/how-does-the-internet-work.html",
+    "keywords": "internet networking computer router server data packet technology web"
+  }
+]

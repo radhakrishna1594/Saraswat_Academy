@@ -3,238 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Knowledge Vault | Simple Explanations of Important Concepts | Saraswat Academy</title>
-  <meta name="description" content="Explore clear, student-friendly explanations of important concepts from science, mathematics, technology, history and everyday life at Saraswat Academy.">
+  <meta name="description" content="Explore clear, student-friendly explanations of important concepts from mathematics, science, technology and everyday life at Saraswat Academy.">
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="Knowledge Vault | Saraswat Academy">
   <meta property="og:description" content="A growing collection of simple explanations for concepts students often want to understand clearly.">
   <meta property="og:url" content="https://www.saraswatacademy.in/knowledge-vault/index.html">
   <link rel="canonical" href="https://www.saraswatacademy.in/knowledge-vault/index.html">
-
   <link rel="stylesheet" href="/assets/styles.css">
   <link rel="stylesheet" href="/header.css">
   <link rel="stylesheet" href="/knowledge-vault/knowledge.css">
-
   <script src="/loader.js"></script>
   <script src="/config.js"></script>
   <script src="/header.js"></script>
 </head>
-
 <body>
   <div id="header"></div>
-
-  <div class="breadcrumb">
-    <a href="/index.html">Home</a> →
-    <span class="current">Knowledge Vault</span>
-  </div>
+  <div class="breadcrumb"><a href="/index.html">Home</a> → <span class="current">Knowledge Vault</span></div>
 
   <main>
     <section class="kv-hero">
       <div class="kv-hero-inner">
         <span class="kv-eyebrow">KNOWLEDGE VAULT</span>
         <h1>Understand the things you have always wondered about.</h1>
-        <p>
-          A growing collection of simple, useful explanations of important ideas —
-          from Newton's laws and gravitational force to the remainder theorem and
-          the technology we use every day.
-        </p>
-
-        <div class="kv-search-box">
-          <label for="knowledgeSearch">Search a concept</label>
-          <input
-            type="search"
-            id="knowledgeSearch"
-            placeholder="Try: gravitational force, Newton's laws, remainder theorem..."
-            autocomplete="off"
-          >
-        </div>
+        <p>A growing library of simple, useful explanations — organized so you can find the right concept without scrolling through hundreds of articles.</p>
+        <form class="kv-search-box" id="kvHomeSearch" action="/knowledge-vault/browse.html">
+          <label for="knowledgeSearch">Search the Knowledge Vault</label>
+          <input type="search" id="knowledgeSearch" name="q" placeholder="Try: gravitational force, integration, photosynthesis..." autocomplete="off">
+        </form>
       </div>
     </section>
 
     <section class="kv-content">
       <div class="kv-heading">
-        <span class="kv-section-label">EXPLORE</span>
+        <span class="kv-section-label">EXPLORE BY SUBJECT</span>
+        <h2>Find concepts by subject</h2>
+        <p>Choose a subject to see only the concepts that belong to it.</p>
+      </div>
+      <div class="kv-subject-grid" id="kvSubjects">
+        <p class="kv-loading">Loading subjects…</p>
+      </div>
+
+      <div class="kv-heading kv-heading-featured">
+        <span class="kv-section-label">RECENTLY ADDED</span>
         <h2>Start with a concept</h2>
-        <p>
-          These articles are written to make difficult ideas easier to understand,
-          without making them unnecessarily complicated.
-        </p>
+        <p>A small selection from the growing library.</p>
+      </div>
+      <div class="kv-grid" id="kvFeaturedGrid">
+        <p class="kv-loading">Loading concepts…</p>
       </div>
 
-      <div class="kv-grid" id="knowledgeGrid">
-
-        <article class="kv-card" data-search="gravitational force gravity science physics">
-          <div class="kv-card-icon">🌍</div>
-          <span class="kv-card-tag">Physics</span>
-          <h3>What Is Gravitational Force?</h3>
-          <p>
-            Learn what gravity is, why objects fall towards Earth, and how
-            gravitational force works between masses.
-          </p>
-          <a href="/knowledge-vault/articles/what-is-gravitational-force.html">Read the explanation →</a>
-        </article>
-
-        <article class="kv-card" data-search="newton laws motion physics force inertia momentum">
-          <div class="kv-card-icon">🍎</div>
-          <span class="kv-card-tag">Physics</span>
-          <h3>What Are Newton's Laws of Motion?</h3>
-          <p>
-            Understand Newton's three laws with familiar examples such as
-            buses, footballs, bicycles and moving objects.
-          </p>
-          <a href="/knowledge-vault/articles/what-are-newtons-laws-of-motion.html">Read the explanation →</a>
-        </article>
-
-        <article class="kv-card" data-search="remainder theorem polynomial mathematics algebra remainder">
-          <div class="kv-card-icon">➗</div>
-          <span class="kv-card-tag">Mathematics</span>
-          <h3>What Is the Remainder Theorem?</h3>
-          <p>
-            See how the theorem helps us find the remainder when a polynomial
-            is divided by a linear expression.
-          </p>
-          <a href="/knowledge-vault/remainder-theorem.html">Read the explanation →</a>
-        </article>
-
-        <article class="kv-card" data-search="zero mathematics number history">
-          <div class="kv-card-icon">0️⃣</div>
-          <span class="kv-card-tag">Mathematics</span>
-          <h3>Why Is Zero Important in Mathematics?</h3>
-          <p>
-            Explore the meaning of zero, its role in place value and why modern
-            mathematics would look very different without it.
-          </p>
-          <a href="/knowledge-vault/why-zero-is-important.html">Read the explanation →</a>
-        </article>
-
-        <article class="kv-card" data-search="photosynthesis plants biology science">
-          <div class="kv-card-icon">🌱</div>
-          <span class="kv-card-tag">Biology</span>
-          <h3>What Is Photosynthesis?</h3>
-          <p>
-            Understand how green plants make food using sunlight, carbon dioxide
-            and water, and why this process matters to life on Earth.
-          </p>
-          <a href="/knowledge-vault/articles/what-is-photosynthesis.html">Read the explanation →</a>
-        </article>
-
-        <article class="kv-card" data-search="human digestive system digestion biology anatomy stomach intestine liver pancreas food">
-          <div class="kv-card-icon">🫀</div>
-          <span class="kv-card-tag">Biology</span>
-          <h3>What Is the Human Digestive System?</h3>
-          <p>
-            Follow the journey of food through the mouth, stomach, intestines and other
-            digestive organs, with clear explanations and labelled diagrams.
-          </p>
-          <a href="/knowledge-vault/articles/human-digestive-system.html">Read the explanation →</a>
-        </article>
-
-        <article class="kv-card" data-search="integration calculus mathematics integral definite indefinite real life applications area volume distance physics engineering economics">
-          <div class="kv-card-icon">∫</div>
-          <span class="kv-card-tag">Mathematics</span>
-          <h3>What Is Integration?</h3>
-          <p>
-            Understand the basic idea of integration, why we study it, and how it helps us find
-            areas, distances, volumes and accumulated quantities in real life.
-          </p>
-          <a href="/knowledge-vault/articles/what-is-integration.html">Read the explanation →</a>
-        </article>
-
-        <article class="kv-card" data-search="theoretical experimental probability mathematics probability chance outcomes trials relative frequency theoretical experimental real life">
-          <div class="kv-card-icon">🎲</div>
-          <span class="kv-card-tag">Mathematics</span>
-          <h3>Theoretical and Experimental Probability</h3>
-          <p>
-            Understand the difference between what probability predicts and what an experiment actually shows,
-            with easy coin, dice and real-life examples.
-          </p>
-          <a href="/knowledge-vault/articles/theoretical-and-experimental-probability.html">Read the explanation →</a>
-        </article>
-
-        <article class="kv-card" data-search="explicit recursive rules sequences series mathematics nth term arithmetic geometric previous term formula">
-          <div class="kv-card-icon">🔢</div>
-          <span class="kv-card-tag">Mathematics</span>
-          <h3>Explicit and Recursive Rules in Sequences</h3>
-          <p>
-            Understand explicit and recursive rules in simple language, with easy arithmetic,
-            geometric and Fibonacci examples and a clear comparison of both methods.
-          </p>
-          <a href="/knowledge-vault/articles/explicit-and-recursive-rules-sequences.html">Read the explanation →</a>
-        </article>
-
-        <article class="kv-card" data-search="sierpinski triangle carpet square fractal mathematics geometry recursion self similarity fractals">
-          <div class="kv-card-icon">🔺</div>
-          <span class="kv-card-tag">Mathematics</span>
-          <h3>Sierpiński Triangle and Square Carpet</h3>
-          <p>
-            Discover how two famous fractals are built by repeating simple geometric rules,
-            and explore self-similarity, area, recursion and fractal dimension.
-          </p>
-          <a href="/knowledge-vault/articles/sierpinski-square-and-triangle-carpet.html">Read the explanation →</a>
-        </article>
-
-        <article class="kv-card" data-search="internet how internet works technology computer networking">
-          <div class="kv-card-icon">🌐</div>
-          <span class="kv-card-tag">Technology</span>
-          <h3>How Does the Internet Work?</h3>
-          <p>
-            Follow the simple journey of a message or webpage from your device
-            to another computer somewhere on the internet.
-          </p>
-          <a href="/knowledge-vault/articles/how-does-the-internet-work.html">Read the explanation →</a>
-        </article>
-
-      </div>
-
-      <div class="kv-empty" id="knowledgeEmpty">
-        <strong>No matching concept found.</strong>
-        <p>Try a different word or search for a broader topic.</p>
+      <div class="kv-browse-cta">
+        <div>
+          <span class="kv-section-label">FULL LIBRARY</span>
+          <h2>Looking for something specific?</h2>
+          <p>Search, filter by subject or level, and browse the complete Knowledge Vault with pagination.</p>
+        </div>
+        <a href="/knowledge-vault/browse.html">Browse all concepts →</a>
       </div>
 
       <section class="kv-note">
         <div>
           <span class="kv-section-label">WHAT THIS SECTION IS FOR</span>
           <h2>One question at a time.</h2>
-          <p>
-            Not every doubt needs a full chapter. Sometimes you simply want to know
-            what a term means, why a rule works, or where an idea is used. This section
-            is meant for exactly those questions.
-          </p>
+          <p>Not every doubt needs a full chapter. Sometimes you simply want to know what a term means, why a rule works, or where an idea is used. This section is meant for exactly those questions.</p>
         </div>
         <div class="kv-note-points">
           <p><strong>Clear language</strong><br>Concepts explained in words students can follow.</p>
           <p><strong>Useful examples</strong><br>Ideas connected to things you see in real life.</p>
-          <p><strong>Growing library</strong><br>New concepts can be added as separate articles without changing this structure.</p>
+          <p><strong>Growing library</strong><br>New articles can be added to the catalogue without making this landing page endless.</p>
         </div>
       </section>
     </section>
   </main>
 
   <div id="footer"></div>
-
-  <script>
-    (function () {
-      const input = document.getElementById("knowledgeSearch");
-      const cards = Array.from(document.querySelectorAll(".kv-card"));
-      const empty = document.getElementById("knowledgeEmpty");
-
-      input.addEventListener("input", function () {
-        const query = this.value.trim().toLowerCase();
-        let visible = 0;
-
-        cards.forEach(function (card) {
-          const text = card.textContent.toLowerCase();
-          const keywords = (card.dataset.search || "").toLowerCase();
-          const match = !query || text.includes(query) || keywords.includes(query);
-
-          card.hidden = !match;
-          if (match) visible++;
-        });
-
-        empty.hidden = visible !== 0;
-      });
-    })();
-  </script>
+  <script src="/knowledge-vault/knowledge.js"></script>
 </body>
 </html>

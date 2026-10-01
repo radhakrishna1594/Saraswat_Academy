@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Browse Knowledge Vault | Saraswat Academy</title>
+<meta name="description" content="Search and browse student-friendly explanations from Mathematics, Physics, Biology and Technology in the Saraswat Academy Knowledge Vault.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.saraswatacademy.in/knowledge-vault/browse.html">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/header.css">
+<link rel="stylesheet" href="/knowledge-vault/knowledge.css">
+<script src="/loader.js"></script><script src="/config.js"></script><script src="/header.js"></script>
+</head>
+<body>
+<div id="header"></div>
+<div class="breadcrumb"><a href="/index.html">Home</a> → <a href="/knowledge-vault/index.html">Knowledge Vault</a> → <span class="current">Browse</span></div>
+<main class="kv-library">
+<section class="kv-library-hero">
+<span class="kv-eyebrow">KNOWLEDGE LIBRARY</span>
+<h1>Browse all concepts</h1>
+<p>Search the growing Knowledge Vault by concept, subject or level.</p>
+<div class="kv-library-search"><label for="kvBrowseSearch">Search concepts</label><input id="kvBrowseSearch" type="search" placeholder="Try: gravity, integration, internet..." autocomplete="off"></div>
+</section>
+<section class="kv-library-tools">
+<div><label for="kvSubjectFilter">Subject</label><select id="kvSubjectFilter"><option value="">All subjects</option></select></div>
+<div><label for="kvLevelFilter">Level</label><select id="kvLevelFilter"><option value="">All levels</option></select></div>
+<div><label for="kvSort">Sort</label><select id="kvSort"><option value="title">Alphabetical</option><option value="subject">Subject</option></select></div>
+</section>
+<section class="kv-library-results">
+<p id="kvResultCount" class="kv-result-count">Loading concepts…</p>
+<div id="kvBrowseGrid" class="kv-grid kv-browse-grid"></div>
+<div id="kvBrowseEmpty" class="kv-empty" hidden><strong>No matching concept found.</strong><p>Try another search term or remove a filter.</p></div>
+<nav id="kvPagination" class="kv-pagination" aria-label="Knowledge Vault pages"></nav>
+</section>
+</main>
+<div id="footer"></div>
+<script src="/knowledge-vault/knowledge.js"></script>
+</body></html>
