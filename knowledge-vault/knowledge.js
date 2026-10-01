@@ -5,6 +5,20 @@
   const DATA_URL = "/knowledge-vault/data/articles.json";
   const PAGE_SIZE = 12;
 
+  // Permanent subject navigation. Articles can be added later without changing the
+  // Knowledge Vault structure or making the landing page longer.
+  const SUBJECTS = [
+    { name: "Mathematics", icon: "📐", slug: "mathematics" },
+    { name: "Physics", icon: "⚛️", slug: "physics" },
+    { name: "Chemistry", icon: "🧪", slug: "chemistry" },
+    { name: "Biology", icon: "🧬", slug: "biology" },
+    { name: "Science and Technology", icon: "🔬", slug: "science-and-technology" },
+    { name: "Technology", icon: "🌐", slug: "technology" },
+    { name: "Social Sciences", icon: "🌍", slug: "social-sciences" },
+    { name: "General English", icon: "📖", slug: "general-english" },
+    { name: "Accounts and Statistics", icon: "📊", slug: "accounts-and-statistics" }
+  ];
+
   function esc(value) {
     return String(value ?? "").replace(/[&<>"']/g, function (c) {
       return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c];
@@ -54,7 +68,7 @@
     if (params.get("q")) search.value = params.get("q");
     if (params.get("subject")) subject.value = params.get("subject");
 
-    [...new Set(articles.map(a => a.category))].sort().forEach(v => subject.insertAdjacentHTML("beforeend", `<option value="${esc(v)}">${esc(v)}</option>`));
+    SUBJECTS.map(s => s.name).forEach(v => subject.insertAdjacentHTML("beforeend", `<option value="${esc(v)}">${esc(v)}</option>`));
     [...new Set(articles.map(a => a.level))].sort().forEach(v => level.insertAdjacentHTML("beforeend", `<option value="${esc(v)}">${esc(v)}</option>`));
     if (params.get("subject")) subject.value = params.get("subject");
 
@@ -157,10 +171,9 @@
     }
     const subjects = document.getElementById("kvSubjects");
     if (subjects) {
-      const icons = { Mathematics: "📐", Physics: "⚛️", Biology: "🧬", Chemistry: "🧪", "Computer Science": "💻", Technology: "🌐", History: "🏛️", "Everyday Knowledge": "💡" };
       const counts = {};
       articles.forEach(a => counts[a.category] = (counts[a.category] || 0) + 1);
-      subjects.innerHTML = Object.keys(counts).sort().map(s => subjectCard(s, counts[s], icons[s] || "📚")).join("");
+      subjects.innerHTML = SUBJECTS.map(s => subjectCard(s.name, counts[s.name] || 0, s.icon)).join("");
     }
   }
 
