@@ -46,16 +46,136 @@
 <meta name="copyright" content="Saraswat Academy">
 <link rel="icon" href="/favicon.png">
 
-<link rel="stylesheet" href="../../header.css">
-<script src="../../config.js"></script> <script src="../../header.js"></script> 
-<script src="../../loader.js"></script>
+<link rel="stylesheet" href="/header.css">
+<script src="/config.js"></script><script src="/header.js"></script> 
+<script src="/loader.js"></script>
 
 
-<link rel="stylesheet" href="../../assets/page-style.css">
+<link rel="stylesheet" href="/assets/page-style.css">
 
 
+<style>
+/* Chapter-page isolation: keep the shared site header/footer visually identical to the main site. */
+body.chapter-page{
+  margin:0;
+  padding:0;
+  font-family:'Inter',sans-serif;
+  background:#f7f9fc;
+  color:#1f2937;
+  overflow-x:hidden;
+}
+body.chapter-page #header,
+body.chapter-page #footer{
+  width:100%;
+  margin:0;
+  padding:0;
+}
+body.chapter-page .wrapper{
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+  padding:16px;
+}
+body.chapter-page .wrapper,
+body.chapter-page .wrapper *{
+  box-sizing:border-box;
+}
+body.chapter-page .wrapper .hero{
+  background:linear-gradient(135deg,#0f172a,#2563eb);
+  color:#fff;
+  padding:45px 35px;
+  border-radius:20px;
+}
+body.chapter-page .wrapper .grid{
+  display:grid;
+  grid-template-columns:280px minmax(0,1fr);
+  gap:24px;
+  margin-top:24px;
+  align-items:start;
+}
+body.chapter-page .wrapper aside{
+  background:#fff;
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  position:sticky;
+  top:90px;
+  height:max-content;
+}
+body.chapter-page .wrapper main{min-width:0;}
+body.chapter-page .wrapper main section{
+  background:#fff;
+  border-radius:18px;
+  padding:28px;
+  margin-bottom:22px;
+  border-top:5px solid #2563eb;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+body.chapter-page .wrapper .breadcrumb{
+  margin-bottom:18px;
+  color:#dbe7f5;
+}
+body.chapter-page .wrapper .breadcrumb a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+body.chapter-page .wrapper .breadcrumb .separator{opacity:.7;margin:0 6px;}
+body.chapter-page .wrapper .breadcrumb .current{font-weight:700;color:#fff;}
+body.chapter-page .wrapper h1{margin:0;font-size:clamp(2rem,4vw,3rem);line-height:1.2;}
+body.chapter-page .wrapper h2{color:#2563eb;margin-bottom:15px;}
+body.chapter-page .wrapper h3{margin:20px 0 10px;color:#1d4ed8;}
+body.chapter-page .wrapper section table{width:100%;border-collapse:collapse;margin:20px 0;}
+body.chapter-page .wrapper section th,
+body.chapter-page .wrapper section td{padding:10px 12px;border:1px solid #d7dee8;vertical-align:top;}
+body.chapter-page .wrapper section th{background:#173b75;color:#fff;}
+body.chapter-page .wrapper section .table-responsive{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+body.chapter-page .wrapper section .accordion-btn{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#fff;
+  border:0;
+  cursor:pointer;
+  padding:0;
+  text-align:left;
+}
+body.chapter-page .wrapper section .accordion-btn h2{margin:0;font-size:1.8rem;}
+body.chapter-page .wrapper section .accordion-icon{
+  width:42px;height:42px;display:flex;align-items:center;justify-content:center;
+  border-radius:50%;background:#eef5ff;transition:.35s;font-size:22px;flex-shrink:0;
+}
+body.chapter-page .wrapper section .accordion-content{
+  overflow:hidden;max-height:0;padding-top:0;
+  transition:max-height .45s ease,padding-top .35s ease;
+}
+body.chapter-page .wrapper section.open .accordion-content{max-height:50000px;padding-top:20px;}
+body.chapter-page .wrapper section.open .accordion-icon{transform:rotate(180deg);}
+@media (max-width:900px){
+  body.chapter-page .wrapper .grid{grid-template-columns:1fr;}
+  body.chapter-page .wrapper aside{position:static;margin-bottom:20px;}
+}
+@media (max-width:768px){
+  body.chapter-page .wrapper{padding:12px;}
+  body.chapter-page .wrapper .hero{padding:25px 18px;border-radius:15px;}
+  body.chapter-page .wrapper h1{font-size:1.6rem;}
+  body.chapter-page .wrapper main section{padding:18px;}
+  body.chapter-page .wrapper section .accordion-btn h2{font-size:1.25rem;line-height:1.4;padding-right:10px;}
+  body.chapter-page .wrapper section .accordion-icon{width:34px;height:34px;font-size:18px;}
+  body.chapter-page .wrapper aside{padding:18px;}
+}
+@media (max-width:480px){
+  body.chapter-page .wrapper{padding:10px;}
+  body.chapter-page .wrapper .hero{padding:20px 15px;}
+  body.chapter-page .wrapper h1{font-size:1.35rem;}
+  body.chapter-page .wrapper main section{padding:15px;}
+  body.chapter-page .wrapper h2{font-size:1.2rem;}
+  body.chapter-page .wrapper h3{font-size:1.05rem;}
+}
+</style>
 </head>
-<body>
+<body class="chapter-page">
         <div id="header"></div>
 
 
@@ -69,8 +189,7 @@
 
 <a href="/link_page/chapters.html">Class 9 Mathematics</a> →
 
-<a href="/link_page/chapters.html"></a> 
-Chapter 1
+<span class="current">Chapter 1</span>
 </div> 
 
 <h1>
