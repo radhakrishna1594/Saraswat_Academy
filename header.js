@@ -143,6 +143,14 @@ document.addEventListener("click",function(e){
     function loadKaTeX() {
         if (!document.body || !document.body.classList.contains("solution-page")) return;
 
+        /* KaTeX is strictly for Mathematics solution pages.
+           Other subjects (Hindi, English, Science, SST, Sanskrit, etc.)
+           must never load or process through the math renderer. */
+        var path = window.location.pathname || "";
+        var isMathsPage = /(?:^|\/)maths(?:_|\/|-)/i.test(path) ||
+                          /(?:^|\/)mathematics(?:_|\/|-)/i.test(path);
+        if (!isMathsPage) return;
+
         if (window.renderMathInElement) {
             render();
             return;
