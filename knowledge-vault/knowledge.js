@@ -68,7 +68,7 @@
     if (params.get("q")) search.value = params.get("q");
     if (params.get("subject")) subject.value = params.get("subject");
 
-    [...new Set(articles.map(a => a.category))].sort().forEach(v => subject.insertAdjacentHTML("beforeend", `<option value="${esc(v)}">${esc(v)}</option>`));
+    SUBJECTS.map(s => s.name).forEach(v => subject.insertAdjacentHTML("beforeend", `<option value="${esc(v)}">${esc(v)}</option>`));
     [...new Set(articles.map(a => a.level))].sort().forEach(v => level.insertAdjacentHTML("beforeend", `<option value="${esc(v)}">${esc(v)}</option>`));
     if (params.get("subject")) subject.value = params.get("subject");
 
