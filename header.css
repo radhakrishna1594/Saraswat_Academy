@@ -1092,7 +1092,7 @@ nav[aria-label="Breadcrumb"] {
     display: flex !important;
     align-items: center !important;
     flex-wrap: wrap !important;
-    gap: 6px !important;
+    gap: 5px !important;
 
     margin: 0 0 18px !important;
     padding: 9px 12px !important;
@@ -1114,8 +1114,9 @@ nav[aria-label="Breadcrumb"] a {
     color: #2563eb !important;
     text-decoration: none !important;
     font-weight: 600 !important;
-    white-space: normal !important;
-    overflow-wrap: anywhere !important;
+    white-space: nowrap !important;
+    overflow-wrap: normal !important;
+    flex: 0 0 auto !important;
 }
 
 .breadcrumb a:hover,
@@ -1139,7 +1140,9 @@ nav[aria-label="Breadcrumb"] .separator {
 nav[aria-label="Breadcrumb"] .current {
     color: #374151 !important;
     font-weight: 600 !important;
-    overflow-wrap: anywhere !important;
+    white-space: nowrap !important;
+    overflow-wrap: normal !important;
+    flex: 0 0 auto !important;
 }
 
 /* Template breadcrumbs */
@@ -1448,4 +1451,30 @@ picture img {
         padding: 0.2rem 0;
         -webkit-overflow-scrolling: touch;
     }
+}
+
+/* ─── BREADCRUMB MOBILE FIX ───
+   Keep each breadcrumb item intact and allow wrapping only between items. */
+@media (max-width: 600px) {
+  .breadcrumb,
+  nav[aria-label="Breadcrumb"] {
+    gap: 4px !important;
+    padding: 8px 10px !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+
+  .breadcrumb a,
+  .breadcrumb .current,
+  nav[aria-label="Breadcrumb"] a,
+  nav[aria-label="Breadcrumb"] .current {
+    white-space: nowrap !important;
+    flex: 0 0 auto !important;
+  }
+
+  .breadcrumb .separator,
+  nav[aria-label="Breadcrumb"] .separator {
+    flex: 0 0 auto !important;
+    margin: 0 1px !important;
+  }
 }
