@@ -61,6 +61,12 @@ document.addEventListener("click",function(e){
         var value = (text || "").replace(/\s+/g, " ").trim();
         if (!value || value.length > 180) return false;
 
+        /* Never convert headings or Hindi/other Indic question text into math.
+           This prevents lines such as "5. निबंध में समाज-सुधार..." from
+           becoming visible \\( ... \\) on solution pages. */
+        if (/^[0-9]+[.)]?\s*/.test(value) && /[\u0900-\u097F]/.test(value)) return false;
+        if (/[\u0900-\u097F]/.test(value)) return false;
+
         /* Never touch prose. */
         if (/[.!?]{1}/.test(value) && /[A-Za-z]{2,}/.test(value)) return false;
 
@@ -112,7 +118,7 @@ document.addEventListener("click",function(e){
         var article = document.querySelector(".solution-article");
         if (!article) return;
 
-        article.querySelectorAll("p, li, td, h3, h4").forEach(function (el) {
+        article.querySelectorAll("p, li, td").forEach(function (el) {
             if (el.closest(".katex, .katex-display, script, style, nav, a, button, pre, code")) return;
             if (el.querySelector(".katex")) return;
 
