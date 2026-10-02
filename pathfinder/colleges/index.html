@@ -11,73 +11,259 @@
 <script src="/loader.js" defer></script>
 <script src="/header.js" defer></script>
 <style>
-.college-directory{max-width:1080px;margin:auto;padding:34px 18px 65px}
-.college-directory .breadcrumb{margin-bottom:20px}
-.directory-intro{background:linear-gradient(135deg,#f0fdfa,#fff);border:1px solid #dbeafe;border-radius:20px;padding:25px;margin-bottom:28px}
-.directory-intro h1{margin-top:0;color:#102a43}
-.directory-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.directory-card{display:block;text-decoration:none;color:inherit;border:1px solid #e2e8f0;border-radius:16px;padding:21px;background:#fff;box-shadow:0 7px 22px rgba(15,23,42,.05);transition:transform .2s ease,box-shadow .2s ease}
-.directory-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(15,23,42,.09)}
-.directory-card h2{margin:0 0 8px;color:#0f766e;font-size:1.3rem}
-.directory-card p{margin:7px 0}
-.directory-tag{display:inline-block;margin-top:8px;background:#ecfdf5;color:#065f46;padding:5px 9px;border-radius:999px;font-size:.82rem;font-weight:700}
-@media(max-width:700px){.directory-grid{grid-template-columns:1fr}}
+/* =========================================================
+   PathFinder • Colleges Directory
+   Fully scoped to this page so it cannot affect other pages.
+   ========================================================= */
+
+body.pf-college-directory-page{
+  margin:0;
+}
+
+body.pf-college-directory-page .pf-college-directory{
+  width:100%;
+  max-width:1180px;
+  margin:0 auto;
+  padding:28px 22px 64px;
+  color:#1e293b;
+  font-family:inherit;
+  box-sizing:border-box;
+}
+
+body.pf-college-directory-page .pf-college-directory *,
+body.pf-college-directory-page .pf-college-directory *::before,
+body.pf-college-directory-page .pf-college-directory *::after{
+  box-sizing:border-box;
+}
+
+body.pf-college-directory-page .pf-college-breadcrumb{
+  margin:0 0 22px;
+  padding:0 2px;
+  font-size:.92rem;
+  line-height:1.5;
+  color:#64748b;
+}
+
+body.pf-college-directory-page .pf-college-breadcrumb a{
+  color:#2563eb;
+  text-decoration:none;
+}
+
+body.pf-college-directory-page .pf-college-breadcrumb a:hover{
+  text-decoration:underline;
+}
+
+body.pf-college-directory-page .pf-college-intro{
+  margin:0 0 34px;
+  padding:30px 34px;
+  border:1px solid #dbe5ef;
+  border-radius:22px;
+  background:linear-gradient(135deg,#f0fdfa 0%,#ffffff 72%);
+  box-shadow:0 8px 28px rgba(15,23,42,.05);
+}
+
+body.pf-college-directory-page .pf-college-intro h1{
+  margin:0 0 10px;
+  color:#12345b;
+  font-size:clamp(2rem,3.5vw,2.7rem);
+  line-height:1.15;
+  letter-spacing:-.02em;
+}
+
+body.pf-college-directory-page .pf-college-intro p{
+  max-width:980px;
+  margin:8px 0 0;
+  color:#475569;
+  font-size:1rem;
+  line-height:1.65;
+}
+
+body.pf-college-directory-page .pf-college-intro p:last-child{
+  margin-top:14px;
+  padding-top:14px;
+  border-top:1px solid #dce7e9;
+}
+
+body.pf-college-directory-page .pf-college-intro strong{
+  color:#0f766e;
+}
+
+body.pf-college-directory-page .pf-college-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+  align-items:stretch;
+}
+
+body.pf-college-directory-page .pf-college-card{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  min-height:255px;
+  padding:26px 27px 24px;
+  border:1px solid #dfe7ef;
+  border-radius:20px;
+  background:#ffffff;
+  color:#1e293b;
+  text-decoration:none;
+  box-shadow:0 7px 24px rgba(15,23,42,.055);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+
+body.pf-college-directory-page .pf-college-card:hover{
+  transform:translateY(-4px);
+  border-color:#b9d8d5;
+  box-shadow:0 14px 34px rgba(15,23,42,.10);
+}
+
+body.pf-college-directory-page .pf-college-card h2{
+  margin:0 0 13px;
+  color:#0f766e;
+  font-size:clamp(1.15rem,1.7vw,1.4rem);
+  line-height:1.3;
+  letter-spacing:-.01em;
+}
+
+body.pf-college-directory-page .pf-college-card p{
+  margin:0;
+  color:#475569;
+  font-size:.98rem;
+  line-height:1.62;
+}
+
+body.pf-college-directory-page .pf-college-tag{
+  display:inline-flex;
+  align-items:center;
+  align-self:flex-start;
+  margin-top:auto;
+  padding:7px 11px;
+  border-radius:999px;
+  background:#ecfdf5;
+  color:#065f46;
+  font-size:.78rem;
+  line-height:1.2;
+  font-weight:700;
+  letter-spacing:.01em;
+}
+
+body.pf-college-directory-page .pf-college-back{
+  margin:34px 0 0;
+  padding-top:20px;
+  border-top:1px solid #e2e8f0;
+}
+
+body.pf-college-directory-page .pf-college-back a{
+  color:#2563eb;
+  font-weight:700;
+  text-decoration:none;
+}
+
+body.pf-college-directory-page .pf-college-back a:hover{
+  text-decoration:underline;
+}
+
+@media (max-width:800px){
+  body.pf-college-directory-page .pf-college-directory{
+    padding:24px 16px 50px;
+  }
+
+  body.pf-college-directory-page .pf-college-intro{
+    padding:24px 22px;
+    margin-bottom:26px;
+    border-radius:18px;
+  }
+
+  body.pf-college-directory-page .pf-college-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  body.pf-college-directory-page .pf-college-card{
+    min-height:0;
+    padding:23px 22px;
+    border-radius:18px;
+  }
+}
+
+@media (max-width:480px){
+  body.pf-college-directory-page .pf-college-directory{
+    padding-left:13px;
+    padding-right:13px;
+  }
+
+  body.pf-college-directory-page .pf-college-intro{
+    padding:21px 18px;
+  }
+
+  body.pf-college-directory-page .pf-college-card{
+    padding:21px 19px;
+  }
+
+  body.pf-college-directory-page .pf-college-card h2{
+    font-size:1.15rem;
+  }
+
+  body.pf-college-directory-page .pf-college-card p{
+    font-size:.94rem;
+    line-height:1.58;
+  }
+}
 </style>
 <link rel="stylesheet" href="/pathfinder/pathfinder.css">
 </head>
-<body class="pathfinder-page">
+<body class="pathfinder-page pf-college-directory-page">
 <div id="header"></div>
-<main class="college-directory">
-<div class="breadcrumb"><a href="/index.html">Home</a> → <a href="/pathfinder/index.html">PathFinder</a> → <span>Colleges & Universities</span></div>
-<section class="directory-intro">
+<main class="pf-college-directory">
+<div class="pf-college-breadcrumb"><a href="/index.html">Home</a> → <a href="/pathfinder/index.html">PathFinder</a> → <span>Colleges & Universities</span></div>
+<section class="pf-college-intro">
 <h1>Colleges & Universities</h1>
 <p>Explore detailed university and college guides in PathFinder. Each guide is designed around the questions students and parents commonly ask: courses, eligibility, fees, admission routes, scholarships, campus life and official verification.</p>
 <p><strong>University guides:</strong> Explore Jaipur universities with course, fee, admission, campus and hostel information.</p>
 </section>
-<div class="directory-grid">
-<a class="directory-card" href="/pathfinder/colleges/manipal-university-jaipur.html">
+<div class="pf-college-grid">
+<a class="pf-college-card" href="/pathfinder/colleges/manipal-university-jaipur.html">
 <h2>🏛️ Manipal University Jaipur (MUJ)</h2>
 <p>Complete guide covering courses, 2026–27 admission, fees, eligibility, scholarships, real campus photographs, hostel, library, placements and FAQs.</p>
-<span class="directory-tag">Jaipur • University Guide</span>
+<span class="pf-college-tag">Jaipur • University Guide</span>
 </a>
-<a class="directory-card" href="/pathfinder/colleges/amity-university-jaipur.html">
+<a class="pf-college-card" href="/pathfinder/colleges/amity-university-jaipur.html">
 <h2>🎓 Amity University Jaipur</h2>
 <p>Practical guide covering courses, 2026–27 admission, fees, scholarships, real campus photographs, hostel, facilities, placements and FAQs.</p>
-<span class="directory-tag">Jaipur • University Guide</span>
+<span class="pf-college-tag">Jaipur • University Guide</span>
 </a>
-<a class="directory-card" href="/pathfinder/colleges/mnit-jaipur.html">
+<a class="pf-college-card" href="/pathfinder/colleges/mnit-jaipur.html">
 <h2>🏛️ MNIT Jaipur</h2>
 <p>Complete student guide covering B.Tech, B.Arch, PG programmes, 2026–27 fees, JEE Main and JoSAA admission, hostel, campus, placements and FAQs.</p>
-<span class="directory-tag">Jaipur • Institute of National Importance</span>
+<span class="pf-college-tag">Jaipur • Institute of National Importance</span>
 </a>
-<a class="directory-card" href="/pathfinder/colleges/nims-university-jaipur.html">
+<a class="pf-college-card" href="/pathfinder/colleges/nims-university-jaipur.html">
 <h2>🏥 NIMS University Jaipur</h2>
 <p>Complete student guide covering medical, engineering, computing, management, law, pharmacy, health sciences, 2026–27 admission, fees, hostel, campus and FAQs.</p>
-<span class="directory-tag">Jaipur • University Guide</span>
+<span class="pf-college-tag">Jaipur • University Guide</span>
 </a>
-<a class="directory-card" href="/pathfinder/colleges/jaipur-national-university-jaipur.html"><h2>🏫 Jaipur National University (JNU), Jaipur</h2><p>Complete guide covering courses, fees, eligibility, JEST, admission, scholarships, campus, hostel, placements and FAQs.</p><span class="directory-tag">Jaipur • University Guide</span></a>
-<a class="directory-card" href="/pathfinder/colleges/jecrc-university-jaipur.html">
+<a class="pf-college-card" href="/pathfinder/colleges/jaipur-national-university-jaipur.html"><h2>🏫 Jaipur National University (JNU), Jaipur</h2><p>Complete guide covering courses, fees, eligibility, JEST, admission, scholarships, campus, hostel, placements and FAQs.</p><span class="pf-college-tag">Jaipur • University Guide</span></a>
+<a class="pf-college-card" href="/pathfinder/colleges/jecrc-university-jaipur.html">
 <h2>🏫 JECRC University, Jaipur</h2>
 <p>Complete student guide covering courses, 2026–27 fees, eligibility, admission process, scholarships, campus, hostel, placements, research and FAQs.</p>
-<span class="directory-tag">Jaipur • University Guide</span>
+<span class="pf-college-tag">Jaipur • University Guide</span>
 </a>
-<a class="directory-card" href="/pathfinder/colleges/suresh-gyan-vihar-university-jaipur.html">
+<a class="pf-college-card" href="/pathfinder/colleges/suresh-gyan-vihar-university-jaipur.html">
 <h2>🌿 Suresh Gyan Vihar University (SGVU), Jaipur</h2>
 <p>Complete guide covering courses, published fees, eligibility, admission 2026–27, scholarships, real campus and hostel photos, facilities, placements and FAQs.</p>
-<span class="directory-tag">Jaipur • University Guide</span>
+<span class="pf-college-tag">Jaipur • University Guide</span>
 </a>
-<a class="directory-card" href="/pathfinder/colleges/poornima-university-jaipur.html">
+<a class="pf-college-card" href="/pathfinder/colleges/poornima-university-jaipur.html">
 <h2>🏛️ Poornima University, Jaipur</h2>
 <p>Complete guide covering courses, 2026–27 fees, eligibility, admission, scholarships, real campus photographs, hostel facilities, student life, placements and FAQs.</p>
-<span class="directory-tag">Jaipur • University Guide</span>
+<span class="pf-college-tag">Jaipur • University Guide</span>
 </a>
-<a class="directory-card" href="/pathfinder/colleges/vivekananda-global-university-jaipur.html">
+<a class="pf-college-card" href="/pathfinder/colleges/vivekananda-global-university-jaipur.html">
 <h2>🎓 Vivekananda Global University (VGU), Jaipur</h2>
 <p>A complete student guide covering courses, 2026–27 fees, eligibility, admission process, scholarships, campus, hostel, placements and frequently asked questions.</p>
-<span class="directory-tag">Jaipur • University Guide</span>
+<span class="pf-college-tag">Jaipur • University Guide</span>
 </a>
 </div>
-<p style="margin-top:28px"><a href="/pathfinder/index.html">← Back to PathFinder</a></p>
+<p class="pf-college-back"><a href="/pathfinder/index.html">← Back to PathFinder</a></p>
 </main>
 <div id="footer"></div>
 </body>
