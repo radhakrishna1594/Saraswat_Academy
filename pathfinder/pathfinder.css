@@ -1,4 +1,7 @@
-/* PathFinder shared visual system */
+/* PathFinder shared visual system
+   IMPORTANT: keep selectors low-specificity so university/page-specific CSS
+   (and the global Saraswat Academy header/footer) are not overridden.
+*/
 .pathfinder-page{
   --pf-bg:#f5f7fb;
   --pf-surface:#ffffff;
@@ -13,33 +16,126 @@
   --pf-border-soft:#e7edf3;
   --pf-shadow:0 8px 24px rgba(15,23,42,.06);
   background:var(--pf-bg);
+}
+
+/* PathFinder content only — :where() deliberately keeps specificity low. */
+:where(.pathfinder-page > main){
   color:var(--pf-text);
   font-family:Inter,Arial,sans-serif;
   line-height:1.7;
 }
-.pathfinder-page *, .pathfinder-page *::before, .pathfinder-page *::after{box-sizing:border-box}
-.pathfinder-page main{max-width:1120px;margin:0 auto}
-.pathfinder-page p{margin:0 0 1.05rem;line-height:1.8;color:var(--pf-text)}
-.pathfinder-page li{line-height:1.75;margin:.35rem 0}
-.pathfinder-page h1,.pathfinder-page h2,.pathfinder-page h3{color:var(--pf-heading);line-height:1.25}
-.pathfinder-page h1{margin:0 0 1rem}
-.pathfinder-page h2{margin:2rem 0 .85rem}
-.pathfinder-page h3{margin:1.35rem 0 .55rem}
-.pathfinder-page a{color:var(--pf-accent)}
-.pathfinder-page table{display:table;width:100%;min-width:0;margin:18px 0;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--pf-border);border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(15,23,42,.03)}
-.pathfinder-page th,.pathfinder-page td{padding:13px 15px;border-right:1px solid var(--pf-border-soft);border-bottom:1px solid var(--pf-border-soft);text-align:left;vertical-align:top;line-height:1.6}
-.pathfinder-page th{background:#123b63!important;color:#fff!important;font-weight:700}
-.pathfinder-page tr:last-child td{border-bottom:0}
-.pathfinder-page th:last-child,.pathfinder-page td:last-child{border-right:0}
-.pathfinder-page tr:nth-child(even) td{background:#f8fafc}
-.pathfinder-page tr:hover td{background:#eef6ff}
-.pathfinder-page .nims-table-wrap,.pathfinder-page .mnit-table-wrap,.pathfinder-page .amity-table-wrap,.pathfinder-page .muj-table-wrap,.pathfinder-page .jecrc-table-wrap,.pathfinder-page .jnu-table-wrap,.pathfinder-page .sgvu-table-wrap,.pathfinder-page .poornima-table-wrap,.pathfinder-page .vgu-table-wrap,.pathfinder-page .table-responsive{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:8px 0 20px}
-.pathfinder-page .nims-table-wrap table,.pathfinder-page .mnit-table-wrap table,.pathfinder-page .amity-table-wrap table,.pathfinder-page .muj-table-wrap table,.pathfinder-page .jecrc-table-wrap table,.pathfinder-page .jnu-table-wrap table,.pathfinder-page .sgvu-table-wrap table,.pathfinder-page .poornima-table-wrap table,.pathfinder-page .vgu-table-wrap table,.pathfinder-page .table-responsive table{min-width:640px}
-.pathfinder-page img{max-width:100%;height:auto}
+:where(.pathfinder-page > main) *,
+:where(.pathfinder-page > main) *::before,
+:where(.pathfinder-page > main) *::after{box-sizing:border-box}
+
+:where(.pathfinder-page > main){
+  max-width:1120px;
+  margin:0 auto;
+}
+:where(.pathfinder-page > main) p{
+  margin:0 0 1.05rem;
+  line-height:1.8;
+  color:var(--pf-text);
+}
+:where(.pathfinder-page > main) li{
+  line-height:1.75;
+  margin:.35rem 0;
+}
+:where(.pathfinder-page > main) h1,
+:where(.pathfinder-page > main) h2,
+:where(.pathfinder-page > main) h3{
+  color:var(--pf-heading);
+  line-height:1.25;
+}
+:where(.pathfinder-page > main) h1{margin:0 0 1rem}
+:where(.pathfinder-page > main) h2{margin:2rem 0 .85rem}
+:where(.pathfinder-page > main) h3{margin:1.35rem 0 .55rem}
+:where(.pathfinder-page > main) a{color:var(--pf-accent)}
+
+:where(.pathfinder-page > main) table{
+  display:table;
+  width:100%;
+  min-width:0;
+  margin:18px 0;
+  border-collapse:separate;
+  border-spacing:0;
+  background:#fff;
+  border:1px solid var(--pf-border);
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 2px 8px rgba(15,23,42,.03);
+}
+:where(.pathfinder-page > main) th,
+:where(.pathfinder-page > main) td{
+  padding:13px 15px;
+  border-right:1px solid var(--pf-border-soft);
+  border-bottom:1px solid var(--pf-border-soft);
+  text-align:left;
+  vertical-align:top;
+  line-height:1.6;
+}
+:where(.pathfinder-page > main) th{
+  background:#123b63;
+  color:#fff;
+  font-weight:700;
+}
+:where(.pathfinder-page > main) tr:last-child td{border-bottom:0}
+:where(.pathfinder-page > main) th:last-child,
+:where(.pathfinder-page > main) td:last-child{border-right:0}
+:where(.pathfinder-page > main) tr:nth-child(even) td{background:#f8fafc}
+:where(.pathfinder-page > main) tr:hover td{background:#eef6ff}
+
+:where(.pathfinder-page > main) .nims-table-wrap,
+:where(.pathfinder-page > main) .mnit-table-wrap,
+:where(.pathfinder-page > main) .amity-table-wrap,
+:where(.pathfinder-page > main) .muj-table-wrap,
+:where(.pathfinder-page > main) .jecrc-table-wrap,
+:where(.pathfinder-page > main) .jnu-table-wrap,
+:where(.pathfinder-page > main) .sgvu-table-wrap,
+:where(.pathfinder-page > main) .poornima-table-wrap,
+:where(.pathfinder-page > main) .vgu-table-wrap,
+:where(.pathfinder-page > main) .table-responsive{
+  width:100%;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  margin:8px 0 20px;
+}
+
+:where(.pathfinder-page > main) .nims-table-wrap table,
+:where(.pathfinder-page > main) .mnit-table-wrap table,
+:where(.pathfinder-page > main) .amity-table-wrap table,
+:where(.pathfinder-page > main) .muj-table-wrap table,
+:where(.pathfinder-page > main) .jecrc-table-wrap table,
+:where(.pathfinder-page > main) .jnu-table-wrap table,
+:where(.pathfinder-page > main) .sgvu-table-wrap table,
+:where(.pathfinder-page > main) .poornima-table-wrap table,
+:where(.pathfinder-page > main) .vgu-table-wrap table,
+:where(.pathfinder-page > main) .table-responsive table{
+  min-width:640px;
+}
+
+:where(.pathfinder-page > main) img{
+  max-width:100%;
+  height:auto;
+}
+
 @media(max-width:700px){
-  .pathfinder-page p{line-height:1.75;margin-bottom:1rem}
-  .pathfinder-page h2{margin-top:1.65rem}
-  .pathfinder-page th,.pathfinder-page td{padding:10px 11px;font-size:.92rem}
-  .pathfinder-page table{font-size:.92rem}
-  .pathfinder-page main{width:100%}
+  :where(.pathfinder-page > main) p{
+    line-height:1.75;
+    margin-bottom:1rem;
+  }
+  :where(.pathfinder-page > main) h2{margin-top:1.65rem}
+  :where(.pathfinder-page > main) th,
+  :where(.pathfinder-page > main) td{
+    padding:10px 11px;
+    font-size:.92rem;
+  }
+  :where(.pathfinder-page > main) table{font-size:.92rem}
+  :where(.pathfinder-page > main){width:100%}
+}
+
+/* Keep the shared Saraswat Academy header visually independent from PathFinder. */
+.pathfinder-page > #header{
+  color:inherit;
+  font-family:inherit;
 }
