@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+<title id="title">Admission counsellor illustration</title>
+<desc id="desc">A friendly education counsellor wearing a headset and working on a laptop.</desc>
+<rect width="320" height="320" rx="160" fill="#eef6ff"/>
+<circle cx="160" cy="118" r="62" fill="#f6c7a5"/>
+<path d="M99 111c2-55 39-83 73-83 48 0 72 35 66 88-15-17-31-25-55-27-22 24-48 32-84 22z" fill="#172554"/>
+<path d="M108 110c-18 0-29 12-29 29 0 15 9 27 24 30l5-14c-8-2-12-7-12-16 0-8 5-13 12-13zM212 110c18 0 29 12 29 29 0 15-9 27-24 30l-5-14c8-2 12-7 12-16 0-8-5-13-12-13z" fill="#2563eb"/>
+<path d="M103 128c-4-26 4-54 23-69 18-15 43-20 65-13 18 5 33 19 41 39-28-17-59-15-82 5-13 11-24 24-47 38z" fill="#1e293b"/>
+<circle cx="132" cy="120" r="6" fill="#334155"/><circle cx="188" cy="120" r="6" fill="#334155"/>
+<path d="M144 146c10 7 22 7 32 0" fill="none" stroke="#a44a3f" stroke-width="5" stroke-linecap="round"/>
+<path d="M95 219c10-42 39-63 65-63s55 21 65 63l-17 27H112z" fill="#2563eb"/>
+<path d="M119 190c12 13 26 20 41 20s29-7 41-20l17 44H102z" fill="#ffffff" opacity=".96"/>
+<path d="M78 238h164c17 0 31 14 31 31v18H47v-18c0-17 14-31 31-31z" fill="#0f766e"/>
+<rect x="106" y="223" width="108" height="62" rx="7" fill="#334155"/>
+<rect x="114" y="231" width="92" height="46" rx="4" fill="#dbeafe"/>
+<path d="M135 285h50l-8 12h-34z" fill="#475569"/>
+<circle cx="239" cy="211" r="11" fill="#22c55e"/>
+</svg>
