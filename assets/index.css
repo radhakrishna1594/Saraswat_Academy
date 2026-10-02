@@ -886,3 +886,11 @@ picture img {
         max-width: 100%;
     }
 }
+
+/* ===== Homepage header/layout guard ===== */
+body{overflow-x:hidden}
+main#main-content,.hero,.hero-inner{max-width:100%;min-width:0}
+@media (min-width:769px){
+  .hero-inner{width:100%;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .hero-content,.hero-visual{min-width:0}
+}
