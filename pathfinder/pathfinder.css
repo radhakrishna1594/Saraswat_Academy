@@ -1,0 +1,45 @@
+/* PathFinder shared visual system */
+.pathfinder-page{
+  --pf-bg:#f5f7fb;
+  --pf-surface:#ffffff;
+  --pf-surface-soft:#f8fafc;
+  --pf-text:#1f2937;
+  --pf-muted:#64748b;
+  --pf-heading:#12345b;
+  --pf-primary:#0f766e;
+  --pf-primary-dark:#115e59;
+  --pf-accent:#2563eb;
+  --pf-border:#dbe3ec;
+  --pf-border-soft:#e7edf3;
+  --pf-shadow:0 8px 24px rgba(15,23,42,.06);
+  background:var(--pf-bg);
+  color:var(--pf-text);
+  font-family:Inter,Arial,sans-serif;
+  line-height:1.7;
+}
+.pathfinder-page *, .pathfinder-page *::before, .pathfinder-page *::after{box-sizing:border-box}
+.pathfinder-page main{max-width:1120px;margin:0 auto}
+.pathfinder-page p{margin:0 0 1.05rem;line-height:1.8;color:var(--pf-text)}
+.pathfinder-page li{line-height:1.75;margin:.35rem 0}
+.pathfinder-page h1,.pathfinder-page h2,.pathfinder-page h3{color:var(--pf-heading);line-height:1.25}
+.pathfinder-page h1{margin:0 0 1rem}
+.pathfinder-page h2{margin:2rem 0 .85rem}
+.pathfinder-page h3{margin:1.35rem 0 .55rem}
+.pathfinder-page a{color:var(--pf-accent)}
+.pathfinder-page table{display:table;width:100%;min-width:0;margin:18px 0;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--pf-border);border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(15,23,42,.03)}
+.pathfinder-page th,.pathfinder-page td{padding:13px 15px;border-right:1px solid var(--pf-border-soft);border-bottom:1px solid var(--pf-border-soft);text-align:left;vertical-align:top;line-height:1.6}
+.pathfinder-page th{background:#123b63!important;color:#fff!important;font-weight:700}
+.pathfinder-page tr:last-child td{border-bottom:0}
+.pathfinder-page th:last-child,.pathfinder-page td:last-child{border-right:0}
+.pathfinder-page tr:nth-child(even) td{background:#f8fafc}
+.pathfinder-page tr:hover td{background:#eef6ff}
+.pathfinder-page .nims-table-wrap,.pathfinder-page .mnit-table-wrap,.pathfinder-page .amity-table-wrap,.pathfinder-page .muj-table-wrap,.pathfinder-page .jecrc-table-wrap,.pathfinder-page .jnu-table-wrap,.pathfinder-page .sgvu-table-wrap,.pathfinder-page .poornima-table-wrap,.pathfinder-page .vgu-table-wrap,.pathfinder-page .table-responsive{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:8px 0 20px}
+.pathfinder-page .nims-table-wrap table,.pathfinder-page .mnit-table-wrap table,.pathfinder-page .amity-table-wrap table,.pathfinder-page .muj-table-wrap table,.pathfinder-page .jecrc-table-wrap table,.pathfinder-page .jnu-table-wrap table,.pathfinder-page .sgvu-table-wrap table,.pathfinder-page .poornima-table-wrap table,.pathfinder-page .vgu-table-wrap table,.pathfinder-page .table-responsive table{min-width:640px}
+.pathfinder-page img{max-width:100%;height:auto}
+@media(max-width:700px){
+  .pathfinder-page p{line-height:1.75;margin-bottom:1rem}
+  .pathfinder-page h2{margin-top:1.65rem}
+  .pathfinder-page th,.pathfinder-page td{padding:10px 11px;font-size:.92rem}
+  .pathfinder-page table{font-size:.92rem}
+  .pathfinder-page main{width:100%}
+}
