@@ -48,6 +48,8 @@ body.xsn-page .xsn-two{display:grid;grid-template-columns:repeat(2,1fr);gap:17px
 body.xsn-page .xsn-card{padding:20px;border:1px solid #e0e7ef;border-radius:15px;background:#f8fafc}
 body.xsn-page .xsn-card h3{margin-top:0}
 body.xsn-page .xsn-links a{color:#2563eb}
+/* Keep any shared card on this school page in normal document flow. */
+body.xsn-page .related-box{position:static !important;top:auto !important;height:auto !important}
 body.xsn-page .xsn-back{margin:27px 0 0}
 body.xsn-page .xsn-back a{color:#2563eb;font-weight:800;text-decoration:none}
 @media(max-width:850px){body.xsn-page .xsn-facts{grid-template-columns:repeat(2,1fr)}body.xsn-page .xsn-photo-grid{grid-template-columns:repeat(2,1fr)}}
