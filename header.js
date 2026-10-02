@@ -1,5 +1,6 @@
 (() => {
   let websiteZoom = 1;
+  let navigationBound = false;
 
   function setMenuState(open) {
     const button = document.getElementById('hamburger');
@@ -13,21 +14,29 @@
     document.body.style.overflow = open ? 'hidden' : '';
   }
 
-  function initHeaderNavigation() {
-    const button = document.getElementById('hamburger');
-    const menu = document.getElementById('mobileNav');
-    if (!button || !menu || button.dataset.bound === 'true') return;
+  function bindHeaderNavigation() {
+    if (navigationBound) return;
+    navigationBound = true;
 
-    button.dataset.bound = 'true';
+    // The shared header is injected dynamically by loader.js, so use
+    // event delegation rather than depending on the header already existing.
+    document.addEventListener('click', function (event) {
+      const button = event.target.closest('#hamburger');
 
-    button.addEventListener('click', function (event) {
-      event.preventDefault();
-      event.stopPropagation();
-      setMenuState(!menu.classList.contains('open'));
-    });
+      if (button) {
+        event.preventDefault();
+        event.stopPropagation();
 
-    menu.addEventListener('click', function (event) {
-      if (event.target.closest('a')) setMenuState(false);
+        const menu = document.getElementById('mobileNav');
+        if (menu) {
+          setMenuState(!menu.classList.contains('open'));
+        }
+        return;
+      }
+
+      if (event.target.closest('#mobileNav a')) {
+        setMenuState(false);
+      }
     });
 
     document.addEventListener('keydown', function (event) {
@@ -49,5 +58,8 @@
     document.body.style.zoom = '1';
   };
 
-  document.addEventListener('DOMContentLoaded', initHeaderNavigation, { once: true });
+  // Bind immediately when possible and also on DOMContentLoaded.
+  // This works whether header.js loads before or after loader.js injects the header.
+  bindHeaderNavigation();
+  document.addEventListener('DOMContentLoaded', bindHeaderNavigation, { once: true });
 })();
