@@ -1174,3 +1174,52 @@ body.tuition-form-page .cta p{max-width:650px;margin:0 auto 22px;color:#aebbd0}
   }
 }
 
+
+/* FINAL STUDENT PHOTO CARD OVERRIDE - 2026-10-03 */
+:is(body.tuition-page,body.tuition-form-page) .sa-testimonials-grid .sa-student-card{
+  min-height:0 !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  border-radius:14px !important;
+}
+:is(body.tuition-page,body.tuition-form-page) .sa-testimonials-grid .sa-student-card > .sa-student-photo{
+  display:block !important;
+  width:100% !important;
+  height:120px !important;
+  min-height:120px !important;
+  max-height:120px !important;
+  margin:0 !important;
+  padding:0 !important;
+  object-fit:cover !important;
+  object-position:center 20% !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+}
+:is(body.tuition-page,body.tuition-form-page) .sa-testimonials-grid .sa-student-card .sa-student-content{
+  padding:10px 12px 12px !important;
+}
+:is(body.tuition-page,body.tuition-form-page) .sa-testimonials-grid .sa-student-card .sa-testimonial-name{
+  margin:7px 0 2px !important;
+  font-size:12px !important;
+}
+:is(body.tuition-page,body.tuition-form-page) .sa-testimonials-grid .sa-student-card .sa-testimonial-score{
+  margin-top:2px !important;
+  font-size:18px !important;
+}
+@media(max-width:760px){
+  :is(body.tuition-page,body.tuition-form-page) .sa-testimonials-grid .sa-student-card > .sa-student-photo{
+    height:115px !important;
+    min-height:115px !important;
+    max-height:115px !important;
+    object-position:center 18% !important;
+  }
+}
+@media(max-width:480px){
+  :is(body.tuition-page,body.tuition-form-page) .sa-testimonials-grid .sa-student-card > .sa-student-photo{
+    height:145px !important;
+    min-height:145px !important;
+    max-height:145px !important;
+    object-position:center 18% !important;
+  }
+}
