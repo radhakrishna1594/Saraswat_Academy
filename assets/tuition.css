@@ -1146,15 +1146,16 @@ body.tuition-form-page .cta p{max-width:650px;margin:0 auto 22px;color:#aebbd0}
 @media(max-width:760px){
   :is(body.tuition-page, body.tuition-form-page) .sa-testimonials-grid{
     grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:13px;
+    gap:12px;
   }
 
   :is(body.tuition-page, body.tuition-form-page) .sa-student-card{
-    min-height:245px;
+    min-height:0;
   }
 
   :is(body.tuition-page, body.tuition-form-page) .sa-student-card .sa-student-photo{
-    height:145px;
+    height:125px;
+    object-position:center 22%;
   }
 }
 
@@ -1168,7 +1169,8 @@ body.tuition-form-page .cta p{max-width:650px;margin:0 auto 22px;color:#aebbd0}
   }
 
   :is(body.tuition-page, body.tuition-form-page) .sa-student-card .sa-student-photo{
-    height:190px;
+    height:155px;
+    object-position:center 20%;
   }
 }
 
