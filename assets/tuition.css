@@ -1039,38 +1039,72 @@ body.tuition-form-page .cta p{max-width:650px;margin:0 auto 22px;color:#aebbd0}
 :is(body.tuition-page, body.tuition-form-page) .sa-student-card{
   display:flex;
   flex-direction:column;
-  min-height:270px;
+  min-height:0;
   padding:0;
   overflow:hidden;
   background:#fff;
+  border-radius:16px;
 }
 
 :is(body.tuition-page, body.tuition-form-page) .sa-student-card .sa-student-photo{
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display:block;
   width:100%;
-  height:175px;
+  height:135px;
   margin:0;
   flex:none;
   object-fit:cover;
+  object-position:center 25%;
   border:0;
   border-radius:0;
   background:linear-gradient(135deg,#eff6ff,#ecfdf5);
   color:#2563eb;
-  font-size:32px;
+  font-size:28px;
   font-weight:800;
   box-shadow:none;
 }
 
 :is(body.tuition-page, body.tuition-form-page) .sa-student-card .sa-photo-placeholder{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  object-position:center;
   background:linear-gradient(135deg,#eff6ff,#f0fdf4);
 }
 
 :is(body.tuition-page, body.tuition-form-page) .sa-student-content{
   position:relative;
-  padding:17px 18px 19px;
+  padding:12px 14px 14px;
   flex:1;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .sa-student-card .sa-testimonial-name{
+  margin:10px 0 2px;
+  font-size:13px;
+  line-height:1.25;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .sa-student-card .sa-testimonial-score{
+  margin-top:2px;
+  font-size:20px;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .sa-student-card .sa-testimonial-badge{
+  margin:0 4px 4px 0;
+  padding:4px 6px;
+  font-size:8px;
+  letter-spacing:.45px;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .sa-student-card .sa-result-subjects{
+  gap:5px;
+  margin-top:7px;
+  padding-top:0;
+}
+
+:is(body.tuition-page, body.tuition-form-page) .sa-student-card .sa-result-subjects span{
+  padding:5px 6px;
+  font-size:9px;
+  border-radius:7px;
 }
 
 :is(body.tuition-page, body.tuition-form-page) .sa-testimonial-badge{
