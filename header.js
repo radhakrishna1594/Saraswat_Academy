@@ -84,11 +84,7 @@
   }
 
 
-  // Parent Home Tuition WhatsApp CTA — place a dedicated enquiry card
-  // directly above the existing "Hire a Tutor" card on all home-tutor pages.
     // Bind immediately when possible and also after the page/header is ready.
-  // The parent WhatsApp CTA uses a small DOM observer because loader.js and
-  // other shared scripts can inject/rebuild parts of the page asynchronously.
   function runTutorPageEnhancements() {
     bindHeaderNavigation();
     setupAreaWiseTutorLinks();
@@ -106,24 +102,5 @@
     window.setTimeout(runTutorPageEnhancements, 600);
     window.setTimeout(runTutorPageEnhancements, 1200);
 
-    // Keep watching briefly so the CTA is inserted even if the tutor section
-    // is rendered after DOMContentLoaded.
-    if (document.body && !window.__saTutorCTAObserver) {
-      window.__saTutorCTAObserver = new MutationObserver(function () {
-        setupParentsHomeTuitionWhatsAppCard();
-      });
-
-      window.__saTutorCTAObserver.observe(document.body, {
-        childList: true,
-        subtree: true
-      });
-
-      window.setTimeout(function () {
-        if (window.__saTutorCTAObserver) {
-          window.__saTutorCTAObserver.disconnect();
-          window.__saTutorCTAObserver = null;
-        }
-      }, 5000);
-    }
   }, { once: true });
 })();
