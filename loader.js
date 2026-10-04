@@ -162,6 +162,70 @@ async function loadComponent(id, file) {
     normalizeBreadcrumbs();
 }
 
+/* =========================================================
+   SARASWAT ACADEMY — MOBILE MENU
+   Shared across every page that loads header.html.
+   ========================================================= */
+(function initMobileMenu() {
+    let menuInitialized = false;
+
+    function setupMobileMenu() {
+        const hamburger = document.getElementById("hamburger");
+        const mobileNav = document.getElementById("mobileNav");
+        const header = document.querySelector("#header > header") || document.querySelector("header");
+
+        if (!hamburger || !mobileNav || menuInitialized) return;
+        menuInitialized = true;
+
+        function setMenu(open) {
+            hamburger.classList.toggle("open", open);
+            mobileNav.classList.toggle("open", open);
+            hamburger.setAttribute("aria-expanded", String(open));
+            document.body.classList.toggle("menu-open", open);
+
+            if (header) header.classList.toggle("menu-active", open);
+        }
+
+        window.toggleMobileMenu = function () {
+            setMenu(!mobileNav.classList.contains("open"));
+        };
+
+        hamburger.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            window.toggleMobileMenu();
+        });
+
+        mobileNav.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => setMenu(false));
+        });
+
+        document.addEventListener("click", function (event) {
+            if (!mobileNav.classList.contains("open")) return;
+            if (header && !header.contains(event.target)) setMenu(false);
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && mobileNav.classList.contains("open")) {
+                setMenu(false);
+                hamburger.focus();
+            }
+        });
+
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 768) setMenu(false);
+        });
+    }
+
+    document.addEventListener("saraswat-header-loaded", setupMobileMenu);
+
+    if (document.readyState !== "loading") {
+        setupMobileMenu();
+    } else {
+        document.addEventListener("DOMContentLoaded", setupMobileMenu, { once: true });
+    }
+})();
+
 document.addEventListener("DOMContentLoaded", () => {
     removeStrayMetaText();
     ensureSharedStyles();
