@@ -194,6 +194,27 @@
         <span class="connect-small">Usually the fastest way to enquire</span>
       \`;
     });
+
+    // Add the replacement card even on pages where the old Online Classes card was already removed.
+    document.querySelectorAll('.service-grid').forEach(function (grid) {
+      if (grid.querySelector('.tutor-connect-card')) return;
+      const card = document.createElement('article');
+      card.className = 'service-card tutor-connect-card';
+      card.innerHTML = \`
+        <div class="connect-icon" aria-hidden="true">🎓</div>
+        <h3>Connect with Us to Find the Perfect Tutor</h3>
+        <p>Looking for the right tutor for your child? Tell us your child's class, subject, location and preferred timings. We will help you find a suitable tutor.</p>
+        <ul class="connect-points">
+          <li>Personalised tutor matching</li>
+          <li>Home tuition options</li>
+          <li>Classes 1 to 12</li>
+          <li>Quick response on WhatsApp</li>
+        </ul>
+        <a class="whatsapp-btn" href="https://wa.me/917073468838?text=Hello%20Saraswat%20Academy%2C%20I%20am%20looking%20for%20a%20suitable%20tutor%20for%20my%20child.%20Please%20help%20me%20with%20available%20tutors." target="_blank" rel="noopener noreferrer" aria-label="Connect with Saraswat Academy on WhatsApp">💬 WhatsApp Us to Find a Tutor</a>
+        <span class="connect-small">Usually the fastest way to enquire</span>
+      \`;
+      grid.appendChild(card);
+    });
   }
 
   // Bind immediately when possible and also on DOMContentLoaded.
