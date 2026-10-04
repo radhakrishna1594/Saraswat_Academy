@@ -298,7 +298,6 @@
   // other shared scripts can inject/rebuild parts of the page asynchronously.
   function runTutorPageEnhancements() {
     bindHeaderNavigation();
-    setupTutorConnectCard();
     setupParentsHomeTuitionWhatsAppCard();
     setupAreaWiseTutorLinks();
   }
