@@ -158,6 +158,43 @@ body.tuition-page .service-list li::before{
   content:"✓";position:absolute;left:0;top:0;color:var(--sa-green);font-weight:900
 }
 
+/* ---------- Static WhatsApp parent connect card ---------- */
+body.tuition-page .parents-whatsapp-static{
+  color:#18324a !important;
+  background:linear-gradient(135deg,#ecfff4 0%,#ffffff 72%) !important;
+  border:2px solid #25d366 !important;
+  box-shadow:0 18px 48px rgba(37,211,102,.14);
+}
+body.tuition-page .parents-whatsapp-static .tutor-option-icon{
+  background:#dcfce9;
+  border:1px solid #9ae6b4;
+  color:#128c4a;
+}
+body.tuition-page .parents-whatsapp-static .tutor-option-label{
+  color:#128c4a !important;
+}
+body.tuition-page .parents-whatsapp-static .tutor-option-content h3{
+  color:#12324a;
+}
+body.tuition-page .parents-whatsapp-static .tutor-option-content p{
+  color:#526579;
+}
+body.tuition-page .parents-whatsapp-static .tutor-option-content ul,
+body.tuition-page .parents-whatsapp-static .tutor-option-content ul li{
+  color:#29465d;
+}
+body.tuition-page .parents-whatsapp-static .tutor-option-btn{
+  background:#25d366 !important;
+  color:#fff !important;
+  border:1px solid #25d366 !important;
+  box-shadow:0 8px 20px rgba(37,211,102,.22);
+}
+body.tuition-page .parents-whatsapp-static .tutor-option-btn:hover{
+  background:#1ebe5d !important;
+  border-color:#1ebe5d !important;
+  color:#fff !important;
+}
+
 /* ---------- Audience split ---------- */
 body.tuition-page .tutor-options{
   padding:32px 0 90px;
