@@ -151,6 +151,10 @@ async function loadComponent(id, file) {
 
     target.innerHTML = html;
 
+    if (id === "header") {
+        document.dispatchEvent(new CustomEvent("saraswat-header-loaded"));
+    }
+
     document.querySelectorAll("[data-link]").forEach(link => {
         link.href = window.BASE_URL + link.dataset.link;
     });
