@@ -1485,19 +1485,24 @@ picture img {
    Keep the HEADER itself sticky (not the #header wrapper), and use !important
    because individual page styles may define their own header positioning.
 */
-html, body { overflow-x: hidden; }
+/* Prevent BODY from becoming a scroll container; this is important for sticky positioning. */
+html { overflow-x: clip !important; }
+body { overflow-x: clip !important; }
 
+/* Sticky must be applied to the component wrapper that remains in document flow. */
 #header {
-  position: relative !important;
-  z-index: 300 !important;
-}
-
-#header > header {
   position: sticky !important;
   top: 0 !important;
   z-index: 3000 !important;
   width: 100% !important;
   isolation: isolate;
+}
+
+#header > header {
+  position: relative !important;
+  top: auto !important;
+  z-index: 3000 !important;
+  width: 100% !important;
 }
 
 #header .header-inner{width:100%;max-width:1280px;min-width:0}
