@@ -300,6 +300,7 @@
     bindHeaderNavigation();
     setupTutorConnectCard();
     setupParentsHomeTuitionWhatsAppCard();
+    setupAreaWiseTutorLinks();
   }
 
   runTutorPageEnhancements();
