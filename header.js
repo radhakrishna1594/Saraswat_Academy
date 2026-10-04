@@ -288,23 +288,45 @@
     });
   }
 
-  // Bind immediately when possible and also on DOMContentLoaded.
-  // This works whether header.js loads before or after loader.js injects the header.
-  bindHeaderNavigation();
-  setupTutorConnectCard();
-  setupParentsHomeTuitionWhatsAppCard();
-
-  // loader.js injects the shared header after DOMContentLoaded on many pages.
-  // Re-run the tutor card setup after that injection.
-  document.addEventListener('saraswat-header-loaded', function () {
+  // Bind immediately when possible and also after the page/header is ready.
+  // The parent WhatsApp CTA uses a small DOM observer because loader.js and
+  // other shared scripts can inject/rebuild parts of the page asynchronously.
+  function runTutorPageEnhancements() {
     bindHeaderNavigation();
     setupTutorConnectCard();
     setupParentsHomeTuitionWhatsAppCard();
-  });
+  }
+
+  runTutorPageEnhancements();
+
+  document.addEventListener('saraswat-header-loaded', runTutorPageEnhancements);
 
   document.addEventListener('DOMContentLoaded', function () {
-    bindHeaderNavigation();
-    setupTutorConnectCard();
-    setupParentsHomeTuitionWhatsAppCard();
+    runTutorPageEnhancements();
+
+    // Give loader.js time to finish injecting shared content.
+    window.setTimeout(runTutorPageEnhancements, 150);
+    window.setTimeout(runTutorPageEnhancements, 600);
+    window.setTimeout(runTutorPageEnhancements, 1200);
+
+    // Keep watching briefly so the CTA is inserted even if the tutor section
+    // is rendered after DOMContentLoaded.
+    if (document.body && !window.__saTutorCTAObserver) {
+      window.__saTutorCTAObserver = new MutationObserver(function () {
+        setupParentsHomeTuitionWhatsAppCard();
+      });
+
+      window.__saTutorCTAObserver.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+
+      window.setTimeout(function () {
+        if (window.__saTutorCTAObserver) {
+          window.__saTutorCTAObserver.disconnect();
+          window.__saTutorCTAObserver = null;
+        }
+      }, 5000);
+    }
   }, { once: true });
 })();
