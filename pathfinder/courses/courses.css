@@ -22,8 +22,9 @@
 .course-guide-page [class$="-hero"] h1{margin:8px 0 16px;color:#fff;font-size:clamp(2rem,4.5vw,3.35rem);line-height:1.1}
 .course-guide-page [class$="-hero"] p{margin:0;color:#eaf5f7;line-height:1.72;font-size:1.02rem}
 .course-guide-page [class$="-kicker"],.course-guide-page .mba-eyebrow{
-  display:inline-block;font-size:.73rem;letter-spacing:.12em;font-weight:800;color:#cfeef0
+  display:inline-block;font-size:.73rem;letter-spacing:.12em;font-weight:800;color:#24788a
 }
+.course-guide-page [class$="-hero"] [class$="-kicker"],.course-guide-page .mba-hero .mba-eyebrow{color:#cfeef0}
 .course-guide-page [class$="-pills"]{display:flex;flex-wrap:wrap;gap:9px;margin-top:21px}
 .course-guide-page [class$="-pills"] span{padding:7px 11px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.09);font-size:.84rem}
 .course-guide-page [class$="-hero-icon"]{min-height:250px;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);font-size:6.5rem}
@@ -40,11 +41,15 @@
 .course-guide-page [class$="-section"] h2,.course-guide-page [class$="-sources"] h2{margin:0 0 14px;color:#174b62;font-size:clamp(1.45rem,2.5vw,1.85rem);line-height:1.25}
 .course-guide-page [class$="-section"] h3{color:#205c72;margin-top:20px}
 .course-guide-page [class$="-section"] p,.course-guide-page [class$="-section"] ul,.course-guide-page [class$="-section"] ol{margin-top:0}
+.course-guide-page main{font-size:16px;overflow-wrap:anywhere;word-break:normal}
+.course-guide-page main p,.course-guide-page main li,.course-guide-page main td,.course-guide-page main th{overflow-wrap:anywhere}
+.course-guide-page main ul,.course-guide-page main ol{padding-left:22px}
+.course-guide-page main li{margin-bottom:7px}
 .course-guide-page [class$="-section"] li+li{margin-top:7px}
 .course-guide-page [class$="-section"] a,.course-guide-page [class$="-sources"] a{color:#176b87;font-weight:700}
 
 /* Cards / grids */
-.course-guide-page [class$="-cards"],.course-guide-page [class$="-grid"]{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.course-guide-page [class$="-cards"]{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
 .course-guide-page [class$="-card"]{border:1px solid #dbe5ea;border-radius:12px;padding:18px;background:#f9fbfc}
 .course-guide-page [class$="-card"] h3{margin:0 0 8px;color:#205c72}
 .course-guide-page [class$="-card"] p:last-child{margin-bottom:0}
@@ -69,7 +74,11 @@
 .course-guide-page [class$="-subjects"]{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0 16px}
 .course-guide-page [class$="-subjects"] span{background:#e9f3f5;color:#205c72;border:1px solid #d3e5e8;border-radius:999px;padding:7px 12px;font-weight:700;font-size:.88rem}
 
-/* Roadmaps / careers / FAQ */
+/* Steps / grids / roadmaps / careers / FAQ */
+.course-guide-page [class$="-grid"]{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.course-guide-page [class$="-step"]{display:flex;align-items:flex-start;gap:12px;padding:13px 15px;background:#f7fafb;border:1px solid #dce7ea;border-radius:9px}
+.course-guide-page [class$="-step"] b{flex:0 0 30px;width:30px;height:30px;display:grid;place-items:center;background:#24788a;color:#fff;border-radius:50%;line-height:1}
+
 .course-guide-page [class$="-careers"]{columns:2;column-gap:38px;padding-left:20px}
 .course-guide-page [class$="-roadmap"]{display:grid;gap:11px}
 .course-guide-page [class$="-roadmap"]>div{display:grid;grid-template-columns:180px minmax(0,1fr);gap:18px;padding:14px 16px;border-left:4px solid #24788a;background:#f6fafb;border-radius:7px}
@@ -108,6 +117,7 @@
 /* Mobile */
 @media(max-width:700px){
   .course-guide-page main[class$="-wrap"],.course-guide-page .mba-guide{padding:0 12px 46px}
+  .course-guide-page main{font-size:15.5px;line-height:1.68}
   .course-guide-page [class$="-hero"]{grid-template-columns:1fr;gap:18px;padding:25px 21px;margin-bottom:20px;border-radius:16px}
   .course-guide-page [class$="-hero"] h1{font-size:clamp(1.8rem,9vw,2.5rem);margin-bottom:13px}
   .course-guide-page [class$="-hero"] p{font-size:.96rem}
