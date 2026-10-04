@@ -14,7 +14,13 @@
     document.body.style.overflow = open ? 'hidden' : '';
   }
 
-  function bindHeaderNavigation() {
+  window.toggleMobileMenu = function () {
+    const menu = document.getElementById('mobileNav');
+    if (!menu) return;
+    setMenuState(!menu.classList.contains('open'));
+  };
+
+    function bindHeaderNavigation() {
     if (navigationBound) return;
     navigationBound = true;
 
@@ -221,6 +227,14 @@
   // This works whether header.js loads before or after loader.js injects the header.
   bindHeaderNavigation();
   setupTutorConnectCard();
+
+  // loader.js injects the shared header after DOMContentLoaded on many pages.
+  // Re-run the tutor card setup after that injection.
+  document.addEventListener('saraswat-header-loaded', function () {
+    bindHeaderNavigation();
+    setupTutorConnectCard();
+  });
+
   document.addEventListener('DOMContentLoaded', function () {
     bindHeaderNavigation();
     setupTutorConnectCard();
