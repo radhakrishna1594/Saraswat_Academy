@@ -1,0 +1,59 @@
+/* Saraswat Academy PathFinder — shared course styles */
+.course-guide-page,.btech-guide-page,.mbbs-guide-page,.ballb-guide-page,.bsc-guide-page,.ba-guide-page,.bpharm-guide-page,.bba-guide-page,.bca-guide-page,.mba-guide-page{background:#f5f7fb;color:#243447}
+[class$="-wrap"],.mba-guide{width:min(1120px,100%);margin:0 auto;padding:0 16px 70px;box-sizing:border-box;line-height:1.7}
+[class$="-wrap"] *,.mba-guide *{box-sizing:border-box}
+[class$="-wrap"] .breadcrumb,.mba-guide .breadcrumb{padding:14px 2px;color:#64748b}
+[class$="-wrap"] .breadcrumb a,.mba-guide .breadcrumb a{color:#2563eb}
+[class$="-hero"]{display:grid;grid-template-columns:1.45fr .55fr;gap:26px;margin:10px 0 24px;padding:35px;border-radius:22px;background:linear-gradient(135deg,#17365d,#256d85);color:#fff;box-shadow:0 12px 35px rgba(23,54,93,.14)}
+[class$="-hero"] h1{margin:10px 0 15px;color:#fff;font-size:clamp(2rem,5vw,3.5rem);line-height:1.08}
+[class$="-hero"] p{margin:0;color:#e7f0f7;line-height:1.75;font-size:1.04rem}
+[class$="-kicker"],.mba-eyebrow{display:inline-block;font-size:.74rem;letter-spacing:.13em;font-weight:800;color:#dbeafe}
+[class$="-pills"]{display:flex;flex-wrap:wrap;gap:8px;margin-top:21px}
+[class$="-pills"] span{padding:8px 11px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.08);font-size:.86rem}
+[class$="-hero-icon"]{min-height:270px;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);font-size:7rem}
+[class$="-hero-icon"] span{font-size:1rem;letter-spacing:.2em;font-weight:700}
+[class$="-hero-media"]{margin:0}
+[class$="-hero-media"] img{display:block;width:100%;height:100%;min-height:270px;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,.18)}
+[class$="-hero-media"] figcaption{margin-top:7px;color:#dbe7f0;font-size:.82rem}
+[class$="-section"],[class$="-sources"],[class$="-block"],[class$="-card-section"]{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px;margin:20px 0;box-shadow:0 5px 18px rgba(15,23,42,.045)}
+[class$="-section"] h2,[class$="-sources"] h2{color:#17365d;margin-top:0}
+[class$="-section"] h3{color:#24506f}
+[class$="-section"] a,[class$="-sources"] a{color:#155e75;font-weight:700}
+[class$="-cards"]{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+[class$="-card"]{border:1px solid #dbe5ec;border-radius:13px;padding:19px;background:#fbfdfe}
+[class$="-card"] h3{margin-top:0}
+[class$="-table-wrap"]{overflow-x:auto}
+[class$="-wrap"] table,.mba-guide table{width:100%;border-collapse:collapse;margin-top:15px;min-width:620px}
+[class$="-wrap"] th,[class$="-wrap"] td,.mba-guide th,.mba-guide td{border:1px solid #dbe3ea;padding:12px;text-align:left;vertical-align:top}
+[class$="-wrap"] th,.mba-guide th{background:#edf4f7}
+[class$="-subjects"],[class$="-pills"]{display:flex;flex-wrap:wrap;gap:10px}
+[class$="-subjects"] span{background:#edf5f7;border-radius:30px;padding:8px 13px;font-weight:700;font-size:14px}
+[class$="-careers"]{columns:2}
+[class$="-roadmap"]{display:grid;gap:12px}
+[class$="-roadmap"]>div{display:grid;grid-template-columns:180px 1fr;gap:18px;padding:14px;border-left:4px solid #256d85;background:#f7fafb;border-radius:7px}
+[class$="-roadmap"] strong{color:#17365d}
+[class$="-faq"] hr{border:0;border-top:1px solid #e5e7eb;margin:22px 0}
+[class$="-editorial"]{font-size:14px;color:#64748b;padding:10px 4px}
+.mba-guide{max-width:1120px}
+.mba-guide h2{color:#17365d;margin-top:0;font-size:28px}
+.mba-guide h3{color:#24506f}
+.mba-hero{display:block}
+.mba-hero-icon{min-height:auto;background:none;border:0;font-size:42px;display:block}
+.mba-section,.mba-sources{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px;margin:20px 0;box-shadow:0 5px 18px rgba(15,23,42,.045)}
+.mba-highlight{background:#eef7fb;border-left:4px solid #256d85;padding:16px 18px;border-radius:8px;margin-top:20px}
+.mba-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.mba-card{border:1px solid #dbe5ec;border-radius:13px;padding:19px;background:#fbfdfe}
+.mba-card h3{margin-top:0}
+.mba-table-wrap{overflow-x:auto}
+.mba-careers{columns:2}
+.mba-roadmap{display:grid;gap:12px}
+.mba-roadmap div{display:grid;grid-template-columns:180px 1fr;gap:18px;padding:14px;border-left:4px solid #256d85;background:#f7fafb;border-radius:7px}
+.mba-editorial{font-size:14px;color:#64748b;padding:10px 4px}
+.courses-directory{max-width:1050px;margin:0 auto;padding:40px 18px 70px}
+.courses-intro{max-width:780px;line-height:1.7;color:#4b5563}
+.course-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin:30px 0 40px}
+.course-card{display:block;text-decoration:none;color:inherit;border:1px solid #e2e8f0;border-radius:16px;padding:22px;background:#fff;box-shadow:0 5px 18px rgba(15,23,42,.05);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.course-card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(15,23,42,.09);border-color:#b9c7d4}
+.course-icon{font-size:32px;margin-bottom:10px}.course-card h2{font-size:21px;margin:4px 0 8px;color:#17365d}.course-card p{margin:0;color:#5b6472;line-height:1.55;font-size:15px}.course-tag{display:inline-block;margin-top:15px;font-size:13px;font-weight:700;color:#2563eb}
+.directory-note{background:#eef5f8;border-left:4px solid #256d85;padding:16px 18px;border-radius:8px;line-height:1.6}
+@media(max-width:700px){[class$="-hero"]{grid-template-columns:1fr;padding:27px 22px}[class$="-hero-icon"],[class$="-hero-media"]{min-height:180px}[class$="-hero-icon"]{font-size:5rem}[class$="-careers"]{columns:1}[class$="-roadmap"]>div,.mba-roadmap div{grid-template-columns:1fr;gap:3px}[class$="-section"],[class$="-sources"],.mba-section,.mba-sources{padding:21px}.courses-directory{padding-top:25px}.course-grid{grid-template-columns:1fr}.course-card{padding:19px}}
