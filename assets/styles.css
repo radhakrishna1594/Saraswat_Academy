@@ -958,7 +958,9 @@ picture img {
 
 /* =========================================================
    KATEX SOLUTION-PAGE SAFETY
-   Prevent fraction/equation overflow and preserve readable mobile layout.
+   Mobile-safe maths rendering for all solution content.
+   Large equations may scroll horizontally, while normal
+   equations stay fully visible inside the reading width.
    ========================================================= */
 .solution-page .solution-article {
     min-width: 0;
@@ -966,24 +968,45 @@ picture img {
     overflow-wrap: anywhere;
 }
 
+/* KaTeX inline math must never create page-level overflow. */
+.solution-page .solution-article .katex {
+    font-size: 1.05em;
+    max-width: 100%;
+}
+
+/* KaTeX display wrapper: keep the page width stable and allow
+   only genuinely wide equations to scroll inside the wrapper. */
 .solution-page .solution-article .katex-display {
     display: block;
+    width: 100%;
     max-width: 100%;
+    margin: 0.9rem 0;
+    padding: 0.25rem 0;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    padding: 0.35rem 0.15rem;
-    margin: 0.75rem 0;
     box-sizing: border-box;
+    text-align: left !important;
 }
 
 .solution-page .solution-article .katex-display > .katex {
+    display: inline-block;
+    width: max-content;
+    max-width: none;
     white-space: nowrap;
+    text-align: left !important;
+}
+
+/* The KaTeX HTML for an aligned environment is itself multiline.
+   Preserve every row instead of compressing/clipping it on phones. */
+.solution-page .solution-article .katex-display .katex-html {
     max-width: none;
 }
 
-.solution-page .solution-article .katex {
-    font-size: 1.05em;
+/* Bare math rendered by auto-render can occur as direct children of
+   the answer box. Give those equations a controlled block width. */
+.solution-page .solution-article .katex-display + br {
+    display: none;
 }
 
 .solution-page .solution-article p,
@@ -999,10 +1022,17 @@ picture img {
     }
 
     .solution-page .solution-article .katex-display {
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
+        margin: 0.75rem 0;
+        padding: 0.2rem 0;
+        overflow-x: auto;
+    }
+
+    /* Make common multi-line/aligned calculations fit the viewport
+       more naturally on mobile without shrinking regular text. */
+    .solution-page .solution-article .katex-display:has(.aligned),
+    .solution-page .solution-article .katex-display:has(.align),
+    .solution-page .solution-article .katex-display:has(.array) {
+        max-width: 100%;
     }
 }
 
