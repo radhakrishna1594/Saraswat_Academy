@@ -226,6 +226,20 @@ async function loadComponent(id, file) {
     }
 })();
 
+function renderSaraswatMath() {
+    if (typeof renderMathInElement !== "function") return;
+
+    renderMathInElement(document.body, {
+        delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "\\[", right: "\\]", display: true },
+            { left: "\\(", right: "\\)", display: false },
+            { left: "$", right: "$", display: false }
+        ],
+        throwOnError: false
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     removeStrayMetaText();
     ensureSharedStyles();
@@ -235,4 +249,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // This also repairs legacy pages that have duplicate/missing containers.
     loadComponent("header", "header.html");
     loadComponent("footer", "footer.html");
+
+    // Render KaTeX after the DOM is ready. Solution pages load KaTeX globally,
+    // while this shared loader handles the actual auto-render step.
+    renderSaraswatMath();
 });
