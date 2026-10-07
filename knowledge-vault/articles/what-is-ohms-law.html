@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>What Is Ohm's Law? | Formula, Diagram, Examples | Physics</title>
+  <meta name="description" content="Learn Ohm's Law in simple language with circuit diagrams, V-I graph, formula V = IR, units, worked examples, applications and common mistakes for school Physics students.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Saraswat Academy">
+  <meta name="theme-color" content="#17365d">
+
+  <link rel="canonical" href="https://www.saraswatacademy.in/knowledge-vault/articles/what-is-ohms-law.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Saraswat Academy">
+  <meta property="og:title" content="What Is Ohm's Law? | Formula, Diagram, Examples | Physics">
+  <meta property="og:description" content="Understand Ohm's Law with a simple circuit diagram, V-I graph, formula V = IR, solved examples and practical applications.">
+  <meta property="og:url" content="https://www.saraswatacademy.in/knowledge-vault/articles/what-is-ohms-law.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="What Is Ohm's Law?">
+  <meta name="twitter:description" content="Ohm's Law explained with circuit diagrams, V-I graph, formulas, examples and applications.">
+
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/header.css">
+  <link rel="stylesheet" href="/knowledge-vault/articles/articles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+
+  <script src="/loader.js"></script>
+  <script src="/config.js"></script>
+  <script src="/header.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://www.saraswatacademy.in/knowledge-vault/articles/what-is-ohms-law.html#article",
+    "mainEntityOfPage": {"@type":"WebPage","@id":"https://www.saraswatacademy.in/knowledge-vault/articles/what-is-ohms-law.html"},
+    "headline": "What Is Ohm's Law?",
+    "description": "Learn Ohm's Law with circuit diagrams, the V-I relationship, formula V = IR, worked examples and applications.",
+    "author": {"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},
+    "publisher": {"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},
+    "isPartOf": {"@type":"CollectionPage","name":"Knowledge Vault","url":"https://www.saraswatacademy.in/knowledge-vault/index.html"},
+    "about": [
+      {"@type":"Thing","name":"Ohm's law"},
+      {"@type":"Thing","name":"Electric current"},
+      {"@type":"Thing","name":"Voltage"},
+      {"@type":"Thing","name":"Electrical resistance"}
+    ],
+    "educationalLevel": "School Physics",
+    "learningResourceType": "Educational article",
+    "inLanguage": "en-IN"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.saraswatacademy.in/index.html"},
+      {"@type":"ListItem","position":2,"name":"Knowledge Vault","item":"https://www.saraswatacademy.in/knowledge-vault/index.html"},
+      {"@type":"ListItem","position":3,"name":"Ohm's Law","item":"https://www.saraswatacademy.in/knowledge-vault/articles/what-is-ohms-law.html"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What is Ohm's Law?","acceptedAnswer":{"@type":"Answer","text":"Ohm's Law states that, at constant temperature and other physical conditions, the current through a conductor is directly proportional to the potential difference across it."}},
+      {"@type":"Question","name":"What is the formula of Ohm's Law?","acceptedAnswer":{"@type":"Answer","text":"The formula is V = IR, where V is potential difference, I is current and R is resistance."}},
+      {"@type":"Question","name":"What is the SI unit of resistance?","acceptedAnswer":{"@type":"Answer","text":"The SI unit of resistance is ohm (Ω)."}},
+      {"@type":"Question","name":"What happens to current if resistance is doubled at constant voltage?","acceptedAnswer":{"@type":"Answer","text":"From I = V/R, doubling resistance halves the current, provided voltage remains constant."}},
+      {"@type":"Question","name":"Is Ohm's Law valid for every electrical device?","acceptedAnswer":{"@type":"Answer","text":"No. Ohm's Law is valid for ohmic conductors under constant physical conditions. Devices such as diodes do not show a simple constant resistance over all operating conditions."}},
+      {"@type":"Question","name":"What is an ohmic conductor?","acceptedAnswer":{"@type":"Answer","text":"An ohmic conductor is a conductor for which current is directly proportional to potential difference when physical conditions such as temperature remain constant."}}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <div class="breadcrumb">
+    <a href="/index.html">Home</a> →
+    <a href="/knowledge-vault/index.html">Knowledge Vault</a> →
+    <span class="current">Ohm's Law</span>
+  </div>
+
+  <main class="kva-page">
+    <article class="kva-article">
+
+      <header class="kva-hero">
+        <div class="kva-hero-inner">
+          <span class="kva-eyebrow">Physics • Electricity</span>
+          <h1>What Is Ohm's Law?</h1>
+          <p class="kva-hero-description">
+            Ohm's Law gives one of the most useful relationships in basic electricity:
+            it connects <strong>potential difference, current and resistance</strong>.
+            Here you will learn the law, its formula, circuit diagram, V-I graph,
+            solved examples and practical applications in simple language.
+          </p>
+        </div>
+      </header>
+
+      <section class="kva-section" aria-labelledby="what-is-ohms-law">
+        <div class="kva-lead">
+          <strong>In simple words:</strong> If the temperature and other physical conditions remain constant,
+          increasing the voltage across an ohmic conductor increases the current through it in the same proportion.
+        </div>
+
+        <h2 id="what-is-ohms-law">1. What Is Ohm's Law?</h2>
+        <p>
+          <strong>Ohm's Law</strong> states that, at constant temperature and other physical conditions,
+          the current flowing through a conductor is directly proportional to the potential difference
+          applied across it.
+        </p>
+
+        <p>
+          In symbols, direct proportionality between potential difference <strong>V</strong> and current
+          <strong>I</strong> can be written as:
+        </p>
+
+        <div class="kva-math-display" data-math="V \propto I"></div>
+
+        <p>
+          Replacing the proportionality sign by a constant gives:
+        </p>
+
+        <div class="kva-math-display" data-math="V = IR"></div>
+
+        <p>
+          The constant <strong>R</strong> is called the <strong>resistance</strong> of the conductor.
+        </p>
+
+        <div class="kva-important">
+          <strong>Condition of the law:</strong> The physical conditions, especially temperature,
+          must remain constant. A change in temperature can change the resistance of many conductors.
+        </div>
+      </section>
+
+      <section class="kva-section" aria-labelledby="quantities">
+        <h2 id="quantities">2. The Three Quantities in Ohm's Law</h2>
+
+        <div class="kva-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Quantity</th>
+                <th scope="col">Symbol</th>
+                <th scope="col">Meaning</th>
+                <th scope="col">SI unit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Potential difference</td>
+                <td>V</td>
+                <td>Energy transferred per unit charge between two points.</td>
+                <td>volt (V)</td>
+              </tr>
+              <tr>
+                <td>Current</td>
+                <td>I</td>
+                <td>Rate of flow of electric charge through a conductor.</td>
+                <td>ampere (A)</td>
+              </tr>
+              <tr>
+                <td>Resistance</td>
+                <td>R</td>
+                <td>Opposition offered by a conductor to the flow of electric current.</td>
+                <td>ohm (Ω)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>What does resistance mean?</h3>
+        <p>
+          Think of electric current like water flowing through a pipe. The potential difference is
+          similar to the pressure that pushes the water, while resistance is like a restriction in
+          the pipe. A larger resistance makes it harder for current to flow.
+        </p>
+
+        <div class="kva-math-display" data-math="R = \frac{V}{I}"></div>
+      </section>
+
+      <section class="kva-section" aria-labelledby="circuit-diagram">
+        <h2 id="circuit-diagram">3. Ohm's Law Circuit Diagram</h2>
+        <p>
+          A simple Ohm's Law experiment uses a cell or battery, a key, a rheostat, an ammeter and a
+          resistor. The ammeter is connected <strong>in series</strong> to measure current, while a
+          voltmeter is connected <strong>in parallel</strong> across the resistor to measure potential difference.
+        </p>
+
+        <figure class="kva-diagram" role="img" aria-label="Circuit diagram for verifying Ohm's Law">
+          <svg viewBox="0 0 900 390" width="900" height="390" xmlns="http://www.w3.org/2000/svg" aria-labelledby="ohmsCircuitTitle ohmsCircuitDesc">
+            <title id="ohmsCircuitTitle">Circuit for verification of Ohm's Law</title>
+            <desc id="ohmsCircuitDesc">A battery, key, rheostat, ammeter and resistor are connected in series. A voltmeter is connected in parallel across the resistor.</desc>
+            <defs>
+              <marker id="arrow-ohm-1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+                <path d="M0,0 L0,6 L9,3 z" fill="currentColor"/>
+              </marker>
+            </defs>
+
+            <rect x="1" y="1" width="898" height="388" rx="18" fill="#f8fafc" stroke="#dbe4ee"/>
+            <text x="450" y="34" text-anchor="middle" font-size="21" font-family="Arial, sans-serif" font-weight="700" fill="#17365d">
+              Ohm's Law Verification Circuit
+            </text>
+
+            <g stroke="#17365d" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M90 105 H175"/>
+              <path d="M245 105 H330"/>
+              <path d="M410 105 H520"/>
+              <path d="M600 105 H760 V285 H90 V105"/>
+
+              <circle cx="210" cy="105" r="35" fill="#ffffff"/>
+              <path d="M192 105 H228"/>
+              <text x="210" y="75" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" fill="#17365d" stroke="none">Ammeter</text>
+
+              <path d="M330 105 l16 -22 l16 44 l16 -44 l16 44 l16 -44 l16 22" />
+              <text x="381" y="75" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" fill="#17365d" stroke="none">Rheostat</text>
+
+              <rect x="520" y="82" width="80" height="46" rx="8" fill="#ffffff"/>
+              <text x="560" y="111" text-anchor="middle" font-size="17" font-family="Arial, sans-serif" font-weight="700" fill="#17365d" stroke="none">R</text>
+              <text x="560" y="75" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" fill="#17365d" stroke="none">Resistor</text>
+
+              <path d="M90 105 V72"/>
+              <path d="M90 285 V318"/>
+              <path d="M760 105 V72"/>
+              <path d="M760 285 V318"/>
+
+              <line x1="75" y1="62" x2="105" y2="62"/>
+              <line x1="82" y1="73" x2="98" y2="73"/>
+              <line x1="75" y1="328" x2="105" y2="328"/>
+              <line x1="82" y1="317" x2="98" y2="317"/>
+              <text x="90" y="48" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" fill="#17365d" stroke="none">Battery</text>
+
+              <circle cx="760" cy="195" r="40" fill="#ffffff"/>
+              <text x="760" y="202" text-anchor="middle" font-size="23" font-family="Arial, sans-serif" font-weight="700" fill="#17365d" stroke="none">V</text>
+              <path d="M600 105 H600 V155 H760"/>
+              <path d="M600 285 V235 H760"/>
+              <text x="820" y="202" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" fill="#17365d" stroke="none">Voltmeter</text>
+            </g>
+
+            <text x="450" y="365" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#475569">
+              Ammeter in series • Voltmeter in parallel across the resistor
+            </text>
+          </svg>
+          <figcaption>
+            A typical school-level circuit used to study the relationship between V and I.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="kva-section" aria-labelledby="graph">
+        <h2 id="graph">4. V-I Graph for an Ohmic Conductor</h2>
+        <p>
+          For an ohmic conductor at constant physical conditions, current is directly proportional to
+          potential difference. Therefore, a graph of <strong>V against I</strong> is a straight line
+          passing through the origin.
+        </p>
+
+        <figure class="kva-diagram" role="img" aria-label="Straight-line V-I graph passing through the origin">
+          <svg viewBox="0 0 760 460" width="760" height="460" xmlns="http://www.w3.org/2000/svg" aria-labelledby="ohmsGraphTitle">
+            <title id="ohmsGraphTitle">V-I graph for an ohmic conductor</title>
+
+            <rect x="1" y="1" width="758" height="458" rx="18" fill="#f8fafc" stroke="#dbe4ee"/>
+
+            <line x1="105" y1="385" x2="665" y2="385" stroke="#17365d" stroke-width="4"/>
+            <line x1="105" y1="385" x2="105" y2="75" stroke="#17365d" stroke-width="4"/>
+
+            <path d="M665 385 L650 377 L650 393 Z" fill="#17365d"/>
+            <path d="M105 75 L97 90 L113 90 Z" fill="#17365d"/>
+
+            <line x1="105" y1="385" x2="605" y2="105" stroke="#2563eb" stroke-width="5"/>
+
+            <circle cx="305" cy="273" r="7" fill="#ffffff" stroke="#2563eb" stroke-width="4"/>
+            <circle cx="455" cy="189" r="7" fill="#ffffff" stroke="#2563eb" stroke-width="4"/>
+
+            <text x="385" y="430" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" font-weight="700" fill="#17365d">Current, I (A)</text>
+            <text x="45" y="235" text-anchor="middle" transform="rotate(-90 45 235)" font-size="20" font-family="Arial, sans-serif" font-weight="700" fill="#17365d">Potential Difference, V (V)</text>
+
+            <text x="120" y="412" font-size="14" font-family="Arial, sans-serif" fill="#475569">0</text>
+            <text x="292" y="412" font-size="14" font-family="Arial, sans-serif" fill="#475569">2</text>
+            <text x="442" y="412" font-size="14" font-family="Arial, sans-serif" fill="#475569">4</text>
+            <text x="592" y="412" font-size="14" font-family="Arial, sans-serif" fill="#475569">6</text>
+
+            <text x="80" y="390" font-size="14" font-family="Arial, sans-serif" fill="#475569">0</text>
+            <text x="77" y="278" font-size="14" font-family="Arial, sans-serif" fill="#475569">2</text>
+            <text x="77" y="194" font-size="14" font-family="Arial, sans-serif" fill="#475569">4</text>
+            <text x="77" y="110" font-size="14" font-family="Arial, sans-serif" fill="#475569">6</text>
+
+            <text x="485" y="130" font-size="18" font-family="Arial, sans-serif" font-weight="700" fill="#17365d">Straight line through origin</text>
+            <text x="485" y="154" font-size="15" font-family="Arial, sans-serif" fill="#475569">V ∝ I</text>
+          </svg>
+          <figcaption>
+            For a constant resistance, the V-I graph is linear. Its slope depends on which quantity is plotted
+            on the vertical axis.
+          </figcaption>
+        </figure>
+
+        <div class="kva-important">
+          <strong>Exam point:</strong> Be careful about the axes. For a graph of <strong>V against I</strong>,
+          the slope is <strong>R</strong>. If the graph is of <strong>I against V</strong>, the slope is <strong>1/R</strong>.
+        </div>
+
+        <div class="kva-math-display" data-math="R = \frac{V}{I} = \text{slope of the } V\text{-}I\text{ graph}"></div>
+      </section>
+
+      <section class="kva-section" aria-labelledby="triangle">
+        <h2 id="triangle">5. Ohm's Law Formula Triangle</h2>
+        <p>
+          The relation <strong>V = IR</strong> can be rearranged to find any one of the three quantities.
+        </p>
+
+        <div class="kva-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">To find</th>
+                <th scope="col">Formula</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Potential difference</td>
+                <td>V = IR</td>
+              </tr>
+              <tr>
+                <td>Current</td>
+                <td>I = V/R</td>
+              </tr>
+              <tr>
+                <td>Resistance</td>
+                <td>R = V/I</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          A useful memory trick is to remember the three symbols as a relationship rather than memorising
+          three unrelated formulas.
+        </p>
+
+        <div class="kva-math-display" data-math="\boxed{V = IR}"></div>
+      </section>
+
+      <section class="kva-section" aria-labelledby="examples">
+        <h2 id="examples">6. Solved Examples on Ohm's Law</h2>
+
+        <div class="kva-problem">
+          <h3>Example 1: Find the Current</h3>
+          <p>
+            A resistor of resistance 5 Ω is connected across a potential difference of 10 V.
+            Find the current through the resistor.
+          </p>
+
+          <p><strong>Given:</strong> V = 10 V and R = 5 Ω</p>
+
+          <div class="kva-working">
+            <div class="kva-math-display kva-math-left" data-math="I = \frac{V}{R}"></div>
+            <div class="kva-math-display kva-math-left" data-math="I = \frac{10}{5}"></div>
+            <div class="kva-math-display kva-math-left" data-math="I = 2\,\mathrm{A}"></div>
+          </div>
+
+          <div class="kva-answer">
+            <strong>Answer:</strong> The current through the resistor is 2 A.
+          </div>
+        </div>
+
+        <div class="kva-problem">
+          <h3>Example 2: Find the Resistance</h3>
+          <p>
+            A current of 0.5 A flows through a conductor when the potential difference across it is 12 V.
+            Find its resistance.
+          </p>
+
+          <p><strong>Given:</strong> V = 12 V and I = 0.5 A</p>
+
+          <div class="kva-working">
+            <div class="kva-math-display kva-math-left" data-math="R = \frac{V}{I}"></div>
+            <div class="kva-math-display kva-math-left" data-math="R = \frac{12}{0.5}"></div>
+            <div class="kva-math-display kva-math-left" data-math="R = 24\,\Omega"></div>
+          </div>
+
+          <div class="kva-answer">
+            <strong>Answer:</strong> The resistance of the conductor is 24 Ω.
+          </div>
+        </div>
+
+        <div class="kva-problem">
+          <h3>Example 3: Find the Potential Difference</h3>
+          <p>
+            A current of 3 A flows through a resistor of 4 Ω. Find the potential difference across it.
+          </p>
+
+          <p><strong>Given:</strong> I = 3 A and R = 4 Ω</p>
+
+          <div class="kva-working">
+            <div class="kva-math-display kva-math-left" data-math="V = IR"></div>
+            <div class="kva-math-display kva-math-left" data-math="V = 3\times4"></div>
+            <div class="kva-math-display kva-math-left" data-math="V = 12\,\mathrm{V}"></div>
+          </div>
+
+          <div class="kva-answer">
+            <strong>Answer:</strong> The potential difference across the resistor is 12 V.
+          </div>
+        </div>
+
+        <div class="kva-problem">
+          <h3>Example 4: What Happens if Resistance Is Doubled?</h3>
+          <p>
+            A fixed voltage of 20 V is applied to a resistor. Its resistance is increased from 5 Ω to 10 Ω.
+            Find the current before and after the change.
+          </p>
+
+          <p><strong>Before the change:</strong></p>
+          <div class="kva-math-display kva-math-left" data-math="I_1 = \frac{20}{5} = 4\,\mathrm{A}"></div>
+
+          <p><strong>After the resistance is doubled:</strong></p>
+          <div class="kva-math-display kva-math-left" data-math="I_2 = \frac{20}{10} = 2\,\mathrm{A}"></div>
+
+          <div class="kva-answer">
+            <strong>Answer:</strong> The current falls from 4 A to 2 A. At constant voltage,
+            doubling the resistance halves the current.
+          </div>
+        </div>
+      </section>
+
+      <section class="kva-section" aria-labelledby="experiment">
+        <h2 id="experiment">7. How Is Ohm's Law Verified Experimentally?</h2>
+        <p>
+          In a school laboratory, the potential difference across a resistor is varied using a rheostat.
+          For each setting, the voltmeter reading and ammeter reading are recorded.
+        </p>
+
+        <ol>
+          <li>Connect the circuit correctly with the ammeter in series and voltmeter in parallel.</li>
+          <li>Close the key and set a small current using the rheostat.</li>
+          <li>Record the corresponding current <strong>I</strong> and potential difference <strong>V</strong>.</li>
+          <li>Change the rheostat setting and take several pairs of readings.</li>
+          <li>Calculate V/I for each reading.</li>
+          <li>Plot a graph of V against I.</li>
+        </ol>
+
+        <div class="kva-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">V (V)</th>
+                <th scope="col">I (A)</th>
+                <th scope="col">V/I (Ω)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2</td>
+                <td>0.2</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>0.4</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>0.6</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>0.8</td>
+                <td>10</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Since the ratio V/I remains constant in these readings, the resistance is constant and the
+          relationship is consistent with Ohm's Law.
+        </p>
+      </section>
+
+      <section class="kva-section" aria-labelledby="ohmic-nonohmic">
+        <h2 id="ohmic-nonohmic">8. Ohmic and Non-Ohmic Conductors</h2>
+        <p>
+          Not every electrical component has a constant resistance over its entire operating range.
+          This is why the condition attached to Ohm's Law is important.
+        </p>
+
+        <div class="kva-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Ohmic behaviour</th>
+                <th scope="col">Non-ohmic behaviour</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>V is directly proportional to I when physical conditions remain constant.</td>
+                <td>V and I do not maintain a simple direct proportionality over the operating range.</td>
+              </tr>
+              <tr>
+                <td>V-I graph is a straight line through the origin under the stated conditions.</td>
+                <td>V-I graph is generally curved or otherwise non-linear.</td>
+              </tr>
+              <tr>
+                <td>Resistance remains constant for the stated conditions.</td>
+                <td>Resistance changes with operating conditions or current/voltage.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Examples of components that can show non-ohmic behaviour include a semiconductor diode and
+          an incandescent lamp filament, because their electrical behaviour changes with operating conditions.
+        </p>
+      </section>
+
+      <section class="kva-section" aria-labelledby="applications">
+        <h2 id="applications">9. Applications of Ohm's Law</h2>
+
+        <ul>
+          <li>Finding the current in a circuit when voltage and resistance are known.</li>
+          <li>Choosing a suitable resistance for a required current.</li>
+          <li>Estimating voltage drops across resistive components.</li>
+          <li>Analysing simple electrical circuits in school laboratory experiments.</li>
+          <li>Checking measured circuit values for consistency with an expected resistance.</li>
+        </ul>
+
+        <div class="kva-example">
+          <strong>Daily-life connection:</strong> Electrical engineers and technicians use voltage,
+          current and resistance relationships when selecting components and checking circuit behaviour.
+          The same three quantities appear repeatedly when analysing simple electrical networks.
+        </div>
+      </section>
+
+      <section class="kva-section" aria-labelledby="common-mistakes">
+        <h2 id="common-mistakes">10. Common Mistakes Students Make</h2>
+
+        <ul class="kva-checklist">
+          <li>Writing I = VR instead of I = V/R.</li>
+          <li>Forgetting that resistance is measured in ohms (Ω), not volts or amperes.</li>
+          <li>Putting the ammeter in parallel instead of series in the experimental circuit.</li>
+          <li>Putting the voltmeter in series instead of parallel across the component.</li>
+          <li>Ignoring the constant-temperature or constant-conditions requirement of Ohm's Law.</li>
+          <li>Calling every electrical device an ohmic conductor.</li>
+          <li>Forgetting to check units before substituting values into the formula.</li>
+        </ul>
+      </section>
+
+      <section class="kva-section" aria-labelledby="quick-revision">
+        <h2 id="quick-revision">11. Quick Revision</h2>
+
+        <div class="kva-revision">
+          <p><strong>Ohm's Law:</strong> At constant physical conditions, current is directly proportional to potential difference.</p>
+          <p><strong>Formula:</strong> <span class="kva-inline-math" data-math="V = IR"></span></p>
+          <p><strong>Current:</strong> <span class="kva-inline-math" data-math="I = \frac{V}{R}"></span></p>
+          <p><strong>Resistance:</strong> <span class="kva-inline-math" data-math="R = \frac{V}{I}"></span></p>
+          <p><strong>SI units:</strong> V in volt (V), I in ampere (A), R in ohm (Ω).</p>
+          <p><strong>V against I graph:</strong> A straight line through the origin for an ohmic conductor under constant conditions.</p>
+          <p><strong>Experiment:</strong> Ammeter in series; voltmeter in parallel across the resistor.</p>
+        </div>
+      </section>
+
+      <section class="kva-section kva-faq" aria-labelledby="faq">
+        <h2 id="faq">12. Frequently Asked Questions</h2>
+
+        <details>
+          <summary>What is Ohm's Law?</summary>
+          <p>At constant temperature and other physical conditions, the current through a conductor is directly proportional to the potential difference across it.</p>
+        </details>
+
+        <details>
+          <summary>What is the formula of Ohm's Law?</summary>
+          <p>The formula is V = IR, where V is potential difference, I is current and R is resistance.</p>
+        </details>
+
+        <details>
+          <summary>What is the SI unit of resistance?</summary>
+          <p>The SI unit of resistance is ohm (Ω).</p>
+        </details>
+
+        <details>
+          <summary>What happens to current if resistance is doubled at constant voltage?</summary>
+          <p>From I = V/R, doubling resistance halves the current, provided the voltage remains constant.</p>
+        </details>
+
+        <details>
+          <summary>Is Ohm's Law valid for every electrical device?</summary>
+          <p>No. It applies to ohmic conductors under constant physical conditions. Some devices, such as diodes, show non-linear V-I behaviour.</p>
+        </details>
+
+        <details>
+          <summary>What is an ohmic conductor?</summary>
+          <p>An ohmic conductor is a conductor for which current is directly proportional to potential difference when the relevant physical conditions remain constant.</p>
+        </details>
+      </section>
+
+      <section class="kva-doubt">
+        <span class="kva-doubt-label">STILL CONFUSED?</span>
+        <h2>Ask Your Doubt</h2>
+        <p>
+          Need help with an electricity formula, circuit diagram or numerical?
+          Send your question to Saraswat Academy and ask for help.
+        </p>
+        <a href="/ask.html">🙋 Ask a Doubt</a>
+      </section>
+
+      <nav class="kva-bottom-nav" aria-label="Knowledge Vault navigation">
+        <a href="/knowledge-vault/index.html">← Back to Knowledge Vault</a>
+        <a href="/index.html">Saraswat Academy Home</a>
+      </nav>
+
+    </article>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (!window.katex) return;
+
+      document.querySelectorAll(".kva-math-display").forEach(function (element) {
+        window.katex.render(element.dataset.math, element, {
+          displayMode: true,
+          throwOnError: false
+        });
+      });
+
+      document.querySelectorAll(".kva-inline-math").forEach(function (element) {
+        window.katex.render(element.dataset.math, element, {
+          displayMode: false,
+          throwOnError: false
+        });
+      });
+    });
+  </script>
+</body>
+</html>
