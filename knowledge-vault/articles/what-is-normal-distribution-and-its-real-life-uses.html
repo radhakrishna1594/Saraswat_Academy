@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Is Normal Distribution? | Real-Life Uses and Examples</title>
+<meta name="description" content="Learn what normal distribution is with a clear bell-curve explanation, formula, 68-95-99.7 rule, z-scores and concrete real-life examples from heights, exam scores, manufacturing, measurement errors, finance and technology.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Saraswat Academy">
+<meta name="theme-color" content="#17365d">
+<link rel="canonical" href="https://www.saraswatacademy.in/knowledge-vault/articles/what-is-normal-distribution-and-its-real-life-uses.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Saraswat Academy">
+<meta property="og:title" content="What Is Normal Distribution? | Real-Life Uses and Examples">
+<meta property="og:description" content="Understand normal distribution through concrete examples and learn how the bell curve is used in statistics, science, manufacturing, education, finance and technology.">
+<meta property="og:url" content="https://www.saraswatacademy.in/knowledge-vault/articles/what-is-normal-distribution-and-its-real-life-uses.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="What Is Normal Distribution?">
+<meta name="twitter:description" content="Normal distribution explained with practical examples, the 68-95-99.7 rule and z-scores.">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/header.css">
+<link rel="stylesheet" href="/knowledge-vault/articles/articles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+<script src="/loader.js"></script>
+<script src="/config.js"></script>
+<script src="/header.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org","@type":"Article",
+ "@id":"https://www.saraswatacademy.in/knowledge-vault/articles/what-is-normal-distribution-and-its-real-life-uses.html#article",
+ "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.saraswatacademy.in/knowledge-vault/articles/what-is-normal-distribution-and-its-real-life-uses.html"},
+ "headline":"What Is Normal Distribution? Real-Life Uses and Concrete Examples",
+ "description":"A clear guide to normal distribution, the bell curve, standard deviation, z-scores and real-life applications.",
+ "author":{"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},
+ "publisher":{"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},
+ "isPartOf":{"@type":"CollectionPage","name":"Knowledge Vault","url":"https://www.saraswatacademy.in/knowledge-vault/index.html"},
+ "about":[{"@type":"Thing","name":"Normal distribution"},{"@type":"Thing","name":"Probability distribution"},{"@type":"Thing","name":"Statistics"}],
+ "learningResourceType":"Educational article","inLanguage":"en-IN"
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+ {"@type":"ListItem","position":1,"name":"Home","item":"https://www.saraswatacademy.in/index.html"},
+ {"@type":"ListItem","position":2,"name":"Knowledge Vault","item":"https://www.saraswatacademy.in/knowledge-vault/index.html"},
+ {"@type":"ListItem","position":3,"name":"What Is Normal Distribution?","item":"https://www.saraswatacademy.in/knowledge-vault/articles/what-is-normal-distribution-and-its-real-life-uses.html"}
+ ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+ {"@type":"Question","name":"What is a normal distribution?","acceptedAnswer":{"@type":"Answer","text":"A normal distribution is a continuous probability distribution that is symmetric and bell-shaped, with its shape determined by its mean and standard deviation."}},
+ {"@type":"Question","name":"What does the 68-95-99.7 rule mean?","acceptedAnswer":{"@type":"Answer","text":"For a normal distribution, about 68% of observations lie within one standard deviation of the mean, about 95% within two standard deviations, and about 99.7% within three standard deviations."}},
+ {"@type":"Question","name":"Where is normal distribution used in real life?","acceptedAnswer":{"@type":"Answer","text":"It is used as a model in areas such as measurement, manufacturing quality control, education and testing, scientific research, statistics, finance and data analysis, although not every real-world variable is normally distributed."}},
+ {"@type":"Question","name":"What is a z-score?","acceptedAnswer":{"@type":"Answer","text":"A z-score tells how many standard deviations a value lies above or below the mean and is calculated as z = (x - μ)/σ."}},
+ {"@type":"Question","name":"Is every real-life dataset normally distributed?","acceptedAnswer":{"@type":"Answer","text":"No. Many datasets are skewed, have heavy tails, contain multiple groups or have other features that make the normal distribution inappropriate. It should be checked rather than assumed."}}
+ ]
+}
+</script>
+</head>
+
+<body>
+<div id="header"></div>
+<div class="breadcrumb">
+<a href="/index.html">Home</a> →
+<a href="/knowledge-vault/index.html">Knowledge Vault</a> →
+<span class="current">What Is Normal Distribution?</span>
+</div>
+
+<main class="kva-page">
+<article class="kva-article">
+
+<header class="kva-hero">
+<div class="kva-hero-inner">
+<span class="kva-eyebrow">Mathematics • Statistics • Probability</span>
+<h1>What Is Normal Distribution? Its Use in Real Life with Concrete Examples</h1>
+<p class="kva-hero-description">
+The <strong>normal distribution</strong> is one of the most important probability models in statistics.
+Its famous bell-shaped curve helps us understand how values tend to cluster around an average and how
+unusual values become farther from that average.
+</p>
+</div>
+</header>
+
+<section class="kva-section">
+<div class="kva-lead"><strong>Think of a classroom:</strong> If the heights of a large, reasonably similar group of students are plotted, many students may be near the average height, fewer are much shorter or taller, and the graph can look approximately like a bell.</div>
+<h2>1. What Is a Normal Distribution?</h2>
+<p>
+A normal distribution is a <strong>continuous probability distribution</strong> with a symmetric,
+bell-shaped curve. It is also called the <strong>Gaussian distribution</strong>.
+</p>
+<p>
+The distribution is described by two parameters:
+</p>
+<ul>
+<li><strong>Mean (μ):</strong> the centre of the distribution.</li>
+<li><strong>Standard deviation (σ):</strong> how widely the values are spread around the mean.</li>
+</ul>
+<p>
+In a normal distribution, the mean, median and mode occur at the same centre point because the curve is symmetric. citeturn0search25turn0search4
+</p>
+
+<figure class="kva-diagram" role="img" aria-label="Bell shaped normal distribution curve">
+<svg viewBox="0 0 760 390" width="760" height="390" xmlns="http://www.w3.org/2000/svg">
+<title>Normal distribution bell curve</title>
+<rect x="1" y="1" width="758" height="388" rx="18" fill="#f8fafc" stroke="#dbe4ee"/>
+<line x1="70" y1="315" x2="700" y2="315" stroke="#17365d" stroke-width="3"/>
+<path d="M90 312 C170 312 205 303 250 265 C300 222 325 105 380 78 C435 105 460 222 510 265 C555 303 590 312 680 312" fill="none" stroke="#2563eb" stroke-width="6"/>
+<line x1="380" y1="315" x2="380" y2="78" stroke="#92400e" stroke-width="3" stroke-dasharray="8 7"/>
+<text x="380" y="50" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#17365d">Normal distribution</text>
+<text x="380" y="350" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#17365d">μ = mean</text>
+<text x="180" y="345" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#555">lower values</text>
+<text x="580" y="345" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#555">higher values</text>
+</svg>
+<figcaption>The normal curve is symmetric around its mean. Most observations are near the centre, while observations farther from the mean are less common.</figcaption>
+</figure>
+</section>
+
+<section class="kva-section">
+<h2>2. The Normal Distribution Formula</h2>
+<p>
+If a random variable X follows a normal distribution with mean μ and standard deviation σ, its probability
+density function is:
+</p>
+<div class="kva-math-display" data-math="f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac12\left(\frac{x-\mu}{\sigma}\right)^2},\qquad -\infty<x<\infty"></div>
+<p>
+The formula looks complicated, but you usually do not need to calculate the curve from this formula by hand.
+The important ideas for understanding the distribution are <strong>mean, standard deviation, z-score and area
+under the curve</strong>. citeturn0search25turn0search7
+</p>
+</section>
+
+<section class="kva-section">
+<h2>3. What Does the Bell Shape Actually Mean?</h2>
+<p>
+Suppose the average height in a particular population is 170 cm. Most people will not have exactly 170 cm
+height. Some may be 165 cm, some 172 cm, some 180 cm and so on.
+</p>
+<p>
+If the heights are approximately normally distributed, the graph has this general pattern:
+</p>
+<ul>
+<li>Many observations occur close to 170 cm.</li>
+<li>Fewer observations occur farther from 170 cm.</li>
+<li>Very extreme heights are relatively uncommon.</li>
+<li>The pattern is approximately balanced on both sides of the mean.</li>
+</ul>
+<p>
+So the bell curve is really a visual way of saying: <strong>values near the typical value are common;
+values far from the typical value are progressively less common.</strong>
+</p>
+</section>
+
+<section class="kva-section">
+<h2>4. The Most Important Rule: 68–95–99.7</h2>
+<p>
+For a normal distribution, the following rule gives a quick understanding of how observations are spread:
+</p>
+
+<div class="kva-table-wrap">
+<table>
+<thead><tr><th>Range around mean</th><th>Approximate proportion</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>μ ± 1σ</td><td>68%</td><td>About 68% lie within one standard deviation.</td></tr>
+<tr><td>μ ± 2σ</td><td>95%</td><td>About 95% lie within two standard deviations.</td></tr>
+<tr><td>μ ± 3σ</td><td>99.7%</td><td>About 99.7% lie within three standard deviations.</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>
+This is often called the <strong>empirical rule</strong> or <strong>68–95–99.7 rule</strong>. citeturn0search0turn0search1
+</p>
+
+<div class="kva-important">
+<strong>Concrete interpretation:</strong> If 1,000 observations come from a normal distribution, roughly
+680 would be expected within 1 standard deviation of the mean, roughly 950 within 2 standard deviations,
+and roughly 997 within 3 standard deviations.
+</div>
+</section>
+
+<section class="kva-section">
+<h2>5. A Concrete Example: Students' Heights</h2>
+<p>
+Suppose the heights of a large group of students are approximately normally distributed with:
+</p>
+<div class="kva-math-display" data-math="\mu=170\text{ cm},\qquad \sigma=6\text{ cm}"></div>
+
+<p>Using the 68–95–99.7 rule:</p>
+<div class="kva-table-wrap">
+<table>
+<thead><tr><th>Range</th><th>Calculation</th><th>Approximate percentage</th></tr></thead>
+<tbody>
+<tr><td>Within 1σ</td><td>164 to 176 cm</td><td>68%</td></tr>
+<tr><td>Within 2σ</td><td>158 to 182 cm</td><td>95%</td></tr>
+<tr><td>Within 3σ</td><td>152 to 188 cm</td><td>99.7%</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>
+This gives a very concrete picture. A student who is 170 cm is at the centre. A student who is 176 cm is
+one standard deviation above the mean. A student who is 188 cm is three standard deviations above it and
+would be much less typical.
+</p>
+</section>
+
+<section class="kva-section">
+<h2>6. Another Concrete Example: Exam Scores</h2>
+<p>
+Imagine a very large examination in which scores are approximately normally distributed with:
+</p>
+<div class="kva-math-display" data-math="\mu=60,\qquad \sigma=10"></div>
+
+<p>Then approximately:</p>
+<ul>
+<li><strong>50–70 marks:</strong> about 68% of students.</li>
+<li><strong>40–80 marks:</strong> about 95% of students.</li>
+<li><strong>30–90 marks:</strong> about 99.7% of students.</li>
+</ul>
+<p>
+This does <strong>not</strong> mean every examination has normally distributed scores. It is a model that
+can be reasonable for some large groups of scores. Real examination results may be skewed because of
+question difficulty, preparation, grading, maximum marks and other factors.
+</p>
+</section>
+
+<section class="kva-section">
+<h2>7. Example: Manufacturing a Bottle</h2>
+<p>
+Suppose a factory is producing bottles designed to have a capacity of 500 mL. Manufacturing processes
+introduce small random variations.
+</p>
+<p>Suppose the measured capacity is approximately:</p>
+<div class="kva-math-display" data-math="X\sim N(500,5)"></div>
+<p>
+where the mean is 500 mL and the standard deviation is 5 mL.
+</p>
+<p>
+Then approximately 68% of bottles would be expected between:
+</p>
+<div class="kva-math-display" data-math="500-5=495\text{ mL}\quad\text{and}\quad500+5=505\text{ mL}"></div>
+<p>
+and approximately 95% would be expected between 490 mL and 510 mL, if the normal model is appropriate.
+</p>
+<div class="kva-example">
+<strong>Why this matters:</strong> A manufacturer can use a statistical model to understand variation
+and establish quality-control limits rather than inspecting every tiny variation as if it were unusual.
+</div>
+</section>
+
+<section class="kva-section">
+<h2>8. Example: Measurement Errors</h2>
+<p>
+Imagine repeatedly measuring the length of an object with a reasonably well-controlled measuring instrument.
+Small random errors can occur because of reading, instrument and environmental variation.
+</p>
+<p>
+If the random measurement error is approximately normal with mean zero:
+</p>
+<div class="kva-math-display" data-math="E\sim N(0,\sigma)"></div>
+<p>
+then errors slightly above and below zero are common, while very large positive or negative errors are less
+common. This makes the normal model useful in many measurement and experimental settings.
+</p>
+<p>
+Normal error assumptions are also common in statistical modelling and regression, although real measurement
+errors should be examined rather than automatically assumed to be normal. citeturn0search24
+</p>
+</section>
+
+<section class="kva-section">
+<h2>9. Example: IQ Scores</h2>
+<p>
+IQ is a familiar example often presented using a normal-distribution model. A common standardisation uses
+mean 100 and standard deviation 15:
+</p>
+<div class="kva-math-display" data-math="\mu=100,\qquad\sigma=15"></div>
+<p>
+Under that model, a score of 115 is one standard deviation above the mean, while a score of 85 is one
+standard deviation below it.
+</p>
+<p>
+This example helps students understand the role of the mean and standard deviation. It should not be taken
+to mean that every psychological measurement is perfectly normal; distributions depend on the population
+and measurement process. OpenStax gives IQ scores as an example commonly modelled by a normal distribution. citeturn0search4
+</p>
+</section>
+
+<section class="kva-section">
+<h2>10. Example: Salaries</h2>
+<p>
+Suppose, purely as an illustrative model, salaries within a particular company are approximately normal
+with mean ₹50,000 per month and standard deviation ₹5,000.
+</p>
+<p>
+Then:</p>
+<ul>
+<li>₹45,000–₹55,000 is within one standard deviation.</li>
+<li>₹40,000–₹60,000 is within two standard deviations.</li>
+<li>₹35,000–₹65,000 is within three standard deviations.</li>
+</ul>
+<p>
+This is useful for demonstrating the mathematics, but salary distributions in real populations are often
+<strong>skewed</strong>, especially when very high earners are included. Therefore, salaries should not
+automatically be treated as normally distributed. This is an important lesson: <strong>the normal
+distribution is a model, not a rule that every real-life dataset must obey.</strong>
+</p>
+</section>
+
+<section class="kva-section">
+<h2>11. Example: Rubber Ball Diameter</h2>
+<p>
+Suppose a factory produces rubber balls with a target diameter of 12 cm and the manufacturing variation
+is approximately normal with standard deviation 0.2 cm.
+</p>
+<div class="kva-math-display" data-math="\mu=12\text{ cm},\qquad\sigma=0.2\text{ cm}"></div>
+<p>
+Then approximately:</p>
+<ul>
+<li>68% lie between 11.8 cm and 12.2 cm.</li>
+<li>95% lie between 11.6 cm and 12.4 cm.</li>
+<li>99.7% lie between 11.4 cm and 12.6 cm.</li>
+</ul>
+<p>
+This is a useful way to connect probability with <strong>quality control and manufacturing tolerance</strong>.
+A similar type of example is used in introductory statistics exercises. citeturn0search2
+</p>
+</section>
+
+<section class="kva-section">
+<h2>12. Example: Sample Means — Why Normal Distribution Is So Powerful</h2>
+<p>
+Here is one of the most important ideas in statistics. Even when individual observations are not perfectly
+normal, the <strong>distribution of sample means</strong> can become approximately normal as the sample
+size becomes large under suitable conditions. This is a consequence of the <strong>Central Limit
+Theorem</strong>. citeturn0search24
+</p>
+<p>
+Suppose a population has mean μ and standard deviation σ. For a random sample of size n, the sampling
+distribution of the sample mean has:
+</p>
+<div class="kva-math-display" data-math="\mu_{\bar X}=\mu,\qquad \sigma_{\bar X}=\frac{\sigma}{\sqrt n}"></div>
+<p>
+As n becomes larger, the standard deviation of the sample mean becomes smaller. This explains why averages
+are generally more stable than individual observations and is one major reason normal-based statistical
+methods are so useful. citeturn0search24
+</p>
+</section>
+
+<section class="kva-section">
+<h2>13. What Is a Z-Score?</h2>
+<p>
+A z-score tells us how far a value is from the mean in units of standard deviation.
+</p>
+<div class="kva-math-display" data-math="z=\frac{x-\mu}{\sigma}"></div>
+<p>
+A positive z-score means the value is above the mean, while a negative z-score means it is below the mean.
+The absolute value of z tells how many standard deviations away the value lies. citeturn0search0turn0search1
+</p>
+
+<div class="kva-example">
+<strong>Example:</strong> Suppose exam scores have μ = 60 and σ = 10. A student scores 80.
+<div class="kva-math-display" data-math="z=\frac{80-60}{10}=2"></div>
+<p>
+The score is therefore <strong>2 standard deviations above the mean</strong>.
+</p>
+</div>
+
+genui{"learning_viz":{"type_id":"STANDARD_SCORE_Z","initial_values":{"x":80,"mu":60,"sigma":10},"locale_override":"en-IN"}}
+</section>
+
+<section class="kva-section">
+<h2>14. Standard Normal Distribution</h2>
+<p>
+A normal distribution can be converted to the <strong>standard normal distribution</strong> using the
+z-score. The standard normal distribution has:
+</p>
+<div class="kva-math-display" data-math="\mu=0,\qquad\sigma=1"></div>
+<p>
+It is commonly written as:
+</p>
+<div class="kva-math-display" data-math="Z\sim N(0,1)"></div>
+<p>
+Standardisation allows values from different normal distributions to be expressed on the same scale.
+A z-table or statistical software can then be used to determine probabilities associated with z-scores. citeturn0search0
+</p>
+</section>
+
+<section class="kva-section">
+<h2>15. Why Is Normal Distribution Used in Real Life?</h2>
+<p>
+The normal distribution is important for both theoretical and practical reasons. NIST notes that many
+classical statistical tests use normality assumptions, normal models are often used for error terms in
+regression, and the distribution is useful for significance levels and confidence intervals. citeturn0search24
+</p>
+
+<div class="kva-table-wrap">
+<table>
+<thead><tr><th>Field</th><th>How normal distribution can be useful</th></tr></thead>
+<tbody>
+<tr><td>Education</td><td>Modelling some test-score distributions, standardising scores and comparing performance.</td></tr>
+<tr><td>Manufacturing</td><td>Understanding random variation in dimensions, weights and measurements for quality control.</td></tr>
+<tr><td>Science</td><td>Modelling measurement errors and analysing experimental data.</td></tr>
+<tr><td>Medicine & biology</td><td>Statistical modelling of suitable measurements and sample-based inference.</td></tr>
+<tr><td>Finance</td><td>Some simplified models of returns and errors; real financial data may have heavier tails.</td></tr>
+<tr><td>Engineering</td><td>Modelling errors, tolerances and measurement variation.</td></tr>
+<tr><td>Data science</td><td>Statistical inference, standardisation and modelling where the normal assumption is appropriate.</td></tr>
+<tr><td>Research</td><td>Confidence intervals, hypothesis testing and sampling distributions.</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="kva-section">
+<h2>16. Why Are Values Near the Mean More Common?</h2>
+<p>
+Imagine measuring the height of 10,000 people. There are many ways for a person to be close to the average:
+small differences in genetics, nutrition, environment and other factors can combine in many ways.
+Extremely unusual outcomes require the combined factors to push the measurement far from the centre.
+</p>
+<p>
+This is an intuitive reason many naturally varying quantities can show a bell-like pattern. A more formal
+statistical explanation often involves the <strong>Central Limit Theorem</strong> and sums or averages of
+many contributions. citeturn0search24
+</p>
+</section>
+
+<section class="kva-section">
+<h2>17. Normal Distribution Does NOT Mean "Everything Is Normal"</h2>
+<div class="kva-important">
+<strong>Very important:</strong> The word "normal" in normal distribution does not mean "normal people",
+"normal values" or "everything in nature follows this curve." It is simply the name of a mathematical
+probability distribution.
+</div>
+<p>
+Many real-world variables are not normally distributed. For example, income and wealth can be strongly
+right-skewed, waiting times can be skewed, and some financial data can have heavier tails than a normal
+model. OpenStax specifically warns that the normal distribution is extremely important but cannot be
+applied to everything in the real world. citeturn0search4
+</p>
+<p>
+Therefore, a responsible statistical analysis should examine the data before choosing a normal model.
+Histograms, normal probability plots and other diagnostics can help assess whether the model is reasonable. citeturn0search26
+</p>
+</section>
+
+<section class="kva-section">
+<h2>18. Normal Distribution vs. Uniform Distribution</h2>
+<div class="kva-table-wrap">
+<table>
+<thead><tr><th>Normal distribution</th><th>Uniform distribution</th></tr></thead>
+<tbody>
+<tr><td>Bell-shaped</td><td>Flat over its specified interval</td></tr>
+<tr><td>Values near the mean are more concentrated</td><td>Values in the interval have equal density</td></tr>
+<tr><td>Symmetric around μ</td><td>Symmetric around the midpoint of the interval</td></tr>
+<tr><td>Defined by μ and σ</td><td>Defined by its interval/endpoints</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="kva-section">
+<h2>19. A Concrete Everyday Mental Picture</h2>
+<p>
+Imagine a school corridor where 1,000 students stand in order from shortest to tallest.
+</p>
+<p>
+If their heights approximately follow a normal distribution, you would see:
+</p>
+<ol>
+<li>A large group around the middle height.</li>
+<li>Fewer students as you move toward very short or very tall heights.</li>
+<li>Roughly similar numbers on either side of the average.</li>
+<li>Very few students at the extreme ends.</li>
+</ol>
+<p>
+Now draw a smooth curve over that pattern. You get something resembling the famous <strong>bell curve</strong>.
+That is the basic visual idea of a normal distribution.
+</p>
+</section>
+
+<section class="kva-section">
+<h2>20. Real-Life Examples at a Glance</h2>
+<div class="kva-table-wrap">
+<table>
+<thead><tr><th>Example</th><th>What the mean represents</th><th>What σ represents</th></tr></thead>
+<tbody>
+<tr><td>Heights</td><td>Average height</td><td>Typical spread of heights</td></tr>
+<tr><td>Exam scores</td><td>Average score</td><td>Spread of scores</td></tr>
+<tr><td>Bottle capacity</td><td>Average manufactured capacity</td><td>Manufacturing variation</td></tr>
+<tr><td>Ball diameter</td><td>Average diameter</td><td>Production variation</td></tr>
+<tr><td>Measurement error</td><td>Systematic centre of random error</td><td>Size of random variation</td></tr>
+<tr><td>IQ model</td><td>Standardised centre</td><td>Spread of scores</td></tr>
+<tr><td>Sample mean</td><td>Population mean</td><td>σ/√n for the standard error under the usual conditions</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="kva-section">
+<h2>21. Important Formulas</h2>
+<div class="kva-table-wrap">
+<table>
+<thead><tr><th>Concept</th><th>Formula</th></tr></thead>
+<tbody>
+<tr><td>Normal probability density</td><td><span class="kva-inline-math" data-math="f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac12((x-\mu)/\sigma)^2}"></span></td></tr>
+<tr><td>Z-score</td><td><span class="kva-inline-math" data-math="z=\frac{x-\mu}{\sigma}"></span></td></tr>
+<tr><td>Recover x from z</td><td><span class="kva-inline-math" data-math="x=\mu+z\sigma"></span></td></tr>
+<tr><td>Standard normal</td><td><span class="kva-inline-math" data-math="Z\sim N(0,1)"></span></td></tr>
+<tr><td>Sampling mean</td><td><span class="kva-inline-math" data-math="\mu_{\bar X}=\mu"></span></td></tr>
+<tr><td>Standard deviation of sample mean</td><td><span class="kva-inline-math" data-math="\sigma_{\bar X}=\frac{\sigma}{\sqrt n}"></span></td></tr>
+<tr><td>68–95–99.7 rule</td><td>Approximately 68%, 95%, 99.7% within 1σ, 2σ, 3σ respectively.</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="kva-section">
+<h2>22. What Can We Learn from a Z-Score?</h2>
+<p>
+A z-score turns a raw measurement into a common scale.
+</p>
+<div class="kva-table-wrap">
+<table>
+<thead><tr><th>Z-score</th><th>Interpretation</th></tr></thead>
+<tbody>
+<tr><td>z = 0</td><td>Exactly at the mean.</td></tr>
+<tr><td>z = 1</td><td>One standard deviation above the mean.</td></tr>
+<tr><td>z = −1</td><td>One standard deviation below the mean.</td></tr>
+<tr><td>z = 2</td><td>Two standard deviations above the mean.</td></tr>
+<tr><td>z = −2</td><td>Two standard deviations below the mean.</td></tr>
+<tr><td>|z| large</td><td>The value is farther from the mean and may be relatively unusual under the normal model.</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="kva-section">
+<h2>23. Common Misconceptions</h2>
+<ul>
+<li><strong>"Normal" means every real dataset is normal.</strong> False.</li>
+<li><strong>The bell curve tells the exact probability of one individual value.</strong> For a continuous variable, the probability of one exact point is zero; probabilities are represented by areas over intervals.</li>
+<li><strong>68% means exactly 68% in every sample.</strong> No. It is an approximate theoretical proportion for a normal distribution.</li>
+<li><strong>Mean alone determines a normal distribution.</strong> No. Both μ and σ determine its location and spread.</li>
+<li><strong>A value three standard deviations away is impossible.</strong> No. It is unusual under the model, but not impossible.</li>
+<li><strong>A normal model should always be used for averages.</strong> The Central Limit Theorem has conditions and does not justify blindly applying a normal model to every situation.</li>
+</ul>
+</section>
+
+<section class="kva-section">
+<h2>24. Final Takeaway</h2>
+<p>
+The normal distribution is a mathematical model for a continuous quantity whose probability pattern is
+symmetric and bell-shaped. It provides a simple language for describing a typical value, measuring spread,
+identifying how unusual an observation is and calculating probabilities.
+</p>
+<div class="kva-lead">
+<strong>The simplest mental picture:</strong> Most values gather around the average, fewer values occur
+as we move away from the average, and very extreme values are increasingly uncommon.
+</div>
+<p>
+Its importance comes not from the claim that everything in nature is bell-shaped, but from the fact that
+normal models and the theory behind them are remarkably useful for measurement, sampling, statistical
+inference, quality control, scientific research and data analysis when their assumptions are appropriate. citeturn0search24turn0search4
+</p>
+</section>
+
+<section class="kva-section">
+<h2>25. Frequently Asked Questions</h2>
+<h3>Why is it called a normal distribution?</h3>
+<p>
+"Normal" is simply the established name of the distribution. It does not mean that other distributions are abnormal.
+</p>
+
+<h3>Why is the curve called a bell curve?</h3>
+<p>
+Because its graph rises to a central peak and then falls on both sides, giving it a shape resembling a bell.
+</p>
+
+<h3>What is the easiest way to remember the normal distribution?</h3>
+<p>
+Remember <strong>mean = centre</strong>, <strong>standard deviation = spread</strong>, and
+<strong>68–95–99.7</strong> for the approximate proportions within 1, 2 and 3 standard deviations.
+</p>
+
+<h3>Where is normal distribution especially useful?</h3>
+<p>
+It is especially useful in statistical inference, modelling measurement errors, quality control,
+standardisation, confidence intervals and hypothesis testing when the normal assumptions are reasonable. citeturn0search24
+</p>
+</section>
+
+</article>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("[data-math]").forEach(function(el) {
+    if (window.katex) {
+      katex.render(el.getAttribute("data-math"), el, {
+        throwOnError: false,
+        displayMode: el.classList.contains("kva-math-display")
+      });
+    }
+  });
+});
+</script>
+</body>
+</html>
