@@ -158,5 +158,15 @@
     "description": "Understand Poisson distribution through its formula, assumptions, mean and variance, solved examples, and real-life uses in customer arrivals, calls, website traffic, defects, accidents and more.",
     "url": "/knowledge-vault/articles/what-is-poisson-distribution-and-its-real-life-uses.html",
     "keywords": "Poisson distribution Poisson probability formula lambda real life examples applications statistics probability mean variance standard deviation calls customers website traffic defects accidents insurance claims"
+  },
+  {
+    "title": "What Is Binomial Distribution? Formula, Uses and Examples",
+    "category": "Mathematics",
+    "subcategory": "Statistics and Probability",
+    "level": "Classes 11–12 • Statistics",
+    "icon": "🎯",
+    "description": "Understand binomial distribution through Bernoulli trials, its probability formula, mean, variance, solved examples and real-life applications in education, business, quality control, medicine and technology.",
+    "url": "/knowledge-vault/articles/what-is-binomial-distribution-formula-uses-and-examples.html",
+    "keywords": "binomial distribution binomial probability formula Bernoulli trials n p q mean variance standard deviation real life examples applications statistics probability quality control business education medicine technology"
   }
 ]
