@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Are Determinants? | All Determinant Formulas and Properties</title>
+<meta name="description" content="Learn what determinants are and revise all important determinant formulas, properties, minors, cofactors, area, adjoint, inverse, linear equations and determinant identities for Class 12 and competitive exams.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Saraswat Academy">
+<meta name="theme-color" content="#17365d">
+<link rel="canonical" href="https://www.saraswatacademy.in/knowledge-vault/articles/what-are-determinants-and-all-formulas.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Saraswat Academy">
+<meta property="og:title" content="What Are Determinants? | All Determinant Formulas and Properties">
+<meta property="og:description" content="Complete determinant formula sheet with definitions, properties, minors, cofactors, area, adjoint, inverse and linear equations.">
+<meta property="og:url" content="https://www.saraswatacademy.in/knowledge-vault/articles/what-are-determinants-and-all-formulas.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="What Are Determinants?">
+<meta name="twitter:description" content="Complete determinant formulas and properties for Class 12 Mathematics and competitive exams.">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/header.css">
+<link rel="stylesheet" href="/knowledge-vault/articles/articles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+<script src="/loader.js"></script>
+<script src="/config.js"></script>
+<script src="/header.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org","@type":"Article",
+ "@id":"https://www.saraswatacademy.in/knowledge-vault/articles/what-are-determinants-and-all-formulas.html#article",
+ "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.saraswatacademy.in/knowledge-vault/articles/what-are-determinants-and-all-formulas.html"},
+ "headline":"What Are Determinants? All Determinant Formulas and Properties",
+ "description":"A comprehensive guide to determinants and their formulas, properties, minors, cofactors, adjoint, inverse and applications.",
+ "author":{"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},
+ "publisher":{"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},
+ "isPartOf":{"@type":"CollectionPage","name":"Knowledge Vault","url":"https://www.saraswatacademy.in/knowledge-vault/index.html"},
+ "about":[{"@type":"Thing","name":"Determinant"},{"@type":"Thing","name":"Linear algebra"},{"@type":"Thing","name":"Matrices"}],
+ "learningResourceType":"Educational article","inLanguage":"en-IN"
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+ {"@type":"ListItem","position":1,"name":"Home","item":"https://www.saraswatacademy.in/index.html"},
+ {"@type":"ListItem","position":2,"name":"Knowledge Vault","item":"https://www.saraswatacademy.in/knowledge-vault/index.html"},
+ {"@type":"ListItem","position":3,"name":"What Are Determinants?","item":"https://www.saraswatacademy.in/knowledge-vault/articles/what-are-determinants-and-all-formulas.html"}
+ ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+ {"@type":"Question","name":"What is a determinant?","acceptedAnswer":{"@type":"Answer","text":"A determinant is a single number associated with a square matrix. It is written as det(A) or |A| and is useful for solving equations, testing invertibility and many other applications."}},
+ {"@type":"Question","name":"Can every matrix have a determinant?","acceptedAnswer":{"@type":"Answer","text":"No. In the standard school-level treatment, a determinant is defined for a square matrix only."}},
+ {"@type":"Question","name":"What is the determinant of a 2 by 2 matrix?","acceptedAnswer":{"@type":"Answer","text":"For A = [[a,b],[c,d]], det(A) = ad - bc."}},
+ {"@type":"Question","name":"When is a matrix singular?","acceptedAnswer":{"@type":"Answer","text":"A square matrix is singular when its determinant is zero."}},
+ {"@type":"Question","name":"When does the inverse of a matrix exist?","acceptedAnswer":{"@type":"Answer","text":"A square matrix has an inverse exactly when its determinant is non-zero."}}
+ ]
+}
+</script>
+</head>
+
+<body>
+<div id="header"></div>
+<div class="breadcrumb">
+<a href="/index.html">Home</a> →
+<a href="/knowledge-vault/index.html">Knowledge Vault</a> →
+<span class="current">What Are Determinants?</span>
+</div>
+
+<main class="kva-page">
+<article class="kva-article">
+
+<header class="kva-hero">
+<div class="kva-hero-inner">
+<span class="kva-eyebrow">Mathematics • Matrices • Determinants</span>
+<h1>What Are Determinants? And All Important Determinant Formulas</h1>
+<p class="kva-hero-description">
+A determinant is a special number associated with a <strong>square matrix</strong>. It helps us evaluate
+matrices, solve systems of equations, find areas, test whether an inverse exists and understand important
+properties of linear transformations.
+</p>
+</div>
+</header>
+
+<section class="kva-section">
+<div class="kva-lead"><strong>In simple words:</strong> A determinant converts a square matrix into one number that carries important information about the matrix.</div>
+<h2>1. What Is a Determinant?</h2>
+<p>
+For a square matrix <span class="kva-inline-math" data-math="A"></span>, its determinant is a single
+number denoted by <span class="kva-inline-math" data-math="|A|"></span>,
+<span class="kva-inline-math" data-math="\det(A)"></span>, or sometimes
+<span class="kva-inline-math" data-math="\Delta"></span>.
+</p>
+
+<div class="kva-math-display" data-math="A=\begin{bmatrix}a&b\\c&d\end{bmatrix},
+\qquad |A|=\begin{vmatrix}a&b\\c&d\end{vmatrix}=ad-bc"></div>
+
+<p>
+Determinants are defined for square matrices. In the Class 12 NCERT treatment, determinants are studied
+up to order 3, together with their properties, minors, cofactors, applications to area, adjoint,
+inverse and systems of linear equations. citeturn0search7
+</p>
+</section>
+
+<section class="kva-section">
+<h2>2. Why Are Determinants Important?</h2>
+<ul>
+<li>They help calculate whether a square matrix is <strong>singular or non-singular</strong>.</li>
+<li>They tell us whether a matrix has an <strong>inverse</strong>.</li>
+<li>They provide a method for solving systems of linear equations.</li>
+<li>They help calculate the <strong>area of a triangle</strong> using coordinates.</li>
+<li>They are used to define minors, cofactors and the adjoint.</li>
+<li>They appear in coordinate geometry, linear algebra, engineering, physics and computer science.</li>
+</ul>
+<div class="kva-important">
+<strong>Most important connection:</strong>
+<span class="kva-inline-math" data-math="|A|=0"></span> means the square matrix is singular and
+has no ordinary inverse. If <span class="kva-inline-math" data-math="|A|\neq0"></span>, the matrix is
+non-singular and is invertible. citeturn0search1turn0search4
+</div>
+</section>
+
+<section class="kva-section">
+<h2>3. Determinant of Order 1</h2>
+<p>For a one-element square matrix:</p>
+<div class="kva-math-display" data-math="A=[a]\quad\Rightarrow\quad |A|=a"></div>
+</section>
+
+<section class="kva-section">
+<h2>4. Determinant of Order 2</h2>
+<p>For</p>
+<div class="kva-math-display" data-math="A=\begin{bmatrix}a&b\\c&d\end{bmatrix}"></div>
+<p>the determinant is:</p>
+<div class="kva-math-display" data-math="|A|=\begin{vmatrix}a&b\\c&d\end{vmatrix}=ad-bc"></div>
+<div class="kva-example">
+<strong>Memory rule:</strong> For a 2 × 2 determinant, multiply the main diagonal and subtract the
+product of the other diagonal.
+</div>
+</section>
+
+<section class="kva-section">
+<h2>5. Determinant of Order 3</h2>
+<p>For</p>
+<div class="kva-math-display" data-math="A=\begin{bmatrix}a&b&c\\d&e&f\\g&h&i\end{bmatrix}"></div>
+<p>expansion along the first row gives:</p>
+<div class="kva-math-display" data-math="|A|=a(ei-fh)-b(di-fg)+c(dh-eg)"></div>
+<p>Equivalently:</p>
+<div class="kva-math-display" data-math="|A|=a(ei-fh)-b(d i-f g)+c(d h-e g)"></div>
+<p>
+The determinant can be expanded along <strong>any row or any column</strong>. When choosing an expansion,
+a row or column containing zeros often makes the calculation shorter. citeturn0search0turn0search1
+</p>
+</section>
+
+<section class="kva-section">
+<h2>6. Minors</h2>
+<p>
+The <strong>minor</strong> of an element is obtained by deleting the row and column containing that element
+and taking the determinant of what remains.
+</p>
+<p>For the element <span class="kva-inline-math" data-math="a_{ij}"></span>, its minor is:</p>
+<div class="kva-math-display" data-math="M_{ij}=\text{determinant obtained after deleting the }i\text{-th row and }j\text{-th column}"></div>
+<p>
+For example, in a 3 × 3 determinant, the minor of <span class="kva-inline-math" data-math="a_{12}"></span>
+is the determinant left after deleting row 1 and column 2.
+</p>
+</section>
+
+<section class="kva-section">
+<h2>7. Cofactors</h2>
+<p>The cofactor of <span class="kva-inline-math" data-math="a_{ij}"></span> is:</p>
+<div class="kva-math-display" data-math="C_{ij}=(-1)^{i+j}M_{ij}"></div>
+<p>The sign pattern for cofactors is:</p>
+<div class="kva-math-display" data-math="\begin{bmatrix}+&-&+\\-&+&-\\+&-&+\end{bmatrix}"></div>
+<p>
+Thus, cofactors use alternating signs beginning with positive at the top-left position. citeturn0search1turn0search3
+</p>
+</section>
+
+<section class="kva-section">
+<h2>8. Expansion of a Determinant Using Cofactors</h2>
+<p>
+For a 3 × 3 determinant, expansion along the first row is:
+</p>
+<div class="kva-math-display" data-math="|A|=a_{11}C_{11}+a_{12}C_{12}+a_{13}C_{13}"></div>
+<p>More generally, for an n × n determinant, expansion along row i is:</p>
+<div class="kva-math-display" data-math="|A|=\sum_{j=1}^{n}a_{ij}C_{ij}"></div>
+<p>Expansion along column j is:</p>
+<div class="kva-math-display" data-math="|A|=\sum_{i=1}^{n}a_{ij}C_{ij}"></div>
+</section>
+
+<section class="kva-section">
+<h2>9. Important Properties of Determinants — Complete Revision List</h2>
+
+<h3>Property 1: Interchange of two rows or columns</h3>
+<p>Interchanging any two rows or any two columns changes the sign of the determinant.</p>
+<div class="kva-math-display" data-math="R_i\leftrightarrow R_j\quad\Rightarrow\quad |A|\to-|A|"></div>
+
+<h3>Property 2: Two equal rows or columns</h3>
+<p>If two rows or two columns are identical, the determinant is zero.</p>
+<div class="kva-math-display" data-math="R_i=R_j\quad(i\neq j)\quad\Rightarrow\quad |A|=0"></div>
+
+<h3>Property 3: Proportional rows or columns</h3>
+<p>If two rows or two columns are proportional, the determinant is zero.</p>
+<div class="kva-math-display" data-math="R_i=kR_j\quad(i\neq j)\quad\Rightarrow\quad |A|=0"></div>
+
+<h3>Property 4: Zero row or column</h3>
+<p>If every element of a row or column is zero, the determinant is zero.</p>
+<div class="kva-math-display" data-math="R_i=0\quad\Rightarrow\quad |A|=0"></div>
+
+<h3>Property 5: Common factor from a row or column</h3>
+<p>If every element of one row or one column has a common factor k, it may be taken outside the determinant.</p>
+<div class="kva-math-display" data-math="\begin{vmatrix}ka&kb\\c&d\end{vmatrix}=k\begin{vmatrix}a&b\\c&d\end{vmatrix}"></div>
+
+<h3>Property 6: Common factor from every row or column</h3>
+<p>If a square determinant of order n has k multiplied into every element, the determinant is multiplied by k<sup>n</sup>.</p>
+<div class="kva-math-display" data-math="|kA|=k^n|A|"></div>
+
+<h3>Property 7: Adding a multiple of one row to another</h3>
+<p>Adding k times one row to a different row does not change the determinant.</p>
+<div class="kva-math-display" data-math="R_i\to R_i+kR_j\quad(i\neq j)\quad\Rightarrow\quad |A|\text{ unchanged}"></div>
+<p>The same property holds for columns.</p>
+
+<h3>Property 8: Row or column linearity</h3>
+<p>If a row or column is the sum of two corresponding rows or columns, the determinant can be split into two determinants.</p>
+<div class="kva-math-display" data-math="D(R_i+S_i)=D(R_i)+D(S_i)"></div>
+
+<h3>Property 9: Transpose</h3>
+<p>Taking the transpose does not change the determinant.</p>
+<div class="kva-math-display" data-math="|A^T|=|A|"></div>
+
+<h3>Property 10: Determinant of a product</h3>
+<div class="kva-math-display" data-math="|AB|=|A||B|"></div>
+
+<h3>Property 11: Determinant of a power</h3>
+<div class="kva-math-display" data-math="|A^m|=|A|^m"></div>
+
+<h3>Property 12: Determinant of an inverse</h3>
+<p>When A is invertible:</p>
+<div class="kva-math-display" data-math="|A^{-1}|=\frac{1}{|A|}"></div>
+
+<h3>Property 13: Determinant of a scalar multiple</h3>
+<p>For an n × n matrix:</p>
+<div class="kva-math-display" data-math="|kA|=k^n|A|"></div>
+
+<h3>Property 14: Triangular matrices</h3>
+<p>For an upper or lower triangular matrix, the determinant is the product of the diagonal entries.</p>
+<div class="kva-math-display" data-math="\left|\begin{matrix}a&*&*\\0&b&*\\0&0&c\end{matrix}\right|=abc"></div>
+
+<h3>Property 15: Identity matrix</h3>
+<div class="kva-math-display" data-math="|I_n|=1"></div>
+
+<h3>Property 16: Singular matrix</h3>
+<div class="kva-math-display" data-math="|A|=0\quad\Longleftrightarrow\quad A\text{ is singular}"></div>
+
+<h3>Property 17: Non-singular matrix</h3>
+<div class="kva-math-display" data-math="|A|\neq0\quad\Longleftrightarrow\quad A\text{ is non-singular}"></div>
+</section>
+
+<section class="kva-section">
+<h2>10. Row and Column Operations — Quick Formula Table</h2>
+<div class="kva-table-wrap">
+<table>
+<thead><tr><th>Operation</th><th>Effect on determinant</th></tr></thead>
+<tbody>
+<tr><td>Interchange two rows</td><td>Sign changes.</td></tr>
+<tr><td>Interchange two columns</td><td>Sign changes.</td></tr>
+<tr><td>Multiply one row by k</td><td>Determinant becomes k times the original.</td></tr>
+<tr><td>Multiply one column by k</td><td>Determinant becomes k times the original.</td></tr>
+<tr><td>Multiply every row of an n × n matrix by k</td><td>Determinant becomes k<sup>n</sup> times the original.</td></tr>
+<tr><td>Multiply every column by k</td><td>Determinant becomes k<sup>n</sup> times the original.</td></tr>
+<tr><td>R<sub>i</sub> → R<sub>i</sub> + kR<sub>j</sub></td><td>No change.</td></tr>
+<tr><td>C<sub>i</sub> → C<sub>i</sub> + kC<sub>j</sub></td><td>No change.</td></tr>
+<tr><td>Two rows equal/proportional</td><td>Determinant is zero.</td></tr>
+<tr><td>Two columns equal/proportional</td><td>Determinant is zero.</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="kva-section">
+<h2>11. Important Cofactor Identities</h2>
+<p>Expansion using elements and their corresponding cofactors gives:</p>
+<div class="kva-math-display" data-math="a_{11}C_{11}+a_{12}C_{12}+a_{13}C_{13}=|A|"></div>
+<p>
+If elements of one row are multiplied by cofactors belonging to a <strong>different</strong> row, the sum is zero:
+</p>
+<div class="kva-math-display" data-math="a_{11}C_{21}+a_{12}C_{22}+a_{13}C_{23}=0"></div>
+<p>More generally:</p>
+<div class="kva-math-display" data-math="\sum_{j=1}^{n}a_{ij}C_{kj}=\begin{cases}|A|,&i=k\\0,&i\neq k\end{cases}"></div>
+</section>
+
+<section class="kva-section">
+<h2>12. Area of a Triangle Using Determinants</h2>
+<p>
+If the vertices of a triangle are
+<span class="kva-inline-math" data-math="(x_1,y_1),(x_2,y_2),(x_3,y_3)"></span>,
+its area is:
+</p>
+<div class="kva-math-display" data-math="\Delta=\frac12\left|\begin{matrix}x_1&y_1&1\\x_2&y_2&1\\x_3&y_3&1\end{matrix}\right|"></div>
+<p>
+The absolute value is used because area is non-negative. citeturn0search0turn0search4
+</p>
+
+<h3>Condition for collinearity</h3>
+<p>If the three points are collinear, their triangle has zero area:</p>
+<div class="kva-math-display" data-math="\left|\begin{matrix}x_1&y_1&1\\x_2&y_2&1\\x_3&y_3&1\end{matrix}\right|=0"></div>
+</section>
+
+<section class="kva-section">
+<h2>13. Equation of a Line Using a Determinant</h2>
+<p>
+The equation of the line passing through two points
+<span class="kva-inline-math" data-math="(x_1,y_1)"></span> and
+<span class="kva-inline-math" data-math="(x_2,y_2)"></span> can be written as:
+</p>
+<div class="kva-math-display" data-math="\begin{vmatrix}x&y&1\\x_1&y_1&1\\x_2&y_2&1\end{vmatrix}=0"></div>
+<p>This determinant expresses that the three points are collinear.</p>
+</section>
+
+<section class="kva-section">
+<h2>14. Adjoint of a Matrix</h2>
+<p>
+The <strong>adjoint</strong> (adjugate) of a square matrix is the transpose of its cofactor matrix.
+If the cofactor matrix is C, then:
+</p>
+<div class="kva-math-display" data-math="\operatorname{adj}(A)=C^T"></div>
+<p>For a 3 × 3 matrix:</p>
+<div class="kva-math-display" data-math="\operatorname{adj}(A)=\begin{bmatrix}C_{11}&C_{21}&C_{31}\\C_{12}&C_{22}&C_{32}\\C_{13}&C_{23}&C_{33}\end{bmatrix}"></div>
+<p>For a 2 × 2 matrix:</p>
+<div class="kva-math-display" data-math="\operatorname{adj}\begin{bmatrix}a&b\\c&d\end{bmatrix}=\begin{bmatrix}d&-b\\-c&a\end{bmatrix}"></div>
+<p>These adjoint relations are standard in the NCERT treatment of determinants and inverse matrices. citeturn0search1</p>
+</section>
+
+<section class="kva-section">
+<h2>15. Fundamental Adjoint Identity</h2>
+<div class="kva-math-display" data-math="A\operatorname{adj}(A)=\operatorname{adj}(A)A=|A|I"></div>
+<p>
+This identity is the key step connecting determinants with the inverse of a matrix.
+</p>
+</section>
+
+<section class="kva-section">
+<h2>16. Determinant of the Adjoint</h2>
+<p>For a square matrix A of order n:</p>
+<div class="kva-math-display" data-math="|\operatorname{adj}(A)|=|A|^{n-1}"></div>
+<p>For example, for a 3 × 3 matrix:</p>
+<div class="kva-math-display" data-math="|\operatorname{adj}(A)|=|A|^2"></div>
+</section>
+
+<section class="kva-section">
+<h2>17. Inverse of a Matrix Using Determinants</h2>
+<p>
+A square matrix has an inverse only when its determinant is non-zero. The formula is:
+</p>
+<div class="kva-math-display" data-math="A^{-1}=\frac{1}{|A|}\operatorname{adj}(A),\qquad |A|\neq0"></div>
+<p>
+If <span class="kva-inline-math" data-math="|A|=0"></span>, the inverse does not exist.
+</p>
+
+<h3>Important inverse identities</h3>
+<div class="kva-math-display" data-math="AA^{-1}=A^{-1}A=I"></div>
+<div class="kva-math-display" data-math="(AB)^{-1}=B^{-1}A^{-1}"></div>
+<div class="kva-math-display" data-math="(A^T)^{-1}=(A^{-1})^T"></div>
+</section>
+
+<section class="kva-section">
+<h2>18. Solving Linear Equations Using Matrices</h2>
+<p>A system of linear equations can be written in matrix form as:</p>
+<div class="kva-math-display" data-math="AX=B"></div>
+<p>If</p>
+<div class="kva-math-display" data-math="|A|\neq0"></div>
+<p>then the unique solution is:</p>
+<div class="kva-math-display" data-math="X=A^{-1}B"></div>
+<p>
+This is one of the important applications of determinants and matrices in algebra. citeturn0search0turn0search7
+</p>
+</section>
+
+<section class="kva-section">
+<h2>19. Cramer's Rule</h2>
+<p>
+For a system of two or three linear equations, determinants can also be used through <strong>Cramer's rule</strong>.
+For a two-variable system:
+</p>
+<div class="kva-math-display" data-math="a_1x+b_1y=c_1,\qquad a_2x+b_2y=c_2"></div>
+<p>Define:</p>
+<div class="kva-math-display" data-math="D=\begin{vmatrix}a_1&b_1\\a_2&b_2\end{vmatrix}"></div>
+<div class="kva-math-display" data-math="D_x=\begin{vmatrix}c_1&b_1\\c_2&b_2\end{vmatrix},\qquad D_y=\begin{vmatrix}a_1&c_1\\a_2&c_2\end{vmatrix}"></div>
+<p>When D ≠ 0:</p>
+<div class="kva-math-display" data-math="x=\frac{D_x}{D},\qquad y=\frac{D_y}{D}"></div>
+<p>
+This is a useful determinant-based method for solving small systems. For syllabus-specific preparation,
+always follow the method required by the relevant board or examination.
+</p>
+</section>
+
+<section class="kva-section">
+<h2>20. Useful Standard Determinant Identities</h2>
+<p>Some determinant forms frequently appear in higher-level algebra and competitive-exam problems.</p>
+
+<h3>Vandermonde determinant of order 3</h3>
+<div class="kva-math-display" data-math="\begin{vmatrix}1&a&a^2\\1&b&b^2\\1&c&c^2\end{vmatrix}=(a-b)(b-c)(c-a)"></div>
+
+<h3>Another common cyclic determinant</h3>
+<div class="kva-math-display" data-math="\begin{vmatrix}a&b&c\\b&c&a\\c&a&b\end{vmatrix}=-a^3-b^3-c^3+3abc"></div>
+
+<h3>Useful factorisation</h3>
+<div class="kva-math-display" data-math="a^3+b^3+c^3-3abc=(a+b+c)(a^2+b^2+c^2-ab-bc-ca)"></div>
+
+<h3>Equivalent form</h3>
+<div class="kva-math-display" data-math="a^3+b^3+c^3-3abc=(a+b+c)\big((a-b)^2+(b-c)^2+(c-a)^2\big)/2"></div>
+</section>
+
+<section class="kva-section">
+<h2>21. Determinants and Geometry</h2>
+<p>
+Determinants are not only algebraic objects. Their value can describe geometric scaling. In two dimensions,
+the absolute value of a determinant of a transformation matrix gives the area-scaling factor. In three
+dimensions, the absolute value gives a volume-scaling factor.
+</p>
+<div class="kva-math-display" data-math="\text{Area scale}=|\det A|"></div>
+<div class="kva-math-display" data-math="\text{Volume scale}=|\det A|"></div>
+<p>
+For a general n-dimensional linear transformation, the absolute value of the determinant gives the
+corresponding n-dimensional volume scaling factor.
+</p>
+</section>
+
+<section class="kva-section">
+<h2>22. Complete Determinant Formula Sheet — Quick Revision</h2>
+<div class="kva-table-wrap">
+<table>
+<thead><tr><th>Concept</th><th>Formula / Result</th></tr></thead>
+<tbody>
+<tr><td>Order 1</td><td><span class="kva-inline-math" data-math="|[a]|=a"></span></td></tr>
+<tr><td>Order 2</td><td><span class="kva-inline-math" data-math="\begin{vmatrix}a&b\\c&d\end{vmatrix}=ad-bc"></span></td></tr>
+<tr><td>Order 3</td><td><span class="kva-inline-math" data-math="a(ei-fh)-b(di-fg)+c(dh-eg)"></span></td></tr>
+<tr><td>Minor</td><td><span class="kva-inline-math" data-math="M_{ij}"></span> = delete row i and column j and take the determinant</td></tr>
+<tr><td>Cofactor</td><td><span class="kva-inline-math" data-math="C_{ij}=(-1)^{i+j}M_{ij}"></span></td></tr>
+<tr><td>Row expansion</td><td><span class="kva-inline-math" data-math="|A|=\sum_j a_{ij}C_{ij}"></span></td></tr>
+<tr><td>Column expansion</td><td><span class="kva-inline-math" data-math="|A|=\sum_i a_{ij}C_{ij}"></span></td></tr>
+<tr><td>Transpose</td><td><span class="kva-inline-math" data-math="|A^T|=|A|"></span></td></tr>
+<tr><td>Product</td><td><span class="kva-inline-math" data-math="|AB|=|A||B|"></span></td></tr>
+<tr><td>Power</td><td><span class="kva-inline-math" data-math="|A^n|=|A|^n"></span></td></tr>
+<tr><td>Scalar multiple</td><td><span class="kva-inline-math" data-math="|kA|=k^n|A|"></span></td></tr>
+<tr><td>Inverse determinant</td><td><span class="kva-inline-math" data-math="|A^{-1}|=1/|A|"></span></td></tr>
+<tr><td>Adjoint</td><td><span class="kva-inline-math" data-math="\operatorname{adj}(A)=C^T"></span></td></tr>
+<tr><td>Adjoint identity</td><td><span class="kva-inline-math" data-math="A\operatorname{adj}(A)=|A|I"></span></td></tr>
+<tr><td>Determinant of adjoint</td><td><span class="kva-inline-math" data-math="|\operatorname{adj}(A)|=|A|^{n-1}"></span></td></tr>
+<tr><td>Inverse</td><td><span class="kva-inline-math" data-math="A^{-1}=\frac{1}{|A|}\operatorname{adj}(A)"></span></td></tr>
+<tr><td>Triangle area</td><td><span class="kva-inline-math" data-math="\Delta=\frac12\left|\begin{matrix}x_1&y_1&1\\x_2&y_2&1\\x_3&y_3&1\end{matrix}\right|"></span></td></tr>
+<tr><td>Collinearity</td><td>Triangle determinant = 0</td></tr>
+<tr><td>Line through two points</td><td><span class="kva-inline-math" data-math="\begin{vmatrix}x&y&1\\x_1&y_1&1\\x_2&y_2&1\end{vmatrix}=0"></span></td></tr>
+<tr><td>Singular matrix</td><td><span class="kva-inline-math" data-math="|A|=0"></span></td></tr>
+<tr><td>Non-singular matrix</td><td><span class="kva-inline-math" data-math="|A|\neq0"></span></td></tr>
+<tr><td>Linear system</td><td><span class="kva-inline-math" data-math="AX=B"></span></td></tr>
+<tr><td>Matrix solution</td><td><span class="kva-inline-math" data-math="X=A^{-1}B"></span> when <span class="kva-inline-math" data-math="|A|\neq0"></span></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="kva-section">
+<h2>23. Common Mistakes in Determinants</h2>
+<ul>
+<li>Confusing a determinant with a matrix. A matrix is an array; a determinant is a number associated with a square matrix.</li>
+<li>Forgetting the alternating <strong>+ − +</strong> signs while expanding a 3 × 3 determinant.</li>
+<li>Using the wrong minor by deleting the wrong row or column.</li>
+<li>Forgetting that <span class="kva-inline-math" data-math="C_{ij}=(-1)^{i+j}M_{ij}"></span>.</li>
+<li>Assuming that adding a multiple of a row changes the determinant. It does not, provided it is added to a different row.</li>
+<li>Forgetting that interchanging two rows changes the sign.</li>
+<li>Using <span class="kva-inline-math" data-math="A^{-1}=\frac{1}{|A|}\operatorname{adj}(A)"></span> when <span class="kva-inline-math" data-math="|A|=0"></span>.</li>
+<li>Forgetting the absolute value when using a determinant to calculate geometric area.</li>
+</ul>
+</section>
+
+<section class="kva-section">
+<h2>24. Frequently Asked Questions</h2>
+<h3>Is a determinant a matrix?</h3>
+<p>No. A matrix is an array of entries, whereas its determinant is a single number obtained from a square matrix.</p>
+
+<h3>Can a rectangular matrix have a determinant?</h3>
+<p>In the standard matrix-and-determinant framework, determinants are defined for square matrices.</p>
+
+<h3>What is the most important determinant formula?</h3>
+<p>
+For Class 12, the most frequently used core results include the 2 × 2 and 3 × 3 determinant formulas,
+minor and cofactor formulas, determinant properties, area formula, adjoint identity and inverse formula.
+</p>
+
+<h3>What does determinant zero mean?</h3>
+<p>
+It means the square matrix is singular. Consequently, its inverse does not exist.
+</p>
+
+<h3>Why are determinants useful beyond school mathematics?</h3>
+<p>
+They are part of linear algebra and are used in geometry, systems of equations, engineering, physics,
+computer science, optimisation and many mathematical models.
+</p>
+</section>
+
+<section class="kva-section">
+<h2>25. Final Takeaway</h2>
+<p>
+A determinant turns a square matrix into a single meaningful number. Learning its properties is often more
+important than memorising isolated tricks because the properties allow difficult-looking determinants to
+be simplified quickly.
+</p>
+<div class="kva-lead">
+<strong>Remember the core chain:</strong>
+Matrix → Determinant → Minors → Cofactors → Adjoint → Inverse → Linear equations.
+</div>
+<p>
+For examination preparation, master the determinant properties first, then practise expansion, minors and
+cofactors, followed by area, adjoint, inverse and applications to equations.
+</p>
+</section>
+
+</article>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("[data-math]").forEach(function(el) {
+    if (window.katex) {
+      katex.render(el.getAttribute("data-math"), el, {
+        throwOnError: false,
+        displayMode: el.classList.contains("kva-math-display")
+      });
+    }
+  });
+});
+</script>
+</body>
+</html>
