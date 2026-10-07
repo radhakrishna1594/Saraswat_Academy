@@ -1540,3 +1540,141 @@ body { overflow-x: clip !important; }
   #header .mobile-nav .nav-link{width:100%;min-height:52px;flex:0 0 auto}
   body.menu-open{overflow:hidden}
 }
+
+
+/* ─── DARK MODE SWITCHER ─── */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 44px;
+  padding: 8px 11px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--grey);
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .2s ease, border-color .2s ease, color .2s ease, transform .15s ease;
+}
+.theme-toggle:hover {
+  background: var(--cream);
+  transform: translateY(-1px);
+}
+.theme-toggle-icon {
+  font-size: 15px;
+  line-height: 1;
+}
+.theme-toggle-mobile {
+  display: none;
+}
+
+/* Dark-mode page palette. Component-specific dark rules are intentionally
+   scoped to common shared classes so the existing page structure remains intact. */
+html.dark-mode {
+  color-scheme: dark;
+  --white: #0F172A;
+  --off-white: #0B1220;
+  --cream: #172033;
+  --cream2: #202A3D;
+  --grey: #151E2E;
+  --grey2: #2A3447;
+  --text: #E8EEF8;
+  --text2: #B8C4D6;
+  --text3: #8795AA;
+  --border: #2C394D;
+  --navy: #07111F;
+  --navy2: #10233A;
+  --navy3: #091727;
+  --deep: #E8EEF8;
+  --indigo: #A9B7FF;
+  --indigo2: #8495F2;
+}
+html.dark-mode body {
+  background: var(--off-white);
+  color: var(--text);
+}
+html.dark-mode #header > header,
+html.dark-mode #header .mobile-nav {
+  background: #0F172A !important;
+  border-color: var(--border) !important;
+  color: var(--text);
+}
+html.dark-mode #header .nav-link,
+html.dark-mode #header .nav-link:hover,
+html.dark-mode #header .nav-link.active,
+html.dark-mode #header .hamburger span {
+  color: var(--text);
+}
+html.dark-mode #header .nav-link:hover,
+html.dark-mode #header .mobile-nav .nav-link:hover {
+  background: #172033;
+  color: #FFFFFF;
+  border-color: var(--border);
+}
+html.dark-mode #header .btn-enroll {
+  color: #FFFFFF;
+}
+html.dark-mode .theme-toggle {
+  background: #172033;
+  color: #F8FAFC;
+  border-color: #38465C;
+}
+html.dark-mode .theme-toggle:hover {
+  background: #202A3D;
+}
+html.dark-mode .page-title,
+html.dark-mode .chapter-box,
+html.dark-mode .solution-card,
+html.dark-mode .card,
+html.dark-mode .content-card,
+html.dark-mode .article-card,
+html.dark-mode .resource-card {
+  background: #111B2D;
+  color: var(--text);
+  border-color: var(--border);
+}
+html.dark-mode .page-title h1 {
+  color: #E8EEF8;
+}
+html.dark-mode .page-title p {
+  color: #83A8FF;
+}
+html.dark-mode a:not(.btn-enroll):not(.nav-link) {
+  color: #93B4FF;
+}
+html.dark-mode a:not(.btn-enroll):not(.nav-link):hover {
+  color: #C0D2FF;
+}
+html.dark-mode footer {
+  color: #E8EEF8;
+}
+html.dark-mode img {
+  background: #FFFFFF;
+}
+@media (max-width: 768px) {
+  #header .theme-toggle-mobile {
+    display: inline-flex;
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 44px;
+    height: 44px;
+    margin-left: auto;
+    padding: 8px 10px;
+  }
+  #header .theme-toggle-mobile .theme-toggle-text {
+    display: none;
+  }
+  #header .hamburger {
+    margin-left: 0 !important;
+  }
+}
+@media (min-width: 769px) {
+  #header .theme-toggle-mobile {
+    display: none !important;
+  }
+}
