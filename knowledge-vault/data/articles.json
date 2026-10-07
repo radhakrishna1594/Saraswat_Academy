@@ -168,5 +168,15 @@
     "description": "Understand binomial distribution through Bernoulli trials, its probability formula, mean, variance, solved examples and real-life applications in education, business, quality control, medicine and technology.",
     "url": "/knowledge-vault/articles/what-is-binomial-distribution-formula-uses-and-examples.html",
     "keywords": "binomial distribution binomial probability formula Bernoulli trials n p q mean variance standard deviation real life examples applications statistics probability quality control business education medicine technology"
+  },
+  {
+    "title": "What Is the Human Heart? Anatomy, Blood Flow and How It Works",
+    "category": "Biology",
+    "subcategory": "Human Biology",
+    "level": "Classes 6–10",
+    "icon": "❤️",
+    "description": "Understand the human heart through clear labelled diagrams, its four chambers and valves, the complete blood-flow pathway, heartbeat and the roles of the right and left sides.",
+    "url": "/knowledge-vault/articles/what-is-human-heart.html",
+    "keywords": "human heart heart anatomy four chambers atrium ventricle valves tricuspid mitral pulmonary aortic blood flow circulation oxygen rich oxygen poor biology heart diagram"
   }
 ]
