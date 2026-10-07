@@ -148,5 +148,15 @@
     "description": "Follow the simple journey of a message or webpage from your device to another computer on the internet.",
     "url": "/knowledge-vault/articles/how-does-the-internet-work.html",
     "keywords": "internet networking computer router server data packet technology web"
+  },
+  {
+    "title": "What Is Poisson Distribution? Real-Life Uses and Examples",
+    "category": "Mathematics",
+    "subcategory": "Statistics and Probability",
+    "level": "Classes 11–12 • Statistics",
+    "icon": "📊",
+    "description": "Understand Poisson distribution through its formula, assumptions, mean and variance, solved examples, and real-life uses in customer arrivals, calls, website traffic, defects, accidents and more.",
+    "url": "/knowledge-vault/articles/what-is-poisson-distribution-and-its-real-life-uses.html",
+    "keywords": "Poisson distribution Poisson probability formula lambda real life examples applications statistics probability mean variance standard deviation calls customers website traffic defects accidents insurance claims"
   }
 ]
