@@ -60,6 +60,16 @@
     "keywords": "integration calculus integral area volume distance mathematics"
   },
   {
+    "title": "What Is Differentiation?",
+    "category": "Mathematics",
+    "subcategory": "Calculus",
+    "level": "Classes 11–12",
+    "icon": "📈",
+    "description": "Understand differentiation and derivatives through simple explanations, graphs, formulas, solved examples, rules and real-life applications.",
+    "url": "/knowledge-vault/articles/what-is-differentiation.html",
+    "keywords": "differentiation derivative calculus derivative rules power rule chain rule product rule slope rate of change mathematics"
+  },
+  {
     "title": "Theoretical and Experimental Probability",
     "category": "Mathematics",
     "subcategory": "Probability",
