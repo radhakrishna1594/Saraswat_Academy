@@ -526,3 +526,45 @@ picture img {
         max-width: 100%;
     }
 }
+
+
+/* ---------------------------------------------------------
+   Knowledge Vault diagrams
+--------------------------------------------------------- */
+
+.kva-diagram {
+  margin: 26px 0 34px;
+  padding: 16px;
+  border: 1px solid #dbe4ee;
+  border-radius: 16px;
+  background: #ffffff;
+  overflow-x: auto;
+  text-align: center;
+}
+
+.kva-diagram svg {
+  display: block;
+  width: 100%;
+  min-width: 680px;
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.kva-diagram figcaption {
+  max-width: 820px;
+  margin: 12px auto 2px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .kva-diagram {
+    padding: 10px;
+  }
+
+  .kva-diagram svg {
+    min-width: 680px;
+  }
+}
