@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Is Differentiation? | Meaning, Rules, Examples | Mathematics</title>
+<meta name="description" content="Learn what differentiation is in mathematics, with intuitive explanations, derivative notation, basic rules, solved examples, graphs and real-life applications of derivatives.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Saraswat Academy">
+<meta name="theme-color" content="#17365d">
+<link rel="canonical" href="https://www.saraswatacademy.in/knowledge-vault/articles/what-is-differentiation.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Saraswat Academy">
+<meta property="og:title" content="What Is Differentiation? | Meaning, Rules, Examples">
+<meta property="og:description" content="Understand differentiation and derivatives through simple explanations, graphs, formulas, solved examples and real-life applications.">
+<meta property="og:url" content="https://www.saraswatacademy.in/knowledge-vault/articles/what-is-differentiation.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="What Is Differentiation?">
+<meta name="twitter:description" content="Learn derivatives, differentiation rules, examples and applications in simple language.">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/header.css">
+<link rel="stylesheet" href="/knowledge-vault/articles/articles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+<script src="/loader.js"></script>
+<script src="/config.js"></script>
+<script src="/header.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org","@type":"Article",
+ "@id":"https://www.saraswatacademy.in/knowledge-vault/articles/what-is-differentiation.html#article",
+ "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.saraswatacademy.in/knowledge-vault/articles/what-is-differentiation.html"},
+ "headline":"What Is Differentiation?",
+ "description":"Learn differentiation, derivatives, basic rules, solved examples and applications.",
+ "author":{"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},
+ "publisher":{"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},
+ "isPartOf":{"@type":"CollectionPage","name":"Knowledge Vault","url":"https://www.saraswatacademy.in/knowledge-vault/index.html"},
+ "about":[{"@type":"Thing","name":"Differentiation"},{"@type":"Thing","name":"Derivative"},{"@type":"Thing","name":"Differential calculus"}],
+ "learningResourceType":"Educational article","inLanguage":"en-IN"
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+ {"@type":"ListItem","position":1,"name":"Home","item":"https://www.saraswatacademy.in/index.html"},
+ {"@type":"ListItem","position":2,"name":"Knowledge Vault","item":"https://www.saraswatacademy.in/knowledge-vault/index.html"},
+ {"@type":"ListItem","position":3,"name":"What Is Differentiation?","item":"https://www.saraswatacademy.in/knowledge-vault/articles/what-is-differentiation.html"}
+ ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+ {"@type":"Question","name":"What is differentiation?","acceptedAnswer":{"@type":"Answer","text":"Differentiation is a mathematical process used to find the derivative of a function, which describes its instantaneous rate of change or the slope of its graph at a point."}},
+ {"@type":"Question","name":"What is a derivative?","acceptedAnswer":{"@type":"Answer","text":"A derivative measures the instantaneous rate at which one quantity changes with respect to another."}},
+ {"@type":"Question","name":"What is the derivative of x^n?","acceptedAnswer":{"@type":"Answer","text":"For a suitable real exponent n, the power rule gives d/dx(x^n) = n x^(n-1)."}},
+ {"@type":"Question","name":"Where is differentiation used?","acceptedAnswer":{"@type":"Answer","text":"Differentiation is used to find rates of change, velocity and acceleration, slopes, maxima and minima, and to model changing quantities in science, engineering, economics and other fields."}},
+ {"@type":"Question","name":"What is the difference between differentiation and integration?","acceptedAnswer":{"@type":"Answer","text":"Differentiation focuses on rates of change, while integration focuses on accumulation and finding antiderivatives. They are closely connected by the Fundamental Theorem of Calculus."}}
+ ]
+}
+</script>
+</head>
+
+<body>
+<div id="header"></div>
+<div class="breadcrumb">
+<a href="/index.html">Home</a> →
+<a href="/knowledge-vault/index.html">Knowledge Vault</a> →
+<span class="current">What Is Differentiation?</span>
+</div>
+
+<main class="kva-page">
+<article class="kva-article">
+
+<header class="kva-hero">
+<div class="kva-hero-inner">
+<span class="kva-eyebrow">Mathematics • Calculus</span>
+<h1>What Is Differentiation?</h1>
+<p class="kva-hero-description">
+Differentiation is the mathematics of <strong>change</strong>. It helps us find how quickly
+one quantity changes when another quantity changes, and gives the slope of a curve at a particular point.
+</p>
+</div>
+</header>
+
+<section class="kva-section">
+<div class="kva-lead"><strong>In simple words:</strong> Differentiation tells us how fast something is changing at a particular instant.</div>
+<h2>1. What Is Differentiation?</h2>
+<p>
+Differentiation is a fundamental process in calculus used to find the <strong>derivative</strong> of a function.
+The derivative tells us the <strong>instantaneous rate of change</strong> of one quantity with respect to another.
+</p>
+<p>
+For example, if the position of a car is known as a function of time, differentiation can tell us its
+instantaneous velocity. If velocity is differentiated with respect to time, we obtain acceleration.
+</p>
+<div class="kva-important">
+<strong>Think of a speedometer:</strong> The distance travelled by a car changes continuously.
+The speedometer gives the car's speed at that particular moment. Differentiation is the mathematical
+idea used to describe such an instantaneous rate of change.
+</div>
+</section>
+
+<section class="kva-section">
+<h2>2. What Is a Derivative?</h2>
+<p>
+The <strong>derivative</strong> of a function measures its rate of change. If
+<em>y</em> depends on <em>x</em>, we write its derivative as:
+</p>
+<div class="kva-math-display" data-math="\frac{dy}{dx}"></div>
+<p>
+The notation <span class="kva-inline-math" data-math="\frac{dy}{dx}"></span> is read as
+“dee y by dee x”. It describes how much <em>y</em> changes for a very small change in <em>x</em>.
+</p>
+<p>Other common notations include:</p>
+<div class="kva-math-display" data-math="f'(x),\quad y',\quad \frac{d}{dx}[f(x)]"></div>
+</section>
+
+<section class="kva-section">
+<h2>3. Differentiation and the Slope of a Curve</h2>
+<p>
+For a straight line, slope is constant. For a curve, the slope can be different at different points.
+Differentiation gives the slope of the <strong>tangent</strong> to the curve at a particular point.
+</p>
+
+<figure class="kva-diagram" role="img" aria-label="Curve with tangent showing instantaneous slope">
+<svg viewBox="0 0 760 410" width="760" height="410" xmlns="http://www.w3.org/2000/svg">
+<title>Tangent to a curve and instantaneous slope</title>
+<rect x="1" y="1" width="758" height="408" rx="18" fill="#f8fafc" stroke="#dbe4ee"/>
+<line x1="80" y1="345" x2="700" y2="345" stroke="#17365d" stroke-width="3"/>
+<line x1="80" y1="345" x2="80" y2="55" stroke="#17365d" stroke-width="3"/>
+<path d="M105 320 C180 300 220 260 285 245 C365 225 395 145 475 128 C555 111 610 90 680 65" fill="none" stroke="#2563eb" stroke-width="5"/>
+<line x1="240" y1="300" x2="590" y2="110" stroke="#d97706" stroke-width="5"/>
+<circle cx="400" cy="207" r="8" fill="#ffffff" stroke="#17365d" stroke-width="4"/>
+<text x="417" y="198" font-family="Arial,sans-serif" font-size="18" fill="#17365d">P(x, y)</text>
+<text x="545" y="92" font-family="Arial,sans-serif" font-size="17" fill="#92400e">tangent</text>
+<text x="380" y="385" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#17365d">x</text>
+<text x="58" y="70" font-family="Arial,sans-serif" font-size="18" fill="#17365d">y</text>
+</svg>
+<figcaption>The derivative at a point gives the slope of the tangent to the curve at that point.</figcaption>
+</figure>
+
+<div class="kva-math-display" data-math="\text{Derivative} = \text{slope of tangent}"></div>
+</section>
+
+<section class="kva-section">
+<h2>4. The Basic Idea Behind Differentiation</h2>
+<p>
+Suppose a function changes from one point to another. The average rate of change over an interval is:
+</p>
+<div class="kva-math-display" data-math="\frac{f(x+h)-f(x)}{h}"></div>
+<p>
+To find the instantaneous rate of change at a point, we make the change <em>h</em> smaller and smaller.
+In calculus, the derivative is defined using a limit:
+</p>
+<div class="kva-math-display" data-math="f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}"></div>
+<div class="kva-example">
+<strong>Important:</strong> The limit is what allows us to move from an average rate of change over
+a finite interval to an instantaneous rate of change at a point.
+</div>
+</section>
+
+<section class="kva-section">
+<h2>5. The Power Rule</h2>
+<p>
+One of the most useful rules for differentiating powers of <em>x</em> is the <strong>power rule</strong>.
+For a suitable real number <em>n</em>:
+</p>
+<div class="kva-math-display" data-math="\frac{d}{dx}(x^n)=nx^{n-1}"></div>
+<p>
+In simple language: <strong>bring the power down as a multiplier, then reduce the power by 1.</strong>
+</p>
+
+<div class="kva-table-wrap">
+<table>
+<thead><tr><th>Function</th><th>Derivative</th></tr></thead>
+<tbody>
+<tr><td>x²</td><td>2x</td></tr>
+<tr><td>x³</td><td>3x²</td></tr>
+<tr><td>x⁵</td><td>5x⁴</td></tr>
+<tr><td>√x = x<sup>1/2</sup></td><td>1/(2√x)</td></tr>
+<tr><td>1/x = x<sup>−1</sup></td><td>−1/x²</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="kva-section">
+<h2>6. Important Rules of Differentiation</h2>
+
+<h3>Constant Rule</h3>
+<div class="kva-math-display" data-math="\frac{d}{dx}(c)=0"></div>
+<p>A constant does not change as <em>x</em> changes, so its derivative is zero.</p>
+
+<h3>Constant Multiple Rule</h3>
+<div class="kva-math-display" data-math="\frac{d}{dx}[cf(x)]=c\frac{df}{dx}"></div>
+
+<h3>Sum and Difference Rule</h3>
+<div class="kva-math-display" data-math="\frac{d}{dx}[f(x)\pm g(x)]=f'(x)\pm g'(x)"></div>
+
+<h3>Product Rule</h3>
+<div class="kva-math-display" data-math="\frac{d}{dx}[u v]=u\frac{dv}{dx}+v\frac{du}{dx}"></div>
+
+<h3>Quotient Rule</h3>
+<div class="kva-math-display" data-math="\frac{d}{dx}\left[\frac{u}{v}\right]=\frac{v\frac{du}{dx}-u\frac{dv}{dx}}{v^2}"></div>
+
+<h3>Chain Rule</h3>
+<div class="kva-math-display" data-math="\frac{d}{dx}f(g(x))=f'(g(x))g'(x)"></div>
+<p>
+The chain rule is used when one function is inside another function, such as
+<span class="kva-inline-math" data-math="(3x+1)^5"></span>.
+</p>
+</section>
+
+<section class="kva-section">
+<h2>7. Derivatives of Common Functions</h2>
+<div class="kva-table-wrap">
+<table>
+<thead><tr><th>Function</th><th>Derivative</th></tr></thead>
+<tbody>
+<tr><td>c</td><td>0</td></tr>
+<tr><td>x<sup>n</sup></td><td>nx<sup>n−1</sup></td></tr>
+<tr><td>e<sup>x</sup></td><td>e<sup>x</sup></td></tr>
+<tr><td>ln x</td><td>1/x</td></tr>
+<tr><td>sin x</td><td>cos x</td></tr>
+<tr><td>cos x</td><td>−sin x</td></tr>
+<tr><td>tan x</td><td>sec² x</td></tr>
+</tbody>
+</table>
+</div>
+<p>
+These formulas form an important foundation for differential calculus. The usual angle convention
+for trigonometric derivatives is in radians.
+</p>
+</section>
+
+<section class="kva-section">
+<h2>8. Solved Examples</h2>
+
+<div class="kva-problem">
+<h3>Example 1: Differentiate x³</h3>
+<p>Find the derivative of <span class="kva-inline-math" data-math="y=x^3"></span>.</p>
+<div class="kva-working">
+<div class="kva-math-display kva-math-left" data-math="\frac{dy}{dx}=3x^{3-1}"></div>
+<div class="kva-math-display kva-math-left" data-math="\boxed{\frac{dy}{dx}=3x^2}"></div>
+</div>
+<div class="kva-answer"><strong>Answer:</strong> The derivative is 3x².</div>
+</div>
+
+<div class="kva-problem">
+<h3>Example 2: Differentiate 5x² + 3x − 7</h3>
+<p>Differentiate the polynomial term by term.</p>
+<div class="kva-working">
+<div class="kva-math-display kva-math-left" data-math="\frac{d}{dx}(5x^2+3x-7)=10x+3-0"></div>
+<div class="kva-math-display kva-math-left" data-math="\boxed{10x+3}"></div>
+</div>
+<div class="kva-answer"><strong>Answer:</strong> The derivative is 10x + 3.</div>
+</div>
+
+<div class="kva-problem">
+<h3>Example 3: Find the derivative of sin x</h3>
+<div class="kva-working">
+<div class="kva-math-display kva-math-left" data-math="\frac{d}{dx}(\sin x)=\cos x"></div>
+</div>
+<div class="kva-answer"><strong>Answer:</strong> The derivative of sin x is cos x.</div>
+</div>
+
+<div class="kva-problem">
+<h3>Example 4: Use the Chain Rule</h3>
+<p>Differentiate <span class="kva-inline-math" data-math="y=(3x+1)^5"></span>.</p>
+<p>Let <span class="kva-inline-math" data-math="u=3x+1"></span>, so <span class="kva-inline-math" data-math="y=u^5"></span>.</p>
+<div class="kva-working">
+<div class="kva-math-display kva-math-left" data-math="\frac{dy}{du}=5u^4,\qquad \frac{du}{dx}=3"></div>
+<div class="kva-math-display kva-math-left" data-math="\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}=15u^4"></div>
+<div class="kva-math-display kva-math-left" data-math="\boxed{\frac{dy}{dx}=15(3x+1)^4}"></div>
+</div>
+</div>
+
+<div class="kva-problem">
+<h3>Example 5: Derivative as Velocity</h3>
+<p>
+Suppose the position of an object is given by
+<span class="kva-inline-math" data-math="s(t)=t^2+4t"></span> metres.
+Find its velocity at t = 3 seconds.
+</p>
+<div class="kva-working">
+<div class="kva-math-display kva-math-left" data-math="v(t)=\frac{ds}{dt}=2t+4"></div>
+<div class="kva-math-display kva-math-left" data-math="v(3)=2(3)+4=10\,\mathrm{m/s}"></div>
+</div>
+<div class="kva-answer"><strong>Answer:</strong> The instantaneous velocity at 3 seconds is 10 m/s.</div>
+</div>
+</section>
+
+<section class="kva-section">
+<h2>9. Differentiation in Real Life</h2>
+<div class="kva-table-wrap">
+<table>
+<thead><tr><th>Field</th><th>Use of differentiation</th></tr></thead>
+<tbody>
+<tr><td>Physics</td><td>Velocity from position, acceleration from velocity, and rates of physical change.</td></tr>
+<tr><td>Engineering</td><td>Optimisation, system modelling, rates and design calculations.</td></tr>
+<tr><td>Economics</td><td>Marginal cost, marginal revenue and optimisation of economic models.</td></tr>
+<tr><td>Biology</td><td>Rates of population growth, concentration change and biological processes.</td></tr>
+<tr><td>Computer science</td><td>Optimisation and mathematical methods used in machine learning and numerical algorithms.</td></tr>
+<tr><td>Geometry</td><td>Slopes, tangents, turning points and optimisation of dimensions.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="kva-example">
+<strong>Everyday idea:</strong> If you know how the position of a cyclist changes with time,
+differentiation gives the cyclist's instantaneous velocity. If you differentiate velocity again,
+you get acceleration.
+</div>
+</section>
+
+<section class="kva-section">
+<h2>10. Differentiation and Maxima/Minima</h2>
+<p>
+Differentiation is also used to find points where a function may reach a maximum or minimum.
+At a smooth stationary point, the first derivative is zero:
+</p>
+<div class="kva-math-display" data-math="f'(x)=0"></div>
+<p>
+This condition helps identify critical points. Additional tests, such as the second derivative test,
+can then help determine whether a critical point is a local maximum, local minimum or neither.
+</p>
+<div class="kva-important">
+<strong>Exam idea:</strong> “Derivative = 0” is a condition for a stationary point, but by itself it
+does not prove that the point is a maximum or minimum.
+</div>
+</section>
+
+<section class="kva-section">
+<h2>11. Differentiation and Integration</h2>
+<p>
+Differentiation and integration are closely related parts of calculus. Differentiation measures
+change, while integration accumulates change and finds antiderivatives.
+</p>
+<div class="kva-math-display" data-math="\frac{d}{dx}\left[\int f(x)\,dx\right]=f(x)"></div>
+<p>
+This relationship is formalised by the Fundamental Theorem of Calculus, under its appropriate conditions.
+</p>
+</section>
+
+<section class="kva-section">
+<h2>12. Common Mistakes Students Make</h2>
+<ul class="kva-checklist">
+<li>Forgetting that the derivative of a constant is zero.</li>
+<li>Using the power rule incorrectly by forgetting to reduce the exponent by 1.</li>
+<li>Ignoring brackets when applying the chain rule.</li>
+<li>Confusing the derivative of sin x with the derivative of cos x.</li>
+<li>Using degrees instead of radians when applying standard trigonometric derivative formulas in calculus.</li>
+<li>Assuming f'(x) = 0 automatically means a maximum or minimum.</li>
+<li>Forgetting to write the variable with respect to which differentiation is performed.</li>
+</ul>
+</section>
+
+<section class="kva-section">
+<h2>13. Quick Revision</h2>
+<div class="kva-revision">
+<p><strong>Differentiation:</strong> The process of finding a derivative.</p>
+<p><strong>Derivative:</strong> Instantaneous rate of change or slope of the tangent.</p>
+<p><strong>Definition:</strong> <span class="kva-inline-math" data-math="f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}"></span></p>
+<p><strong>Power rule:</strong> <span class="kva-inline-math" data-math="\frac{d}{dx}(x^n)=nx^{n-1}"></span></p>
+<p><strong>Constant:</strong> <span class="kva-inline-math" data-math="\frac{d}{dx}(c)=0"></span></p>
+<p><strong>Velocity:</strong> Derivative of position with respect to time.</p>
+<p><strong>Acceleration:</strong> Derivative of velocity with respect to time.</p>
+</div>
+</section>
+
+<section class="kva-section kva-faq">
+<h2>14. Frequently Asked Questions</h2>
+<details><summary>What is differentiation?</summary><p>Differentiation is a mathematical process used to find the derivative of a function, which describes its instantaneous rate of change or the slope of its graph at a point.</p></details>
+<details><summary>What is a derivative?</summary><p>A derivative measures the instantaneous rate at which one quantity changes with respect to another.</p></details>
+<details><summary>What is the derivative of xⁿ?</summary><p>For a suitable real exponent n, the power rule gives d/dx(xⁿ) = nxⁿ⁻¹.</p></details>
+<details><summary>Where is differentiation used?</summary><p>Differentiation is used to find rates of change, velocity and acceleration, slopes, maxima and minima, and to model changing quantities in science, engineering, economics and other fields.</p></details>
+<details><summary>What is the difference between differentiation and integration?</summary><p>Differentiation focuses on rates of change, while integration focuses on accumulation and finding antiderivatives. They are closely connected by the Fundamental Theorem of Calculus.</p></details>
+</section>
+
+<section class="kva-doubt">
+<span class="kva-doubt-label">STILL CONFUSED?</span>
+<h2>Ask Your Doubt</h2>
+<p>If a derivative, differentiation rule or calculus problem is still confusing, send your question to Saraswat Academy.</p>
+<a href="/ask.html">🙋 Ask a Doubt</a>
+</section>
+
+<nav class="kva-bottom-nav" aria-label="Knowledge Vault navigation">
+<a href="/knowledge-vault/index.html">← Back to Knowledge Vault</a>
+<a href="/index.html">Saraswat Academy Home</a>
+</nav>
+
+</article>
+</main>
+<div id="footer"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+ if (!window.katex) return;
+ document.querySelectorAll(".kva-math-display").forEach(function (element) {
+  window.katex.render(element.dataset.math, element, {displayMode:true, throwOnError:false});
+ });
+ document.querySelectorAll(".kva-inline-math").forEach(function (element) {
+  window.katex.render(element.dataset.math, element, {displayMode:false, throwOnError:false});
+ });
+});
+</script>
+</body>
+</html>
