@@ -1540,3 +1540,54 @@ body { overflow-x: clip !important; }
   #header .mobile-nav .nav-link{width:100%;min-height:52px;flex:0 0 auto}
   body.menu-open{overflow:hidden}
 }
+
+
+/* ===== Header logo/navigation spacing fix =====
+   Keep the navigation completely outside the logo area.
+   This prevents "Home" and other menu items from overlapping
+   the SARASWAT ACADEMY brand on narrower desktop/tablet widths.
+*/
+@media (min-width: 769px) {
+  #header .header-inner {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  #header .logo {
+    flex: 0 0 250px;
+    width: 250px;
+    min-width: 250px;
+    max-width: 250px;
+  }
+
+  #header .logo-name {
+    white-space: nowrap;
+  }
+
+  #header .main-nav {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-left: 0;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+
+  #header .main-nav .nav-link,
+  #header .main-nav .btn-enroll {
+    flex: 0 0 auto;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  #header .logo {
+    flex-basis: 210px;
+    width: 210px;
+    min-width: 210px;
+    max-width: 210px;
+  }
+
+  #header .header-inner {
+    gap: 10px;
+  }
+}
