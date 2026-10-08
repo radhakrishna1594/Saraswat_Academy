@@ -1542,23 +1542,22 @@ body { overflow-x: clip !important; }
 }
 
 
-/* ===== Header logo/navigation spacing fix =====
-   Keep the navigation completely outside the logo area.
-   This prevents "Home" and other menu items from overlapping
-   the SARASWAT ACADEMY brand on narrower desktop/tablet widths.
+/* ===== Header logo/navigation layout fix =====
+   The logo owns its own space and navigation always starts with Home.
+   Navigation is allowed to shrink, while individual links never shrink.
 */
 @media (min-width: 769px) {
   #header .header-inner {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 14px;
   }
 
   #header .logo {
-    flex: 0 0 250px;
-    width: 250px;
-    min-width: 250px;
-    max-width: 250px;
+    flex: 0 0 215px;
+    width: 215px;
+    min-width: 215px;
+    max-width: 215px;
   }
 
   #header .logo-name {
@@ -1569,8 +1568,14 @@ body { overflow-x: clip !important; }
     flex: 1 1 auto;
     min-width: 0;
     margin-left: 0;
-    justify-content: flex-end;
-    overflow: hidden;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+
+  #header .main-nav::-webkit-scrollbar {
+    display: none;
   }
 
   #header .main-nav .nav-link,
@@ -1579,15 +1584,42 @@ body { overflow-x: clip !important; }
   }
 }
 
-@media (min-width: 769px) and (max-width: 1100px) {
-  #header .logo {
-    flex-basis: 210px;
-    width: 210px;
-    min-width: 210px;
-    max-width: 210px;
+/* Smaller desktop/tablet: reduce navigation footprint but keep Home visible. */
+@media (min-width: 769px) and (max-width: 1300px) {
+  #header .header-inner {
+    gap: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
-  #header .header-inner {
-    gap: 10px;
+  #header .logo {
+    flex-basis: 200px;
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+  }
+
+  #header .logo-name {
+    font-size: 16px;
+  }
+
+  #header .logo-tagline {
+    font-size: 8px;
+  }
+
+  #header .main-nav {
+    gap: 0;
+  }
+
+  #header .main-nav .nav-link {
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 12px;
+  }
+
+  #header .main-nav .btn-enroll {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
   }
 }
