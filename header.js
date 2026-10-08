@@ -26,7 +26,8 @@
 
     // The shared header is injected dynamically by loader.js, so use
     // event delegation rather than depending on the header already existing.
-    document.addEventListener('click', function (event) {\n      const button = event.target.closest('#hamburger');
+    document.addEventListener('click', function (event) {
+      const button = event.target.closest('#hamburger');
 
       if (button) {
         event.preventDefault();
