@@ -20,73 +20,13 @@
     setMenuState(!menu.classList.contains('open'));
   };
 
-    function getStoredTheme() {
-    try {
-      return localStorage.getItem('saraswat-theme');
-    } catch (error) {
-      return null;
-    }
-  }
-
-  function setTheme(theme) {
-    const dark = theme === 'dark';
-    document.documentElement.classList.toggle('dark-mode', dark);
-
-    const controls = [
-      document.getElementById('themeToggle'),
-      document.getElementById('themeToggleMobile')
-    ].filter(Boolean);
-
-    controls.forEach(function (control) {
-      control.setAttribute('aria-pressed', dark ? 'true' : 'false');
-      control.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
-      control.setAttribute('title', dark ? 'Switch to light mode' : 'Switch to dark mode');
-
-      const icon = control.querySelector('.theme-toggle-icon');
-      const label = control.querySelector('.theme-toggle-text');
-
-      if (icon) icon.textContent = dark ? '☀️' : '🌙';
-      if (label) label.textContent = dark ? 'Light' : 'Dark';
-    });
-  }
-
-  function toggleTheme() {
-    const dark = !document.documentElement.classList.contains('dark-mode');
-    setTheme(dark ? 'dark' : 'light');
-
-    try {
-      localStorage.setItem('saraswat-theme', dark ? 'dark' : 'light');
-    } catch (error) {
-      // Ignore storage failures; the switcher still works for this visit.
-    }
-  }
-
-  function applyStoredTheme() {
-    const stored = getStoredTheme();
-    const preferred = stored || (
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-        ? 'dark'
-        : 'light'
-    );
-    setTheme(preferred);
-  }
-
-  function bindHeaderNavigation() {
+    function bindHeaderNavigation() {
     if (navigationBound) return;
     navigationBound = true;
 
     // The shared header is injected dynamically by loader.js, so use
     // event delegation rather than depending on the header already existing.
     document.addEventListener('click', function (event) {
-      const themeButton = event.target.closest('#themeToggle, #themeToggleMobile');
-      if (themeButton) {
-        event.preventDefault();
-        event.stopPropagation();
-        toggleTheme();
-        return;
-      }
-
       const button = event.target.closest('#hamburger');
 
       if (button) {
@@ -149,14 +89,11 @@
     bindHeaderNavigation();
     setupAreaWiseTutorLinks();
   }
-
-  applyStoredTheme();
   runTutorPageEnhancements();
 
   document.addEventListener('saraswat-header-loaded', runTutorPageEnhancements);
 
   document.addEventListener('DOMContentLoaded', function () {
-    applyStoredTheme();
     runTutorPageEnhancements();
 
     // Give loader.js time to finish injecting shared content.
