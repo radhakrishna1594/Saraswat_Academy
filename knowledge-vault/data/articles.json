@@ -218,5 +218,15 @@
     "description": "Learn Heron’s formula in simple language with a triangle diagram, step-by-step solved examples, real-life uses and practice questions.",
     "url": "/knowledge-vault/articles/herons-formula.html",
     "keywords": "Heron's formula herons formula area triangle semiperimeter solved examples triangular plot area class 9 mathematics geometry"
+  },
+  {
+    "title": "Brahmagupta’s Formula for the Area of a Cyclic Quadrilateral",
+    "category": "Mathematics",
+    "subcategory": "Geometry • Quadrilaterals",
+    "level": "Classes 9–12",
+    "icon": "🔷",
+    "description": "Learn Brahmagupta’s formula for the area of a cyclic quadrilateral with a labelled diagram, easy steps, solved examples and practice questions.",
+    "url": "/knowledge-vault/articles/brahmaguptas-formula-cyclic-quadrilateral.html",
+    "keywords": "Brahmagupta formula Brahmagupta's formula cyclic quadrilateral cyclic 4-gon area quadrilateral semiperimeter solved examples geometry"
   }
 ]
