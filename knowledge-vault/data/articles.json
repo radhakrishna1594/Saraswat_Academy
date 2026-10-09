@@ -198,5 +198,15 @@
     "description": "Understand the gambler’s fallacy with a simple coin-toss example, probability explanation, real-life situations and common mistakes.",
     "url": "/knowledge-vault/articles/what-is-gamblers-fallacy.html",
     "keywords": "gambler's fallacy gamblers fallacy probability coin toss heads tails independent events random outcomes probability mistakes chance"
+  },
+  {
+    "title": "What Are Population and Sampling in Statistics?",
+    "category": "Mathematics",
+    "subcategory": "Statistics • Basic Concepts",
+    "level": "Classes 9–12",
+    "icon": "📊",
+    "description": "Learn population, sample and sampling in statistics using easy definitions, everyday examples, a clear diagram and a comparison table.",
+    "url": "/knowledge-vault/articles/what-is-sampling-and-population-in-statistics.html",
+    "keywords": "population in statistics sample sampling meaning definition examples types of sampling random sampling systematic stratified convenience sample statistics"
   }
 ]
