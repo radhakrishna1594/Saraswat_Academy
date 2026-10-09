@@ -1,656 +1,550 @@
 /* =========================================================
-   KNOWLEDGE VAULT — SHARED ARTICLE CSS
-   Clean, responsive, non-sticky article system.
-   All selectors are scoped to .kva-*.
+   SARASWAT ACADEMY — KNOWLEDGE VAULT ARTICLE STYLES
+   Scoped, consistent, responsive styles for article pages.
 ========================================================= */
+
+.kva-page,
+.kva-page * {
+  box-sizing: border-box;
+}
 
 .kva-page {
   width: 100%;
-  box-sizing: border-box;
-  padding: 18px 16px 72px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 22px 24px 72px;
+  color: #334155;
+  overflow-wrap: break-word;
 }
 
 .kva-article {
   width: 100%;
-  max-width: 1040px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
-/* ---------------------------------------------------------
-   Article hero
---------------------------------------------------------- */
-
-.kva-hero {
-  position: static !important;
-  top: auto !important;
-  bottom: auto !important;
-  width: 100%;
-  margin: 8px 0 54px;
-  padding: 0;
-  background: transparent;
-}
-
-.kva-hero-inner {
-  position: static !important;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 46px 28px 42px;
-  border-top: 1px solid #e5e7eb;
-  border-bottom: 1px solid #e5e7eb;
-  text-align: center;
-}
-
-.kva-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  margin-bottom: 20px;
-  padding: 7px 14px;
-  border: 1px solid #dbe4ee;
-  border-radius: 999px;
-  background: #f8fafc;
-  color: #2563eb;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-}
-
-.kva-eyebrow::before,
-.kva-eyebrow::after {
-  content: "";
-  width: 22px;
-  height: 1px;
-  background: #cbd5e1;
-}
-
-.kva-hero h1 {
-  max-width: 820px;
-  margin: 0 auto 18px;
-  color: #14213d;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.5rem, 6vw, 4.4rem);
-  font-weight: 500;
-  line-height: 1.06;
-  letter-spacing: -.025em;
-}
-
-.kva-hero-description {
-  max-width: 760px;
-  margin: 0 auto;
-  color: #64748b;
-  font-size: 17px;
-  line-height: 1.85;
-}
-
-/* ---------------------------------------------------------
-   Article content
---------------------------------------------------------- */
-
-.kva-section,
-.kva-article > section {
-  margin: 0 0 48px;
-}
-
-.kva-section h2,
-.kva-article > section h2 {
-  margin: 0 0 16px;
-  color: #17365d;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.75rem, 3vw, 2.3rem);
-  line-height: 1.25;
-}
-
-.kva-section h3,
-.kva-article > section h3 {
-  margin: 30px 0 12px;
-  color: #17365d;
-  font-size: 1.3rem;
-  line-height: 1.4;
-}
-
-.kva-section p,
-.kva-section li,
-.kva-article > section p,
-.kva-article > section li {
-  color: #374151;
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-.kva-section ul,
-.kva-section ol,
-.kva-article > section ul,
-.kva-article > section ol {
-  margin: 0 0 18px;
-  padding-left: 25px;
-}
-
-.kva-section li,
-.kva-article > section li {
-  margin: 7px 0;
-}
-
-.kva-section strong,
-.kva-article > section strong {
-  color: #1f2937;
-}
-
-/* ---------------------------------------------------------
-   Information boxes
---------------------------------------------------------- */
-
-.kva-lead,
-.kva-example,
-.kva-important {
-  margin: 0 0 26px;
-  padding: 19px 21px;
-  border: 1px solid #e2e8f0;
-  border-left: 4px solid #2563eb;
-  border-radius: 12px;
-  background: #f8fafc;
-  color: #334155;
-  line-height: 1.75;
-}
-
-.kva-example {
-  border-left-color: #0f766e;
-  background: #f0fdfa;
-}
-
-.kva-important {
-  border-left-color: #d97706;
-  background: #fffbeb;
-}
-
-/* ---------------------------------------------------------
-   KaTeX mathematics
---------------------------------------------------------- */
-
-.kva-math-display {
-  width: 100%;
-  box-sizing: border-box;
-  margin: 24px 0;
-  padding: 20px 18px;
-  border: 1px solid #dbe4ee;
-  border-radius: 14px;
-  background: #f8fafc;
-  color: #17365d;
-  text-align: center;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-.kva-math-display .katex-display {
-  margin: 0;
-}
-
-.kva-math-display .katex {
-  font-size: clamp(1.15rem, 3vw, 1.55rem);
-}
-
-.kva-math-display.kva-math-left {
-  text-align: left;
-}
-
-.kva-working {
-  margin: 18px 0;
-  padding: 18px 20px;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  background: #f8fafc;
-  overflow-x: auto;
-}
-
-.kva-working .kva-math-display {
-  margin: 0;
-  padding: 6px 0;
-  border: 0;
-  background: transparent;
-}
-
-.kva-working .katex-display {
-  text-align: left;
-}
-
-.kva-inline-math {
-  white-space: nowrap;
-}
-
-/* ---------------------------------------------------------
-   Tables
---------------------------------------------------------- */
-
-.kva-table-wrap {
-  width: 100%;
-  margin: 22px 0;
-  overflow-x: auto;
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-  background: #ffffff;
-  -webkit-overflow-scrolling: touch;
-}
-
-.kva-table-wrap table {
-  width: 100%;
-  min-width: 620px;
-  border-collapse: collapse;
-}
-
-.kva-table-wrap th,
-.kva-table-wrap td {
-  padding: 14px 15px;
-  border-bottom: 1px solid #e5e7eb;
-  text-align: left;
-  vertical-align: top;
-  color: #374151;
-  font-size: 15px;
-  line-height: 1.65;
-}
-
-.kva-table-wrap th {
-  background: #f1f5f9;
-  color: #17365d;
-  font-weight: 800;
-}
-
-.kva-table-wrap tr:last-child td {
-  border-bottom: 0;
-}
-
-/* ---------------------------------------------------------
-   Numerical examples
---------------------------------------------------------- */
-
-.kva-problem {
-  margin: 28px 0;
-  padding: 26px;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  background: #ffffff;
-  box-shadow: 0 7px 22px rgba(15, 23, 42, .045);
-}
-
-.kva-problem h3 {
-  margin-top: 0;
-}
-
-.kva-answer {
-  margin-top: 20px;
-  padding: 15px 17px;
-  border-radius: 10px;
-  background: #eff6ff;
-  color: #17365d;
-}
-
-/* ---------------------------------------------------------
-   Revision and checklist
---------------------------------------------------------- */
-
-.kva-checklist {
-  margin: 0;
-  padding: 22px 28px;
-  border-radius: 14px;
-  background: #f8fafc;
-}
-
-.kva-revision {
-  padding: 22px 24px;
-  border: 1px solid #dbe4ee;
-  border-radius: 14px;
-  background: #f8fafc;
-}
-
-.kva-revision p {
-  margin: 9px 0;
-}
-
-/* ---------------------------------------------------------
-   FAQ
---------------------------------------------------------- */
-
-.kva-faq details {
-  margin: 12px 0;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  background: #ffffff;
-  overflow: hidden;
-}
-
-.kva-faq summary {
-  padding: 17px 18px;
-  cursor: pointer;
-  color: #17365d;
-  font-weight: 800;
-  line-height: 1.5;
-}
-
-.kva-faq details p {
-  margin: 0;
-  padding: 0 18px 18px;
-}
-
-/* ---------------------------------------------------------
-   Ask a doubt
---------------------------------------------------------- */
-
-.kva-doubt {
-  margin: 58px 0 34px;
-  padding: 40px 28px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #172554, #1e3a8a);
-  color: #ffffff;
-  text-align: center;
-}
-
-.kva-doubt-label {
-  display: inline-block;
-  color: #e8b254;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: .16em;
-}
-
-.kva-doubt h2 {
-  margin: 10px 0;
-  color: #ffffff;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.9rem, 4vw, 2.7rem);
-  line-height: 1.2;
-}
-
-.kva-doubt p {
-  max-width: 700px;
-  margin: 0 auto 22px;
-  color: #dbeafe;
-  font-size: 16px;
-  line-height: 1.75;
-}
-
-.kva-doubt a {
-  display: inline-block;
-  padding: 12px 22px;
-  border-radius: 10px;
-  background: #ffffff;
-  color: #17365d;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-/* ---------------------------------------------------------
-   Navigation and accessibility
---------------------------------------------------------- */
-
-.kva-bottom-nav {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  padding-top: 10px;
-}
-
-.kva-bottom-nav a {
-  color: #0d6efd;
-  font-size: 15px;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-.kva-bottom-nav a:hover,
-.kva-doubt a:hover {
-  text-decoration: underline;
-}
-
-.kva-section a,
-.kva-article > section a {
-  color: #0d6efd;
-}
-
-.kva-section a:focus-visible,
-.kva-article > section a:focus-visible,
-.kva-bottom-nav a:focus-visible,
-.kva-doubt a:focus-visible,
-.kva-faq summary:focus-visible {
-  outline: 3px solid rgba(37, 99, 235, .3);
-  outline-offset: 3px;
-}
-
-/* ---------------------------------------------------------
-   Responsive
---------------------------------------------------------- */
-
-@media (max-width: 700px) {
-  .kva-page {
-    padding: 12px 10px 52px;
-  }
-
-  .kva-hero {
-    margin-bottom: 42px;
-  }
-
-  .kva-hero-inner {
-    padding: 38px 15px 34px;
-  }
-
-  .kva-hero h1 {
-    font-size: clamp(2.25rem, 11vw, 3.2rem);
-    line-height: 1.08;
-  }
-
-  .kva-hero-description {
-    font-size: 15.5px;
-    line-height: 1.75;
-  }
-
-  .kva-section,
-  .kva-article > section {
-    margin-bottom: 38px;
-  }
-
-  .kva-section p,
-  .kva-section li,
-  .kva-article > section p,
-  .kva-article > section li,
-  .kva-doubt p {
-    font-size: 15px;
-  }
-
-  .kva-problem {
-    padding: 20px 17px;
-  }
-
-  .kva-table-wrap table {
-    min-width: 560px;
-  }
-
-  .kva-table-wrap th,
-  .kva-table-wrap td {
-    padding: 12px;
-    font-size: 14px;
-  }
-
-  .kva-checklist {
-    padding: 18px 21px;
-  }
-
-  .kva-doubt {
-    padding: 31px 20px;
-  }
-
-  .kva-bottom-nav {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 480px) {
-  .kva-page {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-
-  .kva-eyebrow {
-    font-size: 9.5px;
-    letter-spacing: .12em;
-  }
-
-  .kva-math-display {
-    padding: 16px 12px;
-  }
-
-  .kva-working {
-    padding: 13px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .kva-doubt a {
-    transition: none;
-  }
-}
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   RESPONSIVE IMAGE SAFETY
-   Prevents images from overflowing or distorting layouts,
-   especially on mobile screens.
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-img {
-    max-width: 100%;
-    height: auto;
-    box-sizing: border-box;
-}
-
-/* Images with HTML width/height attributes must preserve their aspect ratio. */
-img[width][height] {
-    height: auto;
-}
-
-/* Never allow an image to create horizontal page overflow. */
-figure,
-picture {
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-picture img {
-    max-width: 100%;
-    height: auto;
-}
-
-@media (max-width: 768px) {
-    img {
-        max-width: 100%;
-    }
-}
-
-
-/* ---------------------------------------------------------
-   Knowledge Vault diagrams
---------------------------------------------------------- */
-
-.kva-diagram {
-  margin: 26px 0 34px;
-  padding: 16px;
-  border: 1px solid #dbe4ee;
-  border-radius: 16px;
-  background: #ffffff;
-  overflow-x: auto;
-  text-align: center;
-}
-
-.kva-diagram svg {
-  display: block;
-  width: 100%;
-  min-width: 680px;
-  max-width: 900px;
-  height: auto;
-  margin: 0 auto;
-}
-
-.kva-diagram figcaption {
-  max-width: 820px;
-  margin: 12px auto 2px;
-  color: #64748b;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-@media (max-width: 700px) {
-  .kva-diagram {
-    padding: 10px;
-  }
-
-  .kva-diagram svg {
-    min-width: 680px;
-  }
-}
-
-
-/* ---------------------------------------------------------
-   Consistent styling for articles using plain section tags
-   (older and newly added articles may omit .kva-section)
---------------------------------------------------------- */
-.kva-article > section {
-  margin: 0 0 48px;
-}
-.kva-article > section h2 {
-  margin: 0 0 16px;
-  color: #17365d;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.75rem, 3vw, 2.3rem);
-  line-height: 1.25;
-}
-.kva-article > section h3 {
-  margin: 30px 0 12px;
-  color: #17365d;
-  font-size: 1.3rem;
-  line-height: 1.4;
-}
-.kva-article > section p,
-.kva-article > section li {
-  color: #374151;
-  font-size: 16px;
-  line-height: 1.8;
-}
-.kva-article > section ul,
-.kva-article > section ol {
-  margin: 0 0 18px;
-  padding-left: 25px;
-}
-.kva-article > section li { margin: 7px 0; }
-.kva-article > section strong { color: #1f2937; }
-.kva-article > section a { color: #0d6efd; }
-.kva-article > section figure {
-  max-width: 100%;
-  margin: 24px auto 30px;
-}
-.kva-article > section figure svg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.kva-article > section figcaption {
-  margin: 12px 0 0;
-  color: #64748b;
-  font-size: 14px;
-  line-height: 1.6;
-  text-align: center;
-}
+/* Breadcrumbs */
 .kva-breadcrumb {
-  max-width: 1040px;
-  margin: 8px auto 18px;
-  padding: 8px 4px;
+  max-width: 960px;
+  margin: 0 auto 20px;
+  padding: 8px 0;
   color: #64748b;
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 13px;
+  line-height: 1.7;
 }
 .kva-breadcrumb a {
   color: #2563eb;
   text-decoration: none;
 }
 .kva-breadcrumb a:hover { text-decoration: underline; }
-@media (max-width: 700px) {
-  .kva-article > section { margin-bottom: 38px; }
+.kva-breadcrumb a:focus-visible,
+.kva-article a:focus-visible,
+.kva-faq summary:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, .35);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Article hero — supports both simple and inner-wrapper layouts */
+.kva-hero {
+  position: static !important;
+  inset: auto !important;
+  width: 100%;
+  margin: 8px 0 44px;
+  padding: 0;
+  background: transparent;
+  text-align: center;
+}
+.kva-hero-inner {
+  position: static !important;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 38px 24px 34px;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: center;
+}
+.kva-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 100%;
+  margin: 0 0 16px;
+  padding: 7px 13px;
+  border: 1px solid #dbe4ee;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .13em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.kva-eyebrow::before,
+.kva-eyebrow::after {
+  content: "";
+  flex: 0 0 18px;
+  height: 1px;
+  background: #cbd5e1;
+}
+.kva-hero h1 {
+  max-width: 840px;
+  margin: 0 auto 16px;
+  color: #14213d;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.15rem, 5.4vw, 3.8rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
+.kva-hero-description,
+.kva-hero > p:not(.kva-eyebrow):not(.kva-lead),
+.kva-hero-inner > p:not(.kva-eyebrow):not(.kva-lead) {
+  max-width: 760px;
+  margin: 0 auto 12px;
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.8;
+}
+/* Lead text in the hero is plain introductory copy, not a coloured callout. */
+.kva-hero .kva-lead,
+.kva-hero-inner .kva-lead {
+  max-width: 760px;
+  margin: 0 auto 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #475569;
+  font-size: clamp(1.02rem, 2vw, 1.15rem);
+  font-weight: 500;
+  line-height: 1.8;
+  box-shadow: none;
+}
+
+/* Main article sections */
+.kva-section,
+.kva-article > section {
+  margin: 0 0 42px;
+  padding: 0;
+  color: #334155;
+}
+.kva-section h2,
+.kva-article > section h2 {
+  margin: 0 0 15px;
+  color: #17365d;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 3.3vw, 2.1rem);
+  font-weight: 600;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+.kva-section h3,
+.kva-article > section h3 {
+  margin: 26px 0 10px;
+  color: #17365d;
+  font-size: clamp(1.08rem, 2vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.45;
+}
+.kva-section h4,
+.kva-article > section h4 {
+  margin: 22px 0 8px;
+  color: #17365d;
+  font-size: 1.02rem;
+  line-height: 1.45;
+}
+.kva-section p,
+.kva-section li,
+.kva-article > section p,
+.kva-article > section li {
+  color: #374151;
+  font-size: 16px;
+  line-height: 1.85;
+}
+.kva-section p,
+.kva-article > section p { margin: 0 0 16px; }
+.kva-section ul,
+.kva-section ol,
+.kva-article > section ul,
+.kva-article > section ol {
+  margin: 0 0 20px;
+  padding-left: 25px;
+}
+.kva-section li,
+.kva-article > section li { margin: 7px 0; }
+.kva-section strong,
+.kva-article > section strong { color: #1f2937; }
+.kva-section a,
+.kva-article > section a { color: #1d5fbf; text-underline-offset: 3px; }
+
+/* Formula and note blocks */
+.kva-formula,
+.kva-note,
+.kva-important,
+.kva-example {
+  margin: 22px 0;
+  padding: 18px 20px;
+  border: 1px solid #dbe4ee;
+  border-left: 4px solid #2563eb;
+  border-radius: 12px;
+  background: #f7faff;
+  color: #334155;
+  line-height: 1.8;
+}
+.kva-formula {
+  text-align: center;
+  background: #f5f9ff;
+}
+.kva-formula p:last-child,
+.kva-note p:last-child,
+.kva-important p:last-child,
+.kva-example p:last-child { margin-bottom: 0; }
+.kva-important {
+  border-left-color: #d97706;
+  background: #fffbeb;
+}
+.kva-example {
+  border-left-color: #0f766e;
+  background: #f0fdfa;
+}
+
+/* Figures and inline SVG diagrams */
+.kva-figure,
+.kva-diagram {
+  display: block;
+  width: 100%;
+  max-width: 820px;
+  margin: 24px auto 30px;
+  padding: 12px;
+  border: 1px solid #dbe4ee;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, .045);
+  text-align: center;
+}
+.kva-figure svg,
+.kva-diagram svg,
+.kva-page figure > img,
+.kva-page picture img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.kva-figure figcaption,
+.kva-diagram figcaption,
+.kva-page figure > figcaption {
+  margin: 11px 4px 2px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.65;
+  text-align: center;
+}
+.kva-diagram { overflow: hidden; }
+.kva-page img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tables */
+.kva-page .table-responsive,
+.kva-table-wrap {
+  width: 100%;
+  margin: 22px 0;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+.kva-page .table-responsive table,
+.kva-table-wrap table {
+  width: 100%;
+  min-width: 540px;
+  border-collapse: collapse;
+}
+.kva-page .table-responsive th,
+.kva-page .table-responsive td,
+.kva-table-wrap th,
+.kva-table-wrap td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.65;
+  text-align: left;
+  vertical-align: top;
+}
+.kva-page .table-responsive th,
+.kva-table-wrap th {
+  background: #f1f5f9;
+  color: #17365d;
+  font-weight: 700;
+}
+.kva-page .table-responsive tr:last-child td,
+.kva-table-wrap tr:last-child td { border-bottom: 0; }
+
+/* Worked examples and revision */
+.kva-problem {
+  margin: 24px 0;
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, .045);
+}
+.kva-problem h3 { margin-top: 0; }
+.kva-answer {
+  margin-top: 16px;
+  padding: 13px 15px;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #17365d;
+}
+.kva-working {
+  margin: 16px 0;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #f8fafc;
+  overflow-x: auto;
+}
+.kva-math-display {
+  width: 100%;
+  margin: 20px 0;
+  padding: 17px 14px;
+  border: 1px solid #dbe4ee;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #17365d;
+  text-align: center;
+  overflow-x: auto;
+}
+.kva-math-display .katex-display { margin: 0; }
+.kva-math-display .katex { font-size: clamp(1.05rem, 3vw, 1.45rem); }
+.kva-inline-math { white-space: nowrap; }
+.kva-checklist,
+.kva-revision {
+  margin: 22px 0;
+  padding: 20px 23px;
+  border: 1px solid #dbe4ee;
+  border-radius: 14px;
+  background: #f8fafc;
+}
+.kva-revision p { margin: 8px 0; }
+
+/* FAQs */
+.kva-faq { margin: 24px 0; }
+.kva-faq details {
+  margin: 10px 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  background: #fff;
+  overflow: hidden;
+}
+.kva-faq summary {
+  padding: 15px 17px;
+  cursor: pointer;
+  color: #17365d;
+  font-weight: 700;
+  line-height: 1.55;
+}
+.kva-faq details p { margin: 0; padding: 0 17px 17px; }
+
+/* End-of-article CTA and navigation */
+.kva-doubt {
+  margin: 48px 0 30px;
+  padding: 34px 24px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #172554, #1e3a8a);
+  color: #fff;
+  text-align: center;
+}
+.kva-doubt-label {
+  display: inline-block;
+  color: #f4c66b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+.kva-doubt h2 {
+  margin: 10px 0;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1.25;
+}
+.kva-doubt p {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  color: #dbeafe;
+  font-size: 15px;
+  line-height: 1.75;
+}
+.kva-doubt a {
+  display: inline-block;
+  padding: 11px 20px;
+  border-radius: 9px;
+  background: #fff;
+  color: #17365d;
+  font-weight: 800;
+  text-decoration: none;
+}
+.kva-bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 12px;
+}
+.kva-bottom-nav a {
+  color: #1d5fbf;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-decoration: none;
+}
+.kva-bottom-nav a:hover,
+.kva-doubt a:hover { text-decoration: underline; }
+
+/* Human-heart and human-eye page components */
+.heart-visual,
+.eye-visual {
+  width: 100%;
+  margin: 24px 0;
+  border: 1px solid #d9e3ec;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f8fbfe;
+  box-shadow: 0 5px 18px rgba(23, 54, 93, .06);
+}
+.heart-visual svg,
+.eye-visual svg {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.heart-caption,
+.eye-caption {
+  margin: 0;
+  padding: 11px 15px 13px;
+  color: #536575;
+  background: #fff;
+  font-size: 13px;
+  line-height: 1.65;
+  text-align: center;
+}
+.heart-flow,
+.heart-summary,
+.eye-parts,
+.vision-flow {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0;
+}
+.heart-flow { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.heart-summary { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.eye-parts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.vision-flow { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.heart-flow-step,
+.heart-summary > div,
+.eye-part,
+.vision-step {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #d9e3ec;
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+}
+.heart-number,
+.vision-step b {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 8px;
+  border-radius: 50%;
+  background: #17365d;
+  color: #fff;
+  font-weight: 700;
+}
+.vision-step b { display: flex; }
+.heart-flow-step strong,
+.heart-summary strong,
+.eye-part strong { display: block; margin-bottom: 5px; color: #17365d; }
+.blood-key { display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 14px 0 22px; }
+.blood-key span { display: inline-flex; align-items: center; gap: 7px; font-size: 14px; }
+.blood-dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; }
+.blood-blue { background: #397bc4; }
+.blood-red { background: #d64b55; }
+.defect-card { margin: 22px 0; border: 1px solid #d9e3ec; border-radius: 15px; overflow: hidden; background: #fff; }
+.defect-head { padding: 13px 17px; border-bottom: 1px solid #d9e3ec; background: #f4f8fc; }
+.defect-head strong { color: #17365d; }
+.lens-note { margin: 16px 0; padding: 14px 17px; border-left: 4px solid #397bc4; background: #f5f9fd; }
+
+/* Mobile and tablet adjustments */
+@media (max-width: 800px) {
+  .kva-page { padding: 18px 18px 56px; }
+  .heart-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .heart-summary { grid-template-columns: 1fr; }
+  .eye-parts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .vision-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .kva-page { padding: 12px 12px 44px; }
+  .kva-breadcrumb { margin-bottom: 12px; font-size: 12px; }
+  .kva-hero { margin: 4px 0 32px; }
+  .kva-hero-inner { padding: 28px 12px 25px; }
+  .kva-hero h1 { font-size: clamp(1.9rem, 8.5vw, 2.8rem); line-height: 1.13; }
+  .kva-eyebrow { gap: 6px; padding: 6px 10px; font-size: 9px; letter-spacing: .09em; }
+  .kva-eyebrow::before, .kva-eyebrow::after { flex-basis: 10px; }
+  .kva-hero-description,
+  .kva-hero > p:not(.kva-eyebrow):not(.kva-lead),
+  .kva-hero-inner > p:not(.kva-eyebrow):not(.kva-lead),
+  .kva-hero .kva-lead,
+  .kva-hero-inner .kva-lead { font-size: 15px; line-height: 1.75; }
+  .kva-section,
+  .kva-article > section { margin-bottom: 32px; }
+  .kva-section p,
+  .kva-section li,
   .kva-article > section p,
-  .kva-article > section li { font-size: 15px; }
-  .kva-article > section figure { margin: 20px auto 24px; }
-  .kva-breadcrumb { font-size: 12px; overflow-wrap: anywhere; }
+  .kva-article > section li { font-size: 15px; line-height: 1.8; }
+  .kva-section h2,
+  .kva-article > section h2 { font-size: 1.55rem; }
+  .kva-section h3,
+  .kva-article > section h3 { margin-top: 22px; font-size: 1.08rem; }
+  .kva-formula,
+  .kva-note,
+  .kva-important,
+  .kva-example { padding: 15px 15px; }
+  .kva-figure,
+  .kva-diagram { margin: 18px auto 23px; padding: 7px; border-radius: 12px; }
+  .kva-figure figcaption,
+  .kva-diagram figcaption { font-size: 12px; }
+  .kva-problem { padding: 17px 14px; }
+  .kva-checklist,
+  .kva-revision { padding: 16px; }
+  .kva-page .table-responsive table,
+  .kva-table-wrap table { min-width: 500px; }
+  .kva-page .table-responsive th,
+  .kva-page .table-responsive td,
+  .kva-table-wrap th,
+  .kva-table-wrap td { padding: 10px; font-size: 13px; }
+  .kva-bottom-nav { flex-direction: column; }
+  .kva-doubt { padding: 27px 17px; }
+  .heart-flow,
+  .eye-parts,
+  .vision-flow { grid-template-columns: 1fr; }
+  .heart-summary { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .kva-page * { scroll-behavior: auto !important; }
 }
