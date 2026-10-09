@@ -17,6 +17,10 @@
 <link rel="stylesheet" href="/assets/styles.css">
 <link rel="stylesheet" href="/header.css">
 <link rel="stylesheet" href="/knowledge-vault/articles/articles.css">
+<!-- KaTeX for properly typeset roots, fractions, powers and mathematical symbols -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -59,8 +63,8 @@
 <h2>What Is Heron’s Formula?</h2>
 <p>Usually, we find the area of a triangle using its base and perpendicular height. But sometimes, a question gives only the three side lengths. In that situation, we can use <strong>Heron’s formula</strong>.</p>
 <div class="kva-formula">
-<p><strong>Area of a triangle = √[s(s − a)(s − b)(s − c)]</strong></p>
-<p>where <strong>s = (a + b + c)/2</strong></p>
+<p class="kva-math-display">\[\displaystyle A=\sqrt{s(s-a)(s-b)(s-c)}\]</p>
+<p class="kva-math-display">\[\displaystyle s=\frac{a+b+c}{2}\]</p>
 </div>
 <p>Here:</p>
 <ul>
@@ -97,8 +101,8 @@
 <ol>
 <li>Write down the three side lengths: a, b and c.</li>
 <li>Find the perimeter by adding the three sides.</li>
-<li>Calculate the semiperimeter: s = (a + b + c)/2.</li>
-<li>Substitute the values into Area = √[s(s − a)(s − b)(s − c)].</li>
+<li>Calculate the semiperimeter: <span class="kva-inline-math">\(s=\frac{a+b+c}{2}\)</span>.</li>
+<li>Substitute the values into <span class="kva-inline-math">\(A=\sqrt{s(s-a)(s-b)(s-c)}\)</span>.</li>
 <li>Simplify the expression and write the answer in square units.</li>
 </ol>
 </section>
@@ -107,11 +111,11 @@
 <h2>Solved Example 1: A Triangle with Sides 3 cm, 4 cm and 5 cm</h2>
 <p><strong>Question:</strong> Find the area of a triangle whose sides are 3 cm, 4 cm and 5 cm.</p>
 <p><strong>Step 1: Find the semiperimeter.</strong></p>
-<p>s = (3 + 4 + 5)/2 = 12/2 = 6 cm</p>
+<p class="kva-math-display">\[\displaystyle s=\frac{3+4+5}{2}=\frac{12}{2}=6\text{ cm}\]</p>
 <p><strong>Step 2: Apply Heron’s formula.</strong></p>
-<p>Area = √[s(s − a)(s − b)(s − c)]</p>
-<p>Area = √[6(6 − 3)(6 − 4)(6 − 5)]</p>
-<p>Area = √(6 × 3 × 2 × 1) = √36 = 6 cm²</p>
+<p class="kva-math-display">\[\displaystyle A=\sqrt{s(s-a)(s-b)(s-c)}\]</p>
+<p class="kva-math-display">\[\displaystyle A=\sqrt{6(6-3)(6-4)(6-5)}\]</p>
+<p class="kva-math-display">\[\displaystyle A=\sqrt{6\times3\times2\times1}=\sqrt{36}=6\text{ cm}^2\]</p>
 <p><strong>Answer: The area is 6 cm².</strong></p>
 </section>
 
@@ -119,12 +123,12 @@
 <h2>Solved Example 2: An Isosceles Triangle with Sides 15 cm, 15 cm and 10 cm</h2>
 <p><strong>Question:</strong> Find the area of an isosceles triangle whose equal sides are 15 cm each and whose base is 10 cm.</p>
 <p><strong>Step 1: Find the semiperimeter.</strong></p>
-<p>s = (15 + 15 + 10)/2 = 40/2 = 20 cm</p>
+<p class="kva-math-display">\[\displaystyle s=\frac{15+15+10}{2}=\frac{40}{2}=20\text{ cm}\]</p>
 <p><strong>Step 2: Substitute in the formula.</strong></p>
-<p>Area = √[20(20 − 15)(20 − 15)(20 − 10)]</p>
-<p>Area = √(20 × 5 × 5 × 10)</p>
-<p>Area = √5000 = 50√2 cm²</p>
-<p>Approximately, Area = 70.71 cm².</p>
+<p class="kva-math-display">\[\displaystyle A=\sqrt{20(20-15)(20-15)(20-10)}\]</p>
+<p class="kva-math-display">\[\displaystyle A=\sqrt{20\times5\times5\times10}\]</p>
+<p class="kva-math-display">\[\displaystyle A=\sqrt{5000}=50\sqrt{2}\text{ cm}^2\]</p>
+<p>Approximately, <span class="kva-inline-math">\(A\approx70.71\text{ cm}^2\)</span>.</p>
 <p><strong>Answer: The area is 50√2 cm², or approximately 70.71 cm².</strong></p>
 </section>
 
@@ -132,11 +136,11 @@
 <h2>Solved Example 3: A Triangular Plot with Sides 13 m, 14 m and 15 m</h2>
 <p><strong>Question:</strong> A triangular plot has side lengths 13 m, 14 m and 15 m. Find its area.</p>
 <p><strong>Step 1: Find the semiperimeter.</strong></p>
-<p>s = (13 + 14 + 15)/2 = 42/2 = 21 m</p>
+<p class="kva-math-display">\[\displaystyle s=\frac{13+14+15}{2}=\frac{42}{2}=21\text{ m}\]</p>
 <p><strong>Step 2: Use Heron’s formula.</strong></p>
-<p>Area = √[21(21 − 13)(21 − 14)(21 − 15)]</p>
-<p>Area = √(21 × 8 × 7 × 6)</p>
-<p>Area = √7056 = 84 m²</p>
+<p class="kva-math-display">\[\displaystyle A=\sqrt{21(21-13)(21-14)(21-15)}\]</p>
+<p class="kva-math-display">\[\displaystyle A=\sqrt{21\times8\times7\times6}\]</p>
+<p class="kva-math-display">\[\displaystyle A=\sqrt{7056}=84\text{ m}^2\]</p>
 <p><strong>Answer: The area of the plot is 84 m².</strong></p>
 </section>
 
@@ -159,8 +163,8 @@
 <table>
 <thead><tr><th>Method</th><th>Formula</th><th>When it is useful</th></tr></thead>
 <tbody>
-<tr><td>Base–height method</td><td>Area = ½ × base × height</td><td>When the base and perpendicular height are known.</td></tr>
-<tr><td>Heron’s formula</td><td>Area = √[s(s − a)(s − b)(s − c)]</td><td>When all three side lengths are known.</td></tr>
+<tr><td>Base–height method</td><td><span class="kva-inline-math">\(A=\frac12\times\text{base}\times\text{height}\)</span></td><td>When the base and perpendicular height are known.</td></tr>
+<tr><td>Heron’s formula</td><td><span class="kva-inline-math">\(A=\sqrt{s(s-a)(s-b)(s-c)}\)</span></td><td>When all three side lengths are known.</td></tr>
 </tbody>
 </table>
 </div>
@@ -195,8 +199,8 @@
 <section>
 <h2>Quick Revision</h2>
 <ul>
-<li><strong>Heron’s formula:</strong> Area = √[s(s − a)(s − b)(s − c)].</li>
-<li><strong>Semiperimeter:</strong> s = (a + b + c)/2.</li>
+<li><strong>Heron’s formula:</strong> <span class="kva-inline-math">\(A=\sqrt{s(s-a)(s-b)(s-c)}\)</span>.</li>
+<li><strong>Semiperimeter:</strong> <span class="kva-inline-math">\(s=\frac{a+b+c}{2}\)</span>.</li>
 <li><strong>Use it when:</strong> The lengths of all three sides are known.</li>
 <li><strong>Units:</strong> Area is measured in square units.</li>
 </ul>
@@ -221,5 +225,21 @@
 </article>
 </main>
 <script src="/loader.js"></script>
+<script>
+  // Render this article after the deferred KaTeX scripts have loaded.
+  window.addEventListener("load", function () {
+    if (typeof renderMathInElement === "function") {
+      renderMathInElement(document.querySelector(".kva-article"), {
+        delimiters: [
+          {left: "$", right: "$", display: true},
+          {left: "\\[", right: "\\]", display: true},
+          {left: "\\(", right: "\\)", display: false}
+        ],
+        throwOnError: false,
+        ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      });
+    }
+  });
+</script>
 </body>
 </html>
