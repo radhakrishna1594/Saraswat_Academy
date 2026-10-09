@@ -51,7 +51,7 @@ body {
   font-family: 'Inter', sans-serif;
   background: var(--off-white);
   color: var(--text);
-  overflow-x: hidden;
+  overflow-x: clip; /* Avoid creating an overflow container that can disable sticky positioning. */
  
   
 }
@@ -79,15 +79,23 @@ body {
 }
 
 
-/* ─── HEADER ─── */
+/* ─── STICKY SHARED HEADER ─── */
+/* The shared header is injected into #header by loader.js. Make the whole
+   component wrapper sticky so it works consistently across page templates. */
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  isolation: isolate;
+}
 
-header{
+#header > header {
+  position: relative;
+  top: auto;
+  z-index: auto;
   background: var(--white);
   border-bottom: 1px solid var(--border);
-  position: sticky; 
-  top: 0; z-index: 300;
   box-shadow: 0 2px 16px rgba(12,15,30,.07);
-  
 }
 .header-inner {
   max-width: 1280px; margin: 0 auto; padding: 0 24px;
