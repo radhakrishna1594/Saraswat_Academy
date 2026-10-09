@@ -548,3 +548,57 @@
 @media (prefers-reduced-motion: reduce) {
   .kva-page * { scroll-behavior: auto !important; }
 }
+
+
+/* Heron's formula: robust textbook-quality mathematical layout. */
+.kva-article .kva-math-display {
+  display: block;
+  max-width: 100%;
+  margin: 18px 0;
+  padding: 14px 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+  color: #17365d;
+  background: #f8fafc;
+  border: 1px solid #dbe4ee;
+  border-radius: 12px;
+  -webkit-overflow-scrolling: touch;
+}
+.kva-article .kva-math-display .katex-display {
+  margin: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.kva-article .katex { font-size: 1.08em; }
+.kva-article .kva-inline-math { white-space: nowrap; }
+
+/* Correct spacing, width and mobile wrapping for the article footer. */
+.kva-article .kva-article-footer {
+  display: block;
+  clear: both;
+  width: 100%;
+  margin: 48px 0 0;
+  padding: 24px clamp(16px, 4vw, 32px);
+  border-top: 1px solid #dbe4ee;
+  background: #f8fafc;
+  border-radius: 14px;
+  color: #475569;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.kva-article .kva-article-footer p {
+  margin: 0 0 10px;
+  line-height: 1.7;
+}
+.kva-article .kva-article-footer p:last-child { margin-bottom: 0; }
+.kva-article .kva-article-footer a {
+  color: #1d5fbf;
+  font-weight: 700;
+  text-underline-offset: 3px;
+}
+@media (max-width: 600px) {
+  .kva-article .kva-math-display { padding: 12px 8px; margin: 15px 0; }
+  .kva-article .kva-math-display .katex { font-size: .96em; }
+  .kva-article .kva-article-footer { padding: 20px 14px; margin-top: 34px; }
+}
