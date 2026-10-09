@@ -208,5 +208,15 @@
     "description": "Learn population, sample and sampling in statistics using easy definitions, everyday examples, a clear diagram and a comparison table.",
     "url": "/knowledge-vault/articles/what-is-sampling-and-population-in-statistics.html",
     "keywords": "population in statistics sample sampling meaning definition examples types of sampling random sampling systematic stratified convenience sample statistics"
+  },
+  {
+    "title": "Heron’s Formula: Meaning, Solved Examples and Uses",
+    "category": "Mathematics",
+    "subcategory": "Geometry • Triangles",
+    "level": "Classes 9–10",
+    "icon": "📐",
+    "description": "Learn Heron’s formula in simple language with a triangle diagram, step-by-step solved examples, real-life uses and practice questions.",
+    "url": "/knowledge-vault/articles/herons-formula.html",
+    "keywords": "Heron's formula herons formula area triangle semiperimeter solved examples triangular plot area class 9 mathematics geometry"
   }
 ]
