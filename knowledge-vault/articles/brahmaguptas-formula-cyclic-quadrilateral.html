@@ -59,21 +59,57 @@
 <h2>What Is a Cyclic Quadrilateral?</h2>
 <p>A <strong>cyclic quadrilateral</strong> is a four-sided shape whose four vertices all lie on the same circle. The word “cyclic” refers to the circle passing through all four corners.</p>
 <figure class="kva-figure">
-<svg viewBox="0 0 700 350" role="img" aria-labelledby="cyclic-title cyclic-desc" xmlns="http://www.w3.org/2000/svg">
-<title id="cyclic-title">Cyclic quadrilateral inscribed in a circle</title>
-<desc id="cyclic-desc">A quadrilateral ABCD is drawn inside a circle, with all four vertices on the circumference and side lengths labelled a, b, c and d.</desc>
-<rect x="8" y="8" width="684" height="334" rx="18" fill="#f5f8fc" stroke="#d8e2ef"/>
-<circle cx="350" cy="175" r="130" fill="#e9f3ff" stroke="#7aa5d8" stroke-width="2.5"/>
-<polygon points="265,65 475,135 410,282 205,225" fill="#fff4d8" stroke="#245b91" stroke-width="3" stroke-linejoin="round"/>
-<g fill="#17365d" font-family="Arial, sans-serif" font-size="19" font-weight="700">
-<circle cx="265" cy="65" r="4.5"/><circle cx="475" cy="135" r="4.5"/><circle cx="410" cy="282" r="4.5"/><circle cx="205" cy="225" r="4.5"/>
-<text x="246" y="55">A</text><text x="489" y="132">B</text><text x="416" y="305">C</text><text x="184" y="229">D</text>
-</g>
-<g fill="#17365d" font-family="Arial, sans-serif" font-size="17" font-weight="700">
-<text x="370" y="83">a</text><text x="459" y="218">b</text><text x="299" y="270">c</text><text x="224" y="137">d</text>
-</g>
-<text x="350" y="326" text-anchor="middle" font-size="14" fill="#46566b">All four vertices lie on the same circle.</text>
+
+<svg viewBox="0 0 700 360" role="img"
+     aria-labelledby="cyclic-title cyclic-desc"
+     xmlns="http://www.w3.org/2000/svg">
+  <title id="cyclic-title">Cyclic Quadrilateral ABCD</title>
+  <desc id="cyclic-desc">A quadrilateral whose four vertices lie exactly on the circumference of a circle.</desc>
+
+  <rect x="8" y="8" width="684" height="344" rx="18"
+        fill="#f5f8fc" stroke="#d8e2ef"/>
+
+  <circle cx="350" cy="175" r="125"
+          fill="#e9f3ff" stroke="#7aa5d8" stroke-width="2.5"/>
+
+  <!-- All four vertices lie exactly on the circumference -->
+  <polygon points="287.5,66.75 452.4,103.3 402.8,288.3 236.6,227.8"
+           fill="#fff4d8" stroke="#245b91"
+           stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- Vertices -->
+  <g fill="#17365d">
+    <circle cx="287.5" cy="66.75" r="4.5"/>
+    <circle cx="452.4" cy="103.3" r="4.5"/>
+    <circle cx="402.8" cy="288.3" r="4.5"/>
+    <circle cx="236.6" cy="227.8" r="4.5"/>
+  </g>
+
+  <!-- Vertex labels -->
+  <g fill="#17365d" font-family="Arial, sans-serif"
+     font-size="16" font-weight="700">
+    <text x="268" y="53">A</text>
+    <text x="463" y="101">B</text>
+    <text x="410" y="307">C</text>
+    <text x="216" y="232">D</text>
+  </g>
+
+  <!-- Side labels -->
+  <g fill="#17365d" font-family="Arial, sans-serif"
+     font-size="17" font-weight="700">
+    <text x="372" y="75">a</text>
+    <text x="448" y="208">b</text>
+    <text x="309" y="274">c</text>
+    <text x="246" y="141">d</text>
+  </g>
+
+  <text x="350" y="335" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="14"
+        fill="#46566b">
+    All four vertices lie on the same circle.
+  </text>
 </svg>
+
 <figcaption>A cyclic quadrilateral is a quadrilateral that can be drawn inside a circle with all four corners on its circumference.</figcaption>
 </figure>
 <p>An important property is that its opposite angles add up to 180°. Brahmagupta’s formula is specifically for this type of quadrilateral; it does not give the area of every quadrilateral from its side lengths alone.</p>
@@ -82,8 +118,38 @@
 <section>
 <h2>Brahmagupta’s Formula</h2>
 <div class="kva-formula">
-<p><strong>Area = √[(s − a)(s − b)(s − c)(s − d)]</strong></p>
-<p><strong>s = (a + b + c + d)/2</strong></p>
+
+<p>
+  <strong>
+    Area =
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <msqrt>
+        <mrow>
+          <mo>(</mo><mi>s</mi><mo>−</mo><mi>a</mi><mo>)</mo>
+          <mo>(</mo><mi>s</mi><mo>−</mo><mi>b</mi><mo>)</mo>
+          <mo>(</mo><mi>s</mi><mo>−</mo><mi>c</mi><mo>)</mo>
+          <mo>(</mo><mi>s</mi><mo>−</mo><mi>d</mi><mo>)</mo>
+        </mrow>
+      </msqrt>
+    </math>
+  </strong>
+</p>
+
+<p>
+  <strong>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>s</mi><mo>=</mo>
+      <mfrac>
+        <mrow>
+          <mi>a</mi><mo>+</mo><mi>b</mi><mo>+</mo>
+          <mi>c</mi><mo>+</mo><mi>d</mi>
+        </mrow>
+        <mn>2</mn>
+      </mfrac>
+    </math>
+  </strong>
+</p>
+
 </div>
 <p>Here:</p>
 <ul>
