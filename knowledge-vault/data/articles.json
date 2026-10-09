@@ -188,5 +188,15 @@
     "description": "Learn the human eye with a clear labelled diagram, understand how vision works, and study myopia, hypermetropia, presbyopia and astigmatism with their lens corrections.",
     "url": "/knowledge-vault/articles/what-is-human-eye.html",
     "keywords": "human eye eye diagram labelled parts cornea iris pupil lens retina optic nerve vision myopia hypermetropia hyperopia presbyopia astigmatism concave convex cylindrical lens correction eye defects biology physics"
+  },
+  {
+    "title": "What Is Gambler’s Fallacy?",
+    "category": "Mathematics",
+    "subcategory": "Probability • Critical Thinking",
+    "level": "Classes 9–12",
+    "icon": "🎲",
+    "description": "Understand the gambler’s fallacy with a simple coin-toss example, probability explanation, real-life situations and common mistakes.",
+    "url": "/knowledge-vault/articles/what-is-gamblers-fallacy.html",
+    "keywords": "gambler's fallacy gamblers fallacy probability coin toss heads tails independent events random outcomes probability mistakes chance"
   }
 ]
