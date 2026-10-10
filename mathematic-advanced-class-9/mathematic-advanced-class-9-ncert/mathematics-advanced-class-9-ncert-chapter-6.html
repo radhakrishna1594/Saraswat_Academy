@@ -389,110 +389,889 @@ ADVANCED LEVEL
 
 <div class="sa-chapter-highlight-box"><p class="sa-chapter-highlight-text">EXERCISE 6.1</p></div>
 
-<h3>Question 1</h3>
-<p><strong>Find the sum of the series 0.15 + 0.015 + 0.0015 + … to 15 terms.</strong></p>
-<p>This is a GP with first term a = 0.15 and common ratio r = 0.1. Using S<sub>n</sub> = a(1 − r<sup>n</sup>)/(1 − r):</p>
-<p>S<sub>15</sub> = 0.15(1 − 0.1<sup>15</sup>)/0.9 = <strong>(1/6)(1 − 10<sup>−15</sup>)</strong>.</p><hr>
+<h3>1. Find the sum of the series 0.15 + 0.015 + 0.0015 + ... to 15 terms.</h3>
 
-<h3>Question 2</h3>
-<p><strong>Find the sum to n terms of 0.9 + 0.99 + 0.999 + …</strong></p>
-<p>Write the kth term as 1 − 10<sup>−k</sup>. Therefore</p>
-<p>S<sub>n</sub> = n − (10<sup>−1</sup> + 10<sup>−2</sup> + … + 10<sup>−n</sup>).</p>
-<p>The bracket is a GP, so its sum is (1/9)(1 − 10<sup>−n</sup>). Hence <strong>S<sub>n</sub> = n − (1/9)(1 − 10<sup>−n</sup>)</strong>.</p><hr>
+<p><strong>Solution:</strong></p>
 
-<h3>Question 3</h3>
-<p><strong>Find the sum to n terms of 5 + 55 + 555 + …</strong></p>
-<p>The kth term is 5(111…1) = 5(10<sup>k</sup> − 1)/9.</p>
-<p>Therefore S<sub>n</sub> = (5/9)[(10 + 10<sup>2</sup> + … + 10<sup>n</sup>) − n].</p>
-<p>Since 10 + 10<sup>2</sup> + … + 10<sup>n</sup> = 10(10<sup>n</sup> − 1)/9,</p>
-<p><strong>S<sub>n</sub> = 5[10(10<sup>n</sup> − 1) − 9n]/81</strong>.</p><hr>
+<p>The given series is</p>
 
-<h3>Question 4</h3>
-<p><strong>The sum of the first n terms of 3, 6, 12, … is 381. Find n.</strong></p>
-<p>This is a GP with a = 3 and r = 2. Thus S<sub>n</sub> = 3(2<sup>n</sup> − 1)/(2 − 1) = 3(2<sup>n</sup> − 1).</p>
-<p>So 3(2<sup>n</sup> − 1) = 381 ⇒ 2<sup>n</sup> = 128 = 2<sup>7</sup>.</p>
-<p><strong>n = 7.</strong></p><hr>
+<p>0.15 + 0.015 + 0.0015 + ...</p>
 
-<h3>Question 5</h3>
-<p><strong>Find the sum to n terms of x(x + y) + x<sup>2</sup>(x<sup>2</sup> + y<sup>2</sup>) + x<sup>3</sup>(x<sup>3</sup> + y<sup>3</sup>) + …</strong></p>
-<p>The kth term is x<sup>2k</sup> + x<sup>k</sup>y<sup>k</sup>. Hence the sum is the sum of two GPs:</p>
-<p><strong>S<sub>n</sub> = x<sup>2</sup>(x<sup>2n</sup> − 1)/(x<sup>2</sup> − 1) + xy[(xy)<sup>n</sup> − 1]/(xy − 1)</strong>, for x<sup>2</sup> ≠ 1 and xy ≠ 1.</p><hr>
+<p>This is a geometric progression (G.P.) in which</p>
 
-<h3>Question 6</h3>
-<p><strong>Find the sum to infinity of 1 + 1/2 + 1/3<sup>2</sup> + 1/4 + 1/2<sup>2</sup> + 1/6 + …</strong></p>
-<p>The printed series is visually ambiguous in the extracted text. It contains mixed terms involving reciprocals, so this question should be checked against the original page image before publishing a numerical answer.</p>
-<p><strong>Editorial note:</strong> I have deliberately not guessed this answer from garbled text.</p><hr>
+<p>First term, a = 0.15</p>
 
-<h3>Question 7</h3>
-<p><strong>The sum of an infinite GP is 6 and the sum of the squares of its terms is 12. Find the common ratio.</strong></p>
-<p>Let the first term be a and common ratio r. Then a/(1 − r) = 6 and a<sup>2</sup>/(1 − r<sup>2</sup>) = 12.</p>
-<p>Using a = 6(1 − r):</p>
-<p>36(1 − r)<sup>2</sup>/[(1 − r)(1 + r)] = 12.</p>
-<p>Thus 3(1 − r) = 1 + r, giving <strong>r = 1/2</strong>.</p><hr>
+<p>Common ratio, r = 0.015 / 0.15 = 0.1</p>
 
-<h3>Question 8</h3>
-<p><strong>If the sum to infinity of 1 + r + r<sup>2</sup> + r<sup>3</sup> + … is S, where |r| &lt; 1, write r in terms of S.</strong></p>
-<p>S = 1/(1 − r).</p>
-<p>Therefore 1 − r = 1/S and <strong>r = 1 − 1/S = (S − 1)/S</strong>.</p><hr>
+<p>Number of terms, n = 15</p>
 
-<h3>Question 9</h3>
-<p><strong>Find the value of 4<sup>2</sup> · 4<sup>4</sup> · 4<sup>8</sup> · 4<sup>16</sup> · … to infinity.</strong></p>
-<p>Interpreting the product literally, the exponents are 2, 4, 8, 16, …, so the product is</p>
-<p>4<sup>2+4+8+16+…</sup>.</p>
-<p>The exponent diverges to infinity; hence this product does not converge to a finite real value. <strong>It diverges.</strong></p>
+<p>The sum of the first n terms of a G.P. is</p>
+
+<p>S<sub>n</sub> = a(1 - r<sup>n</sup>) / (1 - r), &nbsp; r &ne; 1</p>
+
+<p>Substituting the values, we get</p>
+
+<p>S<sub>15</sub> = 0.15(1 - (0.1)<sup>15</sup>) / (1 - 0.1)</p>
+
+<p>= 0.15(1 - 10<sup>-15</sup>) / 0.9</p>
+
+<p>= (1 / 6)(1 - 10<sup>-15</sup>)</p>
+
+<p><strong>Therefore, S<sub>15</sub> = 0.1666666666666665 (approximately).</strong></p>
+
 <hr>
 
-<h3>Question 10</h3>
-<p><strong>The midpoints of the sides of an equilateral triangle are joined repeatedly. If each side of the original triangle is 16 cm, find the sum of the perimeters of all triangles formed.</strong></p>
-<p>Each new triangle has half the side length of the previous one. The perimeters therefore form a GP: 48, 24, 12, … with r = 1/2.</p>
-<p>Sum to infinity = 48/(1 − 1/2) = <strong>96 cm</strong>.</p><hr>
+<h3>2. Find the sum to n terms of the series 0.9 + 0.99 + 0.999 + ...</h3>
 
-<h3>Question 11</h3>
-<p><strong>Let f(x) = 2x + 1. Find the number of values of x for which f(x), f(2x), f(4x) are in GP.</strong></p>
-<p>We have f(x)=2x+1, f(2x)=4x+1, f(4x)=8x+1. For three numbers in GP:</p>
-<p>(4x + 1)<sup>2</sup> = (2x + 1)(8x + 1).</p>
-<p>Expanding gives 16x<sup>2</sup> + 8x + 1 = 16x<sup>2</sup> + 10x + 1, so 2x = 0 and <strong>x = 0</strong>.</p>
-<p>Hence there is <strong>1 value</strong> of x.</p><hr>
+<p><strong>Solution:</strong></p>
 
-<h3>Question 12</h3>
-<p><strong>If t<sub>1</sub>, t<sub>2</sub>, … are terms of a GP with common ratio |r| &lt; 1, evaluate (t<sub>1</sub> − t<sub>3</sub> + t<sub>5</sub> − …)/(t<sub>2</sub> − t<sub>4</sub> + t<sub>6</sub> − …).</strong></p>
-<p>Let the first term be a. The numerator is a − ar<sup>2</sup> + ar<sup>4</sup> − … = a/(1 + r<sup>2</sup>). The denominator is ar − ar<sup>3</sup> + ar<sup>5</sup> − … = ar/(1 + r<sup>2</sup>).</p>
-<p>Therefore the required value is <strong>1/r</strong>, provided r ≠ 0.</p><hr>
+<p>The given series is</p>
 
-<h3>Question 13</h3>
-<p><strong>A ball rebounds to 3/5 of its previous height. It falls from a height of 90 m. Find the total distance travelled before coming to rest.</strong></p>
-<p>The first fall is 90 m. After each bounce, the upward heights form a GP: 90(3/5), 90(3/5)<sup>2</sup>, … .</p>
-<p>Total distance = 90 + 2[90(3/5) + 90(3/5)<sup>2</sup> + …].</p>
-<p>Sum of the infinite GP inside brackets = 54/(1 − 3/5) = 135.</p>
-<p>Total distance = 90 + 2(135) = <strong>360 m</strong>.</p><hr>
+<p>S<sub>n</sub> = 0.9 + 0.99 + 0.999 + ...</p>
+
+<p>Using the given hint, we can write</p>
+
+<p>0.9 = 1 - 0.1</p>
+
+<p>0.99 = 1 - 0.01</p>
+
+<p>0.999 = 1 - 0.001</p>
+
+<p>Therefore,</p>
+
+<p>S<sub>n</sub> = (1 - 0.1) + (1 - 0.01) + (1 - 0.001) + ... to n terms</p>
+
+<p>Separating the terms, we get</p>
+
+<p>S<sub>n</sub> = n - (0.1 + 0.01 + 0.001 + ... to n terms)</p>
+
+<p>The series inside the brackets is a G.P. with</p>
+
+<p>First term, a = 0.1</p>
+
+<p>Common ratio, r = 0.1</p>
+
+<p>Number of terms = n</p>
+
+<p>Its sum is</p>
+
+<p>S = a(1 - r<sup>n</sup>) / (1 - r)</p>
+
+<p>= 0.1(1 - (0.1)<sup>n</sup>) / (1 - 0.1)</p>
+
+<p>= (1 / 9)(1 - 10<sup>-n</sup>)</p>
+
+<p>Hence,</p>
+
+<p>S<sub>n</sub> = n - (1 / 9)(1 - 10<sup>-n</sup>)</p>
+
+<p><strong>Therefore, S<sub>n</sub> = n - (1 - 10<sup>-n</sup>) / 9.</strong></p>
+
+<hr>
+
+<h3>3. Find the sum to n terms of the series 5 + 55 + 555 + ...</h3>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given series is</p>
+
+<p>5 + 55 + 555 + ...</p>
+
+<p>We can express its terms as</p>
+
+<p>5 = 5(1)</p>
+
+<p>55 = 5(11)</p>
+
+<p>555 = 5(111)</p>
+
+<p>Thus,</p>
+
+<p>S<sub>n</sub> = 5 + 55 + 555 + ... to n terms</p>
+
+<p>Each term can be written using powers of 10:</p>
+
+<p>5 = 5(10 - 1) / 9</p>
+
+<p>55 = 5(10<sup>2</sup> - 1) / 9</p>
+
+<p>555 = 5(10<sup>3</sup> - 1) / 9</p>
+
+<p>In general, the k-th term is</p>
+
+<p>a<sub>k</sub> = 5(10<sup>k</sup> - 1) / 9</p>
+
+<p>Therefore,</p>
+
+<p>S<sub>n</sub> = (5 / 9)[(10 - 1) + (10<sup>2</sup> - 1) + (10<sup>3</sup> - 1) + ... + (10<sup>n</sup> - 1)]</p>
+
+<p>Separating the terms, we get</p>
+
+<p>S<sub>n</sub> = (5 / 9)[(10 + 10<sup>2</sup> + 10<sup>3</sup> + ... + 10<sup>n</sup>) - n]</p>
+
+<p>The sum of the G.P. 10 + 10<sup>2</sup> + ... + 10<sup>n</sup> is</p>
+
+<p>= 10(10<sup>n</sup> - 1) / (10 - 1)</p>
+
+<p>= 10(10<sup>n</sup> - 1) / 9</p>
+
+<p>Substituting this value, we get</p>
+
+<p>S<sub>n</sub> = (5 / 9)[10(10<sup>n</sup> - 1) / 9 - n]</p>
+
+<p><strong>Therefore, S<sub>n</sub> = 5[10(10<sup>n</sup> - 1) - 9n] / 81.</strong></p>
+
+<hr>
+
+<h3>4. The sum of the first n terms of the sequence 3, 6, 12, ... is 381. Find n.</h3>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given sequence is</p>
+
+<p>3, 6, 12, ...</p>
+
+<p>This is a G.P. with</p>
+
+<p>First term, a = 3</p>
+
+<p>Common ratio, r = 6 / 3 = 2</p>
+
+<p>Sum of the first n terms, S<sub>n</sub> = 381</p>
+
+<p>Using the sum formula for a G.P.,</p>
+
+<p>S<sub>n</sub> = a(r<sup>n</sup> - 1) / (r - 1), &nbsp; r &ne; 1</p>
+
+<p>Substituting the values, we get</p>
+
+<p>381 = 3(2<sup>n</sup> - 1) / (2 - 1)</p>
+
+<p>381 = 3(2<sup>n</sup> - 1)</p>
+
+<p>Dividing both sides by 3,</p>
+
+<p>127 = 2<sup>n</sup> - 1</p>
+
+<p>2<sup>n</sup> = 128</p>
+
+<p>Since 128 = 2<sup>7</sup>,</p>
+
+<p>2<sup>n</sup> = 2<sup>7</sup></p>
+
+<p>Therefore, n = 7.</p>
+
+<p><strong>Hence, the required number of terms is n = 7.</strong></p>
+
+<hr>
+
+```html
+<h3>5. Find the sum to n terms of the series</h3>
+
+<p>x(x + y) + x<sup>2</sup>(x<sup>2</sup> + y<sup>2</sup>) + x<sup>3</sup>(x<sup>3</sup> + y<sup>3</sup>) + ...</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given series is</p>
+
+<p>S<sub>n</sub> = x(x + y) + x<sup>2</sup>(x<sup>2</sup> + y<sup>2</sup>) + x<sup>3</sup>(x<sup>3</sup> + y<sup>3</sup>) + ...</p>
+
+<p>Expanding the terms, we get</p>
+
+<p>S<sub>n</sub> = (x<sup>2</sup> + xy) + (x<sup>4</sup> + x<sup>2</sup>y<sup>2</sup>) + (x<sup>6</sup> + x<sup>3</sup>y<sup>3</sup>) + ...</p>
+
+<p>Separating the terms,</p>
+
+<p>S<sub>n</sub> = (x<sup>2</sup> + x<sup>4</sup> + x<sup>6</sup> + ... + x<sup>2n</sup>) + (xy + x<sup>2</sup>y<sup>2</sup> + x<sup>3</sup>y<sup>3</sup> + ... + x<sup>n</sup>y<sup>n</sup>)</p>
+
+<p>The first bracket is a G.P. with first term x<sup>2</sup> and common ratio x<sup>2</sup>.</p>
+
+<p>Its sum is</p>
+
+<p>= x<sup>2</sup>(1 - x<sup>2n</sup>) / (1 - x<sup>2</sup>)</p>
+
+<p>The second bracket is a G.P. with first term xy and common ratio xy.</p>
+
+<p>Its sum is</p>
+
+<p>= xy(1 - (xy)<sup>n</sup>) / (1 - xy)</p>
+
+<p>Therefore, for x<sup>2</sup> &ne; 1 and xy &ne; 1,</p>
+
+<p><strong>S<sub>n</sub> = x<sup>2</sup>(1 - x<sup>2n</sup>) / (1 - x<sup>2</sup>) + xy(1 - (xy)<sup>n</sup>) / (1 - xy).</strong></p>
+
+<hr>
+
+<h3>6. Find the sum of the infinite terms of the series</h3>
+
+<p>1 + 1/2 + 1/3<sup>2</sup> + 1/2<sup>2</sup> + 1/3<sup>4</sup> + 1/2<sup>3</sup> + 1/3<sup>6</sup> + ...</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given series can be rearranged as</p>
+
+<p>S = (1 + 1/3<sup>2</sup> + 1/3<sup>4</sup> + ...) + (1/2 + 1/2<sup>2</sup> + 1/2<sup>3</sup> + ...)</p>
+
+<p>Both brackets are infinite G.P.s.</p>
+
+<p>For the first G.P.,</p>
+
+<p>First term, a = 1</p>
+
+<p>Common ratio, r = 1/9</p>
+
+<p>Since |r| &lt; 1, its sum to infinity is</p>
+
+<p>S<sub>1</sub> = a / (1 - r)</p>
+
+<p>= 1 / (1 - 1/9)</p>
+
+<p>= 9/8</p>
+
+<p>For the second G.P.,</p>
+
+<p>First term, a = 1/2</p>
+
+<p>Common ratio, r = 1/2</p>
+
+<p>Its sum to infinity is</p>
+
+<p>S<sub>2</sub> = a / (1 - r)</p>
+
+<p>= (1/2) / (1 - 1/2)</p>
+
+<p>= 1</p>
+
+<p>Therefore,</p>
+
+<p>S = S<sub>1</sub> + S<sub>2</sub></p>
+
+<p>= 9/8 + 1</p>
+
+<p><strong>S = 17/8.</strong></p>
+
+<hr>
+
+<h3>7. The sum of an infinite series of G.P. is 6 and the sum of the squares of these terms is 12. Find the common ratio of the original G.P.</h3>
+
+<p><strong>Solution:</strong></p>
+
+<p>Let the first term of the G.P. be a and its common ratio be r.</p>
+
+<p>The sum to infinity of a G.P. is</p>
+
+<p>S<sub>&infin;</sub> = a / (1 - r)</p>
+
+<p>Given that S<sub>&infin;</sub> = 6,</p>
+
+<p>a / (1 - r) = 6</p>
+
+<p>Therefore,</p>
+
+<p>a = 6(1 - r) &nbsp; ... (1)</p>
+
+<p>The squares of the terms form another G.P. with first term a<sup>2</sup> and common ratio r<sup>2</sup>.</p>
+
+<p>The sum of the squares to infinity is</p>
+
+<p>a<sup>2</sup> / (1 - r<sup>2</sup>) = 12</p>
+
+<p>Substituting a = 6(1 - r),</p>
+
+<p>36(1 - r)<sup>2</sup> / (1 - r<sup>2</sup>) = 12</p>
+
+<p>Since 1 - r<sup>2</sup> = (1 - r)(1 + r),</p>
+
+<p>36(1 - r) / (1 + r) = 12</p>
+
+<p>Dividing both sides by 12,</p>
+
+<p>3(1 - r) = 1 + r</p>
+
+<p>3 - 3r = 1 + r</p>
+
+<p>2 = 4r</p>
+
+<p>r = 1/2</p>
+
+<p><strong>Therefore, the common ratio is r = 1/2.</strong></p>
+
+<hr>
+
+<h3>8. If the sum to infinity of the series 1 + r + r<sup>2</sup> + r<sup>3</sup> + ... is S, given that |r| &lt; 1, write r in terms of S.</h3>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given series is an infinite G.P. with</p>
+
+<p>First term, a = 1</p>
+
+<p>Common ratio = r</p>
+
+<p>Sum to infinity = S</p>
+
+<p>Using the formula,</p>
+
+<p>S = a / (1 - r)</p>
+
+<p>Substituting a = 1,</p>
+
+<p>S = 1 / (1 - r)</p>
+
+<p>Therefore,</p>
+
+<p>S(1 - r) = 1</p>
+
+<p>1 - r = 1/S</p>
+
+<p>r = 1 - 1/S</p>
+
+<p><strong>Hence, r = (S - 1) / S.</strong></p>
+
+<hr>
+
+<h3>9. Find the value of 4<sup>1/2</sup> &middot; 4<sup>1/4</sup> &middot; 4<sup>1/8</sup> &middot; 4<sup>1/16</sup> &middot; ... to infinity.</h3>
+
+<p><strong>Solution:</strong></p>
+
+<p>Let</p>
+
+<p>P = 4<sup>1/2</sup> &middot; 4<sup>1/4</sup> &middot; 4<sup>1/8</sup> &middot; 4<sup>1/16</sup> &middot; ...</p>
+
+<p>Using the law of exponents, a<sup>m</sup> &middot; a<sup>n</sup> = a<sup>m+n</sup>, we get</p>
+
+<p>P = 4<sup>(1/2 + 1/4 + 1/8 + 1/16 + ...)</sup></p>
+
+<p>The exponents form an infinite G.P. with</p>
+
+<p>First term, a = 1/2</p>
+
+<p>Common ratio, r = 1/2</p>
+
+<p>Since |r| &lt; 1, the sum to infinity is</p>
+
+<p>S<sub>&infin;</sub> = a / (1 - r)</p>
+
+<p>= (1/2) / (1 - 1/2)</p>
+
+<p>= 1</p>
+
+<p>Therefore,</p>
+
+<p>P = 4<sup>1</sup></p>
+
+<p><strong>Hence, the required value is 4.</strong></p>
+
+<hr>
+```html
+<h3>10. The midpoints D, E and F of the sides of an equilateral triangle ABC are joined to form another smaller equilateral triangle. This process is repeated indefinitely. If each side of triangle ABC is 16 cm, find the sum of the perimeters of all the triangles so formed.</h3>
+
+<p><strong>Solution:</strong></p>
+
+<p>Each side of the equilateral triangle ABC is 16 cm.</p>
+
+<p>Therefore, the perimeter of triangle ABC is</p>
+
+<p>P<sub>1</sub> = 3 &times; 16 = 48 cm</p>
+
+<p>Since D, E and F are the midpoints of the sides of triangle ABC, each side of triangle DEF is half the side of triangle ABC.</p>
+
+<p>Side of triangle DEF = 16/2 = 8 cm</p>
+
+<p>Therefore, its perimeter is</p>
+
+<p>P<sub>2</sub> = 3 &times; 8 = 24 cm</p>
+
+<p>Similarly, the side of the next triangle is 4 cm, and its perimeter is 12 cm.</p>
+
+<p>Thus, the perimeters of the triangles form the G.P.</p>
+
+<p>48 + 24 + 12 + 6 + ...</p>
+
+<p>Here,</p>
+
+<p>First term, a = 48</p>
+
+<p>Common ratio, r = 24/48 = 1/2</p>
+
+<p>Since |r| &lt; 1, the sum of the infinite G.P. is</p>
+
+<p>S<sub>&infin;</sub> = a / (1 - r)</p>
+
+<p>= 48 / (1 - 1/2)</p>
+
+<p>= 48 / (1/2)</p>
+
+<p>= 96 cm</p>
+
+<p><strong>Hence, the sum of the perimeters of all the triangles, including the original triangle, is 96 cm.</strong></p>
+
+<hr>
+
+<h3>11. Let f(x) = 2x + 1. Find the number of values of x for which f(x), f(2x), f(4x) are in a G.P.</h3>
+
+<p><strong>Solution:</strong></p>
+
+<p>Given,</p>
+
+<p>f(x) = 2x + 1</p>
+
+<p>Substituting 2x for x,</p>
+
+<p>f(2x) = 2(2x) + 1 = 4x + 1</p>
+
+<p>Similarly,</p>
+
+<p>f(4x) = 2(4x) + 1 = 8x + 1</p>
+
+<p>Therefore, the three terms are</p>
+
+<p>2x + 1, 4x + 1, 8x + 1</p>
+
+<p>For three numbers a, b and c to be in a G.P.,</p>
+
+<p>b<sup>2</sup> = ac</p>
+
+<p>Therefore,</p>
+
+<p>(4x + 1)<sup>2</sup> = (2x + 1)(8x + 1)</p>
+
+<p>Expanding both sides,</p>
+
+<p>16x<sup>2</sup> + 8x + 1 = 16x<sup>2</sup> + 10x + 1</p>
+
+<p>Cancelling the common terms,</p>
+
+<p>8x = 10x</p>
+
+<p>2x = 0</p>
+
+<p>x = 0</p>
+
+<p>When x = 0, the three terms are 1, 1, 1, which are in a G.P. with common ratio 1.</p>
+
+<p><strong>Hence, there is exactly one value of x, namely x = 0.</strong></p>
+
+<hr>
+
+<h3>12. Let t<sub>1</sub>, t<sub>2</sub>, t<sub>3</sub>, t<sub>4</sub>, ... be the terms of a G.P. whose common ratio is r, where -1 &lt; r &lt; 1. Evaluate the following:</h3>
+
+<p>(t<sub>1</sub> - t<sub>3</sub> + t<sub>5</sub> - ...)/(t<sub>2</sub> - t<sub>4</sub> + t<sub>6</sub> - ...)</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>Let the first term of the G.P. be a and its common ratio be r.</p>
+
+<p>Then,</p>
+
+<p>t<sub>1</sub> = a, t<sub>2</sub> = ar, t<sub>3</sub> = ar<sup>2</sup>, t<sub>4</sub> = ar<sup>3</sup>, ...</p>
+
+<p>The numerator is</p>
+
+<p>N = t<sub>1</sub> - t<sub>3</sub> + t<sub>5</sub> - ...</p>
+
+<p>= a - ar<sup>2</sup> + ar<sup>4</sup> - ar<sup>6</sup> + ...</p>
+
+<p>= a(1 - r<sup>2</sup> + r<sup>4</sup> - r<sup>6</sup> + ...)</p>
+
+<p>This is an infinite G.P. with first term a and common ratio -r<sup>2</sup>.</p>
+
+<p>Since |r| &lt; 1, we have |r<sup>2</sup>| &lt; 1. Therefore,</p>
+
+<p>N = a / (1 - (-r<sup>2</sup>))</p>
+
+<p>N = a / (1 + r<sup>2</sup>)</p>
+
+<p>The denominator is</p>
+
+<p>D = t<sub>2</sub> - t<sub>4</sub> + t<sub>6</sub> - ...</p>
+
+<p>= ar - ar<sup>3</sup> + ar<sup>5</sup> - ar<sup>7</sup> + ...</p>
+
+<p>= ar(1 - r<sup>2</sup> + r<sup>4</sup> - r<sup>6</sup> + ...)</p>
+
+<p>Therefore,</p>
+
+<p>D = ar / (1 + r<sup>2</sup>)</p>
+
+<p>Hence, the required expression is</p>
+
+<p>N / D = [a / (1 + r<sup>2</sup>)] / [ar / (1 + r<sup>2</sup>)]</p>
+
+<p>= 1 / r</p>
+
+<p><strong>Therefore, the required value is 1/r, provided r &ne; 0.</strong></p>
+
+<p><strong>Note:</strong> If r = 0, the denominator of the given expression is zero, so the expression is undefined.</p>
+
+<hr>
+
+<h3>13. A particular ball rebounds to 3/5 of the height from which it falls whenever it strikes the floor. Find the total distance it covers before coming to rest, if it falls due to gravity from a height of 90 metres.</h3>
+
+<p><strong>Solution:</strong></p>
+
+<p>The initial height from which the ball falls is 90 m.</p>
+
+<p>After striking the floor for the first time, the ball rebounds to</p>
+
+<p>90 &times; 3/5 = 54 m</p>
+
+<p>After the second strike, it rebounds to</p>
+
+<p>54 &times; 3/5 = 162/5 = 32.4 m</p>
+
+<p>Similarly, the successive rebound heights are</p>
+
+<p>54, 54(3/5), 54(3/5)<sup>2</sup>, ...</p>
+
+<p>These heights form an infinite G.P. with</p>
+
+<p>First term, a = 54</p>
+
+<p>Common ratio, r = 3/5</p>
+
+<p>The sum of all rebound heights is</p>
+
+<p>S<sub>&infin;</sub> = a / (1 - r)</p>
+
+<p>= 54 / (1 - 3/5)</p>
+
+<p>= 54 / (2/5)</p>
+
+<p>= 54 &times; 5/2</p>
+
+<p>= 135 m</p>
+
+<p>For every rebound, the ball travels the rebound height twice: once while moving upwards and once while falling downwards.</p>
+
+<p>Therefore, the total distance travelled is</p>
+
+<p>D = Initial falling distance + 2 &times; (sum of rebound heights)</p>
+
+<p>D = 90 + 2 &times; 135</p>
+
+<p>D = 90 + 270</p>
+
+<p><strong>Hence, the total distance travelled by the ball before coming to rest is 360 metres.</strong></p>
+
+<hr>
+
 
 <div class="sa-chapter-highlight-box"><p class="sa-chapter-highlight-text">EXERCISE 6.2</p></div>
 
-<h3>Question 1</h3>
-<p><strong>Find the nth term and the sum of the first n terms of 1 + 9 + 24 + 46 + 75 + …</strong></p>
-<p>First differences are 8, 15, 22, 29, …, an AP with first term 8 and common difference 7.</p>
-<p>Therefore t<sub>n</sub> = 1 + 8(n − 1) + 7(n − 1)(n − 2)/2.</p>
-<p>Hence <strong>t<sub>n</sub> = (7n<sup>2</sup> − 5n)/2</strong>.</p>
-<p>For the sum, use the method-of-differences formula S<sub>n</sub> = bC(n,1) + aC(n,2) + dC(n,3), with b=1, a=8, d=7:</p>
-<p><strong>S<sub>n</sub> = n + 8C(n,2) + 7C(n,3) = n(7n − 4)(n + 1)/6</strong>.</p><hr>
+<h3>1. Find the nth term and the sum of the first n terms of the series 1 + 9 + 24 + 46 + 75 + ...</h3>
 
-<h3>Question 2</h3>
-<p><strong>Find the 10th term and the sum of the first 10 terms of 4 + 5 + 9 + 16 + 26 + …</strong></p>
-<p>First differences: 1, 4, 7, 10, … . Thus b=4, a=1, d=3.</p>
-<p>t<sub>10</sub> = 4 + 1·C(9,1) + 3·C(9,2) = 4 + 9 + 108 = <strong>121</strong>.</p>
-<p>S<sub>10</sub> = 4·10 + 1·C(10,2) + 3·C(10,3) = 40 + 45 + 360 = <strong>445</strong>.</p><hr>
+<p><strong>Solution:</strong></p>
 
-<h3>Question 3</h3>
-<p><strong>Find the nth term and the sum of the first 12 terms of 3 + 6 + 11 + 18 + 27 + …</strong></p>
-<p>First differences are 3, 5, 7, 9, …, so b=3, a=3, d=2.</p>
-<p>t<sub>n</sub> = 3 + 3(n − 1) + 2(n − 1)(n − 2)/2 = <strong>n<sup>2</sup> + 2</strong>.</p>
-<p>Thus t<sub>12</sub> = 146. Also S<sub>12</sub> = 3·12 + 3C(12,2) + 2C(12,3) = 36 + 198 + 440 = <strong>674</strong>.</p><hr>
+<p>The given series is</p>
 
-<h3>Question 4</h3>
-<p><strong>Find the 8th term and the sum of the first 8 terms of 4 + 13 + 28 + 49 + 76 + …</strong></p>
-<p>First differences are 9, 15, 21, 27, …, so b=4, a=9, d=6.</p>
-<p>t<sub>8</sub> = 4 + 9·C(7,1) + 6·C(7,2) = 4 + 63 + 126 = <strong>193</strong>.</p>
-<p>S<sub>8</sub> = 4·8 + 9C(8,2) + 6C(8,3) = 32 + 252 + 336 = <strong>620</strong>.</p><hr>
+<p>1 + 9 + 24 + 46 + 75 + ...</p>
+
+<p>Writing the terms and their differences, we get</p>
+
+<p>Terms: 1, 9, 24, 46, 75, ...</p>
+
+<p>First differences: 8, 15, 22, 29, ...</p>
+
+<p>Second differences: 7, 7, 7, ...</p>
+
+<p>Since the second differences are constant, the nth term is a quadratic expression.</p>
+
+<p>Let the nth term be</p>
+
+<p>t<sub>n</sub> = an<sup>2</sup> + bn + c</p>
+
+<p>For a quadratic sequence, the constant second difference is 2a.</p>
+
+<p>Therefore,</p>
+
+<p>2a = 7</p>
+
+<p>a = 7/2</p>
+
+<p>Thus,</p>
+
+<p>t<sub>n</sub> = (7/2)n<sup>2</sup> + bn + c</p>
+
+<p>For n = 1, t<sub>1</sub> = 1:</p>
+
+<p>7/2 + b + c = 1</p>
+
+<p>b + c = -5/2 ... (1)</p>
+
+<p>For n = 2, t<sub>2</sub> = 9:</p>
+
+<p>14 + 2b + c = 9</p>
+
+<p>2b + c = -5 ... (2)</p>
+
+<p>Subtracting equation (1) from equation (2),</p>
+
+<p>b = -5/2</p>
+
+<p>Substituting in equation (1),</p>
+
+<p>c = 0</p>
+
+<p>Therefore,</p>
+
+<p><strong>t<sub>n</sub> = n(7n - 5)/2.</strong></p>
+
+<p>Now, the sum of the first n terms is</p>
+
+<p>S<sub>n</sub> = &Sigma;<sub>k=1</sub><sup>n</sup> (7k<sup>2</sup> - 5k)/2</p>
+
+<p>= (1/2)[7&Sigma;k<sup>2</sup> - 5&Sigma;k]</p>
+
+<p>Using the formulas</p>
+
+<p>&Sigma;k = n(n + 1)/2</p>
+
+<p>&Sigma;k<sup>2</sup> = n(n + 1)(2n + 1)/6</p>
+
+<p>We get</p>
+
+<p>S<sub>n</sub> = (1/2)[7n(n + 1)(2n + 1)/6 - 5n(n + 1)/2]</p>
+
+<p>= n(n + 1)(14n - 8)/24</p>
+
+<p><strong>Hence, S<sub>n</sub> = n(n + 1)(7n - 4)/12.</strong></p>
+
+<hr>
+
+<h3>2. Find the 10th term and the sum of the first 10 terms of the series 4 + 5 + 9 + 16 + 26 + ...</h3>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given series is</p>
+
+<p>4 + 5 + 9 + 16 + 26 + ...</p>
+
+<p>First differences: 1, 4, 7, 10, ...</p>
+
+<p>Second differences: 3, 3, 3, ...</p>
+
+<p>Since the second differences are constant, let</p>
+
+<p>t<sub>n</sub> = an<sup>2</sup> + bn + c</p>
+
+<p>Since the second difference is 3,</p>
+
+<p>2a = 3</p>
+
+<p>a = 3/2</p>
+
+<p>Therefore,</p>
+
+<p>t<sub>n</sub> = (3/2)n<sup>2</sup> + bn + c</p>
+
+<p>For n = 1, t<sub>1</sub> = 4:</p>
+
+<p>3/2 + b + c = 4</p>
+
+<p>b + c = 5/2 ... (1)</p>
+
+<p>For n = 2, t<sub>2</sub> = 5:</p>
+
+<p>6 + 2b + c = 5</p>
+
+<p>2b + c = -1 ... (2)</p>
+
+<p>Subtracting equation (1) from equation (2),</p>
+
+<p>b = -7/2</p>
+
+<p>Substituting in equation (1),</p>
+
+<p>c = 6</p>
+
+<p>Thus,</p>
+
+<p>t<sub>n</sub> = (3/2)n<sup>2</sup> - (7/2)n + 6</p>
+
+<p>Therefore,</p>
+
+<p>t<sub>n</sub> = (3n<sup>2</sup> - 7n + 12)/2</p>
+
+<p><strong>Finding the 10th term:</strong></p>
+
+<p>t<sub>10</sub> = (3 &times; 10<sup>2</sup> - 7 &times; 10 + 12)/2</p>
+
+<p>= (300 - 70 + 12)/2</p>
+
+<p>= 242/2</p>
+
+<p><strong>t<sub>10</sub> = 121.</strong></p>
+
+<p><strong>Finding the sum of the first 10 terms:</strong></p>
+
+<p>S<sub>n</sub> = &Sigma;<sub>k=1</sub><sup>n</sup> (3k<sup>2</sup> - 7k + 12)/2</p>
+
+<p>= (1/2)[3&Sigma;k<sup>2</sup> - 7&Sigma;k + 12n]</p>
+
+<p>Using the formulas for &Sigma;k and &Sigma;k<sup>2</sup>,</p>
+
+<p>S<sub>n</sub> = (1/2)[n(n + 1)(2n + 1)/2 - 7n(n + 1)/2 + 12n]</p>
+
+<p>= n(n<sup>2</sup> - 2n + 9)/2</p>
+
+<p>Putting n = 10,</p>
+
+<p>S<sub>10</sub> = 10(100 - 20 + 9)/2</p>
+
+<p>= 10 &times; 89/2</p>
+
+<p><strong>S<sub>10</sub> = 445.</strong></p>
+
+<hr>
+
+<h3>3. Find the nth term and the sum of the first 12 terms of the series 3 + 6 + 11 + 18 + 27 + ...</h3>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given series is</p>
+
+<p>3 + 6 + 11 + 18 + 27 + ...</p>
+
+<p>First differences: 3, 5, 7, 9, ...</p>
+
+<p>Second differences: 2, 2, 2, ...</p>
+
+<p>Let the nth term be</p>
+
+<p>t<sub>n</sub> = an<sup>2</sup> + bn + c</p>
+
+<p>Since the second difference is 2,</p>
+
+<p>2a = 2</p>
+
+<p>a = 1</p>
+
+<p>Therefore,</p>
+
+<p>t<sub>n</sub> = n<sup>2</sup> + bn + c</p>
+
+<p>For n = 1, t<sub>1</sub> = 3:</p>
+
+<p>1 + b + c = 3</p>
+
+<p>b + c = 2 ... (1)</p>
+
+<p>For n = 2, t<sub>2</sub> = 6:</p>
+
+<p>4 + 2b + c = 6</p>
+
+<p>2b + c = 2 ... (2)</p>
+
+<p>Subtracting equation (1) from equation (2),</p>
+
+<p>b = 0</p>
+
+<p>Therefore, c = 2.</p>
+
+<p>Hence,</p>
+
+<p><strong>t<sub>n</sub> = n<sup>2</sup> + 2.</strong></p>
+
+<p><strong>Finding the sum of the first 12 terms:</strong></p>
+
+<p>S<sub>12</sub> = &Sigma;<sub>k=1</sub><sup>12</sup> (k<sup>2</sup> + 2)</p>
+
+<p>= &Sigma;k<sup>2</sup> + 2 &times; 12</p>
+
+<p>Using the formula</p>
+
+<p>&Sigma;k<sup>2</sup> = n(n + 1)(2n + 1)/6</p>
+
+<p>We get</p>
+
+<p>S<sub>12</sub> = 12 &times; 13 &times; 25/6 + 24</p>
+
+<p>= 650 + 24</p>
+
+<p><strong>S<sub>12</sub> = 674.</strong></p>
+
+<hr>
+
+<h3>4. Find the 8th term and the sum of the first 8 terms of the series 4 + 13 + 28 + 49 + 76 + ...</h3>
+
+<p><strong>Solution:</strong></p>
+
+<p>The given series is</p>
+
+<p>4 + 13 + 28 + 49 + 76 + ...</p>
+
+<p>First differences: 9, 15, 21, 27, ...</p>
+
+<p>Second differences: 6, 6, 6, ...</p>
+
+<p>Let the nth term be</p>
+
+<p>t<sub>n</sub> = an<sup>2</sup> + bn + c</p>
+
+<p>Since the second difference is 6,</p>
+
+<p>2a = 6</p>
+
+<p>a = 3</p>
+
+<p>Therefore,</p>
+
+<p>t<sub>n</sub> = 3n<sup>2</sup> + bn + c</p>
+
+<p>For n = 1, t<sub>1</sub> = 4:</p>
+
+<p>3 + b + c = 4</p>
+
+<p>b + c = 1 ... (1)</p>
+
+<p>For n = 2, t<sub>2</sub> = 13:</p>
+
+<p>12 + 2b + c = 13</p>
+
+<p>2b + c = 1 ... (2)</p>
+
+<p>Subtracting equation (1) from equation (2),</p>
+
+<p>b = 0</p>
+
+<p>Therefore, c = 1.</p>
+
+<p>Hence,</p>
+
+<p><strong>t<sub>n</sub> = 3n<sup>2</sup> + 1.</strong></p>
+
+<p><strong>Finding the 8th term:</strong></p>
+
+<p>t<sub>8</sub> = 3 &times; 8<sup>2</sup> + 1</p>
+
+<p>= 3 &times; 64 + 1</p>
+
+<p><strong>t<sub>8</sub> = 193.</strong></p>
+
+<p><strong>Finding the sum of the first 8 terms:</strong></p>
+
+<p>S<sub>n</sub> = &Sigma;<sub>k=1</sub><sup>n</sup> (3k<sup>2</sup> + 1)</p>
+
+<p>= 3&Sigma;k<sup>2</sup> + n</p>
+
+<p>Using the formula for the sum of squares,</p>
+
+<p>S<sub>n</sub> = 3n(n + 1)(2n + 1)/6 + n</p>
+
+<p>= n(n + 1)(2n + 1)/2 + n</p>
+
+<p>Putting n = 8,</p>
+
+<p>S<sub>8</sub> = 8 &times; 9 &times; 17/2 + 8</p>
+
+<p>= 612 + 8</p>
+
+<p><strong>S<sub>8</sub> = 620.</strong></p>
+
+<hr>
+
+
 </section>
 
 
