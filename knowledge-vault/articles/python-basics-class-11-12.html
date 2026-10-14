@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Basics for Class 11 & 12: CBSE Notes, Programs and PYQ Practice | Saraswat Academy</title>
+<meta name="description" content="Complete CBSE Class 11 and 12 Python revision: data types, operators, conditions, loops, strings, lists, tuples, dictionaries, functions, recursion basics, file handling, CSV, binary files and stacks, with solved exam-style PYQs.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Saraswat Academy">
+<meta name="theme-color" content="#17365d">
+<link rel="canonical" href="https://www.saraswatacademy.in/knowledge-vault/articles/python-basics-class-11-12.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Saraswat Academy">
+<meta property="og:title" content="Python Basics for Class 11 & 12: CBSE Notes, Programs and PYQ Practice">
+<meta property="og:description" content="Understand the Python concepts CBSE students practise in Classes XI and XII with solved outputs, programs, file-handling patterns, stack operations and exam-style questions.">
+<meta property="og:url" content="https://www.saraswatacademy.in/knowledge-vault/articles/python-basics-class-11-12.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python Basics for Class 11 & 12">
+<meta name="twitter:description" content="CBSE-aligned Python notes, examples and solved PYQ-style practice for Classes XI and XII.">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/header.css">
+<link rel="stylesheet" href="/knowledge-vault/articles/articles.css">
+<script src="/loader.js"></script>
+<script src="/config.js"></script>
+<script src="/header.js"></script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"Article",
+ "headline":"Python Basics for Class 11 & 12: CBSE Notes, Programs and PYQ Practice",
+ "description":"CBSE-aligned Python notes for Classes XI and XII, including data types, control flow, strings, collections, functions, file handling, CSV, binary files, stacks and solved exam-style practice.",
+ "author":{"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},
+ "publisher":{"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},
+ "mainEntityOfPage":"https://www.saraswatacademy.in/knowledge-vault/articles/python-basics-class-11-12.html",
+ "inLanguage":"en-IN",
+ "educationalLevel":["Class 11","Class 12"],
+ "learningResourceType":"Study notes and exam practice"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://www.saraswatacademy.in/index.html"},
+  {"@type":"ListItem","position":2,"name":"Knowledge Vault","item":"https://www.saraswatacademy.in/knowledge-vault/index.html"},
+  {"@type":"ListItem","position":3,"name":"Python Basics for Class 11 & 12","item":"https://www.saraswatacademy.in/knowledge-vault/articles/python-basics-class-11-12.html"}
+ ]
+}
+</script>
+<style>
+.py-code{margin:12px 0 20px;border:1px solid #dbe4ee;border-radius:12px;overflow:hidden;background:#0f172a}
+.py-code pre{margin:0;padding:15px;overflow-x:auto;color:#e2e8f0;font:14px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre}
+.py-code code{font:inherit}
+.py-label{padding:8px 14px;background:#1e293b;color:#cbd5e1;font-size:12px;font-weight:700;letter-spacing:.04em}
+.py-note{margin:18px 0;padding:15px 18px;border-left:4px solid #0f766e;border-radius:10px;background:#f0fdfa}
+.py-warning{margin:18px 0;padding:15px 18px;border-left:4px solid #b45309;border-radius:10px;background:#fffbeb}
+.py-card{margin:16px 0;padding:18px 20px;border:1px solid #dbe4ee;border-radius:14px;background:#fff}
+.py-card h3{margin-top:0!important}
+.py-table-wrap{width:100%;overflow-x:auto;margin:14px 0 22px}
+.py-table-wrap table{width:100%;min-width:540px;border-collapse:collapse}
+.py-table-wrap th,.py-table-wrap td{padding:10px 12px;border:1px solid #dbe4ee;text-align:left;vertical-align:top}
+.py-table-wrap th{background:#eff6ff}
+.py-table-wrap td code{white-space:nowrap}
+.py-toc{padding:18px 22px;border:1px solid #dbe4ee;border-radius:14px;background:#f8fafc}
+.py-toc ul{columns:2;column-gap:34px}
+.py-toc li{break-inside:avoid;margin:5px 0}
+.py-toc a{color:#1d4ed8;text-decoration:none}
+.py-toc a:hover{text-decoration:underline}
+.py-output{padding:12px 15px;margin:-10px 0 18px;background:#f1f5f9;border-radius:0 0 10px 10px;color:#334155}
+.py-output strong{color:#17365d}
+@media(max-width:600px){.py-card{padding:15px}.py-code pre{font-size:13px}.py-toc ul{columns:1}}
+</style>
+</head>
+<body>
+<div id="header"></div>
+<main class="kva-page">
+<nav class="kva-breadcrumb" aria-label="Breadcrumb"><a href="/index.html">Home</a> → <a href="/knowledge-vault/index.html">Knowledge Vault</a> → <span>Python Basics for Class 11 &amp; 12</span></nav>
+<article class="kva-article">
+<header class="kva-hero">
+<p class="kva-eyebrow">TECHNOLOGY • CBSE COMPUTER SCIENCE • CLASSES XI–XII</p>
+<h1>Python Basics for Class 11 &amp; 12: Important Concepts, Programs and PYQ Practice</h1>
+<p class="kva-lead">Python becomes much easier when you understand what each line does instead of memorising programs. This guide brings together the core concepts, common code patterns and exam-style questions that students should practise for CBSE Computer Science in Classes XI and XII.</p>
+<p>Use it for concept revision, output prediction, programming practice and last-minute preparation. Examples are explained step by step, with special attention to common mistakes in school examinations.</p>
+</header>
+
+<div class="py-note"><strong>First, check your subject:</strong> this guide mainly follows the Python topics used in CBSE Computer Science (083). Class XI introduces programming fundamentals and collections. Class XII Computer Science revisits Python and emphasises functions, text/CSV/binary file handling and stacks, alongside SQL and networking. Informatics Practices (065) has a different emphasis in Class XII, including Pandas, data visualisation and SQL. Always match your preparation with the syllabus for your own subject and academic session.</div>
+
+<nav class="py-toc" aria-label="Contents">
+<strong>Jump to a topic</strong>
+<ul>
+<li><a href="#syllabus">CBSE scope and PYQ guidance</a></li>
+<li><a href="#fundamentals">Python fundamentals</a></li>
+<li><a href="#operators">Operators and expressions</a></li>
+<li><a href="#conditions">Conditions and loops</a></li>
+<li><a href="#strings">Strings</a></li>
+<li><a href="#lists">Lists</a></li>
+<li><a href="#tuples">Tuples</a></li>
+<li><a href="#dictionaries">Dictionaries</a></li>
+<li><a href="#functions">Functions</a></li>
+<li><a href="#files">Text file handling</a></li>
+<li><a href="#csv">CSV and binary files</a></li>
+<li><a href="#stacks">Stacks</a></li>
+<li><a href="#errors">Errors and debugging</a></li>
+<li><a href="#pyq">Solved PYQ-style practice</a></li>
+<li><a href="#revision">Final revision checklist</a></li>
+</ul>
+</nav>
+
+<section class="kva-section" id="syllabus">
+<h2>1. What CBSE asks you to prepare</h2>
+<p>Class XI school examinations are set by schools, so the exact annual paper and marks distribution can vary. Class XII board papers follow the published CBSE curriculum and sample-paper pattern. Across the Python portions, students should be comfortable reading code, predicting output, correcting errors and writing a complete function or program from a situation.</p>
+<div class="py-table-wrap"><table>
+<thead><tr><th>Class / area</th><th>High-priority Python topics</th><th>Common question formats</th></tr></thead>
+<tbody>
+<tr><td>Class XI foundations</td><td>Variables, tokens, data types, type conversion, operators, conditions, loops, strings, lists, tuples, dictionaries</td><td>MCQs, output prediction, trace a loop, write short programs, find errors</td></tr>
+<tr><td>Class XII Computer Science (083)</td><td>Python revision, functions, scope, text files, CSV files, binary files and stacks</td><td>Function-writing questions, file-processing algorithms, stack push/pop, output and error tracing</td></tr>
+<tr><td>Class XII Informatics Practices (065)</td><td>Python as needed for Pandas, Series/DataFrame operations, data visualisation, SQL and data handling</td><td>DataFrame/Series operations, plots, SQL queries and application questions</td></tr>
+</tbody></table></div>
+<h3>What “PYQ” means on this page</h3>
+<p>The worked questions below are <strong>original practice questions based on recurring CBSE question patterns</strong>, with some tasks adapted in wording and data for learning. They are not presented as verbatim copies of every question from every board-paper set. Class XI papers are generally school-set rather than one common nationwide CBSE board paper. For authentic paper wording, use the official CBSE sample papers, marking schemes and previous-year question-paper archive linked at the end.</p>
+<div class="py-note"><strong>Exam habit:</strong> In output questions, trace values line by line. In programming questions, use the function name and parameters exactly as given, respect indentation, handle empty files/stacks where required, and show the requested output or return value.</div>
+</section>
+
+<section class="kva-section" id="fundamentals">
+<h2>2. Python fundamentals</h2>
+<h3>2.1 A first program, comments and indentation</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>print("Hello, Python!")
+# This is a comment
+marks = 87
+print("Marks =", marks)</code></pre></div>
+<p><code>print()</code> displays output. A comment begins with <code>#</code> and is ignored by the interpreter. Indentation (spaces at the beginning of a line) defines a block in statements such as <code>if</code>, <code>for</code>, <code>while</code> and <code>def</code>. Use consistent indentation—normally four spaces.</p>
+
+<h3>2.2 Tokens, identifiers and keywords</h3>
+<ul>
+<li><strong>Keywords:</strong> reserved words such as <code>if</code>, <code>else</code>, <code>for</code>, <code>while</code>, <code>def</code>, <code>return</code>, <code>True</code> and <code>None</code>.</li>
+<li><strong>Identifiers:</strong> names for variables and functions. They may contain letters, digits and underscores, but cannot begin with a digit. Python is case-sensitive.</li>
+<li><strong>Literals:</strong> fixed values such as <code>25</code>, <code>3.5</code>, <code>"CBSE"</code> and <code>True</code>.</li>
+<li><strong>Operators:</strong> symbols/words that perform operations, such as <code>+</code>, <code>//</code> and <code>in</code>.</li>
+<li><strong>Punctuators:</strong> symbols such as parentheses, commas, colons and brackets.</li>
+</ul>
+<div class="py-card"><strong>Quick check:</strong> <code>total_marks</code> is a valid identifier; <code>2marks</code> is not. <code>score</code> and <code>Score</code> are different names.</div>
+
+<h3>2.3 Core data types</h3>
+<div class="py-table-wrap"><table><thead><tr><th>Type</th><th>Example</th><th>Important point</th></tr></thead><tbody>
+<tr><td><code>int</code></td><td><code>12</code></td><td>Whole number</td></tr>
+<tr><td><code>float</code></td><td><code>12.5</code></td><td>Number with a fractional part</td></tr>
+<tr><td><code>complex</code></td><td><code>2+3j</code></td><td>Complex number; <code>j</code> denotes the imaginary part</td></tr>
+<tr><td><code>bool</code></td><td><code>True</code>, <code>False</code></td><td>Logical values; capitalisation matters</td></tr>
+<tr><td><code>str</code></td><td><code>"Saraswat"</code></td><td>Text; immutable sequence</td></tr>
+<tr><td><code>list</code></td><td><code>[10, 20, 30]</code></td><td>Ordered and mutable</td></tr>
+<tr><td><code>tuple</code></td><td><code>(10, 20, 30)</code></td><td>Ordered and immutable</td></tr>
+<tr><td><code>dict</code></td><td><code>{"A": 90}</code></td><td>Stores key–value pairs; mutable</td></tr>
+<tr><td><code>NoneType</code></td><td><code>None</code></td><td>Represents the absence of a value</td></tr>
+</tbody></table></div>
+
+<h3>2.4 Input and type conversion</h3>
+<p><code>input()</code> returns text (a string), even if the user types digits. Convert the value when arithmetic is required.</p>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>name = input("Enter name: ")
+age = int(input("Enter age: "))
+percentage = float(input("Enter percentage: "))
+print(name, age, percentage)</code></pre></div>
+<p>Examples of explicit conversion: <code>int("25")</code> gives <code>25</code>; <code>float("4.5")</code> gives <code>4.5</code>; <code>str(18)</code> gives <code>"18"</code>. Converting <code>"4.5"</code> directly to <code>int</code> raises a <code>ValueError</code>.</p>
+</section>
+
+<section class="kva-section" id="operators">
+<h2>3. Operators and expressions</h2>
+<div class="py-table-wrap"><table><thead><tr><th>Operator group</th><th>Operators</th><th>Example / meaning</th></tr></thead><tbody>
+<tr><td>Arithmetic</td><td><code>+ - * / // % **</code></td><td><code>17 // 5</code> is <code>3</code>; <code>17 % 5</code> is <code>2</code></td></tr>
+<tr><td>Comparison</td><td><code>== != &gt; &lt; &gt;= &lt;=</code></td><td>Produce <code>True</code> or <code>False</code></td></tr>
+<tr><td>Logical</td><td><code>and or not</code></td><td>Combine or reverse conditions</td></tr>
+<tr><td>Assignment</td><td><code>= += -= *=</code> etc.</td><td><code>x += 2</code> means <code>x = x + 2</code></td></tr>
+<tr><td>Membership</td><td><code>in</code>, <code>not in</code></td><td><code>3 in [1,3,5]</code> is <code>True</code></td></tr>
+<tr><td>Identity</td><td><code>is</code>, <code>is not</code></td><td>Tests object identity, not general value equality</td></tr>
+</tbody></table></div>
+<h3>3.1 Division: a frequent output question</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>print(17 / 5)
+print(17 // 5)
+print(17 % 5)
+print(2 ** 3 ** 2)</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>3.4<br>3<br>2<br>512</div>
+<p><code>/</code> performs true division; <code>//</code> gives floor division; <code>%</code> gives the remainder. Exponentiation associates from right to left, so <code>2 ** 3 ** 2</code> means <code>2 ** (3 ** 2)</code>.</p>
+<h3>3.2 Trace the expression carefully</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>a = 7 + 3 * 2 ** 2
+print(a)</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>19</div>
+<p>Exponentiation is evaluated first: <code>2 ** 2 = 4</code>; then multiplication: <code>3 * 4 = 12</code>; then addition: <code>7 + 12 = 19</code>. Parentheses can make the intended order clearer.</p>
+<div class="py-warning"><strong>Common trap:</strong> <code>==</code> compares values; <code>=</code> assigns a value. Use <code>==</code> inside a condition when testing equality.</div>
+</section>
+
+<section class="kva-section" id="conditions">
+<h2>4. Conditional statements and loops</h2>
+<h3>4.1 if, if–else and if–elif–else</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>marks = 76
+if marks >= 90:
+    grade = "A1"
+elif marks >= 75:
+    grade = "A2"
+elif marks >= 60:
+    grade = "B"
+else:
+    grade = "C"
+print(grade)</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>A2</div>
+<p>Conditions are checked from top to bottom. The first true branch runs; later branches are skipped. A colon and an indented block are required.</p>
+
+<h3>4.2 for loop and range()</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>for i in range(2, 8, 2):
+    print(i, end=" ")</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>2 4 6</div>
+<p><code>range(start, stop, step)</code> includes the start (when reached) but excludes the stop. Therefore, <code>range(2, 8, 2)</code> produces 2, 4 and 6.</p>
+
+<h3>4.3 while loop, break and continue</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>n = 1
+while n <= 5:
+    if n == 3:
+        n += 1
+        continue
+    print(n, end=" ")
+    n += 1</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>1 2 4 5</div>
+<p><code>continue</code> skips the remaining statements in the current iteration. <code>break</code> exits the loop. In a <code>while</code> loop, update the control variable so that the loop can finish.</p>
+
+<h3>4.4 Classic programming questions</h3>
+<div class="py-card"><h3>Find the factorial of a number</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>n = int(input("Enter a non-negative integer: "))
+fact = 1
+for i in range(1, n + 1):
+    fact *= i
+print("Factorial =", fact)</code></pre></div>
+<p>For <code>n = 5</code>, the result is <code>120</code>. The initial value must be 1 because multiplying by 0 would make the result 0.</p></div>
+<div class="py-card"><h3>Check whether a number is prime</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>n = int(input("Enter an integer: "))
+if n < 2:
+    print("Not prime")
+else:
+    is_prime = True
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            is_prime = False
+            break
+    print("Prime" if is_prime else "Not prime")</code></pre></div>
+<p>A prime number is greater than 1 and has no positive divisors other than 1 and itself.</p></div>
+<div class="py-card"><h3>Sum the digits of a positive integer</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>n = int(input("Enter a positive integer: "))
+total = 0
+while n > 0:
+    total += n % 10
+    n //= 10
+print(total)</code></pre></div>
+<p>For input <code>482</code>, output is <code>14</code>. <code>n % 10</code> extracts the last digit and <code>n // 10</code> removes it.</p></div>
+</section>
+
+<section class="kva-section" id="strings">
+<h2>5. Strings: indexing, slicing and methods</h2>
+<p>A string is an immutable sequence of characters. Indexing starts at 0 from the left and at −1 from the right. A slice follows <code>text[start:stop:step]</code>; the stop index is excluded.</p>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>s = "COMPUTER"
+print(s[0], s[-1])
+print(s[1:5])
+print(s[::-1])
+print("put" in s.lower())</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>C R<br>OMPU<br>RETUPMOC<br>True</div>
+<p>The final line converts the string to lowercase before checking membership.</p>
+<h3>5.1 Useful string methods</h3>
+<div class="py-table-wrap"><table><thead><tr><th>Method / function</th><th>Purpose</th><th>Example</th></tr></thead><tbody>
+<tr><td><code>len(s)</code></td><td>Number of characters</td><td><code>len("CBSE")</code> → 4</td></tr>
+<tr><td><code>lower()</code>, <code>upper()</code>, <code>title()</code></td><td>Change letter case</td><td><code>"hello".upper()</code> → <code>"HELLO"</code></td></tr>
+<tr><td><code>count(sub)</code></td><td>Count occurrences</td><td><code>"banana".count("a")</code> → 3</td></tr>
+<tr><td><code>find(sub)</code></td><td>Index of first occurrence, or −1</td><td><code>"banana".find("na")</code> → 2</td></tr>
+<tr><td><code>index(sub)</code></td><td>Index of first occurrence; error if absent</td><td><code>"cat".index("a")</code> → 1</td></tr>
+<tr><td><code>replace(old,new)</code></td><td>Return a modified string</td><td><code>"a-b".replace("-"," ")</code> → <code>"a b"</code></td></tr>
+<tr><td><code>split()</code></td><td>Split into a list of words/parts</td><td><code>"a b c".split()</code> → <code>['a','b','c']</code></td></tr>
+<tr><td><code>strip()</code></td><td>Remove whitespace at both ends</td><td><code>" hi ".strip()</code> → <code>"hi"</code></td></tr>
+<tr><td><code>startswith()</code>, <code>endswith()</code></td><td>Test beginning or ending</td><td><code>"python.py".endswith(".py")</code> → <code>True</code></td></tr>
+<tr><td><code>isalpha()</code>, <code>isdigit()</code>, <code>isalnum()</code></td><td>Character tests</td><td><code>"123".isdigit()</code> → <code>True</code></td></tr>
+<tr><td><code>partition(sep)</code></td><td>Return a 3-part tuple</td><td><code>"a b".partition(" ")</code> → <code>('a',' ','b')</code></td></tr>
+</tbody></table></div>
+<h3>5.2 Exam-style output: partition()</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>print("Amrit Mahotsav @ 75".partition(" "))</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>('Amrit', ' ', 'Mahotsav @ 75')</div>
+<p><code>partition()</code> splits at the first occurrence of the separator and returns a tuple containing the part before it, the separator itself and the part after it. If the separator is absent, the original string is the first item and the other two items are empty strings.</p>
+<div class="py-warning"><strong>Remember:</strong> strings are immutable. A statement such as <code>s[0] = "X"</code> causes a <code>TypeError</code>. Methods such as <code>replace()</code> return a new string; assign it if you want to keep the result.</div>
+</section>
+
+<section class="kva-section" id="lists">
+<h2>6. Lists</h2>
+<p>A list is an ordered, mutable collection. It can contain mixed data types and nested lists. Lists are widely used in Class XI questions and to implement a stack in Class XII.</p>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>marks = [72, 88, 65, 91]
+marks.append(79)
+marks.insert(1, 80)
+marks.remove(65)
+print(marks)
+print(marks[1:4])
+print(sum(marks), max(marks), min(marks))</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>[72, 80, 88, 91, 79]<br>[80, 88, 91]<br>410 91 72</div>
+<h3>6.1 List methods you should know</h3>
+<div class="py-table-wrap"><table><thead><tr><th>Method / function</th><th>What it does</th><th>Exam caution</th></tr></thead><tbody>
+<tr><td><code>append(x)</code></td><td>Adds one item at the end</td><td><code>a.append([4,5])</code> adds a nested list as one item</td></tr>
+<tr><td><code>extend(items)</code></td><td>Adds each item from an iterable</td><td><code>a.extend([4,5])</code> adds two items</td></tr>
+<tr><td><code>insert(i,x)</code></td><td>Inserts at index <code>i</code></td><td>Existing items shift right</td></tr>
+<tr><td><code>remove(x)</code></td><td>Removes the first matching value</td><td>Raises an error if the value is absent</td></tr>
+<tr><td><code>pop()</code>, <code>pop(i)</code></td><td>Removes and returns last item or item at index</td><td>Raises an error on an empty list</td></tr>
+<tr><td><code>sort()</code></td><td>Sorts the list in place</td><td>Returns <code>None</code></td></tr>
+<tr><td><code>sorted(a)</code></td><td>Returns a new sorted list</td><td>Original list stays unchanged</td></tr>
+<tr><td><code>reverse()</code></td><td>Reverses list in place</td><td>Returns <code>None</code></td></tr>
+<tr><td><code>count(x)</code>, <code>index(x)</code></td><td>Count / find first index</td><td><code>index()</code> errors if absent</td></tr>
+<tr><td><code>len()</code>, <code>sum()</code>, <code>min()</code>, <code>max()</code></td><td>Useful built-in functions</td><td>Values must be compatible for comparison/summation</td></tr>
+</tbody></table></div>
+<h3>6.2 append() versus extend()</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>a = [1, 2]
+a.append([3, 4])
+print(a)
+
+b = [1, 2]
+b.extend([3, 4])
+print(b)</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>[1, 2, [3, 4]]<br>[1, 2, 3, 4]</div>
+<h3>6.3 Linear search and frequency count</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>numbers = [4, 7, 2, 7, 9]
+target = 7
+if target in numbers:
+    print("Found at index", numbers.index(target))
+else:
+    print("Not found")
+
+print("Frequency =", numbers.count(target))</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>Found at index 1<br>Frequency = 2</div>
+<p>For a question that asks you to write linear search yourself, use a loop and compare each element with the target rather than relying on <code>index()</code>.</p>
+<div class="py-code"><div class="py-label">PYTHON — LINEAR SEARCH</div><pre><code>numbers = [4, 7, 2, 7, 9]
+target = int(input("Search for: "))
+position = -1
+for i in range(len(numbers)):
+    if numbers[i] == target:
+        position = i
+        break
+if position == -1:
+    print("Not found")
+else:
+    print("Found at index", position)</code></pre></div>
+<h3>6.4 A subtle mutability question</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>a = [10, 20, 30]
+b = a
+b[0] = 99
+print(a)</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>[99, 20, 30]</div>
+<p><code>b = a</code> does not make a separate list; both names refer to the same list. Use <code>b = a.copy()</code> or <code>b = a[:]</code> for a shallow copy.</p>
+</section>
+
+<section class="kva-section" id="tuples">
+<h2>7. Tuples</h2>
+<p>A tuple is an ordered, immutable sequence. It supports indexing, slicing, membership, iteration and methods such as <code>count()</code> and <code>index()</code>.</p>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>t = (10, 20, 10, 40)
+print(t[1])
+print(t.count(10))
+print(t.index(40))
+print(t[1:3])
+single = (5,)
+print(type(single))</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>20<br>2<br>3<br>(20, 10)<br>&lt;class 'tuple'&gt;</div>
+<p>The comma creates a single-item tuple: <code>(5,)</code>. <code>(5)</code> is simply the integer 5 inside parentheses.</p>
+<h3>Nested list and tuple: a classic misconception</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>a = [1, 2, (3, 4)]
+a[2][1] = 5</code></pre></div>
+<p>This raises a <code>TypeError</code>. The outer list is mutable, but the item at index 2 is a tuple, and tuple elements cannot be reassigned. A list containing a tuple does not make the tuple itself mutable.</p>
+</section>
+
+<section class="kva-section" id="dictionaries">
+<h2>8. Dictionaries</h2>
+<p>A dictionary stores key–value pairs. Keys must be hashable and unique; assigning a value to an existing key updates that value. Dictionaries are mutable.</p>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>marks = {"Aarav": 88, "Diya": 94}
+marks["Kabir"] = 81
+marks["Aarav"] = 90
+print(marks["Diya"])
+print(marks.get("Riya", "Not found"))
+print(list(marks.keys()))
+print(list(marks.values()))
+print(list(marks.items()))</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>94<br>Not found<br>['Aarav', 'Diya', 'Kabir']<br>[90, 94, 81]<br>[('Aarav', 90), ('Diya', 94), ('Kabir', 81)]</div>
+<h3>8.1 Important dictionary methods</h3>
+<div class="py-table-wrap"><table><thead><tr><th>Method / statement</th><th>Purpose</th></tr></thead><tbody>
+<tr><td><code>keys()</code>, <code>values()</code>, <code>items()</code></td><td>View keys, values or key–value pairs</td></tr>
+<tr><td><code>get(key, default)</code></td><td>Read a value safely; return the default if absent</td></tr>
+<tr><td><code>update(other)</code></td><td>Add or update entries</td></tr>
+<tr><td><code>pop(key)</code></td><td>Remove a key and return its value</td></tr>
+<tr><td><code>popitem()</code></td><td>Remove and return the most recently inserted pair in modern Python</td></tr>
+<tr><td><code>clear()</code></td><td>Remove all entries</td></tr>
+<tr><td><code>del d[key]</code></td><td>Delete a specified key</td></tr>
+<tr><td><code>setdefault(key, default)</code></td><td>Return the value; insert the default if the key is missing</td></tr>
+<tr><td><code>len(d)</code>, <code>sorted(d)</code></td><td>Count entries / return sorted keys</td></tr>
+</tbody></table></div>
+<h3>8.2 Count each character using a dictionary</h3>
+<p>This is a useful long-answer pattern because it combines a loop, a condition and dictionary updates.</p>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>text = "banana"
+freq = {}
+for ch in text:
+    if ch in freq:
+        freq[ch] += 1
+    else:
+        freq[ch] = 1
+print(freq)</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>{'b': 1, 'a': 3, 'n': 2}</div>
+<p>Shorter equivalent: <code>freq[ch] = freq.get(ch, 0) + 1</code> inside the loop. If a question asks for a case-insensitive count, process <code>text.lower()</code> first.</p>
+<h3>8.3 Traverse a dictionary</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>salary = {"Aman": 25000, "Riya": 30000}
+for name, amount in salary.items():
+    print(name, amount)</code></pre></div>
+<p>Use <code>for key in d</code> to iterate over keys or <code>for key, value in d.items()</code> to access both components.</p>
+</section>
+
+<section class="kva-section" id="functions">
+<h2>9. Functions: parameters, return values and scope</h2>
+<p>A function is a named, reusable block of code. Define it with <code>def</code>. Parameters receive inputs; <code>return</code> sends a result back to the caller. <code>print()</code> displays a value but does not return it as the function's result.</p>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>def area_rectangle(length, breadth):
+    return length * breadth
+
+answer = area_rectangle(8, 5)
+print(answer)</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>40</div>
+<h3>9.1 print() versus return</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>def first():
+    print(5)
+
+def second():
+    return 5
+
+x = first()
+y = second()
+print(x, y)</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>5<br>None 5</div>
+<p>The first function displays 5 and then implicitly returns <code>None</code>. The second returns 5 to the caller.</p>
+<h3>9.2 Default and positional arguments</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>def greet(name, message="Welcome"):
+    print(message, name)
+
+greet("Asha")
+greet("Asha", "Good morning")</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>Welcome Asha<br>Good morning Asha</div>
+<h3>9.3 Local and global variables</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>x = 10
+
+def show():
+    x = 4
+    print(x)
+
+show()
+print(x)</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>4<br>10</div>
+<p>The assignment inside <code>show()</code> creates a local variable. It does not change the global <code>x</code>. Avoid using <code>global</code> unless the question specifically requires it.</p>
+<h3>9.4 A function to return the largest of three numbers</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>def largest(a, b, c):
+    if a >= b and a >= c:
+        return a
+    elif b >= a and b >= c:
+        return b
+    else:
+        return c
+
+print(largest(12, 27, 19))</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>27</div>
+<h3>9.5 Recursion: understand the base case</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(4))</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>24</div>
+<p>Each recursive call reduces the problem. The base case stops the calls. Whether recursion is part of your examinable syllabus depends on the prescribed course/session; learn it if your teacher or syllabus includes it.</p>
+</section>
+
+<section class="kva-section" id="files">
+<h2>10. Text file handling (Class XII Computer Science)</h2>
+<p>File questions often give a scenario and ask you to count, display, search or process words, lines or characters. Learn the difference between reading the whole file, reading one line and traversing line by line.</p>
+<div class="py-table-wrap"><table><thead><tr><th>Mode</th><th>Meaning</th><th>Important point</th></tr></thead><tbody>
+<tr><td><code>"r"</code></td><td>Read</td><td>File must exist</td></tr>
+<tr><td><code>"w"</code></td><td>Write</td><td>Creates a file or overwrites its existing contents</td></tr>
+<tr><td><code>"a"</code></td><td>Append</td><td>Adds content at the end</td></tr>
+<tr><td><code>"rb"</code>, <code>"wb"</code></td><td>Read/write binary</td><td>Used with binary data and pickled objects</td></tr>
+</tbody></table></div>
+<p>Prefer <code>with open(...)</code>: it closes the file automatically when the block ends.</p>
+<h3>10.1 Read and display a file</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>with open("Notes.txt", "r", encoding="utf-8") as f:
+    data = f.read()
+    print(data)</code></pre></div>
+<p>Common reading methods:</p>
+<ul><li><code>read()</code> reads the remaining content as one string.</li><li><code>readline()</code> reads one line.</li><li><code>readlines()</code> returns a list of lines.</li><li><code>for line in f:</code> processes the file one line at a time.</li></ul>
+<h3>10.2 Count words in a text file</h3>
+<div class="py-code"><div class="py-label">PYTHON — EXAM PATTERN</div><pre><code>def count_words():
+    with open("Notes.txt", "r", encoding="utf-8") as f:
+        text = f.read()
+    words = text.split()
+    print("Word count =", len(words))
+
+count_words()</code></pre></div>
+<p><code>split()</code> without an argument separates on runs of whitespace, so it handles multiple spaces and line breaks better than splitting on one literal space.</p>
+<h3>10.3 Count lines that contain a particular word</h3>
+<div class="py-code"><div class="py-label">PYTHON — EXAM PATTERN</div><pre><code>def count_python_lines():
+    count = 0
+    with open("Prog.txt", "r", encoding="utf-8") as f:
+        for line in f:
+            if "python" in line.lower():
+                count += 1
+    print("Matching lines =", count)</code></pre></div>
+<p>This counts matching <em>lines</em>, not every occurrence of the word. To count occurrences, split into words or use a suitable counting method and state how punctuation is handled.</p>
+<h3>10.4 Count vowels, uppercase letters and words</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>def analyse_file():
+    vowels = 0
+    uppercase = 0
+    words = 0
+    with open("Story.txt", "r", encoding="utf-8") as f:
+        for line in f:
+            words += len(line.split())
+            for ch in line:
+                if ch.lower() in "aeiou":
+                    vowels += 1
+                if ch.isupper():
+                    uppercase += 1
+    print("Vowels:", vowels)
+    print("Uppercase:", uppercase)
+    print("Words:", words)</code></pre></div>
+<p>Keep the counter initialisation outside the loop. If the task asks for words beginning with a particular letter, inspect each word after <code>split()</code>.</p>
+<h3>10.5 Write to a file</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>with open("Result.txt", "w", encoding="utf-8") as f:
+    f.write("Python is useful.\n")
+    f.write("Practise every day.\n")</code></pre></div>
+<p><code>write()</code> does not add a newline automatically. Include <code>\n</code> where a line break is needed.</p>
+<div class="py-warning"><strong>Exam caution:</strong> opening a file with mode <code>"w"</code> destroys its previous contents. Use it only when overwriting is intended. For practical work, make sure the named input file actually exists in the working directory.</div>
+</section>
+
+<section class="kva-section" id="csv">
+<h2>11. CSV and binary file basics (Class XII Computer Science)</h2>
+<h3>11.1 CSV files</h3>
+<p>CSV (comma-separated values) stores tabular records as text. Python's <code>csv</code> module handles quoted values and commas more reliably than manually splitting every line.</p>
+<div class="py-code"><div class="py-label">PYTHON — WRITE CSV</div><pre><code>import csv
+
+with open("students.csv", "w", newline="", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    writer.writerow(["RollNo", "Name", "Marks"])
+    writer.writerow([1, "Aarav", 88])
+    writer.writerow([2, "Diya", 94])</code></pre></div>
+<div class="py-code"><div class="py-label">PYTHON — READ CSV</div><pre><code>import csv
+
+with open("students.csv", "r", newline="", encoding="utf-8") as f:
+    reader = csv.reader(f)
+    for row in reader:
+        print(row)</code></pre></div>
+<p>Rows read by <code>csv.reader</code> are lists of strings. Convert numeric fields with <code>int()</code> or <code>float()</code> before calculations. If the syllabus specifically teaches <code>csv.writer</code> and <code>csv.reader</code>, practise their exact syntax.</p>
+
+<h3>11.2 Binary files and pickle</h3>
+<p>In CBSE Computer Science, binary-file programs commonly use the <code>pickle</code> module to write and retrieve Python records. The key operations are <code>pickle.dump()</code> to write and <code>pickle.load()</code> to read.</p>
+<div class="py-code"><div class="py-label">PYTHON — WRITE A RECORD</div><pre><code>import pickle
+
+record = [101, "Meera", 91]
+with open("student.dat", "wb") as f:
+    pickle.dump(record, f)</code></pre></div>
+<div class="py-code"><div class="py-label">PYTHON — READ RECORDS UNTIL EOF</div><pre><code>import pickle
+
+try:
+    with open("student.dat", "rb") as f:
+        while True:
+            record = pickle.load(f)
+            print(record)
+except EOFError:
+    pass</code></pre></div>
+<p><code>EOFError</code> signals that no more pickled objects remain. In a question requiring search or update, read each record, test the specified field and display or write the matching record as requested. When rewriting a binary file, take care not to lose records that do not match the update condition.</p>
+<div class="py-card"><h3>Binary-file search pattern</h3>
+<div class="py-code"><div class="py-label">PYTHON — ILLUSTRATIVE PATTERN</div><pre><code>import pickle
+
+def search_student(roll_to_find):
+    found = False
+    try:
+        with open("student.dat", "rb") as f:
+            while True:
+                rec = pickle.load(f)
+                if rec[0] == roll_to_find:
+                    print(rec)
+                    found = True
+    except EOFError:
+        pass
+    if not found:
+        print("Record not found")</code></pre></div>
+<p>This assumes each stored record is a list whose first element is the roll number. Match the record structure given in the examination question.</p></div>
+</section>
+
+<section class="kva-section" id="stacks">
+<h2>12. Stack using a Python list</h2>
+<p>A stack follows <strong>LIFO</strong>—Last In, First Out. The most recently pushed item is the first one popped. A Python list is commonly used to implement a stack.</p>
+<ul><li><strong>Push:</strong> insert an item at the top, usually with <code>append()</code>.</li><li><strong>Pop:</strong> remove and return the top item, usually with <code>pop()</code>.</li><li><strong>Underflow:</strong> attempt to pop from an empty stack.</li><li><strong>Display/peek:</strong> inspect items or the top without deleting them, according to the question.</li></ul>
+<div class="py-code"><div class="py-label">PYTHON — BASIC STACK</div><pre><code>stack = []
+stack.append("Red")
+stack.append("Blue")
+stack.append("Green")
+print(stack)
+print("Popped:", stack.pop())
+print(stack)</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>['Red', 'Blue', 'Green']<br>Popped: Green<br>['Red', 'Blue']</div>
+<h3>12.1 Exam-ready push, pop and display functions</h3>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>def push_item(stack, item):
+    stack.append(item)
+
+def pop_item(stack):
+    if len(stack) == 0:
+        print("Stack Underflow")
+        return None
+    return stack.pop()
+
+def display_stack(stack):
+    if len(stack) == 0:
+        print("Empty Stack")
+    else:
+        for item in reversed(stack):
+            print(item)</code></pre></div>
+<p>Use the exact function names and empty-stack messages stated in the question. If the task says display all items without deleting them, do not call <code>pop()</code> during display.</p>
+<h3>12.2 Push the last five elements of a list</h3>
+<div class="py-code"><div class="py-label">PYTHON — EXAM-STYLE QUESTION</div><pre><code>def push_trail(N, myStack):
+    for item in N[-5:]:
+        myStack.append(item)
+
+N = [1, 2, 3, 4, 5, 6, 7]
+myStack = []
+push_trail(N, myStack)
+print(myStack)</code></pre></div>
+<div class="py-output"><strong>Output</strong><br>[3, 4, 5, 6, 7]</div>
+<p><code>N[-5:]</code> selects the last five elements in their original order. This is a concise solution when the question guarantees that the list contains at least five elements.</p>
+</section>
+
+<section class="kva-section" id="errors">
+<h2>13. Common errors and how to avoid them</h2>
+<div class="py-table-wrap"><table><thead><tr><th>Error / issue</th><th>Typical cause</th><th>Correction</th></tr></thead><tbody>
+<tr><td><code>SyntaxError</code></td><td>Missing colon, unmatched bracket or invalid syntax</td><td>Check punctuation and statement structure</td></tr>
+<tr><td><code>NameError</code></td><td>Using a variable/function name that is not defined</td><td>Check spelling and scope</td></tr>
+<tr><td><code>TypeError</code></td><td>Unsupported operation for the given types</td><td>Convert compatible types or correct the operation</td></tr>
+<tr><td><code>ValueError</code></td><td>Valid function, unsuitable value such as <code>int("abc")</code></td><td>Validate the input before conversion</td></tr>
+<tr><td><code>IndexError</code></td><td>List/string index is outside its valid range</td><td>Check length and indexing</td></tr>
+<tr><td><code>KeyError</code></td><td>Accessing a missing dictionary key with square brackets</td><td>Use <code>get()</code> when a missing key is expected</td></tr>
+<tr><td><code>IndentationError</code></td><td>Inconsistent or missing indentation</td><td>Indent blocks consistently</td></tr>
+<tr><td>Infinite loop</td><td>Loop condition never becomes false</td><td>Update the control variable or use a correct exit condition</td></tr>
+</tbody></table></div>
+<h3>Find the mistake</h3>
+<div class="py-code"><div class="py-label">INCORRECT CODE</div><pre><code>for i in range(1, 5)
+    print(i)</code></pre></div>
+<p><strong>Correction:</strong> place a colon after <code>range(1, 5)</code>.</p>
+<div class="py-code"><div class="py-label">INCORRECT CODE</div><pre><code>age = input("Age: ")
+print(age + 1)</code></pre></div>
+<p><strong>Correction:</strong> use <code>age = int(input("Age: "))</code> if an integer age is intended.</p>
+</section>
+
+<section class="kva-section" id="pyq">
+<h2>14. Solved CBSE PYQ-style practice set</h2>
+<p>These questions mirror the formats that appear in school and board-style Computer Science papers: MCQs, output prediction, short code tracing, function-writing, file handling and stack operations. They are rewritten practice items, not a claim that each line appeared verbatim in an official paper.</p>
+
+<div class="py-card"><span class="py-badge">1 mark • Output</span><h3>Q1. Predict the output.</h3>
+<div class="py-code"><div class="py-label">QUESTION</div><pre><code>x = 7 * 8 / 5 // 2
+print(x)</code></pre></div>
+<details><summary><strong>Show solution</strong></summary>
+<p><strong>Answer:</strong> <code>5.0</code></p>
+<p><code>7 * 8 = 56</code>; <code>56 / 5 = 11.2</code>; then <code>11.2 // 2 = 5.0</code> because floor division on a float produces a float result.</p></details></div>
+
+<div class="py-card"><span class="py-badge">1 mark • Identifier</span><h3>Q2. Which is an invalid Python identifier?</h3>
+<p>(a) <code>CS_345</code> &nbsp; (b) <code>_345</code> &nbsp; (c) <code>345_</code> &nbsp; (d) <code>CS345</code></p>
+<details><summary><strong>Show solution</strong></summary><p><strong>Answer: (c) <code>345_</code>.</strong> An identifier cannot begin with a digit.</p></details></div>
+
+<div class="py-card"><span class="py-badge">1 mark • String</span><h3>Q3. What does this print?</h3>
+<div class="py-code"><div class="py-label">QUESTION</div><pre><code>s = "This is Computer Science"
+print(s.find("i"))</code></pre></div>
+<details><summary><strong>Show solution</strong></summary><p><strong>Answer: <code>2</code>.</strong> The first <code>i</code> is at index 2 because indexing begins at zero. <code>find()</code> returns −1 when the substring is not found.</p></details></div>
+
+<div class="py-card"><span class="py-badge">1–2 marks • List methods</span><h3>Q4. Predict the output.</h3>
+<div class="py-code"><div class="py-label">QUESTION</div><pre><code>a = [2, 4, 6]
+print(a.append(8))
+print(a)</code></pre></div>
+<details><summary><strong>Show solution</strong></summary><p><strong>Answer:</strong><br><code>None</code><br><code>[2, 4, 6, 8]</code></p><p><code>append()</code> changes the original list and returns <code>None</code>.</p></details></div>
+
+<div class="py-card"><span class="py-badge">2 marks • Trace a loop</span><h3>Q5. Find the output.</h3>
+<div class="py-code"><div class="py-label">QUESTION</div><pre><code>total = 0
+for i in range(1, 6):
+    if i % 2 == 0:
+        total += i
+print(total)</code></pre></div>
+<details><summary><strong>Show solution</strong></summary><p><strong>Answer: <code>6</code>.</strong> The even values are 2 and 4, so the total is 2 + 4 = 6.</p></details></div>
+
+<div class="py-card"><span class="py-badge">2 marks • String methods</span><h3>Q6. What is the result?</h3>
+<div class="py-code"><div class="py-label">QUESTION</div><pre><code>word = "Mississippi"
+print(word.count("ss"))
+print(word.replace("ss", "X"))</code></pre></div>
+<details><summary><strong>Show solution</strong></summary><p><strong>Answer:</strong><br><code>2</code><br><code>MiXiXippi</code></p><p>The non-overlapping substring <code>"ss"</code> occurs twice. <code>replace()</code> replaces each matching occurrence.</p></details></div>
+
+<div class="py-card"><span class="py-badge">2 marks • Dictionary</span><h3>Q7. Predict the output.</h3>
+<div class="py-code"><div class="py-label">QUESTION</div><pre><code>d = {"A": 2, "B": 3}
+d["A"] = d["A"] + 4
+d["C"] = 5
+print(len(d), d["A"])</code></pre></div>
+<details><summary><strong>Show solution</strong></summary><p><strong>Answer: <code>3 6</code>.</strong> The value for A changes to 6, and C is added as a new key. There are three keys.</p></details></div>
+
+<div class="py-card"><span class="py-badge">2–3 marks • Write a program</span><h3>Q8. Write a function to count the vowels in a string.</h3>
+<details><summary><strong>Show solution</strong></summary>
+<div class="py-code"><div class="py-label">MODEL ANSWER</div><pre><code>def count_vowels(text):
+    count = 0
+    for ch in text.lower():
+        if ch in "aeiou":
+            count += 1
+    return count
+
+print(count_vowels("Computer Science"))</code></pre></div>
+<p><strong>Output:</strong> <code>6</code>. The function returns the count, so the caller can display or reuse it.</p></details></div>
+
+<div class="py-card"><span class="py-badge">3 marks • Lists</span><h3>Q9. Write a program to find the maximum, minimum and average of numbers in a list.</h3>
+<details><summary><strong>Show solution</strong></summary>
+<div class="py-code"><div class="py-label">MODEL ANSWER</div><pre><code>numbers = [12, 18, 9, 21, 15]
+if len(numbers) > 0:
+    print("Maximum =", max(numbers))
+    print("Minimum =", min(numbers))
+    print("Average =", sum(numbers) / len(numbers))
+else:
+    print("List is empty")</code></pre></div>
+<p><strong>Output:</strong> Maximum = 21; Minimum = 9; Average = 15.0.</p></details></div>
+
+<div class="py-card"><span class="py-badge">3 marks • Function</span><h3>Q10. Write a function that accepts a list and returns a new list containing only even numbers.</h3>
+<details><summary><strong>Show solution</strong></summary>
+<div class="py-code"><div class="py-label">MODEL ANSWER</div><pre><code>def even_numbers(values):
+    result = []
+    for value in values:
+        if value % 2 == 0:
+            result.append(value)
+    return result
+
+print(even_numbers([3, 8, 11, 14, 20]))</code></pre></div>
+<p><strong>Output:</strong> <code>[8, 14, 20]</code>.</p></details></div>
+
+<div class="py-card"><span class="py-badge">3 marks • Text file</span><h3>Q11. Write a function to count how many times the word “python” occurs in a text file, ignoring case.</h3>
+<details><summary><strong>Show solution</strong></summary>
+<div class="py-code"><div class="py-label">MODEL ANSWER</div><pre><code>def count_python():
+    count = 0
+    with open("Prog.txt", "r", encoding="utf-8") as f:
+        words = f.read().lower().split()
+    for word in words:
+        word = word.strip(".,!?;:()[]{}\"'")
+        if word == "python":
+            count += 1
+    print("Python occurs", count, "times.")</code></pre></div>
+<p>This solution ignores case and removes common punctuation around a word. If your textbook or question defines a simpler counting rule, follow that rule exactly.</p></details></div>
+
+<div class="py-card"><span class="py-badge">3 marks • Stack</span><h3>Q12. Write a pop function that returns the top item, or displays “Stack Underflow” and returns None when empty.</h3>
+<details><summary><strong>Show solution</strong></summary>
+<div class="py-code"><div class="py-label">MODEL ANSWER</div><pre><code>def pop_one(myStack):
+    if len(myStack) == 0:
+        print("Stack Underflow")
+        return None
+    return myStack.pop()</code></pre></div>
+<p>The empty check must occur before calling <code>pop()</code>.</p></details></div>
+
+<div class="py-card"><span class="py-badge">4–5 marks • Dictionary</span><h3>Q13. Create a dictionary that records the frequency of each character in an input string.</h3>
+<details><summary><strong>Show solution</strong></summary>
+<div class="py-code"><div class="py-label">MODEL ANSWER</div><pre><code>value = input("Enter a string: ")
+D = {}
+for ch in value:
+    if ch in D:
+        D[ch] += 1
+    else:
+        D[ch] = 1
+print(D)</code></pre></div>
+<p>For input <code>Mussoorie</code>, the frequency dictionary records each distinct character and its number of appearances. The code is case-sensitive, so uppercase and lowercase letters are separate keys.</p></details></div>
+
+<div class="py-card"><span class="py-badge">4–5 marks • CSV</span><h3>Q14. Read a CSV file and display records whose marks are at least 80.</h3>
+<details><summary><strong>Show solution</strong></summary>
+<div class="py-code"><div class="py-label">MODEL ANSWER</div><pre><code>import csv
+
+with open("students.csv", "r", newline="", encoding="utf-8") as f:
+    reader = csv.reader(f)
+    header = next(reader, None)
+    for row in reader:
+        if row and float(row[2]) >= 80:
+            print(row)</code></pre></div>
+<p>This assumes the first row is a header and marks are stored in the third column. Adapt the index to the record structure in the question.</p></details></div>
+
+<div class="py-card"><span class="py-badge">4–5 marks • Binary file</span><h3>Q15. A binary file stores records as [roll number, name, marks]. Display the records with marks above 90.</h3>
+<details><summary><strong>Show solution</strong></summary>
+<div class="py-code"><div class="py-label">MODEL ANSWER</div><pre><code>import pickle
+
+def display_above_90():
+    try:
+        with open("student.dat", "rb") as f:
+            while True:
+                rec = pickle.load(f)
+                if rec[2] > 90:
+                    print(rec)
+    except EOFError:
+        pass</code></pre></div>
+<p>Index 2 refers to marks in the assumed record format. Handle end-of-file with <code>EOFError</code> as shown.</p></details></div>
+
+<div class="py-card"><span class="py-badge">4–5 marks • Output + concept</span><h3>Q16. Explain why this code fails.</h3>
+<div class="py-code"><div class="py-label">QUESTION</div><pre><code>t = (1, 2, 3)
+t[0] = 9</code></pre></div>
+<details><summary><strong>Show solution</strong></summary><p>It raises <code>TypeError</code> because tuples are immutable. To change an element, create a new tuple or use a list if modification is required.</p></details></div>
+</section>
+
+<section class="kva-section" id="revision">
+<h2>15. Last-minute revision checklist</h2>
+<ul>
+<li>Know the difference between <code>/</code>, <code>//</code>, <code>%</code> and <code>**</code>.</li>
+<li>Practise string slicing, negative indexing, <code>find()</code>, <code>count()</code>, <code>split()</code> and <code>partition()</code>.</li>
+<li>Know which list methods mutate the list and which built-in functions return a new result.</li>
+<li>Remember: strings and tuples are immutable; lists and dictionaries are mutable.</li>
+<li>Trace nested loops and <code>range()</code> boundaries without skipping iterations.</li>
+<li>Write functions with correct parameters, indentation and a suitable <code>return</code>.</li>
+<li>For text files, distinguish <code>read()</code>, <code>readline()</code>, <code>readlines()</code> and line-by-line processing.</li>
+<li>For CSV, use <code>csv.reader</code>/<code>csv.writer</code> and convert numeric strings before arithmetic.</li>
+<li>For binary files, know <code>pickle.dump()</code>, <code>pickle.load()</code>, <code>wb</code>, <code>rb</code> and <code>EOFError</code>.</li>
+<li>For stacks, remember LIFO, push with <code>append()</code>, pop with <code>pop()</code>, and check for underflow.</li>
+<li>Read the question carefully: preserve the requested function name, filename, field order and exact message.</li>
+<li>Practise official sample papers and marking schemes under timed conditions.</li>
+</ul>
+</section>
+
+<section class="kva-section">
+<h2>16. Official CBSE resources and further practice</h2>
+<p>Use the official resources below to confirm the topics for your academic session and to practise with authentic question papers and marking schemes.</p>
+<ul>
+<li><a href="https://cbseacademic.nic.in/curriculum_2026.html" target="_blank" rel="noopener noreferrer">CBSE Curriculum 2025–26</a> — check the Class XI/XII Computer Science or Informatics Practices syllabus for the session relevant to you.</li>
+<li><a href="https://cbseacademic.nic.in/SQP_CLASSXII_2025-26.html" target="_blank" rel="noopener noreferrer">CBSE Class XII Sample Question Papers and Marking Schemes 2025–26</a> — includes Computer Science and Informatics Practices sample materials.</li>
+<li><a href="https://www.cbse.gov.in/cbsenew/question-paper.html" target="_blank" rel="noopener noreferrer">CBSE Previous-Year Question Papers</a> — official question-paper archive; select the examination year and subject.</li>
+<li><a href="https://www.cbse.gov.in/cbsenew/marking-scheme.html" target="_blank" rel="noopener noreferrer">CBSE Marking Schemes</a> — use these to understand expected answer structure and mark allocation.</li>
+<li><a href="https://cbseacademic.nic.in/web_material/Manuals/ComputerScience_LF.pdf" target="_blank" rel="noopener noreferrer">CBSE Computer Science Learning Framework</a> — supporting learning outcomes for topics such as file handling and stacks.</li>
+</ul>
+<div class="py-note"><strong>Preparation tip:</strong> Solve a paper first without looking at the answer key. Then compare your code with the official marking scheme and practise the questions you missed again after a day. Understanding the trace is more valuable than memorising a single output.</div>
+</section>
+
+<section class="kva-section">
+<h2>Frequently asked questions</h2>
+<div class="kva-faq">
+<details><summary>Is this page enough for the complete CBSE Class 11 and 12 Computer Science syllabus?</summary><p>This is a Python-focused revision guide, not the entire Computer Science syllabus. You must also study the other prescribed units, such as computer systems and networks in Class XI, and SQL/database concepts and networking in Class XII, as applicable to your course and session.</p></details>
+<details><summary>Are all questions on this page exact previous-year CBSE questions?</summary><p>No. The solved set is clearly labelled PYQ-style practice and uses common exam formats and recurring concepts. Follow the official CBSE paper links for exact paper sets and wording.</p></details>
+<details><summary>Should Class 12 students study Pandas from this page?</summary><p>Students taking Informatics Practices should also study the prescribed Pandas and data-visualisation topics. This page is primarily centred on the Python topics commonly taught in Computer Science (083), with a note about the different IP syllabus.</p></details>
+<details><summary>Which Python topics should I practise first?</summary><p>Begin with data types, operators, conditions, loops, strings and lists. Then practise dictionaries and functions. For Class XII Computer Science, give dedicated practice time to text/CSV/binary file handling and stack programs.</p></details>
+</div>
+</section>
+</article>
+</main>
+<div id="footer"></div>
+<script src="/footer.js"></script>
+</body>
+</html>
