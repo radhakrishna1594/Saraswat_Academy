@@ -53,7 +53,7 @@
 .py-code pre{margin:0;padding:15px;overflow-x:auto;color:#e2e8f0;font:14px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre}
 .py-code code{font:inherit}
 .py-label{padding:8px 14px;background:#1e293b;color:#cbd5e1;font-size:12px;font-weight:700;letter-spacing:.04em}
-.py-note{margin:18px 0;padding:15px 18px;border-left:4px solid #0f766e;border-radius:10px;background:#f0fdfa}
+.py-badge{display:inline-block;margin:0 0 8px;padding:4px 9px;border-radius:999px;background:#eff6ff;color:#17365d;font-size:12px;font-weight:700}.py-note{margin:18px 0;padding:15px 18px;border-left:4px solid #0f766e;border-radius:10px;background:#f0fdfa}
 .py-warning{margin:18px 0;padding:15px 18px;border-left:4px solid #b45309;border-radius:10px;background:#fffbeb}
 .py-card{margin:16px 0;padding:18px 20px;border:1px solid #dbe4ee;border-radius:14px;background:#fff}
 .py-card h3{margin-top:0!important}
@@ -484,6 +484,16 @@ print(factorial(4))</code></pre></div>
     print(data)</code></pre></div>
 <p>Common reading methods:</p>
 <ul><li><code>read()</code> reads the remaining content as one string.</li><li><code>readline()</code> reads one line.</li><li><code>readlines()</code> returns a list of lines.</li><li><code>for line in f:</code> processes the file one line at a time.</li></ul>
+<h3>10.1A File pointer: seek() and tell()</h3>
+<p><code>tell()</code> returns the current position of the file pointer. <code>seek(position)</code> moves the pointer to a specified position.</p>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>with open("Notes.txt", "r", encoding="utf-8") as f:
+    print(f.tell())
+    first = f.read(5)
+    print(first)
+    print(f.tell())
+    f.seek(0)
+    print(f.readline())</code></pre></div>
+<p>The initial pointer position is normally 0. After reading, the position advances; <code>seek(0)</code> returns it to the beginning.</p>
 <h3>10.2 Count words in a text file</h3>
 <div class="py-code"><div class="py-label">PYTHON — EXAM PATTERN</div><pre><code>def count_words():
     with open("Notes.txt", "r", encoding="utf-8") as f:
@@ -523,7 +533,7 @@ count_words()</code></pre></div>
 <div class="py-code"><div class="py-label">PYTHON</div><pre><code>with open("Result.txt", "w", encoding="utf-8") as f:
     f.write("Python is useful.\n")
     f.write("Practise every day.\n")</code></pre></div>
-<p><code>write()</code> does not add a newline automatically. Include <code>\n</code> where a line break is needed.</p>
+<p><code>write()</code> does not add a newline automatically. Include <code>\n</code> where a line break is needed. <code>writelines()</code> writes each string from an iterable, but it does not insert newline characters automatically.</p>
 <div class="py-warning"><strong>Exam caution:</strong> opening a file with mode <code>"w"</code> destroys its previous contents. Use it only when overwriting is intended. For practical work, make sure the named input file actually exists in the working directory.</div>
 </section>
 
@@ -546,6 +556,25 @@ with open("students.csv", "r", newline="", encoding="utf-8") as f:
         print(row)</code></pre></div>
 <p>Rows read by <code>csv.reader</code> are lists of strings. Convert numeric fields with <code>int()</code> or <code>float()</code> before calculations. If the syllabus specifically teaches <code>csv.writer</code> and <code>csv.reader</code>, practise their exact syntax.</p>
 
+<h3>11.3 Exception handling: try, except and finally</h3>
+<p>The current Class XII Computer Science syllabus includes handling exceptions. A <code>try</code> block contains code that may fail; <code>except</code> handles a specified error; <code>finally</code> runs whether an exception occurs or not.</p>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>try:
+    number = int(input("Enter a number: "))
+    print(100 / number)
+except ValueError:
+    print("Please enter an integer.")
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+finally:
+    print("Program finished.")</code></pre></div>
+<p>Use specific exceptions where possible. Avoid a broad <code>except:</code> unless the question explicitly calls for it.</p>
+<h3>11.4 File modes at a glance</h3>
+<div class="py-table-wrap"><table><thead><tr><th>Mode</th><th>Meaning</th></tr></thead><tbody>
+<tr><td><code>r+</code></td><td>Read and write an existing file; pointer begins at the start.</td></tr>
+<tr><td><code>w+</code></td><td>Read and write; creates or truncates the file.</td></tr>
+<tr><td><code>a+</code></td><td>Read and append; writes go to the end.</td></tr>
+<tr><td><code>rb+</code>, <code>wb+</code>, <code>ab+</code></td><td>Binary equivalents for read/write, write/read and append/read operations.</td></tr>
+</tbody></table></div>
 <h3>11.2 Binary files and pickle</h3>
 <p>In CBSE Computer Science, binary-file programs commonly use the <code>pickle</code> module to write and retrieve Python records. The key operations are <code>pickle.dump()</code> to write and <code>pickle.load()</code> to read.</p>
 <div class="py-code"><div class="py-label">PYTHON — WRITE A RECORD</div><pre><code>import pickle
@@ -816,8 +845,8 @@ t[0] = 9</code></pre></div>
 <h2>16. Official CBSE resources and further practice</h2>
 <p>Use the official resources below to confirm the topics for your academic session and to practise with authentic question papers and marking schemes.</p>
 <ul>
-<li><a href="https://cbseacademic.nic.in/curriculum_2026.html" target="_blank" rel="noopener noreferrer">CBSE Curriculum 2025–26</a> — check the Class XI/XII Computer Science or Informatics Practices syllabus for the session relevant to you.</li>
-<li><a href="https://cbseacademic.nic.in/SQP_CLASSXII_2025-26.html" target="_blank" rel="noopener noreferrer">CBSE Class XII Sample Question Papers and Marking Schemes 2025–26</a> — includes Computer Science and Informatics Practices sample materials.</li>
+<li><a href="https://cbseacademic.nic.in/curriculum_2027.html" target="_blank" rel="noopener noreferrer">CBSE Curriculum 2026–27</a> — check the current Class XI/XII Computer Science or Informatics Practices syllabus for your subject.</li><li><a href="https://cbseacademic.nic.in/web_material/CurriculumMain27/SecPart2/Computer_Science_SecP2_2026-27.pdf" target="_blank" rel="noopener noreferrer">Official Computer Science syllabus PDF (2026–27)</a> — includes Class XI Python and Class XII functions, exception handling, file handling and stacks.</li>
+<li><a href="https://cbseacademic.nic.in/SQP_CLASSXII_2026-27.html" target="_blank" rel="noopener noreferrer">CBSE Class XII Sample Question Papers and Marking Schemes 2026–27</a> — check this page for the current session’s official sample materials.</li><li><a href="https://cbseacademic.nic.in/SQP_CLASSXII_2025-26.html" target="_blank" rel="noopener noreferrer">CBSE Class XII Sample Papers and Marking Schemes 2025–26</a> — useful for additional practice with the previous session’s sample paper.</li><li><a href="https://www.cbse.gov.in/cbsenew/question-paper/2025/XII/91_COMPUTER_SCIENCE.pdf" target="_blank" rel="noopener noreferrer">Official CBSE Class XII Computer Science board paper (2025, Code 91)</a> — includes Python stack and function-writing questions.</li>
 <li><a href="https://www.cbse.gov.in/cbsenew/question-paper.html" target="_blank" rel="noopener noreferrer">CBSE Previous-Year Question Papers</a> — official question-paper archive; select the examination year and subject.</li>
 <li><a href="https://www.cbse.gov.in/cbsenew/marking-scheme.html" target="_blank" rel="noopener noreferrer">CBSE Marking Schemes</a> — use these to understand expected answer structure and mark allocation.</li>
 <li><a href="https://cbseacademic.nic.in/web_material/Manuals/ComputerScience_LF.pdf" target="_blank" rel="noopener noreferrer">CBSE Computer Science Learning Framework</a> — supporting learning outcomes for topics such as file handling and stacks.</li>
