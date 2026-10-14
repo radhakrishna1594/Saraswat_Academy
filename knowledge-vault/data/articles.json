@@ -1,5 +1,15 @@
 [
   {
+    "title": "Python Basics for Class 11 & 12: Important Concepts, Programs and PYQ Practice",
+    "category": "Technology",
+    "subcategory": "Computer Science and Programming",
+    "level": "Classes 11–12 • CBSE Computer Science",
+    "icon": "🐍",
+    "description": "CBSE-aligned Python revision covering data types, operators, loops, strings, lists, tuples, dictionaries, functions, text/CSV/binary file handling and stacks, with solved exam-style questions and official paper links.",
+    "url": "/knowledge-vault/articles/python-basics-class-11-12.html",
+    "keywords": "Python basics class 11 class 12 CBSE Computer Science Python programs PYQ practice output questions strings lists tuples dictionaries functions text file handling CSV binary files pickle stack push pop loops operators data types"
+  },
+  {
     "title": "Basics of SQL: Important Commands, Codes and Examples",
     "category": "Technology",
     "subcategory": "Databases and Programming",
