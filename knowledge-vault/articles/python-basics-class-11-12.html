@@ -92,7 +92,7 @@
 <li><a href="#syllabus">CBSE scope and PYQ guidance</a></li>
 <li><a href="#fundamentals">Python fundamentals</a></li>
 <li><a href="#operators">Operators and expressions</a></li>
-<li><a href="#conditions">Conditions and loops</a></li>
+<li><a href="#modules">Python modules</a></li><li><a href="#conditions">Conditions and loops</a></li>
 <li><a href="#strings">Strings</a></li>
 <li><a href="#lists">Lists</a></li>
 <li><a href="#tuples">Tuples</a></li>
@@ -186,6 +186,24 @@ print(a)</code></pre></div>
 <div class="py-output"><strong>Output</strong><br>19</div>
 <p>Exponentiation is evaluated first: <code>2 ** 2 = 4</code>; then multiplication: <code>3 * 4 = 12</code>; then addition: <code>7 + 12 = 19</code>. Parentheses can make the intended order clearer.</p>
 <div class="py-warning"><strong>Common trap:</strong> <code>==</code> compares values; <code>=</code> assigns a value. Use <code>==</code> inside a condition when testing equality.</div>
+</section>
+
+<section class="kva-section" id="modules">
+<h2>3A. Python modules: math, random and statistics</h2>
+<p>The current Class XI Computer Science syllabus lists the <code>math</code>, <code>random</code> and <code>statistics</code> modules. Import a module before using its functions, or import selected functions directly.</p>
+<div class="py-code"><div class="py-label">PYTHON</div><pre><code>import math
+import random
+import statistics
+
+print(math.sqrt(81))
+print(math.ceil(4.2))
+print(math.floor(4.8))
+print(random.randint(1, 6))
+print(statistics.mean([10, 20, 30]))</code></pre></div>
+<p>The random result can vary each time the program runs. <code>randint(1, 6)</code> can return either endpoint, including 1 and 6. Other syllabus-listed examples include <code>math.pi</code>, <code>math.e</code>, <code>math.pow()</code>, <code>random.randrange()</code>, <code>statistics.median()</code> and <code>statistics.mode()</code>.</p>
+<div class="py-code"><div class="py-label">ALTERNATIVE IMPORT STYLE</div><pre><code>from math import sqrt, ceil
+print(sqrt(49))
+print(ceil(3.1))</code></pre></div>
 </section>
 
 <section class="kva-section" id="conditions">
