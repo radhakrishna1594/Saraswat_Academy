@@ -1,5 +1,15 @@
 [
   {
+    "title": "Basics of SQL: Important Commands, Codes and Examples",
+    "category": "Technology",
+    "subcategory": "Databases and Programming",
+    "level": "Beginners • Classes 9–12 and beyond",
+    "icon": "🗄️",
+    "description": "A practical SQL guide covering CREATE TABLE, SELECT, INSERT, UPDATE, DELETE, WHERE, sorting, aggregate functions, GROUP BY, JOIN, constraints, subqueries, transactions and safe database practices.",
+    "url": "/knowledge-vault/articles/basics-of-sql.html",
+    "keywords": "SQL basics SQL commands SQL queries SQL examples database tables SELECT INSERT UPDATE DELETE CREATE ALTER DROP WHERE ORDER BY GROUP BY HAVING JOIN primary key foreign key constraints subquery aggregate functions database programming technology"
+  },
+  {
     "title": "Magnetic Effect of Electric Current",
     "category": "Physics",
     "subcategory": "Electricity and Magnetism",
