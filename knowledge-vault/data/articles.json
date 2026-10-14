@@ -1,5 +1,15 @@
 [
   {
+    "title": "Computer System for Class 11 & 12: Notes, Diagrams and Questions",
+    "category": "Technology",
+    "subcategory": "Computer Science Fundamentals",
+    "level": "Classes 11–12 • CBSE Computer Science and Informatics Practices",
+    "icon": "💻",
+    "description": "CBSE-focused notes on computer systems, hardware and software, evolution timeline, CPU, input/output devices, memory hierarchy and units, software categories, open-source software, operating systems, data recovery, diagrams and solved exam-oriented questions.",
+    "url": "/knowledge-vault/articles/computer-system-class-11-12.html",
+    "keywords": "computer system class 11 class 12 CBSE computer science informatics practices evolution of computers timeline computer memory RAM ROM cache secondary storage memory units hardware software open source software freeware shareware proprietary software operating system CPU ALU control unit input output devices exam questions"
+  },
+  {
     "title": "Python Basics for Class 11 & 12: Important Concepts, Programs and PYQ Practice",
     "category": "Technology",
     "subcategory": "Computer Science and Programming",
