@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basics of SQL: Important Commands, Queries and Examples | Saraswat Academy</title>
+<meta name="description" content="Learn SQL from the basics with database and table examples, SELECT, INSERT, UPDATE, DELETE, CREATE, ALTER, WHERE, JOIN, GROUP BY, aggregate functions, constraints, keys and practice queries.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Saraswat Academy">
+<meta name="theme-color" content="#17365d">
+<link rel="canonical" href="https://www.saraswatacademy.in/knowledge-vault/articles/basics-of-sql.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Saraswat Academy">
+<meta property="og:title" content="Basics of SQL: Important Commands, Queries and Examples">
+<meta property="og:description" content="A practical beginner's guide to SQL with runnable examples for creating tables, querying data, joining tables, grouping, updating and deleting records.">
+<meta property="og:url" content="https://www.saraswatacademy.in/knowledge-vault/articles/basics-of-sql.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Basics of SQL">
+<meta name="twitter:description" content="Important SQL commands and examples explained step by step.">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/header.css">
+<link rel="stylesheet" href="/knowledge-vault/articles/articles.css">
+<script src="/loader.js"></script>
+<script src="/config.js"></script>
+<script src="/header.js"></script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"Article",
+ "headline":"Basics of SQL: Important Commands, Queries and Examples",
+ "description":"A practical beginner's guide to SQL syntax, data definition and manipulation, filtering, sorting, aggregate functions, joins, constraints, keys and safe database operations.",
+ "author":{"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},
+ "publisher":{"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},
+ "mainEntityOfPage":"https://www.saraswatacademy.in/knowledge-vault/articles/basics-of-sql.html",
+ "inLanguage":"en-IN",
+ "educationalLevel":"Beginner",
+ "learningResourceType":"Educational article"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://www.saraswatacademy.in/index.html"},
+  {"@type":"ListItem","position":2,"name":"Knowledge Vault","item":"https://www.saraswatacademy.in/knowledge-vault/index.html"},
+  {"@type":"ListItem","position":3,"name":"Basics of SQL","item":"https://www.saraswatacademy.in/knowledge-vault/articles/basics-of-sql.html"}
+ ]
+}
+</script>
+<style>
+.sql-code{position:relative;margin:12px 0 20px;border:1px solid #dbe4ee;border-radius:12px;overflow:hidden;background:#0f172a}
+.sql-code pre{margin:0;padding:16px;overflow-x:auto;color:#e2e8f0;font:14px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre}
+.sql-code code{font:inherit}
+.sql-label{padding:8px 14px;background:#1e293b;color:#cbd5e1;font-size:12px;font-weight:700;letter-spacing:.04em}
+.sql-note{margin:18px 0;padding:15px 18px;border-left:4px solid #0f766e;border-radius:10px;background:#f0fdfa}
+.sql-note p:last-child{margin-bottom:0}
+.sql-card{margin:16px 0;padding:18px 20px;border:1px solid #dbe4ee;border-radius:14px;background:#fff}
+.sql-card h3{margin-top:0!important}
+.sql-table-wrap{width:100%;overflow-x:auto}
+.sql-table-wrap table{width:100%;min-width:520px;border-collapse:collapse}
+.sql-table-wrap th,.sql-table-wrap td{padding:10px 12px;border:1px solid #dbe4ee;text-align:left;vertical-align:top}
+.sql-table-wrap th{background:#eff6ff}
+.sql-badge{display:inline-block;margin:0 0 8px;padding:4px 9px;border-radius:999px;background:#eff6ff;color:#17365d;font-size:13px;font-weight:700}
+@media(max-width:600px){.sql-card{padding:15px}.sql-code pre{font-size:13px}}
+</style>
+</head>
+<body>
+<div id="header"></div>
+<main class="kva-page">
+<nav class="kva-breadcrumb" aria-label="Breadcrumb"><a href="/index.html">Home</a> → <a href="/knowledge-vault/index.html">Knowledge Vault</a> → <span>Basics of SQL</span></nav>
+<article class="kva-article">
+<header class="kva-hero">
+<p class="kva-eyebrow">TECHNOLOGY • DATABASES • PROGRAMMING</p>
+<h1>Basics of SQL: Important Commands, Codes and Examples</h1>
+<p class="kva-lead"><strong>SQL (Structured Query Language)</strong> is used to create, organise, retrieve and manage data in relational databases. It lets us ask questions of a database—for example, finding students who scored above 80 marks or listing all products in stock.</p>
+<p>This beginner-friendly guide introduces essential SQL commands through one consistent example database. The examples use widely supported SQL syntax; some details can vary between MySQL, PostgreSQL, SQL Server and SQLite.</p>
+</header>
+
+<section class="kva-section">
+<h2>1. What Is a Database, a Table and a Record?</h2>
+<ul>
+<li><strong>Database:</strong> an organised collection of related data.</li>
+<li><strong>Table:</strong> data arranged in rows and columns.</li>
+<li><strong>Row / record:</strong> one complete entry, such as one student's details.</li>
+<li><strong>Column / field:</strong> one type of information, such as a student's name or marks.</li>
+<li><strong>Query:</strong> an instruction written in SQL to work with data.</li>
+</ul>
+<figure class="kva-figure">
+<svg viewBox="0 0 760 300" role="img" aria-labelledby="sql-table-title sql-table-desc" xmlns="http://www.w3.org/2000/svg">
+<title id="sql-table-title">Example of a database table</title>
+<desc id="sql-table-desc">A simple Students table with ID, Name, Class and Marks columns and two sample student records.</desc>
+<rect x="8" y="8" width="744" height="284" rx="16" fill="#f8fafc" stroke="#dbe4ee"/>
+<text x="42" y="45" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#17365d">Students table</text>
+<rect x="40" y="66" width="680" height="54" rx="6" fill="#17365d"/>
+<g fill="#fff" font-family="Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle"><text x="105" y="98">ID</text><text x="270" y="98">Name</text><text x="445" y="98">Class</text><text x="620" y="98">Marks</text></g>
+<g stroke="#cbd5e1" stroke-width="1.5"><rect x="40" y="120" width="680" height="58" fill="#fff"/><rect x="40" y="178" width="680" height="58" fill="#eff6ff"/><line x1="170" y1="66" x2="170" y2="236"/><line x1="365" y1="66" x2="365" y2="236"/><line x1="530" y1="66" x2="530" y2="236"/></g>
+<g fill="#334155" font-family="Arial,sans-serif" font-size="15" text-anchor="middle"><text x="105" y="155">1</text><text x="270" y="155">Aarav</text><text x="445" y="155">10</text><text x="620" y="155">88</text><text x="105" y="213">2</text><text x="270" y="213">Meera</text><text x="445" y="213">10</text><text x="620" y="213">94</text></g>
+<text x="40" y="267" font-family="Arial,sans-serif" font-size="13" fill="#64748b">Each row is a record; each column stores one type of information.</text>
+</svg>
+<figcaption>A sample Students table used to explain database terms. The names and marks are fictional examples.</figcaption>
+</figure>
+</section>
+
+<section class="kva-section">
+<h2>2. SQL Command Categories</h2>
+<div class="sql-table-wrap"><table>
+<thead><tr><th>Category</th><th>Purpose</th><th>Common commands</th></tr></thead>
+<tbody>
+<tr><td><strong>DDL</strong><br>Data Definition Language</td><td>Define or change database structures.</td><td><code>CREATE</code>, <code>ALTER</code>, <code>DROP</code>, <code>TRUNCATE</code></td></tr>
+<tr><td><strong>DML</strong><br>Data Manipulation Language</td><td>Add, change or remove table rows.</td><td><code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code></td></tr>
+<tr><td><strong>DQL</strong><br>Data Query Language</td><td>Retrieve data.</td><td><code>SELECT</code></td></tr>
+<tr><td><strong>DCL</strong><br>Data Control Language</td><td>Manage database permissions.</td><td><code>GRANT</code>, <code>REVOKE</code></td></tr>
+<tr><td><strong>TCL</strong><br>Transaction Control Language</td><td>Control transactions.</td><td><code>COMMIT</code>, <code>ROLLBACK</code>, <code>SAVEPOINT</code></td></tr>
+</tbody></table></div>
+<p>These categories are common teaching conventions. Exact command support and permission syntax depend on the database system.</p>
+</section>
+
+<section class="kva-section">
+<h2>3. Create a Database and Select It</h2>
+<p>Use <code>CREATE DATABASE</code> to create a database. In MySQL, you can then select it with <code>USE</code>. PostgreSQL and SQLite handle database selection differently, so the second line is not universal.</p>
+<div class="sql-code"><div class="sql-label">SQL — MySQL example</div><pre><code>CREATE DATABASE school_db;
+USE school_db;</code></pre></div>
+<div class="sql-note"><p><strong>Note:</strong> If the database already exists, the first statement may return an error. Many systems support <code>IF NOT EXISTS</code>, but exact syntax varies.</p></div>
+</section>
+
+<section class="kva-section">
+<h2>4. CREATE TABLE: Build a Table</h2>
+<p>Let us create a <code>Students</code> table. An integer ID identifies each student, the name stores text, class stores a class number, and marks stores a numeric score.</p>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>CREATE TABLE Students (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    class INT,
+    marks DECIMAL(5,2)
+);</code></pre></div>
+<p><code>PRIMARY KEY</code> uniquely identifies each row. <code>NOT NULL</code> means a value must be supplied for that column. <code>DECIMAL(5,2)</code> can store up to five digits in total, including two digits after the decimal point.</p>
+</section>
+
+<section class="kva-section">
+<h2>5. INSERT: Add Records</h2>
+<p>Use <code>INSERT INTO</code> to add data. Listing the column names makes the statement clearer and safer if the table structure changes.</p>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>INSERT INTO Students (student_id, name, class, marks)
+VALUES
+    (1, 'Aarav', 10, 88.00),
+    (2, 'Meera', 10, 94.00),
+    (3, 'Kabir', 9, 76.50),
+    (4, 'Sana', 10, 81.00),
+    (5, 'Ishita', 9, 89.50);</code></pre></div>
+<p>Text values are usually enclosed in single quotes. Numeric values do not need quotes. These sample records are fictional.</p>
+</section>
+
+<section class="kva-section">
+<h2>6. SELECT: Retrieve Data</h2>
+<div class="sql-card">
+<h3>Display every column and row</h3>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>SELECT * FROM Students;</code></pre></div>
+<p>The asterisk (<code>*</code>) means all columns. For reports, it is often better to name only the columns you need.</p>
+</div>
+<div class="sql-card">
+<h3>Select specific columns</h3>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>SELECT name, marks
+FROM Students;</code></pre></div>
+<p>This returns only the name and marks columns.</p>
+</div>
+<div class="sql-card">
+<h3>Remove duplicate values</h3>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>SELECT DISTINCT class
+FROM Students;</code></pre></div>
+<p><code>DISTINCT</code> returns each different class value once.</p>
+</div>
+</section>
+
+<section class="kva-section">
+<h2>7. WHERE: Filter Rows</h2>
+<p>The <code>WHERE</code> clause selects only rows that meet a condition.</p>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>-- Students scoring more than 85
+SELECT name, marks
+FROM Students
+WHERE marks > 85;
+
+-- Students in Class 10
+SELECT name, class
+FROM Students
+WHERE class = 10;
+
+-- Marks between 80 and 90, inclusive
+SELECT name, marks
+FROM Students
+WHERE marks BETWEEN 80 AND 90;
+
+-- Names matching either of two choices
+SELECT name
+FROM Students
+WHERE name IN ('Aarav', 'Sana');</code></pre></div>
+<div class="sql-table-wrap"><table>
+<thead><tr><th>Operator</th><th>Meaning</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><code>=</code></td><td>Equal to</td><td><code>class = 10</code></td></tr>
+<tr><td><code>&lt;&gt;</code></td><td>Not equal to in standard SQL</td><td><code>class &lt;&gt; 10</code></td></tr>
+<tr><td><code>&gt;</code>, <code>&lt;</code></td><td>Greater than, less than</td><td><code>marks &gt; 80</code></td></tr>
+<tr><td><code>&gt;=</code>, <code>&lt;=</code></td><td>Greater/less than or equal to</td><td><code>marks &gt;= 80</code></td></tr>
+<tr><td><code>AND</code></td><td>Both conditions must be true</td><td><code>class = 10 AND marks &gt; 80</code></td></tr>
+<tr><td><code>OR</code></td><td>At least one condition must be true</td><td><code>class = 9 OR marks &gt; 90</code></td></tr>
+<tr><td><code>NOT</code></td><td>Negates a condition</td><td><code>NOT (class = 10)</code></td></tr>
+<tr><td><code>LIKE</code></td><td>Matches a text pattern</td><td><code>name LIKE 'S%'</code></td></tr>
+<tr><td><code>IS NULL</code></td><td>Checks for missing values</td><td><code>marks IS NULL</code></td></tr>
+</tbody></table></div>
+<p>In a <code>LIKE</code> pattern, <code>%</code> represents zero or more characters and <code>_</code> represents exactly one character. Use <code>IS NULL</code>, not <code>= NULL</code>, to test for a missing value.</p>
+</section>
+
+<section class="kva-section">
+<h2>8. ORDER BY and LIMIT: Sort and Restrict Results</h2>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>-- Highest marks first
+SELECT name, marks
+FROM Students
+ORDER BY marks DESC;
+
+-- Alphabetical order
+SELECT name
+FROM Students
+ORDER BY name ASC;
+
+-- Top three records by marks (MySQL, PostgreSQL, SQLite)
+SELECT name, marks
+FROM Students
+ORDER BY marks DESC
+LIMIT 3;</code></pre></div>
+<p><code>ASC</code> means ascending order and is the default. <code>DESC</code> means descending order. <code>LIMIT</code> is supported by MySQL, PostgreSQL and SQLite; SQL Server and some other systems use different syntax, such as <code>TOP</code> or <code>FETCH FIRST</code>.</p>
+</section>
+
+<section class="kva-section">
+<h2>9. Aggregate Functions: Calculate Summary Values</h2>
+<div class="sql-table-wrap"><table>
+<thead><tr><th>Function</th><th>What it does</th></tr></thead>
+<tbody><tr><td><code>COUNT(*)</code></td><td>Counts rows.</td></tr><tr><td><code>SUM(marks)</code></td><td>Adds non-NULL marks.</td></tr><tr><td><code>AVG(marks)</code></td><td>Calculates the average of non-NULL marks.</td></tr><tr><td><code>MAX(marks)</code></td><td>Finds the highest non-NULL mark.</td></tr><tr><td><code>MIN(marks)</code></td><td>Finds the lowest non-NULL mark.</td></tr></tbody>
+</table></div>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>SELECT
+    COUNT(*) AS total_students,
+    AVG(marks) AS average_marks,
+    MAX(marks) AS highest_marks,
+    MIN(marks) AS lowest_marks,
+    SUM(marks) AS total_marks
+FROM Students;</code></pre></div>
+<p><code>AS</code> gives a column or expression a readable alias. Aggregate functions generally ignore NULL values, except <code>COUNT(*)</code>, which counts rows.</p>
+</section>
+
+<section class="kva-section">
+<h2>10. GROUP BY and HAVING</h2>
+<p><code>GROUP BY</code> makes groups of rows with the same value. <code>HAVING</code> filters the groups after aggregate calculations.</p>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>-- Average marks for each class
+SELECT class, AVG(marks) AS average_marks
+FROM Students
+GROUP BY class;
+
+-- Classes whose average marks are at least 85
+SELECT class, AVG(marks) AS average_marks
+FROM Students
+GROUP BY class
+HAVING AVG(marks) >= 85;</code></pre></div>
+<p>Use <code>WHERE</code> to filter individual rows before grouping and <code>HAVING</code> to filter groups after aggregation.</p>
+</section>
+
+<section class="kva-section">
+<h2>11. UPDATE: Change Existing Data</h2>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>UPDATE Students
+SET marks = 90
+WHERE student_id = 1;</code></pre></div>
+<p>This changes Aarav's marks to 90 because the row with ID 1 is selected. Always check the <code>WHERE</code> condition before running an update.</p>
+<div class="sql-note"><p><strong>Important safety rule:</strong> An <code>UPDATE</code> statement without a <code>WHERE</code> clause changes every row in the table. For example, do not run <code>UPDATE Students SET marks = 90;</code> unless you genuinely intend to set every student's marks to 90.</p></div>
+</section>
+
+<section class="kva-section">
+<h2>12. DELETE: Remove Records</h2>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>DELETE FROM Students
+WHERE student_id = 5;</code></pre></div>
+<p>This removes the row whose ID is 5. Deleting a row is different from deleting a table structure.</p>
+<div class="sql-note"><p><strong>Be careful:</strong> <code>DELETE FROM Students;</code> removes all rows from the table. It does not normally remove the table itself. Use a precise <code>WHERE</code> clause and verify the selected rows before deleting important data.</p></div>
+</section>
+
+<section class="kva-section">
+<h2>13. ALTER, TRUNCATE and DROP</h2>
+<div class="sql-card">
+<h3>ALTER TABLE — change the table structure</h3>
+<div class="sql-code"><div class="sql-label">SQL (common syntax)</div><pre><code>ALTER TABLE Students
+ADD email VARCHAR(100);</code></pre></div>
+<p>Adds a column called <code>email</code>. Details for renaming or changing column types differ by database.</p>
+</div>
+<div class="sql-card">
+<h3>TRUNCATE TABLE — remove all rows</h3>
+<div class="sql-code"><div class="sql-label">SQL (where supported)</div><pre><code>TRUNCATE TABLE Students;</code></pre></div>
+<p>Removes all rows while keeping the table definition. Transaction behaviour, identity resets and permissions vary by database system.</p>
+</div>
+<div class="sql-card">
+<h3>DROP TABLE — remove the table</h3>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>DROP TABLE Students;</code></pre></div>
+<p>Removes the table definition and its data. Do not run destructive commands on a real database unless you have permission and a verified backup.</p>
+</div>
+</section>
+
+<section class="kva-section">
+<h2>14. Constraints: Rules for Reliable Data</h2>
+<div class="sql-table-wrap"><table>
+<thead><tr><th>Constraint</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td><code>PRIMARY KEY</code></td><td>Uniquely identifies each row; cannot be NULL.</td></tr>
+<tr><td><code>FOREIGN KEY</code></td><td>Links values to a key in another table (or the same table).</td></tr>
+<tr><td><code>NOT NULL</code></td><td>Requires a value.</td></tr>
+<tr><td><code>UNIQUE</code></td><td>Prevents duplicate values according to database rules.</td></tr>
+<tr><td><code>CHECK</code></td><td>Requires a condition to be true when supported and enforced.</td></tr>
+<tr><td><code>DEFAULT</code></td><td>Provides a value when none is specified.</td></tr>
+</tbody></table></div>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>CREATE TABLE Courses (
+    course_id INT PRIMARY KEY,
+    course_name VARCHAR(60) NOT NULL UNIQUE
+);
+
+CREATE TABLE Enrolments (
+    student_id INT,
+    course_id INT,
+    enrolment_date DATE DEFAULT CURRENT_DATE,
+    PRIMARY KEY (student_id, course_id),
+    FOREIGN KEY (course_id) REFERENCES Courses(course_id)
+);</code></pre></div>
+<p>This illustrates a composite primary key for enrolments and a foreign key to courses. The exact handling of default dates and constraint enforcement may vary by database.</p>
+</section>
+
+<section class="kva-section">
+<h2>15. JOIN: Combine Data from Tables</h2>
+<p>Suppose we have a second table named <code>Courses</code>. A join lets us display related information from both tables.</p>
+<div class="sql-code"><div class="sql-label">SQL — sample second table</div><pre><code>CREATE TABLE StudentCourses (
+    student_id INT,
+    course_name VARCHAR(60)
+);
+
+INSERT INTO StudentCourses (student_id, course_name)
+VALUES
+    (1, 'Mathematics'),
+    (2, 'Computer Science'),
+    (3, 'Science');</code></pre></div>
+<div class="sql-card">
+<h3>INNER JOIN</h3>
+<p>Returns rows with matching student IDs in both tables.</p>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>SELECT s.name, sc.course_name
+FROM Students AS s
+INNER JOIN StudentCourses AS sc
+    ON s.student_id = sc.student_id;</code></pre></div>
+</div>
+<div class="sql-card">
+<h3>LEFT JOIN</h3>
+<p>Returns every row from the left table and matching rows from the right table. If there is no match, the right-side columns are NULL.</p>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>SELECT s.name, sc.course_name
+FROM Students AS s
+LEFT JOIN StudentCourses AS sc
+    ON s.student_id = sc.student_id;</code></pre></div>
+</div>
+<p><strong>Other join types:</strong> <code>RIGHT JOIN</code> returns all rows from the right table and matches from the left where supported. <code>FULL OUTER JOIN</code> returns matched rows plus unmatched rows from both sides, but it is not supported directly by every database (including MySQL).</p>
+</section>
+
+<section class="kva-section">
+<h2>16. Subqueries: A Query Inside Another Query</h2>
+<p>A subquery is a query used inside another SQL statement. For example, to find students who scored above the overall average:</p>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>SELECT name, marks
+FROM Students
+WHERE marks > (
+    SELECT AVG(marks)
+    FROM Students
+);</code></pre></div>
+<p>The inner query calculates the average; the outer query selects students whose marks are greater than that value.</p>
+</section>
+
+<section class="kva-section">
+<h2>17. CASE: Add Conditional Logic</h2>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>SELECT
+    name,
+    marks,
+    CASE
+        WHEN marks >= 90 THEN 'Excellent'
+        WHEN marks >= 75 THEN 'Good'
+        WHEN marks >= 40 THEN 'Pass'
+        ELSE 'Needs improvement'
+    END AS result_category
+FROM Students;</code></pre></div>
+<p><code>CASE</code> evaluates conditions in order and returns the result for the first matching condition. The grade labels here are only an example, not official grading criteria.</p>
+</section>
+
+<section class="kva-section">
+<h2>18. SQL Functions and Useful Expressions</h2>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>-- Combine text (syntax varies by database)
+SELECT UPPER(name) AS uppercase_name
+FROM Students;
+
+-- Round a calculation
+SELECT ROUND(AVG(marks), 2) AS average_marks
+FROM Students;
+
+-- Work with a date (current date syntax varies)
+SELECT CURRENT_DATE;
+
+-- Check for missing marks
+SELECT name
+FROM Students
+WHERE marks IS NULL;
+
+-- Replace a missing value in query output
+SELECT name, COALESCE(marks, 0) AS displayed_marks
+FROM Students;</code></pre></div>
+<p>Common functions include <code>UPPER</code>, <code>LOWER</code>, <code>LENGTH</code> or <code>CHAR_LENGTH</code>, <code>ROUND</code>, <code>ABS</code>, <code>COALESCE</code>, date functions and string concatenation. Function names and syntax can differ across database systems.</p>
+</section>
+
+<section class="kva-section">
+<h2>19. Transactions: COMMIT and ROLLBACK</h2>
+<p>A transaction groups database operations so that they can be committed together or rolled back when supported by the database and storage engine.</p>
+<div class="sql-code"><div class="sql-label">SQL — illustrative example</div><pre><code>BEGIN;
+
+UPDATE Students
+SET marks = 91
+WHERE student_id = 1;
+
+-- Keep the change:
+COMMIT;
+
+-- If you have not committed and need to cancel:
+-- ROLLBACK;</code></pre></div>
+<p>Run either <code>COMMIT</code> or <code>ROLLBACK</code> as appropriate before the transaction ends. Transaction start syntax and behaviour differ between systems; some commands such as certain DDL statements may commit automatically.</p>
+</section>
+
+<section class="kva-section">
+<h2>20. SQL Comments and Formatting</h2>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>-- This is a single-line comment
+
+/*
+This is a
+multi-line comment
+*/
+
+SELECT name, marks
+FROM Students
+WHERE marks >= 80
+ORDER BY marks DESC;</code></pre></div>
+<p>Use comments to explain why a query is written. Indenting clauses and writing keywords in uppercase can make SQL easier to read, although SQL keywords are generally case-insensitive.</p>
+</section>
+
+<section class="kva-section">
+<h2>21. SQL Injection and Safe Querying</h2>
+<p>Applications should not build SQL by directly joining user input into a query string. That can allow SQL injection, where untrusted input changes the meaning of a query.</p>
+<p><strong>Prefer parameterised queries</strong> provided by your programming language's database library. The placeholder syntax depends on the library.</p>
+<div class="sql-note"><p><strong>Good practice:</strong> Give users only the database permissions they need, validate inputs, use parameterised queries, protect credentials, keep backups and test destructive statements on sample data first.</p></div>
+</section>
+
+<section class="kva-section">
+<h2>22. Complete Mini Practice: Find Top Students</h2>
+<p>Using the <code>Students</code> table created earlier, this query lists students in descending order of marks and displays the top three:</p>
+<div class="sql-code"><div class="sql-label">SQL — MySQL, PostgreSQL or SQLite</div><pre><code>SELECT student_id, name, class, marks
+FROM Students
+WHERE marks IS NOT NULL
+ORDER BY marks DESC
+LIMIT 3;</code></pre></div>
+<p>To show the average marks for each class and sort the class with the highest average first:</p>
+<div class="sql-code"><div class="sql-label">SQL</div><pre><code>SELECT class, ROUND(AVG(marks), 2) AS average_marks
+FROM Students
+GROUP BY class
+ORDER BY average_marks DESC;</code></pre></div>
+</section>
+
+<section class="kva-section">
+<h2>23. Quick SQL Cheat Sheet</h2>
+<div class="sql-table-wrap"><table>
+<thead><tr><th>Task</th><th>SQL pattern</th></tr></thead>
+<tbody>
+<tr><td>Read data</td><td><code>SELECT columns FROM table;</code></td></tr>
+<tr><td>Filter rows</td><td><code>SELECT ... FROM ... WHERE condition;</code></td></tr>
+<tr><td>Sort rows</td><td><code>ORDER BY column ASC/DESC;</code></td></tr>
+<tr><td>Add a row</td><td><code>INSERT INTO table (columns) VALUES (values);</code></td></tr>
+<tr><td>Change rows</td><td><code>UPDATE table SET column = value WHERE condition;</code></td></tr>
+<tr><td>Delete rows</td><td><code>DELETE FROM table WHERE condition;</code></td></tr>
+<tr><td>Create a table</td><td><code>CREATE TABLE table_name (...);</code></td></tr>
+<tr><td>Group and summarise</td><td><code>GROUP BY column HAVING aggregate_condition;</code></td></tr>
+<tr><td>Combine tables</td><td><code>JOIN other_table ON matching_condition;</code></td></tr>
+<tr><td>Count rows</td><td><code>SELECT COUNT(*) FROM table;</code></td></tr>
+</tbody></table></div>
+</section>
+
+<section class="kva-section">
+<h2>Practice Questions</h2>
+<ol>
+<li>Write a query to display the names of all students in Class 10.</li>
+<li>Write a query to list students whose marks are at least 85, from highest to lowest.</li>
+<li>Find the average marks of all students.</li>
+<li>Count the number of students in each class.</li>
+<li>Insert a new student record with ID 6, name 'Rohan', Class 10 and marks 84.</li>
+<li>Update the marks of the student with ID 3 to 80.</li>
+<li>Explain the difference between <code>WHERE</code> and <code>HAVING</code>.</li>
+<li>Explain the difference between <code>DELETE</code>, <code>TRUNCATE</code> and <code>DROP</code>.</li>
+<li>Write a query using an <code>INNER JOIN</code> to display student names and their courses.</li>
+<li>Why should a database application use parameterised queries?</li>
+</ol>
+</section>
+
+<section class="kva-section">
+<h2>Frequently Asked Questions</h2>
+<h3>What is SQL used for?</h3>
+<p>SQL is used to define relational database structures and insert, retrieve, update, delete and summarise data. It is used in websites, business software, reporting systems and many other applications.</p>
+<h3>Is SQL a programming language?</h3>
+<p>SQL is a specialised declarative language for working with relational data. You describe the data you want or the operation you need, and the database engine determines how to carry it out.</p>
+<h3>Are SQL and MySQL the same?</h3>
+<p>No. SQL is the language; MySQL is a relational database management system that uses SQL. PostgreSQL, SQL Server and SQLite are other database systems with their own syntax differences.</p>
+<h3>Which SQL commands should beginners learn first?</h3>
+<p>Start with <code>SELECT</code>, <code>FROM</code>, <code>WHERE</code>, <code>ORDER BY</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>CREATE TABLE</code>, aggregate functions, <code>GROUP BY</code> and <code>JOIN</code>.</p>
+<h3>Can these examples run in every database?</h3>
+<p>The core ideas are widely used, but exact syntax varies. In particular, database selection, limiting results, date functions, altering columns, transactions and some join types may need adjustment for your database.</p>
+</section>
+</article>
+</main>
+<footer id="footer"></footer>
+</body>
+</html>
