@@ -94,7 +94,7 @@
 <circle cx="280" cy="190" r="48"/><circle cx="280" cy="190" r="83"/><circle cx="280" cy="190" r="118"/>
 </g>
 <g fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#wire-arrow)">
-<path d="M280 142 A48 48 0 0 1 328 190"/><path d="M280 107 A83 83 0 0 1 363 190"/><path d="M280 72 A118 118 0 0 1 398 190"/>
+<path d="M280 142 A48 48 0 0 0 232 190"/><path d="M280 107 A83 83 0 0 0 197 190"/><path d="M280 72 A118 118 0 0 0 162 190"/>
 </g>
 <circle cx="280" cy="190" r="17" fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
 <circle cx="280" cy="190" r="5" fill="#fff"/>
@@ -172,7 +172,7 @@
 <title id="sol-title">Magnetic field of a solenoid</title>
 <defs><marker id="sol-arrow" markerWidth="7" markerHeight="7" refX="5.5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>
 <rect x="8" y="8" width="744" height="354" rx="16" fill="#fff" stroke="#dbe4ee"/>
-<path d="M120 182 C120 70 600 70 600 182" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#sol-arrow)"/>
+<path d="M600 182 C600 70 120 70 120 182" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#sol-arrow)"/>
 <path d="M600 182 C600 294 120 294 120 182" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#sol-arrow)"/>
 <rect x="145" y="145" width="430" height="74" rx="8" fill="#dbeafe" stroke="#64748b" stroke-width="1.5"/>
 <g fill="none" stroke="#c2410c" stroke-width="4">
@@ -198,23 +198,23 @@
 <figure class="kva-figure mec-diagram">
 <svg viewBox="0 0 760 330" role="img" aria-labelledby="force-title force-desc" xmlns="http://www.w3.org/2000/svg">
 <title id="force-title">Force on a current-carrying conductor in a magnetic field</title>
-<desc id="force-desc">A horizontal conductor carries current to the right between a north pole and a south pole. Magnetic field arrows point from north to south, and the force is shown perpendicular to both.</desc>
+<desc id="force-desc">A conductor carries current out of the page between a north pole on the left and a south pole on the right. The magnetic field points from left to right, so the force points upward, perpendicular to both.</desc>
 <defs><marker id="force-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#2563eb"/></marker></defs>
 <rect x="8" y="8" width="744" height="314" rx="16" fill="#f8fafc" stroke="#dbe4ee"/>
 <rect x="72" y="92" width="120" height="150" rx="10" fill="#dc2626"/><rect x="568" y="92" width="120" height="150" rx="10" fill="#2563eb"/>
 <g font-family="Arial,sans-serif" fill="#fff" font-size="32" font-weight="700" text-anchor="middle"><text x="132" y="176">N</text><text x="628" y="176">S</text></g>
 <g stroke="#64748b" stroke-width="2" marker-end="url(#force-arrow)"><line x1="220" y1="126" x2="535" y2="126"/><line x1="220" y1="165" x2="535" y2="165"/><line x1="220" y1="204" x2="535" y2="204"/></g>
-<line x1="242" y1="165" x2="518" y2="165" stroke="#111827" stroke-width="7"/>
-<path d="M335 165 H430" stroke="#dc2626" stroke-width="4" marker-end="url(#force-arrow)"/>
-<path d="M380 150 V80" stroke="#0f766e" stroke-width="4" marker-end="url(#force-arrow)"/>
+<circle cx="380" cy="165" r="22" fill="#fff" stroke="#111827" stroke-width="5"/>
+<circle cx="380" cy="165" r="7" fill="#dc2626"/>
+<path d="M380 145 V80" stroke="#0f766e" stroke-width="4" marker-end="url(#force-arrow)"/>
 <g font-family="Arial,sans-serif" fill="#1f2937">
 <text x="380" y="56" text-anchor="middle" font-size="15" font-weight="700" fill="#0f766e">Force (F)</text>
-<text x="380" y="145" text-anchor="middle" font-size="14" font-weight="700" fill="#b91c1c">Current (I) →</text>
+<text x="420" y="160" font-size="14" font-weight="700" fill="#b91c1c">Current out of page (⊙)</text>
 <text x="380" y="278" text-anchor="middle" font-size="14">Magnetic field (B): from N to S</text>
 <text x="380" y="299" text-anchor="middle" font-size="13" fill="#475569">Schematic orientation; the force is perpendicular to both I and B.</text>
 </g>
 </svg>
-<figcaption>Conceptual diagram of the motor effect. The precise direction of the force must be found using Fleming's left-hand rule for the stated current and field directions.</figcaption>
+<figcaption>With current out of the page and magnetic field from left to right, the force is upward by Fleming's left-hand rule.</figcaption>
 </figure>
 <h3>Fleming's left-hand rule</h3>
 <p>Stretch the thumb, forefinger and middle finger of your <strong>left hand</strong> so that they are mutually perpendicular:</p>
