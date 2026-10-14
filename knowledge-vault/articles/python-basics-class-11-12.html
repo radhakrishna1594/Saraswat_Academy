@@ -574,7 +574,7 @@ with open("students.csv", "r", newline="", encoding="utf-8") as f:
         print(row)</code></pre></div>
 <p>Rows read by <code>csv.reader</code> are lists of strings. Convert numeric fields with <code>int()</code> or <code>float()</code> before calculations. If the syllabus specifically teaches <code>csv.writer</code> and <code>csv.reader</code>, practise their exact syntax.</p>
 
-<h3>11.3 Exception handling: try, except and finally</h3>
+<h3>11.2 Exception handling: try, except and finally</h3>
 <p>The current Class XII Computer Science syllabus includes handling exceptions. A <code>try</code> block contains code that may fail; <code>except</code> handles a specified error; <code>finally</code> runs whether an exception occurs or not.</p>
 <div class="py-code"><div class="py-label">PYTHON</div><pre><code>try:
     number = int(input("Enter a number: "))
@@ -586,14 +586,14 @@ except ZeroDivisionError:
 finally:
     print("Program finished.")</code></pre></div>
 <p>Use specific exceptions where possible. Avoid a broad <code>except:</code> unless the question explicitly calls for it.</p>
-<h3>11.4 File modes at a glance</h3>
+<h3>11.3 File modes at a glance</h3>
 <div class="py-table-wrap"><table><thead><tr><th>Mode</th><th>Meaning</th></tr></thead><tbody>
 <tr><td><code>r+</code></td><td>Read and write an existing file; pointer begins at the start.</td></tr>
 <tr><td><code>w+</code></td><td>Read and write; creates or truncates the file.</td></tr>
 <tr><td><code>a+</code></td><td>Read and append; writes go to the end.</td></tr>
 <tr><td><code>rb+</code>, <code>wb+</code>, <code>ab+</code></td><td>Binary equivalents for read/write, write/read and append/read operations.</td></tr>
 </tbody></table></div>
-<h3>11.2 Binary files and pickle</h3>
+<h3>11.4 Binary files and pickle</h3>
 <p>In CBSE Computer Science, binary-file programs commonly use the <code>pickle</code> module to write and retrieve Python records. The key operations are <code>pickle.dump()</code> to write and <code>pickle.load()</code> to read.</p>
 <div class="py-code"><div class="py-label">PYTHON — WRITE A RECORD</div><pre><code>import pickle
 
