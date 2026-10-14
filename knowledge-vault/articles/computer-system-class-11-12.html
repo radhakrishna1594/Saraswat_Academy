@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer System for Class 11 & 12: Notes, Diagrams and Questions | Saraswat Academy</title>
+<meta name="description" content="CBSE Class 11 and 12 Computer System notes: introduction, evolution timeline, computer components, CPU, memory units, RAM, ROM, cache, secondary memory, software types, operating systems, open-source software, solved examples and exam questions.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Saraswat Academy">
+<link rel="canonical" href="https://www.saraswatacademy.in/knowledge-vault/articles/computer-system-class-11-12.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Saraswat Academy">
+<meta property="og:title" content="Computer System for Class 11 & 12: Notes, Diagrams and Questions">
+<meta property="og:description" content="A CBSE-focused guide to computer systems, evolution, memory, software, open-source software and operating systems, with labelled diagrams and exam practice.">
+<meta property="og:url" content="https://www.saraswatacademy.in/knowledge-vault/articles/computer-system-class-11-12.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Computer System — Class 11 & 12">
+<meta name="twitter:description" content="CBSE computer system notes with diagrams, examples and exam-oriented questions.">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/header.css">
+<link rel="stylesheet" href="/knowledge-vault/articles/articles.css">
+<script src="/loader.js"></script>
+<script src="/config.js"></script>
+<script src="/header.js"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Computer System for Class 11 & 12: Notes, Diagrams and Questions","description":"CBSE-aligned study guide covering computer organisation, evolution, memory, software types, open-source software and operating systems.","author":{"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},"publisher":{"@type":"Organization","name":"Saraswat Academy","url":"https://www.saraswatacademy.in/"},"mainEntityOfPage":"https://www.saraswatacademy.in/knowledge-vault/articles/computer-system-class-11-12.html","inLanguage":"en-IN","educationalLevel":["Class 11","Class 12"],"learningResourceType":"Study notes"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.saraswatacademy.in/index.html"},{"@type":"ListItem","position":2,"name":"Knowledge Vault","item":"https://www.saraswatacademy.in/knowledge-vault/index.html"},{"@type":"ListItem","position":3,"name":"Computer System — Class 11 & 12","item":"https://www.saraswatacademy.in/knowledge-vault/articles/computer-system-class-11-12.html"}]}
+</script>
+<style>
+.cs-code{margin:12px 0 20px;border:1px solid #dbe4ee;border-radius:12px;overflow:hidden;background:#0f172a}
+.cs-code pre{margin:0;padding:15px;overflow-x:auto;color:#e2e8f0;font:14px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre}
+.cs-label{padding:8px 14px;background:#1e293b;color:#cbd5e1;font-size:12px;font-weight:700;letter-spacing:.04em}
+.cs-note{margin:18px 0;padding:15px 18px;border-left:4px solid #0f766e;border-radius:10px;background:#f0fdfa}
+.cs-warning{margin:18px 0;padding:15px 18px;border-left:4px solid #b45309;border-radius:10px;background:#fffbeb}
+.cs-card{margin:16px 0;padding:18px 20px;border:1px solid #dbe4ee;border-radius:14px;background:#fff}
+.cs-card h3{margin-top:0!important}
+.cs-table-wrap{width:100%;overflow-x:auto;margin:14px 0 22px}
+.cs-table-wrap table{width:100%;min-width:540px;border-collapse:collapse}
+.cs-table-wrap th,.cs-table-wrap td{padding:10px 12px;border:1px solid #dbe4ee;text-align:left;vertical-align:top}
+.cs-table-wrap th{background:#eff6ff}
+.cs-toc{padding:18px 22px;border:1px solid #dbe4ee;border-radius:14px;background:#f8fafc}
+.cs-toc ul{columns:2;column-gap:30px}
+.cs-toc li{break-inside:avoid;margin:5px 0}
+.cs-toc a{color:#1d4ed8;text-decoration:none}
+.cs-toc a:hover{text-decoration:underline}
+.cs-diagram{margin:18px 0;padding:12px;border:1px solid #dbe4ee;border-radius:14px;background:#fff}
+.cs-diagram svg{display:block;width:100%;height:auto}
+.cs-badge{display:inline-block;margin:0 0 8px;padding:4px 9px;border-radius:999px;background:#eff6ff;color:#17365d;font-size:12px;font-weight:700}
+@media(max-width:600px){.cs-card{padding:15px}.cs-code pre{font-size:13px}.cs-toc ul{columns:1}}
+</style>
+</head>
+<body>
+<div id="header"></div>
+<main class="kva-page">
+<nav class="kva-breadcrumb" aria-label="Breadcrumb"><a href="/index.html">Home</a> → <a href="/knowledge-vault/index.html">Knowledge Vault</a> → <span>Computer System — Class 11 &amp; 12</span></nav>
+<article class="kva-article">
+<header class="kva-hero">
+<p class="kva-eyebrow">TECHNOLOGY • COMPUTER SCIENCE • CLASSES XI–XII</p>
+<h1>Computer System: Complete Notes for Class 11 &amp; 12</h1>
+<p class="kva-lead">A computer system is more than a screen and a keyboard. It is a combination of hardware, software, data and people working together to accept input, process it, store information and produce useful output.</p>
+<p>This chapter explains the computer system from the basics, with labelled diagrams, comparisons, everyday examples and exam-oriented questions for senior-secondary students.</p>
+</header>
+
+<div class="cs-note"><strong>CBSE syllabus note:</strong> Computer organisation, hardware and software, input/output devices, CPU, memory and units of memory are explicitly included in Class XI Computer Science (083). Class XI Informatics Practices (065) also covers the evolution of computing devices, computer components and interconnections, memory, software types, and concerns around deletion and recovery of data. The exact scope differs by subject and academic session, so use your current syllabus alongside these notes. <a href="https://cbseacademic.nic.in/web_material/CurriculumMain27/SecPart2/Computer_Science_SecP2_2026-27.pdf" target="_blank" rel="noopener noreferrer">Official Computer Science syllabus 2026–27</a> · <a href="https://cbseacademic.nic.in/web_material/CurriculumMain27/SecPart2/Informatics_Practices_SecP2_2026-27.pdf" target="_blank" rel="noopener noreferrer">Official Informatics Practices syllabus 2026–27</a>.</div>
+
+<nav class="cs-toc" aria-label="Contents"><strong>Chapter contents</strong><ul>
+<li><a href="#intro">Introduction to computer system</a></li>
+<li><a href="#components">Components and block diagram</a></li>
+<li><a href="#evolution">Timeline of computer evolution</a></li>
+<li><a href="#memory">Computer memory</a></li>
+<li><a href="#units">Units of memory</a></li>
+<li><a href="#software">Types of software</a></li>
+<li><a href="#opensource">Open-source software and licences</a></li>
+<li><a href="#os">Operating system</a></li>
+<li><a href="#security">Data deletion and security</a></li>
+<li><a href="#questions">Exam questions with answers</a></li>
+<li><a href="#revision">Quick revision sheet</a></li>
+</ul></nav>
+
+<section class="kva-section" id="intro">
+<h2>1. Introduction to a Computer System</h2>
+<p>A <strong>computer</strong> is an electronic, programmable device that accepts data as input, processes it according to instructions, stores data or results, and produces information as output. A <strong>computer system</strong> includes the physical equipment, programs, data and people or procedures needed to perform a task.</p>
+<h3>Data and information</h3>
+<ul>
+<li><strong>Data:</strong> raw facts that have not yet been meaningfully processed, such as the marks 72, 85 and 91.</li>
+<li><strong>Information:</strong> processed data that is meaningful, such as the average mark of those students.</li>
+<li><strong>Instruction:</strong> a command telling the computer what operation to perform.</li>
+<li><strong>Program:</strong> a set of instructions written to solve a problem or perform a task.</li>
+</ul>
+<h3>Characteristics of computers</h3>
+<div class="cs-table-wrap"><table><thead><tr><th>Characteristic</th><th>Explanation</th><th>Example</th></tr></thead><tbody>
+<tr><td>Speed</td><td>Performs millions or billions of operations per second, depending on the system.</td><td>Calculating results for thousands of students quickly.</td></tr>
+<tr><td>Accuracy</td><td>Can produce highly accurate results when data and instructions are correct.</td><td>Calculating a fee total using the correct formula.</td></tr>
+<tr><td>Diligence</td><td>Can repeat tasks without human-style tiredness.</td><td>Processing many records in the same way.</td></tr>
+<tr><td>Storage</td><td>Stores large quantities of data for later use.</td><td>Saving documents and photographs on a drive.</td></tr>
+<tr><td>Versatility</td><td>Performs many different types of tasks.</td><td>Writing, designing, programming and communication.</td></tr>
+<tr><td>Automation</td><td>Once set up, a task can run with limited ongoing human intervention.</td><td>Generating a report from a prepared spreadsheet.</td></tr>
+</tbody></table></div>
+<div class="cs-warning"><strong>Important limitation:</strong> a computer does not automatically know whether the instructions or input are sensible. Incorrect input or logic can produce incorrect output—often summarised as “Garbage In, Garbage Out” (GIGO).</div>
+</section>
+
+<section class="kva-section" id="components">
+<h2>2. Components of a Computer System</h2>
+<p>The main functional units are the input unit, central processing unit (CPU), primary memory/storage and output unit. The CPU contains the Arithmetic Logic Unit (ALU), Control Unit (CU) and registers. Main memory supplies instructions and data to the processor.</p>
+<figure class="cs-diagram">
+<svg viewBox="0 0 860 420" role="img" aria-labelledby="cs-block-title cs-block-desc" xmlns="http://www.w3.org/2000/svg">
+<title id="cs-block-title">Functional block diagram of a computer system</title><desc id="cs-block-desc">Input devices send data to the CPU and main memory. The CPU contains the ALU, control unit and registers. Processed results go to output devices; secondary storage connects to the system for long-term storage.</desc>
+<defs><marker id="csArrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#334155"/></marker></defs>
+<rect x="20" y="140" width="150" height="90" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="95" y="176" text-anchor="middle" font-size="19" font-weight="700" fill="#1e3a8a">Input Unit</text><text x="95" y="202" text-anchor="middle" font-size="14" fill="#1e3a8a">Keyboard, mouse</text>
+<rect x="225" y="36" width="410" height="300" rx="18" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+<text x="430" y="66" text-anchor="middle" font-size="20" font-weight="700" fill="#17365d">Central Processing Unit (CPU)</text>
+<rect x="260" y="92" width="160" height="82" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="340" y="124" text-anchor="middle" font-size="18" font-weight="700" fill="#166534">ALU</text><text x="340" y="148" text-anchor="middle" font-size="13" fill="#166534">Arithmetic / logic</text>
+<rect x="440" y="92" width="160" height="82" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="520" y="124" text-anchor="middle" font-size="18" font-weight="700" fill="#92400e">Control Unit</text><text x="520" y="148" text-anchor="middle" font-size="13" fill="#92400e">Coordinates tasks</text>
+<rect x="325" y="202" width="210" height="58" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text x="430" y="226" text-anchor="middle" font-size="17" font-weight="700" fill="#5b21b6">Registers</text><text x="430" y="246" text-anchor="middle" font-size="13" fill="#5b21b6">Very small, fast storage</text>
+<rect x="260" y="278" width="340" height="42" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+<text x="430" y="304" text-anchor="middle" font-size="16" font-weight="700" fill="#075985">Main Memory (RAM / ROM)</text>
+<rect x="690" y="140" width="150" height="90" rx="12" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+<text x="765" y="176" text-anchor="middle" font-size="19" font-weight="700" fill="#9d174d">Output Unit</text><text x="765" y="202" text-anchor="middle" font-size="14" fill="#9d174d">Monitor, printer</text>
+<rect x="345" y="360" width="170" height="45" rx="9" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+<text x="430" y="388" text-anchor="middle" font-size="16" font-weight="700" fill="#334155">Secondary Storage</text>
+<path d="M170 185 H215 V135 H250" stroke="#334155" stroke-width="2.5" fill="none" marker-end="url(#csArrow)"/>
+<path d="M610 135 H650 V185 H680" stroke="#334155" stroke-width="2.5" fill="none" marker-end="url(#csArrow)"/>
+<path d="M430 336 V350" stroke="#334155" stroke-width="2.5" fill="none" marker-end="url(#csArrow)"/>
+<text x="190" y="124" text-anchor="middle" font-size="12" fill="#475569">Data</text><text x="650" y="124" text-anchor="middle" font-size="12" fill="#475569">Results</text>
+</svg>
+<figcaption><strong>Figure 1.</strong> Functional view of a computer. The arrows show a simplified flow; real systems use several buses and controllers.</figcaption>
+</figure>
+
+<h3>2.1 Hardware and software</h3>
+<ul><li><strong>Hardware</strong> is the physical part that can be seen or touched: CPU, RAM, keyboard, monitor, SSD and motherboard.</li><li><strong>Software</strong> is the set of programs and related instructions that tell hardware what to do: operating systems, browsers, editors and games.</li><li><strong>Firmware</strong> is software stored in non-volatile memory that helps control a device, such as firmware used during system startup.</li></ul>
+
+<h3>2.2 Input devices</h3>
+<div class="cs-table-wrap"><table><thead><tr><th>Device</th><th>Purpose / example</th></tr></thead><tbody>
+<tr><td>Keyboard</td><td>Enters text, numbers and commands.</td></tr><tr><td>Mouse / touchpad</td><td>Moves the pointer and selects items.</td></tr><tr><td>Scanner</td><td>Converts a paper image or document into digital form.</td></tr><tr><td>Microphone</td><td>Captures sound.</td></tr><tr><td>Webcam</td><td>Captures images and video.</td></tr><tr><td>Barcode / QR reader</td><td>Reads encoded product or link information.</td></tr><tr><td>Touchscreen</td><td>Accepts touch input and displays output.</td></tr><tr><td>Biometric reader</td><td>Captures features such as a fingerprint for identity verification.</td></tr>
+</tbody></table></div>
+<h3>2.3 Output devices</h3>
+<div class="cs-table-wrap"><table><thead><tr><th>Device</th><th>Purpose / example</th></tr></thead><tbody>
+<tr><td>Monitor</td><td>Displays text, images and video (soft copy).</td></tr><tr><td>Printer</td><td>Produces paper output (hard copy).</td></tr><tr><td>Speakers / headphones</td><td>Output sound.</td></tr><tr><td>Projector</td><td>Displays a larger image for an audience.</td></tr><tr><td>Plotter</td><td>Produces large, precise drawings such as engineering plans.</td></tr>
+</tbody></table></div>
+<p>A touchscreen is both an input and an output device. A printer produces hard copy; a monitor displays soft copy.</p>
+
+<h3>2.4 Inside the CPU</h3>
+<ul><li><strong>ALU (Arithmetic Logic Unit):</strong> performs arithmetic operations and logical comparisons.</li><li><strong>CU (Control Unit):</strong> directs and coordinates the execution of instructions and movement of data.</li><li><strong>Registers:</strong> tiny, high-speed storage locations inside the processor for current instructions, addresses and data.</li></ul>
+<p>The CPU fetches an instruction, decodes it and executes it. This is often described as the <strong>fetch–decode–execute cycle</strong>. Cache and registers help keep frequently needed information close to the processor.</p>
+</section>
+
+<section class="kva-section" id="evolution">
+<h2>3. Timeline: Evolution of Computing Devices</h2>
+<p>Computer evolution did not happen in one straight line. Early calculating tools, mechanical machines, electronic computers, integrated circuits and modern mobile/cloud systems each added new capabilities. The timeline below highlights widely taught milestones; dates are approximate for broad eras.</p>
+<figure class="cs-diagram">
+<svg viewBox="0 0 860 560" role="img" aria-labelledby="cs-time-title cs-time-desc" xmlns="http://www.w3.org/2000/svg">
+<title id="cs-time-title">Timeline of computer evolution</title><desc id="cs-time-desc">A vertical timeline from the abacus and mechanical calculators to vacuum tube computers, transistors, integrated circuits, microprocessors, personal computers, internet, mobile and cloud computing, and modern AI systems.</desc>
+<line x1="65" y1="35" x2="65" y2="525" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+<g font-family="Arial,sans-serif">
+<circle cx="65" cy="52" r="11" fill="#2563eb"/><text x="95" y="48" font-size="18" font-weight="700" fill="#17365d">Ancient era — Abacus</text><text x="95" y="70" font-size="14" fill="#475569">A counting aid for arithmetic; not an electronic computer.</text>
+<circle cx="65" cy="112" r="11" fill="#2563eb"/><text x="95" y="108" font-size="18" font-weight="700" fill="#17365d">1600s–1800s — Mechanical calculators</text><text x="95" y="130" font-size="14" fill="#475569">Pascal and Leibniz developed mechanical calculating machines.</text>
+<circle cx="65" cy="172" r="11" fill="#2563eb"/><text x="95" y="168" font-size="18" font-weight="700" fill="#17365d">1830s — Babbage's designs</text><text x="95" y="190" font-size="14" fill="#475569">The Analytical Engine proposed programmable general-purpose computing ideas.</text>
+<circle cx="65" cy="232" r="11" fill="#0d9488"/><text x="95" y="228" font-size="18" font-weight="700" fill="#115e59">1940s — Vacuum-tube computers</text><text x="95" y="250" font-size="14" fill="#475569">Large electronic machines; high power use and heat.</text>
+<circle cx="65" cy="292" r="11" fill="#0d9488"/><text x="95" y="288" font-size="18" font-weight="700" fill="#115e59">1950s — Transistors</text><text x="95" y="310" font-size="14" fill="#475569">Smaller, more reliable and more energy-efficient systems.</text>
+<circle cx="65" cy="352" r="11" fill="#7c3aed"/><text x="95" y="348" font-size="18" font-weight="700" fill="#5b21b6">1960s — Integrated circuits (ICs)</text><text x="95" y="370" font-size="14" fill="#475569">Multiple electronic components placed on a chip.</text>
+<circle cx="65" cy="412" r="11" fill="#7c3aed"/><text x="95" y="408" font-size="18" font-weight="700" fill="#5b21b6">1970s onward — Microprocessors and PCs</text><text x="95" y="430" font-size="14" fill="#475569">CPU functions on a chip; personal computers spread widely.</text>
+<circle cx="65" cy="472" r="11" fill="#db2777"/><text x="95" y="468" font-size="18" font-weight="700" fill="#9d174d">1990s–2000s — Internet and mobile computing</text><text x="95" y="490" font-size="14" fill="#475569">Connected computers, laptops and smartphones became mainstream.</text>
+<circle cx="65" cy="532" r="11" fill="#db2777"/><text x="95" y="528" font-size="18" font-weight="700" fill="#9d174d">Today — Cloud, edge and AI-enabled systems</text><text x="95" y="550" font-size="14" fill="#475569">Distributed computing, connected devices and machine-learning applications.</text>
+</g></svg>
+<figcaption><strong>Figure 2.</strong> A study timeline, not a complete list of inventions or a strict classification of all computers.</figcaption>
+</figure>
+<h3>3.1 Four generations of electronic computers</h3>
+<div class="cs-table-wrap"><table><thead><tr><th>Generation</th><th>Main technology</th><th>General characteristics</th></tr></thead><tbody>
+<tr><td>First</td><td>Vacuum tubes</td><td>Very large, hot, expensive and power-hungry; machine-level programming was common.</td></tr>
+<tr><td>Second</td><td>Transistors</td><td>Smaller, more reliable and more efficient than vacuum-tube machines.</td></tr>
+<tr><td>Third</td><td>Integrated circuits (ICs)</td><td>Many components integrated into chips; improved reliability and processing capability.</td></tr>
+<tr><td>Fourth</td><td>Microprocessors / VLSI</td><td>Powerful personal computers and embedded systems became practical at scale.</td></tr>
+<tr><td>Later / emerging systems</td><td>Parallel processing, cloud, AI and other technologies</td><td>Often discussed as modern developments; there is no single universally agreed “fifth-generation” definition.</td></tr>
+</tbody></table></div>
+<div class="cs-note"><strong>Exam tip:</strong> If a question asks for the four traditional generations, write vacuum tubes, transistors, integrated circuits and microprocessors in that order. Do not confuse the “generation” classification with the historical timeline of individual devices.</div>
+</section>
+
+<section class="kva-section" id="memory">
+<h2>4. Computer Memory</h2>
+<p>Computer memory stores instructions, input data, intermediate results and final output. Memory is commonly classified as primary memory, cache and secondary storage. The terms “memory” and “storage” are sometimes used casually as if they were identical, but they serve different roles.</p>
+<figure class="cs-diagram">
+<svg viewBox="0 0 820 360" role="img" aria-labelledby="cs-mem-title cs-mem-desc" xmlns="http://www.w3.org/2000/svg">
+<title id="cs-mem-title">Memory hierarchy diagram</title><desc id="cs-mem-desc">A pyramid with registers at the top, followed by cache, RAM, and secondary storage at the bottom. Higher levels are faster, smaller and generally more expensive per byte; lower levels provide more capacity at lower cost per byte.</desc>
+<g font-family="Arial,sans-serif" text-anchor="middle">
+<path d="M410 25 L495 100 L325 100 Z" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="410" y="82" font-size="16" font-weight="700" fill="#1e3a8a">Registers</text>
+<path d="M325 108 L495 108 L555 178 L265 178 Z" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/><text x="410" y="151" font-size="17" font-weight="700" fill="#115e59">Cache</text>
+<path d="M265 186 L555 186 L625 256 L195 256 Z" fill="#fef3c7" stroke="#d97706" stroke-width="2"/><text x="410" y="230" font-size="18" font-weight="700" fill="#92400e">Primary memory (RAM)</text>
+<path d="M195 264 L625 264 L710 335 L110 335 Z" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="410" y="307" font-size="18" font-weight="700" fill="#5b21b6">Secondary storage (SSD / HDD)</text>
+<text x="80" y="45" font-size="13" fill="#334155">Faster</text><path d="M92 60 V145" stroke="#334155" stroke-width="2"/><path d="M86 68 L92 58 L98 68" stroke="#334155" stroke-width="2" fill="none"/>
+<text x="735" y="48" font-size="13" fill="#334155">Smaller</text><text x="735" y="64" font-size="13" fill="#334155">capacity</text>
+<text x="735" y="315" font-size="13" fill="#334155">Larger</text><text x="735" y="331" font-size="13" fill="#334155">capacity</text>
+</g></svg>
+<figcaption><strong>Figure 3.</strong> Simplified memory hierarchy. Actual speeds and capacities vary by device and architecture.</figcaption>
+</figure>
+<h3>4.1 Primary memory</h3>
+<p>Primary memory is directly accessible to the processor or used as its immediate working memory. RAM and ROM are the standard examples taught at this level.</p>
+<div class="cs-table-wrap"><table><thead><tr><th>RAM</th><th>ROM</th></tr></thead><tbody>
+<tr><td>Random Access Memory; holds programs and data currently in use.</td><td>Read-Only Memory; traditionally stores instructions needed for startup or device operation.</td></tr>
+<tr><td>Volatile: its contents are lost when power is removed.</td><td>Non-volatile: retains stored contents without power.</td></tr>
+<tr><td>Usually read from and written to during normal operation.</td><td>Often read during normal operation; the method of updating depends on the ROM technology.</td></tr>
+<tr><td>Examples include DRAM used as main memory and SRAM used in cache.</td><td>Examples include firmware stored in flash/ROM-type memory.</td></tr>
+</tbody></table></div>
+<h3>4.2 Cache memory</h3>
+<p>Cache is small, very fast memory that stores copies of data or instructions likely to be needed by the CPU soon. It reduces the average time needed to access data from slower main memory. Modern processors may have L1, L2 and L3 cache levels; the exact design differs by processor.</p>
+<h3>4.3 Registers</h3>
+<p>Registers are storage locations inside the CPU. They are extremely fast but very limited in capacity. They may hold operands, addresses, instructions or intermediate results during execution.</p>
+<h3>4.4 Secondary memory / storage</h3>
+<div class="cs-table-wrap"><table><thead><tr><th>Device / medium</th><th>Type</th><th>Useful point</th></tr></thead><tbody>
+<tr><td>Hard disk drive (HDD)</td><td>Magnetic</td><td>Stores data on rotating magnetic platters; often offers large capacity.</td></tr>
+<tr><td>Solid-state drive (SSD)</td><td>Flash storage</td><td>Has no moving disk parts; commonly faster for everyday access than an HDD.</td></tr>
+<tr><td>USB flash drive / memory card</td><td>Flash storage</td><td>Portable and rewritable.</td></tr>
+<tr><td>CD / DVD / Blu-ray</td><td>Optical</td><td>Uses laser technology to read/write supported discs.</td></tr>
+<tr><td>Magnetic tape</td><td>Magnetic</td><td>Useful for backup and archival storage; typically sequential access.</td></tr>
+</tbody></table></div>
+<p>Secondary storage is non-volatile and generally offers much greater capacity than RAM. It retains files when the computer is switched off, but accessing it is normally slower than accessing registers, cache or RAM.</p>
+</section>
+
+<section class="kva-section" id="units">
+<h2>5. Units of Memory</h2>
+<p>The smallest unit is a <strong>bit</strong>, which can represent 0 or 1. A group of 8 bits is one <strong>byte</strong>. A character is often stored in one or more bytes depending on the encoding.</p>
+<div class="cs-table-wrap"><table><thead><tr><th>Unit</th><th>Common binary value used in school problems</th><th>Approximate decimal value</th></tr></thead><tbody>
+<tr><td>1 bit</td><td>0 or 1</td><td>—</td></tr>
+<tr><td>1 byte (B)</td><td>8 bits</td><td>8 bits</td></tr>
+<tr><td>1 KB</td><td>1,024 bytes</td><td>About 1 thousand bytes</td></tr>
+<tr><td>1 MB</td><td>1,024 KB</td><td>About 1 million bytes</td></tr>
+<tr><td>1 GB</td><td>1,024 MB</td><td>About 1 billion bytes</td></tr>
+<tr><td>1 TB</td><td>1,024 GB</td><td>About 1 trillion bytes</td></tr>
+<tr><td>1 PB</td><td>1,024 TB</td><td>About 1 quadrillion bytes</td></tr>
+</tbody></table></div>
+<div class="cs-note"><strong>Accuracy note:</strong> In many school exercises, KB, MB, GB and TB are calculated using 1,024. In formal storage terminology, the binary units are KiB, MiB, GiB and TiB (each based on 1,024), while KB, MB, GB and TB can denote decimal multiples of 1,000. Follow the convention specified in your question.</div>
+<h3>Solved examples</h3>
+<div class="cs-card"><h3>Example 1: Convert 4 KB into bytes</h3><p>Using the school convention, 1 KB = 1,024 bytes.</p><p><strong>4 × 1,024 = 4,096 bytes.</strong></p></div>
+<div class="cs-card"><h3>Example 2: Convert 3 MB into KB</h3><p>3 × 1,024 = <strong>3,072 KB</strong>.</p></div>
+<div class="cs-card"><h3>Example 3: How many bits are there in 5 bytes?</h3><p>5 × 8 = <strong>40 bits</strong>.</p></div>
+</section>
+
+<section class="kva-section" id="software">
+<h2>6. Types of Software</h2>
+<p>Software is a collection of programs and related instructions that enable a computer to perform tasks. It is commonly divided into system software and application software. Programming tools are used to create, translate and test programs.</p>
+<figure class="cs-diagram">
+<svg viewBox="0 0 820 350" role="img" aria-labelledby="cs-soft-title cs-soft-desc" xmlns="http://www.w3.org/2000/svg">
+<title id="cs-soft-title">Classification of software</title><desc id="cs-soft-desc">Software branches into system software, application software and programming tools. System software includes operating systems, device drivers and utilities. Application software includes general-purpose and specific-purpose applications. Programming tools include editors, compilers, interpreters and debuggers.</desc>
+<g font-family="Arial,sans-serif" text-anchor="middle">
+<rect x="290" y="18" width="240" height="52" rx="12" fill="#17365d"/><text x="410" y="50" font-size="20" font-weight="700" fill="#fff">Software</text>
+<path d="M410 70 V95 H145 V116 M410 95 V116 M410 95 H675 V116" stroke="#64748b" stroke-width="2.5" fill="none"/>
+<rect x="20" y="116" width="250" height="55" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="145" y="149" font-size="18" font-weight="700" fill="#1e3a8a">System Software</text>
+<rect x="285" y="116" width="250" height="55" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="410" y="149" font-size="18" font-weight="700" fill="#166534">Application Software</text>
+<rect x="550" y="116" width="250" height="55" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/><text x="675" y="149" font-size="18" font-weight="700" fill="#92400e">Programming Tools</text>
+<rect x="20" y="198" width="250" height="120" rx="10" fill="#f8fafc" stroke="#93c5fd"/><text x="145" y="224" font-size="15" fill="#334155">Operating systems</text><text x="145" y="250" font-size="15" fill="#334155">Device drivers</text><text x="145" y="276" font-size="15" fill="#334155">System utilities</text><text x="145" y="302" font-size="13" fill="#64748b">Runs / maintains the system</text>
+<rect x="285" y="198" width="250" height="120" rx="10" fill="#f8fafc" stroke="#86efac"/><text x="410" y="224" font-size="15" fill="#334155">General-purpose apps</text><text x="410" y="250" font-size="15" fill="#334155">Specific-purpose apps</text><text x="410" y="276" font-size="15" fill="#334155">Word processor, payroll</text><text x="410" y="302" font-size="13" fill="#64748b">Helps users perform tasks</text>
+<rect x="550" y="198" width="250" height="120" rx="10" fill="#f8fafc" stroke="#fcd34d"/><text x="675" y="224" font-size="15" fill="#334155">Code editors / IDEs</text><text x="675" y="250" font-size="15" fill="#334155">Compilers / interpreters</text><text x="675" y="276" font-size="15" fill="#334155">Debuggers / build tools</text><text x="675" y="302" font-size="13" fill="#64748b">Helps create software</text>
+</g></svg>
+<figcaption><strong>Figure 4.</strong> A simplified classification of software with examples.</figcaption>
+</figure>
+<h3>6.1 System software</h3>
+<p>System software manages the computer and provides a platform for application programs.</p>
+<ul><li><strong>Operating system:</strong> manages memory, files, processes, devices and user interaction. Examples: Windows, GNU/Linux, macOS, Android and iOS.</li><li><strong>Device driver:</strong> allows the operating system to communicate with a hardware device, such as a printer or graphics adapter.</li><li><strong>Utility software:</strong> supports maintenance, protection or management. Examples include backup utilities, file-compression tools and security scanners.</li><li><strong>Language translator:</strong> converts source code or assembly instructions into a form the computer can execute.</li></ul>
+<h3>6.2 Application software</h3>
+<p>Application software helps a user perform a task. It can be classified by purpose.</p>
+<div class="cs-table-wrap"><table><thead><tr><th>Type</th><th>Meaning</th><th>Examples</th></tr></thead><tbody>
+<tr><td>General-purpose / generic</td><td>Designed for many users and a wide range of common tasks.</td><td>Word processors, spreadsheets, presentation software, web browsers.</td></tr>
+<tr><td>Specific-purpose / customised</td><td>Designed for a particular task, organisation or workflow.</td><td>School fee-management system, railway reservation system, hospital appointment software, payroll system.</td></tr>
+</tbody></table></div>
+<p>“Generic” and “general-purpose” are often used similarly in school explanations. Specific-purpose software can be developed for one organisation or a narrow activity.</p>
+<h3>6.3 Programming tools and translators</h3>
+<div class="cs-table-wrap"><table><thead><tr><th>Tool / translator</th><th>What it does</th><th>Exam-ready distinction</th></tr></thead><tbody>
+<tr><td>Assembler</td><td>Translates assembly language into machine code.</td><td>Assembly language uses mnemonic instructions.</td></tr>
+<tr><td>Compiler</td><td>Translates a program or source unit before execution, often producing object code or an executable.</td><td>Reports errors during translation; exact behaviour depends on the language and toolchain.</td></tr>
+<tr><td>Interpreter</td><td>Executes source code through an interpreter/runtime.</td><td>Often described as processing instructions step by step; modern implementations may use bytecode or JIT compilation.</td></tr>
+<tr><td>Debugger</td><td>Helps inspect execution, set breakpoints and find faults.</td><td>Used for debugging, not simply for translation.</td></tr>
+</tbody></table></div>
+<div class="cs-note"><strong>Do not overgeneralise:</strong> school questions often contrast compiler and interpreter in simplified terms. In real implementations, language runtimes may combine compilation, interpretation and just-in-time techniques.</div>
+</section>
+
+<section class="kva-section" id="opensource">
+<h2>7. Open-Source Software and Other Software Models</h2>
+<p><strong>Open-source software (OSS)</strong> is software distributed under a licence that grants users rights to access and use the source code and, subject to licence conditions, study, modify and redistribute it. “Open source” is about the rights granted by the licence—not simply whether a program is free of cost.</p>
+<h3>7.1 Examples of open-source software</h3>
+<div class="cs-table-wrap"><table><thead><tr><th>Software / project</th><th>Typical use</th><th>Important note</th></tr></thead><tbody>
+<tr><td>GNU/Linux distributions</td><td>Operating systems for desktops, servers and embedded devices.</td><td>Many distributions combine software under different licences.</td></tr>
+<tr><td>LibreOffice</td><td>Documents, spreadsheets and presentations.</td><td>Open-source office productivity suite.</td></tr>
+<tr><td>Mozilla Firefox</td><td>Web browsing.</td><td>Open-source browser project.</td></tr>
+<tr><td>Python</td><td>Programming language and runtime.</td><td>Python is open source and distributed under a permissive licence.</td></tr>
+<tr><td>GIMP</td><td>Image editing.</td><td>Open-source raster graphics editor.</td></tr>
+<tr><td>VLC media player</td><td>Playing audio and video.</td><td>Open-source media player.</td></tr>
+<tr><td>Blender</td><td>3D modelling, animation and rendering.</td><td>Open-source 3D creation suite.</td></tr>
+</tbody></table></div>
+<h3>7.2 Advantages and limitations</h3>
+<div class="cs-table-wrap"><table><thead><tr><th>Potential advantages</th><th>Possible limitations / responsibilities</th></tr></thead><tbody>
+<tr><td>Source code can be inspected under the licence.</td><td>Reading and maintaining code may require technical skills.</td></tr>
+<tr><td>Users may modify the software and share changes when the licence permits.</td><td>Redistribution and derivative works must comply with the licence.</td></tr>
+<tr><td>Community contributions can improve features and fix defects.</td><td>Support and documentation quality vary by project.</td></tr>
+<tr><td>Often reduces dependence on a single vendor.</td><td>Deployment, training, migration and maintenance may still cost money.</td></tr>
+</tbody></table></div>
+<h3>7.3 Open source vs freeware vs shareware vs proprietary</h3>
+<div class="cs-table-wrap"><table><thead><tr><th>Term</th><th>Meaning</th><th>Source-code / usage rights</th></tr></thead><tbody>
+<tr><td>Open source</td><td>Software whose licence provides source-code access and defined rights to use, modify and redistribute.</td><td>Rights depend on the particular open-source licence.</td></tr>
+<tr><td>Freeware</td><td>Software available to use without a purchase price.</td><td>Source code and modification rights are not automatically provided.</td></tr>
+<tr><td>Shareware / trialware</td><td>Software offered for evaluation or limited use, often with payment needed for continued/full use.</td><td>Usually governed by the vendor's terms; not automatically open source.</td></tr>
+<tr><td>Proprietary / closed-source</td><td>Software controlled by an owner under restrictive licence terms.</td><td>Users generally cannot freely modify or redistribute it.</td></tr>
+<tr><td>Commercial software</td><td>Software supplied as part of a business model, often for payment or support.</td><td>May be proprietary or open source; “commercial” does not automatically mean closed-source.</td></tr>
+</tbody></table></div>
+<div class="cs-warning"><strong>Common exam misconception:</strong> “Free of cost” and “open source” do not mean the same thing. A freeware program can be closed-source, and open-source software can be sold or supported commercially.</div>
+<h3>7.4 Free and open-source software (FOSS)</h3>
+<p>FOSS refers to free/libre and open-source software. Here, “free” often emphasises freedom to use, study, modify and share—not necessarily a zero price. Licence examples include the GNU General Public License (GPL), MIT License and Apache License. Their conditions differ, so one licence should not be treated as identical to another.</p>
+<h3>7.5 Public domain and Creative Commons are not identical to open-source software licences</h3>
+<p>Public-domain works have no enforceable copyright restrictions in the relevant jurisdiction or have been dedicated to the public domain. Creative Commons licences are mainly used for creative works such as text, images and media; they are not generally recommended as a substitute for a software-specific open-source licence. Always check the licence of the actual work.</p>
+</section>
+
+<section class="kva-section" id="os">
+<h2>8. Operating System (OS)</h2>
+<p>An <strong>operating system</strong> is system software that manages hardware resources and provides services for applications and users. It acts as an interface between applications/users and the hardware.</p>
+<h3>8.1 Main functions of an operating system</h3>
+<ul><li><strong>Process management:</strong> creates, schedules and coordinates running processes.</li><li><strong>Memory management:</strong> allocates and tracks memory used by programs.</li><li><strong>File management:</strong> organises files and folders and controls access.</li><li><strong>Device management:</strong> coordinates input/output devices through drivers and system services.</li><li><strong>User interface:</strong> offers a graphical user interface (GUI), command-line interface (CLI), or both.</li><li><strong>Security and access control:</strong> manages accounts, permissions and other protection mechanisms.</li><li><strong>Error handling and resource allocation:</strong> detects certain faults and distributes system resources.</li></ul>
+<h3>8.2 GUI and CLI</h3>
+<div class="cs-table-wrap"><table><thead><tr><th>GUI — Graphical User Interface</th><th>CLI — Command-Line Interface</th></tr></thead><tbody>
+<tr><td>Uses visual elements such as windows, icons, menus and pointers.</td><td>Uses text commands entered at a prompt or terminal.</td></tr>
+<tr><td>Often easier for beginners to discover visually.</td><td>Can be efficient for repetitive, scripted or remote administration tasks.</td></tr>
+<tr><td>Example: opening a folder through a file manager.</td><td>Example: listing files with a terminal command.</td></tr>
+</tbody></table></div>
+<h3>8.3 Examples of operating systems</h3>
+<p>Microsoft Windows, GNU/Linux distributions, macOS, Android and iOS are examples. An operating system is not the same as a web browser, word processor or device driver, although drivers work closely with the OS.</p>
+</section>
+
+<section class="kva-section" id="security">
+<h2>9. Data Deletion, Recovery and Security</h2>
+<p>Deleting a file does not always mean every underlying data bit has immediately disappeared. Depending on the file system and device, deletion may first remove the directory reference or mark storage space as available for reuse. Recovery may be possible until data is overwritten, but it is never guaranteed.</p>
+<ul><li><strong>Recycle Bin / Trash:</strong> often provides a way to restore recently deleted files, unless permanently deleted or bypassed.</li><li><strong>Backups:</strong> copies stored separately help restore data after accidental deletion, device failure or malware.</li><li><strong>Recovery tools:</strong> may recover some files if the relevant data has not been overwritten and the device remains accessible.</li><li><strong>Secure deletion:</strong> methods depend on the storage medium. On SSDs, wear levelling and internal remapping can make ordinary overwrite-based approaches unreliable; manufacturer-supported secure erase or encryption-based sanitisation may be more appropriate.</li><li><strong>Privacy and security:</strong> use strong authentication, access controls, encryption and trusted backups for sensitive data.</li></ul>
+<div class="cs-warning"><strong>Practical safety:</strong> If you accidentally delete an important file, stop saving new data to the same drive and check the Trash/Recycle Bin and backups first. Continued use can overwrite recoverable data. Do not store only one copy of important school or personal work.</div>
+</section>
+
+<section class="kva-section" id="questions">
+<h2>10. Exam-Oriented Questions with Answers</h2>
+<p>These are original revision questions based on the concepts listed in CBSE syllabi. They are practice questions, not claimed to be verbatim copies of specific previous-year board questions.</p>
+<div class="cs-card"><span class="cs-badge">1 mark</span><h3>Q1. Which component performs arithmetic calculations and logical comparisons?</h3><p>(a) CU &nbsp; (b) ALU &nbsp; (c) RAM &nbsp; (d) SSD</p><details><summary><strong>Show answer</strong></summary><p><strong>Answer: (b) ALU.</strong> The Arithmetic Logic Unit performs arithmetic and logical operations.</p></details></div>
+<div class="cs-card"><span class="cs-badge">1 mark</span><h3>Q2. Which memory is volatile?</h3><p>(a) ROM &nbsp; (b) RAM &nbsp; (c) DVD &nbsp; (d) SSD</p><details><summary><strong>Show answer</strong></summary><p><strong>Answer: (b) RAM.</strong> RAM normally loses its contents when power is removed.</p></details></div>
+<div class="cs-card"><span class="cs-badge">1 mark</span><h3>Q3. Which of the following is system software?</h3><p>(a) Presentation slide deck &nbsp; (b) Operating system &nbsp; (c) School report &nbsp; (d) Photo album</p><details><summary><strong>Show answer</strong></summary><p><strong>Answer: (b) Operating system.</strong> It manages system resources and provides services to applications.</p></details></div>
+<div class="cs-card"><span class="cs-badge">2 marks</span><h3>Q4. Differentiate between data and information with an example.</h3><details><summary><strong>Show model answer</strong></summary><p><strong>Data</strong> consists of raw facts, such as marks 70, 80 and 90. <strong>Information</strong> is data processed into a meaningful form; for example, the average of those marks is 80.</p></details></div>
+<div class="cs-card"><span class="cs-badge">2 marks</span><h3>Q5. Write two differences between RAM and ROM.</h3><details><summary><strong>Show model answer</strong></summary><p>RAM is volatile and is used as working memory for currently running programs and data. ROM-type non-volatile memory retains its contents without power and is commonly used to store firmware or startup instructions. Their normal read/write behaviour also differs.</p></details></div>
+<div class="cs-card"><span class="cs-badge">2 marks</span><h3>Q6. Convert 6 KB into bytes using 1 KB = 1,024 bytes.</h3><details><summary><strong>Show solution</strong></summary><p>6 × 1,024 = <strong>6,144 bytes</strong>.</p></details></div>
+<div class="cs-card"><span class="cs-badge">2 marks</span><h3>Q7. What is the difference between a compiler and an interpreter?</h3><details><summary><strong>Show model answer</strong></summary><p>A compiler translates source code into another form, commonly object code or an executable, before program execution. An interpreter/runtime executes source instructions through its execution environment. The precise implementation depends on the language and toolchain.</p></details></div>
+<div class="cs-card"><span class="cs-badge">3 marks</span><h3>Q8. Explain any three functions of an operating system.</h3><details><summary><strong>Show model answer</strong></summary><p>Any three: (1) Memory management allocates and tracks memory. (2) File management organises files and controls access. (3) Device management coordinates peripherals. Other valid points include process management, security, user interface and error handling.</p></details></div>
+<div class="cs-card"><span class="cs-badge">3 marks</span><h3>Q9. Differentiate between general-purpose and specific-purpose application software with examples.</h3><details><summary><strong>Show model answer</strong></summary><p>General-purpose software supports common tasks for many users, such as word processing or spreadsheets. Specific-purpose software is designed for a particular task or workflow, such as school fee management, payroll or railway reservation.</p></details></div>
+<div class="cs-card"><span class="cs-badge">3 marks</span><h3>Q10. Write the four traditional generations of electronic computers and their main technology.</h3><details><summary><strong>Show model answer</strong></summary><p>First: vacuum tubes; second: transistors; third: integrated circuits; fourth: microprocessors. Each generation generally improved size, reliability, performance and efficiency.</p></details></div>
+<div class="cs-card"><span class="cs-badge">3 marks</span><h3>Q11. Give three differences between open-source software and freeware.</h3><details><summary><strong>Show model answer</strong></summary><p>Open-source software grants source-code access and licence-defined rights to study, modify and redistribute. Freeware describes software available without a purchase price; its source code may remain closed. Open-source software may be sold commercially, while freeware is not necessarily modifiable or redistributable.</p></details></div>
+<div class="cs-card"><span class="cs-badge">4 marks</span><h3>Q12. Explain the memory hierarchy and why cache is useful.</h3><details><summary><strong>Show model answer</strong></summary><p>A simplified hierarchy is registers, cache, RAM and secondary storage. Higher levels are generally faster, smaller and more expensive per byte; lower levels offer greater capacity at lower cost per byte. Cache keeps likely-to-be-needed instructions and data near the CPU, reducing average access time.</p></details></div>
+<div class="cs-card"><span class="cs-badge">4 marks</span><h3>Q13. Classify the following: printer driver, spreadsheet, Linux, school payroll application, compiler.</h3><details><summary><strong>Show model answer</strong></summary><ul><li>Printer driver — system software / device driver.</li><li>Spreadsheet — general-purpose application software.</li><li>Linux — operating-system family / system software.</li><li>School payroll application — specific-purpose application software.</li><li>Compiler — programming tool / language translator.</li></ul></details></div>
+<div class="cs-card"><span class="cs-badge">5 marks</span><h3>Q14. Draw or explain the functional units of a computer system.</h3><details><summary><strong>Show model answer</strong></summary><p>Draw an input unit sending data to the system, a CPU containing ALU and CU, main memory connected to the CPU, secondary storage for long-term retention, and an output unit. Explain that input data and instructions are processed by the CPU, using memory as needed, and results are delivered to output or stored.</p></details></div>
+<div class="cs-card"><span class="cs-badge">5 marks</span><h3>Q15. A student permanently deletes a project file. Explain why recovery may or may not be possible and give two preventive measures.</h3><details><summary><strong>Show model answer</strong></summary><p>Deletion may only mark the file's storage space as available, so recovery tools may work if the data has not been overwritten. Recovery is not guaranteed, especially on SSDs or if secure deletion has been used. Prevent loss through regular separate backups and by checking the Recycle Bin/Trash before permanent deletion. Cloud version history or a second offline copy can provide additional protection.</p></details></div>
+</section>
+
+<section class="kva-section" id="revision">
+<h2>11. Quick Revision Sheet</h2>
+<ul>
+<li><strong>Computer system:</strong> hardware + software + data + users/procedures.</li>
+<li><strong>Input:</strong> enters data; <strong>output:</strong> presents results.</li>
+<li><strong>CPU:</strong> ALU performs arithmetic/logic; CU coordinates; registers hold very small, fast working values.</li>
+<li><strong>Memory hierarchy:</strong> registers → cache → RAM → secondary storage (simplified order).</li>
+<li><strong>RAM:</strong> volatile working memory; <strong>ROM-type memory:</strong> non-volatile firmware storage.</li>
+<li><strong>Storage examples:</strong> HDD (magnetic), SSD/flash drive (flash), CD/DVD (optical), tape (magnetic).</li>
+<li><strong>School memory conversions:</strong> 1 byte = 8 bits; often 1 KB = 1,024 bytes in school calculations.</li>
+<li><strong>Software types:</strong> system software, application software and programming tools.</li>
+<li><strong>OS functions:</strong> process, memory, file, device, security and user-interface management.</li>
+<li><strong>Four traditional generations:</strong> vacuum tubes, transistors, integrated circuits, microprocessors.</li>
+<li><strong>Open source ≠ freeware:</strong> source-code and licence rights differ from purchase price.</li>
+<li><strong>Data safety:</strong> keep separate backups; recovery after deletion is not guaranteed.</li>
+</ul>
+</section>
+
+<section class="kva-section">
+<h2>Official CBSE resources</h2>
+<ul>
+<li><a href="https://cbseacademic.nic.in/curriculum_2027.html" target="_blank" rel="noopener noreferrer">CBSE Curriculum 2026–27</a> — select Computer Science (083) or Informatics Practices (065).</li>
+<li><a href="https://cbseacademic.nic.in/web_material/CurriculumMain27/SecPart2/Computer_Science_SecP2_2026-27.pdf" target="_blank" rel="noopener noreferrer">Computer Science syllabus 2026–27 (official PDF)</a>.</li>
+<li><a href="https://cbseacademic.nic.in/web_material/CurriculumMain27/SecPart2/Informatics_Practices_SecP2_2026-27.pdf" target="_blank" rel="noopener noreferrer">Informatics Practices syllabus 2026–27 (official PDF)</a>.</li>
+<li><a href="https://cbseacademic.nic.in/new-resources-srsec.html" target="_blank" rel="noopener noreferrer">CBSE Senior Secondary additional resources</a> — links to NCERT textbooks and reference materials.</li>
+<li><a href="https://ncert.nic.in/textbook.php" target="_blank" rel="noopener noreferrer">NCERT textbooks portal</a> — consult the prescribed book for your class and subject.</li>
+</ul>
+<p>Use these notes alongside your textbook and the current session's syllabus. Practise definitions, labelled diagrams, differences, examples and short case-based questions rather than memorising only one-line answers.</p>
+</section>
+</article>
+</main>
+<div id="footer"></div>
+<script src="/footer.js"></script>
+</body>
+</html>
