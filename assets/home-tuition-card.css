@@ -1,0 +1,197 @@
+
+/* ━━━ FEATURED HOME TUITION CARD ━━━ */
+.home-tuition-feature {
+  padding: 34px 24px 42px;
+  background: #faf8f3;
+}
+.home-tuition-feature-card {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(150px, .72fr) minmax(0, 1.8fr);
+  align-items: center;
+  gap: clamp(22px, 4vw, 48px);
+  max-width: 1120px;
+  min-height: 250px;
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 42px);
+  overflow: hidden;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(232,178,84,.5);
+  border-radius: 24px;
+  background:
+    radial-gradient(ellipse at 6% 100%, rgba(13,110,110,.42), transparent 42%),
+    radial-gradient(ellipse at 100% 0%, rgba(201,147,58,.2), transparent 42%),
+    linear-gradient(120deg, #0a243b 0%, #111d36 58%, #172654 100%);
+  box-shadow: 0 16px 44px rgba(9,36,62,.16);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.home-tuition-feature-card:hover {
+  transform: translateY(-4px);
+  border-color: #e8b254;
+  box-shadow: 0 22px 54px rgba(9,36,62,.23);
+}
+.home-tuition-feature-card:focus-visible {
+  outline: 3px solid #c9933a;
+  outline-offset: 4px;
+}
+.home-tuition-feature-art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  justify-self: center;
+  width: clamp(140px, 19vw, 205px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 50%;
+  background: rgba(255,255,255,.055);
+  box-shadow: inset 0 0 36px rgba(255,255,255,.035);
+}
+.home-tuition-feature-orbit {
+  position: absolute;
+  inset: 12%;
+  border: 1px dashed rgba(232,178,84,.58);
+  border-radius: 50%;
+}
+.home-tuition-feature-orbit.orbit-two {
+  inset: -5%;
+  border-style: solid;
+  border-color: rgba(255,255,255,.12);
+}
+.home-tuition-feature-icon {
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  border: 1px solid rgba(232,178,84,.65);
+  border-radius: 26px;
+  background: linear-gradient(145deg, #f7d99b, #c9933a);
+  box-shadow: 0 12px 30px rgba(0,0,0,.2);
+  font-size: 44px;
+  transform: rotate(-5deg);
+}
+.home-tuition-feature-book {
+  position: absolute;
+  right: 2%;
+  bottom: 12%;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 15px;
+  background: #fff;
+  font-size: 26px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.16);
+}
+.home-tuition-feature-star {
+  position: absolute;
+  left: 3%;
+  top: 14%;
+  color: #f5ce80;
+  font-size: 28px;
+}
+.home-tuition-feature-copy { position: relative; z-index: 1; }
+.home-tuition-feature-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 13px;
+  color: #f1cb83;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .13em;
+  line-height: 1.5;
+}
+.home-tuition-live-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border-radius: 50%;
+  background: #67e8a5;
+  box-shadow: 0 0 0 4px rgba(103,232,165,.13);
+}
+.home-tuition-feature-copy h2 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.08;
+}
+.home-tuition-feature-copy h2 em { color: #f1cb83; font-style: italic; }
+.home-tuition-feature-copy p {
+  max-width: 690px;
+  margin: 0;
+  color: #e5eaf1;
+  font-size: 15px;
+  line-height: 1.75;
+}
+.home-tuition-feature-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 17px 0 22px;
+}
+.home-tuition-feature-points span {
+  padding: 7px 11px;
+  color: #f4f6fa;
+  background: rgba(255,255,255,.075);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.home-tuition-feature-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 46px;
+  padding: 12px 18px;
+  color: #14263c;
+  background: linear-gradient(135deg, #f7d99b, #e8b254);
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 7px 20px rgba(201,147,58,.2);
+  transition: gap .2s ease, filter .2s ease;
+}
+.home-tuition-feature-card:hover .home-tuition-feature-cta { gap: 18px; filter: brightness(1.04); }
+.home-tuition-feature-corner {
+  position: absolute;
+  right: 15px;
+  bottom: -26px;
+  z-index: -1;
+  color: rgba(255,255,255,.035);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 130px;
+  font-weight: 700;
+  line-height: 1;
+}
+@media (max-width: 640px) {
+  .home-tuition-feature { padding: 24px 13px 30px; }
+  .home-tuition-feature-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 25px 21px 27px;
+    border-radius: 19px;
+  }
+  .home-tuition-feature-art {
+    width: 118px;
+    margin: 2px auto 0;
+  }
+  .home-tuition-feature-icon { width: 67px; height: 67px; border-radius: 20px; font-size: 34px; }
+  .home-tuition-feature-book { width: 40px; height: 40px; font-size: 22px; }
+  .home-tuition-feature-star { font-size: 23px; }
+  .home-tuition-feature-copy h2 { font-size: clamp(2rem, 9vw, 2.55rem); }
+  .home-tuition-feature-copy p { font-size: 14px; line-height: 1.7; }
+  .home-tuition-feature-points { gap: 7px; margin: 15px 0 19px; }
+  .home-tuition-feature-points span { font-size: 11px; }
+  .home-tuition-feature-cta { justify-content: center; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-tuition-feature-card, .home-tuition-feature-cta { transition: none; }
+  .home-tuition-feature-card:hover { transform: none; }
+}
