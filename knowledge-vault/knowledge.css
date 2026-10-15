@@ -881,3 +881,27 @@ picture img {
 .kv-subject-more { margin: 28px 0 0; text-align: center; }
 .kv-subject-more a { color: #0d6efd; font-weight: 800; text-decoration: none; }
 .kv-subject-more a:hover { text-decoration: underline; }
+
+
+/* TABLE HEADER CONTRAST FIX
+   Dark navy header with white text for clear visibility across Knowledge Vault tables. */
+.kva-page .kva-table-wrap thead th,
+.kva-page .kva-table-wrap thead th *,
+.kva-page .table-responsive thead th,
+.kva-page .table-responsive thead th *,
+.kva-page table thead th {
+  background-color: #17365d !important;
+  color: #ffffff !important;
+  font-weight: 800;
+}
+.kva-page .kva-table-wrap thead th,
+.kva-page .table-responsive thead th,
+.kva-page table thead th {
+  border-color: #294b72 !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+.kva-page .kva-table-wrap thead,
+.kva-page .table-responsive thead {
+  background-color: #17365d !important;
+}
