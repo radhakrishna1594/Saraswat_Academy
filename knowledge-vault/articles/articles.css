@@ -602,3 +602,32 @@
   .kva-article .kva-math-display .katex { font-size: .96em; }
   .kva-article .kva-article-footer { padding: 20px 14px; margin-top: 34px; }
 }
+
+
+/* TABLE HEADER CONTRAST FIX
+   Keep Knowledge Vault table headings readable even when site-wide
+   table styles are loaded before or after this stylesheet. */
+.kva-page .table-responsive thead th,
+.kva-page .table-responsive thead th *,
+.kva-page .kva-table-wrap thead th,
+.kva-page .kva-table-wrap thead th *,
+.kva-page .trig-table-wrap thead th,
+.kva-page .trig-table-wrap thead th *,
+.kva-page table thead th {
+  background-color: #17365d !important;
+  color: #ffffff !important;
+  font-weight: 800;
+}
+.kva-page .table-responsive thead th,
+.kva-page .kva-table-wrap thead th,
+.kva-page .trig-table-wrap thead th,
+.kva-page table thead th {
+  border-color: #294b72 !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+.kva-page .table-responsive thead,
+.kva-page .kva-table-wrap thead,
+.kva-page .trig-table-wrap thead {
+  background-color: #17365d !important;
+}
