@@ -328,5 +328,15 @@
     "description": "Learn Brahmagupta’s formula for the area of a cyclic quadrilateral with a labelled diagram, easy steps, solved examples and practice questions.",
     "url": "/knowledge-vault/articles/brahmaguptas-formula-cyclic-quadrilateral.html",
     "keywords": "Brahmagupta formula Brahmagupta's formula cyclic quadrilateral cyclic 4-gon area quadrilateral semiperimeter solved examples geometry"
+  },
+  {
+    "title": "What Is Reverse Engineering? A Beginner-Friendly Guide",
+    "category": "Technology",
+    "subcategory": "Software and Computer Science",
+    "level": "All learners • Computer Science",
+    "icon": "🧩",
+    "description": "Understand reverse engineering in simple language, with a process diagram, software methods, real-life uses, safe beginner practice and legal and ethical considerations.",
+    "url": "/knowledge-vault/articles/what-is-reverse-engineering.html",
+    "keywords": "reverse engineering reverse engineering software software analysis computer science static analysis dynamic analysis disassembly decompilation cybersecurity compatibility legacy systems file formats programming beginner tutorial"
   }
 ]
