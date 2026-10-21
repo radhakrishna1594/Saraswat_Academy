@@ -153,13 +153,7 @@
     <!-- WHY -->
     
 
-    <!-- =========================
-     TUTOR RATE CARDS
-========================= -->
-
-
-
-    <!-- CLASSES -->
+<!-- CLASSES -->
     <section class="section classes" id="classes">
       <div class="container">
         <div class="eyebrow">Academic support</div>
@@ -711,37 +705,7 @@ Please share the available tuition options, fees and timings.`;
     });
 
 </script>
-    
-<script>
-
-/* =========================================
-   RATE CARD SLIDER
-========================================= */
-
-function slideRates(sliderId, direction) {
-
-    const slider = document.getElementById(sliderId);
-
-    if (!slider) return;
-
-    const card = slider.querySelector(".rate-card");
-
-    if (!card) return;
-
-    const gap = 20;
-
-    const scrollAmount = card.offsetWidth + gap;
-
-    slider.scrollBy({
-        left: direction * scrollAmount,
-        behavior: "smooth"
-    });
-}
-
-</script>
-
-        
-<!-- =========================================================
+    <!-- =========================================================
      STUDENT RESULTS & ACHIEVEMENTS
      Names/photos are intentionally omitted here until
      appropriate publication consent is confirmed.
