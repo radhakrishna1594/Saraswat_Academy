@@ -84,6 +84,55 @@
   }
 
 
+  // Load shared home-tutor enquiry and testimonial assets on all tutor pages.
+  // The enquiry script loads first so the carousel can position itself before the form.
+  function loadTutorEnquiryExperience() {
+    const pathname = window.location.pathname || '';
+    if (!pathname.includes('/home-tutor/') || pathname.endsWith('/join-as-a-tutor.html')) return;
+
+    function ensureStylesheet(id, href) {
+      if (document.getElementById(id)) return;
+      const link = document.createElement('link');
+      link.id = id;
+      link.rel = 'stylesheet';
+      link.href = href;
+      document.head.appendChild(link);
+    }
+
+    function ensureScript(id, src, onReady) {
+      const existing = document.getElementById(id);
+      if (existing) {
+        if (existing.dataset.loaded === 'true') {
+          if (onReady) onReady();
+        } else if (onReady) {
+          existing.addEventListener('load', onReady, { once: true });
+        }
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.id = id;
+      script.src = src;
+      script.async = false;
+      script.onload = function () {
+        script.dataset.loaded = 'true';
+        if (onReady) onReady();
+      };
+      script.onerror = function () {
+        console.error('Unable to load tutor page asset:', src);
+        if (onReady) onReady();
+      };
+      document.head.appendChild(script);
+    }
+
+    ensureStylesheet('sa-tutor-enquiry-style', '/assets/tutor-enquiry.css');
+    ensureStylesheet('sa-tutor-testimonials-style', '/assets/tutor-testimonials.css');
+
+    ensureScript('sa-tutor-enquiry-script', '/assets/tutor-enquiry.js', function () {
+      ensureScript('sa-tutor-testimonials-script', '/assets/tutor-testimonials.js');
+    });
+  }
+
     // Bind immediately when possible and also after the page/header is ready.
   function runTutorPageEnhancements() {
     bindHeaderNavigation();
