@@ -383,67 +383,8 @@
 
           <div class="form-card">
             <h3>Tell us about the student</h3>
-            <p>Complete the form and an enquiry message will open in WhatsApp.</p>
-
-            <form id="sa-student-enquiry-form" action="https://formsubmit.co/grassrootedtech@gmail.com" method="POST" accept-charset="UTF-8">
-              <input type="hidden" name="_subject" value="New Home Tuition Enquiry | Saraswat Academy">
-              <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_captcha" value="true">
-              <input type="hidden" name="_next" value="https://www.saraswatacademy.in/thank-you-tutor.html">
-              <input type="hidden" name="Enquiry Page" value="https://www.saraswatacademy.in${window.location.pathname}">
-              <div class="form-grid">
-                <div class="field">
-                  <label for="parentName">Parent / Guardian Name *</label>
-                  <input id="parentName" name="Parent / Guardian Name" type="text" autocomplete="name" required placeholder="Your full name">
-                </div>
-                <div class="field">
-                  <label for="studentName">Student Name *</label>
-                  <input id="studentName" name="Student Name" type="text" required placeholder="Student's name">
-                </div>
-                <div class="field">
-                  <label for="className">Class *</label>
-                  <select id="className" name="Student Class" required>
-                    <option value="">Select class</option>
-                    ${Array.from({length:12}, (_,i) => '<option value="Class ' + (i+1) + '">Class ' + (i+1) + '</option>').join('')}
-                  </select>
-                </div>
-                <div class="field">
-                  <label for="boardName">Student Board *</label>
-                  <select id="boardName" name="Student Board" required>
-                    <option value="">Select board</option>
-                    <option>CBSE</option><option>RBSE / Rajasthan Board</option>
-                    <option>ICSE / ISC</option><option>IB</option><option>Cambridge / IGCSE</option><option>Other</option>
-                  </select>
-                </div>
-                <div class="field">
-                  <label for="subject">Subjects Required *</label>
-                  <input id="subject" name="Subjects Required" type="text" required placeholder="e.g. Mathematics, Science">
-                </div>
-                <div class="field">
-                  <label for="phone">Mobile Number *</label>
-                  <input id="phone" name="Mobile Number" type="tel" inputmode="numeric" pattern="[6-9][0-9]{9}" minlength="10" maxlength="10" autocomplete="tel" required placeholder="10-digit mobile number">
-                </div>
-                <div class="field">
-                  <label for="email">Email Address *</label>
-                  <input id="email" name="Email Address" type="email" autocomplete="email" required placeholder="you@example.com">
-                </div>
-                <div class="field">
-                  <label for="mode">Preferred Mode *</label>
-                  <select id="mode" name="Preferred Learning Mode" required>
-                    <option value="">Select mode</option>
-                    <option>Home Tuition</option><option>Online Classes</option><option>Either / Need Guidance</option>
-                  </select>
-                </div>
-                <div class="field full">
-                  <label for="requirements">Full Address and Additional Requirements *</label>
-                  <textarea id="requirements" name="Full Address and Additional Requirements" rows="3" required placeholder="Enter house / street / locality / PIN code and preferred timings"></textarea>
-                </div>
-              </div>
-              <div class="form-submit">
-                <button class="btn btn-gold" type="submit">Submit Enquiry <span aria-hidden="true">→</span></button>
-              </div>
-              <p>After successful submission, you will be redirected to our thank-you page.</p>
-            </form>
+            <p>Share your tuition requirement for Jhotwara; our secure enquiry form will send the details to our team.</p>
+            <a class="btn btn-gold" href="/home-tutor/find-a-tutor.html">Open Student Enquiry Form →</a>
           </div>
 
         </div>
