@@ -4,6 +4,7 @@
   const FORM_ID = 'sa-student-enquiry-form';
   const EMAIL = 'grassrootedtech@gmail.com';
   const THANK_YOU = 'https://www.saraswatacademy.in/thank-you-tutor.html';
+  const FORM_ACTION = 'https://formsubmit.co/' + EMAIL;
 
   function removeOldFormsAndWhatsAppCards() {
     document.querySelectorAll('form').forEach(function (form) {
@@ -56,7 +57,7 @@
             <h3>Tell Us About Your Child</h3>
             <p>Fields marked <span aria-hidden="true">*</span> are required.</p>
           </div>
-          <form id="${FORM_ID}" action="https://formsubmit.co/${EMAIL}" method="POST">
+          <form id="${FORM_ID}" action="${FORM_ACTION}" method="POST" accept-charset="UTF-8">
             <input type="hidden" name="_subject" value="New Home Tuition Enquiry | Saraswat Academy">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="true">
