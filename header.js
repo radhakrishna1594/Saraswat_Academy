@@ -84,6 +84,18 @@
   }
 
 
+  // Ensure area-wise pages use the shared FormSubmit enquiry form instead of their legacy WhatsApp-only form.
+  function migrateLegacyTutorEnquiryForm() {
+    const path = window.location.pathname || '';
+    if (!path.includes('/home-tutor/best-tutor-area-wise/')) return;
+    const legacy = document.getElementById('enquiryForm');
+    if (!legacy || document.getElementById('sa-student-enquiry-form')) return;
+
+    // Remove the old WhatsApp-only form section. The shared form script inserts the email-enabled form.
+    const section = legacy.closest('section#enquiry') || legacy.closest('section.enquiry') || legacy.closest('section');
+    if (section) section.remove();
+  }
+
   // Load shared home-tutor enquiry and testimonial assets on all tutor pages.
   // The enquiry script loads first so the carousel can position itself before the form.
   function loadTutorEnquiryExperience() {
@@ -128,7 +140,7 @@
     ensureStylesheet('sa-tutor-enquiry-style', '/assets/tutor-enquiry.css');
     ensureStylesheet('sa-tutor-testimonials-style', '/assets/tutor-testimonials.css');
 
-    ensureScript('sa-tutor-enquiry-script', '/assets/tutor-enquiry.js?v=20261022-emailfix', function () {
+    ensureScript('sa-tutor-enquiry-script', '/assets/tutor-enquiry.js?v=20261022-emailfix2', function () {
       ensureScript('sa-tutor-testimonials-script', '/assets/tutor-testimonials.js');
     });
   }
@@ -137,6 +149,7 @@
   function runTutorPageEnhancements() {
     bindHeaderNavigation();
     setupAreaWiseTutorLinks();
+    migrateLegacyTutorEnquiryForm();
     loadTutorEnquiryExperience();
   }
   runTutorPageEnhancements();
