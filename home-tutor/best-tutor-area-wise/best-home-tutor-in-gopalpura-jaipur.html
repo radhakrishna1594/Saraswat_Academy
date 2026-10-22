@@ -385,72 +385,7 @@
             <h3>Tell us about the student</h3>
             <p>Complete the form and an enquiry message will open in WhatsApp.</p>
 
-            <form id="enquiryForm">
-              <div class="form-grid">
-
-                <div class="field">
-                  <label for="parentName">Parent's Name *</label>
-                  <input id="parentName" type="text" required placeholder="Your name">
-                </div>
-
-                <div class="field">
-                  <label for="studentName">Student's Name</label>
-                  <input id="studentName" type="text" placeholder="Student's name">
-                </div>
-
-                <div class="field">
-                  <label for="className">Class *</label>
-                  <select id="className" required>
-                    <option value="">Select class</option>
-                                        <option>Class 1</option>
-                    <option>Class 2</option>
-                    <option>Class 3</option>
-                    <option>Class 4</option>
-                    <option>Class 5</option>
-
-                    <option>Class 6</option>
-                    <option>Class 7</option>
-                    <option>Class 8</option>
-                    <option>Class 9</option>
-                    <option>Class 10</option>
-                    <option>Class 11</option>
-                    <option>Class 12</option> <option>Others</option>
-                                        <option>Any other class</option>
-
-                  </select>
-                </div>
-
-                <div class="field">
-                  <label for="mode">Preferred Mode *</label>
-                  <select id="mode" required>
-                    <option value="">Select mode</option>
-                    <option>Home Tuition</option>
-                    <option>Online Classes</option>
-                    <option>Either / Need Guidance</option>
-                  </select>
-                </div>
-
-                <div class="field">
-                  <label for="subject">Subject</label>
-                  <input id="subject" type="text" placeholder="e.g. Mathematics">
-                </div>
-
-                <div class="field">
-                  <label for="phone">Phone Number *</label>
-                  <input id="phone" type="tel" inputmode="tel" required placeholder="Your phone number">
-                </div>
-
-                <div class="field full">
-                  <label for="requirements">Requirements / Message</label>
-                  <textarea id="requirements" placeholder="Tell us briefly what support your child needs..."></textarea>
-                </div>
-
-              </div>
-
-              <div class="form-submit">
-                <button class="btn btn-gold" type="submit">Send Enquiry on WhatsApp</button>
-              </div>
-            </form>
+            <p class="legacy-form-replaced">Please use the secure student enquiry form below to contact Saraswat Academy.</p>
           </div>
 
         </div>
@@ -637,44 +572,7 @@
 
   
 
-    // WhatsApp enquiry
-    const enquiryForm = document.getElementById("enquiryForm");
-    if (enquiryForm) enquiryForm.addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      const parentName = document.getElementById("parentName").value.trim();
-      const studentName = document.getElementById("studentName").value.trim();
-      const className = document.getElementById("className").value;
-      const mode = document.getElementById("mode").value;
-      const subject = document.getElementById("subject").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const requirements = document.getElementById("requirements").value.trim();
-
-      const message =
-`Hello Saraswat Academy,
-
-I would like to enquire about tuition for my child.
-
-Parent's Name: ${parentName}
-Student's Name: ${studentName || "Not provided"}
-Class: ${className}
-Preferred Mode: ${mode}
-Subject: ${subject || "Not specified"}
-Parent's Phone: ${phone}
-
-Requirements:
-${requirements || "Not provided"}
-
-Please share the available tuition options, fees and timings.`;
-
-      const whatsappURL =
-        "https://wa.me/" +
-        WHATSAPP_NUMBER +
-        "?text=" +
-        encodeURIComponent(message);
-
-      window.open(whatsappURL, "_blank", "noopener,noreferrer");
-    });
+    // Tutor enquiries are submitted to FormSubmit by the shared student enquiry form.
 
     // Current year
     const yearElement = document.getElementById("year");
