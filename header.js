@@ -64,25 +64,62 @@
     document.body.style.zoom = '1';
   };
 
-  // Home Tutor area pages — keep the complete area directory linked on every page.
+  // Keep the area-wise tutor directory at the very end of every student-facing
+  // home-tutor page, immediately before the footer. Never move it on tutor signup.
   function setupAreaWiseTutorLinks() {
-    if (!document.body || !window.location.pathname.includes('/home-tutor/best-tutor-area-wise/')) return;
+    const path = window.location.pathname || '';
+    if (!path.includes('/home-tutor/') || path.endsWith('/join-as-a-tutor.html')) return;
 
-    const areas = [{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-bani-park-jaipur.html","name":"bani-park"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-c-scheme-jaipur.html","name":"c-scheme"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-chitrakoot-jaipur.html","name":"chitrakoot"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-civil-lines-jaipur.html","name":"civil-lines"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-durgapura-jaipur.html","name":"durgapura"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-gopalpura-jaipur.html","name":"gopalpura"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-jagatpura-jaipur.html","name":"jagatpura"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-jhotwara.html","name":"jhotwara.html"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-lalkothi-jaipur.html","name":"lalkothi"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-malviya-nagar-jaipur.html","name":"malviya-nagar"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-mansarovar-jaipur.html","name":"mansarovar"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-murlipura-jaipur.html","name":"murlipura"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-pratap-nagar-jaipur.html","name":"pratap-nagar"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-raja-park-jaipur.html","name":"raja-park"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-sanganer-jaipur.html","name":"sanganer"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-shastri-nagar-jaipur.html","name":"shastri-nagar"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-sikar-road-jaipur.html","name":"sikar-road"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-sodala-jaipur.html","name":"sodala"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-tonk-phatak-jaipur.html","name":"tonk-phatak"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-vaishali-nagar-jaipur.html","name":"vaishali-nagar"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-vidhyadhar-nagar-jaipur.html","name":"vidhyadhar-nagar"},{"path":"home-tutor/best-tutor-area-wise/best-home-tutor-in-vki-jaipur.html","name":"vki"}];
-    const section = document.querySelector('section.areas#areas');
-    if (!section) return;
+    const areas = [
+      {path:'best-home-tutor-in-bani-park-jaipur.html', name:'Bani Park'},
+      {path:'best-home-tutor-in-c-scheme-jaipur.html', name:'C Scheme'},
+      {path:'best-home-tutor-in-chitrakoot-jaipur.html', name:'Chitrakoot'},
+      {path:'best-home-tutor-in-civil-lines-jaipur.html', name:'Civil Lines'},
+      {path:'best-home-tutor-in-durgapura-jaipur.html', name:'Durgapura'},
+      {path:'best-home-tutor-in-gopalpura-jaipur.html', name:'Gopalpura'},
+      {path:'best-home-tutor-in-jagatpura-jaipur.html', name:'Jagatpura'},
+      {path:'best-home-tutor-in-jhotwara.html', name:'Jhotwara'},
+      {path:'best-home-tutor-in-lalkothi-jaipur.html', name:'Lal Kothi'},
+      {path:'best-home-tutor-in-malviya-nagar-jaipur.html', name:'Malviya Nagar'},
+      {path:'best-home-tutor-in-mansarovar-jaipur.html', name:'Mansarovar'},
+      {path:'best-home-tutor-in-murlipura-jaipur.html', name:'Murlipura'},
+      {path:'best-home-tutor-in-pratap-nagar-jaipur.html', name:'Pratap Nagar'},
+      {path:'best-home-tutor-in-raja-park-jaipur.html', name:'Raja Park'},
+      {path:'best-home-tutor-in-sanganer-jaipur.html', name:'Sanganer'},
+      {path:'best-home-tutor-in-shastri-nagar-jaipur.html', name:'Shastri Nagar'},
+      {path:'best-home-tutor-in-sikar-road-jaipur.html', name:'Sikar Road'},
+      {path:'best-home-tutor-in-sodala-jaipur.html', name:'Sodala'},
+      {path:'best-home-tutor-in-tonk-phatak-jaipur.html', name:'Tonk Phatak'},
+      {path:'best-home-tutor-in-vaishali-nagar-jaipur.html', name:'Vaishali Nagar'},
+      {path:'best-home-tutor-in-vidhyadhar-nagar-jaipur.html', name:'Vidhyadhar Nagar'},
+      {path:'best-home-tutor-in-vki-jaipur.html', name:'VKI'}
+    ];
 
-    const list = section.querySelector('ul');
-    if (!list) return;
+    let section = document.getElementById('sa-area-wise-directory');
+    if (!section) {
+      section = document.createElement('section');
+      section.id = 'sa-area-wise-directory';
+      section.className = 'section areas';
+    }
 
-    list.innerHTML = areas.map(function (area) {
-      const label = area.name.split('-').map(function (word) {
-        return word.length <= 2 ? word.toUpperCase() : word.charAt(0).toUpperCase() + word.slice(1);
-      }).join(' ');
-      return '<li><a href="/' + area.path + '"><strong>Home Tuition in ' + label + '</strong></a></li>';
-    }).join('');
+    section.innerHTML = '<div class="container">' +
+      '<div class="eyebrow">Areas We Serve</div>' +
+      '<h2 class="section-title">Find Home Tutors Area-Wise in Jaipur</h2>' +
+      '<p class="section-intro">Choose your locality to explore tuition information for that area. Tutor availability depends on the student’s class, subjects, exact location and schedule.</p>' +
+      '<ul>' + areas.map(function (area) {
+        const href = '/home-tutor/best-tutor-area-wise/' + area.path;
+        if (window.location.pathname === href) return '<li><strong>Home Tuition in ' + area.name + ' (Current Area)</strong></li>';
+        return '<li><a href="' + href + '"><strong>Home Tuition in ' + area.name + '</strong></a></li>';
+      }).join('') + '</ul></div>';
+
+    const footer = document.getElementById('footer');
+    if (footer && footer.parentNode) {
+      footer.parentNode.insertBefore(section, footer);
+    } else {
+      const main = document.querySelector('main');
+      if (main) main.appendChild(section);
+    }
   }
-
 
   // Remove outdated area-page enquiry markup before the shared FormSubmit form loads.
   function migrateLegacyTutorEnquiryForm() {
