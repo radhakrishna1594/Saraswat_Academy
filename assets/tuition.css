@@ -1260,3 +1260,42 @@ body.tuition-form-page .cta p{max-width:650px;margin:0 auto 22px;color:#aebbd0}
     object-position:center 18% !important;
   }
 }
+
+
+/* Premium parent/student enquiry form */
+body.tuition-page .sa-tutor-enquiry-card{max-width:900px;margin:34px auto 0;padding:clamp(22px,4vw,42px);border:1px solid #e2e8f0;border-radius:26px;background:linear-gradient(145deg,#fff 0%,#fbfcfe 100%);box-shadow:0 24px 70px rgba(16,35,61,.10)}
+body.tuition-page .sa-form-intro{display:flex;gap:16px;align-items:center;margin-bottom:28px;padding-bottom:22px;border-bottom:1px solid #e7edf4}
+body.tuition-page .sa-form-mark{display:grid;place-items:center;flex:0 0 52px;width:52px;height:52px;border-radius:17px;background:#122b49;color:#f3bd4c;font-size:25px;box-shadow:0 8px 22px rgba(18,43,73,.18)}
+body.tuition-page .sa-form-intro h3{margin:0 0 6px;font:800 clamp(22px,3vw,29px)/1.2 "Manrope",Arial,sans-serif;color:#132940}
+body.tuition-page .sa-form-intro p{margin:0;color:#718096;font-size:12px;line-height:1.65}
+body.tuition-page .sa-tutor-enquiry-form{display:block}
+body.tuition-page .sa-form-section-label{display:flex;align-items:center;gap:12px;margin:28px 0 15px;color:#a27112;font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+body.tuition-page .sa-form-section-label:first-of-type{margin-top:0}
+body.tuition-page .sa-form-section-label:before{content:"";width:26px;height:2px;border-radius:3px;background:#e9b543}
+body.tuition-page .sa-form-section-label span{color:#253c54;letter-spacing:.1em}
+body.tuition-page .sa-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px}
+body.tuition-page .sa-form-field{min-width:0}
+body.tuition-page .sa-form-field.sa-form-full{grid-column:1/-1}
+body.tuition-page .sa-form-field label{display:block;margin:0 0 7px;color:#34485f;font-size:12px;font-weight:800}
+body.tuition-page .sa-form-field label span{color:#b77912}
+body.tuition-page .sa-form-field label small{color:#8794a6;font-size:10px;font-weight:600}
+body.tuition-page .sa-form-field input,body.tuition-page .sa-form-field select,body.tuition-page .sa-form-field textarea{display:block;width:100%;min-height:49px;padding:13px 14px;border:1px solid #dbe3ed;border-radius:13px;background:#f9fbfd;color:#172d45;font:500 13px/1.45 "DM Sans",Arial,sans-serif;outline:none;transition:border-color .18s ease,box-shadow .18s ease,background .18s ease}
+body.tuition-page .sa-form-field textarea{min-height:100px;resize:vertical}
+body.tuition-page .sa-form-field input::placeholder,body.tuition-page .sa-form-field textarea::placeholder{color:#a1adbb}
+body.tuition-page .sa-form-field input:focus,body.tuition-page .sa-form-field select:focus,body.tuition-page .sa-form-field textarea:focus{border-color:#d8a632;background:#fff;box-shadow:0 0 0 4px rgba(239,179,59,.14)}
+body.tuition-page .sa-field-note{display:block;margin-top:7px;color:#8491a2;font-size:10px;line-height:1.55}
+body.tuition-page .sa-form-submit{margin-top:28px;padding-top:22px;border-top:1px solid #e7edf4}
+body.tuition-page .sa-submit-btn{display:flex;align-items:center;justify-content:center;gap:14px;width:100%;min-height:54px;padding:14px 20px;border:0;border-radius:14px;background:linear-gradient(120deg,#f4c75c,#eab03a);color:#142840;font:900 13px/1.2 "Manrope",Arial,sans-serif;box-shadow:0 10px 22px rgba(213,156,30,.18);cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+body.tuition-page .sa-submit-btn span{font-size:19px;transition:transform .18s ease}
+body.tuition-page .sa-submit-btn:hover{transform:translateY(-2px);box-shadow:0 15px 28px rgba(213,156,30,.25)}
+body.tuition-page .sa-submit-btn:hover span{transform:translateX(4px)}
+body.tuition-page .sa-privacy-note{margin:12px 0 0;color:#7d8a9b;font-size:10px;text-align:center;line-height:1.6}
+body.tuition-page .parents-whatsapp-static{display:none!important}
+body.tuition-form-page .sa-tutor-enquiry-form{grid-template-columns:repeat(2,minmax(0,1fr))}
+body.tuition-form-page .sa-tutor-enquiry-form .form-submit{grid-column:1/-1}
+body.tuition-form-page .sa-tutor-enquiry-form .sa-privacy-note{margin:12px 0 0;color:#7d8a9b;font-size:10px;line-height:1.6}
+body.tuition-form-page .sa-tutor-enquiry-form .sa-field-note{display:block;margin-top:7px;color:#8491a2;font-size:10px;line-height:1.55}
+body.tuition-form-page .sa-tutor-enquiry-form label small{color:#8794a6;font-size:10px;font-weight:600}
+body.tuition-form-page .sa-tutor-enquiry-form .sa-submit-btn{justify-content:center;width:100%;min-height:54px}
+@media(max-width:760px){body.tuition-page .sa-tutor-enquiry-card{padding:24px 18px;border-radius:20px}body.tuition-page .sa-form-grid,body.tuition-form-page .sa-tutor-enquiry-form{grid-template-columns:1fr;gap:14px}body.tuition-page .sa-form-field.sa-form-full{grid-column:auto}body.tuition-page .sa-form-intro{align-items:flex-start}body.tuition-page .sa-form-mark{flex-basis:44px;width:44px;height:44px;border-radius:14px}}
+@media(prefers-reduced-motion:reduce){body.tuition-page .sa-form-field input,body.tuition-page .sa-form-field select,body.tuition-page .sa-form-field textarea,body.tuition-page .sa-submit-btn,body.tuition-page .sa-submit-btn span{transition:none}}
