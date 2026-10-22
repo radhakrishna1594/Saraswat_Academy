@@ -133,7 +133,13 @@
     const section = buildFormSection();
     const footer = document.getElementById('footer');
     const main = document.querySelector('main');
-    if (footer && footer.parentNode) footer.parentNode.insertBefore(section, footer);
+    const testimonials = document.querySelector('section.sa-tutor-testimonials');
+    const areaDirectory = document.querySelector('section.areas#areas');
+    // Place the enquiry before testimonials and the area directory, matching the
+    // intended page flow and keeping the shared form on every area-wise page.
+    if (testimonials && testimonials.parentNode) testimonials.parentNode.insertBefore(section, testimonials);
+    else if (areaDirectory && areaDirectory.parentNode) areaDirectory.parentNode.insertBefore(section, areaDirectory);
+    else if (footer && footer.parentNode) footer.parentNode.insertBefore(section, footer);
     else if (main) main.appendChild(section);
     else document.body.appendChild(section);
 
