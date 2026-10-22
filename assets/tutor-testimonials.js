@@ -85,7 +85,7 @@
 
       person.textContent = student.name;
       classLabel.textContent = student.className + ' · provisional';
-      message.textContent = '“' + student.message + '”';
+      message.textContent = student.message;
       count.textContent = String(current + 1).padStart(2, '0') + ' / ' + String(students.length).padStart(2, '0');
 
       const percentage = ((current + 1) / students.length) * 100;
