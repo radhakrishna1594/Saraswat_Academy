@@ -132,90 +132,22 @@
     <p>Fill in the details below so we can understand your tuition requirement.</p>
    </div>
 
-   <form action="https://formsubmit.co/grassrootedtech@gmail.com" method="POST">
-    <input type="hidden" name="_subject" value="New Tutor Requirement - Saraswat Academy">
+   <form class="sa-tutor-enquiry-form" action="https://formsubmit.co/grassrootedtech@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="New Home Tuition Enquiry - Saraswat Academy">
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_captcha" value="true">
     <input type="hidden" name="_next" value="https://www.saraswatacademy.in/thank-you-tutor.html">
-
-    <div class="form-group">
-     <label for="parentName">Parent / Guardian Name <span>*</span></label>
-     <input type="text" id="parentName" name="Parent / Guardian Name" placeholder="Enter parent or guardian name" autocomplete="name" required>
-    </div>
-
-    <div class="form-group">
-     <label for="phone">Mobile Number <span>*</span></label>
-     <input type="tel" id="phone" name="Mobile Number" placeholder="10-digit mobile number" inputmode="numeric" pattern="[6-9][0-9]{9}" maxlength="10" autocomplete="tel" required>
-    </div>
-
-    <div class="form-group">
-     <label for="email">Email Address</label>
-     <input type="email" id="email" name="Email Address" placeholder="Enter email address" autocomplete="email">
-    </div>
-
-    <div class="form-group">
-     <label for="studentName">Student Name <span>*</span></label>
-     <input type="text" id="studentName" name="Student Name" placeholder="Enter student's name" required>
-    </div>
-
-    <div class="form-group">
-     <label for="class">Class <span>*</span></label>
-     <select id="class" name="Class" required>
-      <option value="">Select Class</option>
-      <option>Nursery</option><option>LKG</option><option>UKG</option>
-      <option>Class 1</option><option>Class 2</option><option>Class 3</option><option>Class 4</option>
-      <option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option>
-      <option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option> <option>Others</option>
-     </select>
-    </div>
-
-    <div class="form-group">
-     <label for="board">Board / Curriculum</label>
-     <select id="board" name="Board / Curriculum">
-      <option value="">Select Board</option>
-      <option>CBSE</option><option>ICSE</option><option>RBSE</option><option>IB</option><option>Other</option>
-     </select>
-    </div>
-
-    <div class="form-group">
-     <label for="subject">Subject Required <span>*</span></label>
-     <select id="subject" name="Subject Required" required>
-      <option value="">Select Subject</option>
-      <option>Mathematics</option><option>Science</option><option>English</option><option>Hindi</option>
-      <option>Social Science</option><option>Physics</option><option>Chemistry</option><option>Biology</option>
-      <option>Accountancy</option><option>Business Studies</option><option>Economics</option>
-      <option>Computer Science</option><option>Informatics Practices</option>
-      <option>Multiple Subjects</option><option>Other</option>
-     </select>
-    </div>
-
-    <div class="form-group">
-     <label for="mode">Preferred Learning Mode <span>*</span></label>
-     <select id="mode" name="Preferred Learning Mode" required>
-      <option value="">Select Mode</option>
-      <option>Home Tuition</option><option>Online Classes</option><option>Either Home Tuition or Online</option>
-     </select>
-    </div>
-
-    <div class="form-group">
-     <label for="location">Area / Locality</label>
-     <input type="text" id="location" name="Area / Locality" placeholder="e.g. Vaishali Nagar, Mansarovar" autocomplete="address-level2">
-    </div>
-
-    <div class="form-group">
-     <label for="timing">Preferred Timing</label>
-     <input type="text" id="timing" name="Preferred Timing" placeholder="e.g. Weekdays after 5 PM">
-    </div>
-
-    <div class="form-group full-width">
-     <label for="requirements">Additional Requirements</label>
-     <textarea id="requirements" name="Additional Requirements" placeholder="Tell us about learning goals, preferred tutor experience, specific topics, etc."></textarea>
-    </div>
-
-    <div class="form-submit">
-     <button type="submit" class="submit-btn">Submit Tutor Requirement <span>→</span></button>
-    
-    </div>
+    <div class="form-group"><label for="parentName">Parent / Guardian Name <span>*</span></label><input type="text" id="parentName" name="Parent / Guardian Name" placeholder="Enter parent or guardian name" autocomplete="name" required></div>
+    <div class="form-group"><label for="phone">Mobile Number <span>*</span></label><input type="tel" id="phone" name="Mobile Number" placeholder="10-digit mobile number" inputmode="numeric" pattern="[6-9][0-9]{9}" maxlength="10" autocomplete="tel" required></div>
+    <div class="form-group"><label for="email">Email ID <span>*</span></label><input type="email" id="email" name="Email ID" placeholder="Enter email address" autocomplete="email" required></div>
+    <div class="form-group"><label for="studentName">Student's Name <span>*</span></label><input type="text" id="studentName" name="Student Name" placeholder="Enter student's name" required></div>
+    <div class="form-group"><label for="class">Student's Class <span>*</span></label><select id="class" name="Student Class" required><option value="">Select Class</option><option>Class 1</option><option>Class 2</option><option>Class 3</option><option>Class 4</option><option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option></select></div>
+    <div class="form-group"><label for="board">Student Board <span>*</span></label><select id="board" name="Student Board" required><option value="">Select Board</option><option>CBSE</option><option>ICSE</option><option>RBSE (Rajasthan Board)</option><option>IB</option><option>Cambridge / IGCSE</option><option>Other</option></select></div>
+    <div class="form-group"><label for="school">School Name <small>(optional)</small></label><input type="text" id="school" name="School Name (Optional)" placeholder="Enter current school name"></div>
+    <div class="form-group"><label for="subject">Subjects Required <span>*</span></label><input type="text" id="subject" name="Subjects Required" placeholder="e.g. Mathematics, Science, English" required></div>
+    <div class="form-group full-width"><label for="address">Full Address <span>*</span></label><textarea id="address" name="Full Address" rows="3" autocomplete="street-address" placeholder="House / flat, street, colony, area, Jaipur, PIN code" required></textarea><small class="sa-field-note">Your address helps us check whether a suitable home tutor can visit your area.</small></div>
+    <div class="form-group full-width"><label for="requirements">Any Other Query <small>(optional)</small></label><textarea id="requirements" name="Any Other Query" rows="3" placeholder="Preferred timings, learning goals or any question you have"></textarea></div>
+    <div class="form-submit"><button type="submit" class="submit-btn sa-submit-btn">Submit Query <span aria-hidden="true">→</span></button><p class="sa-privacy-note">🔒 Your details are sent privately to Saraswat Academy for enquiry follow-up.</p></div>
    </form>
   </div>
  </div>
