@@ -84,15 +84,19 @@
   }
 
 
-  // Ensure area-wise pages use the shared FormSubmit enquiry form instead of their legacy WhatsApp-only form.
+  // Remove the legacy WhatsApp enquiry section on area pages so the shared
+  // FormSubmit form is the only enquiry form. The shared form script is loaded
+  // immediately after this function by loadTutorEnquiryExperience().
   function migrateLegacyTutorEnquiryForm() {
     const path = window.location.pathname || '';
     if (!path.includes('/home-tutor/best-tutor-area-wise/')) return;
-    const legacy = document.getElementById('enquiryForm');
-    if (!legacy || document.getElementById('sa-student-enquiry-form')) return;
+    if (document.getElementById('sa-student-enquiry-form')) return;
 
-    // Remove the old WhatsApp-only form section. The shared form script inserts the email-enabled form.
-    const section = legacy.closest('section#enquiry') || legacy.closest('section.enquiry') || legacy.closest('section');
+    const legacy = document.getElementById('enquiryForm');
+    const placeholder = document.querySelector('.legacy-form-replaced');
+    const section = (legacy && (legacy.closest('section#enquiry') || legacy.closest('section.enquiry') || legacy.closest('section'))) ||
+                    (placeholder && placeholder.closest('section#enquiry')) ||
+                    document.querySelector('section#enquiry');
     if (section) section.remove();
   }
 
