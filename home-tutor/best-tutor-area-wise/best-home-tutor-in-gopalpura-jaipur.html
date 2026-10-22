@@ -555,44 +555,7 @@
 
   
 
-    // WhatsApp enquiry
-    const enquiryForm = document.getElementById("enquiryForm");
-    if (enquiryForm) enquiryForm.addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      const parentName = document.getElementById("parentName").value.trim();
-      const studentName = document.getElementById("studentName").value.trim();
-      const className = document.getElementById("className").value;
-      const mode = document.getElementById("mode").value;
-      const subject = document.getElementById("subject").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const requirements = document.getElementById("requirements").value.trim();
-
-      const message =
-`Hello Saraswat Academy,
-
-I would like to enquire about tuition for my child.
-
-Parent's Name: ${parentName}
-Student's Name: ${studentName || "Not provided"}
-Class: ${className}
-Preferred Mode: ${mode}
-Subject: ${subject || "Not specified"}
-Parent's Phone: ${phone}
-
-Requirements:
-${requirements || "Not provided"}
-
-Please share the available tuition options, fees and timings.`;
-
-      const whatsappURL =
-        "https://wa.me/" +
-        WHATSAPP_NUMBER +
-        "?text=" +
-        encodeURIComponent(message);
-
-      window.open(whatsappURL, "_blank", "noopener,noreferrer");
-    });
+    // The enquiry form submits directly through FormSubmit.
 
     // Current year
     const yearElement = document.getElementById("year");
