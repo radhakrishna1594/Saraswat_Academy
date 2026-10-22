@@ -128,7 +128,7 @@
     ensureStylesheet('sa-tutor-enquiry-style', '/assets/tutor-enquiry.css');
     ensureStylesheet('sa-tutor-testimonials-style', '/assets/tutor-testimonials.css');
 
-    ensureScript('sa-tutor-enquiry-script', '/assets/tutor-enquiry.js?v=20261022-thankyou', function () {
+    ensureScript('sa-tutor-enquiry-script', '/assets/tutor-enquiry.js?v=20261022-emailfix', function () {
       ensureScript('sa-tutor-testimonials-script', '/assets/tutor-testimonials.js');
     });
   }
