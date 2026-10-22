@@ -1260,3 +1260,29 @@ body.tuition-form-page .cta p{max-width:650px;margin:0 auto 22px;color:#aebbd0}
     object-position:center 18% !important;
   }
 }
+
+/* Streamlined tutor pages: authentic-feedback placeholder */
+:is(body.tuition-page, body.tuition-form-page) .sa-tutor-testimonials{
+  padding:58px 0;
+  background:#f6f9fc;
+}
+:is(body.tuition-page, body.tuition-form-page) .sa-tutor-feedback-card{
+  display:grid;
+  justify-items:center;
+  gap:10px;
+  max-width:760px;
+  margin:25px auto 0;
+  padding:28px;
+  border:1px solid var(--sa-line);
+  border-radius:18px;
+  background:#fff;
+  text-align:center;
+  box-shadow:0 10px 28px rgba(15,31,52,.05);
+}
+:is(body.tuition-page, body.tuition-form-page) .sa-tutor-feedback-icon{font-size:28px}
+:is(body.tuition-page, body.tuition-form-page) .sa-tutor-feedback-card h3{margin:0;color:var(--sa-ink);font:800 20px/1.25 "Manrope",Arial,sans-serif}
+:is(body.tuition-page, body.tuition-form-page) .sa-tutor-feedback-card p{max-width:620px;margin:0;color:var(--sa-muted);line-height:1.7}
+@media(max-width:600px){
+  :is(body.tuition-page, body.tuition-form-page) .sa-tutor-testimonials{padding:42px 0}
+  :is(body.tuition-page, body.tuition-form-page) .sa-tutor-feedback-card{padding:22px 17px}
+}
