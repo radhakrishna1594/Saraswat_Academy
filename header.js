@@ -88,6 +88,7 @@
   function runTutorPageEnhancements() {
     bindHeaderNavigation();
     setupAreaWiseTutorLinks();
+    loadTutorEnquiryExperience();
   }
   runTutorPageEnhancements();
 

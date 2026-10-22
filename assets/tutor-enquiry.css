@@ -1,0 +1,32 @@
+/* Premium, responsive student enquiry form for all home-tutor pages */
+.sa-enquiry-section{padding:clamp(42px,6vw,84px) 20px;background:linear-gradient(135deg,#f4f7fb 0%,#eef2f8 52%,#f8f5ed 100%);color:#17233b;scroll-margin-top:90px}
+.sa-enquiry-shell{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(28px,5vw,68px);align-items:center}
+.sa-enquiry-intro{padding:12px 0}
+.sa-enquiry-kicker,.sa-enquiry-step{display:inline-block;color:#a7782a;font-size:11px;font-weight:800;letter-spacing:2px}
+.sa-enquiry-intro h2{font-family:Manrope,Arial,sans-serif;font-size:clamp(30px,4vw,46px);line-height:1.14;letter-spacing:-1.4px;color:#13223d;margin:18px 0}
+.sa-enquiry-intro>p{font-size:16px;line-height:1.8;color:#58657a;max-width:470px;margin:0}
+.sa-enquiry-points{display:grid;gap:12px;margin-top:28px}
+.sa-enquiry-points span{display:flex;align-items:center;gap:10px;color:#2d3c53;font-size:14px;font-weight:650}
+.sa-enquiry-points b{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#e5efe9;color:#26704b;font-size:13px}
+.sa-enquiry-note{display:flex;align-items:flex-start;gap:10px;margin-top:30px;padding:14px 15px;border:1px solid #dce4ec;border-radius:12px;color:#667287;font-size:12px;line-height:1.6;max-width:410px;background:rgba(255,255,255,.58)}
+.sa-enquiry-card{background:#fff;border:1px solid #e2e8f0;border-radius:22px;padding:clamp(22px,3vw,38px);box-shadow:0 22px 70px rgba(23,39,67,.11)}
+.sa-enquiry-card-head{margin-bottom:24px}
+.sa-enquiry-card-head h3{font-family:Manrope,Arial,sans-serif;color:#16243d;font-size:25px;letter-spacing:-.5px;margin:10px 0 7px}
+.sa-enquiry-card-head p{color:#7b8798;font-size:13px;margin:0}
+.sa-enquiry-card-head p span,.sa-field label span{color:#bd7d26}
+.sa-enquiry-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 16px}
+.sa-field{min-width:0;display:flex;flex-direction:column;gap:8px}
+.sa-field-full{grid-column:1/-1}
+.sa-field label{font-size:12px;font-weight:750;color:#34435a;letter-spacing:.1px}
+.sa-field label .sa-optional{font-size:11px;font-weight:500;color:#8994a5}
+.sa-field input,.sa-field select,.sa-field textarea{display:block;width:100%;min-width:0;box-sizing:border-box;border:1px solid #dbe2eb;border-radius:10px;background:#fbfcfe;color:#17233b;font:inherit;font-size:14px;padding:13px 14px;outline:none;transition:border-color .18s,box-shadow .18s,background .18s}
+.sa-field input,.sa-field select{min-height:47px}
+.sa-field textarea{resize:vertical;min-height:86px;line-height:1.55}
+.sa-field input::placeholder,.sa-field textarea::placeholder{color:#a0a9b7}
+.sa-field input:focus,.sa-field select:focus,.sa-field textarea:focus{border-color:#b78b45;background:#fff;box-shadow:0 0 0 3px rgba(183,139,69,.14)}
+.sa-enquiry-submit{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;margin-top:24px;border:0;border-radius:11px;padding:15px 20px;background:linear-gradient(110deg,#142743,#203e62);color:#fff;font-size:15px;font-weight:800;letter-spacing:.2px;cursor:pointer;box-shadow:0 9px 20px rgba(20,39,67,.17);transition:transform .18s,box-shadow .18s}
+.sa-enquiry-submit:hover{transform:translateY(-1px);box-shadow:0 13px 24px rgba(20,39,67,.22)}
+.sa-enquiry-submit span{font-size:20px;line-height:1}
+.sa-enquiry-privacy{text-align:center;font-size:11px;line-height:1.6;color:#8b95a4;margin:13px 0 0}
+@media(max-width:850px){.sa-enquiry-shell{grid-template-columns:1fr;gap:26px}.sa-enquiry-intro{padding:0}.sa-enquiry-intro>p{max-width:650px}.sa-enquiry-points{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.sa-enquiry-points span{font-size:12px}.sa-enquiry-note{margin-top:20px}}
+@media(max-width:560px){.sa-enquiry-section{padding:38px 14px}.sa-enquiry-intro h2{font-size:31px}.sa-enquiry-points{grid-template-columns:1fr;gap:10px}.sa-enquiry-card{padding:21px 16px;border-radius:17px}.sa-enquiry-card-head h3{font-size:22px}.sa-enquiry-grid{grid-template-columns:1fr;gap:15px}.sa-field-full{grid-column:auto}.sa-enquiry-submit{padding:15px}.sa-enquiry-note{font-size:11px}}
