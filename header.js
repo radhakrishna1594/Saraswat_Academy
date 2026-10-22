@@ -84,19 +84,15 @@
   }
 
 
-  // Remove the legacy WhatsApp enquiry section on area pages so the shared
-  // FormSubmit form is the only enquiry form. The shared form script is loaded
-  // immediately after this function by loadTutorEnquiryExperience().
+  // Remove outdated area-page enquiry markup before the shared FormSubmit form loads.
   function migrateLegacyTutorEnquiryForm() {
     const path = window.location.pathname || '';
     if (!path.includes('/home-tutor/best-tutor-area-wise/')) return;
     if (document.getElementById('sa-student-enquiry-form')) return;
 
-    const legacy = document.getElementById('enquiryForm');
-    const placeholder = document.querySelector('.legacy-form-replaced');
-    const section = (legacy && (legacy.closest('section#enquiry') || legacy.closest('section.enquiry') || legacy.closest('section'))) ||
-                    (placeholder && placeholder.closest('section#enquiry')) ||
-                    document.querySelector('section#enquiry');
+    // All older area pages contain this one enquiry section, even where the
+    // WhatsApp form was already removed. Remove it so no blank placeholder remains.
+    const section = document.querySelector('section#enquiry');
     if (section) section.remove();
   }
 
