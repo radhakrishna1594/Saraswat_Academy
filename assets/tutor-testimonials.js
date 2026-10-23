@@ -42,7 +42,7 @@
         '<header class="sa-testimonials__heading">',
           '<span class="sa-testimonials__eyebrow">LEARNING, ONE STEP AT A TIME</span>',
           '<h2 id="sa-testimonials-title">Student Experiences with Home Tuition</h2>',
-          '<p>Personal attention, patient explanations and a study routine that suits each learner.</p>',
+          '<p> Reviews from parents and students</p>',
         '</header>',
         '<div class="sa-testimonials__carousel" role="region" aria-roledescription="carousel" aria-label="Student testimonial drafts">',
           '<button class="sa-testimonials__arrow sa-testimonials__prev" type="button" aria-label="Previous testimonial">‹</button>',
