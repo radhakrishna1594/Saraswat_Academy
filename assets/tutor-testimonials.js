@@ -7,10 +7,10 @@
 
   // Class labels and messages are draft suggestions and must be confirmed before publication.
   const students = [
-    { name: 'Mannat Sharma', className: 'Class 10', message: 'Patient explanations at home give me time to understand each step, ask questions freely and practise until a topic feels clearer.' },
-    { name: 'Samarth Singh', className: 'Class 9', message: 'With one-to-one guidance, I can spend extra time on the chapters I find difficult instead of moving ahead with unanswered questions.' },
-    { name: 'Aditya Pareek', className: 'Class 10', message: 'Working through examples and then trying similar questions on my own helps me understand the method, not just remember an answer.' },
-    { name: 'Himanshu Sharma', className: 'Class 12', message: 'A planned home-tuition session can keep revision organised, with time for exam-style questions and the topics that need more practice.' },
+    { name: 'Mannat Sharma', className: 'Class 10', message: 'Patient explanations at home give me time to understand each step, ask questions freely and practise until a topic feels clearer.', photo: '/assets/home-tutor/students/mannat-sharma.jpg' },
+    { name: 'Samarth Singh', className: 'Class 9', message: 'With one-to-one guidance, I can spend extra time on the chapters I find difficult instead of moving ahead with unanswered questions.', photo: '/assets/home-tutor/students/samarth-singh.jpg' },
+    { name: 'Aditya Pareek', className: 'Class 10', message: 'Working through examples and then trying similar questions on my own helps me understand the method, not just remember an answer.', photo: '/assets/home-tutor/students/aditya-pareek.jpg' },
+    { name: 'Himanshu Sharma', className: 'Class 12', message: 'A planned home-tuition session can keep revision organised, with time for exam-style questions and the topics that need more practice.', photo: '/assets/home-tutor/students/himanshu-sharma.jpg' },
     { name: 'Harsh Nirwan', className: 'Class 9', message: 'A steady study routine at home helps me balance school homework, revision and practice without leaving everything until the last minute.' },
     { name: 'Rajvardhan', className: 'Class 8', message: 'When a difficult lesson is broken into smaller steps, I can follow the explanation more easily and build understanding one concept at a time.' },
     { name: 'Deepika', className: 'Class 10', message: 'Personal attention makes it easier to revisit important topics, identify mistakes and practise the questions that need more work.' },
@@ -23,9 +23,9 @@
     { name: 'Deependra Singh', className: 'Class 11', message: 'Extra time on difficult chapters can help me strengthen the basics before moving to more challenging problems.' },
     { name: 'Kismat', className: 'Class 7', message: 'A calm explanation followed by a few practice questions makes homework feel more manageable and helps me prepare for the next lesson.' },
     { name: 'Isha Prajapat', className: 'Class 9', message: 'Short revision sessions at home can help me remember previous chapters while keeping up with what is being taught at school.' },
-    { name: 'Sneha Poonia', className: 'Class 10', message: 'Seeing a concept explained in more than one way helps me find the approach that makes the most sense to me.' },
-    { name: 'Yuvraj Singh', className: 'Class 8', message: 'Practising with guidance first and then attempting questions independently helps me work towards solving problems on my own.' },
-    { name: 'Manvendra Singh', className: 'Class 12', message: 'A tuition plan built around revision goals and exam-style practice can make study time more focused during the board-year schedule.' },
+    { name: 'Sneha Poonia', className: 'Class 10', message: 'Seeing a concept explained in more than one way helps me find the approach that makes the most sense to me.', photo: '/assets/home-tutor/students/sneha-poonia.jpg' },
+    { name: 'Yuvraj Singh', className: 'Class 8', message: 'Practising with guidance first and then attempting questions independently helps me work towards solving problems on my own.', photo: '/assets/home-tutor/students/yuvraj-singh.jpg' },
+    { name: 'Manvendra Singh', className: 'Class 12', message: 'A tuition plan built around revision goals and exam-style practice can make study time more focused during the board-year schedule.', photo: '/assets/home-tutor/students/manvendra-singh.jpg' },
     { name: 'Anurag', className: 'Class 6', message: 'Going through mistakes without being rushed helps me understand why an answer is wrong and how to try the next question.' },
     { name: 'Ashok', className: 'Class 11', message: 'Regular doubt-clearing and practice can help me revisit difficult concepts consistently instead of cramming just before a test.' }
   ];
@@ -48,7 +48,8 @@
           '<button class="sa-testimonials__arrow sa-testimonials__prev" type="button" aria-label="Previous testimonial">‹</button>',
           '<div class="sa-testimonials__viewport" tabindex="0" aria-label="Use left and right arrow keys to browse testimonials" aria-live="polite">',
             '<article class="sa-testimonials__card">',
-              '<div class="sa-testimonials__avatar" aria-label="Student photo placeholder">',
+              '<div class="sa-testimonials__avatar" aria-label="Student photo">',
+                '<img class="sa-testimonials__photo" alt="" loading="lazy" decoding="async">',
                 '<svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="24" cy="18" r="7" fill="currentColor"/><path d="M10.5 38c1.9-7 6.8-10.5 13.5-10.5S35.6 31 37.5 38" fill="currentColor"/></svg>',
                 '<span class="sa-testimonials__photo-sign">PHOTO</span>',
               '</div>',
@@ -71,6 +72,10 @@
     const message = section.querySelector('.sa-testimonials__message');
     const person = section.querySelector('.sa-testimonials__person');
     const classLabel = section.querySelector('.sa-testimonials__class');
+    const avatar = section.querySelector('.sa-testimonials__avatar');
+    const photo = section.querySelector('.sa-testimonials__photo');
+    const photoFallback = avatar.querySelector('svg');
+    const photoSign = avatar.querySelector('.sa-testimonials__photo-sign');
     const count = section.querySelector('.sa-testimonials__count');
     const progress = section.querySelector('.sa-testimonials__progress');
     const progressBar = progress.querySelector('span');
@@ -85,6 +90,21 @@
 
       person.textContent = student.name;
       classLabel.textContent = student.className + ' · provisional';
+      if (student.photo) {
+        photo.src = student.photo;
+        photo.alt = 'Photo of ' + student.name;
+        photo.hidden = false;
+        photoFallback.hidden = true;
+        photoSign.hidden = true;
+        avatar.setAttribute('aria-label', 'Photo of ' + student.name);
+      } else {
+        photo.removeAttribute('src');
+        photo.alt = '';
+        photo.hidden = true;
+        photoFallback.hidden = false;
+        photoSign.hidden = false;
+        avatar.setAttribute('aria-label', 'Student photo placeholder');
+      }
       message.textContent = student.message;
       count.textContent = String(current + 1).padStart(2, '0') + ' / ' + String(students.length).padStart(2, '0');
 
