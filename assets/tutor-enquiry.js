@@ -137,7 +137,7 @@
           'Additional Query: ' + (value('Any Other Query') || 'Not provided'),
           '',
           'Enquiry Page: ' + window.location.href
-        ].join('\\n');
+        ].join('\n');
 
         window.location.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message);
       });
