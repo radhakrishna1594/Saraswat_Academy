@@ -53,6 +53,8 @@
   box-shadow: 0 6px 20px rgba(0,0,0,.2);
 }
 .sa-testimonials__avatar svg { width: 37px; height: 37px; margin-top: -7px; }
+.sa-testimonials__photo { width: 100%; height: 100%; display: block; border-radius: 50%; object-fit: cover; object-position: center; }
+.sa-testimonials__photo[hidden] { display: none; }
 .sa-testimonials__photo-sign {
   position: absolute;
   bottom: -5px;
