@@ -136,3 +136,68 @@
   .sa-testimonials__card.is-entering { animation: none; }
   .sa-testimonials__arrow, .sa-testimonials__progress span { transition: none; }
 }
+
+/* Hard-scope the student portrait and labels to prevent site-wide styles
+   from enlarging the photo or overlapping the student's name. */
+#sa-testimonials .sa-testimonials__card {
+  overflow: hidden;
+}
+#sa-testimonials .sa-testimonials__avatar {
+  position: relative !important;
+  display: grid !important;
+  width: 76px !important;
+  min-width: 76px !important;
+  max-width: 76px !important;
+  height: 76px !important;
+  min-height: 76px !important;
+  max-height: 76px !important;
+  flex: 0 0 76px !important;
+  overflow: hidden !important;
+  border-radius: 50% !important;
+  isolation: isolate;
+}
+#sa-testimonials .sa-testimonials__avatar .sa-testimonials__photo {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  object-fit: cover !important;
+  object-position: center 25% !important;
+  border-radius: 50% !important;
+  z-index: 2;
+}
+#sa-testimonials .sa-testimonials__avatar .sa-testimonials__photo[hidden] {
+  display: none !important;
+}
+#sa-testimonials .sa-testimonials__avatar svg {
+  position: relative;
+  z-index: 1;
+  width: 37px !important;
+  min-width: 0 !important;
+  max-width: 37px !important;
+  height: 37px !important;
+  min-height: 0 !important;
+  max-height: 37px !important;
+  margin: -7px 0 0 !important;
+}
+#sa-testimonials .sa-testimonials__photo-sign {
+  z-index: 3;
+}
+#sa-testimonials .sa-testimonials__person {
+  max-width: 100%;
+  margin: 19px 0 0 !important;
+  font-size: clamp(17px, 2.2vw, 19px) !important;
+  line-height: 1.35 !important;
+  overflow-wrap: anywhere;
+}
+#sa-testimonials .sa-testimonials__class {
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
