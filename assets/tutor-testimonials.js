@@ -7,17 +7,17 @@
 
   // Class labels and messages are draft suggestions and must be confirmed before publication.
   const students = [
-    { name: 'Mannat Sharma', className: 'Class 10', message: 'Patient explanations at home give me time to understand each step, ask questions freely and practise until a topic feels clearer.', photo: '/assets/home-tutor/students/mannat-sharma.jpg' },
-    { name: 'Samarth Singh', className: 'Class 9', message: 'With one-to-one guidance, I can spend extra time on the chapters I find difficult instead of moving ahead with unanswered questions.', photo: '/assets/home-tutor/students/samarth-singh.jpg' },
-    { name: 'Aditya Pareek', className: 'Class 10', message: 'Working through examples and then trying similar questions on my own helps me understand the method, not just remember an answer.', photo: '/assets/home-tutor/students/aditya-pareek.jpg' },
-    { name: 'Himanshu Sharma', className: 'Class 12', message: 'A planned home-tuition session can keep revision organised, with time for exam-style questions and the topics that need more practice.', photo: '/assets/home-tutor/students/himanshu-sharma.jpg' },
-    { name: 'Harsh Nirwan', className: 'Class 9', message: 'A steady study routine at home helps me balance school homework, revision and practice without leaving everything until the last minute.' },
-    { name: 'Rajvardhan', className: 'Class 8', message: 'When a difficult lesson is broken into smaller steps, I can follow the explanation more easily and build understanding one concept at a time.' },
-    { name: 'Deepika', className: 'Class 10', message: 'Personal attention makes it easier to revisit important topics, identify mistakes and practise the questions that need more work.' },
+    { name: 'Mannat Sharma', className: 'Class 10', message: 'Best explaination of topics. Good tutor and perfect knowledge', photo: '/assets/home-tutor/students/mannat-sharma.jpg' },
+    { name: 'Samarth Singh', className: 'Class 9', message: 'Sir bahut ache se padhate hain. my child grow after starting home tuition', photo: '/assets/home-tutor/students/samarth-singh.jpg' },
+    { name: 'Aditya Pareek', className: 'Class 10', message: 'Easy examples and tricks to remember hard rules and best teacher i got from saraswat academy', photo: '/assets/home-tutor/students/aditya-pareek.jpg' },
+    { name: 'Himanshu Sharma', className: 'Class 12', message: 'Perfect teaching method.', photo: '/assets/home-tutor/students/himanshu-sharma.jpg' },
+    { name: 'Harsh Nirwan', className: 'Class 9', message: 'Home tuiton helped me alot in exam practice ' },
+    { name: 'Rajvardhan', className: 'Class 8', message: 'Thankyou for providing best home tutor for my child. thanks a lot' },
+    { name: 'Deepika', className: 'Class 10', message: 'Good study and excellent teacher' },
     { name: 'Devansh', className: 'Class 7', message: 'Learning at my own pace means I can ask for another explanation when a new concept is confusing, then try it again with guidance.' },
     { name: 'Vikram Singh', className: 'Class 11', message: 'Solving worked examples together helps me connect concepts with questions and gradually become more independent in my practice.' },
-    { name: 'Monika Nathawat', className: 'Class 12', message: 'Focused tuition time can make board preparation more structured, especially when I need to clear doubts and revisit a topic carefully.' },
-    { name: 'Aman Deep', className: 'Class 9', message: 'Regular feedback on my practice helps me notice where I went wrong and understand how to approach a similar question next time.' },
+    { name: 'Monika Nathawat', className: 'Class 12', message: 'My child started taking interest in studies after i got home tutor from saraswat academy' },
+    { name: 'Aman Deep', className: 'Class 9', message: 'Thanks for providing best teacher' },
     { name: 'Payal Shekhawat', className: 'Class 10', message: 'Following the school syllabus with planned revision helps me keep up with lessons and prepare steadily for class tests.' },
     { name: 'Tanishaka Mudgal', className: 'Class 8', message: 'Guided practice gives me a chance to try a question, discuss a mistake and then solve it again with a clearer understanding.' },
     { name: 'Deependra Singh', className: 'Class 11', message: 'Extra time on difficult chapters can help me strengthen the basics before moving to more challenging problems.' },
@@ -25,9 +25,9 @@
     { name: 'Isha Prajapat', className: 'Class 9', message: 'Short revision sessions at home can help me remember previous chapters while keeping up with what is being taught at school.' },
     { name: 'Sneha Poonia', className: 'Class 10', message: 'Seeing a concept explained in more than one way helps me find the approach that makes the most sense to me.', photo: '/assets/home-tutor/students/sneha-poonia.jpg' },
     { name: 'Yuvraj Singh', className: 'Class 8', message: 'Practising with guidance first and then attempting questions independently helps me work towards solving problems on my own.', photo: '/assets/home-tutor/students/yuvraj-singh.jpg' },
-    { name: 'Manvendra Singh', className: 'Class 12', message: 'A tuition plan built around revision goals and exam-style practice can make study time more focused during the board-year schedule.', photo: '/assets/home-tutor/students/manvendra-singh.jpg' },
-    { name: 'Anurag', className: 'Class 6', message: 'Going through mistakes without being rushed helps me understand why an answer is wrong and how to try the next question.' },
-    { name: 'Ashok', className: 'Class 11', message: 'Regular doubt-clearing and practice can help me revisit difficult concepts consistently instead of cramming just before a test.' }
+    { name: 'Manvendra Singh', className: 'Class 12', message: 'My child got good marks in exams. it is all because of the teacher provided by saraswat academy', photo: '/assets/home-tutor/students/manvendra-singh.jpg' },
+    { name: 'Anurag', className: 'Class 6', message: 'Kafi acche se explain krte hain sir and kafi acha result rha hai.' },
+    { name: 'Ashok', className: 'Class 11', message: 'Best teacher and solved my all doubts and i really love studies now' }
   ];
 
   function initialise() {
