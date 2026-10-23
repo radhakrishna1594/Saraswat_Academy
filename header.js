@@ -177,7 +177,7 @@
     ensureStylesheet('sa-tutor-enquiry-style', '/assets/tutor-enquiry.css');
     ensureStylesheet('sa-tutor-testimonials-style', '/assets/tutor-testimonials.css');
 
-    ensureScript('sa-tutor-enquiry-script', '/assets/tutor-enquiry.js?v=20261022-areaformfix3', function () {
+    ensureScript('sa-tutor-enquiry-script', '/assets/tutor-enquiry.js?v=20261023-whatsapp', function () {
       ensureScript('sa-tutor-testimonials-script', '/assets/tutor-testimonials.js');
     });
   }
