@@ -10,6 +10,8 @@
 <link rel="stylesheet" href="/assets/styles.css">
 <link rel="stylesheet" href="/header.css">
 <script src="/config.js"></script><script src="/header.js"></script>
+<script src="/loader.js"></script>
+
 <style>
 *{box-sizing:border-box}body{margin:0;background:#f5f8f6;color:#182234;font-family:Arial,Helvetica,sans-serif;line-height:1.65}.pay-wrap{max-width:780px;margin:34px auto 60px;padding:0 16px}.pay-card{background:#fff;border:1px solid #dce7df;border-radius:18px;box-shadow:0 14px 42px #123b2410;overflow:hidden}.pay-top{padding:30px;background:linear-gradient(125deg,#12372a,#176b4d);color:white}.pay-top .eyebrow{font-size:12px;letter-spacing:2px;color:#f6d78a;font-weight:800;text-transform:uppercase}.pay-top h1{margin:9px 0;font-size:clamp(28px,5vw,40px);line-height:1.2}.pay-top p{margin:0;color:#e8f2ed}.pay-body{padding:28px}.steps{counter-reset:steps;list-style:none;padding:0;margin:0}.steps li{counter-increment:steps;display:flex;gap:13px;margin:0 0 19px;align-items:flex-start}.steps li:before{content:counter(steps);display:flex;align-items:center;justify-content:center;flex:0 0 32px;height:32px;border-radius:50%;background:#eaf3ed;color:#176b4d;font-weight:800}.upi-box{margin:22px auto 26px;padding:22px 18px;text-align:center;border:1px solid #dce7df;border-radius:14px;background:#fbfdfb}.upi-box img{display:block;width:min(100%,320px);height:auto;margin:12px auto;border-radius:8px}.upi-amount{font-size:30px;font-weight:800;color:#176b4d;margin:8px 0}.upi-id{font-size:14px;overflow-wrap:anywhere;color:#526658}.upi-box p{margin:6px 0}.whatsapp{display:inline-block;text-decoration:none;background:#176b4d;color:#fff;padding:13px 18px;border-radius:9px;font-weight:800;margin:8px 0}.warning{border-left:4px solid #e8b64c;background:#fff9e9;padding:15px 16px;border-radius:8px;font-size:14px;color:#584d31;margin-top:22px}.pay-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.pay-actions a{border:1px solid #176b4d;color:#176b4d;text-decoration:none;padding:11px 15px;border-radius:8px;font-weight:700}.pay-actions a:first-child{background:#176b4d;color:#fff}@media(max-width:600px){.pay-top,.pay-body{padding:22px 18px}}
 </style>
@@ -24,9 +26,7 @@
 <div class="upi-box">
   <p><strong>Registration fee</strong></p>
   <div class="upi-amount">₹180</div>
-  <img src="https://quickchart.io/qr?size=320&margin=2&text=upi%3A%2F%2Fpay%3Fpa%3Dsaraswatpradeep89-1%40okicici%26pn%3DPradeep%2520Saraswat%26am%3D180.00%26cu%3DINR%26tn%3DTutor%2520Registration%2520Fee" alt="UPI QR code to pay ₹180 to Saraswat Pradeep at saraswatpradeep89-1@okicici" loading="eager">
-  <p><strong>Payee:</strong> Pradeep Saraswat</p>
-  <p class="upi-id"><strong>UPI ID:</strong> saraswatpradeep89-1@okicici</p>
+  <img src="/home-tutor/upi.jpeg" loading="eager">
   <p>Scan with any UPI app. Before confirming payment, verify the payee name and amount in your UPI app.</p>
 </div>
 <h2>After payment</h2>
@@ -34,7 +34,7 @@
 <li><div><strong>Pay ₹180 using the QR code above.</strong><br>Check that the UPI app shows the intended recipient and ₹180 before entering your UPI PIN.</div></li>
 <li><div><strong>Save the successful payment screenshot.</strong><br>Make sure the transaction status, date, amount and UPI reference number are visible. Do not share OTPs, PINs or bank passwords.</div></li>
 <li><div><strong>Send the screenshot on WhatsApp.</strong><br>Message <strong>7073468838</strong> with your full name and the UPI transaction reference.</div></li>
-<li><div><strong>Wait for manual confirmation.</strong><br>After payment is checked and your details are reviewed, Saraswat Academy will confirm your registration. Submitting this form alone does not confirm registration or guarantee a tuition assignment.</div></li>
+<li><div><strong>Wait for manual confirmation.</strong><br>After payment is checked and your details are reviewed, Saraswat Academy will confirm your registration.</div></li>
 </ol>
 <a class="whatsapp" href="https://wa.me/917073468838?text=Hello%20Saraswat%20Academy%2C%20I%20have%20submitted%20my%20tutor%20registration.%20I%20will%20share%20my%20payment%20screenshot%20for%20verification." target="_blank" rel="noopener">Send payment screenshot on WhatsApp ↗</a>
 <div class="warning"><strong>Important:</strong> Do not pay through a QR code or UPI ID from an unofficial source. Registration is confirmed only after payment verification. Only pay if the UPI app confirms the recipient is the intended payee and the amount is ₹180. Never share your UPI PIN, OTP or banking password.</div>
