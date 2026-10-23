@@ -32,6 +32,7 @@
 <form class="tr-form tr-grid"
       action="https://formsubmit.co/grassrootedtech@gmail.com"
       method="POST"
+      enctype="multipart/form-data"
 >
 
     <input type="hidden" name="_subject" value="New Tutor Registration - Saraswat Academy">
@@ -221,9 +222,16 @@
         <small class="tr-help">Do not enter sensitive ID numbers unless specifically required.</small>
     </div>
 
-    <div class="tr-field tr-full">
-        <label for="verificationNotes">Verification / Qualification Notes (optional)</label>
-        <textarea id="verificationNotes" name="Verification / Qualification Notes" placeholder="You may describe certificates or professional registrations you hold. Do not send Aadhaar/PAN numbers or sensitive identity documents by email."></textarea>
+    <div class="tr-field">
+        <label for="identityDocument">Identity Document Upload <span>*</span></label>
+        <input type="file" id="identityDocument" name="Identity Document Upload" accept=".jpg,.jpeg,.png,.pdf" required>
+        <small class="tr-help">Upload one clear image or PDF of a government-issued ID. For privacy, use a masked Aadhaar where possible. Never upload bank details, OTPs or PINs.</small>
+    </div>
+
+    <div class="tr-field">
+        <label for="tutorPhoto">Recent Photograph <span>*</span></label>
+        <input type="file" id="tutorPhoto" name="Tutor Photograph" accept=".jpg,.jpeg,.png" required>
+        <small class="tr-help">Upload a recent, clear passport-style photo in JPG or PNG format.</small>
     </div>
 
     <div class="tr-section">5. Additional Information</div>
