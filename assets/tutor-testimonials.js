@@ -55,7 +55,6 @@
               '</div>',
               '<div class="sa-testimonials__person"></div>',
               '<div class="sa-testimonials__class"></div>',
-              '<span class="sa-testimonials__draft-badge">SAMPLE DRAFT</span>',
               '<blockquote class="sa-testimonials__message"></blockquote>',
             '</article>',
           '</div>',
@@ -88,7 +87,7 @@
       const student = students[current];
 
       person.textContent = student.name;
-      classLabel.textContent = student.className + ' · provisional';
+      classLabel.textContent = student.className;
       if (student.photo) {
         photo.src = student.photo;
         photo.alt = 'Photo of ' + student.name;
