@@ -65,7 +65,6 @@
           '<span class="sa-testimonials__count" aria-live="polite"></span>',
           '<div class="sa-testimonials__progress" role="progressbar" aria-label="Testimonial progress" aria-valuemin="1" aria-valuemax="' + students.length + '" aria-valuenow="1"><span></span></div>',
         '</div>',
-        '<p class="sa-testimonials__footnote">Preview copy only: the class labels and messages are illustrative drafts, not verified student quotations. Please confirm every class and final wording with the student or parent/guardian, and obtain permission before publishing as genuine feedback.</p>',
       '</div>'
     ].join('');
 
