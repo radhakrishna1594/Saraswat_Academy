@@ -2,9 +2,7 @@
   'use strict';
 
   const FORM_ID = 'sa-student-enquiry-form';
-  const EMAIL = 'grassrootedtech@gmail.com';
-  const THANK_YOU = 'https://www.saraswatacademy.in/thank-you-tutor.html';
-  const FORM_ACTION = 'https://formsubmit.co/' + EMAIL;
+  const WHATSAPP_NUMBER = '917073468838';
 
   function removeOldFormsAndWhatsAppCards() {
     document.querySelectorAll('form').forEach(function (form) {
@@ -43,7 +41,7 @@
         <div class="sa-enquiry-intro">
           <span class="sa-enquiry-kicker">PERSONALISED LEARNING SUPPORT</span>
           <h2>Let’s Find the Right Tutor for Your Child</h2>
-          <p>Share a few details and our team will review your requirement and contact you to discuss suitable tuition options.</p>
+          <p>Share your details and submit the form to open WhatsApp with your enquiry message ready to send.</p>
           <div class="sa-enquiry-points">
             <span><b>✓</b> Classes 1–12</span>
             <span><b>✓</b> School boards &amp; subjects</span>
@@ -57,12 +55,7 @@
             <h3>Tell Us About Your Child</h3>
             <p>Fields marked <span aria-hidden="true">*</span> are required.</p>
           </div>
-          <form id="${FORM_ID}" action="${FORM_ACTION}" method="POST" accept-charset="UTF-8">
-            <input type="hidden" name="_subject" value="New Home Tuition Enquiry | Saraswat Academy">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="true">
-            <input type="hidden" name="_next" value="${THANK_YOU}">
-            <input type="hidden" name="Enquiry Page" id="sa-enquiry-page" value="">
+          <form id="${FORM_ID}" accept-charset="UTF-8">
             <div class="sa-enquiry-grid">
               <div class="sa-field">
                 <label for="sa-parent-name">Parent / Guardian Name <span>*</span></label>
@@ -114,13 +107,41 @@
               </div>
             </div>
             <button class="sa-enquiry-submit" type="submit">Submit Enquiry <span aria-hidden="true">→</span></button>
-            <p class="sa-enquiry-privacy">By submitting, you agree that Saraswat Academy may contact you about this enquiry.</p>
+            <p class="sa-enquiry-privacy">Submitting opens WhatsApp with your details. Review the message and tap Send in WhatsApp to contact us.</p>
           </form>
         </div>
       </div>`;
 
-    const pageField = section.querySelector('#sa-enquiry-page');
-    if (pageField) pageField.value = window.location.href;
+    const form = section.querySelector('#' + FORM_ID);
+    if (form) {
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+
+        const value = function (name) {
+          const field = form.elements.namedItem(name);
+          return field && field.value ? field.value.trim() : '';
+        };
+        const message = [
+          'Hello Saraswat Academy, I would like to enquire about home tuition.',
+          '',
+          'Parent / Guardian Name: ' + value('Parent / Guardian Name'),
+          'Mobile Number: ' + value('Mobile Number'),
+          'Email Address: ' + value('Email Address'),
+          'Student Name: ' + value('Student Name'),
+          'Student Class: ' + value('Student Class'),
+          'Student Board: ' + value('Student Board'),
+          'School Name: ' + (value('School Name') || 'Not provided'),
+          'Subjects Required: ' + value('Subjects Required'),
+          'Full Address: ' + value('Full Address'),
+          'Additional Query: ' + (value('Any Other Query') || 'Not provided'),
+          '',
+          'Enquiry Page: ' + window.location.href
+        ].join('\\n');
+
+        window.location.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message);
+      });
+    }
     return section;
   }
 
