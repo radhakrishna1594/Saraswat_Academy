@@ -23,7 +23,7 @@
     { name: 'Deependra Singh', className: 'Class 11', message: 'Extra time on difficult chapters can help me strengthen the basics before moving to more challenging problems.' },
     { name: 'Kismat', className: 'Class 7', message: 'A calm explanation followed by a few practice questions makes homework feel more manageable and helps me prepare for the next lesson.' },
     { name: 'Isha Prajapat', className: 'Class 9', message: 'Short revision sessions at home can help me remember previous chapters while keeping up with what is being taught at school.' },
-    { name: 'Sneha Poonia', className: 'Class 10', message: 'Seeing a concept explained in more than one way helps me find the approach that makes the most sense to me.', photo: '/assets/home-tutor/students/sneha-poonia.jpg' },
+    { name: 'Sneha Poonia', className: 'Class 10', message: 'Thankyou sir for your easy and best tricks.', photo: '/assets/home-tutor/students/sneha-poonia.jpg' },
     { name: 'Yuvraj Singh', className: 'Class 8', message: 'Practising with guidance first and then attempting questions independently helps me work towards solving problems on my own.', photo: '/assets/home-tutor/students/yuvraj-singh.jpg' },
     { name: 'Manvendra Singh', className: 'Class 12', message: 'My child got good marks in exams. it is all because of the teacher provided by saraswat academy', photo: '/assets/home-tutor/students/manvendra-singh.jpg' },
     { name: 'Anurag', className: 'Class 6', message: 'Kafi acche se explain krte hain sir and kafi acha result rha hai.' },
