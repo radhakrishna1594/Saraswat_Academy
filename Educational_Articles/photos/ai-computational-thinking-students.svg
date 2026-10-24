@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">Computational Thinking and Artificial Intelligence for school students</title>
+<desc id="desc">Illustration of a teacher and students exploring patterns, problem-solving, data and artificial intelligence in a classroom.</desc>
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#102b50"/><stop offset="1" stop-color="#12758a"/></linearGradient><linearGradient id="screen" x1="0" x2="1"><stop stop-color="#ddf4f4"/><stop offset="1" stop-color="#c7ddff"/></linearGradient></defs>
+<rect width="1200" height="630" rx="28" fill="#eff5fb"/><rect width="1200" height="405" rx="28" fill="url(#bg)"/>
+<circle cx="1050" cy="74" r="130" fill="#ffffff" opacity=".05"/><circle cx="120" cy="30" r="110" fill="#ffffff" opacity=".04"/>
+<text x="64" y="76" fill="#aee9e7" font-family="Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="4">SARASWAT ACADEMY • STUDENT GUIDE</text>
+<text x="64" y="145" fill="#ffffff" font-family="Arial,sans-serif" font-size="48" font-weight="700">Computational Thinking</text><text x="64" y="202" fill="#ffffff" font-family="Arial,sans-serif" font-size="48" font-weight="700">&amp; Artificial Intelligence</text>
+<text x="66" y="250" fill="#d5e9f4" font-family="Arial,sans-serif" font-size="26">NCERT module explained • Classes 9–12</text>
+<rect x="66" y="290" width="270" height="54" rx="27" fill="#f4d47b"/><text x="201" y="325" text-anchor="middle" fill="#16385b" font-family="Arial,sans-serif" font-size="21" font-weight="700">2026–27 SESSION</text>
+<rect x="745" y="90" width="365" height="225" rx="20" fill="#f9fcff" stroke="#b4cbe0" stroke-width="4"/>
+<rect x="768" y="114" width="320" height="176" rx="10" fill="url(#screen)"/>
+<g stroke="#34749a" stroke-width="4" fill="none"><path d="M822 161 H895 V205 H822 Z"/><path d="M960 161 H1033 V205 H960 Z"/><path d="M895 183 H960"/><path d="M858 205 V239 H997 V205"/></g>
+<g fill="#1d5c80" font-family="Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle"><text x="858" y="188">DATA</text><text x="997" y="188">IDEAS</text><text x="927" y="263">THINK • TEST • CHECK</text></g>
+<rect y="405" width="1200" height="225" fill="#dbe6f0"/>
+<path d="M0 480 Q300 420 600 480 T1200 480 V630 H0Z" fill="#c1d3e3"/>
+<g transform="translate(180 430)"><rect x="0" y="55" width="185" height="14" rx="7" fill="#775d4b"/><rect x="12" y="69" width="13" height="84" fill="#775d4b"/><rect x="160" y="69" width="13" height="84" fill="#775d4b"/><rect x="45" y="0" width="90" height="55" rx="6" fill="#203d58"/><rect x="52" y="7" width="76" height="40" rx="3" fill="#e4f4fa"/><path d="M65 20 H114 M65 28 H105 M65 36 H97" stroke="#2380a0" stroke-width="3"/></g>
+<g transform="translate(485 437)"><circle cx="55" cy="18" r="27" fill="#bd825b"/><path d="M28 16 Q29 -16 58 -12 Q84 -9 82 17" fill="#24384a"/><path d="M22 58 Q55 35 88 58 L100 124 H10Z" fill="#f4c96c"/><path d="M22 68 L-9 100 M87 68 L116 94" stroke="#bd825b" stroke-width="15" stroke-linecap="round"/><circle cx="46" cy="18" r="3" fill="#24384a"/><circle cx="65" cy="18" r="3" fill="#24384a"/><path d="M46 29 Q55 36 65 29" stroke="#6b4233" stroke-width="3" fill="none"/></g>
+<g transform="translate(720 437)"><circle cx="55" cy="18" r="27" fill="#9a6044"/><path d="M28 16 Q29 -14 57 -12 Q83 -9 82 17" fill="#3a2b27"/><path d="M22 58 Q55 35 88 58 L100 124 H10Z" fill="#71b8c6"/><path d="M22 68 L-9 100 M87 68 L116 94" stroke="#9a6044" stroke-width="15" stroke-linecap="round"/><circle cx="46" cy="18" r="3" fill="#24384a"/><circle cx="65" cy="18" r="3" fill="#24384a"/><path d="M46 29 Q55 36 65 29" stroke="#6b4233" stroke-width="3" fill="none"/></g>
+<g transform="translate(1000 438)"><circle cx="55" cy="18" r="27" fill="#d5a17b"/><path d="M28 16 Q29 -14 57 -12 Q83 -9 82 17" fill="#3a2b27"/><path d="M22 58 Q55 35 88 58 L100 124 H10Z" fill="#8da9e4"/><path d="M22 68 L-9 100 M87 68 L116 94" stroke="#d5a17b" stroke-width="15" stroke-linecap="round"/><circle cx="46" cy="18" r="3" fill="#24384a"/><circle cx="65" cy="18" r="3" fill="#24384a"/><path d="M46 29 Q55 36 65 29" stroke="#6b4233" stroke-width="3" fill="none"/></g>
+<text x="600" y="604" fill="#24455e" font-family="Arial,sans-serif" font-size="19" text-anchor="middle">Problem-solving • AI awareness • Responsible technology use</text>
+</svg>
